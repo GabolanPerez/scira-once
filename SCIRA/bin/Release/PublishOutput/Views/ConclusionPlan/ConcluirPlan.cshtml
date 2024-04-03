@@ -1,0 +1,95 @@
+﻿@model SCIRA.Models.r_conclusion_plan
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = @Strings.getMSG("ConclusionPlanIndex003");
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/base.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+<script type="text/javascript" src="~/Scripts/moment-with-locales.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.js"></script>
+
+<script src="~/Scripts/dropzone.js"></script>
+<script src="~/Scripts/dropzone-config.js"></script>
+<link href="~/Content/dropzone.css" rel="stylesheet" />
+
+
+<script>
+    $(document).ready(function () {
+        $(".datetimepicker").datetimepicker({
+            locale: 'es',
+            format: '@ViewBag.DateFormat',
+            minDate: "01/01/1900"
+        });
+    });
+</script>
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { onsubmit = "deshabilitar()" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal well">
+        <h4>@ViewBag.Title @ViewBag.Plan.nb_plan</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_plan)
+
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ConclusionPlanCreate001")</label>
+                <div class="col-xs-6 col-md-5">
+                    @Html.TextAreaFor(model => model.observaciones, new { @class = "form-control", @rows = "3", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("ConclusionPlanCreate005") })
+                    @Html.ValidationMessageFor(model => model.observaciones, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("PlanesRemIndex004")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class='input-group date datetimepicker' id='datetimepicker1'>
+                        @Html.TextBox("fe_conclusion", (Model.fe_conclusion == DateTime.MinValue ? System.DateTime.Now.ToString() : Model.fe_conclusion.ToString()), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("ConclusionPlanCreate004"), data_val = "false" })
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.fe_conclusion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <select multiple id="files" name="files" hidden>
+    </select>
+}
+
+<h4>@Strings.getMSG("ProcesosAuditoriaEditEjecucion020")</h4>
+
+<div class="row">
+    <div class="col-md-12">
+        <form action="@Url.Action("Upload","Archivos")"
+              class="dropzone"
+              data-target="files"
+              id="fileUploader"></form>
+        <!--data-target es el elemento select multiple a donde se agregaran los ids de los archivos elegidos-->
+        <!--el id siempre debera ser fileUploader-->
+    </div>
+</div>

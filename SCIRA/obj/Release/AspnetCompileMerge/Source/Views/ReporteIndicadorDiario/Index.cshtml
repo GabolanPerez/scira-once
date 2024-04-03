@@ -1,0 +1,96 @@
+﻿@model IEnumerable<SCIRA.Models.k_evaluacion_diaria>
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Reporte Indicadores";
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+}
+
+<h2>@Strings.getMSG("ReporteIndicadorDiarioIndex001")</h2>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("ControlEdit001")</th>
+            <th class="search">@Strings.getMSG("Nombre")</th>
+            <th class="search">@Strings.getMSG("SubProcesoCreate018")</th>
+            <th class="search">@Strings.getMSG("IndicadorCreate003")</th>
+            <th class="search">@Strings.getMSG("IndicadorCreate004")</th>
+            <th class="search">@Strings.getMSG("ReporteIndicadorIndex003")</th>
+            <th class="search">@Strings.getMSG("ReporteIndicadorIndex004")</th>
+            <th class="search">@Strings.getMSG("ReporteIndicadorIndex005")</th>
+            <th class="search">@Strings.getMSG("ReporteIndicadorIndex006")</th>
+            <th class="search">@Strings.getMSG("IndicadorIndex001")</th>
+            <th class="search">@Strings.getMSG("Usuario")</th>
+            <th class="search">@Strings.getMSG("EvaluacionIndicadorDiarioIndex005")</th>
+            <th class="search">@Strings.getMSG("EvaluacionIndicadorDiarioIndex004")</th>
+            <th class="search">@Strings.getMSG("ReporteIndicadorDiarioIndex002")</th>
+            <th class="search">@Strings.getMSG("EvaluacionIndicadorCreate007")</th>
+            <th class="search">@Strings.getMSG("EvaluacionIndicadorCreate008")</th>
+            <th class="search">@Strings.getMSG("RiesgoResidualConfigIndex020")</th>
+            <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var ind = item.c_indicador_diario;
+            var cont = item.c_contenido_grupo;
+            var user = item.c_usuario;
+
+             var calificacion = SCIRA.Utilidades.Utilidades.EvalNote(item);
+
+            string numerador = "", denominador = "", porcentaje = "", calif = "";
+
+            if (calificacion != 4)
+            {
+                
+                numerador = ((double)item.numerador).ToString();
+                denominador = ((double)item.denominador).ToString();
+
+                var medicion = (item.numerador / item.denominador) * 100;
+                porcentaje = ((double)medicion).ToString() + "%";
+            }
+            else
+            {
+                numerador = denominador = porcentaje = "N/A";
+            }
+
+            switch (calificacion)
+            {
+                case 1:
+                    calif = @Strings.getMSG("Bueno");
+                    break;
+                case 2:
+                    calif = @Strings.getMSG("Regular");
+                    break;
+                case 3:
+                    calif = @Strings.getMSG("Malo");
+                    break;
+                case 4:
+                    calif = @Strings.getMSG("No calificado");
+                    break;
+            }
+
+            <tr>
+                <td>@(ind.cl_indicador_diario)</td>
+                <td>@(ind.nb_indicador_diario)</td>
+                <td>@(ind.ds_indicador_diario)</td>
+                <td>@(ind.ds_numerador_diario)</td>
+                <td>@(ind.ds_denominador)</td>
+                <td>@(((float)ind.umbral000i).ToString().Replace(",", ".")) - @(((float)ind.umbral000f).ToString().Replace(",", "."))</td>
+                <td>@(((float)ind.umbral050i).ToString().Replace(",", ".")) - @(((float)ind.umbral050f).ToString().Replace(",", "."))</td>
+                <td>@(((float)ind.umbral075i).ToString().Replace(",", ".")) - @(((float)ind.umbral075f).ToString().Replace(",", "."))</td>
+                <td>@(((float)ind.umbral100i).ToString().Replace(",", ".")) - @(((float)ind.umbral100f).ToString().Replace(",", "."))</td>
+                <td>@(ind.esta_activo ? Strings.getMSG("UsuarioIndex004"): Strings.getMSG("UsuarioIndex005"))</td>
+                <td>@(user.cl_usuario + " - "+ user.nb_usuario)</td>
+                <td>@(user.c_area.cl_area + " - " + user.c_area.nb_area)</td>
+                <td>@(SCIRA.Utilidades.Utilidades.getRuta(cont))</td>
+                <td>@(string.Format("{0:dd/MM/yyyy}", item.fe_evaluacion))</td>
+                <td>@(numerador)</td>
+                <td>@(denominador)</td>
+                <td>@(porcentaje)</td>
+                <td>@(calif)</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<SCIRA.Models.k_control>
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Revisión de Controles";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+<h3>@Strings.getMSG("Menu084")</h3>
+
+<input type="button" class="btn btn-default" value="@Strings.getMSG("Generar Reporte General")" onclick="generalRep()" />
+
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("SP")</th>
+            <th class="search">@Strings.getMSG("CertificaciónIndex002")</th>
+            <th>@Strings.getMSG("RiesgoRiesgos003")</th>
+            <th class="search">@Strings.getMSG("CertificaciónIndex001")</th>
+            <th>@Strings.getMSG("ControlDelete003")</th>
+            <th>@Strings.getMSG("RiesgoCreate088")</th>
+            <th width="40"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (!item.tiene_accion_correctora)
+            {
+                <tr>
+                    <td>
+                        @(item.c_sub_proceso.cl_sub_proceso + " - " + item.c_sub_proceso.nb_sub_proceso)
+                    </td>
+                    <td>
+                        @(item.k_riesgo.First().nb_riesgo)
+                    </td>
+                    <td>
+                        @(item.k_riesgo.First().evento)
+                    </td>
+                    <td>
+                        @(item.relacion_control)
+                    </td>
+                    <td>
+                        @(item.actividad_control)
+                    </td>
+                    <td>
+                        @(item.c_usuario1.nb_usuario)
+                    </td>
+                    <td style="white-space: nowrap">
+                        <center>
+                            <a href="@Url.Action("Revisiones", new { id = item.id_control })">
+                                <i class="fa fa-search fa-lg" title="@Strings.getMSG("Revisiones")"></i>
+                            </a>
+                        </center>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<!-- #region Script de Generacion de Reporte General de Revision de Controles -->
+<script>
+    function generalRep() {
+
+        var options = {
+            title: "@Strings.getMSG("RevisionControlCreate114")",
+            size: "lg",
+            show: true,
+            loadUrl: "@Url.Action("ReporteGeneral","RevisionControl")"
+        };
+
+        menuModal.initModal(options);
+    }
+</script>
+<!-- #endregion -->

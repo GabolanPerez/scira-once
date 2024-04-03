@@ -1,0 +1,9509 @@
+{
+  "RepName": "Reporte de Accesos",
+  "ColNames": [
+    "Usuario",
+    "Función",
+    "Fecha"
+  ],
+  "Rows": [
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Edit",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Delete",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Delete",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Delete",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditLVLP",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateLVLP",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DeleteC",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DeleteC",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DeleteCP",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateLVLP",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Area/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Agregar",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Agregar",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Agregar",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Etapa/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Etapa/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Etapa/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubEtapa/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubEtapa/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoEvaluacion/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoEvaluacion/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ActividadCosteo/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ActividadCosteo/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaSubProceso/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaSubProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoIndicador/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoIndicador/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoIndicador/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoIndicador/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoIndicador/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoCertificacion/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoCertificacion/Edit",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "HistorialReportes/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Edit",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Edit",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Edit",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConsultaNormatividad/DescargaContenido",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConsultaNormatividad/DescargaContenido",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Delete",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateCP",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ActividadCosteo/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Etapa/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaSubProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoCertificacion/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoIndicador/Edit",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Edit",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditC",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Area/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Area/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Details",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Certificados",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Edit",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Certificados",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Area/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstatusBDEI/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstatusBDEI/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Moneda/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Moneda/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoSolucion/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoSolucion/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoSolucion/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoSolucion/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoSolucion/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Groups",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/CreateGroup",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Groups",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/CreateGroup",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/EditAccount",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Groups",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/CreateGroup",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CanalRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CanalRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CanalRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CanalRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoAsociadoBDEI/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoAsociadoBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MinimoRiesgoOperativoBDEI/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MinimoRiesgoOperativoBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MinimoRiesgoOperativoBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CausaBDEI/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CausaBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CausaBDEI/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CausaBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CatalogoConceptoBDEI/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CatalogoConceptoBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CatalogoConceptoBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DeleteCP",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoCertificacion/Edit",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Edit",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstatusBDEI/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaLineaNegocioRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaLineaNegocioRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaLineaNegocioRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocioRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocioRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Delete",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Delete",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Agregar",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Notification/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Certificar",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/SubProcesos",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionInforme/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Delete",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Area/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Groups",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Accounts",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MinimoRiesgoOperativoBDEI/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaLineaNegocioRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/DeleteCR",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CreateCR",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/DeleteCR",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/EditCR",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/EditCR",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/EditCR",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/EditCR",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProbabilidadOcurrencia/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProbabilidadOcurrencia/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProbabilidadOcurrencia/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProbabilidadOcurrencia/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProbabilidadOcurrencia/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoImpacto/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoImpacto/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Criticidad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Criticidad/CriticidadRiesgo",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Edit",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateCP",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubEtapa/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/CreateAccount",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CanalRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CanalRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoAsociadoBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoAsociadoBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaLineaNegocioRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocioRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "GradoCobertura/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Aseveracion/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Calificacion/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CalificacionRevision/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "NaturalezaControl/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaControl/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoEvidencia/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Aseveracion/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Aseveracion/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Calificacion/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Calificacion/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProbabilidadOcurrencia/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoImpacto/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCControl/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCControl/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCControl/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CalificacionRevision/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CalificacionRevision/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CausaBDEI/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstatusBDEI/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstatusBDEI/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Moneda/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Moneda/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoSolucion/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoSolucion/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Groups",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/CreateGroup",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Groups",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Accounts",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/CreateAccount",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CentroCosto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CentroCosto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CanalRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CanalRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoAsociadoBDEI/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MinimoRiesgoOperativoBDEI/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MinimoRiesgoOperativoBDEI/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CausaBDEI/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocioRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConsultaNormatividad/Levels",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConsultaNormatividad/Content",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Delete",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Edit",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Edit",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditLVLP",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "HistorialReportes/ShowRep",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Delete",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Certificados",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Certificados",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionInforme/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionInforme/IncidenciasDetectadas",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Criticidad/CriticidadRiesgo",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "GradoCobertura/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoEvidencia/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "NaturalezaControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaControl/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaControl/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "UnidadIndicador/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "UnidadIndicador/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClasificacionIncidencia/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClasificacionIncidencia/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClasificacionIncidencia/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "OrigenAutoridad/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "OrigenAutoridad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "OrigenAutoridad/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IndicadorDiario/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IndicadorDiario/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Rol/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Rol/Agregar",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Rol/Agregar",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Rol/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Rol/Edit",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Rol/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Agregar",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Agregar",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Puesto/Index2",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Puesto/Delete2",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CodeActions/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Notification/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MassiveNotification/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MassiveNotification/WriteMessage",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Area/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Area/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AjustesCertificacion/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCSubProceso/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCSubProceso/Edit",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCSubProceso/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConsultaNormatividad/Index",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateLVLP",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Delete",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Delete",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Edit",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "HistorialReportes/ReportList",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Delete",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionInforme/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoSolucion/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoSolucion/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Groups",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/EditGroup",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "GradoCobertura/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "GradoCobertura/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCControl/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CentroCosto/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClasificacionIncidencia/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IndicadorDiario/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Indicador/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Indicador/Create",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditTN",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Edit",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Edit",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Edit",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateTN",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateTN",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Edit",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditCP",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DeleteC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DeleteCP",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateCP",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Edit",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditLVL",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "02/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateCP",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditLVL",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Area/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoCertificacion/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Groups",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Groups",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Accounts",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MinimoRiesgoOperativoBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocioRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProbabilidadOcurrencia/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Criticidad/CriticidadRiesgo",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AmbitoRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Rol/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CodeActions/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Area/Create",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditTN",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/SubProcesos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/SubProcesos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/EditR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/EditR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/EditR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Controles",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FlujoNarrativa/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionEntidad/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionEntidad/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionEntidad/Delete",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionEntidad/Delete",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionEntidad/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionEntidad/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionMacroProceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionMacroProceso/Delete",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionMacroProceso/Delete",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionMacroProceso/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionMacroProceso/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionProceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionProceso/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionProceso/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Delete",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Agregar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionInforme/UniversoCertificado",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionInforme/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionInforme/IncidenciasDetectadas",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionInforme/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "03/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateCP",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "07/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Agregar",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocio/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoEvaluacion/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoIndicador/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoIndicador/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoCertificacion/Index",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PeriodoCertificacion/Create",
+      "08/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "09/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Moneda/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Groups",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoAsociadoBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoAsociadoBDEI/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaLineaNegocioRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaLineaNegocioRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocioRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocioRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaControl/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoAsociadoBDEI/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Delete",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Delete",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Rol/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Rol/Agregar",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AjustesSeguridad/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AjustesCertificacion/Index",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Edit",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Agregar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Agregar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Evaluaciones",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/TiempoParticipante",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/Details",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/SPDetails",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/evalDetails",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RevisionControl/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateAuExt",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexAuExt",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexPlanes",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexPlanes",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexPlanes",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexSeguimiento",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateSeguimiento",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Index",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionInforme/IncidenciasDetectadas",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Delete",
+      "11/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstatusBDEI/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstatusBDEI/Create",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Moneda/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoSolucion/Index",
+      "14/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CuentaContable/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoAsociadoBDEI/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoProductoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaLineaNegocioRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProbabilidadOcurrencia/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Criticidad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "NaturalezaControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CatalogoConceptoBDEI/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CatalogoConceptoBDEI/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "UnidadIndicador/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "UnidadIndicador/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "OrigenAutoridad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IndicadorDiario/Edit",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Notification/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateCP",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Agregar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexPlanes",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexSeguimiento",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateSeguimiento",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateSeguimiento",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PlanesRem/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PlanesRem/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PlanesRem/Seguimientos",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PlanesRem/Edit",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConclusionPlan/ConcluirPlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConclusionPlan/ConcluirPlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConclusionPlan/ConcluirPlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConclusionPlan/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConclusionPlan/Edit",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RespuestaIncidencia/ResponderIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RespuestaIncidencia/ResponderIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RespuestaIncidencia/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RespuestaIncidencia/ResponderIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContestacionOficio/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContestacionOficio/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContestacionOficio/Edit",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/SPCUB",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/SPCUB",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/SPCUB",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/SPCUB",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Benchmark/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Benchmark/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/Edit",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/CreateLvl",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/EditLvl",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/GetNextLevel",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/GetNextLevelID",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/CanEdit",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConsultaNormatividad/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexSolicitanteAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateSolicitanteAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexSolicitanteAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexSolicitanteAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/EditSolicitanteAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPeriodoAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPeriodoAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePeriodoAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/EditPeriodoAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexRatingAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateRatingAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexRatingAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateRatingAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexRatingAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteRatingAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Create",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProductoRiesgoOperacional/Edit",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProbabilidadOcurrencia/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "GradoCobertura/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Criticidad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaLineaNegocioRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "LineaNegocioRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ImpactoRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Rol/Agregar",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AjustesSeguridad/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Notification/Edit",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FlujoNarrativa/Narrativa",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionMacroProceso/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ReporteEstructura/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ReporteEstructura/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConclusionPlan/ConcluirPlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/Delete",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/AssignSP",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/AssignU",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/AssignU",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/EditRatingAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/EditPrueba",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexEjecucion",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Delete",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Delete",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/AsignaRol",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexUniversoAuditable",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexUniversoAuditable",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CriticidadRiesgoOperacional/Index",
+      "15/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubClaseTipologiaRiesgo/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MagnitudImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoImpacto/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "GradoCobertura/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "NaturalezaControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "NaturalezaControl/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCControl/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CalificacionRevision/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CalificacionRevision/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaControl/Delete",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaControl/Delete",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaControl/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubTipoRiesgoOperacional/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClaseEventoRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCSubProceso/Edit",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Indicador/Create",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Indicador/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Edit",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateTN",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateTN",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Agregar",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/SubProcesos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Controles",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Agregar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Evaluaciones",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/Details",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/ActividadesCosteo",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/LVL2",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/ActividadesCosteo",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/Details",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/Participantes",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Costeo/TiempoParticipante",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexPlanes",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "PlanesRem/Seguimientos",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConclusionPlan/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContestacionOficio/ContestarOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContestacionOficio/ContestarOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContestacionOficio/ContestarOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/SPCUB",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePeriodoAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPeriodoAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateRatingAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Notification/Index",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/CampoCoberturaControl",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RiesgoResidualConfig/Summary",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Aseveracion/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "NaturalezaControl/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaControl/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MCRiesgo/Edit",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CausaBDEI/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CausaBDEI/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CategoriaLineaNegocioRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "FrecuenciaRiesgoOperacional/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EventoRiesgo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ClasificacionIncidencia/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContenidoGrupo/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Puesto/Create2",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "AjustesSeguridad/Index",
+      "18/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DeleteC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DeleteCP",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/SubProcesos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/EditR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/SubProcesos",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Controles",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RevisionControl/Revisiones",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RevisionControl/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexPlanes",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContestacionOficio/ContestarOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/SPCUB",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/Delete",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Benchmark/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/SubProcesos",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/AsignaRol",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexUniversoAuditable",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Actividad/Create",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesoBenchmark/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "OrigenAutoridad/Index",
+      "17/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TipoRiesgo/Index",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Agregar",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Delete",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Delete",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionSubProceso/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Delete",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Agregar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ReporteMRyC/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Evaluaciones",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexPlanes",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/listaIncidencias",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/IndexPlanes",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "NormatividadOperacion/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/EditPeriodoAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/EditRatingAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Delete",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Delete",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "22/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Content",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/IndexLVL",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/Create",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/CreateCP",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/DescendantContent",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Normatividad/EditC",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/DetailsRR",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificados",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "CertificacionInforme/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Agregar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "TiemposSubProcesos/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateOficio",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContestacionOficio/Edit",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Benchmark/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCriticidad",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/EditPrueba",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "23/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Agregar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/SubProcesos",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Editar",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/EditR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/EditR",
+      "25/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Control/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Certificacion/Certificar",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Edit",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/EditIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreatePlan",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConclusionPlan/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/SPCUB",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Benchmark/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/AddSoon",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Agregar",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreateSolicitanteAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPeriodoAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/AsignaUsuarios",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "BDEI/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicador/Index",
+      "28/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EvaluacionIndicadorDiario/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "IyP/CreateAuExt",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/SPCUB",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Benchmark/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "EstructuraManual/EditLvl",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/Edit",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/CanEdit",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/AssignSP",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexRatingAuditoria",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ConclusionPlan/Edit",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RespuestaIncidencia/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RespuestaIncidencia/ResponderIncidencia",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ContestacionOficio/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProcesosCUB/SPCUB",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Benchmark/Create",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Benchmark/Index",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/GetContent",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Manuales/GetLevel",
+      "29/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexUniversoAuditable",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexEjecucion",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/IndexEjecucion",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ProcesosAuditoria/EditPrueba",
+      "30/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "RolAudit/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Index",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Usuario/Edit",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexPruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/CreatePruebaAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/DeleteCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Auditoria/IndexCampoAuditoria",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/IndexEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexTableSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexTableSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexSeguimientosPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexTableSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/EditSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexTableSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/EditComentario",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexSeguimientosPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/EditSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/EditSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/IndexEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexSeguimientosPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/CreateComentario",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/EditSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/EditSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexTableSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexTableSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/IndexEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/EditPrueba",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/CreateComentario",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexSeguimientosPrograma",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/EditSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "Auditoria/IndexSeguimientoObservaciones",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/PruebasEjecucion",
+      "31/03/2022"
+    ],
+    [
+      "Sergio",
+      "ProcesosAuditoria/IndexEjecucion",
+      "31/03/2022"
+    ]
+  ],
+  "NoCols": 3,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

@@ -1,0 +1,212 @@
+﻿@using SCIRA.Models
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = Strings.getMSG("ReporteIyPIndex016");
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+
+    List<k_plan> PC = ViewBag.PC;
+    List<k_plan> PNC = ViewBag.PNC;
+
+}
+
+<h2>@ViewBag.Title</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#cnl" data-toggle="tab"><h4>@Strings.getMSG("AuditoriaIndexSeguimientoObservaciones005")</h4></a></li>
+    <li><a href="#cnnl" data-toggle="tab"><h4>@Strings.getMSG("ReporteIyPIndex018")</h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+
+
+    <div class="tab-pane fade active in" id="cnl">
+
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("ReporteIyPIndex024")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex025")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex026")</th>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("Nombre")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex017")</th>
+                    <th>@Strings.getMSG("Area")</th>
+                    <th>@Strings.getMSG("BDEIIndex003")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate011")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in PNC)
+                {
+                    var incidencia = item.k_incidencia;
+                    string origen = "";
+                    string nbOrigen = "";
+
+
+                    var objeto = incidencia.k_objeto;
+                    var cert = incidencia.k_certificacion_control;
+                    var control = incidencia.k_control;
+
+                    if (objeto != null)
+                    {
+                        var tipoObjeto = objeto.tipo_objeto;
+
+
+                        switch (tipoObjeto)
+                        {
+                            case 1:
+                                origen = @Strings.getMSG("Menu127");
+                                nbOrigen = objeto.nb_objeto;
+                                break;
+                            case 2:
+                                origen = @Strings.getMSG("ReporteIyPIndex027");
+                                nbOrigen = objeto.nb_objeto;
+                                break;
+                            case 3:
+                                origen = @Strings.getMSG("ReporteIyPIndex028");
+                                nbOrigen = objeto.nb_objeto;
+                                break;
+                                //case 4:
+                                //    origen = @Strings.getMSG("Menu014");
+                                //    nbOrigen = objeto.nb_objeto;
+                                //    break;
+                                //case 5:
+                                //    origen = @Strings.getMSG("Menu077");
+                                //    nbOrigen = objeto.nb_objeto;
+                                break;
+                            case 6:
+                                origen = @Strings.getMSG("ReporteIyPIndex021");
+                                nbOrigen = objeto.nb_objeto;
+                                break;
+                        }
+                    } else if (cert != null)
+                    {
+                        origen = @Strings.getMSG("Menu014");
+                        nbOrigen = @Strings.getMSG("CertificacionInforme023")+" "+ cert.k_control.relacion_control;
+                    }
+                    else if (control != null)
+                    {
+                        origen = @Strings.getMSG("Control");
+                        nbOrigen = control.relacion_control;
+                    }
+
+
+                <tr>
+
+                    <td>@origen</td>
+                    <td>@nbOrigen</td>
+                    <td>@item.id_plan</td>
+                    <td>@item.c_usuario.nb_usuario</td>
+                    <td>@item.nb_plan</td>
+                    <td>@item.ds_plan</td>
+                    <td>@item.c_area.cl_area - @item.c_area.nb_area</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta)</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_estimada_implantacion)</td>
+                </tr>
+                    }
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <div class="tab-pane" id="cnnl">
+
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("ReporteIyPIndex024")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex025")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex026")</th>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("Nombre")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex017")</th>
+                    <th>@Strings.getMSG("Area")</th>
+                    <th>@Strings.getMSG("ConclusionPlanCreate001")</th>
+                    <th>@Strings.getMSG("BDEIIndex003")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate011")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate013")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in PC)
+                {
+                    var incidencia = item.k_incidencia;
+                    string origen = "";
+                    string nbOrigen = "";
+
+
+                    var objeto = incidencia.k_objeto;
+                    var cert = incidencia.k_certificacion_control;
+                    var control = incidencia.k_control;
+
+                    if (objeto != null)
+                    {
+                        var tipoObjeto = objeto.tipo_objeto;
+
+
+                        switch (tipoObjeto)
+                        {
+                            case 1:
+                                origen = @Strings.getMSG("Menu127");
+                                nbOrigen = objeto.nb_objeto;
+                                break;
+                            case 2:
+                                origen = @Strings.getMSG("ReporteIyPIndex027");
+                                nbOrigen = objeto.nb_objeto;
+                                break;
+                            case 3:
+                                origen = @Strings.getMSG("ReporteIyPIndex028");
+                                nbOrigen = objeto.nb_objeto;
+                                break;
+                                //case 4:
+                                //    origen = @Strings.getMSG("Menu014");
+                                //    nbOrigen = objeto.nb_objeto;
+                                //    break;
+                                //case 5:
+                                //    origen = @Strings.getMSG("Menu077");
+                                //    nbOrigen = objeto.nb_objeto;
+                                break;
+                            case 6:
+                                origen = @Strings.getMSG("ReporteIyPIndex021");
+                                nbOrigen = objeto.nb_objeto;
+                                break;
+                        }
+                    }
+                    else if (cert != null)
+                    {
+                        origen = @Strings.getMSG("Menu014");
+                        nbOrigen = @Strings.getMSG("CertificacionInforme023")+" "+ cert.k_control.relacion_control;
+                    }
+                    else if (control != null)
+                    {
+                        origen = @Strings.getMSG("Control");
+                        nbOrigen = control.relacion_control;
+                    }
+
+                <tr>
+
+                    <td>@origen</td>
+                    <td>@nbOrigen</td>
+                    <td>@item.id_plan</td>
+                    <td>@item.c_usuario.nb_usuario</td>
+                    <td>@item.nb_plan</td>
+                    <td>@item.ds_plan</td>
+                    <td>@item.c_area.cl_area - @item.c_area.nb_area</td>
+                    <td>@item.r_conclusion_plan.First().observaciones</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta)</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_estimada_implantacion)</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_real_solucion)</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+

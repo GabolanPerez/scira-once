@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SCIRA.Models.c_indicador>
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#modalB");
+    });
+</script>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("Clave")</th>
+            <th>@Strings.getMSG("SubProcesoCreate018")</th>
+            <th>@Strings.getMSG("Area")</th>
+            <th>@Strings.getMSG("Responsable")</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.cl_indicador
+                </td>
+                <td>
+                    @item.ds_indicador
+                </td>
+                <td>
+                    @item.c_area.nb_area
+                </td>
+                <td>
+                    @item.c_usuario.nb_usuario
+                </td>
+                <td>
+                    <a onclick="detailsIndicador('@ViewBag.label',@item.id_indicador,@ViewBag.tipo)">
+                        <i class="fa fa-eye" title="@Strings.getMSG("Cédula del Indicador")"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

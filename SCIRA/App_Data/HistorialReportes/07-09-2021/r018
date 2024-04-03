@@ -1,0 +1,39 @@
+{
+  "RepName": "Reporte de Planes de Remediación Pendientes",
+  "ColNames": [
+    "Origen Incidencia",
+    "Nombre del objeto origen",
+    "ID",
+    "Nombre",
+    "Plan",
+    "Área",
+    "Fecha de Alta",
+    "Fecha estimada de Implantación"
+  ],
+  "Rows": [
+    [
+      "Informes Auditoría Interna",
+      "1",
+      "2088",
+      "p",
+      "p",
+      "05 - Administración y Finanzas",
+      "04/08/2021 04:28:42 p. m.",
+      "04/08/2021 04:28:00 p. m."
+    ],
+    [
+      "Riesgo Operativo/Otros",
+      "PRU",
+      "2090",
+      "p",
+      "p",
+      "01 - Jurídico y Cumplimiento",
+      "04/08/2021 04:29:57 p. m.",
+      "04/08/2021 04:29:00 p. m."
+    ]
+  ],
+  "NoCols": 8,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

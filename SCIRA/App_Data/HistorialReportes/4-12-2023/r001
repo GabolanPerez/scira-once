@@ -1,0 +1,144 @@
+{
+  "RepName": "Reporte de Accesos",
+  "ColNames": [
+    "Usuario",
+    "Función",
+    "Fecha"
+  ],
+  "Rows": [
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ReporteEstructura/Index",
+      "3/15/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ReporteEstructura/Index",
+      "3/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "4/12/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ReporteEstructura/Index",
+      "3/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "3/14/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ReporteEstructura/Index",
+      "3/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "ReporteEstructura/Index",
+      "3/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "3/14/2023"
+    ]
+  ],
+  "NoCols": 3,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

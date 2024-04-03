@@ -1,0 +1,89 @@
+{
+  "RepName": "Reporte de Sub Procesos - Normatividad: Acuerdo por el que se emiten los formatos oficiales para que las instituciones de crédito den los avisos a que hacen referencia la 62a Bis y ",
+  "ColNames": [
+    "ROOT",
+    "Raíz",
+    "ART",
+    "Artículo",
+    "FRACC",
+    "Fracción",
+    "¿Tiene Ficha?",
+    "Sub Procesos Ligados"
+  ],
+  "Rows": [
+    [
+      "Acuerdo",
+      "Acuerdo por el que se emiten los formatos oficiales para que las instituciones de crédito den los avisos a que hacen referencia la 62a Bis y ",
+      "ART-01",
+      "El presente acuerdo tiene por objeto establecer los medios electrónicos y los  formatos oficiales a través de los cuales las Entidades deberán dar aviso a la Comisión sobre la  celebración de convenios entre las Entidades y las Entidades Financieras Extranjeras, con  respecto del intercambio de información a que se refieren la 62ª Bis y 62ª Ter de las  Disposiciones.",
+      "",
+      "",
+      "No",
+      "N/A"
+    ],
+    [
+      "Acuerdo",
+      "Acuerdo por el que se emiten los formatos oficiales para que las instituciones de crédito den los avisos a que hacen referencia la 62a Bis y ",
+      "ART-02",
+      "En adición a las definiciones contenidas en las Disposiciones, para efectos del  presente acuerdo se entenderá, en singular o plural, por:",
+      "FRACC-01",
+      "I. Disposiciones, a las \"Disposiciones de carácter general a que se refiere el artículo 115 de la Ley de instituciones de Crédito\", publicadas en el Diario Oficial de la Federación el 20 de abril  de 2009 y sus respectivas modificaciones.",
+      "No",
+      "N/A"
+    ],
+    [
+      "Acuerdo",
+      "Acuerdo por el que se emiten los formatos oficiales para que las instituciones de crédito den los avisos a que hacen referencia la 62a Bis y ",
+      "ART-02",
+      "En adición a las definiciones contenidas en las Disposiciones, para efectos del  presente acuerdo se entenderá, en singular o plural, por:",
+      "FRACC-02",
+      "II. SITI, al Sistema Interinstitucional de Transferencia de Información, el cual forma parte de la  Oficialía de Partes de la Comisión.",
+      "No",
+      "N/A"
+    ],
+    [
+      "Acuerdo",
+      "Acuerdo por el que se emiten los formatos oficiales para que las instituciones de crédito den los avisos a que hacen referencia la 62a Bis y ",
+      "ART-03",
+      "Las Entidades deberán transmitir a la Comisión vía electrónica a través del SITI, en archivos \"XML\", lo siguiente:",
+      "FRACC-01",
+      "I. El aviso a que se refiere la fracción I de la 62ª Bis de las Disposiciones, sobre la celebración de  convenios entre las Entidades y las Entidades Financieras Extranjeras, para el intercambio de  información sobre los clientes personas morales que realicen operaciones de forma ilimitada  con dólares en efectivo de los Estados Unidos de América, siempre que derive de una  operación con dólares de los Estados Unidos de América entre las Entidades y las Entidades  Financieras Extranjeras, en el formato del Anexo A de este instrumento, con la extensión de archivo \"ACID\", Y",
+      "No",
+      "N/A"
+    ],
+    [
+      "Acuerdo",
+      "Acuerdo por el que se emiten los formatos oficiales para que las instituciones de crédito den los avisos a que hacen referencia la 62a Bis y ",
+      "ART-03",
+      "Las Entidades deberán transmitir a la Comisión vía electrónica a través del SITI, en archivos \"XML\", lo siguiente:",
+      "FRACC-02",
+      "II. El informe a que se refiere la fracción II de la 62ª Ter de las Disposiciones, sobre la  celebración de convenios entre las Entidades y las Entidades Financieras Extranjeras para el  intercambio de información sobre clientes y usuarios, así como de sus operaciones, siempre  que derive de una operación entre las Entidades y Entidades Financieras Extranjeras, en el formato contenido en el Anexo B del presente acuerdo, con la extensión de archivo\".ICII\".  Para efectos de lo anterior, deberán utilizar los catálogos y demás indicaciones contenidos en el  SITI. Este sistema generará un acuse de recibo electrónico en el que se hará constar la  denominación de la Entidad remitente, número de folio, fecha y hora de recepción, así como el  número total de registros enviados.  Las Entidades serán responsables del envío de la información de que se trata, así como de que  reúna la calidad y características exigibles.  El aviso y el informe a que se refiere este artículo deberán enviarse una sola vez y se recibirán  asumiendo que reúnen todas las características requeridas, en virtud de lo cual no podrán ser  modificados.",
+      "No",
+      "N/A"
+    ],
+    [
+      "Acuerdo",
+      "Acuerdo por el que se emiten los formatos oficiales para que las instituciones de crédito den los avisos a que hacen referencia la 62a Bis y ",
+      "ART-04",
+      "La Comisión pondrá a disposición de las Entidades, a través del SITI, y en su caso, en  su página de internet, los catálogos que han sido proporcionados por la Secretaría y por la propia  Comisión, a efecto de que estas capturen la información que deberán incluir en el aviso y el  informe a que se refiere el presente acuerdo y que se contiene en los Anexos A y B de este  instrumento.",
+      "",
+      "",
+      "No",
+      "N/A"
+    ],
+    [
+      "Acuerdo",
+      "Acuerdo por el que se emiten los formatos oficiales para que las instituciones de crédito den los avisos a que hacen referencia la 62a Bis y ",
+      "ART-05",
+      "La atención de consultas y la interpretación del presente acuerdo corresponderá a  la Vicepresidencia de Supervisión de Procesos Preventivos, por conducto de las direcciones  generales de Prevención de Operaciones con Recursos de Procedencia Ilícita A y B.",
+      "",
+      "",
+      "No",
+      "N/A"
+    ]
+  ],
+  "NoCols": 7,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

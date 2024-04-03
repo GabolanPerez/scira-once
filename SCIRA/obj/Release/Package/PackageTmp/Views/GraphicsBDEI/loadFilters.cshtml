@@ -1,0 +1,8 @@
+﻿<script>
+    $(document).ready(function () {
+        var data0 = @Html.Raw(ViewBag.d0);
+
+        gr0.destroy();
+        gr0 = buildChart(data0, tg0, 'Pérdidas Operativas', g0, opt0);
+    });
+</script>

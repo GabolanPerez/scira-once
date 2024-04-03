@@ -1,0 +1,80 @@
+﻿@model SCIRA.Models.r_evento
+@{
+
+}
+
+
+
+<script src="~/Scripts/MSInitialize.js"></script>
+
+<script>
+    $(document).ready(function () {
+        menuModal.setTitle('@ViewBag.title');
+        loadPopover();
+    });
+
+    function trySubmit() {
+        var url = "@Url.Action("LigarSP", "ContenidoNormatividad")";
+
+        $.ajax({
+            dataType: "html",
+            type: "post",
+            url: url,
+            data: $("#FichaForm").serialize(),
+            success: function (data) {
+                toastr.success("Los sub procesos se ligaron exitosamente.");
+                menuModal.hide();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                toastr.error("Parece que algo salio mal, intente de nuevo más tarde.");
+                menuModal.hide();
+            }
+        });
+    }
+
+</script>
+
+<button class="btn btn-default" onclick="menuModal.bodyLoad('@Url.Action("ContenidoNormatividadI","Ficha")/@ViewBag.id_contenido')">Regresar</button>
+<br /><br /><br />
+
+            <form id="FichaForm" method="post">
+                <div class="form-horizontal">
+                    <input type="hidden" name="id_contenido" value="@ViewBag.id_contenido" />
+                    @Html.AntiForgeryToken()
+                    
+                    <br />
+                    <div class="row">
+                        <label class="control-label col-xs-4 col-sm-4 col-md-5 col-lg-4">Sub Procesos Ligados Directamente</label>
+                        <div class="col-xs-8 col-sm-8 col-md-7 col-lg-8">
+                            <div class="input-group">
+                                @Html.ListBox("sps", (MultiSelectList)ViewBag.spL, htmlAttributes: new { @class = "form-control selectpicker" })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="Atención" data-toggle="popover" data-trigger="hover" data-content="Seleccione la lista de usuarios a los que se les enviarán los recordatorios.">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <div class="row">
+                        <label class="control-label col-xs-4 col-sm-4 col-md-5 col-lg-4">Todos los Sub Procesos Ligados</label>
+                        <div class="col-xs-8 col-sm-8 col-md-7 col-lg-8">
+                            <pre>
+@(Html.Raw(ViewBag.tspL.Replace(Environment.NewLine, "<br />")))
+                            </pre>
+                            
+                        </div>
+                    </div>
+            </form>
+
+<div class="row">
+    <div class="pull-right col-md-2">
+        <input type="button" id="smtBtn" class="btn btn-primary" value="Guardar" onclick="trySubmit()" />
+    </div>
+</div>
+
+
+

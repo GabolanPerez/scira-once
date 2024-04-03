@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SCIRA.Models.k_plan>
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#menuModal");
+    });
+</script>
+
+<table class="results table table-bordered table-striped table-hover table-responsive">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("lyPlanesdeRemediacionIndex002")</th>
+            <th class="search">@Strings.getMSG("Nombre")</th>
+            <th class="search">@Strings.getMSG("Responsable")</th>
+            <th class="search">@Strings.getMSG("lyPlanesdeRemediacionIndex001")</th>
+            <th class="search">@Strings.getMSG("BDEIIndex003")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id_plan</td>
+                <td>@item.nb_plan</td>
+                <td>@item.c_usuario.nb_usuario</td>
+                <td>@item.c_usuario1.nb_usuario</td>
+                <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta)</td>
+            </tr>
+        }
+    </tbody>
+</table>    

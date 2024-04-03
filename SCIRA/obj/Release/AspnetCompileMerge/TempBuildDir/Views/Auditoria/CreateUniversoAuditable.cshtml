@@ -1,0 +1,265 @@
+﻿@model SCIRA.Models.c_auditoria
+@using SCIRA.Utilidades 
+@{
+    ViewBag.Title = @Strings.getMSG("AuditoriaCreateUniversoAuditableCreate035");
+}
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+
+<h2>@Strings.getMSG("Agregar")</h2>
+
+@using (Html.BeginForm("CreateUniversoAuditable", "Auditoria", FormMethod.Post, new { onsubmit = "deshabilitar()" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal well">
+    <h4>@Strings.getMSG("Menu104")</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.cl_auditoria, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate015")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.cl_auditoria, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Nombre")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.nb_auditoria, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate016")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.nb_auditoria, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("DivisionAuditoria001")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.DropDownListFor(model => model.id_division_auditoria, (IEnumerable<SelectListItem>)ViewBag.id_division_auditoriaL, Strings.getMSG("DivisionAuditoria002"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("DivisionAuditoria005") })
+                @Html.ValidationMessageFor(model => model.id_division_auditoria, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Entidad")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.DropDownListFor(model => model.id_entidad, (IEnumerable<SelectListItem>)ViewBag.id_entidad, Strings.getMSG("MacroProcesoCreate002"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("AuditoriaCreateUniversoAuditableCreate017") })
+                @Html.ValidationMessageFor(model => model.id_entidad, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Area")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.DropDownListFor(model => model.id_area, (IEnumerable<SelectListItem>)ViewBag.id_area, Strings.getMSG("AuditoriaCreateUniversoAuditableCreate031"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("AuditoriaCreateUniversoAuditableCreate018") })
+                @Html.ValidationMessageFor(model => model.id_area, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate001")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.horas_estimadas, new { htmlAttributes = new { @class = "form-control", @type = "number" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate019")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.horas_estimadas, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate002")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.DropDownListFor(model => model.id_solicitante_auditoria, (IEnumerable<SelectListItem>)ViewBag.id_solicitante_auditoria, Strings.getMSG("AuditoriaCreateUniversoAuditableCreate032"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("AuditoriaCreateUniversoAuditableCreate020") })
+                @Html.ValidationMessageFor(model => model.id_solicitante_auditoria, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate003")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.sociedades_que_aplica, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate021")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.sociedades_que_aplica, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaIndexUniversoAuditable004")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.fundamento_normativo, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate022")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.fundamento_normativo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate004")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.DropDownListFor(model => model.id_periodo_auditoria, (IEnumerable<SelectListItem>)ViewBag.id_periodo_auditoria, Strings.getMSG("AuditoriaCreateUniversoAuditableCreate033"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("AuditoriaCreateUniversoAuditableCreate023") })
+                @Html.ValidationMessageFor(model => model.id_periodo_auditoria, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate005")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.DropDownListFor(model => model.id_mes_entrega, (IEnumerable<SelectListItem>)ViewBag.id_mes_entrega, @Strings.getMSG("AuditoriaCreateUniversoAuditableCreate034"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("AuditoriaCreateUniversoAuditableCreate024") })
+                @Html.ValidationMessageFor(model => model.id_mes_entrega, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate006")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.nb_firmante, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate025")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.nb_firmante, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate007")</label>
+            <div class="col-xs-3 col-md-2">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.es_regulada, new { htmlAttributes = new { @id = "es_regulada", data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("AuditoriaCreateCampoAuditoria013")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate008")</label>
+            <div class="col-xs-3 col-md-2">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.presenta_cair, new { htmlAttributes = new { @id = "presenta_cair", data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate027")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate009")</label>
+            <div class="col-xs-3 col-md-2">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.presenta_comite, new { htmlAttributes = new { @id = "presenta_comite", data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate028")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate010")</label>
+            <div class="col-xs-3 col-md-2">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.presenta_consejo, new { htmlAttributes = new { @id = "presenta_consejo", data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate030")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="form-group has-error">
+            <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                <input type="submit" value=@Strings.getMSG("Guardar") class="btn btn-primary" id="submit" />
+                @Html.ActionLink(Strings.getMSG("Regresar"), "IndexUniversoAuditable", "Auditoria", new { @class = "btn btn-default return" })
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

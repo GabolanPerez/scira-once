@@ -1,0 +1,659 @@
+﻿@model SCIRA.ViewModels.EditarRiesgoViewModel
+@using System.Reflection;
+@using SCIRA.Models;
+@using SCIRA.Utilidades
+@{
+    string aux;
+    var db = new SCIRA.Models.SICIEntities();
+    k_riesgo riesgo = db.k_riesgo.Find(Model.id_riesgo);
+}
+<script src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+
+
+<script type="text/javascript" src="~/Scripts/multiple-select.js"></script>
+<script type="text/javascript">
+    var modalOptions = {
+        title: "Detalles Magnitud de Impacto",
+        size: "lg",
+        show: true,
+        loadUrl: "@(Url.Action("infoMI","Riesgo"))"
+    }
+
+    function infoMI() {
+        menuModal.initModal(modalOptions);
+    }
+
+
+    $(function () {
+        $("#id_categoria_riesgo").change(function () {
+            var selectedItem = $(this).val();
+            var ddlTiposRiesgo = $("#id_tipo_riesgo");
+            var cargandoTiposRiesgo = $("#cargando-tipos-riesgo");
+            cargandoTiposRiesgo.show();
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneTiposRiesgo"))",
+                data: { "IdCategoriaRiesgo": selectedItem },
+                success: function (data) {
+                    ddlTiposRiesgo.html('');
+                    ddlTiposRiesgo.append($('<option></option>').val(null).html("-Seleccione Tipo de Riesgo-"))
+                    $.each(data, function (id, option) {
+                        ddlTiposRiesgo.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    cargandoTiposRiesgo.hide();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //alert('Error al recuperar Tipos de Riesgo.');
+                    cargandoTiposRiesgo.hide();
+                }
+            });
+        });
+    });
+
+    $(function () {
+        $("#id_clase_tipologia_riesgo").change(function () {
+            var selectedItem = $(this).val();
+            var ddlSubClasesTipologiaRiesgo = $("#id_sub_clase_tipologia_riesgo");
+            var ddlTipologiaRiesgo = $("#id_tipologia_riesgo");
+            var cargandoSubClasesTipologiaRiesgo = $("#cargando-sub-clases-tipologia-riesgo");
+            cargandoSubClasesTipologiaRiesgo.show();
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneSubClasesTipologiaRiesgo"))",
+                data: { "IdClaseTipologiaRiesgo": selectedItem },
+                success: function (data) {
+                    ddlSubClasesTipologiaRiesgo.html('');
+                    ddlSubClasesTipologiaRiesgo.append($('<option></option>').val(null).html("-Seleccione Sub Clase Tipologia Riesgo-"))
+                    ddlTipologiaRiesgo.html('');
+                    ddlTipologiaRiesgo.append($('<option></option>').val(null).html("-Seleccione Tipologia Riesgo-"))
+                    $.each(data, function (id, option) {
+                        ddlSubClasesTipologiaRiesgo.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    cargandoSubClasesTipologiaRiesgo.hide();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //alert('Error al recuperar Sub Clases de Tipologia de Riesgo.');
+                    cargandoSubClasesTipologiaRiesgo.hide();
+                }
+            });
+        });
+    });
+
+    $(function () {
+        $("#id_sub_clase_tipologia_riesgo").change(function () {
+            var selectedItem = $(this).val();
+            var ddlTipologiaRiesgo = $("#id_tipologia_riesgo");
+            var cargandoTipologiasRiesgo = $("#cargando-tipologias-riesgo");
+            cargandoTipologiasRiesgo.show();
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneTipologiasRiesgo"))",
+                data: { "IdSubClaseTipologiaRiesgo": selectedItem },
+                success: function (data) {
+                    ddlTipologiaRiesgo.html('');
+                    ddlTipologiaRiesgo.append($('<option></option>').val(null).html("-Seleccione Tipologia Riesgo-"))
+                    $.each(data, function (id, option) {
+                        ddlTipologiaRiesgo.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    cargandoTipologiasRiesgo.hide();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //alert('Error al recuperar Tipologias de Riesgo.');
+                    cargandoTipologiasRiesgo.hide();
+                }
+            });
+        });
+    });
+
+    function printFile(nombre, id) {
+        if (extension(nombre) == "pdf") {
+
+        } else {
+            var html = 'No se puede mostrar vista previa.';
+            $("#" + id).html(html);
+        }
+    }
+
+    function extension(filename) {
+        return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
+    }
+
+    $(document).ready(function () {
+        printFile("@(Model.c_sub_proceso.nb_archivo_flujo)", "f");
+        printFile("@(Model.c_sub_proceso.nb_archivo_manual)", "n");
+
+        $("#criticidadAux").val($("#criticidad").val());
+
+        $("#id_magnitud_impacto").change(function () {
+            c_criticidad();
+        });
+
+        $("#id_probabilidad_ocurrencia").change(function () {
+            c_criticidad();
+        });
+        var encoded;
+        var decoded;
+        @{
+            Type m_tipo = null;
+            PropertyInfo[] m_propiedades = null;
+            m_tipo = Model.GetType();
+            m_propiedades = m_tipo.GetProperties();
+            for (int i = 0; i < 20; i++)
+            {
+                if (ViewBag.CamposExtraRiesgo[i].es_visible)
+                {
+                    var propiedad = m_propiedades[i + 23];
+                    string valor = "";
+                    try
+                    {
+                        valor = propiedad.GetValue(Model,null).ToString();
+                    }
+                    catch
+                    {
+                        valor = "";
+                    }
+                    @:encoded = "@valor";
+                    @:decoded = $("<div/>").html(encoded).text();
+                    @:$("#campor@(String.Format("{0:00}", i+1))").val(decoded);
+                    @:$(".campor@(String.Format("{0:00}", i+1))").val(decoded);
+                }
+            }
+        }
+
+        c_criticidad();
+
+        function c_criticidad() {
+            var mi = parseInt($("#id_magnitud_impacto").val());
+            var po = parseInt($("#id_probabilidad_ocurrencia").val());
+
+
+            $("#criticidad").val("");
+            $("#criticidadAux").val("");
+
+            //encontrar la criticidad dependiendo de ambos IDs
+            @{
+                foreach(var criticidad in ViewBag.Criticidad)
+                {
+                    @:if (po == @(criticidad.id_probabilidad_ocurrencia) && mi == @(criticidad.id_magnitud_impacto))
+                    @:{
+                        @:$("#criticidad").val("@Html.Raw(criticidad.c_criticidad_riesgo.nb_criticidad_riesgo)");
+                        @:$("#criticidadAux").val("@Html.Raw(criticidad.c_criticidad_riesgo.nb_criticidad_riesgo)");
+                    @:}
+                }
+            }
+        }
+    });
+</script>
+
+<h3>@Strings.getMSG("RiesgoCreate125")</h3>
+
+
+<ul class="nav nav-tabs">
+    <li><a href="#generales" data-toggle="tab"><h4>@Strings.getMSG("RiesgoCreate078")</h4></a></li>
+    <li class="active"><a href="#riesgo" data-toggle="tab"><h4>@Strings.getMSG("Riesgo")</h4></a></li>
+    <li><a href="#control" data-toggle="tab" id="tabControl"><h4>@Strings.getMSG("Controles")</h4></a></li>
+    <li><a href="#flujo" data-toggle="tab"><h4>@Strings.getMSG("RiesgoCreate080")</h4></a></li>
+    <li><a href="#narrativa" data-toggle="tab"><h4>@Strings.getMSG("RiesgoCreate081")</h4></a></li>
+    <li><a href="#manual" data-toggle="tab"><h4>@Strings.getMSG("RiesgoCreate082")</h4></a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+
+    <div class="tab-pane fade" id="generales">
+        <br />
+        <div class="form-horizontal well">
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("Entidad")</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" value="@(Model.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.cl_entidad + " - " + Model.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.nb_entidad)" disabled="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("MP")</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" value="@(Model.c_sub_proceso.c_proceso.c_macro_proceso.cl_macro_proceso + " - " + Model.c_sub_proceso.c_proceso.c_macro_proceso.nb_macro_proceso)" disabled="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("P")</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" value="@(Model.c_sub_proceso.c_proceso.cl_proceso + " - " + Model.c_sub_proceso.c_proceso.nb_proceso)" disabled="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("SP")</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" value="@(Model.c_sub_proceso.cl_sub_proceso + " - " + Model.c_sub_proceso.nb_sub_proceso)" disabled="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate037")</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" value="@(Model.c_sub_proceso.c_usuario.nb_usuario)" disabled="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>
+                <div class="col-md-10">
+                    <textarea class="form-control" rows="5" disabled="">@(Model.c_sub_proceso.ds_sub_proceso)
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate011")</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" value="@(Model.c_sub_proceso.cl_manual)" disabled="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate009")</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" value="@(Model.c_sub_proceso.cl_sp_anterior)" disabled="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate010")</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" value="@(Model.c_sub_proceso.cl_sp_siguiente)" disabled="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate013")</label>
+                <div class="col-md-10">
+                    @if (Model.c_sub_proceso.id_tipologia_sub_proceso != null)
+                    {
+                        <input class="form-control" type="text" value="@(Model.c_sub_proceso.c_tipologia_sub_proceso.nb_tipologia_sub_proceso)" disabled="">
+                    }
+                    else
+                    {
+                        <input class="form-control" type="text" value="@Strings.getMSG("RiesgoRiesgos014")" disabled="">
+                    }
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate016")</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" value="@(Model.c_sub_proceso.ds_areas_involucradas)" disabled="">
+                </div>
+            </div>
+
+            @{
+                List<c_meta_campo> lista = ViewBag.CamposExtraSubProceso;
+
+                m_tipo = null;
+                m_propiedades = null;
+                m_tipo = Model.c_sub_proceso.GetType();
+                m_propiedades = m_tipo.GetProperties();
+
+                for (int i = 0; i < 20; i++)
+                {
+                    var item = lista.ElementAt(i);
+                    if (item.es_visible)
+                    {
+                        var prop = m_propiedades.Where(p => p.Name == string.Format("campo{0:00}", i + 1)).First();
+
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">@item.nb_campo</label>
+                            <div class="col-md-10">
+
+                                @if (item.cl_tipo_campo == "t")
+                                {
+                                    <input class="form-control" type="text" value="@prop.GetValue(Model.c_sub_proceso,null)" disabled>
+                                }
+                                else if (item.cl_tipo_campo == "a")
+                                {
+                                    <textarea class="form-control" rows="5" disabled>@prop.GetValue(Model.c_sub_proceso, null)</textarea>
+                                }
+                                else if (item.cl_tipo_campo == "n")
+                                {
+
+                                    <input class="form-control" type="number" value="@prop.GetValue(Model.c_sub_proceso,null)" disabled>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+            }
+
+
+        </div>
+    </div>
+
+    <div class="tab-pane fade active in" id="riesgo">
+        <br />
+        <div class="form-horizontal well">
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("Riesgo")</label>
+                <div class="col-md-10">
+                    <input class="form-control" type="text" value="@(Model.cl_riesgo + " - " + Model.nb_riesgo)" disabled="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("RiesgoRiesgos003")</label>
+                <div class="col-md-10">
+                    <textarea class="form-control" rows="5" disabled="">@(Model.evento)
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("Menu018")</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.id_categoria_riesgo, Model.CategoriasRiesgo, "-Seleccione Factor de Riesgo-", htmlAttributes: new { @class = "form-control", @disabled = "" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("Menu019")</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.id_tipo_riesgo, Model.TiposRiesgo, "-Seleccione Código de Falla -", htmlAttributes: new { @class = "form-control", @disabled = "" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("Menu048")</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.id_clase_tipologia_riesgo, Model.ClasesTipologiaRiesgo, "-Seleccione Clase de Evento -", htmlAttributes: new { @class = "form-control", @disabled = "" })
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("Menu021")</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.id_sub_clase_tipologia_riesgo, Model.SubClasesTipologiaRiesgo, "-Seleccione Tipo de Evento-", htmlAttributes: new { @class = "form-control", @disabled = "" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("Menu022")</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.id_tipologia_riesgo, Model.TipologiasRiesgo, "-Seleccione Sub Tipo de Evento-", htmlAttributes: new { @class = "form-control", @disabled = "" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("Menu023")</label>
+                <div class="col-md-10">
+                    @Html.DropDownList("id_probabilidad_ocurrencia", null, "-Seleccione Probabilidad de Ocurrencia-", htmlAttributes: new { @class = "form-control", @disabled = "" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("Menu024")</label>
+                <div class="col-md-10">
+                    @Html.DropDownList("id_tipo_impacto", null, "-Seleccione Clasificación del Riesgo-", htmlAttributes: new { @class = "form-control", @disabled = "" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate003")</label>
+                <div class="col-md-10">
+                    @Html.DropDownList("id_magnitud_impacto", null, "-Seleccione Magnitud de Impacto-", htmlAttributes: new { @class = "form-control", @disabled = "" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("Menu026")</label>
+                <div class="col-md-10">
+                    <input class="form-control" id="criticidadAux" type="text" disabled="disabled">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate004")</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.tiene_afectacion_contable, new { htmlAttributes = new { disabled = "" } })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate005")</label>
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.supuesto_normativo, new { @class = "form-control", @rows = "5", @disabled = "" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate098")</label>
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.euc, new { @class = "form-control", @rows = "5", @disabled = "" })
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="form-group">
+                <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate095")</label>
+                <div class="col-md-10">
+                    <input class="form-control" value="@(riesgo.es_riesgo_operativo ? Strings.getMSG("AjustesMailIndex015"):Strings.getMSG("AjustesMailIndex016"))" readonly />
+                </div>
+            </div>
+
+            @if (riesgo.es_riesgo_operativo)
+            {
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("P")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" value="@(riesgo.c_proceso_riesgo_operacional.nb_proceso_riesgo_operacional)" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("BDEIDelete003")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" value="@(riesgo.c_sub_tipo_producto_riesgo_operacional.nb_sub_tipo_producto_riesgo_operacional)" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("SubTipoRiesgoOperacionalIndex001")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" value="@(riesgo.c_sub_tipo_riesgo_operacional.nb_sub_tipo_riesgo_operacional)" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("BDEICreate042")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" value="@(riesgo.c_linea_negocio_riesgo_operacional.nb_linea_negocio_riesgo_operacional)" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Menu053")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" value="@(riesgo.c_frecuencia_riesgo_operacional.nb_frecuencia_riesgo_operacional)" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Menu054")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" value="@(riesgo.c_impacto_riesgo_operacional.nb_impacto_riesgo_operacional)" readonly />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("BDEICreate100")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" value="@(SCIRA.Utilidades.Utilidades.Criticidad(riesgo.id_frecuencia_riesgo_operacional??0,riesgo.id_impacto_riesgo_operacional??0))" readonly />
+                    </div>
+                </div>
+            }
+
+            <hr />
+
+
+            @for (int i = 0; i < 20; i++)//Revisamos cada campo para saber cuales y de que forma se mostraran en pantalla
+            {
+                var campo = ViewBag.CamposExtraRiesgo[i];
+
+                if (campo.es_visible)
+                {
+                    <div class="form-group">
+                        <label class="control-label col-md-2">@campo.nb_campo</label>
+                        <div class="col-md-10">
+                            <input type="text" name="campor@(string.Format("{0:00}",i+1))" class="campor@(string.Format("{0:00}",i+1)) form-control" disabled />
+                        </div>
+                    </div>
+                }
+                else
+                {
+                }
+            }
+
+
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="control">
+        <table id="results" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("RiesgoControles002")</th>
+                    <th>@Strings.getMSG("RiesgoControles001")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex037")</th>
+                    <th>@Strings.getMSG("Responsable")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.controles)
+                {
+                    <tr>
+                        <td style="white-space: nowrap">
+                            @(item.codigo_control)
+                        </td>
+                        <td>
+                            @if (item.tiene_accion_correctora)
+                            {
+                                <b>@Strings.getMSG("RiesgoCreate120") </b>
+                                @(item.accion_correctora)
+                            }
+                            else
+                            {
+                                @(item.actividad_control)
+                            }
+                        </td>
+                        <td>
+                            @(item.nb_ejecutor)
+                        </td>
+                        <td>
+                            @(item.nb_responsable)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane fade" id="flujo">
+        <div class="form-horizontal well">
+            <div class="form-group">
+                <br /><br /><br />
+                @if (Model.c_sub_proceso.nb_archivo_flujo != null)
+                {
+                    <h4 style="text-align:center">
+                        <b>@Model.c_sub_proceso.nb_archivo_flujo</b>
+                        <br><br>
+                        <span id="f"><embed src="@Url.Action("DisplayPDF","FlujoNarrativa",new { id = Model.id_sub_proceso, fon = "f"})" width="80%" height="400"></span>
+                        <br><br>
+                        <a href="@Url.Action("DescargaFlujo", "FlujoNarrativa", new { id = Model.c_sub_proceso.id_sub_proceso })">
+                            <i class="fa fa-download fa-2x"> </i>  @Strings.getMSG("RiesgoCreate100")
+                        </a>
+                    </h4>
+                }
+                else
+                {
+                    <h4 style="text-align:center">@Strings.getMSG("RiesgoCreate092")</h4>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="narrativa">
+        <div class="form-horizontal well">
+            <div class="form-group">
+                <br /><br /><br />
+                @if (Model.c_sub_proceso.nb_archivo_manual != null)
+                {
+                    <h4 style="text-align:center">
+                        <b>@Model.c_sub_proceso.nb_archivo_manual</b>
+                        <br><br>
+                        <span id="n"><embed src="@Url.Action("DisplayPDF","FlujoNarrativa",new { id = Model.id_sub_proceso, fon = "n"})" width="80%" height="400"></span>
+                        <br><br>
+                        <a href="@Url.Action("DescargaNarrativa", "FlujoNarrativa", new { id = Model.c_sub_proceso.id_sub_proceso })">
+                            <i class="fa fa-download fa-2x"> </i>  @Strings.getMSG("RiesgoCreate101")
+                        </a>
+                    </h4>
+                }
+                else
+                {
+                    <h4 style="text-align:center">@Strings.getMSG("RiesgoCreate093")</h4>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="manual">
+        <div class="form-horizontal well">
+            <div class="form-group">
+                <br /><br /><br />
+                @if (Model.c_sub_proceso.c_contenido_manual.Count > 0)//Si existe algun manual ligado
+                {
+                    if (Model.c_sub_proceso.c_contenido_manual.Count > 1)
+                    {
+                        foreach (var manual in Model.c_sub_proceso.c_contenido_manual)
+                        {
+                            <h4 style="text-align:center">
+                                <b>@manual.cl_contenido_manual</b>
+                                <br><br>
+                                <span id="mn"><embed src="@Url.Action("GetPDFManual","Riesgo",new { id = manual.id_contenido_manual, sp = 1})" width="80%" height="400"></span>
+                                <br>
+                            </h4>
+                        }
+                    }
+                    else
+                    {
+                        var manual = Model.c_sub_proceso.c_contenido_manual.First();
+                        <h4 style="text-align:center">
+                            <b>@manual.cl_contenido_manual</b>
+                            <br><br>
+                            <span id="mn"><embed src="@Url.Action("GetPDFManual","Riesgo",new { id = manual.id_contenido_manual, sp = 1})" width="80%" height="400"></span>
+                            <br>
+                        </h4>
+                    }
+
+                }
+                else
+                {
+                    <h4 style="text-align:center">@Strings.getMSG("RiesgoCreate091")</h4>
+                }
+            </div>
+        </div>
+    </div>
+
+</div>

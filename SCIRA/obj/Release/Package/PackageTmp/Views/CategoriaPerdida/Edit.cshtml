@@ -1,0 +1,66 @@
+﻿@model SCIRA.Models.c_categoria_perdida
+
+@{
+    ViewBag.Title = "Editar";
+}
+<script src="~/Scripts/sharedScripts.js"></script>
+<h2>Editar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal well">
+        <h4>Categoría de Pérdida</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_categoria_perdida)
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">Clave</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.cl_categoria_perdida, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="Atención" data-toggle="popover" data-trigger="hover" data-content="Corresponde al número que se le asignará a la Categoría de Pérdida.">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.cl_categoria_perdida, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">Nombre</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.nb_categoria_perdida, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="Atención" data-toggle="popover" data-trigger="hover" data-content="Corresponde al nombre que se le asignará a la Categoría de Pérdida. Describe el tipo de pérdida causado por el error o incidencia.">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.nb_categoria_perdida, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="Guardar" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

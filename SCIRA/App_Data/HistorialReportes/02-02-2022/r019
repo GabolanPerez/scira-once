@@ -1,0 +1,57 @@
+{
+  "RepName": "Reporte de Planes de Remediación Concluidos",
+  "ColNames": [
+    "Origen Incidencia",
+    "Nombre del objeto origen",
+    "ID",
+    "Nombre",
+    "Plan",
+    "Área",
+    "Conclusión",
+    "Fecha de Alta",
+    "Fecha estimada de Implantación",
+    "Fecha real de Solución"
+  ],
+  "Rows": [
+    [
+      "Certificación",
+      "Certificación del control CO90",
+      "2089",
+      "p",
+      "p",
+      "04 - Jurídico",
+      "pruebas",
+      "04/08/2021 04:29:19 p. m.",
+      "04/08/2021 04:29:00 p. m.",
+      "01/12/2022 12:00:00 a. m."
+    ],
+    [
+      "Certificación",
+      "Certificación del control CO90",
+      "2095",
+      "Agregar Plan de Remediación",
+      "PrueubaPrueubaPrueubaPrueuba",
+      "03 - Riesgos",
+      "p",
+      "17/09/2021 10:48:04 a. m.",
+      "22/09/2021 10:48:00 a. m.",
+      "24/09/2021 12:00:00 a. m."
+    ],
+    [
+      "Control",
+      null,
+      "2096",
+      "Prueuba",
+      "PrueubaPrueubaPrueubaPrueuba",
+      "02 - Contraloría Normativa",
+      "Conclusión del Plan",
+      "17/09/2021 10:57:56 a. m.",
+      "30/09/2021 10:58:00 a. m.",
+      "29/09/2021 12:00:00 a. m."
+    ]
+  ],
+  "NoCols": 10,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

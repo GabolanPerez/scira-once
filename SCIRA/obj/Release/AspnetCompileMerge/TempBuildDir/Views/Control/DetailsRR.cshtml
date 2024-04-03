@@ -1,0 +1,41 @@
+﻿@model SCIRA.Models.k_riesgo_residual
+@using SCIRA.Utilidades
+
+<br />
+<div class="form-horizontal well">
+    <div class="titleRR principalColor">@Strings.getMSG("ControlEdit002")</div>
+
+    <div class="rrRow">
+        <div class="cardRR cardRR1 principalColor"><br>@Strings.getMSG("ControlEdit003")</div>
+        <div class="cardRR cardRR2 principalColor">@Strings.getMSG("Menu025")<br>*<br>@Strings.getMSG("Menu023")</div>
+        <div class="betweenCard"><br><br><i class="fa fa-arrow-right"> </i></div>
+        <div class="cardRR cardRR3 principalColor"><br>@ViewBag.Riesgo_Inherente</div>
+    </div>
+
+    <div class="rrRow">
+        <div class="cardRR cardRR1 principalColor"><br>@Strings.getMSG("ControlEdit007")</div>
+        <div class="cardRR cardRR2 principalColor">@Strings.getMSG("ControlEdit013")<br> @Strings.getMSG("ControlEdit014") <br>@Strings.getMSG("ControlEdit015")</div>
+        <div class="betweenCard"><br><br><i class="fa fa-arrow-right"> </i></div>
+        <div class="cardRR  cardRR3 principalColor"><br>@ViewBag.Cobertura_Control</div>
+    </div>
+
+    <div class="rrRow">
+        <div class="cardRR cardRR1 principalColor"><br>@Strings.getMSG("Menu112")</div>
+        <div class="cardRR cardRR2 principalColor">@Strings.getMSG("ControlEdit003") <br>*<br>@Strings.getMSG("ControlEdit012")</div>
+        <div class="betweenCard"><br><br><i class="fa fa-arrow-right"> </i></div>
+        <div class="cardRR cardRR3 principalColor"><br>@ViewBag.Riesgo_Residual</div>
+    </div>
+
+    <hr>
+    @if (!ViewBag.readOnly)
+    {
+        <center>
+            <input type="button" value=@Strings.getMSG("Editar") onclick="editarRR()" class="btn btn-primary submit" />
+            |
+            <input type="button" value=@Strings.getMSG("RiesgoResidualConfigIndex031") onclick="eliminarRR()" class="btn btn-default submit" />
+        </center>
+    }
+
+
+    
+</div>

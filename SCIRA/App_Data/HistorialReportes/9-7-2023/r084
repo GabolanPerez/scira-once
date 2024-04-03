@@ -1,0 +1,69 @@
+{
+  "RepName": "Reporte de Fichas",
+  "ColNames": [
+    "Titulo",
+    "Responsable",
+    "Tipo de Ficha",
+    "Registro Ligado",
+    "Contenido",
+    "Tipo de Recordatorio",
+    "Fecha Límite",
+    "Estado"
+  ],
+  "Rows": [
+    [
+      "Prueba Notificación Mensual",
+      "Sergio",
+      "Normatividad",
+      "PARRA-01 de la normatividad Banxico/Aplica a varias sectores",
+      "Prueba Notificación Mensual",
+      "Recurrente",
+      "10/1/2023 12:00:00 AM",
+      "Pendiente"
+    ],
+    [
+      "Prueba Fichas",
+      "Jorge Rodriguez Ferreiro",
+      "Oficios/Informes",
+      "N/A",
+      "Prueba desde oficios",
+      "Recurrente",
+      "9/11/2023 12:00:00 PM",
+      "Pendiente"
+    ],
+    [
+      "Ficha en incidencia",
+      "Jorge Rodriguez Ferreiro",
+      "Incidencias",
+      "N/A",
+      "Prueba de ficha en incidencia",
+      "Recurrente",
+      "9/12/2023 12:00:00 AM",
+      "Pendiente"
+    ],
+    [
+      "Ficha en Plan",
+      "Jorge Rodriguez Ferreiro",
+      "Planes de Remediación",
+      "N/A",
+      "Prueba de ficha en Plan",
+      "Recurrente",
+      "9/13/2023 12:00:00 AM",
+      "Pendiente"
+    ],
+    [
+      "Prueba Notificación Dia",
+      "Sergio",
+      "Normatividad",
+      "ART-02 de la normatividad Disposiciones preliminares ",
+      "Prueba Notificación Dia",
+      "Recurrente",
+      "10/1/2023 12:00:00 AM",
+      "Pendiente"
+    ]
+  ],
+  "NoCols": 8,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

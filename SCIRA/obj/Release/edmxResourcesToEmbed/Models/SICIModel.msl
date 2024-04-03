@@ -1,0 +1,1061 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SICIModelStoreContainer" CdmEntityContainer="SICIEntities">
+    <EntitySetMapping Name="c_actividad">
+      <EntityTypeMapping TypeName="SICIModel.c_actividad">
+        <MappingFragment StoreEntitySet="c_actividad">
+          <ScalarProperty Name="id_actividad" ColumnName="id_actividad" />
+          <ScalarProperty Name="cl_actividad" ColumnName="cl_actividad" />
+          <ScalarProperty Name="nb_actividad" ColumnName="nb_actividad" />
+          <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_area">
+      <EntityTypeMapping TypeName="SICIModel.c_area">
+        <MappingFragment StoreEntitySet="c_area">
+          <ScalarProperty Name="id_area" ColumnName="id_area" />
+          <ScalarProperty Name="cl_area" ColumnName="cl_area" />
+          <ScalarProperty Name="nb_area" ColumnName="nb_area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_area_costeo">
+      <EntityTypeMapping TypeName="SICIModel.c_area_costeo">
+        <MappingFragment StoreEntitySet="c_area_costeo">
+          <ScalarProperty Name="id_area_costeo" ColumnName="id_area_costeo" />
+          <ScalarProperty Name="cl_area_costeo" ColumnName="cl_area_costeo" />
+          <ScalarProperty Name="nb_area_costeo" ColumnName="nb_area_costeo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_area_costeo_sub_proceso">
+      <EntityTypeMapping TypeName="SICIModel.c_area_costeo_sub_proceso">
+        <MappingFragment StoreEntitySet="c_area_costeo_sub_proceso">
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="id_area_costeo" ColumnName="id_area_costeo" />
+          <ScalarProperty Name="pr_costeo" ColumnName="pr_costeo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_calificacion_indicador">
+      <EntityTypeMapping TypeName="SICIModel.c_calificacion_indicador">
+        <MappingFragment StoreEntitySet="c_calificacion_indicador">
+          <ScalarProperty Name="id_calificacion_indicador" ColumnName="id_calificacion_indicador" />
+          <ScalarProperty Name="cl_calificacion_indicador" ColumnName="cl_calificacion_indicador" />
+          <ScalarProperty Name="nb_calificacion_indicador" ColumnName="nb_calificacion_indicador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_categoria_control">
+      <EntityTypeMapping TypeName="SICIModel.c_categoria_control">
+        <MappingFragment StoreEntitySet="c_categoria_control">
+          <ScalarProperty Name="id_categoria_control" ColumnName="id_categoria_control" />
+          <ScalarProperty Name="cl_categoria_control" ColumnName="cl_categoria_control" />
+          <ScalarProperty Name="nb_categoria_control" ColumnName="nb_categoria_control" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_categoria_error">
+      <EntityTypeMapping TypeName="SICIModel.c_categoria_error">
+        <MappingFragment StoreEntitySet="c_categoria_error">
+          <ScalarProperty Name="id_categoria_error" ColumnName="id_categoria_error" />
+          <ScalarProperty Name="cl_categoria_error" ColumnName="cl_categoria_error" />
+          <ScalarProperty Name="nb_categoria_error" ColumnName="nb_categoria_error" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_categoria_perdida">
+      <EntityTypeMapping TypeName="SICIModel.c_categoria_perdida">
+        <MappingFragment StoreEntitySet="c_categoria_perdida">
+          <ScalarProperty Name="id_categoria_perdida" ColumnName="id_categoria_perdida" />
+          <ScalarProperty Name="cl_categoria_perdida" ColumnName="cl_categoria_perdida" />
+          <ScalarProperty Name="nb_categoria_perdida" ColumnName="nb_categoria_perdida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_categoria_riesgo">
+      <EntityTypeMapping TypeName="SICIModel.c_categoria_riesgo">
+        <MappingFragment StoreEntitySet="c_categoria_riesgo">
+          <ScalarProperty Name="id_categoria_riesgo" ColumnName="id_categoria_riesgo" />
+          <ScalarProperty Name="cl_categoria_riesgo" ColumnName="cl_categoria_riesgo" />
+          <ScalarProperty Name="nb_categoria_riesgo" ColumnName="nb_categoria_riesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_centro_costo">
+      <EntityTypeMapping TypeName="SICIModel.c_centro_costo">
+        <MappingFragment StoreEntitySet="c_centro_costo">
+          <ScalarProperty Name="id_centro_costo" ColumnName="id_centro_costo" />
+          <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
+          <ScalarProperty Name="cl_centro_costo" ColumnName="cl_centro_costo" />
+          <ScalarProperty Name="nb_centro_costo" ColumnName="nb_centro_costo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_clase_tipologia_riesgo">
+      <EntityTypeMapping TypeName="SICIModel.c_clase_tipologia_riesgo">
+        <MappingFragment StoreEntitySet="c_clase_tipologia_riesgo">
+          <ScalarProperty Name="id_clase_tipologia_riesgo" ColumnName="id_clase_tipologia_riesgo" />
+          <ScalarProperty Name="cl_clase_tipologia_riesgo" ColumnName="cl_clase_tipologia_riesgo" />
+          <ScalarProperty Name="nb_clase_tipologia_riesgo" ColumnName="nb_clase_tipologia_riesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_contenido_normatividad">
+      <EntityTypeMapping TypeName="SICIModel.c_contenido_normatividad">
+        <MappingFragment StoreEntitySet="c_contenido_normatividad">
+          <ScalarProperty Name="id_contenido_normatividad" ColumnName="id_contenido_normatividad" />
+          <ScalarProperty Name="id_contenido_normatividad_padre" ColumnName="id_contenido_normatividad_padre" />
+          <ScalarProperty Name="cl_contenido_normatividad" ColumnName="cl_contenido_normatividad" />
+          <ScalarProperty Name="ds_contenido_normatividad" ColumnName="ds_contenido_normatividad" />
+          <ScalarProperty Name="id_nivel_normatividad" ColumnName="id_nivel_normatividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_cuenta_contable">
+      <EntityTypeMapping TypeName="SICIModel.c_cuenta_contable">
+        <MappingFragment StoreEntitySet="c_cuenta_contable">
+          <ScalarProperty Name="id_cuenta_contable" ColumnName="id_cuenta_contable" />
+          <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
+          <ScalarProperty Name="cl_cuenta_contable" ColumnName="cl_cuenta_contable" />
+          <ScalarProperty Name="nb_cuenta_contable" ColumnName="nb_cuenta_contable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_entidad">
+      <EntityTypeMapping TypeName="SICIModel.c_entidad">
+        <MappingFragment StoreEntitySet="c_entidad">
+          <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
+          <ScalarProperty Name="cl_entidad" ColumnName="cl_entidad" />
+          <ScalarProperty Name="nb_entidad" ColumnName="nb_entidad" />
+          <ScalarProperty Name="id_responsable" ColumnName="id_responsable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_error_contable">
+      <EntityTypeMapping TypeName="SICIModel.c_error_contable">
+        <MappingFragment StoreEntitySet="c_error_contable">
+          <ScalarProperty Name="id_error_contable" ColumnName="id_error_contable" />
+          <ScalarProperty Name="cl_error_contable" ColumnName="cl_error_contable" />
+          <ScalarProperty Name="nb_error_contable" ColumnName="nb_error_contable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_estatus_bdei">
+      <EntityTypeMapping TypeName="SICIModel.c_estatus_bdei">
+        <MappingFragment StoreEntitySet="c_estatus_bdei">
+          <ScalarProperty Name="id_estatus_bdei" ColumnName="id_estatus_bdei" />
+          <ScalarProperty Name="cl_estatus_bdei" ColumnName="cl_estatus_bdei" />
+          <ScalarProperty Name="nb_estatus_bdei" ColumnName="nb_estatus_bdei" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_etapa">
+      <EntityTypeMapping TypeName="SICIModel.c_etapa">
+        <MappingFragment StoreEntitySet="c_etapa">
+          <ScalarProperty Name="id_etapa" ColumnName="id_etapa" />
+          <ScalarProperty Name="cl_etapa" ColumnName="cl_etapa" />
+          <ScalarProperty Name="nb_etapa" ColumnName="nb_etapa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_evento_riesgo">
+      <EntityTypeMapping TypeName="SICIModel.c_evento_riesgo">
+        <MappingFragment StoreEntitySet="c_evento_riesgo">
+          <ScalarProperty Name="id_evento_riesgo" ColumnName="id_evento_riesgo" />
+          <ScalarProperty Name="cl_evento_riesgo" ColumnName="cl_evento_riesgo" />
+          <ScalarProperty Name="nb_evento_riesgo" ColumnName="nb_evento_riesgo" />
+          <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_frecuencia_control">
+      <EntityTypeMapping TypeName="SICIModel.c_frecuencia_control">
+        <MappingFragment StoreEntitySet="c_frecuencia_control">
+          <ScalarProperty Name="id_frecuencia_control" ColumnName="id_frecuencia_control" />
+          <ScalarProperty Name="cl_frecuencia_control" ColumnName="cl_frecuencia_control" />
+          <ScalarProperty Name="nb_frecuencia_control" ColumnName="nb_frecuencia_control" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_frecuencia_indicador">
+      <EntityTypeMapping TypeName="SICIModel.c_frecuencia_indicador">
+        <MappingFragment StoreEntitySet="c_frecuencia_indicador">
+          <ScalarProperty Name="id_frecuencia_indicador" ColumnName="id_frecuencia_indicador" />
+          <ScalarProperty Name="cl_frecuencia_indicador" ColumnName="cl_frecuencia_indicador" />
+          <ScalarProperty Name="nb_frecuencia_indicador" ColumnName="nb_frecuencia_indicador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_funcion">
+      <EntityTypeMapping TypeName="SICIModel.c_funcion">
+        <MappingFragment StoreEntitySet="c_funcion">
+          <ScalarProperty Name="id_funcion" ColumnName="id_funcion" />
+          <ScalarProperty Name="cl_funcion" ColumnName="cl_funcion" />
+          <ScalarProperty Name="nb_funcion" ColumnName="nb_funcion" />
+          <ScalarProperty Name="orden" ColumnName="orden" />
+          <ScalarProperty Name="id_menu_funcion" ColumnName="id_menu_funcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_grado_cobertura">
+      <EntityTypeMapping TypeName="SICIModel.c_grado_cobertura">
+        <MappingFragment StoreEntitySet="c_grado_cobertura">
+          <ScalarProperty Name="id_grado_cobertura" ColumnName="id_grado_cobertura" />
+          <ScalarProperty Name="cl_grado_cobertura" ColumnName="cl_grado_cobertura" />
+          <ScalarProperty Name="nb_grado_cobertura" ColumnName="nb_grado_cobertura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_indicador">
+      <EntityTypeMapping TypeName="SICIModel.c_indicador">
+        <MappingFragment StoreEntitySet="c_indicador">
+          <ScalarProperty Name="id_indicador" ColumnName="id_indicador" />
+          <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
+          <ScalarProperty Name="cl_indicador" ColumnName="cl_indicador" />
+          <ScalarProperty Name="nb_indicador" ColumnName="nb_indicador" />
+          <ScalarProperty Name="ds_indicador" ColumnName="ds_indicador" />
+          <ScalarProperty Name="ds_numerador" ColumnName="ds_numerador" />
+          <ScalarProperty Name="ds_denominador" ColumnName="ds_denominador" />
+          <ScalarProperty Name="id_frecuencia_indicador" ColumnName="id_frecuencia_indicador" />
+          <ScalarProperty Name="id_unidad_indicador" ColumnName="id_unidad_indicador" />
+          <ScalarProperty Name="control_asociado" ColumnName="control_asociado" />
+          <ScalarProperty Name="peso" ColumnName="peso" />
+          <ScalarProperty Name="umbral000i" ColumnName="umbral000i" />
+          <ScalarProperty Name="umbral000f" ColumnName="umbral000f" />
+          <ScalarProperty Name="umbral050i" ColumnName="umbral050i" />
+          <ScalarProperty Name="umbral050f" ColumnName="umbral050f" />
+          <ScalarProperty Name="umbral075i" ColumnName="umbral075i" />
+          <ScalarProperty Name="umbral075f" ColumnName="umbral075f" />
+          <ScalarProperty Name="umbral100i" ColumnName="umbral100i" />
+          <ScalarProperty Name="umbral100f" ColumnName="umbral100f" />
+          <ScalarProperty Name="esta_activo" ColumnName="esta_activo" />
+          <ScalarProperty Name="id_area" ColumnName="id_area" />
+          <ScalarProperty Name="id_responsable" ColumnName="id_responsable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_linea_negocio">
+      <EntityTypeMapping TypeName="SICIModel.c_linea_negocio">
+        <MappingFragment StoreEntitySet="c_linea_negocio">
+          <ScalarProperty Name="id_linea_negocio" ColumnName="id_linea_negocio" />
+          <ScalarProperty Name="cl_linea_negocio" ColumnName="cl_linea_negocio" />
+          <ScalarProperty Name="nb_linea_negocio" ColumnName="nb_linea_negocio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_macro_proceso">
+      <EntityTypeMapping TypeName="SICIModel.c_macro_proceso">
+        <MappingFragment StoreEntitySet="c_macro_proceso">
+          <ScalarProperty Name="id_macro_proceso" ColumnName="id_macro_proceso" />
+          <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
+          <ScalarProperty Name="cl_macro_proceso" ColumnName="cl_macro_proceso" />
+          <ScalarProperty Name="nb_macro_proceso" ColumnName="nb_macro_proceso" />
+          <ScalarProperty Name="id_responsable" ColumnName="id_responsable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_magnitud_impacto">
+      <EntityTypeMapping TypeName="SICIModel.c_magnitud_impacto">
+        <MappingFragment StoreEntitySet="c_magnitud_impacto">
+          <ScalarProperty Name="id_magnitud_impacto" ColumnName="id_magnitud_impacto" />
+          <ScalarProperty Name="cl_magnitud_impacto" ColumnName="cl_magnitud_impacto" />
+          <ScalarProperty Name="nb_magnitud_impacto" ColumnName="nb_magnitud_impacto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_menu_funcion">
+      <EntityTypeMapping TypeName="SICIModel.c_menu_funcion">
+        <MappingFragment StoreEntitySet="c_menu_funcion">
+          <ScalarProperty Name="id_menu_funcion" ColumnName="id_menu_funcion" />
+          <ScalarProperty Name="cl_menu_funcion" ColumnName="cl_menu_funcion" />
+          <ScalarProperty Name="nb_menu_funcion" ColumnName="nb_menu_funcion" />
+          <ScalarProperty Name="orden" ColumnName="orden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_meta_campo">
+      <EntityTypeMapping TypeName="SICIModel.c_meta_campo">
+        <MappingFragment StoreEntitySet="c_meta_campo">
+          <ScalarProperty Name="id_meta_campo" ColumnName="id_meta_campo" />
+          <ScalarProperty Name="nb_entidad" ColumnName="nb_entidad" />
+          <ScalarProperty Name="cl_campo" ColumnName="cl_campo" />
+          <ScalarProperty Name="nb_campo" ColumnName="nb_campo" />
+          <ScalarProperty Name="cl_tipo_campo" ColumnName="cl_tipo_campo" />
+          <ScalarProperty Name="longitud_campo" ColumnName="longitud_campo" />
+          <ScalarProperty Name="es_visible" ColumnName="es_visible" />
+          <ScalarProperty Name="es_editable" ColumnName="es_editable" />
+          <ScalarProperty Name="es_requerido" ColumnName="es_requerido" />
+          <ScalarProperty Name="cl_color_borde" ColumnName="cl_color_borde" />
+          <ScalarProperty Name="cl_color_fondo" ColumnName="cl_color_fondo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_moneda">
+      <EntityTypeMapping TypeName="SICIModel.c_moneda">
+        <MappingFragment StoreEntitySet="c_moneda">
+          <ScalarProperty Name="id_moneda" ColumnName="id_moneda" />
+          <ScalarProperty Name="cl_moneda" ColumnName="cl_moneda" />
+          <ScalarProperty Name="nb_moneda" ColumnName="nb_moneda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_naturaleza_control">
+      <EntityTypeMapping TypeName="SICIModel.c_naturaleza_control">
+        <MappingFragment StoreEntitySet="c_naturaleza_control">
+          <ScalarProperty Name="id_naturaleza_control" ColumnName="id_naturaleza_control" />
+          <ScalarProperty Name="cl_naturaleza_control" ColumnName="cl_naturaleza_control" />
+          <ScalarProperty Name="nb_naturaleza_control" ColumnName="nb_naturaleza_control" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_nivel_normatividad">
+      <EntityTypeMapping TypeName="SICIModel.c_nivel_normatividad">
+        <MappingFragment StoreEntitySet="c_nivel_normatividad">
+          <ScalarProperty Name="id_nivel_normatividad" ColumnName="id_nivel_normatividad" />
+          <ScalarProperty Name="cl_nivel_normatividad" ColumnName="cl_nivel_normatividad" />
+          <ScalarProperty Name="nb_nivel_normatividad" ColumnName="nb_nivel_normatividad" />
+          <ScalarProperty Name="no_orden" ColumnName="no_orden" />
+          <ScalarProperty Name="id_normatividad" ColumnName="id_normatividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_normatividad">
+      <EntityTypeMapping TypeName="SICIModel.c_normatividad">
+        <MappingFragment StoreEntitySet="c_normatividad">
+          <ScalarProperty Name="id_normatividad" ColumnName="id_normatividad" />
+          <ScalarProperty Name="cl_normatividad" ColumnName="cl_normatividad" />
+          <ScalarProperty Name="nb_normatividad" ColumnName="nb_normatividad" />
+          <ScalarProperty Name="ds_normatividad" ColumnName="ds_normatividad" />
+          <ScalarProperty Name="fe_publicacion_dof" ColumnName="fe_publicacion_dof" />
+          <ScalarProperty Name="ds_sectores" ColumnName="ds_sectores" />
+          <ScalarProperty Name="id_tipo_normatividad" ColumnName="id_tipo_normatividad" />
+          <ScalarProperty Name="id_root_contenido" ColumnName="id_root_contenido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_origen_incidencia">
+      <EntityTypeMapping TypeName="SICIModel.c_origen_incidencia">
+        <MappingFragment StoreEntitySet="c_origen_incidencia">
+          <ScalarProperty Name="id_origen_incidencia" ColumnName="id_origen_incidencia" />
+          <ScalarProperty Name="cl_origen_incidencia" ColumnName="cl_origen_incidencia" />
+          <ScalarProperty Name="nb_origen_incidencia" ColumnName="nb_origen_incidencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_periodo_certificacion">
+      <EntityTypeMapping TypeName="SICIModel.c_periodo_certificacion">
+        <MappingFragment StoreEntitySet="c_periodo_certificacion">
+          <ScalarProperty Name="id_periodo_certificacion" ColumnName="id_periodo_certificacion" />
+          <ScalarProperty Name="cl_periodo_certificacion" ColumnName="cl_periodo_certificacion" />
+          <ScalarProperty Name="nb_periodo_certificacion" ColumnName="nb_periodo_certificacion" />
+          <ScalarProperty Name="esta_activo" ColumnName="esta_activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_periodo_indicador">
+      <EntityTypeMapping TypeName="SICIModel.c_periodo_indicador">
+        <MappingFragment StoreEntitySet="c_periodo_indicador">
+          <ScalarProperty Name="id_periodo_indicador" ColumnName="id_periodo_indicador" />
+          <ScalarProperty Name="cl_periodo_indicador" ColumnName="cl_periodo_indicador" />
+          <ScalarProperty Name="nb_periodo_indicador" ColumnName="nb_periodo_indicador" />
+          <ScalarProperty Name="esta_activo" ColumnName="esta_activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_probabilidad_ocurrencia">
+      <EntityTypeMapping TypeName="SICIModel.c_probabilidad_ocurrencia">
+        <MappingFragment StoreEntitySet="c_probabilidad_ocurrencia">
+          <ScalarProperty Name="id_probabilidad_ocurrencia" ColumnName="id_probabilidad_ocurrencia" />
+          <ScalarProperty Name="cl_probabilidad_ocurrencia" ColumnName="cl_probabilidad_ocurrencia" />
+          <ScalarProperty Name="nb_probabilidad_ocurrencia" ColumnName="nb_probabilidad_ocurrencia" />
+          <ScalarProperty Name="pr_probabilidad_ocurrencia" ColumnName="pr_probabilidad_ocurrencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_proceso">
+      <EntityTypeMapping TypeName="SICIModel.c_proceso">
+        <MappingFragment StoreEntitySet="c_proceso">
+          <ScalarProperty Name="id_proceso" ColumnName="id_proceso" />
+          <ScalarProperty Name="id_macro_proceso" ColumnName="id_macro_proceso" />
+          <ScalarProperty Name="cl_proceso" ColumnName="cl_proceso" />
+          <ScalarProperty Name="nb_proceso" ColumnName="nb_proceso" />
+          <ScalarProperty Name="id_responsable" ColumnName="id_responsable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_proceso_benchmark">
+      <EntityTypeMapping TypeName="SICIModel.c_proceso_benchmark">
+        <MappingFragment StoreEntitySet="c_proceso_benchmark">
+          <ScalarProperty Name="id_proceso_benchmark" ColumnName="id_proceso_benchmark" />
+          <ScalarProperty Name="cl_proceso_benchmark" ColumnName="cl_proceso_benchmark" />
+          <ScalarProperty Name="nb_proceso_benchmark" ColumnName="nb_proceso_benchmark" />
+          <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_prueba_auto_eval">
+      <EntityTypeMapping TypeName="SICIModel.c_prueba_auto_eval">
+        <MappingFragment StoreEntitySet="c_prueba_auto_eval">
+          <ScalarProperty Name="id_naturaleza_control" ColumnName="id_naturaleza_control" />
+          <ScalarProperty Name="id_frecuencia_control" ColumnName="id_frecuencia_control" />
+          <ScalarProperty Name="no_partidas_minimo" ColumnName="no_partidas_minimo" />
+          <ScalarProperty Name="no_partidas_semestre1" ColumnName="no_partidas_semestre1" />
+          <ScalarProperty Name="no_partidas_semestre2" ColumnName="no_partidas_semestre2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_rol">
+      <EntityTypeMapping TypeName="SICIModel.c_rol">
+        <MappingFragment StoreEntitySet="c_rol">
+          <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+          <ScalarProperty Name="cl_rol" ColumnName="cl_rol" />
+          <ScalarProperty Name="nb_rol" ColumnName="nb_rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_sub_clase_tipologia_riesgo">
+      <EntityTypeMapping TypeName="SICIModel.c_sub_clase_tipologia_riesgo">
+        <MappingFragment StoreEntitySet="c_sub_clase_tipologia_riesgo">
+          <ScalarProperty Name="id_sub_clase_tipologia_riesgo" ColumnName="id_sub_clase_tipologia_riesgo" />
+          <ScalarProperty Name="id_clase_tipologia_riesgo" ColumnName="id_clase_tipologia_riesgo" />
+          <ScalarProperty Name="cl_sub_clase_tipologia_riesgo" ColumnName="cl_sub_clase_tipologia_riesgo" />
+          <ScalarProperty Name="nb_sub_clase_tipologia_riesgo" ColumnName="nb_sub_clase_tipologia_riesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_sub_etapa">
+      <EntityTypeMapping TypeName="SICIModel.c_sub_etapa">
+        <MappingFragment StoreEntitySet="c_sub_etapa">
+          <ScalarProperty Name="id_sub_etapa" ColumnName="id_sub_etapa" />
+          <ScalarProperty Name="cl_sub_etapa" ColumnName="cl_sub_etapa" />
+          <ScalarProperty Name="nb_sub_etapa" ColumnName="nb_sub_etapa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_sub_proceso">
+      <EntityTypeMapping TypeName="SICIModel.c_sub_proceso">
+        <MappingFragment StoreEntitySet="c_sub_proceso">
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="id_proceso" ColumnName="id_proceso" />
+          <ScalarProperty Name="cl_sub_proceso" ColumnName="cl_sub_proceso" />
+          <ScalarProperty Name="nb_sub_proceso" ColumnName="nb_sub_proceso" />
+          <ScalarProperty Name="ds_sub_proceso" ColumnName="ds_sub_proceso" />
+          <ScalarProperty Name="id_responsable" ColumnName="id_responsable" />
+          <ScalarProperty Name="no_meses_antiguedad" ColumnName="no_meses_antiguedad" />
+          <ScalarProperty Name="cl_manual" ColumnName="cl_manual" />
+          <ScalarProperty Name="cl_sp_anterior" ColumnName="cl_sp_anterior" />
+          <ScalarProperty Name="cl_sp_siguiente" ColumnName="cl_sp_siguiente" />
+          <ScalarProperty Name="id_tipologia_sub_proceso" ColumnName="id_tipologia_sub_proceso" />
+          <ScalarProperty Name="id_etapa" ColumnName="id_etapa" />
+          <ScalarProperty Name="id_sub_etapa" ColumnName="id_sub_etapa" />
+          <ScalarProperty Name="ds_areas_involucradas" ColumnName="ds_areas_involucradas" />
+          <ScalarProperty Name="ds_aplicaciones_relacionadas" ColumnName="ds_aplicaciones_relacionadas" />
+          <ScalarProperty Name="nb_archivo_manual" ColumnName="nb_archivo_manual" />
+          <ScalarProperty Name="nb_archivo_flujo" ColumnName="nb_archivo_flujo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_sub_proceso_benchmark">
+      <EntityTypeMapping TypeName="SICIModel.c_sub_proceso_benchmark">
+        <MappingFragment StoreEntitySet="c_sub_proceso_benchmark">
+          <ScalarProperty Name="id_sub_proceso_benchmark" ColumnName="id_sub_proceso_benchmark" />
+          <ScalarProperty Name="cl_sub_proceso_benchmark" ColumnName="cl_sub_proceso_benchmark" />
+          <ScalarProperty Name="nb_sub_proceso_benchmark" ColumnName="nb_sub_proceso_benchmark" />
+          <ScalarProperty Name="id_proceso_benchmark" ColumnName="id_proceso_benchmark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_sub_proceso_normatividad">
+      <EntityTypeMapping TypeName="SICIModel.c_sub_proceso_normatividad">
+        <MappingFragment StoreEntitySet="c_sub_proceso_normatividad">
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="id_contenido_normatividad" ColumnName="id_contenido_normatividad" />
+          <ScalarProperty Name="es_raiz" ColumnName="es_raiz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_tipo_evaluacion">
+      <EntityTypeMapping TypeName="SICIModel.c_tipo_evaluacion">
+        <MappingFragment StoreEntitySet="c_tipo_evaluacion">
+          <ScalarProperty Name="id_tipo_evaluacion" ColumnName="id_tipo_evaluacion" />
+          <ScalarProperty Name="cl_tipo_evaluacion" ColumnName="cl_tipo_evaluacion" />
+          <ScalarProperty Name="nb_tipo_evaluacion" ColumnName="nb_tipo_evaluacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_tipo_evidencia">
+      <EntityTypeMapping TypeName="SICIModel.c_tipo_evidencia">
+        <MappingFragment StoreEntitySet="c_tipo_evidencia">
+          <ScalarProperty Name="id_tipo_evidencia" ColumnName="id_tipo_evidencia" />
+          <ScalarProperty Name="cl_tipo_evidencia" ColumnName="cl_tipo_evidencia" />
+          <ScalarProperty Name="nb_tipo_evidencia" ColumnName="nb_tipo_evidencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_tipo_impacto">
+      <EntityTypeMapping TypeName="SICIModel.c_tipo_impacto">
+        <MappingFragment StoreEntitySet="c_tipo_impacto">
+          <ScalarProperty Name="id_tipo_impacto" ColumnName="id_tipo_impacto" />
+          <ScalarProperty Name="cl_tipo_impacto" ColumnName="cl_tipo_impacto" />
+          <ScalarProperty Name="nb_tipo_impacto" ColumnName="nb_tipo_impacto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_tipo_normatividad">
+      <EntityTypeMapping TypeName="SICIModel.c_tipo_normatividad">
+        <MappingFragment StoreEntitySet="c_tipo_normatividad">
+          <ScalarProperty Name="id_tipo_normatividad" ColumnName="id_tipo_normatividad" />
+          <ScalarProperty Name="cl_tipo_normatividad" ColumnName="cl_tipo_normatividad" />
+          <ScalarProperty Name="nb_tipo_normatividad" ColumnName="nb_tipo_normatividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_tipo_riesgo">
+      <EntityTypeMapping TypeName="SICIModel.c_tipo_riesgo">
+        <MappingFragment StoreEntitySet="c_tipo_riesgo">
+          <ScalarProperty Name="id_tipo_riesgo" ColumnName="id_tipo_riesgo" />
+          <ScalarProperty Name="id_categoria_riesgo" ColumnName="id_categoria_riesgo" />
+          <ScalarProperty Name="cl_tipo_riesgo" ColumnName="cl_tipo_riesgo" />
+          <ScalarProperty Name="nb_tipo_riesgo" ColumnName="nb_tipo_riesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_tipo_solucion">
+      <EntityTypeMapping TypeName="SICIModel.c_tipo_solucion">
+        <MappingFragment StoreEntitySet="c_tipo_solucion">
+          <ScalarProperty Name="id_tipo_solucion" ColumnName="id_tipo_solucion" />
+          <ScalarProperty Name="cl_tipo_solucion" ColumnName="cl_tipo_solucion" />
+          <ScalarProperty Name="nb_tipo_solucion" ColumnName="nb_tipo_solucion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_tipologia_control">
+      <EntityTypeMapping TypeName="SICIModel.c_tipologia_control">
+        <MappingFragment StoreEntitySet="c_tipologia_control">
+          <ScalarProperty Name="id_tipologia_control" ColumnName="id_tipologia_control" />
+          <ScalarProperty Name="cl_tipologia_control" ColumnName="cl_tipologia_control" />
+          <ScalarProperty Name="nb_tipologia_control" ColumnName="nb_tipologia_control" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_tipologia_riesgo">
+      <EntityTypeMapping TypeName="SICIModel.c_tipologia_riesgo">
+        <MappingFragment StoreEntitySet="c_tipologia_riesgo">
+          <ScalarProperty Name="id_tipologia_riesgo" ColumnName="id_tipologia_riesgo" />
+          <ScalarProperty Name="id_sub_clase_tipologia_riesgo" ColumnName="id_sub_clase_tipologia_riesgo" />
+          <ScalarProperty Name="cl_tipologia_riesgo" ColumnName="cl_tipologia_riesgo" />
+          <ScalarProperty Name="nb_tipologia_riesgo" ColumnName="nb_tipologia_riesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_tipologia_sub_proceso">
+      <EntityTypeMapping TypeName="SICIModel.c_tipologia_sub_proceso">
+        <MappingFragment StoreEntitySet="c_tipologia_sub_proceso">
+          <ScalarProperty Name="id_tipologia_sub_proceso" ColumnName="id_tipologia_sub_proceso" />
+          <ScalarProperty Name="cl_tipologia_sub_proceso" ColumnName="cl_tipologia_sub_proceso" />
+          <ScalarProperty Name="nb_tipologia_sub_proceso" ColumnName="nb_tipologia_sub_proceso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_unidad_indicador">
+      <EntityTypeMapping TypeName="SICIModel.c_unidad_indicador">
+        <MappingFragment StoreEntitySet="c_unidad_indicador">
+          <ScalarProperty Name="id_unidad_indicador" ColumnName="id_unidad_indicador" />
+          <ScalarProperty Name="cl_unidad_indicador" ColumnName="cl_unidad_indicador" />
+          <ScalarProperty Name="nb_unidad_indicador" ColumnName="nb_unidad_indicador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_usuario">
+      <EntityTypeMapping TypeName="SICIModel.c_usuario">
+        <MappingFragment StoreEntitySet="c_usuario">
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="cl_usuario" ColumnName="cl_usuario" />
+          <ScalarProperty Name="nb_usuario" ColumnName="nb_usuario" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="e_mail_principal" ColumnName="e_mail_principal" />
+          <ScalarProperty Name="e_mail_alterno" ColumnName="e_mail_alterno" />
+          <ScalarProperty Name="no_telefono" ColumnName="no_telefono" />
+          <ScalarProperty Name="esta_activo" ColumnName="esta_activo" />
+          <ScalarProperty Name="es_super_usuario" ColumnName="es_super_usuario" />
+          <ScalarProperty Name="nb_puesto" ColumnName="nb_puesto" />
+          <ScalarProperty Name="id_area" ColumnName="id_area" />
+          <ScalarProperty Name="solo_lectura" ColumnName="solo_lectura" />
+          <ScalarProperty Name="costo_minuto" ColumnName="costo_minuto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_usuario_sub_proceso">
+      <EntityTypeMapping TypeName="SICIModel.c_usuario_sub_proceso">
+        <MappingFragment StoreEntitySet="c_usuario_sub_proceso">
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+          <ScalarProperty Name="tiempo_sub_proceso" ColumnName="tiempo_sub_proceso" />
+          <ScalarProperty Name="es_responsable" ColumnName="es_responsable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="k_bdei">
+      <EntityTypeMapping TypeName="SICIModel.k_bdei">
+        <MappingFragment StoreEntitySet="k_bdei">
+          <ScalarProperty Name="id_bdei" ColumnName="id_bdei" />
+          <ScalarProperty Name="id_estatus_bdei" ColumnName="id_estatus_bdei" />
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="id_responsable_captura" ColumnName="id_responsable_captura" />
+          <ScalarProperty Name="id_tipologia_riesgo" ColumnName="id_tipologia_riesgo" />
+          <ScalarProperty Name="id_linea_negocio" ColumnName="id_linea_negocio" />
+          <ScalarProperty Name="ds_evento" ColumnName="ds_evento" />
+          <ScalarProperty Name="id_categoria_error" ColumnName="id_categoria_error" />
+          <ScalarProperty Name="id_origen_incidencia" ColumnName="id_origen_incidencia" />
+          <ScalarProperty Name="id_categoria_perdida" ColumnName="id_categoria_perdida" />
+          <ScalarProperty Name="fe_alta" ColumnName="fe_alta" />
+          <ScalarProperty Name="fe_ocurrencia" ColumnName="fe_ocurrencia" />
+          <ScalarProperty Name="hr_ocurrencia" ColumnName="hr_ocurrencia" />
+          <ScalarProperty Name="duracion" ColumnName="duracion" />
+          <ScalarProperty Name="fe_solucion" ColumnName="fe_solucion" />
+          <ScalarProperty Name="id_tipo_solucion" ColumnName="id_tipo_solucion" />
+          <ScalarProperty Name="comentarios" ColumnName="comentarios" />
+          <ScalarProperty Name="id_moneda" ColumnName="id_moneda" />
+          <ScalarProperty Name="id_cuenta_contable_perdida" ColumnName="id_cuenta_contable_perdida" />
+          <ScalarProperty Name="mn_exposicion" ColumnName="mn_exposicion" />
+          <ScalarProperty Name="mn_quebranto" ColumnName="mn_quebranto" />
+          <ScalarProperty Name="id_centro_costo" ColumnName="id_centro_costo" />
+          <ScalarProperty Name="fe_registro_perdida" ColumnName="fe_registro_perdida" />
+          <ScalarProperty Name="fe_quebranto" ColumnName="fe_quebranto" />
+          <ScalarProperty Name="mn_recuperacion" ColumnName="mn_recuperacion" />
+          <ScalarProperty Name="id_responsable_recuperacion" ColumnName="id_responsable_recuperacion" />
+          <ScalarProperty Name="id_cuenta_contable_recuperacion" ColumnName="id_cuenta_contable_recuperacion" />
+          <ScalarProperty Name="fe_registro_recuperacion" ColumnName="fe_registro_recuperacion" />
+          <ScalarProperty Name="via_recuperacion" ColumnName="via_recuperacion" />
+          <ScalarProperty Name="mn_costo_recuperacion" ColumnName="mn_costo_recuperacion" />
+          <ScalarProperty Name="id_cuenta_contable_costo" ColumnName="id_cuenta_contable_costo" />
+          <ScalarProperty Name="fe_registro_costo_recuperacion" ColumnName="fe_registro_costo_recuperacion" />
+          <ScalarProperty Name="id_entidad" ColumnName="id_entidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="k_benchmarck">
+      <EntityTypeMapping TypeName="SICIModel.k_benchmarck">
+        <MappingFragment StoreEntitySet="k_benchmarck">
+          <ScalarProperty Name="id_benchmark" ColumnName="id_benchmark" />
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="id_actividad" ColumnName="id_actividad" />
+          <ScalarProperty Name="id_sub_proceso_benchmark" ColumnName="id_sub_proceso_benchmark" />
+          <ScalarProperty Name="id_evento_riesgo" ColumnName="id_evento_riesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="k_certificacion_control">
+      <EntityTypeMapping TypeName="SICIModel.k_certificacion_control">
+        <MappingFragment StoreEntitySet="k_certificacion_control">
+          <ScalarProperty Name="id_certificacion_control" ColumnName="id_certificacion_control" />
+          <ScalarProperty Name="cl_certificacion_control" ColumnName="cl_certificacion_control" />
+          <ScalarProperty Name="id_control" ColumnName="id_control" />
+          <ScalarProperty Name="id_periodo_certificacion" ColumnName="id_periodo_certificacion" />
+          <ScalarProperty Name="ds_procedimiento_certificacion" ColumnName="ds_procedimiento_certificacion" />
+          <ScalarProperty Name="id_tipo_evaluacion" ColumnName="id_tipo_evaluacion" />
+          <ScalarProperty Name="no_partidas_minimo" ColumnName="no_partidas_minimo" />
+          <ScalarProperty Name="no_partidas_semestre1" ColumnName="no_partidas_semestre1" />
+          <ScalarProperty Name="no_partidas_semestre2" ColumnName="no_partidas_semestre2" />
+          <ScalarProperty Name="no_pruebas_realizadas" ColumnName="no_pruebas_realizadas" />
+          <ScalarProperty Name="tiene_funcionamiento_efectivo" ColumnName="tiene_funcionamiento_efectivo" />
+          <ScalarProperty Name="tiene_disenio_efectivo" ColumnName="tiene_disenio_efectivo" />
+          <ScalarProperty Name="ds_plan_remediacion" ColumnName="ds_plan_remediacion" />
+          <ScalarProperty Name="nb_archivo_1" ColumnName="nb_archivo_1" />
+          <ScalarProperty Name="nb_archivo_2" ColumnName="nb_archivo_2" />
+          <ScalarProperty Name="nb_archivo_3" ColumnName="nb_archivo_3" />
+          <ScalarProperty Name="nb_archivo_4" ColumnName="nb_archivo_4" />
+          <ScalarProperty Name="nb_archivo_5" ColumnName="nb_archivo_5" />
+          <ScalarProperty Name="fe_registro" ColumnName="fe_registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="k_control">
+      <EntityTypeMapping TypeName="SICIModel.k_control">
+        <MappingFragment StoreEntitySet="k_control">
+          <ScalarProperty Name="id_control" ColumnName="id_control" />
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="actividad_control" ColumnName="actividad_control" />
+          <ScalarProperty Name="relacion_control" ColumnName="relacion_control" />
+          <ScalarProperty Name="evidencia_control" ColumnName="evidencia_control" />
+          <ScalarProperty Name="id_ejecutor" ColumnName="id_ejecutor" />
+          <ScalarProperty Name="id_responsable" ColumnName="id_responsable" />
+          <ScalarProperty Name="es_control_clave" ColumnName="es_control_clave" />
+          <ScalarProperty Name="id_grado_cobertura" ColumnName="id_grado_cobertura" />
+          <ScalarProperty Name="id_frecuencia_control" ColumnName="id_frecuencia_control" />
+          <ScalarProperty Name="id_naturaleza_control" ColumnName="id_naturaleza_control" />
+          <ScalarProperty Name="nb_aplicacion" ColumnName="nb_aplicacion" />
+          <ScalarProperty Name="id_tipologia_control" ColumnName="id_tipologia_control" />
+          <ScalarProperty Name="id_categoria_control" ColumnName="id_categoria_control" />
+          <ScalarProperty Name="id_tipo_evidencia" ColumnName="id_tipo_evidencia" />
+          <ScalarProperty Name="tiene_accion_correctora" ColumnName="tiene_accion_correctora" />
+          <ScalarProperty Name="accion_correctora" ColumnName="accion_correctora" />
+          <ScalarProperty Name="ds_notificacion_incidencia" ColumnName="ds_notificacion_incidencia" />
+          <ScalarProperty Name="campo01" ColumnName="campo01" />
+          <ScalarProperty Name="campo02" ColumnName="campo02" />
+          <ScalarProperty Name="campo03" ColumnName="campo03" />
+          <ScalarProperty Name="campo04" ColumnName="campo04" />
+          <ScalarProperty Name="campo05" ColumnName="campo05" />
+          <ScalarProperty Name="campo06" ColumnName="campo06" />
+          <ScalarProperty Name="campo07" ColumnName="campo07" />
+          <ScalarProperty Name="campo08" ColumnName="campo08" />
+          <ScalarProperty Name="campo09" ColumnName="campo09" />
+          <ScalarProperty Name="campo10" ColumnName="campo10" />
+          <ScalarProperty Name="campo11" ColumnName="campo11" />
+          <ScalarProperty Name="campo12" ColumnName="campo12" />
+          <ScalarProperty Name="campo13" ColumnName="campo13" />
+          <ScalarProperty Name="campo14" ColumnName="campo14" />
+          <ScalarProperty Name="campo15" ColumnName="campo15" />
+          <ScalarProperty Name="campo16" ColumnName="campo16" />
+          <ScalarProperty Name="campo17" ColumnName="campo17" />
+          <ScalarProperty Name="campo18" ColumnName="campo18" />
+          <ScalarProperty Name="campo19" ColumnName="campo19" />
+          <ScalarProperty Name="campo20" ColumnName="campo20" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="k_evaluacion">
+      <EntityTypeMapping TypeName="SICIModel.k_evaluacion">
+        <MappingFragment StoreEntitySet="k_evaluacion">
+          <ScalarProperty Name="id_evaluacion" ColumnName="id_evaluacion" />
+          <ScalarProperty Name="id_indicador" ColumnName="id_indicador" />
+          <ScalarProperty Name="id_periodo_indicador" ColumnName="id_periodo_indicador" />
+          <ScalarProperty Name="numerador" ColumnName="numerador" />
+          <ScalarProperty Name="denominador" ColumnName="denominador" />
+          <ScalarProperty Name="medicion" ColumnName="medicion" />
+          <ScalarProperty Name="id_calificacion_indicador" ColumnName="id_calificacion_indicador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="k_riesgo">
+      <EntityTypeMapping TypeName="SICIModel.k_riesgo">
+        <MappingFragment StoreEntitySet="k_riesgo">
+          <ScalarProperty Name="id_riesgo" ColumnName="id_riesgo" />
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="cl_riesgo" ColumnName="cl_riesgo" />
+          <ScalarProperty Name="nb_riesgo" ColumnName="nb_riesgo" />
+          <ScalarProperty Name="evento" ColumnName="evento" />
+          <ScalarProperty Name="id_tipo_riesgo" ColumnName="id_tipo_riesgo" />
+          <ScalarProperty Name="id_tipologia_riesgo" ColumnName="id_tipologia_riesgo" />
+          <ScalarProperty Name="id_probabilidad_ocurrencia" ColumnName="id_probabilidad_ocurrencia" />
+          <ScalarProperty Name="id_tipo_impacto" ColumnName="id_tipo_impacto" />
+          <ScalarProperty Name="id_magnitud_impacto" ColumnName="id_magnitud_impacto" />
+          <ScalarProperty Name="criticidad" ColumnName="criticidad" />
+          <ScalarProperty Name="tiene_afectacion_contable" ColumnName="tiene_afectacion_contable" />
+          <ScalarProperty Name="supuesto_normativo" ColumnName="supuesto_normativo" />
+          <ScalarProperty Name="euc" ColumnName="euc" />
+          <ScalarProperty Name="campo01" ColumnName="campo01" />
+          <ScalarProperty Name="campo02" ColumnName="campo02" />
+          <ScalarProperty Name="campo03" ColumnName="campo03" />
+          <ScalarProperty Name="campo04" ColumnName="campo04" />
+          <ScalarProperty Name="campo05" ColumnName="campo05" />
+          <ScalarProperty Name="campo06" ColumnName="campo06" />
+          <ScalarProperty Name="campo07" ColumnName="campo07" />
+          <ScalarProperty Name="campo08" ColumnName="campo08" />
+          <ScalarProperty Name="campo09" ColumnName="campo09" />
+          <ScalarProperty Name="campo10" ColumnName="campo10" />
+          <ScalarProperty Name="campo11" ColumnName="campo11" />
+          <ScalarProperty Name="campo12" ColumnName="campo12" />
+          <ScalarProperty Name="campo13" ColumnName="campo13" />
+          <ScalarProperty Name="campo14" ColumnName="campo14" />
+          <ScalarProperty Name="campo15" ColumnName="campo15" />
+          <ScalarProperty Name="campo16" ColumnName="campo16" />
+          <ScalarProperty Name="campo17" ColumnName="campo17" />
+          <ScalarProperty Name="campo18" ColumnName="campo18" />
+          <ScalarProperty Name="campo19" ColumnName="campo19" />
+          <ScalarProperty Name="campo20" ColumnName="campo20" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_bdei">
+      <EntityTypeMapping TypeName="SICIModel.v_bdei">
+        <MappingFragment StoreEntitySet="v_bdei">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="nb_entidad" ColumnName="nb_entidad" />
+          <ScalarProperty Name="nb_estatus_bdei" ColumnName="nb_estatus_bdei" />
+          <ScalarProperty Name="nb_sub_proceso" ColumnName="nb_sub_proceso" />
+          <ScalarProperty Name="nb_usuario_sub_proceso" ColumnName="nb_usuario_sub_proceso" />
+          <ScalarProperty Name="nb_usuario_captura" ColumnName="nb_usuario_captura" />
+          <ScalarProperty Name="nb_tipologia_riesgo" ColumnName="nb_tipologia_riesgo" />
+          <ScalarProperty Name="nb_linea_negocio" ColumnName="nb_linea_negocio" />
+          <ScalarProperty Name="ds_evento" ColumnName="ds_evento" />
+          <ScalarProperty Name="nb_categoria_error" ColumnName="nb_categoria_error" />
+          <ScalarProperty Name="nb_origen_incidencia" ColumnName="nb_origen_incidencia" />
+          <ScalarProperty Name="nb_categoria_perdida" ColumnName="nb_categoria_perdida" />
+          <ScalarProperty Name="fe_alta" ColumnName="fe_alta" />
+          <ScalarProperty Name="fe_ocurrencia" ColumnName="fe_ocurrencia" />
+          <ScalarProperty Name="hr_ocurrencia" ColumnName="hr_ocurrencia" />
+          <ScalarProperty Name="duracion" ColumnName="duracion" />
+          <ScalarProperty Name="fe_solucion" ColumnName="fe_solucion" />
+          <ScalarProperty Name="nb_tipo_solucion" ColumnName="nb_tipo_solucion" />
+          <ScalarProperty Name="comentarios" ColumnName="comentarios" />
+          <ScalarProperty Name="nb_moneda" ColumnName="nb_moneda" />
+          <ScalarProperty Name="cl_cuenta_contable_perdida" ColumnName="cl_cuenta_contable_perdida" />
+          <ScalarProperty Name="nb_cuenta_contable_perdida" ColumnName="nb_cuenta_contable_perdida" />
+          <ScalarProperty Name="mn_exposicion" ColumnName="mn_exposicion" />
+          <ScalarProperty Name="mn_quebranto" ColumnName="mn_quebranto" />
+          <ScalarProperty Name="cl_centro_costo" ColumnName="cl_centro_costo" />
+          <ScalarProperty Name="nb_centro_costo" ColumnName="nb_centro_costo" />
+          <ScalarProperty Name="fe_registro_perdida" ColumnName="fe_registro_perdida" />
+          <ScalarProperty Name="fe_quebranto" ColumnName="fe_quebranto" />
+          <ScalarProperty Name="mn_recuperacion" ColumnName="mn_recuperacion" />
+          <ScalarProperty Name="nb_usuario_recuperacion" ColumnName="nb_usuario_recuperacion" />
+          <ScalarProperty Name="cl_cuenta_contable_recuperacion" ColumnName="cl_cuenta_contable_recuperacion" />
+          <ScalarProperty Name="nb_cuenta_contable_recuperacion" ColumnName="nb_cuenta_contable_recuperacion" />
+          <ScalarProperty Name="fe_registro_recuperacion" ColumnName="fe_registro_recuperacion" />
+          <ScalarProperty Name="via_recuperacion" ColumnName="via_recuperacion" />
+          <ScalarProperty Name="mn_costo_recuperacion" ColumnName="mn_costo_recuperacion" />
+          <ScalarProperty Name="cl_cuenta_contable_costo" ColumnName="cl_cuenta_contable_costo" />
+          <ScalarProperty Name="nb_cuenta_contable_costo" ColumnName="nb_cuenta_contable_costo" />
+          <ScalarProperty Name="fe_registro_costo_recuperacion" ColumnName="fe_registro_costo_recuperacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_benchmark">
+      <EntityTypeMapping TypeName="SICIModel.v_benchmark">
+        <MappingFragment StoreEntitySet="v_benchmark">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cnb_entidad" ColumnName="cnb_entidad" />
+          <ScalarProperty Name="cnb_macro_proceso" ColumnName="cnb_macro_proceso" />
+          <ScalarProperty Name="cnb_proceso" ColumnName="cnb_proceso" />
+          <ScalarProperty Name="cnb_sub_proceso" ColumnName="cnb_sub_proceso" />
+          <ScalarProperty Name="nb_actividad" ColumnName="nb_actividad" />
+          <ScalarProperty Name="nb_proceso_benchmark" ColumnName="nb_proceso_benchmark" />
+          <ScalarProperty Name="nb_sub_proceso_benchmark" ColumnName="nb_sub_proceso_benchmark" />
+          <ScalarProperty Name="nb_evento_riesgo" ColumnName="nb_evento_riesgo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_certificacion">
+      <EntityTypeMapping TypeName="SICIModel.v_certificacion">
+        <MappingFragment StoreEntitySet="v_certificacion">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cnb_entidad" ColumnName="cnb_entidad" />
+          <ScalarProperty Name="cnb_macro_proceso" ColumnName="cnb_macro_proceso" />
+          <ScalarProperty Name="cnb_proceso" ColumnName="cnb_proceso" />
+          <ScalarProperty Name="cnb_sub_proceso" ColumnName="cnb_sub_proceso" />
+          <ScalarProperty Name="codigo_riesgo" ColumnName="codigo_riesgo" />
+          <ScalarProperty Name="evento" ColumnName="evento" />
+          <ScalarProperty Name="codigo_control" ColumnName="codigo_control" />
+          <ScalarProperty Name="actividad_control" ColumnName="actividad_control" />
+          <ScalarProperty Name="tiene_accion_correctora" ColumnName="tiene_accion_correctora" />
+          <ScalarProperty Name="accion_correctora" ColumnName="accion_correctora" />
+          <ScalarProperty Name="cl_certificacion_control" ColumnName="cl_certificacion_control" />
+          <ScalarProperty Name="nb_periodo_certificacion" ColumnName="nb_periodo_certificacion" />
+          <ScalarProperty Name="ds_procedimiento_certificacion" ColumnName="ds_procedimiento_certificacion" />
+          <ScalarProperty Name="nb_tipo_evaluacion" ColumnName="nb_tipo_evaluacion" />
+          <ScalarProperty Name="no_partidas_minimo" ColumnName="no_partidas_minimo" />
+          <ScalarProperty Name="no_partidas_semestre1" ColumnName="no_partidas_semestre1" />
+          <ScalarProperty Name="no_partidas_semestre2" ColumnName="no_partidas_semestre2" />
+          <ScalarProperty Name="no_pruebas_realizadas" ColumnName="no_pruebas_realizadas" />
+          <ScalarProperty Name="tiene_funcionamiento_efectivo" ColumnName="tiene_funcionamiento_efectivo" />
+          <ScalarProperty Name="tiene_disenio_efectivo" ColumnName="tiene_disenio_efectivo" />
+          <ScalarProperty Name="ds_plan_remediacion" ColumnName="ds_plan_remediacion" />
+          <ScalarProperty Name="fe_registro" ColumnName="fe_registro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_estructura">
+      <EntityTypeMapping TypeName="SICIModel.v_estructura">
+        <MappingFragment StoreEntitySet="v_estructura">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cl_entidad" ColumnName="cl_entidad" />
+          <ScalarProperty Name="nb_entidad" ColumnName="nb_entidad" />
+          <ScalarProperty Name="nb_responsable_entidad" ColumnName="nb_responsable_entidad" />
+          <ScalarProperty Name="nb_puesto_entidad" ColumnName="nb_puesto_entidad" />
+          <ScalarProperty Name="cl_macro_proceso" ColumnName="cl_macro_proceso" />
+          <ScalarProperty Name="nb_macro_proceso" ColumnName="nb_macro_proceso" />
+          <ScalarProperty Name="nb_responsable_macro_proceso" ColumnName="nb_responsable_macro_proceso" />
+          <ScalarProperty Name="nb_puesto_macro_proceso" ColumnName="nb_puesto_macro_proceso" />
+          <ScalarProperty Name="cl_proceso" ColumnName="cl_proceso" />
+          <ScalarProperty Name="nb_proceso" ColumnName="nb_proceso" />
+          <ScalarProperty Name="nb_responsbale_proceso" ColumnName="nb_responsbale_proceso" />
+          <ScalarProperty Name="nb_puesto_proceso" ColumnName="nb_puesto_proceso" />
+          <ScalarProperty Name="cl_sub_proceso" ColumnName="cl_sub_proceso" />
+          <ScalarProperty Name="nb_sub_proceso" ColumnName="nb_sub_proceso" />
+          <ScalarProperty Name="cl_manual" ColumnName="cl_manual" />
+          <ScalarProperty Name="nb_responsable_sub_proceso" ColumnName="nb_responsable_sub_proceso" />
+          <ScalarProperty Name="nb_puesto_sub_proceso" ColumnName="nb_puesto_sub_proceso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_flujo_narrativa">
+      <EntityTypeMapping TypeName="SICIModel.v_flujo_narrativa">
+        <MappingFragment StoreEntitySet="v_flujo_narrativa">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cl_entidad" ColumnName="cl_entidad" />
+          <ScalarProperty Name="nb_entidad" ColumnName="nb_entidad" />
+          <ScalarProperty Name="cl_macro_proceso" ColumnName="cl_macro_proceso" />
+          <ScalarProperty Name="nb_macro_proceso" ColumnName="nb_macro_proceso" />
+          <ScalarProperty Name="cl_proceso" ColumnName="cl_proceso" />
+          <ScalarProperty Name="nb_proceso" ColumnName="nb_proceso" />
+          <ScalarProperty Name="cl_sub_proceso" ColumnName="cl_sub_proceso" />
+          <ScalarProperty Name="nb_sub_proceso" ColumnName="nb_sub_proceso" />
+          <ScalarProperty Name="nb_archivo_flujo" ColumnName="nb_archivo_flujo" />
+          <ScalarProperty Name="nb_archivo_manual" ColumnName="nb_archivo_manual" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_indicador">
+      <EntityTypeMapping TypeName="SICIModel.v_indicador">
+        <MappingFragment StoreEntitySet="v_indicador">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="nb_entidad" ColumnName="nb_entidad" />
+          <ScalarProperty Name="cl_indicador" ColumnName="cl_indicador" />
+          <ScalarProperty Name="nb_indicador" ColumnName="nb_indicador" />
+          <ScalarProperty Name="ds_indicador" ColumnName="ds_indicador" />
+          <ScalarProperty Name="ds_numerador" ColumnName="ds_numerador" />
+          <ScalarProperty Name="ds_denominador" ColumnName="ds_denominador" />
+          <ScalarProperty Name="nb_frecuencia_indicador" ColumnName="nb_frecuencia_indicador" />
+          <ScalarProperty Name="nb_unidad_indicador" ColumnName="nb_unidad_indicador" />
+          <ScalarProperty Name="control_asociado" ColumnName="control_asociado" />
+          <ScalarProperty Name="peso" ColumnName="peso" />
+          <ScalarProperty Name="umbral000i" ColumnName="umbral000i" />
+          <ScalarProperty Name="umbral000f" ColumnName="umbral000f" />
+          <ScalarProperty Name="umbral050i" ColumnName="umbral050i" />
+          <ScalarProperty Name="umbral050f" ColumnName="umbral050f" />
+          <ScalarProperty Name="umbral075i" ColumnName="umbral075i" />
+          <ScalarProperty Name="umbral075f" ColumnName="umbral075f" />
+          <ScalarProperty Name="umbral100i" ColumnName="umbral100i" />
+          <ScalarProperty Name="umbral100f" ColumnName="umbral100f" />
+          <ScalarProperty Name="esta_activo" ColumnName="esta_activo" />
+          <ScalarProperty Name="nb_area" ColumnName="nb_area" />
+          <ScalarProperty Name="nb_responsable" ColumnName="nb_responsable" />
+          <ScalarProperty Name="nb_periodo_indicador" ColumnName="nb_periodo_indicador" />
+          <ScalarProperty Name="numerador" ColumnName="numerador" />
+          <ScalarProperty Name="denominador" ColumnName="denominador" />
+          <ScalarProperty Name="medicion" ColumnName="medicion" />
+          <ScalarProperty Name="nb_calificacion_indicador" ColumnName="nb_calificacion_indicador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_mryc">
+      <EntityTypeMapping TypeName="SICIModel.v_mryc">
+        <MappingFragment StoreEntitySet="v_mryc">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="cl_entidad" ColumnName="cl_entidad" />
+          <ScalarProperty Name="nb_entidad" ColumnName="nb_entidad" />
+          <ScalarProperty Name="nb_responsable_entidad" ColumnName="nb_responsable_entidad" />
+          <ScalarProperty Name="nb_puesto_entidad" ColumnName="nb_puesto_entidad" />
+          <ScalarProperty Name="cl_macro_proceso" ColumnName="cl_macro_proceso" />
+          <ScalarProperty Name="nb_macro_proceso" ColumnName="nb_macro_proceso" />
+          <ScalarProperty Name="nb_responsable_macro_proceso" ColumnName="nb_responsable_macro_proceso" />
+          <ScalarProperty Name="nb_puesto_macro_proceso" ColumnName="nb_puesto_macro_proceso" />
+          <ScalarProperty Name="cl_proceso" ColumnName="cl_proceso" />
+          <ScalarProperty Name="nb_proceso" ColumnName="nb_proceso" />
+          <ScalarProperty Name="nb_responsable_proceso" ColumnName="nb_responsable_proceso" />
+          <ScalarProperty Name="nb_puesto_proceso" ColumnName="nb_puesto_proceso" />
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="cl_sub_proceso" ColumnName="cl_sub_proceso" />
+          <ScalarProperty Name="nb_sub_proceso" ColumnName="nb_sub_proceso" />
+          <ScalarProperty Name="cl_manual" ColumnName="cl_manual" />
+          <ScalarProperty Name="nb_responsable_sub_proceso" ColumnName="nb_responsable_sub_proceso" />
+          <ScalarProperty Name="nb_puesto_sub_proceso" ColumnName="nb_puesto_sub_proceso" />
+          <ScalarProperty Name="nb_etapa" ColumnName="nb_etapa" />
+          <ScalarProperty Name="nb_sub_etapa" ColumnName="nb_sub_etapa" />
+          <ScalarProperty Name="ds_areas_involucradas" ColumnName="ds_areas_involucradas" />
+          <ScalarProperty Name="ds_aplicaciones_relacionadas" ColumnName="ds_aplicaciones_relacionadas" />
+          <ScalarProperty Name="cl_riesgo" ColumnName="cl_riesgo" />
+          <ScalarProperty Name="nb_riesgo" ColumnName="nb_riesgo" />
+          <ScalarProperty Name="evento" ColumnName="evento" />
+          <ScalarProperty Name="nb_tipo_riesgo" ColumnName="nb_tipo_riesgo" />
+          <ScalarProperty Name="nb_categoria_riesgo" ColumnName="nb_categoria_riesgo" />
+          <ScalarProperty Name="nb_clase_tipologia_riesgo" ColumnName="nb_clase_tipologia_riesgo" />
+          <ScalarProperty Name="nb_sub_clase_tipologia_riesgo" ColumnName="nb_sub_clase_tipologia_riesgo" />
+          <ScalarProperty Name="nb_tipologia_riesgo" ColumnName="nb_tipologia_riesgo" />
+          <ScalarProperty Name="criticidad" ColumnName="criticidad" />
+          <ScalarProperty Name="tiene_afectacion_contable" ColumnName="tiene_afectacion_contable" />
+          <ScalarProperty Name="supuesto_normativo" ColumnName="supuesto_normativo" />
+          <ScalarProperty Name="euc" ColumnName="euc" />
+          <ScalarProperty Name="nb_tipo_impacto" ColumnName="nb_tipo_impacto" />
+          <ScalarProperty Name="nb_magnitud_impacto" ColumnName="nb_magnitud_impacto" />
+          <ScalarProperty Name="nb_probabilidad_ocurrencia" ColumnName="nb_probabilidad_ocurrencia" />
+          <ScalarProperty Name="relacion_control" ColumnName="relacion_control" />
+          <ScalarProperty Name="actividad_control" ColumnName="actividad_control" />
+          <ScalarProperty Name="evidencia_control" ColumnName="evidencia_control" />
+          <ScalarProperty Name="es_control_clave" ColumnName="es_control_clave" />
+          <ScalarProperty Name="nb_aplicacion" ColumnName="nb_aplicacion" />
+          <ScalarProperty Name="accion_correctora" ColumnName="accion_correctora" />
+          <ScalarProperty Name="nb_naturaleza_control" ColumnName="nb_naturaleza_control" />
+          <ScalarProperty Name="nb_frecuencia_control" ColumnName="nb_frecuencia_control" />
+          <ScalarProperty Name="nb_categoria_control" ColumnName="nb_categoria_control" />
+          <ScalarProperty Name="nb_tipologia_control" ColumnName="nb_tipologia_control" />
+          <ScalarProperty Name="nb_tipo_evidencia" ColumnName="nb_tipo_evidencia" />
+          <ScalarProperty Name="nb_grado_cobertura" ColumnName="nb_grado_cobertura" />
+          <ScalarProperty Name="nb_responsable_control" ColumnName="nb_responsable_control" />
+          <ScalarProperty Name="nb_ejecutor_control" ColumnName="nb_ejecutor_control" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="c_funcion_rol" TypeName="SICIModel.c_funcion_rol" StoreEntitySet="c_funcion_rol">
+      <EndProperty Name="c_funcion">
+        <ScalarProperty Name="id_funcion" ColumnName="id_funcion" />
+      </EndProperty>
+      <EndProperty Name="c_rol">
+        <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="c_linea_negocio_sub_proceso" TypeName="SICIModel.c_linea_negocio_sub_proceso" StoreEntitySet="c_linea_negocio_sub_proceso">
+      <EndProperty Name="c_linea_negocio">
+        <ScalarProperty Name="id_linea_negocio" ColumnName="id_linea_negocio" />
+      </EndProperty>
+      <EndProperty Name="c_sub_proceso">
+        <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="c_rol_usuario" TypeName="SICIModel.c_rol_usuario" StoreEntitySet="c_rol_usuario">
+      <EndProperty Name="c_rol">
+        <ScalarProperty Name="id_rol" ColumnName="id_rol" />
+      </EndProperty>
+      <EndProperty Name="c_usuario">
+        <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="k_control_riesgo" TypeName="SICIModel.k_control_riesgo" StoreEntitySet="k_control_riesgo">
+      <EndProperty Name="k_control">
+        <ScalarProperty Name="id_control" ColumnName="id_control" />
+      </EndProperty>
+      <EndProperty Name="k_riesgo">
+        <ScalarProperty Name="id_riesgo" ColumnName="id_riesgo" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="k_error_contable_riesgo" TypeName="SICIModel.k_error_contable_riesgo" StoreEntitySet="k_error_contable_riesgo">
+      <EndProperty Name="c_error_contable">
+        <ScalarProperty Name="id_error_contable" ColumnName="id_error_contable" />
+      </EndProperty>
+      <EndProperty Name="k_riesgo">
+        <ScalarProperty Name="id_riesgo" ColumnName="id_riesgo" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="obtiene_controles" FunctionName="SICIModel.Store.obtiene_controles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SICIModel.obtiene_controles_Result">
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="cn_sub_proceso" ColumnName="cn_sub_proceso" />
+          <ScalarProperty Name="cl_riesgo" ColumnName="cl_riesgo" />
+          <ScalarProperty Name="nb_riesgo" ColumnName="nb_riesgo" />
+          <ScalarProperty Name="evento" ColumnName="evento" />
+          <ScalarProperty Name="relacion_control" ColumnName="relacion_control" />
+          <ScalarProperty Name="actividad_control" ColumnName="actividad_control" />
+          <ScalarProperty Name="accion_correctora" ColumnName="accion_correctora" />
+          <ScalarProperty Name="id_control" ColumnName="id_control" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="obtiene_sub_procesos" FunctionName="SICIModel.Store.obtiene_sub_procesos">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SICIModel.obtiene_sub_procesos_Result">
+          <ScalarProperty Name="cn_entidad" ColumnName="cn_entidad" />
+          <ScalarProperty Name="cn_macro_proceso" ColumnName="cn_macro_proceso" />
+          <ScalarProperty Name="cn_proceso" ColumnName="cn_proceso" />
+          <ScalarProperty Name="cn_sub_proceso" ColumnName="cn_sub_proceso" />
+          <ScalarProperty Name="id_sub_proceso" ColumnName="id_sub_proceso" />
+          <ScalarProperty Name="cn_nb_archivo_flujo" ColumnName="cn_nb_archivo_flujo" />
+          <ScalarProperty Name="cn_nb_archivo_manual" ColumnName="cn_nb_archivo_manual" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

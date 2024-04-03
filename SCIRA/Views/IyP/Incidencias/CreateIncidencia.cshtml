@@ -1,0 +1,251 @@
+﻿@model SCIRA.Models.k_incidencia
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $("#ind@(ViewBag.Origen)").removeClass("IndicatorLoader");
+
+        if ($("#requiere_plan@(ViewBag.Origen)").is(':checked')) {
+            $("#justificacion@(ViewBag.Origen)").hide();
+        } else {
+            $("#justificacion@(ViewBag.Origen)").show();
+        }
+
+        $('#requiere_plan@(ViewBag.Origen)').bootstrapToggle();
+
+    });
+
+    $(function () {
+        $('#requiere_plan@(ViewBag.Origen)').change(function () {
+            var isChecked = $(this).prop('checked');
+            if (isChecked) $("#justificacion@(ViewBag.Origen)").hide();
+            else $("#justificacion@(ViewBag.Origen)").show();
+        })
+    })
+
+</script>
+
+@{
+    int origen = ViewBag.Origen;
+    string archivo1 = origen == 1 ? Strings.getMSG("lyPCreate011") : origen == 2 ? Strings.getMSG("lyPInformesCreate006") : Strings.getMSG("RespuestaIncidenciaResponderIncidenciaCreate004");
+    string archivo2 = origen == 1 || origen == 2 ? Strings.getMSG("lyPEdit001") : Strings.getMSG("RespuestaIncidenciaResponderIncidenciaCreate005");
+}
+
+
+
+
+
+
+@if (ViewBag.Origen == 1) //En caso de Venir desde un Oficio
+{
+    <a href="#" onclick="indexOficio()">@Strings.getMSG("Menu127")</a>
+    <span> >> @Strings.getMSG("lyPCreate029") @ViewBag.nb_objeto</span>
+    <a href="#" onclick="indexIncidencias(1,@ViewBag.id)"> >> @Strings.getMSG("Incidencias")</a>
+}
+@if (ViewBag.Origen == 2) //En caso de Venir desde una Auditoría Externa
+{
+    <a href="#" onclick="indexAuExt()">@Strings.getMSG("lyPIndex001")</a>
+    <span> >> @Strings.getMSG("lyPCreate030") @ViewBag.nb_objeto</span>
+    <a href="#" onclick="indexIncidencias(2,@ViewBag.id)"> >> @Strings.getMSG("Incidencias")</a>
+}
+@if (ViewBag.Origen == 3) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexAuInt()">@Strings.getMSG("lyPIndex002")</a>
+    <span> >> @Strings.getMSG("lyPCreate030") @ViewBag.nb_objeto</span>
+    <a href="#" onclick="indexIncidencias(3,@ViewBag.id)"> >> @Strings.getMSG("Incidencias")</a>
+}
+@if (ViewBag.Origen == 4) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexCert()">@Strings.getMSG("lyPCertificacionesIndex001")</a>
+    <span> >> @Strings.getMSG("lyPCreate031") @ViewBag.nb_objeto</span>
+    <a href="#" onclick="indexIncidencias(4,@ViewBag.id)"> >> @Strings.getMSG("Incidencias")</a>
+}
+@if (ViewBag.Origen == 5) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexMRyC()">@Strings.getMSG("Menu077")</a>
+    <span> >> @Strings.getMSG("lyPCreate032") @ViewBag.nb_objeto</span>
+    <a href="#" onclick="indexIncidencias(5,@ViewBag.id)"> >> @Strings.getMSG("Incidencias")</a>
+}
+@if (ViewBag.Origen == 6) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexOtros()">@Strings.getMSG("ReporteIyPIndex021")</a>
+    <span> >> @Strings.getMSG("lyPCreate033") @ViewBag.nb_objeto</span>
+    <a href="#" onclick="indexIncidencias(6,@ViewBag.id)"> >> @Strings.getMSG("Incidencias")</a>
+}
+
+
+<h4>@Strings.getMSG("lyPIncidenciasCreate001")</h4>
+
+<form id="form@(ViewBag.Origen)" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.id_certificacion_control)
+    @Html.HiddenFor(model => model.id_control)
+    @Html.HiddenFor(model => model.id_objeto)
+
+    <input type="text" name="origen" value="@ViewBag.Origen" hidden>
+    <input type="text" name="nb_objeto" value="@ViewBag.nb_objeto" hidden>
+
+    @if (origen == 1 || origen == 2 || origen == 3 || origen == 6)
+    {
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPCreate034")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.lvl_1, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIncidenciasCreate004")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.lvl_1, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPCreate035")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.lvl_2, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIncidenciasCreate004")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.lvl_2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPCreate036")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.lvl_3, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIncidenciasCreate004")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.lvl_3, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPCreate037")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.lvl_4, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIncidenciasCreate004")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.lvl_4, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPCreate038")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.lvl_5, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIncidenciasCreate004")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.lvl_5, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("RiesgoCreate074")</label>
+
+            <label class="control-label col-xs-offset-5 col-md-offset-5 col-xs-2 col-md-1">@Strings.getMSG("Responsable")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                @Html.DropDownList("id_responsable", null, Strings.getMSG("lyPCreate009"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("EntidadCreate005") })
+                @Html.ValidationMessageFor(model => model.id_responsable, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-offset-1 col-md-offset-1 col-xs-4 col-md-4 has-error">
+                @Html.TextAreaFor(model => model.ds_incidencia, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RiesgoCreate075") })
+                @Html.ValidationMessageFor(model => model.ds_incidencia, "", new { @class = "text-danger" })
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("Menu063")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                @Html.DropDownList("id_clasificacion_incidencia", null, Strings.getMSG("RiesgoCreate073"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate072") })
+                @Html.ValidationMessageFor(model => model.id_clasificacion_incidencia, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group" id="RPR@(ViewBag.Origen)">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("RiesgoCreate068")</label>
+            <div class="col-xs-2 col-md-2">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.requiere_plan, new { htmlAttributes = new { data_on = Strings.getMSG("UsuarioIndex004"), data_off = Strings.getMSG("UsuarioIndex005"), data_width = "140", @id = "requiere_plan" + ViewBag.Origen } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIncidenciasCreate005")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                    <div class="toggleLayer" onclick="$('#requiere_plan@(ViewBag.Origen)').bootstrapToggle('toggle');"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="justificacion@(ViewBag.Origen)" hidden>
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPIncidenciasCreate003")</label>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-1 col-md-offset-1 col-xs-4 col-md-4 has-error">
+                    @Html.TextAreaFor(model => model.js_incidencia, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RiesgoCreate077") })
+                    @Html.ValidationMessageFor(model => model.js_incidencia, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-6 col-md-offset-9 col-md-3">
+                <input type="button" value="@Strings.getMSG("Guardar")" class="btn btn-primary" onclick="createIncidenciaPost(@ViewBag.Origen)" />
+                <input type="button" class="btn btn-default" onclick="indexIncidencias(@ViewBag.Origen,@ViewBag.id);" value="@Strings.getMSG("Cancelar")" />
+            </div>
+        </div>
+    </div>
+</form>

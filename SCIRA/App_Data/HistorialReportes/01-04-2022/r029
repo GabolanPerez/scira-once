@@ -1,0 +1,25 @@
+{
+  "RepName": "Reporte de Sub Procesos - Normatividad: Prueba",
+  "ColNames": [
+    "Raíz",
+    "Raíz",
+    "Anual",
+    "Anual",
+    "¿Tiene Ficha?",
+    "Sub Procesos Ligados"
+  ],
+  "Rows": [
+    [
+      "p",
+      "Prueba",
+      "p",
+      "p",
+      "No",
+      "N/A"
+    ]
+  ],
+  "NoCols": 5,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

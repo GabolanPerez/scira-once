@@ -1,0 +1,631 @@
+﻿@model IEnumerable<SCIRA.Models.k_revision_control>
+@using SCIRA.Utilidades;
+@using SCIRA.Models;
+@{
+    var db = new SICIEntities();
+    int TCR1 = 0;
+    int TCR2 = 0;
+    int TCR3 = 0;
+    int TCR4 = 0;
+    int TCR5 = 0;
+    int TCT = 0;
+
+
+    int RNR = 0;
+    int RR1 = 0;
+    int RR2 = 0;
+    int RC = 0;
+
+
+    foreach (var r in Model)
+    {
+        if (r.cg_calificacion == 3)
+        {
+            RC++;
+        }
+        else if (r.cg_calificacion == 2)
+        {
+            RR2++;
+        }
+        else if (r.cg_calificacion == 1)
+        {
+            RR1++;
+        }
+        else
+        {
+            RNR++;
+        }
+    }
+
+
+}
+
+<style type="text/css">
+    .counter {
+        color: white;
+        width: auto;
+        height: 30px;
+        position: relative;
+        border-radius: 50%;
+        font-size: .9em;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+    }
+
+    .alertC {
+        background-color: red;
+    }
+
+    .regularC {
+        background-color: gold;
+    }
+
+    .goodC {
+        background-color: lawngreen;
+    }
+</style>
+
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        if (tableInitialize != 0) {
+            initTables("#tablaConteo");
+        } else {
+            tableInitialize = 1;
+        }
+    });
+</script>
+
+<h4 style="font-weight:bold">@Strings.getMSG("GraphicsRevisionControlIndex004")</h4>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("Entidad")</th>
+            <th>@Strings.getMSG("MP")</th>
+            <th>@Strings.getMSG("P")</th>
+            <th>@Strings.getMSG("SP")</th>
+            <th>@Strings.getMSG("RiesgoRiesgos002")</th>
+            <th>@Strings.getMSG("RiesgoCreate084")</th>
+            <th>@Strings.getMSG("RevisionControlCreate017")</th>
+            <th>@Strings.getMSG("RevisionControlRevisiones002")</th>
+            <th>@Strings.getMSG("RevisionControlRevisiones003")</th>
+            <th>@Strings.getMSG("GraphicsRevisionControlIndex006")</th>
+            <th>@Strings.getMSG("RevisionControlCreate104")</th>
+            <th>@Strings.getMSG("UsuarioCreate011")</th>
+            <th>@Strings.getMSG("RevisionControlCreate001")</th>
+            <th>@Strings.getMSG("RevisionControlCreate002")</th>
+            <th>@Strings.getMSG("RevisionControlCreate003")</th>
+            <th>@Strings.getMSG("RevisionControlCreate100")</th>
+            <th>@Strings.getMSG("GraphicsRevisionControlIndex007")</th>
+            <th class="search">@Strings.getMSG("GraphicsRevisionControlIndex008")</th>
+            <th>@Strings.getMSG("GraphicsRevisionControlIndex009")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var control = item.k_control;
+            var riesgo = control.k_riesgo.First();
+            var sp = control.c_sub_proceso;
+            var pr = sp.c_proceso;
+            var mp = pr.c_macro_proceso;
+            var entidad = mp.c_entidad;
+            var estatusRev = "";
+
+            try
+            {
+                estatusRev = item.c_calificacion_revision.nb_calificacion_revision;
+            }
+            catch
+            {
+                estatusRev = Strings.getMSG("ReporteRevisionControlIndex039");
+            }
+
+
+            #region Cuenta Región 1
+            var cr1 = 0;
+
+
+            try
+            {
+                if (item.c_calificacion.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr1++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion1.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr1++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion2.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr1++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion3.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr1++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion4.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr1++;
+                }
+            }
+            catch { }
+
+            TCR1 += cr1;
+
+            #endregion
+
+            #region Cuenta Región 2
+            var cr2 = 0;
+
+            try
+            {
+                if (item.c_calificacion5.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr2++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion6.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr2++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion7.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr2++;
+                }
+            }
+            catch { }
+
+
+            TCR2 += cr2;
+            #endregion
+
+            #region Cuenta Región 3
+            var cr3 = 0;
+
+            try
+            {
+                if (item.c_calificacion8.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion9.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion10.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion11.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion12.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion13.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion14.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion15.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion16.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion17.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion18.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion19.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion20.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion21.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion39.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr3++;
+                }
+            }
+            catch { }
+
+            TCR3 += cr3;
+            #endregion
+
+            #region Cuenta Región 4
+
+            var cr4 = 0;
+
+
+            try
+            {
+                if (item.c_calificacion22.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion23.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion24.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion25.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion26.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion27.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion28.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion29.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion30.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion31.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion32.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion33.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion34.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr4++;
+                }
+            }
+            catch { }
+
+
+            TCR4 += cr4;
+            #endregion
+
+            #region Cuenta Región 5
+
+            var cr5 = 0;
+            try
+            {
+                if (item.c_calificacion37.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr5++;
+                }
+            }
+            catch { }
+            try
+            {
+                if (item.c_calificacion38.nb_calificacion == Strings.getMSG("GraphicsRevisionControlIndex018"))
+                {
+                    cr5++;
+                }
+            }
+            catch { }
+
+            TCR5 += cr5;
+            #endregion
+
+            #region Cuenta Total
+            var CT = cr1 + cr2 + cr3 + cr4 + cr5;
+
+            TCT += CT;
+            #endregion
+
+            <tr>
+                <td>
+                    @(entidad.cl_entidad + " - " + entidad.nb_entidad)
+                </td>
+                <td>
+                    @(mp.cl_macro_proceso + " - " + mp.nb_macro_proceso)
+                </td>
+                <td>
+                    @(pr.cl_proceso + " - " + pr.nb_proceso)
+                </td>
+                <td>
+                    @(sp.cl_sub_proceso + " - " + sp.nb_sub_proceso)
+                </td>
+                <td>
+                    @(riesgo.nb_riesgo)
+                </td>
+                <td>
+                    @(control.relacion_control)
+                </td>
+                <td>
+                    @(item.dg_nb_responsable_revision)
+                </td>
+                <td>
+                    @string.Format("{0:dd/MM/yyyy}", item.dg_fe_revision)
+                </td>
+                <td>
+                    @foreach (var file in item.c_archivo)
+                    {
+                        <a href="@Url.Action("Download",Strings.getMSG("RevisionControlRevisiones003"), new { id = file.id_archivo})"><i class="fa fa-file@(Utilidades.getFileClass(file))" title="@file.nb_archivo"></i></a>
+                    }
+                    @if (item.c_archivo.Count() == 0)
+                    {
+                        @:@Strings.getMSG("GraphicsRevisionControlIndex010")
+                    }
+                </td>
+                <td>
+                    @(item.edc_diseño_efectivo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))
+                </td>
+                <td>
+                    @(item.eeo_diseño_efectivo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))
+                </td>
+                <td>
+                    <center>
+                        <span class="counter  @(cr1 == 0 ? "alertC" : cr1 == 5 ? "goodC" : "regularC")">@cr1/5</span>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <span class="counter  @(cr2 == 0 ? "alertC" : cr2 == 3 ? "goodC" : "regularC")">@cr2/3</span>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <span class="counter  @(cr3 == 0 ? "alertC" : cr3 == 15 ? "goodC" : "regularC")">@cr3/15</span>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <span class="counter  @(cr4 == 0 ? "alertC" : cr4 == 13 ? "goodC" : "regularC")">@cr4/13</span>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <span class="counter  @(cr5 == 0 ? "alertC" : cr5 == 2 ? "goodC" : "regularC")">@cr5/2</span>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <span class="counter  @(CT == 0 ? "alertC" : CT == 38 ? "goodC" : "regularC")">@CT/38</span>
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        @(estatusRev)
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        <a target="_blank" href="@Url.Action("Edit","RevisionControl",new { id = item.id_revision_control })"><i class="fa fa-pencil" title="@Strings.getMSG("GraphicsRevisionControlIndex014")"></i></a>
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="11" style="text-align:right">@Strings.getMSG("GraphicsRevisionControlIndex015")</th>
+            <th>
+                <center>
+                    <span class="counter  @(TCR1 == 0 ? "alertC" : TCR1 == 5*Model.Count() ? "goodC" : "regularC")">@TCR1/@(5 * Model.Count())</span>
+                </center>
+            </th>
+            <th>
+                <center>
+                    <span class="counter  @(TCR2 == 0 ? "alertC" : TCR2 == 3*Model.Count() ? "goodC" : "regularC")">@TCR2/@(3 * Model.Count())</span>
+                </center>
+            </th>
+            <th>
+                <center>
+                    <span class="counter  @(TCR3 == 0 ? "alertC" : TCR3 == 15*Model.Count() ? "goodC" : "regularC")">@TCR3/@(15 * Model.Count())</span>
+                </center>
+            </th>
+            <th>
+                <center>
+                    <span class="counter  @(TCR4 == 0 ? "alertC" : TCR4 == 13*Model.Count() ? "goodC" : "regularC")">@TCR4/@(13 * Model.Count())</span>
+                </center>
+            </th>
+            <th>
+                <center>
+                    <span class="counter  @(TCR5 == 0 ? "alertC" : TCR5 == 3*Model.Count() ? "goodC" : "regularC")">@TCR5/@(2 * Model.Count())</span>
+                </center>
+            </th>
+            <th>
+                <center>
+                    <span class="counter  @(TCT == 0 ? "alertC" : TCT == 38*Model.Count() ? "goodC" : "regularC")">@TCT/@(38 * Model.Count())</span>
+                </center>
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </tfoot>
+</table>
+
+
+<hr />
+<h4 style="font-weight:bold">@Strings.getMSG("GraphicsRevisionControlIndex005")</h4>
+
+@{
+    var calificacionesRev = db.c_calificacion_revision;
+}
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("BDEICreate005")</th>
+            <th>@Strings.getMSG("GraphicsRevisionControlIndex016")</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Strings.getMSG("GraphicsRevisionControlIndex017")</td>
+            <td>@(Model.Where(r => r.id_calificacion_revision == null).Count())</td>
+        </tr>
+        @foreach (var cr in calificacionesRev)
+        {
+            <tr>
+                <td>@cr.nb_calificacion_revision</td>
+                <td>@(Model.Where(r => r.id_calificacion_revision == cr.id_calificacion_revision).Count())</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,1107 @@
+﻿@using SCIRA.Seguridad
+@using SCIRA.Utilidades
+@using System.Web
+
+<style type="text/css">
+    .NotifCounter {
+        background-color: rgba(115,115,115,.8);
+        color: white;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        border-radius: 50%;
+        top: -1.5rem;
+        left: -2rem;
+        font-size: .8em;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+    }
+
+    .NotifCounterLeft {
+        background-color: rgba(115,115,115,.8);
+        color: white;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        border-radius: 50%;
+        left: -1rem;
+        font-size: .8em;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+    }
+
+    .NotifCounterRight {
+        background-color: rgba(115,115,115,.8);
+        color: white;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        border-radius: 50%;
+        left: 1rem;
+        top: -1rem;
+        font-size: .6em;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+    }
+
+    .relative {
+        position: relative;
+    }
+</style>
+
+
+@{
+    bool MSICI001 = Utilidades.ModuleState("MSICI001");
+    bool MSICI002 = Utilidades.ModuleState("MSICI002");
+    bool MSICI003 = Utilidades.ModuleState("MSICI003");
+    bool MSICI004 = Utilidades.ModuleState("MSICI004");
+    bool MSICI005 = Utilidades.ModuleState("MSICI005");
+    bool MSICI006 = Utilidades.ModuleState("MSICI006");
+    bool MSICI007 = Utilidades.ModuleState("MSICI007");
+    bool MSICI008 = Utilidades.ModuleState("MSICI008");
+    bool MSICI009 = Utilidades.ModuleState("MSICI009");
+    bool MSICI010 = Utilidades.ModuleState("MSICI010");
+    bool MSICI011 = Utilidades.ModuleState("MSICI011");
+    bool MSICI012 = Utilidades.ModuleState("MSICI012");
+    bool MSICI013 = Utilidades.ModuleState("MSICI013");
+
+    bool showADMIN = false;
+    bool showOPER = false;
+    bool showNORM = false;
+    bool showREPO = false;
+    bool showSTATS = false;
+    bool showAUDI = false;
+
+    string[] admin = { "AjustesCert", "CCBDEI", "CABDEI", "MROBDEI", "RABDEI", "DiagEN", "DiagMP", "DiagPR", "DiagSP", "CalificacionRev", "Calificacion", "Aseveracion", "INDD", "CNG", "Entidades", "Macroprocesos", "Procesos", "SubProcesos", "Puestos", "Areas", "LineasNegocio", "Etapas", "SubEtapas", "PeriodosIndicadores", "PCertificacion", "CuentasContables", "CentrosCosto", "PA", "Indicadores", "Roles", "Usuarios", "Normatividad", "CategoriaRiesgo", "TipoRiesgo", "ClaseTipologiaRiesgo", "SCTipologiaRiesgo", "TipologiaRiesgo", "POCR", "TipoImpacto", "MagnitudImpacto", "Criticidad", "GradoCobertura", "FrecuenciaControl", "NaturalezaControl", "TipologiaControl", "CategoriaControl", "TipoEvidencia", "FrecuenciaIndicador", "UnidadIndicador", "EstatusInc", "CategoriaPerdida", "CategoriaError", "Moneda", "TipoSolucion", "TipoEvaluacion", "ActividadCosteo", "Actividad", "PRBN", "SPRBN", "EventoRiesgo", "TipologiaSP", "SECSET", "MCControl", "MCRiesgo", "RRConfig", "ClasInc", "OrigenAutoridad", "msgmkp", "MassiveMsg", "MCSubProceso", "CodeActions", "TipoRO", "SubTipoRO", "ClaseEventoRO", "AmbitoRO", "ProcesoRO", "ProductoRO", "STProductoRO", "CLNRO", "LNRO", "CanalRO", "FrecuenciaRO", "ImpactoRO", "CriticidadRO", "AjustesMail" };
+    string[] opera = { "CertificacionINF", "CertificacionEN", "CertificacionMP", "CertificacionPR", "CertificacionSP", "RevisionControl", "EINDD", "EIND", "MRyC", "FlujosNarrativas", "Certificacion", "BDEI", "IYP", "Contest", "CPlRem", "PlRem", "IncResp", "Costeo", "TiemposSP" };
+    string[] norma = { "ConsultaNormatividad", "NormatividadOP", "SPCUB", "BDC", "EstructuraManual", "Manuales" };
+    string[] repor = { "RepCES", "RepCEP", "RepCEM", "RepCEE", "RepRC", "RepINDD", "RepSACosteo", "RepFichas", "Estructura", "GeneralMRyC", "RepFN", "RepBDEI", "RepIndicadores", "RepSPNORM", "RepBenchmark", "RepCertific", "RepCosteo", "RepSPNORM", "RepAcceso", "RepFallas", "RepRR", "RepCambios", "RepIyP", "RepPR", "RepHist", "RepPersonal" };
+    string[] stats = { "InAud-Stats", "SegAud-Stats", "RC-Stats", "INDD-Stats", "INDD-Stats", "Fichas-Stats", "MRyC-Stats", "BDEI-Stats", "Indicador-Stats", "Oficio-Stats", "PlanesRem-Stats", "Criticidad-Stats", "Costeo-Stats" };
+    string[] audit = { "UniAud", "PlaAud", "EjeAud", "SegAud", "InfAud" };
+
+
+    bool Auditor_admin = ((IdentityPersonalizado)User.Identity).Es_auditor_admin;
+    showAUDI = Auditor_admin;
+
+
+    foreach (string str in admin)
+    {
+        if (showADMIN)
+        {
+            break;
+        }
+        foreach (string fn in ((((IdentityPersonalizado)User.Identity).Funciones)))
+        {
+            if (str.Equals(fn))
+            {
+                showADMIN = true;
+                break;
+            }
+        }
+    }
+
+    foreach (string str in opera)
+    {
+        if (showOPER)
+        {
+            break;
+        }
+        foreach (string fn in ((((IdentityPersonalizado)User.Identity).Funciones)))
+        {
+            if (str.Equals(fn))
+            {
+                showOPER = true;
+                break;
+            }
+        }
+    }
+
+    foreach (string str in norma)
+    {
+        if (showNORM)
+        {
+            break;
+        }
+        foreach (string fn in ((((IdentityPersonalizado)User.Identity).Funciones)))
+        {
+            if (str.Equals(fn))
+            {
+                showNORM = true;
+                break;
+            }
+        }
+    }
+
+    foreach (string str in repor)
+    {
+        if (showREPO)
+        {
+            break;
+        }
+        foreach (string fn in ((((IdentityPersonalizado)User.Identity).Funciones)))
+        {
+            if (str.Equals(fn))
+            {
+                showREPO = true;
+                break;
+            }
+        }
+    }
+
+    foreach (string str in stats)
+    {
+        if (showSTATS)
+        {
+            break;
+        }
+        foreach (string fn in ((((IdentityPersonalizado)User.Identity).Funciones)))
+        {
+            if (str.Equals(fn))
+            {
+                showSTATS = true;
+                break;
+            }
+        }
+    }
+
+    foreach (string str in audit)
+    {
+        if (showAUDI)
+        {
+            break;
+        }
+        foreach (string fn in ((((IdentityPersonalizado)User.Identity).Funciones)))
+        {
+            if (str.Equals(fn))
+            {
+                showAUDI = true;
+                break;
+            }
+        }
+    }
+
+    bool usingActiveD;
+}
+
+<style>
+    .dropdown-submenu {
+        position: relative;
+    }
+
+        .dropdown-submenu > .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -6px;
+            margin-left: -1px;
+            -webkit-border-radius: 0 6px 6px 6px;
+            -moz-border-radius: 0 6px 6px 6px;
+            border-radius: 0 6px 6px 6px;
+        }
+
+        .dropdown-submenu > a:after {
+            display: block;
+            content: " ";
+            float: right;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 5px 0 5px 5px;
+            border-left-color: #cccccc;
+            margin-top: 5px;
+            margin-right: -10px;
+        }
+
+        .dropdown-submenu:hover > a:after {
+            border-left-color: #555;
+        }
+
+        .dropdown-submenu.pull-left-m {
+            float: none;
+        }
+
+            .dropdown-submenu.pull-left-m > .dropdown-menu {
+                left: -50%;
+                margin-left: 10px;
+                -webkit-border-radius: 6px 0 6px 6px;
+                -moz-border-radius: 6px 0 6px 6px;
+                border-radius: 6px 0 6px 6px;
+            }
+</style>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                $(this).parent().siblings().removeClass('open');
+                $(this).parent().toggleClass('open');
+            });
+        });
+    })(jQuery);
+
+    @try
+    {
+        @:var activeD = @(((IdentityPersonalizado)User.Identity).activeD ? "true":"false");
+        usingActiveD = ((IdentityPersonalizado)User.Identity).activeD;
+    }
+    catch {
+        @:var activeD = false;
+        usingActiveD = false;
+    }
+</script>
+
+<div class="modalLoad"></div>
+
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Hamburger-menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="margin:0;padding:0" href="@(Url.Action("Index","Home"))">  <IMG src="~/Content/Images/ADRIESWBG.png" width="45">  </a>
+        </div>
+        <div class="collapse navbar-collapse" id="Hamburger-menu">
+            <ul class="nav navbar-nav">
+                @if (showADMIN)
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu002")<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu Entidades Macroprocesos Procesos SubProcesos" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu003")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="Entidades MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Entidades"), "Index", "Entidad")</li>
+                                    <li class="Macroprocesos MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu004"), "Index", "MacroProceso")</li>
+                                    <li class="Procesos MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("PS"), "Index", "Proceso")</li>
+                                    <li class="SubProcesos MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("SPS"), "Index", "SubProceso")</li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu DiagEN DiagMP DiagPR DiagSP" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu152")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="DiagEN MSICI012" hidden="hidden">@Html.ActionLink(Strings.getMSG("Entidades"), "Entidad", "Diagrama")</li>
+                                    <li class="DiagMP MSICI012" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu004"), "MacroProceso", "Diagrama")</li>
+                                    <li class="DiagPR MSICI012" hidden="hidden">@Html.ActionLink(Strings.getMSG("PS"), "Proceso", "Diagrama")</li>
+                                    <li class="DiagSP MSICI012" hidden="hidden">@Html.ActionLink(Strings.getMSG("SPS"), "SubProceso", "Diagrama")</li>
+                                </ul>
+                            </li>
+
+                            <li class="divider Areas LineasNegocio Etapas SubEtapas PA Indicadores TipoEvaluacion ActividadCosteo TipologiaSP MCSubProceso" hidden="hidden"></li>
+                            <li class="dropdown-submenu AjustesCert Areas LineasNegocio Etapas SubEtapas PA Indicadores TipoEvaluacion ActividadCosteo TipologiaSP MCSubProceso" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Catalogos")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="Areas MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Areas"), "Index", "Area")</li>
+                                    <li class="LineasNegocio MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu005"), "Index", "LineaNegocio")</li>
+                                    <li class="Etapas MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu006"), "Index", "Etapa")</li>
+                                    <li class="SubEtapas MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu007"), "Index", "SubEtapa")</li>
+                                    <li class="PA MSICI004" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu008"), "Index", "PruebaAutoEvaluacion")</li>
+                                    <li class="Indicadores MSICI001" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu009"), "Index", "Indicador")</li>
+                                    <li class="TipoEvaluacion MSICI004" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu010"), "Index", "TipoEvaluacion")</li>
+                                    <li class="ActividadCosteo MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu011"), "Index", "ActividadCosteo")</li>
+                                    <li class="TipologiaSP MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu012"), "Index", "TipologiaSubProceso")</li>
+                                    <li class="MCSubProceso MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu013"), "Index", "MCSubProceso")</li>
+                                    <li class="AjustesCert MSICI004" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu153"), "Index", "AjustesCertificacion")</li>
+                                </ul>
+                            </li>
+
+                            <li class="divider PeriodosIndicadores PCertificacion" hidden="hidden"></li>
+                            <li class="dropdown-submenu PeriodosIndicadores PCertificacion" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Periodos")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="PeriodosIndicadores MSICI001" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu009"), "Index", "PeriodoIndicador")</li>
+                                    <li class="PCertificacion MSICI004" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu014"), "Index", "PeriodoCertificacion")</li>
+                                </ul>
+                            </li>
+
+                            <li class="divider TipoNormatividad Normatividad NivelesNormatividad CN" hidden="hidden"></li>
+                            <li class="dropdown-submenu TipoNormatividad Normatividad NivelesNormatividad CN" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu015")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="Normatividad MSICI002" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu016"), "Index", "Normatividad")</li>
+                                </ul>
+                            </li>
+
+                            <li class="divider RRConfig CategoriaRiesgo TipoRiesgo Criticidad ClaseTipologiaRiesgo SCTipologiaRiesgo TipologiaRiesgo POCR TipoImpacto MagnitudImpacto GradoCobertura FrecuenciaControl NaturalezaControl TipologiaControl CategoriaControl TipoEvidencia FrecuenciaIndicador UnidadIndicador EstatusInc CuentasContables CentrosCosto Moneda TipoSolucion Actividad PRBN SPRBN EventoRiesgo MCRiesgo MCControl TipoRO SubTipoRO ClaseEventoRO AmbitoRO ProcesoRO ProductoRO STProductoRO CLNRO LNRO CanalRO FrecuenciaRO ImpactoRO CriticidadRO Aseveracion Calificacion CalificacionesRev" hidden="hidden"></li>
+                            <li class="dropdown-submenu RRConfig CategoriaRiesgo TipoRiesgo Criticidad ClaseTipologiaRiesgo SCTipologiaRiesgo TipologiaRiesgo POCR TipoImpacto MagnitudImpacto MCRiesgo" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu017")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="CategoriaRiesgo MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu018"), "Index", "CategoriaRiesgo")</li>
+                                    <li class="TipoRiesgo MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu019"), "Index", "TipoRiesgo")</li>
+                                    <li class="divider ClaseTipologiaRiesgo SCTipologiaRiesgo TipologiaRiesgo" hidden></li>
+                                    <li class="ClaseTipologiaRiesgo MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu020"), "Index", "ClaseTipologiaRiesgo")</li>
+                                    <li class="SCTipologiaRiesgo MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu021"), "Index", "SubClaseTipologiaRiesgo")</li>
+                                    <li class="TipologiaRiesgo MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu022"), "Index", "TipologiaRiesgo")</li>
+                                    <li class="divider POCR TipoImpacto MagnitudImpacto Criticidad MCRiesgo RRConfig" hidden></li>
+                                    <li class="POCR MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu023"), "Index", "ProbabilidadOcurrencia")</li>
+                                    <li class="TipoImpacto MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu024"), "Index", "TipoImpacto")</li>
+                                    <li class="MagnitudImpacto MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu025"), "Index", "MagnitudImpacto")</li>
+                                    <li class="Criticidad MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu026"), "Index", "Criticidad")</li>
+                                    <li class="MCRiesgo MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu027"), "Index", "MCRiesgo")</li>
+                                    <li class="RRConfig MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu028"), "Index", "RiesgoResidualConfig")</li>
+                                </ul>
+                            </li>
+
+
+                            <li class="dropdown-submenu GradoCobertura FrecuenciaControl NaturalezaControl TipologiaControl CategoriaControl TipoEvidencia MCControl Aseveracion CalificacionesRev CalificacionRev" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu029")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="GradoCobertura MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu030"), "Index", "GradoCobertura")</li>
+                                    <li class="FrecuenciaControl MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu031"), "Index", "FrecuenciaControl")</li>
+                                    <li class="NaturalezaControl MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu032"), "Index", "NaturalezaControl")</li>
+                                    <li class="TipologiaControl MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu033"), "Index", "TipologiaControl")</li>
+                                    <li class="CategoriaControl MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu034"), "Index", "CategoriaControl")</li>
+                                    <li class="TipoEvidencia MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu035"), "Index", "TipoEvidencia")</li>
+                                    <li class="MCControl MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu036"), "Index", "MCControl")</li>
+                                    <li class="Aseveracion" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu037"), "Index", "Aseveracion")</li>
+                                    <li class="Calificacion MSICI011" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu038"), "Index", "Calificacion")</li>
+                                    <li class="CalificacionesRev MSICI011" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu039"), "Index", "CalificacionRevision")</li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu CCBDEI CABDEI MROBDEI RABDEI CuentasContables CentrosCosto EstatusInc Moneda TipoSolucion TipoRO SubTipoRO ClaseEventoRO AmbitoRO ProcesoRO ProductoRO STProductoRO CLNRO LNRO CanalRO FrecuenciaRO ImpactoRO CriticidadRO" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu040")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="EstatusInc MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu041"), "Index", "EstatusBDEI")</li>
+                                    <li class="Moneda MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu042"), "Index", "Moneda")</li>
+                                    <li class="TipoSolucion MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu043"), "Index", "TipoSolucion")</li>
+                                    <li class="CuentasContables MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu044"), "Index", "CuentaContable")</li>
+                                    <li class="CentrosCosto MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu045"), "Index", "CentroCosto")</li>
+                                    <li class="CanalRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu046"), "Index", "CanalRiesgoOperacional")</li>
+                                    <li class="RABDEI MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu154"), "Index", "RiesgoAsociadoBDEI")</li>
+                                    @*<li class="MROBDEI MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("BDEICreate115"), "Index", "MinimoRiesgoOperativoBDEI")</li>*@
+                                    <li class="CABDEI MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("BDEICreate116"), "Index", "CausaBDEI")</li>
+                                    <li class="CCBDEI MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("BDEICreate119"), "Index", "CatalogoConceptoBDEI")</li>
+
+                                    <li class="divider TipoRO SubTipoRO ClaseEventoRO" hidden></li>
+                                    <li class="TipoRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("TipoRiesgoOperacionalIndex001"), "Index", "TipoRiesgoOperacional")</li>
+                                    <li class="SubTipoRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu047"), "Index", "SubTipoRiesgoOperacional")</li>
+                                    <li class="ClaseEventoRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu048"), "Index", "ClaseEventoRiesgoOperacional")</li>
+
+                                    <li class="divider AmbitoRO ProcesoRO" hidden></li>
+                                    <li class="AmbitoRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu049"), "Index", "AmbitoRiesgoOperacional")</li>
+                                    <li class="ProcesoRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("P"), "Index", "ProcesoRiesgoOperacional")</li>
+
+                                    <li class="divider ProductoRO STProductoRO" hidden></li>
+                                    <li class="ProductoRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu050"), "Index", "ProductoRiesgoOperacional")</li>
+                                    <li class="STProductoRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu051"), "Index", "SubTipoProductoRiesgoOperacional")</li>
+
+                                    <li class="divider CLNRO LNRO" hidden></li>
+                                    <li class="CLNRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu052"), "Index", "CategoriaLineaNegocioRiesgoOperacional")</li>
+                                    <li class="LNRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu005"), "Index", "LineaNegocioRiesgoOperacional")</li>
+
+                                    <li class="divider FrecuenciaRO ImpactoRO CriticidadRO" hidden></li>
+                                    <li class="FrecuenciaRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu053"), "Index", "FrecuenciaRiesgoOperacional")</li>
+                                    <li class="ImpactoRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu054"), "Index", "ImpactoRiesgoOperacional")</li>
+                                    <li class="CriticidadRO MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("BDEICreate100"), "Index", "CriticidadRiesgoOperacional")</li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu Actividad PRBN SPRBN EventoRiesgo" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu055")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="Actividad MSICI007" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu056"), "Index", "Actividad")</li>
+                                    <li class="PRBN MSICI007" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu057"), "Index", "ProcesoBenchmark")</li>
+                                    <li class="SPRBN MSICI007" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu058"), "Index", "SubProcesoBenchmark")</li>
+                                    <li class="EventoRiesgo MSICI007" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu059"), "Index", "EventoRiesgo")</li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu FrecuenciaIndicador UnidadIndicador" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu060")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="FrecuenciaIndicador MSICI001" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu053"), "Index", "FrecuenciaIndicador")</li>
+                                    <li class="UnidadIndicador MSICI001" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu061"), "Index", "UnidadIndicador")</li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu ClasInc OrigenAutoridad" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu062")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="ClasInc MSICI006" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu063"), "Index", "ClasificacionIncidencia")</li>
+                                    <li class="OrigenAutoridad MSICI006" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu064"), "Index", "OrigenAutoridad")</li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu CNG INDD" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu145")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="CNG MSICI008" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu065"), "Index", "ContenidoGrupo")</li>
+                                    <li class="INDD MSICI008" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu066"), "Index", "IndicadorDiario")</li>
+                                </ul>
+                            </li>
+
+
+                            <!--Aniadir el atributo hidden al final-->
+                            <li class="divider Roles Usuarios Puestos SECSET CodeActions msgmkp MassiveMsg AjustesMail" hidden="hidden"></li>
+                            <li class="dropdown-submenu Roles Usuarios SECSET CodeActions Puestos" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu067")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="Roles MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu068"), "Index", "Rol")</li>
+                                    <li class="Usuarios MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu069"), "Index", "Usuario")</li>
+                                    <li class="Puestos MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Puestos"), "Index2", "Puesto")</li>
+                                    @if (!usingActiveD)
+                                    {
+                                        <li class="SECSET MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu070"), "Index", "AjustesSeguridad")</li>
+                                    }
+                                    <li class="CodeActions MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu071"), "Index", "CodeActions")</li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu msgmkp MassiveMsg AjustesMail" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu072")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="msgmkp MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu073"), "Index", "Notification")</li>
+                                    <li class="MassiveMsg MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu074"), "Index", "MassiveNotification")</li>
+                                    <li class="AjustesMail MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu075"), "Index", "AjustesMail")</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                }
+
+                @if (showOPER)
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu076")<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="MRyC MSICI003" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu077"), "SubProcesos", "Riesgo")</li>
+                            <li class="FlujosNarrativas MSICI013" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu078"), "Index", "FlujoNarrativa")</li>
+                            <li class="dropdown-submenu Certificacion CertificacionEN CertificacionMP CertificacionPR CertificacionSP" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu014")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="CertificacionEN MSICI004" hidden="hidden">@Html.ActionLink(Strings.getMSG("Entidades"), "Index", "CertificacionEntidad")</li>
+                                    <li class="CertificacionMP MSICI004" hidden="hidden">@Html.ActionLink(Strings.getMSG("MPS"), "Index", "CertificacionMacroProceso")</li>
+                                    <li class="CertificacionPR MSICI004" hidden="hidden">@Html.ActionLink(Strings.getMSG("PS"), "Index", "CertificacionProceso")</li>
+                                    <li class="CertificacionSP MSICI004" hidden="hidden">@Html.ActionLink(Strings.getMSG("SPS"), "Index", "CertificacionSubProceso")</li>
+                                    <li class="Certificacion MSICI004" hidden="hidden">@Html.ActionLink(Strings.getMSG("Controles"), "Index", "Certificacion")</li>
+                                    <li class="CertificacionINF MSICI004" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu155"), "Index", "CertificacionInforme")</li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu BDEI" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu156")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="BDEI MSICI005" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu146"), "Index", "BDEI")</li>
+                                    <li class="MSICI005">@Html.ActionLink("R2811 ", "Index", "BDEIR2811")</li>
+                                    <li class="MSICI005">@Html.ActionLink("R2812 ", "Index", "BDEIR2812")</li>
+                                    <li class="MSICI005">@Html.ActionLink("R2813 ", "Index", "BDEIR2813")</li>
+                                </ul>
+                            </li>
+
+                            <li class="EIND MSICI001" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu080"), "Index", "EvaluacionIndicador")</li>
+                            <li class="Costeo MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu081"), "Index", "Costeo")</li>
+                            <li class="TiemposSP MSICI000" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu082"), "Index", "TiemposSubProcesos")</li>
+                            <li class="EINDD MSICI008" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu083"), "Index", "EvaluacionIndicadorDiario")</li>
+                            <li class="RevisionControl MSICI011" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu084"), "Index", "RevisionControl")</li>
+                            <li class="divider IYP CPlRem PlRem Contest IncResp" hidden="hidden"></li>
+                            <li class="dropdown-submenu IYP CPlRem PlRem Contest IncResp" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu085")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="IYP MSICI006" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu086"), "Index", "IyP")</li>
+                                    <li class="PlRem MSICI006" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu147"), "Index", "PlanesRem")</li>
+                                    <li class="CPlRem MSICI006" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu087"), "Index", "ConclusionPlan")</li>
+                                    <li class="IncResp MSICI006" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu088"), "Index", "RespuestaIncidencia")</li>
+                                    <li class="Contest MSICI006" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu089"), "Index", "ContestacionOficio")</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                }
+                @if (showNORM)
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu090")<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="SPCUB MSICI002" hidden="hidden">@Html.ActionLink(@Strings.getMSG("Menu091"), "Index", "SubProcesosCUB")</li>
+                            <li class="BDC MSICI007" hidden="hidden">@Html.ActionLink(@Strings.getMSG("Menu092"), "Index", "Benchmark")</li>
+                            <li class="EstructuraManual MSICI010" hidden="hidden">@Html.ActionLink(@Strings.getMSG("Menu093"), "Index", "EstructuraManual")</li>
+                            <li class="Manuales MSICI010" hidden="hidden">@Html.ActionLink(@Strings.getMSG("Menu094"), "Index", "Manuales")</li>
+                            <li class="NormatividadOP MSICI002" hidden="hidden">@Html.ActionLink(@Strings.getMSG("Menu095"), "Index", "NormatividadOperacion")</li>
+                            <li class="ConsultaNormatividad MSICI002" hidden="hidden">@Html.ActionLink(@Strings.getMSG("Menu096"), "Index", "ConsultaNormatividad")</li>
+                        </ul>
+                    </li>
+
+
+
+
+
+                }
+                @if (showAUDI)
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu148")<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            @if (Auditor_admin)
+                            {
+
+                                <li class="dropdown-submenu UniAud" hidden="hidden">
+                                    <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Catalogos")</a>
+                                    <ul class="dropdown-menu">
+                                        <li class=" MSICI009">@Html.ActionLink(Strings.getMSG("Menu097"), "Index", "RolAudit")</li>
+                                        <li class=" MSICI009">@Html.ActionLink(Strings.getMSG("Menu160"), "IndexDivisionAuditoria", "Auditoria")</li>
+                                        <li class=" MSICI009">@Html.ActionLink(Strings.getMSG("Menu098"), "IndexSolicitanteAuditoria", "Auditoria")</li>
+                                        <li class=" MSICI009">@Html.ActionLink(Strings.getMSG("Periodos"), "IndexPeriodoAuditoria", "Auditoria")</li>
+                                        <li class=" MSICI009">@Html.ActionLink(Strings.getMSG("Menu099"), "IndexRatingAuditoria", "Auditoria")</li>
+                                        <li class=" MSICI009">@Html.ActionLink(Strings.getMSG("Menu100"), "IndexCriticidad", "Auditoria")</li>
+                                        <li class=" MSICI009">@Html.ActionLink(Strings.getMSG("Menu101"), "IndexEstatusPrograma", "Auditoria")</li>
+                                        <li class=" MSICI009">@Html.ActionLink(Strings.getMSG("Menu102"), "IndexCampoAuditoria", "Auditoria")</li>
+                                        <li class=" MSICI009">@Html.ActionLink(Strings.getMSG("Menu103"), "IndexCampoPrograma", "Auditoria")</li>
+                                        <li class=" MSICI009">@Html.ActionLink(Strings.getMSG("ValoracionRiesgoindex001"), "Index", "Rango")</li>
+
+                                    </ul>
+                                </li>
+
+
+
+                                <li class="divider"></li>
+                            }
+                            <li class="dropdown-submenu UniAud" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu167")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="UniAud MSICI009" @(Auditor_admin ? "" : "hidden='hidden'")>@Html.ActionLink(Strings.getMSG("Menu104"), "IndexUniversoAuditable", "Auditoria")</li>
+                                    <!--  <li class="UniAud MSICI009"  (Auditor_admin ? "" : "hidden='hidden'")   >     Html.ActionLink(Strings.getMSG("Menu166"), "ReporteUniAudi", "Auditoria")</li> -->
+
+                                </ul>
+                            </li>
+
+                            <li class="PlaAud MSICI009" @(Auditor_admin ? "" : "hidden='hidden'")>@Html.ActionLink(Strings.getMSG("Menu105"), "IndexPlaneacion", "ProcesosAuditoria")</li>
+                            <li class="EjeAud MSICI009" @(Auditor_admin ? "" : "hidden='hidden'")>@Html.ActionLink(Strings.getMSG("Menu106"), "IndexEjecucion", "ProcesosAuditoria")</li>
+                            <li class="SegAud MSICI009" @(Auditor_admin ? "" : "hidden='hidden'")>@Html.ActionLink(Strings.getMSG("Menu108"), "IndexInformes", "ProcesosAuditoria")</li>
+                            <li class="InfAud MSICI009" @(Auditor_admin ? "" : "hidden='hidden'")>@Html.ActionLink(Strings.getMSG("Menu107"), "IndexSeguimientoObservaciones", "Auditoria")</li>
+                            <li class="divider"></li>
+
+                        </ul>
+
+                    </li>
+                }
+
+
+
+
+
+
+                @if (showREPO)
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu109")<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="Estructura" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu003"), "Index", "ReporteEstructura")</li>
+
+
+                            <li class="RepFN" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu078"), "Index", "ReporteFlujoNarrativa")</li>
+                            <li class="RepSPNORM" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu116"), "Index", "ReporteSPNM")</li>
+                            <li class="RepBDEI" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu113"), "Index", "ReporteGeneralBDEI")</li>
+
+                            <li class="divider"></li>
+
+                            <li class="dropdown-submenu UniAud" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu164")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="GeneralMRyC" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu110"), "Index", "ReporteMRyC")</li>
+                                    <li class="RepCambios" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu111"), "Index", "ReporteCambiosMRyC")</li>
+                                    <li class="RepRR" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu112"), "Index", "ReporteRR")</li>
+                                    <li class="RepRC" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu123"), "Index", "ReporteRevisionControl")</li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="dropdown-submenu UniAud" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu165")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="RepIndicadores" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu009"), "Index", "ReporteIndicador")</li>
+                                    <li class="RepINDD" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu122"), "Index", "ReporteIndicadorDiario")</li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="dropdown-submenu UniAud" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu161")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="RepCosteo" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu114"), "Index", "ReporteCosteo")</li>
+                                    <li class="RepSACosteo" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu115"), "Index", "ReporteSubActividadesCosteo")</li>
+
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu UniAud" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu162")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="RepCEE" hidden="hidden">@Html.ActionLink(Strings.getMSG("CertificacionEntidad001"), "Index", "ReporteCertificacionEntidad")</li>
+                                    <li class="RepCEM" hidden="hidden">@Html.ActionLink(Strings.getMSG("CertificacionMacroProceso001"), "Index", "ReporteCertificacionMacroProceso")</li>
+                                    <li class="RepCEP" hidden="hidden">@Html.ActionLink(Strings.getMSG("CertificacionProceso001"), "Index", "ReporteCertificacionProceso")</li>
+                                    <li class="RepCES" hidden="hidden">@Html.ActionLink(Strings.getMSG("CertificacionSubProceso001"), "Index", "ReporteCertificacionSubProceso")</li>
+                                    <li class="RepCertific" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu118"), "Index", "ReporteCertificacion")</li>
+
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu UniAud" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu119")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="RepIyP" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu119"), "Index", "ReporteIyP")</li>
+                                    <li class="RepPR" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu149"), "Index", "ReportePR")</li>
+
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu UniAud" hidden="hidden">
+                                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu163")</a>
+                                <ul class="dropdown-menu">
+                                    <li class="RepPersonal" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu120"), "Index", "ReportePersonal")</li>
+                                    <li class="RepFichas" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu121"), "Index", "ReporteFichas")</li>
+
+                                    <li class="RepBenchmark" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu117"), "Index", "ReporteBenchmark")</li>
+                                    <li class="RepAcceso" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu124"), "Index", "ReporteAcceso")</li>
+                                    <li class="RepFallas" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu125"), "Index", "ReporteFallas")</li>
+                                    <li class="RepHist" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu126"), "Index", "HistorialReportes")</li>
+
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                }
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @if (showSTATS || Auditor_admin)
+                {
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-stats " title="Gráficas"></i><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="MRyC-Stats" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu077"), "Index", "GraphicsMRyC")</li>
+                            <li class="BDEI-Stats" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu146"), "Index", "GraphicsBDEI")</li>
+                            <li class="Indicador-Stats" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu009"), "Index", "GraphicsIndicador")</li>
+                            <li class="Oficio-Stats" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu127"), "Index", "GraphicsOficio")</li>
+                            <li class="PlanesRem-Stats" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu128"), "Index", "GraphicsPlanesRem")</li>
+                            <li class="Criticidad-Stats" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu129"), "Index", "GraphicsMapaCalorCriticidad")</li>
+                            <li class="Costeo-Stats" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu082"), "Index", "GraphicsCosteo")</li>
+                            <li class="Fichas-Stats" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu130"), "Index", "GraphicsFichas")</li>
+                            <li class="INDD-Stats" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu066"), "Index", "GraphicsIndicadorDiario")</li>
+                            <li class="RC-Stats" hidden="hidden">@Html.ActionLink(Strings.getMSG("Menu084"), "Index", "GraphicsRevisionControl")</li>
+                            <li class="InAud-Stats" @(Auditor_admin ? "" : "hidden='hidden'")>@Html.ActionLink(Strings.getMSG("GraphicsAuditoriandex001"), "Index", "GraphicsIncidenciaAuditoria")</li>
+                            <li class="SegAud-Stats" @(Auditor_admin ? "" : "hidden='hidden'")>@Html.ActionLink(Strings.getMSG("GraphicsAuditoriandex002"), "Index", "GraphicsSeguimientoAuditoria")</li>
+                        </ul>
+                    </li>
+                }
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" onclick="loadEarrings();" data-toggle="dropdown"><i class="glyphicon glyphicon-bell" title="@Strings.getMSG("Menu150")"></i><b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="earringsCounter">
+                        <li style="background: rgba( 255, 255, 255, .8 ) url(@Url.Action("loader2.gif","Content")) 50% 50% no-repeat; height:200px;background-size:100px;">
+
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i>&emsp;@User.Identity.Name<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="disabled">&emsp;@(((IdentityPersonalizado)User.Identity).E_mail_principal)&emsp;</li>
+                        <li class="disabled">&emsp;@Strings.getMSG("Menu140") &emsp;</li>
+                        <li class="disabled">
+                            &emsp;
+                            @(Utilidades.getLastConnection())
+                            &emsp;
+                        </li>
+                        <li class="divider"></li>
+                        @if (!usingActiveD)
+                        {
+                            <li>@Html.ActionLink(Strings.getMSG("Menu141"), "ChangePassword", "UsuarioNR")</li>
+                            <li>@Html.ActionLink(Strings.getMSG("Menu142"), "Editar", "UsuarioNR")</li>
+                        }
+                        <li class="dropdown-submenu pull-left-m">
+                            <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">@Strings.getMSG("Menu151")</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" onclick="setLanguage('es')">Español</a></li>
+                                <li><a href="#" onclick="setLanguage('en-US')">English (United Sates)</a></li>
+                                <li><a href="#" onclick="setLanguage('de')">Deutsch</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li>@Html.ActionLink(Strings.getMSG("Menu143"), "Index", "Manual")</li>
+                        <li>@Html.ActionLink(Strings.getMSG("Menu144"), "Logoff", "Inicio")</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="Aviso" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <center>
+                    <h2 class="modal-title HeadLabel" style="color: #fff;"></h2>
+                </center>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="partialModal"></div>
+                <div class="bodyContent"></div>
+            </div>
+            <div class="modal-footer">
+                <div class="pull-left modalError" style="color:indianred;"></div>
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Strings.getMSG("Cancelar")</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="Aviso" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <center>
+                    <h2 class="modal-title HeadLabel" style="color: #fff;"></h2>
+                </center>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary confirm" onclick="confirmationModal.runAction()">@Strings.getMSG("Aceptar")</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Strings.getMSG("Cancelar")</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+        var UserID = @(((IdentityPersonalizado)HttpContext.Current.User.Identity).Id_usuario);
+
+        //variable para los tutoriales
+        var enjoyhint_instance = null;
+
+        // Reference the auto-generated proxy for the hub
+        var chat = $.connection.chatHub;
+
+
+        $(document).ready(function () {
+
+        @if (!MSICI001)
+        {
+            @:$(".MSICI001").addClass('disabled');
+        }
+    /**/
+        @if (!MSICI002)
+        {
+            @:$(".MSICI002").addClass('disabled');
+        }
+    /**/
+        @if (!MSICI003)
+        {
+            @:$(".MSICI003").addClass('disabled');
+        }
+    /**/
+        @if (!MSICI004)
+        {
+            @:$(".MSICI004").addClass('disabled');
+        }
+    /**/
+        @if (!MSICI005)
+        {
+            @:$(".MSICI005").addClass('disabled');
+        }
+    /**/
+        @if (!MSICI006)
+        {
+            @:$(".MSICI006").addClass('disabled');
+        }
+    /**/
+        @if (!MSICI007)
+        {
+            @:$(".MSICI007").addClass('disabled');
+        }
+    /**/
+        @if (!MSICI008)
+        {
+            @:$(".MSICI008").addClass('disabled');
+        }
+
+        @if (!MSICI009)
+        {
+            @:$(".MSICI009").addClass('disabled');
+        }
+        @if (!MSICI010)
+        {
+            @:$(".MSICI010").addClass('disabled');
+        }
+
+        @if (!MSICI011)
+        {
+            @:$(".MSICI011").addClass('disabled');
+        }
+
+        @if (!MSICI012)
+        {
+            @:$(".MSICI012").addClass('disabled');
+        }
+
+        @if (!MSICI013)
+        {
+            @:$(".MSICI013").addClass('disabled');
+        }
+
+            $(".nav li.disabled a").click(function () {
+            return false;
+        });
+
+
+            var array = @Html.Raw(Json.Encode((((IdentityPersonalizado)User.Identity).Funciones)));
+
+            for (var i = 0; i < array.length; i++) {
+                $("." + array[i]).show();
+                $("." + array[i]).removeAttr("hidden");
+            }
+
+            @*var NotifData = @Html.Raw(Utilidades.getNotifCount());
+            refreshNotif(NotifData);*@
+
+            $(function () {
+                chat.client.refreshNotif = function (id, json) {
+                    if (UserID == id) {
+                        var NotifData = JSON.parse(json);
+                        refreshNotif(NotifData);
+                    }
+                };
+
+                //Notificaciones emergentes en tiempo real
+                chat.client.notifyUser = function (id, message,notifType) {
+                    if (UserID == id) {
+                        if (notifType == "success") toastr.success(message);
+                        if (notifType == "error") toastr.error(message);
+                        if (notifType == "warning") toastr.warning(message);
+                        if (notifType == "info") toastr.info(message);
+                    }
+                };
+
+                chat.client.execute = function (id, expression) {
+                    if (UserID == id) {
+                        eval(expression);
+                    }
+                }
+
+                //Iniciar conexión
+                $.connection.hub.start().done(function () {
+
+                });
+            });
+        });
+
+
+
+        function refreshNotif(NotifData) {
+
+            if (NotifData.Total == 0) $("#NotifTotal").hide();
+            else $("#NotifTotal").show();
+            if (NotifData.n_controles == 0) $("#NotifControles").hide();
+            else $("#NotifControles").show();
+            if (NotifData.n_indicadores == 0) $("#NotifIndicadores").hide();
+            else $("#NotifIndicadores").show();
+            if (NotifData.n_oficios == 0) $("#NotifOficios").hide();
+            else $("#NotifOficios").show();
+            if (NotifData.n_informes == 0) $("#NotifInformes").hide();
+            else $("#NotifInformes").show();
+            if (NotifData.n_incidencias == 0) $("#NotifIncidencias").hide();
+            else $("#NotifIncidencias").show();
+            if (NotifData.n_planes == 0) $("#NotifPlanes").hide();
+            else $("#NotifPlanes").show();
+            if (NotifData.n_fichas == 0) $("#NotifFichas").hide();
+            else $("#NotifFichas").show();
+            if (NotifData.n_indicadores_diarios == 0) $("#NotifIndicadoresDiarios").hide();
+            else $("#NotifIndicadoresDiarios").show();
+            if (NotifData.n_entidades == 0) $("#NotifEntidades").hide();
+            else $("#NotifEntidades").show();
+            if (NotifData.n_macro_procesos == 0) $("#NotifMacroProcesos").hide();
+            else $("#NotifMacroProcesos").show();
+            if (NotifData.n_procesos == 0) $("#NotifProcesos").hide();
+            else $("#NotifProcesos").show();
+            if (NotifData.n_sub_procesos == 0) $("#NotifSubProcesos").hide();
+            else $("#NotifSubProcesos").show();
+
+
+
+
+            $("#NotifTotal").html(NotifData.Total < 100 ? NotifData.Total : '+99');
+            $(".NotifTotal").html(NotifData.Total);
+            $(".NotifGlobal").html(NotifData.Global);
+
+            var PorcentajeControles = NotifData.t_controles == 0 ? 100 : ((NotifData.t_controles - NotifData.n_controles) * 100) / NotifData.t_controles;
+            $("#NotifControles").html(NotifData.n_controles < 100 ? NotifData.n_controles : '+99');
+            $(".NotifControles").html(NotifData.t_controles - NotifData.n_controles + " de " + NotifData.t_controles);
+            $(".ProgressBarControles").css('width', PorcentajeControles + "%");
+
+            var PorcentajeIndicadores = NotifData.t_indicadores == 0 ? 100 : ((NotifData.t_indicadores - NotifData.n_indicadores) * 100) / NotifData.t_indicadores;
+            $("#NotifIndicadores").html(NotifData.n_indicadores < 100 ? NotifData.n_indicadores : '+99');
+            $(".NotifIndicadores").html(NotifData.t_indicadores - NotifData.n_indicadores + " de " + NotifData.t_indicadores);
+            $(".ProgressBarIndicadores").css('width', PorcentajeIndicadores + "%");
+
+            var PorcentajeOficios = NotifData.t_oficios == 0 ? 100 : ((NotifData.t_oficios - NotifData.n_oficios) * 100) / NotifData.t_oficios;
+            $("#NotifOficios").html(NotifData.n_oficios < 100 ? NotifData.n_oficios : '+99');
+            $(".NotifOficios").html(NotifData.t_oficios - NotifData.n_oficios + " de " + NotifData.t_oficios);
+            $(".ProgressBarOficios").css('width', PorcentajeOficios + "%");
+
+
+            var PorcentajeInformes = NotifData.t_informes == 0 ? 100 : ((NotifData.t_informes - NotifData.n_informes) * 100) / NotifData.t_informes;
+            $("#NotifInformes").html(NotifData.n_informes < 100 ? NotifData.n_informes : '+99');
+            $(".NotifInformes").html(NotifData.t_informes - NotifData.n_informes + " de " + NotifData.t_informes);
+            $(".ProgressBarInformes").css('width', PorcentajeInformes + "%");
+
+            var PorcentajeIncidencias = NotifData.t_incidencias == 0 ? 100 : ((NotifData.t_incidencias - NotifData.n_incidencias) * 100) / NotifData.t_incidencias;
+            $("#NotifIncidencias").html(NotifData.n_incidencias < 100 ? NotifData.n_incidencias : '+99');
+            $(".NotifIncidencias").html(NotifData.t_incidencias - NotifData.n_incidencias + " de " + NotifData.t_incidencias);
+            $(".ProgressBarIncidencias").css('width', PorcentajeIncidencias + "%");
+
+            var PorcentajePlanes = NotifData.t_planes == 0 ? 100 : ((NotifData.t_planes - NotifData.n_planes) * 100) / NotifData.t_planes;
+            $("#NotifPlanes").html(NotifData.n_planes < 100 ? NotifData.n_planes : '+99');
+            $(".NotifPlanes").html(NotifData.t_planes - NotifData.n_planes + " de " + NotifData.t_planes);
+            $(".ProgressBarPlanes").css('width', PorcentajePlanes + "%");
+
+            var PorcentajeFichas = NotifData.t_fichas == 0 ? 100 : ((NotifData.t_fichas - NotifData.n_fichas) * 100) / NotifData.t_fichas;
+            $("#NotifFichas").html(NotifData.n_fichas < 100 ? NotifData.n_fichas : '+99');
+            $(".NotifFichas").html(NotifData.t_fichas - NotifData.n_fichas + " de " + NotifData.t_fichas);
+            $(".ProgressBarFichas").css('width', PorcentajeFichas + "%");
+
+            var PorcentajeIndicadoresDiarios = NotifData.t_indicadores_diarios == 0 ? 100 : ((NotifData.t_indicadores_diarios - NotifData.n_indicadores_diarios) * 100) / NotifData.t_indicadores_diarios;
+            $("#NotifIndicadoresDiarios").html(NotifData.n_indicadores_diarios < 100 ? NotifData.n_indicadores_diarios : '+99');
+            $(".NotifIndicadoresDiarios").html(NotifData.t_indicadores_diarios - NotifData.n_indicadores_diarios + " de " + NotifData.t_indicadores_diarios);
+            $(".ProgressBarIndicadoresDiarios").css('width', PorcentajeIndicadoresDiarios + "%");
+
+            var PorcentajeEntidades = NotifData.t_entidades == 0 ? 100 : ((NotifData.t_entidades - NotifData.n_entidades) * 100) / NotifData.t_entidades;
+            $("#NotifEntidades").html(NotifData.n_entidades < 100 ? NotifData.n_entidades : '+99');
+            $(".NotifEntidades").html(NotifData.t_entidades - NotifData.n_entidades + " de " + NotifData.t_entidades);
+            $(".ProgressBarEntidades").css('width', PorcentajeEntidades + "%");
+
+            var PorcentajeMacroProcesos = NotifData.t_macro_procesos == 0 ? 100 : ((NotifData.t_macro_procesos - NotifData.n_macro_procesos) * 100) / NotifData.t_macro_procesos;
+            $("#NotifMacroProcesos").html(NotifData.n_macro_procesos < 100 ? NotifData.n_macro_procesos : '+99');
+            $(".NotifMacroProcesos").html(NotifData.t_macro_procesos - NotifData.n_macro_procesos + " de " + NotifData.t_macro_procesos);
+            $(".ProgressBarMacroProcesos").css('width', PorcentajeMacroProcesos + "%");
+
+            var PorcentajeProcesos = NotifData.t_procesos == 0 ? 100 : ((NotifData.t_procesos - NotifData.n_procesos) * 100) / NotifData.t_procesos;
+            $("#NotifProcesos").html(NotifData.n_procesos < 100 ? NotifData.n_procesos : '+99');
+            $(".NotifProcesos").html(NotifData.t_procesos - NotifData.n_procesos + " de " + NotifData.t_procesos);
+            $(".ProgressBarProcesos").css('width', PorcentajeProcesos + "%");
+
+            var PorcentajeSubProcesos = NotifData.t_sub_procesos == 0 ? 100 : ((NotifData.t_sub_procesos - NotifData.n_sub_procesos) * 100) / NotifData.t_sub_procesos;
+            $("#NotifSubProcesos").html(NotifData.n_sub_procesos < 100 ? NotifData.n_sub_procesos : '+99');
+            $(".NotifSubProcesos").html(NotifData.t_sub_procesos - NotifData.n_sub_procesos + " de " + NotifData.t_sub_procesos);
+            $(".ProgressBarSubProcesos").css('width', PorcentajeSubProcesos + "%");
+
+            //TRAMO DE CONTROL *******************************
+
+            //$("#NotifTotalTC").html(NotifData.TotalTC < 100 ? NotifData.TotalTC : '+99');
+            //$(".NotifTotalTC").html(NotifData.TotalTC);
+            //$(".NotifGlobalTC").html(NotifData.GlobalTC);
+
+            console.log(NotifData);
+
+            if (NotifData.includeTC) {
+                var PorcentajeControlesTC = NotifData.t_controles
+                TC == 0 ? 100 : ((NotifData.t_controlesTC - NotifData.n_controlesTC) * 100) / NotifData.t_controlesTC;
+                $("#NotifControlesTC").html(NotifData.n_controlesTC < 100 ? NotifData.n_controlesTC : '+99');
+                $(".NotifControlesTC").html(NotifData.t_controlesTC - NotifData.n_controlesTC + " de " + NotifData.t_controlesTC);
+                $(".ProgressBarControlesTC").css('width', PorcentajeControlesTC + "%");
+
+                var PorcentajeIndicadoresTC = NotifData.t_indicadoresTC == 0 ? 100 : ((NotifData.t_indicadoresTC - NotifData.n_indicadoresTC) * 100) / NotifData.t_indicadoresTC;
+                $("#NotifIndicadoresTC").html(NotifData.n_indicadoresTC < 100 ? NotifData.n_indicadoresTC : '+99');
+                $(".NotifIndicadoresTC").html(NotifData.t_indicadoresTC - NotifData.n_indicadoresTC + " de " + NotifData.t_indicadoresTC);
+                $(".ProgressBarIndicadoresTC").css('width', PorcentajeIndicadoresTC + "%");
+
+                var PorcentajeOficiosTC = NotifData.t_oficiosTC == 0 ? 100 : ((NotifData.t_oficiosTC - NotifData.n_oficiosTC) * 100) / NotifData.t_oficiosTC;
+                $("#NotifOficiosTC").html(NotifData.n_oficiosTC < 100 ? NotifData.n_oficiosTC : '+99');
+                $(".NotifOficiosTC").html(NotifData.t_oficiosTC - NotifData.n_oficiosTC + " de " + NotifData.t_oficiosTC);
+                $(".ProgressBarOficiosTC").css('width', PorcentajeOficiosTC + "%");
+
+
+                var PorcentajeInformesTC = NotifData.t_informesTC == 0 ? 100 : ((NotifData.t_informesTC - NotifData.n_informesTC) * 100) / NotifData.t_informesTC;
+                $("#NotifInformesTC").html(NotifData.n_informesTC < 100 ? NotifData.n_informesTC : '+99');
+                $(".NotifInformesTC").html(NotifData.t_informesTC - NotifData.n_informesTC + " de " + NotifData.t_informesTC);
+                $(".ProgressBarInformesTC").css('width', PorcentajeInformesTC + "%");
+
+                var PorcentajeIncidenciasTC = NotifData.t_incidenciasTC == 0 ? 100 : ((NotifData.t_incidenciasTC - NotifData.n_incidenciasTC) * 100) / NotifData.t_incidenciasTC;
+                $("#NotifIncidenciasTC").html(NotifData.n_incidenciasTC < 100 ? NotifData.n_incidenciasTC : '+99');
+                $(".NotifIncidenciasTC").html(NotifData.t_incidenciasTC - NotifData.n_incidenciasTC + " de " + NotifData.t_incidenciasTC);
+                $(".ProgressBarIncidenciasTC").css('width', PorcentajeIncidenciasTC + "%");
+
+                var PorcentajePlanesTC = NotifData.t_planesTC == 0 ? 100 : ((NotifData.t_planesTC - NotifData.n_planesTC) * 100) / NotifData.t_planesTC;
+                $("#NotifPlanesTC").html(NotifData.n_planesTC < 100 ? NotifData.n_planesTC : '+99');
+                $(".NotifPlanesTC").html(NotifData.t_planesTC - NotifData.n_planesTC + " de " + NotifData.t_planesTC);
+                $(".ProgressBarPlanesTC").css('width', PorcentajePlanesTC + "%");
+
+                var PorcentajeFichasTC = NotifData.t_fichasTC == 0 ? 100 : ((NotifData.t_fichasTC - NotifData.n_fichasTC) * 100) / NotifData.t_fichasTC;
+                $("#NotifFichasTC").html(NotifData.n_fichasTC < 100 ? NotifData.n_fichasTC : '+99');
+                $(".NotifFichasTC").html(NotifData.t_fichasTC - NotifData.n_fichasTC + " de " + NotifData.t_fichasTC);
+                $(".ProgressBarFichasTC").css('width', PorcentajeFichasTC + "%");
+
+                var PorcentajeIndicadoresDiariosTC = NotifData.t_indicadores_diariosTC == 0 ? 100 : ((NotifData.t_indicadores_diariosTC - NotifData.n_indicadores_diariosTC) * 100) / NotifData.t_indicadores_diariosTC;
+                $("#NotifIndicadoresDiariosTC").html(NotifData.n_indicadores_diariosTC < 100 ? NotifData.n_indicadores_diariosTC : '+99');
+                $(".NotifIndicadoresDiariosTC").html(NotifData.t_indicadores_diariosTC - NotifData.n_indicadores_diariosTC + " de " + NotifData.t_indicadores_diariosTC);
+                $(".ProgressBarIndicadoresDiariosTC").css('width', PorcentajeIndicadoresDiariosTC + "%");
+
+                var PorcentajeEntidadesTC = NotifData.t_entidadesTC == 0 ? 100 : ((NotifData.t_entidadesTC - NotifData.n_entidadesTC) * 100) / NotifData.t_entidadesTC;
+                $("#NotifEntidadesTC").html(NotifData.n_entidadesTC < 100 ? NotifData.n_entidadesTC : '+99');
+                $(".NotifEntidadesTC").html(NotifData.t_entidadesTC - NotifData.n_entidadesTC + " de " + NotifData.t_entidadesTC);
+                $(".ProgressBarEntidadesTC").css('width', PorcentajeEntidadesTC + "%");
+
+                var PorcentajeMacroProcesosTC = NotifData.t_macro_procesosTC == 0 ? 100 : ((NotifData.t_macro_procesosTC - NotifData.n_macro_procesosTC) * 100) / NotifData.t_macro_procesosTC;
+                $("#NotifMacroProcesosTC").html(NotifData.n_macro_procesosTC < 100 ? NotifData.n_macro_procesosTC : '+99');
+                $(".NotifMacroProcesosTC").html(NotifData.t_macro_procesosTC - NotifData.n_macro_procesosTC + " de " + NotifData.t_macro_procesosTC);
+                $(".ProgressBarMacroProcesosTC").css('width', PorcentajeMacroProcesosTC + "%");
+
+                var PorcentajeProcesosTC = NotifData.t_procesosTC == 0 ? 100 : ((NotifData.t_procesosTC - NotifData.n_procesosTC) * 100) / NotifData.t_procesosTC;
+                $("#NotifProcesosTC").html(NotifData.n_procesosTC < 100 ? NotifData.n_procesosTC : '+99');
+                $(".NotifProcesosTC").html(NotifData.t_procesosTC - NotifData.n_procesosTC + " de " + NotifData.t_procesosTC);
+                $(".ProgressBarProcesosTC").css('width', PorcentajeProcesosTC + "%");
+
+                var PorcentajeSubProcesosTC = NotifData.t_sub_procesosTC == 0 ? 100 : ((NotifData.t_sub_procesosTC - NotifData.n_sub_procesosTC) * 100) / NotifData.t_sub_procesosTC;
+                $("#NotifSubProcesosTC").html(NotifData.n_sub_procesosTC < 100 ? NotifData.n_sub_procesosTC : '+99');
+                $(".NotifSubProcesosTC").html(NotifData.t_sub_procesosTC - NotifData.n_sub_procesosTC + " de " + NotifData.t_sub_procesosTC);
+                $(".ProgressBarSubProcesosTC").css('width', PorcentajeSubProcesosTC + "%");
+            }
+        }
+
+        function setLanguage(ln) {
+            var Changed = getFromURL("@Url.Action("SetLanguage", "Utilidades")?ln=" + ln);
+
+            location.reload();
+        }
+
+        //Funcionalidad de la campana de pendientes
+
+        var loadingEarrings = false;
+
+
+        function loadEarrings() {
+            if (!loadingEarrings) {
+                loadingEarrings = true;
+
+                $("#earringsCounter").load("@Url.Action("EarringCounter","Utilidades")");
+            }
+        }
+
+
+
+</script>
+

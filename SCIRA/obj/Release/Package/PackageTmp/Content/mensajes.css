@@ -1,0 +1,29 @@
+﻿/*Mensajes de ayuda*/
+
+li.MS01:before {
+    content: "La clave debe estar formada por MP o MG seguido de 2 digitos.";
+}
+
+li.MS02:before {
+    content: "El largo máximo del nombre es de 256 caracteres.";
+}
+
+li.MS03:before {
+    content: "La clave debe estar formada por 2 digitos.";
+}
+
+li.MS04:before {
+    content: "La clave debe estar formada por P seguido de 2 digitos.";
+}
+
+li.MS05:before {
+    content: "La clave debe estar formada por SP seguido de 4 digitos.";
+}
+
+li.MS06:before {
+    content: "La clave esta conformada por 8 digitos.";
+}
+
+li.MS07:before {
+    content: "Este campo debe tener las claves de 1 o más sub procesos.";
+}

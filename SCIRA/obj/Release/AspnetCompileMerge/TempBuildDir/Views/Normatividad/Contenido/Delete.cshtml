@@ -1,0 +1,101 @@
+﻿@model SCIRA.Models.c_contenido_normatividad
+@using SCIRA.Utilidades;
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("NormatividadCreate033")</h4>
+    <hr />
+
+
+    @if (ViewBag.Error != null)
+    {
+        <span class="field-validation-error text-danger">@ViewBag.Error</span>
+        <hr />
+        <script>
+            $(document).ready(function () {
+                document.getElementById("submit").disabled = true;
+            });
+        </script>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                <p class="info">
+                    @Strings.getMSG("ContenidoGrupoDelete001")
+                </p>
+            </div>
+        </div>
+
+        <hr />
+    }
+
+
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Strings.getMSG("NormatividadCreate034")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_contenido_normatividad2.cl_contenido_normatividad) - @Html.DisplayFor(model => model.c_contenido_normatividad2.ds_contenido_normatividad)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Clave")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cl_contenido_normatividad)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Nombre")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_contenido_normatividad)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("lyPIncidenciasIndex002")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_nivel_normatividad.nb_nivel_normatividad)
+        </dd>
+    </dl>
+
+    <div class="form-actions no-color">
+        <input type="button" value="@Strings.getMSG("Borrar")" class="btn btn-primary" onclick="deleteCPost()" /> |
+        <input type="button" value="@Strings.getMSG("Regresar")" class="btn btn-default" onclick="loadContent(@Model.id_contenido_normatividad_padre);" />
+    </div>
+
+    <form id="FormModal">
+        @Html.AntiForgeryToken()
+        <input type="hidden" name="id" value="@Model.id_contenido_normatividad" />
+    </form>
+</div>
+
+
+<!-- #region Scripts -->
+<script>
+    function deleteCPost() {
+
+        var url = "@Url.Action("DeleteCP")";
+
+        executePost(url, "FormModal", "modalSucces()", "modalError()");
+    }
+
+    function modalSucces() {
+        toastr.success("@Strings.getMSG("CosteoIndex006")");
+        loadContent(@Model.id_contenido_normatividad_padre);
+    }
+
+    function modalError() {
+        toastr.error("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+    }
+
+</script>
+<!-- #endregion -->

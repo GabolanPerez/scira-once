@@ -1,0 +1,140 @@
+﻿@model SCIRA.Models.c_macro_proceso
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Editar Macro Proceso";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+
+<script type="text/javascript">
+    var GLOBAL;
+
+    function clmp(msg) {
+        $("#clave").html(msg);
+        $("#claveh").val(msg);
+        construyeClave();
+    }
+
+    $(document).ready(function () {
+        var clave = $("#cl_macro_proceso").val();
+        var splitclave = clave.split(" ");
+        clave = splitclave[0];
+        var len = clave.length;
+        GLOBAL = clave;
+        var prefix = clave.substr(0, 2);
+        var suffix = clave.substr(2, (len - 2));
+        clmp(prefix);
+        $("#aux").val(suffix);
+
+        $("#cl_macro_proceso").val(GLOBAL);
+
+        $("#aux").keyup(function () {
+            construyeClave();
+        });
+    });
+
+    function construyeClave() {
+        var prefijo = $("#claveh").val();
+        var numero = $("#aux").val();
+        var clavef;
+        clavef = prefijo + numero;
+
+        $("#cl_macro_proceso").val(clavef);
+    }
+
+</script>
+
+<button class="btn btn-circle btn-default pull-right" title="Tutorial" onclick="runTutorial();"><i class="fa fa-question fa-lg"></i></button>
+
+<h2>@Strings.getMSG("Editar")</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <input type="text" id="claveh" hidden="hidden" value="MP" />
+
+    <div class="form-horizontal well">
+        <h4>@Strings.getMSG("MP")</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_macro_proceso)
+        @Html.HiddenFor(model => model.id_entidad)
+        <input type="hidden" name="lu" value="@Model.id_responsable" />
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Entidad")</label>
+                <div class="col-xs-6 col-md-5">
+                    <input class="form-control" id="entidad" type="text" value="@(Model.c_entidad.cl_entidad) - @(Model.c_entidad.nb_entidad)" disabled="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" id="clave" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@Strings.getMSG("MacroProcesoCreate012")</button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" onclick="clmp('MP')">@Strings.getMSG("MacroProcesoCreate012")</a></li>
+                                <li><a href="#" onclick="clmp('MG')">@Strings.getMSG("MacroProcesoCreate013")</a></li>
+                            </ul>
+                        </div>
+                        @Html.EditorFor(model => model.cl_macro_proceso, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        <input type="text" id="aux" class="form-control text-box single-line valid">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MacroProcesoCreate008")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.cl_macro_proceso, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MP")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.nb_macro_proceso, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MacroProcesoCreate010")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.nb_macro_proceso, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Responsable")</label>
+                <div class="col-xs-6 col-md-5">
+                    @Html.DropDownListFor(model => model.id_responsable, (IEnumerable<SelectListItem>)ViewBag.id_responsableL, htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("MacroProcesoCreate011")})
+                    @Html.ValidationMessageFor(model => model.id_responsable, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-3 col-md-5">
+                    <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" onclick="validar(e)" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Index", "MacroProceso", new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<SCIRA.Models.c_area_costeo_n2>
+@using SCIRA.Utilidades
+@using SCIRA.Models
+@using System.Reflection;
+@{
+    c_area_costeo ac = ViewBag.ac;
+}
+
+<script>
+    var createURL = '@(Url.Action("CreateLVL2","ActividadCosteo") + "/" + ac.id_area_costeo)';
+    var editURL = '@(Url.Action("EditLVL2","ActividadCosteo"))';
+    var deleteURL = '@(Url.Action("DeleteLVL2","ActividadCosteo"))';
+    var lvl3URL = '@(Url.Action("LVL3","ActividadCosteo"))';
+
+    function deleteRequest(id,name) {
+        var options = {
+            title: "@Strings.getMSG("ActividadCosteoIndex008")" + name +" @Strings.getMSG("ActividadCosteoIndex011")",
+            action: "deleteConfirmed(" + id + ")"
+        }
+        confirmationModal.initModal(options);
+    }
+
+    function deleteConfirmed(id) {
+        executePost(
+                deleteURL + "/" +id,
+                null,
+                "deleteSuccess(" + id + ")",
+                "deleteError()"
+            );
+    }
+
+    $(document).ready(function () {
+        menuModal.setTitle('Sub Actividades @ac.nb_area_costeo');
+        initTables("#menuModal");
+    });
+
+    function deleteSuccess(id) {
+        $(".RL2" + id).remove();
+    }
+
+    function deleteError() {
+        toastr.error("@Strings.getMSG("ActividadCosteoIndex009")");
+    }
+</script>
+
+
+
+<input type="button" class="btn btn-default" value="@Strings.getMSG("Agregar")" onclick="menuModal.bodyLoad(createURL)" />
+<br /><br />
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Strings.getMSG("Clave")
+            </th>
+            <th>
+                @Strings.getMSG("Nombre")
+            </th>
+            <th width="90px"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="RL2@(item.id_area_costeo_n2)">
+                <td>
+                    @item.cl_area_costeo_n2
+                </td>
+                <td>
+                    @item.nb_area_costeo_n2
+                </td>
+                <td>
+                    <center>
+                        <a onclick="menuModal.bodyLoad(editURL + '/@item.id_area_costeo_n2')">
+                            <i class="fa fa-pencil" title="@Strings.getMSG("Editar")"></i>
+                        </a>
+                        |
+                        <a onclick="deleteRequest(@item.id_area_costeo_n2,'@item.cl_area_costeo_n2 - @item.nb_area_costeo_n2')">
+                            <i class="fa fa-trash" title="@Strings.getMSG("Borrar")"></i>
+                        </a>
+                        |
+                        <a onclick="menuModal.bodyLoad(lvl3URL  + '/@item.id_area_costeo_n2')">
+                            <i class="fa fa-sitemap" title="@Strings.getMSG("Detalle")"></i>
+                        </a>
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<SCIRA.Models.k_objeto>
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#contenedor6");
+        $("#ind6").removeClass("IndicatorLoader");
+    });
+</script>
+
+<h4>@Strings.getMSG("ReporteIyPIndex021")</h4>
+
+<p>
+    <input type="button" onclick="createOtros()" class="btn btn-default btn-sm" value="@Strings.getMSG("Agregar")" />
+</p>
+
+<table class="results table table-bordered table-striped table-hover table-responsive">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("lyPCreate048")</th>
+            <th class="search">@Strings.getMSG("Entidad")</th>
+            <th class="search">@Strings.getMSG("SubProcesoCreate018")</th>
+            <th class="search">@Strings.getMSG("lyPSeguimientosIndex002")</th>
+            <th width="80px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.nb_objeto</td>
+                <td>@item.c_entidad.cl_entidad - @item.c_entidad.nb_entidad</td>
+                <td>@item.ds_objeto</td>
+                <td>@(item.fe_alta.HasValue ? item.fe_alta.Value.ToString("dd/MM/yyyy") : "")</td>
+                <td>
+                    <center>
+                        <a href="#" onclick="editOtros(@item.id_objeto)">
+                            <i class="fa fa-edit" title="@Strings.getMSG("Editar")" style="font-size: 16px;"></i>
+                        </a> |
+                        <a href="#" onclick="indexIncidencias(6,@item.id_objeto)">
+                            <i class="fa fa-exclamation-triangle" title="@Strings.getMSG("Incidencias") (@item.k_incidencia.Count())" style="font-size: 16px;"></i>
+                        </a> |
+                        <a href="#" onclick="deleteOtros(@item.id_objeto)">
+                            <i class="fa fa-trash" title="@Strings.getMSG("Borrar")" style="font-size: 16px;"></i>
+                        </a>
+                    </center>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

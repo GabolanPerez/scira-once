@@ -1,0 +1,33 @@
+{
+  "RepName": "Reporte de Planes de Remediación Concluidos",
+  "ColNames": [
+    "Origen Incidencia",
+    "Nombre del objeto origen",
+    "ID",
+    "Nombre",
+    "Plan",
+    "Área",
+    "Conclusión",
+    "Fecha de Alta",
+    "Fecha estimada de Implantación",
+    "Fecha real de Solución"
+  ],
+  "Rows": [
+    [
+      "Oficios",
+      "1",
+      "2091",
+      "Prueba",
+      "Prueba",
+      "13 - Recuperación",
+      "Prueba para verificar la funcionalidad ed",
+      "13/06/2022 0:00:00",
+      "13/06/2022 0:00:00",
+      "15/06/2022 0:00:00"
+    ]
+  ],
+  "NoCols": 10,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

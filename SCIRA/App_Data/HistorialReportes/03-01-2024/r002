@@ -1,0 +1,37 @@
+{
+  "RepName": "Reporte de Benchmark",
+  "ColNames": [
+    "Entidad",
+    "Responsable Entidad",
+    "Macro Proceso",
+    "Responsable Macro Proceso",
+    "Proceso",
+    "ResponsableProceso",
+    "Sub Proceso",
+    "ResponsableSub Proceso",
+    "Macro Proceso Benchmark",
+    "Proceso Benchmark",
+    "Sub Proceso Benchmark",
+    "Evento de Riesgo"
+  ],
+  "Rows": [
+    [
+      "99 - XX",
+      "Jorge Rodriguez",
+      "MP01.01 - Proceso de Entrevista Personal con el Cliente",
+      "Jorge Rodriguez",
+      "P01.01.0043 - Proceso de Entrevista",
+      "Jorge Rodriguez",
+      "SP00010000. - PProceso para la Emisión o Actualización de Documentos",
+      "Israel Perez",
+      "A01 - Proceso de Entrevista Personal con el Cliente",
+      "P01 - Contratación y vigilancia de productos",
+      "SP0010 - Coberturas Contables ",
+      "0045 - Deficiencias en el expediente de cobertura."
+    ]
+  ],
+  "NoCols": 12,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

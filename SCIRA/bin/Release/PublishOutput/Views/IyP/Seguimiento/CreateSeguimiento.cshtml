@@ -1,0 +1,114 @@
+﻿@model SCIRA.Models.r_seguimiento
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#ind@(ViewBag.Origen)").removeClass("IndicatorLoader");
+        activateDate("#contenedor@(ViewBag.Origen)");
+    });
+</script>
+
+
+@if (ViewBag.Origen == 1) //En caso de Venir desde un Oficio
+{
+    <a href="#" onclick="indexOficio()">@Strings.getMSG("Menu127")</a>
+    <span> >> Oficio: @ViewBag.nb_objeto</span>
+    <a href="#" onclick="indexIncidencias(1,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(1,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+    <span> >> @Strings.getMSG("lyPCreate043") @ViewBag.nb_plan</span>
+    <a href="#" onclick="indexSeguimiento(1,@ViewBag.id_plan);"> >> @Strings.getMSG("lyPSeguimientosIndex001")</a>
+}
+@if (ViewBag.Origen == 2) //En caso de Venir desde una Auditoría Externa
+{
+    <a href="#" onclick="indexAuExt()">@Strings.getMSG("lyPIndex001")</a>
+    <span> >> @Strings.getMSG("lyPCreate030") @ViewBag.nb_objeto </span>
+    <a href="#" onclick="indexIncidencias(2,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(2,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+    <span> >> @Strings.getMSG("lyPCreate043") @ViewBag.nb_plan</span>
+    <a href="#" onclick="indexSeguimiento(2,@ViewBag.id_plan);"> >> @Strings.getMSG("lyPSeguimientosIndex001")</a>
+}
+@if (ViewBag.Origen == 3) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexAuInt()">@Strings.getMSG("lyPIndex002")</a>
+    <span> >> @Strings.getMSG("lyPCreate030") @ViewBag.nb_objeto </span>
+    <a href="#" onclick="indexIncidencias(3,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(3,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+    <span> >> @Strings.getMSG("lyPCreate043") @ViewBag.nb_plan</span>
+    <a href="#" onclick="indexSeguimiento(3,@ViewBag.id_plan);"> >> @Strings.getMSG("lyPSeguimientosIndex001")</a>
+}
+@if (ViewBag.Origen == 4) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexCert()">@Strings.getMSG("lyPCertificacionesIndex001")</a>
+    <span> >> @Strings.getMSG("lyPCreate031") @ViewBag.nb_objeto </span>
+    <a href="#" onclick="indexIncidencias(4,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(4,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+    <span> >> @Strings.getMSG("lyPCreate043") @ViewBag.nb_plan</span>
+    <a href="#" onclick="indexSeguimiento(4,@ViewBag.id_plan);"> >> @Strings.getMSG("lyPSeguimientosIndex001")</a>
+}
+@if (ViewBag.Origen == 5) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexMRyC()">@Strings.getMSG("Menu077")</a>
+    <span> >> @Strings.getMSG("lyPCreate032") @ViewBag.nb_objeto </span>
+    <a href="#" onclick="indexIncidencias(5,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(5,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+    <span> >> @Strings.getMSG("lyPCreate043") @ViewBag.nb_plan</span>
+    <a href="#" onclick="indexSeguimiento(5,@ViewBag.id_plan);"> >> @Strings.getMSG("lyPSeguimientosIndex001")</a>
+}
+@if (ViewBag.Origen == 6) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexOtros()">@Strings.getMSG("ReporteIyPIndex021")</a>
+    <span> >> @Strings.getMSG("lyPCreate033") @ViewBag.nb_objeto </span>
+    <a href="#" onclick="indexIncidencias(6,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(6,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+    <span> >> @Strings.getMSG("lyPCreate043") @ViewBag.nb_plan</span>
+    <a href="#" onclick="indexSeguimiento(6,@ViewBag.id_plan);"> >> @Strings.getMSG("lyPSeguimientosIndex001")</a>
+}
+
+
+<h4>@Strings.getMSG("lyPSeguimientoCreate001")</h4>
+
+<form id="form@(ViewBag.Origen)">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.id_plan)
+
+    <input type="text" name="origen" value="@ViewBag.Origen" hidden />
+    <input type="text" name="nb_objeto" value="@ViewBag.nb_objeto" hidden />
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPSeguimientoCreate002")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                @Html.TextAreaFor(model => model.observaciones, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atención"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("lyPSeguimientoCreate003") })
+                @Html.ValidationMessageFor(model => model.observaciones, "", new { @class = "text-danger" })
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPSeguimientosIndex002")</label>
+            <div class="col-xs-3 col-md-3">
+                <div class='input-group date datetimepicker' id='datetimepicker1'>
+                    <input class="form-control" disabled>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-6 col-md-offset-9 col-md-3">
+                <input type="button" value="@Strings.getMSG("Guardar")" class="btn btn-primary" onclick="createSeguimientoPost(@ViewBag.Origen)" />
+                <input type="button" class="btn btn-default" onclick="indexSeguimiento(@ViewBag.Origen,@ViewBag.id_plan);" value="@Strings.getMSG("Cancelar")" />
+            </div>
+        </div>
+    </div>
+</form>

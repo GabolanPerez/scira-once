@@ -1,0 +1,229 @@
+﻿@model SCIRA.Models.k_plan
+@using SCIRA.Models
+@using SCIRA.Utilidades
+@{
+    var db = new SICIEntities();
+
+    var incidencia = db.k_incidencia.Find(Model.id_incidencia);
+}
+
+<script src="~/Scripts/sharedScripts.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#ind@(ViewBag.Origen)").removeClass("IndicatorLoader");
+        activateDate("#contenedor@(ViewBag.Origen)");
+    });
+</script>
+
+
+@if (ViewBag.Origen == 1) //En caso de Venir desde un Oficio
+{
+    <a href="#" onclick="indexOficio()">@Strings.getMSG("Menu127")</a>
+    <span> >> @Strings.getMSG("lyPCreate029") @ViewBag.nb_objeto</span>
+    <a href="#" onclick="indexIncidencias(1,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(1,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+}
+@if (ViewBag.Origen == 2) //En caso de Venir desde una Auditoría Externa
+{
+    <a href="#" onclick="indexAuExt()">@Strings.getMSG("lyPIndex001")</a>
+    <span> >> @Strings.getMSG("lyPCreate030") @ViewBag.nb_objeto </span>
+    <a href="#" onclick="indexIncidencias(2,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(2,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+}
+@if (ViewBag.Origen == 3) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexAuInt()">@Strings.getMSG("lyPIndex002")</a>
+    <span> >> @Strings.getMSG("lyPCreate030") @ViewBag.nb_objeto </span>
+    <a href="#" onclick="indexIncidencias(3,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(3,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+}
+@if (ViewBag.Origen == 4) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexCert()">@Strings.getMSG("lyPCertificacionesIndex001")</a>
+    <span> >> @Strings.getMSG("lyPCreate031") @ViewBag.nb_objeto </span>
+    <a href="#" onclick="indexIncidencias(4,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(4,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+}
+@if (ViewBag.Origen == 5) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexMRyC()">@Strings.getMSG("Menu077")</a>
+    <span> >> @Strings.getMSG("lyPCreate032") @ViewBag.nb_objeto </span>
+    <a href="#" onclick="indexIncidencias(5,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(5,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+}
+@if (ViewBag.Origen == 6) //En caso de Venir desde una Auditoría Interna
+{
+    <a href="#" onclick="indexOtros()">@Strings.getMSG("ReporteIyPIndex021")</a>
+    <span> >> @Strings.getMSG("lyPCreate033") @ViewBag.nb_objeto </span>
+    <a href="#" onclick="indexIncidencias(6,@ViewBag.id_objeto)"> >> @Strings.getMSG("Incidencias")</a>
+    <span> >> @Strings.getMSG("lyPCreate040") @ViewBag.id_incidencia</span>
+    <a href="#" onclick="indexPlanes(6,@ViewBag.id_incidencia)"> >> @Strings.getMSG("Menu128")</a>
+}
+
+
+<h4>@Strings.getMSG("lyPCreate042")</h4>
+
+<form id="form@(ViewBag.Origen)">
+    @Html.AntiForgeryToken()
+    <input type="text" name="id" hidden value="@Model.id_plan">
+    <input type="text" name="origen" hidden value="@ViewBag.Origen">
+</form>
+
+<div class="row">
+    <div class="form-group">
+        <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPlanesdeRemediacionCreate002")</label>
+        <div class="col-xs-3 col-md-3">
+            <textarea class="form-control" rows="5" disabled="">@(Model.ds_plan)
+            </textarea>
+        </div>
+
+        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("RiesgoCreate074")</label>
+        <div class="col-xs-3 col-md-3">
+            <textarea class="form-control" rows="5" disabled="">@incidencia.ds_incidencia
+            </textarea>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="form-group">
+        <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPlanesdeRemediacionCreate004")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" class="form-control" value="@Model.nb_plan" readonly>
+        </div>
+
+        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPlanesdeRemediacionIndex002")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" class="form-control" value="@Model.id_plan" readonly>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="form-group">
+        <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("RevisionControlCreate044")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" class="form-control" value="@Model.c_area.nb_area" readonly>
+        </div>
+
+        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("BDEIIndex003")</label>
+        <div class="col-xs-3 col-md-3">
+            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                <input class="form-control" value="@(Model.fe_alta.HasValue ? Model.fe_alta.Value.ToString("dd/MM/yyyy") : "")" readonly>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group">
+        <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPlanesdeRemediacionCreate008")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" class="form-control" value="@Model.c_usuario.nb_usuario" readonly>
+        </div>
+
+        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPlanesdeRemediacionCreate011")</label>
+        <div class="col-xs-3 col-md-3">
+            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                <input class="form-control" value="@(Model.fe_estimada_implantacion.HasValue ? Model.fe_estimada_implantacion.Value.ToString("dd/MM/yyyy") : "")" readonly>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group">
+        <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPlanesdeRemediacionCreate010")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" class="form-control" value="@Model.c_usuario1.nb_usuario" readonly>
+        </div>
+
+        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPlanesdeRemediacionCreate013")</label>
+        <div class="col-xs-3 col-md-3">
+            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                <input class="form-control" value="@(Model.fe_real_solucion.HasValue ? Model.fe_real_solucion.Value.ToString("dd/MM/yyyy") : "")" readonly>
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-6 col-md-offset-9 col-md-3">
+            <input type="button" value="@Strings.getMSG("Borrar")" class="btn btn-primary" onclick="deletePlanPost(@ViewBag.Origen)" />
+            <input type="button" class="btn btn-default" onclick="indexPlanes(@ViewBag.Origen,@ViewBag.id_incidencia);" value="@Strings.getMSG("Cancelar")" />
+        </div>
+    </div>
+</div>
+
+
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("RevisionControlRevisiones006")</th>
+            <th>@Strings.getMSG("BDEIIndex003")</th>
+            <th width="80px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var file in Model.c_archivo)
+        {
+            <tr id="fr@(file.id_archivo)">
+                <td>@file.nb_archivo</td>
+                <td>@file.fe_alta.Value.ToString("dd/MM/yyyy hh:mm:ss")</td>
+                <td>
+                    <center>
+                        <a href="@Url.Action("Download","Archivos", new { id = file.id_archivo})"><i class="fa fa-download" title="@Strings.getMSG("Descargar")"></i></a>|
+                        <a onclick="deleteFile(@file.id_archivo,'@file.nb_archivo')"><i class="fa fa-trash" title="@Strings.getMSG("Borrar")"></i></a>
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function deleteFile(id,nb_archivo) {
+        confirmationModal.initModal({
+            title: '@Strings.getMSG("AuditoriaEditSeguimientoObservaciones007")' + nb_archivo + '?',
+            action: 'deleteFileConfirm('+id+')'
+        });
+    }
+
+    function deleteFileConfirm(id) {
+        //eliminar archivo con ajax
+        $.ajax({
+            dataType: "html",
+            type: "post",
+            url: '@(Url.Action("DeleteByUser","Archivos"))',
+            data: { id },
+            success: function (data) {
+                if (data == id) {
+                    toastr.success("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones008")");
+                    //eliminar fila
+                    $("#fr" + id).remove();
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                toastr.error("@Strings.getMSG("AvisoError003")");
+            }
+        });
+    }
+</script>

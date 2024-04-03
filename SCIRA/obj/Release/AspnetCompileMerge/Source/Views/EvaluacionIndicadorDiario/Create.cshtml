@@ -1,0 +1,293 @@
+﻿@model IEnumerable<SCIRA.Models.k_evaluacion_diaria>
+@using SCIRA.Models
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Evaluar";
+
+    c_indicador_diario indicador = ViewBag.indicador;
+}
+
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+<h2>@Strings.getMSG("EvaluacionIndicadorDiarioCreate003")</h2>
+<h3>@indicador.nb_indicador_diario para el grupo @SCIRA.Utilidades.Utilidades.getRuta(indicador.c_contenido_grupo)</h3>
+
+@using (Html.BeginForm("Create", null, FormMethod.Post, new {  @id = "Form" }))
+{
+    @Html.AntiForgeryToken()
+
+    <ul class="nav nav-tabs">
+        <li><a href="#generales" data-toggle="tab"><h4>@Strings.getMSG("UsuarioCreate011")</h4></a></li>
+        <li class="active"><a href="#evaluacion" id="eval" data-toggle="tab"><h4>@Strings.getMSG("EvaluacionIndicadorDiarioCreate002")</h4></a></li>
+    </ul>
+
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane" id="generales">
+            <br />
+
+            <div class="form-horizontal well">
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ControlEdit001")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <input class="form-control" type="text" value="@indicador.nb_indicador_diario" disabled="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <textarea rows="3" disabled="" class="form-control" cols="20">@indicador.ds_indicador_diario</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("IndicadorCreate003")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <textarea rows="3" disabled="" class="form-control" cols="20">@indicador.ds_numerador_diario</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("IndicadorCreate004")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <textarea rows="3" disabled="" class="form-control" cols="20">@indicador.ds_denominador</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("IndicadorCreate012")</label>
+                        <div class="col-xs-3 col-md-2">
+                            <input class="form-control" type="text" value="@indicador.umbral000i" disabled="">
+                        </div>
+                        <div class="col-xs-0 col-md-1"></div>
+                        <div class="col-xs-3 col-md-2">
+                            <input class="form-control" type="text" value="@indicador.umbral000f" disabled="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("IndicadorCreate015")</label>
+                        <div class="col-xs-3 col-md-2">
+                            <input class="form-control" type="text" value="@indicador.umbral050i" disabled="">
+                        </div>
+                        <div class="col-xs-0 col-md-1"></div>
+                        <div class="col-xs-3 col-md-2">
+                            <input class="form-control" type="text" value="@indicador.umbral050f" disabled="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("IndicadorCreate018")</label>
+                        <div class="col-xs-3 col-md-2">
+                            <input class="form-control" type="text" value="@indicador.umbral075i" disabled="">
+                        </div>
+                        <div class="col-xs-0 col-md-1"></div>
+                        <div class="col-xs-3 col-md-2">
+                            <input class="form-control" type="text" value="@indicador.umbral075f" disabled="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("IndicadorCreate021")</label>
+                        <div class="col-xs-3 col-md-2">
+                            <input class="form-control" type="text" value="@indicador.umbral100i" disabled="">
+                        </div>
+                        <div class="col-xs-0 col-md-1"></div>
+                        <div class="col-xs-3 col-md-2">
+                            <input class="form-control" type="text" value="@indicador.umbral100f" disabled="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ContenidoGrupoCreate004")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <input class="form-control" type="text" value="@SCIRA.Utilidades.Utilidades.getRuta(indicador.c_contenido_grupo)" disabled="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade active in" id="evaluacion">
+            <br />
+            <div class="form-horizontal well">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                @foreach (var eval in Model)
+                {
+                    var contenido = eval.c_contenido_grupo;
+
+                    int numerador, denominador;
+
+                    try
+                    {
+                        numerador = (int)eval.numerador;
+                    }
+                    catch
+                    {
+                        numerador = 0;
+                    }
+                    try
+                    {
+                        denominador = (int)eval.denominador;
+                    }
+                    catch
+                    {
+                        denominador = 0;
+                    }
+
+                    <h4>@contenido.cl_contenido_grupo</h4>
+
+                    <input type="hidden" name="id_eval[]" value="@eval.id_evaluacion_diaria" class="eval" />
+
+                    <div class="row">
+                        <div class="form-group has-error">
+                            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorCreate007")</label>
+                            <div class="col-xs-6 col-md-5">
+                                <div class="input-group">
+                                    <input type="number" class="form-control num S1 numerador" value="@(numerador)" max="214748" name="numerador[]" id="num@(eval.id_evaluacion_diaria)" />
+
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("EvaluacionIndicadorCreate002")">
+                                            <i class="glyphicon glyphicon-question-sign"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <span class="text-danger field-validation-error">
+                                    <span id="errorNum-@eval.id_evaluacion_diaria"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group has-error">
+                            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorCreate008")</label>
+                            <div class="col-xs-6 col-md-5">
+                                <div class="input-group">
+                                    <input type="number" class="form-control num S1 denominador" value="@(denominador)" max="214748" name="denominador[]" id="den@(eval.id_evaluacion_diaria)" />
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("EvaluacionIndicadorCreate003")">
+                                            <i class="glyphicon glyphicon-question-sign"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <span class="text-danger field-validation-error">
+                                    <span id="errorDenum-@eval.id_evaluacion_diaria"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <span id="error@(eval.id_evaluacion_diaria)" class="text-danger"></span>
+                    </div>
+
+                    <hr />
+                }
+
+
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                            <input type="button" value="@Strings.getMSG("Guardar")" class="btn btn-primary submit" id="btnSubmit" onclick="checkValues()" />
+                            @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<!-- #region Scripts -->
+
+<script>
+    function checkValues() {
+        var valid = true;
+
+        $(".eval").each(function () {
+            $this = $(this);
+
+            var message = "";
+
+            var id = $this.val();
+
+            var num = parseInt($("#num" + id).val());
+            var den = parseInt($("#den" + id).val());
+
+            if (isNaN(num)) {
+                $("#num" + id).val(0);
+                num = 0;
+            } 
+
+            if (isNaN(den)) {
+                $("#den" + id).val(0);
+                den = 0;
+            }
+
+            if (den == 0) {
+                message = "@Strings.getMSG("EvaluacionIndicadorDiarioCreate001")";
+            } else if(num > den){
+                message = "@Strings.getMSG("EvaluacionIndicadorCreate004")";
+            }
+
+            if (isNaN(num)) {
+                $("#num" + id).val(0);
+            }
+
+            //toastr.info("den " + id + ": " + den);
+            //toastr.info("num " + id + ": " + num);
+
+            if (message != "") {
+                $("#error" + id).text(message);
+                valid = false;
+            } else {
+                $("#error" + id).text("");
+            }
+        });
+
+        if (valid) {
+            $("#Form").submit();
+        }
+    }
+
+    $(document).ready(function () {
+
+        $('.num').on('keyup', function (e) {
+            var num = $(this).val();
+
+            if (num > 214748) {
+                $(this).val(214748);
+            }
+            return;
+        });
+    });
+</script>
+
+
+<!-- #endregion -->

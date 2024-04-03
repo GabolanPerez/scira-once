@@ -1,0 +1,59 @@
+﻿@model IEnumerable<SCIRA.Models.k_benchmarck>
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Reporte Benchmark";
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+}
+
+<h2>@Strings.getMSG("ReporteBenchmark001")</h2>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("Entidad")</th>
+            <th class="search">@Strings.getMSG("ReporteEstructuraIndex001")</th>
+            <th class="search">@Strings.getMSG("MP")</th>
+            <th class="search">@Strings.getMSG("ReporteEstructuraIndex002")</th>
+            <th class="search">@Strings.getMSG("P")</th>
+            <th class="search">@Strings.getMSG("ReporteEstructuraIndex003")</th>
+            <th class="search">@Strings.getMSG("SP")</th>
+            <th class="search">@Strings.getMSG("RiesgoCreate037")</th>
+            <th class="search">@Strings.getMSG("ActividadIndex001")</th>
+            <th class="search">@Strings.getMSG("ProcesoBenchmarkIndex001")</th>
+            <th class="search">@Strings.getMSG("SubProcesoBenchmarkIndex001")</th>
+            <th class="search">@Strings.getMSG("EventoRiesgoIndex001")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var sp = item.c_sub_proceso;
+            var pr = sp.c_proceso;
+            var mp = pr.c_macro_proceso;
+            var en = mp.c_entidad;
+            var respPr = pr.c_usuario;
+            var respMp = mp.c_usuario;
+            var respEn = en.c_usuario;
+            var respSp = sp.c_usuario;
+            var evB = item.c_evento_riesgo;
+            var spB = evB.c_sub_proceso_benchmark;
+            var prB = spB.c_proceso_benchmark;
+            var mpB = prB.c_actividad;
+
+            <tr>
+                <td>@( en.cl_entidad + " - " + en.nb_entidad)</td>
+                <td>@( respEn.nb_usuario)</td>
+                <td>@( mp.cl_macro_proceso + " - " + mp.nb_macro_proceso)</td>
+                <td>@( respMp.nb_usuario)</td>
+                <td>@( pr.cl_proceso + " - " + pr.nb_proceso)</td>
+                <td>@( respPr.nb_usuario)</td>
+                <td>@( sp.cl_sub_proceso  + " - " + sp.nb_sub_proceso)</td>
+                <td>@( respSp.nb_usuario)</td>
+                <td>@( mpB.cl_actividad  + " - " + mp.nb_macro_proceso)</td>
+                <td>@( prB.cl_proceso_benchmark + " - " + prB.nb_proceso_benchmark)</td>
+                <td>@( spB.cl_sub_proceso_benchmark + " - " + spB.nb_sub_proceso_benchmark)</td>
+                <td>@( evB.cl_evento_riesgo + " - " + evB.nb_evento_riesgo)</td>
+            </tr>
+        }
+    </tbody>
+</table>

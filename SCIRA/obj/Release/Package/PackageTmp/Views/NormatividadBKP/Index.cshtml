@@ -1,0 +1,62 @@
+﻿@model IEnumerable<SCIRA.Models.c_normatividad>
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Normatividades";
+}
+
+<h2>Normatividades</h2>
+
+<p>
+    @Html.ActionLink(Strings.getMSG("Agregar"), "Create", null, new { @class = "btn btn-default btn-sm" })
+</p>
+
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Clave</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Fecha de publicación</th>
+            <th>Descripción de Sectores</th>
+            <th>Tipo de Normatividad</th>
+            <th width="90"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cl_normatividad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nb_normatividad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ds_normatividad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fe_publicacion_dof)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ds_sectores)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.c_tipo_normatividad.cl_tipo_normatividad)
+                </td>
+                <td>
+                    <center>
+                        <a href="@Url.Action("Edit", new { id = item.id_normatividad })">
+                            <i class="glyphicon glyphicon-pencil" title="Editar"></i>
+                        </a> |
+                        <a href="@Url.Action("Delete", new { id = item.id_normatividad })">
+                            <i class="glyphicon glyphicon-trash" title="Borrar"></i>
+                        </a>
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

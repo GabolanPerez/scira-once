@@ -1,0 +1,67 @@
+.rrRow{
+    display: block;
+    width: 100%;
+    height: 115px;
+    margin: 2% 0 2% 0;
+    text-align:center;
+}
+
+.cardRR {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    border-style: solid;
+    border-width: 10px 30px 10px 30px;
+    border-radius: 5px;
+    height: 90px;
+    float: left;
+}
+
+.cardRR1 {
+    margin: 0% 5% 0% 10%;
+    width: 20%;
+}
+
+.cardRR2 {
+    width: 35%;
+}
+
+.cardRR3 {
+    width: 16%;
+}
+
+.betweenCard{
+	display: inline-block;
+	margin: 0 0 3% 0;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 15px;
+	width:5%;
+	height: 90px;
+	float: left;
+}
+
+.titleRR {
+    display: block;
+    height: 40px;
+    margin: 15px 0 15px 0;
+    color: white;
+    font-size: 25px;
+    border-style: solid;
+    border-radius: 5px;
+    text-align: center;
+    clear: both;
+}
+
+.subtitleRR {
+    display: block;
+    height: 30px;
+    margin: 15px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    clear: both;
+}

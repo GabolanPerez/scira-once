@@ -1,0 +1,34 @@
+spring.jpa.database=mysql
+spring.jpa.properties.hibernate.jdbc.time_zone=UTC
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://192.168.39.142:3306/multipicking
+spring.datasource.username=multipicking
+spring.datasource.password=#multipicking
+#spring.datasource.url=jdbc:mysql://localhost:33060/almacen
+#spring.datasource.username=almacen
+#spring.datasource.password=almacen
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+server.port=8090
+
+#PARÁMETROS SAP
+usr_api=AL735225
+psw_api=Oper@2022
+
+#GET TOKEN
+#urlGetToken=http://tltndre1xvci.nadro.com.mx:8000/sap/opu/odata/sap/ZEWM_VISIONPICKING_SRV/GetToken?X-CSRF-Token=fetch
+urlGetToken=http://tltndre1evci.nadro.com.mx:8022/sap/opu/odata/sap/ZEWM_VISIONPICKING_SRV/GetToken?X-CSRF-Token=fetch&sap-client=500
+
+#SIGUIENTE CARRITO
+#nextwarehouseorder=http://tltndre1xvci.nadro.com.mx:8000/sap/opu/odata/sap/ZEWM_VISIONPICKING_SRV/NextWarehouseOrder?Lgnum=[lgnum]&Rsrc=[rsrc]
+nextwarehouseorder=http://tltndre1evci.nadro.com.mx:8022/sap/opu/odata/sap/ZEWM_VISIONPICKING_SRV/NextWarehouseOrder?Lgnum=[lgnum]&Rsrc=[rsrc]&sap-client=500
+#GET HUNIT
+getwhorderset=http://tltndre1xvci.nadro.com.mx:8000/sap/opu/odata/sap/ZEWM_VISIONPICKING_SRV/WhOrderSet(Lgnum=[lgnum],Who=[who])?$expand=HEADERTOHU&$format=json
+#POST HUNIT
+postwhorderset=http://tltndre1xvci.nadro.com.mx:8000/sap/opu/odata/sap/ZEWM_VISIONPICKING_SRV/WhOrderSet(Lgnum='3060',Who=[who])?$expand=HEADERTOHU&$format=json
+
+#GET
+
+#CIERRA CARRITO
+closewhorder=http://tltndre1xvci.nadro.com.mx:8000/sap/opu/odata/sap/ZEWM_VISIONPICKING_SRV/CloseWhOrder?Who=[who]&Lgnum=[lgnum]
+

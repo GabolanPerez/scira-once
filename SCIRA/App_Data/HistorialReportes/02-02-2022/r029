@@ -1,0 +1,33 @@
+{
+  "RepName": "Reporte de Sub Procesos - Normatividad: CNBV",
+  "ColNames": [
+    "Obligaciones",
+    "Obligaciones",
+    "Art",
+    "Artículos",
+    "¿Tiene Ficha?",
+    "Sub Procesos Ligados"
+  ],
+  "Rows": [
+    [
+      "01",
+      "CNBV",
+      "Art - 01",
+      "Detalle",
+      "No",
+      "N/A"
+    ],
+    [
+      "01",
+      "CNBV",
+      "Art - 02",
+      "Detalle",
+      "No",
+      "N/A"
+    ]
+  ],
+  "NoCols": 5,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

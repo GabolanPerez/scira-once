@@ -1,0 +1,138 @@
+﻿@using SCIRA.Models
+@using SCIRA.Seguridad
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Evaluación de Indicadores Diarios";
+
+
+    //obtener lista de indicadores evaluados e indicadores pendientes
+    List<c_indicador_diario> pendientes = (List<c_indicador_diario>)ViewBag.pendientes;
+    List<c_indicador_diario> evaluados = (List<c_indicador_diario>)ViewBag.evaluados;
+
+}
+
+<h2>@Strings.getMSG("Menu083")</h2>
+
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#pes1" data-toggle="tab"><h4>@Strings.getMSG("EvaluacionIndicadorDiarioIndex001")</h4></a></li>
+    <li><a href="#pes2" data-toggle="tab"><h4>@Strings.getMSG("EvaluacionIndicadorDiarioIndex002")</h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active in" id="pes1">
+        <br />
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="search">@Strings.getMSG("Clave")</th>
+                    <th class="search">@Strings.getMSG("Nombre")</th>
+                    <th>@Strings.getMSG("SubProcesoCreate018")</th>
+                    <th>@Strings.getMSG("IndicadorCreate004")</th>
+                    <th>@Strings.getMSG("IndicadorCreate003")</th>
+                    <th>@Strings.getMSG("ContenidoGrupoCreate004")</th>
+                    <th width="70"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in pendientes)
+                {
+                    <tr>
+                        <td>
+                            @item.cl_indicador_diario
+                        </td>
+                        <td>
+                            @item.nb_indicador_diario
+                        </td>
+                        <td>
+                            @item.ds_indicador_diario
+                        </td>
+                        <td>
+                            @item.ds_denominador
+                        </td>
+                        <td>
+                            @item.ds_numerador_diario
+                        </td>
+                        <td>
+                            @SCIRA.Utilidades.Utilidades.getRuta(item.c_contenido_grupo)
+                        </td>
+                        <td width="60">
+                            <center>
+                                <a href="@Url.Action("Create", new { id = item.id_indicador_diario})">
+                                    <i class="fa-check fa" title="@Strings.getMSG("Evaluar")"></i>
+                                </a>
+                            </center>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="pes2">
+        <br />
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="search">@Strings.getMSG("Clave")</th>
+                    <th class="search">@Strings.getMSG("Nombre")</th>
+                    <th>@Strings.getMSG("SubProcesoCreate018")</th>
+                    <th>@Strings.getMSG("IndicadorCreate004")</th>
+                    <th>@Strings.getMSG("IndicadorCreate003")</th>
+                    <th>@Strings.getMSG("ContenidoGrupoCreate004")</th>
+                    <th width="70"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in evaluados)
+                {
+                    <tr>
+                        <td>
+                            @item.cl_indicador_diario
+                        </td>
+                        <td>
+                            @item.nb_indicador_diario
+                        </td>
+                        <td>
+                            @item.ds_indicador_diario
+                        </td>
+                        <td>
+                            @item.ds_denominador
+                        </td>
+                        <td>
+                            @item.ds_numerador_diario
+                        </td>
+                        <td>
+                            @SCIRA.Utilidades.Utilidades.getRuta(item.c_contenido_grupo)
+                        </td>
+                        <td width="60">
+                            <center>
+                                <a href="@Url.Action("Create", new { id = item.id_indicador_diario})">
+                                    <i class="fa-pencil fa" title="@Strings.getMSG("Editar")"></i>
+                                </a>
+                                |
+                                <a href=#null onclick="detailsEval(@item.id_indicador_diario)">
+                                    <i class="fa-id-card fa" title="@Strings.getMSG("Resultados de evaluaciones")"></i>
+                                </a>
+                            </center>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- #region Scripts -->
+<script>
+    function detailsEval(id) {
+        menuModal.initModal({
+            title: 'Detalles la evaluación',
+            size: 'lg',
+            show: true,
+            loadUrl: '@Url.Action("evalDetails","EvaluacionIndicadorDiario")/'+id
+        });
+    }
+</script>
+<!-- #endregion -->

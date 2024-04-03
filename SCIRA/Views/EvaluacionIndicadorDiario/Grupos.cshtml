@@ -1,0 +1,108 @@
+﻿@model IEnumerable < SCIRA.Models.c_contenido_grupo >
+@{
+    bool fcf;
+    int Contador;
+    List<string> Claves;
+    List<int?> IDs;
+
+    try
+    {
+        fcf = ViewBag.fcf;
+    }
+    catch
+    {
+        fcf = false;
+    }
+
+    try
+    {
+        Contador = ViewBag.Contador;
+    }
+    catch
+    {
+        Contador = 0;
+    }
+
+    try
+    {
+        Claves = ViewBag.Claves;
+    }
+    catch
+    {
+        Claves = new List<string>();
+    }
+
+    try
+    {
+        IDs = ViewBag.IDs;
+    }
+    catch
+    {
+        IDs = new List<int?>();
+    }
+}
+    <script src="~/Scripts/sharedScripts.js"></script>
+    <br />
+
+    <h4>
+        @if (Contador != 0)
+        {
+            @("Contenidos para ")
+            for (int i = Contador; i > 0; i--)
+            {
+                <span><a href=#null onclick="loadContent(@IDs[i - 1])"> @Claves[i - 1] </a> >> </span>
+            }
+        }
+        else
+        {
+            @:Grupos
+        }
+    </h4>
+
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">Clave</th>
+            <th class="search">Nombre</th>
+            <th width="100"></th>
+        </tr>
+    </thead>
+        
+        
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href=#null onclick='loadContent(@item.id_contenido_grupo)'>
+                        @item.cl_contenido_grupo
+                    </a> 
+                </td>
+                <td>
+                    <a href=#null onclick='loadContent(@item.id_contenido_grupo)'>
+                        @item.ds_contenido_grupo
+                    </a>
+                    <input type="text" hidden id="@(item.id_contenido_grupo)g" value="@item.cl_contenido_grupo">
+                </td>
+                <td>
+                    <center>
+                        <a href="#" onclick="setGroup(@item.id_contenido_grupo)">
+                            <i class="glyphicon glyphicon-pushpin" title="Seleccionar grupo"></i>
+                        </a>
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    @if (fcf)
+    {
+        @:$(document).ready(function () {
+        @:  initTables("#contenido");
+        @:});
+    }
+
+</script>

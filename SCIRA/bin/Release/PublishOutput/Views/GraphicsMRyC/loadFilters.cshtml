@@ -1,0 +1,27 @@
+﻿@using SCIRA.Utilidades
+<script>
+    $(document).ready(function () {
+
+
+
+
+
+        //datos para la gráfica de criticidades
+        data0 = @Html.Raw(ViewBag.d0)
+        data1 = @Html.Raw(ViewBag.d1)
+        data2 = @Html.Raw(ViewBag.d2)
+        data3 = @Html.Raw(ViewBag.d3)
+
+        gr0.destroy();
+        gr0 = buildChart(data0, tg0, 'MRyC 2', g0, options1);
+
+        gr1.destroy();
+        gr1 = buildChart(data1, tg1, '@Strings.getMSG("GraphicsMRyCIndex011")', g1, options1);
+
+        gr2.destroy();
+        gr2 = buildChart(data2, tg2, '@Strings.getMSG("Menu118")', g2, options2);
+
+        gr3.destroy();
+        gr3 = buildChart(data3, tg3, '@Strings.getMSG("GraphicsMRyCIndex016")', g3, options2);
+    });
+</script>

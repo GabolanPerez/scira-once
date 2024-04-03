@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SCIRA.Models.c_contenido_grupo>
+@using SCIRA.Utilidades
+
+@if (ViewBag.Contador != null)
+{
+    for (int i = ViewBag.Contador; i > 0; i--)
+    {
+        <span> <a href=#null onclick="loadContent2(@ViewBag.IDs[i-1])">@ViewBag.Claves[i - 1]</a> >> </span>
+    }
+}
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("Clave")</th>
+            <th class="search">@Strings.getMSG("Nombre")</th>
+            <th width="100"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href=#null onclick="loadContent2(@item.id_contenido_grupo)">
+                        @item.cl_contenido_grupo
+                    </a>
+                </td>
+                <td>
+                    <a href=#null onclick="loadContent2(@item.id_contenido_grupo)">
+                        @item.ds_contenido_grupo
+                    </a>
+                </td>
+                <td>
+                    <center>
+                        @if (item.c_indicador_diario.Count() > 0)
+                        {
+                            <a href=#null onclick="pinGroup(@item.id_contenido_grupo)">
+                                <i class="fa fa-thumb-tack"></i>
+                            </a>
+                        }
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<script>
+    $(document).ready(function () {
+        initTables("#ContenidoGrupo2");
+    });
+</script>

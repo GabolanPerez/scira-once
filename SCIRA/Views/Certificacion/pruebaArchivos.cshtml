@@ -1,0 +1,21 @@
+﻿@model IEnumerable<SCIRA.ViewModels.ListaControlesCertificacionViewModel>
+@{
+    ViewBag.Title = "Certificacion";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+<h3>Subida de archivos</h3>
+
+@using (Html.BeginForm("subir", "Certificacion", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="text" placeholder="Nombre" name="nombre">
+    <input type="file" name="file" />
+    <br />
+    <input type="file" name="file" />
+    <br />
+    <input type="file" name="file" />
+    <br />
+    <button type="submit">Subir archivo</button>
+}

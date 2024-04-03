@@ -1,0 +1,21 @@
+{
+  "RepName": "Reporte de Sub Procesos - Normatividad: op",
+  "ColNames": [
+    "io",
+    "io",
+    "¿Tiene Ficha?",
+    "Sub Procesos Ligados"
+  ],
+  "Rows": [
+    [
+      "op",
+      "op",
+      "No",
+      "N/A"
+    ]
+  ],
+  "NoCols": 3,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<SCIRA.Models.r_evento>
+@using SCIRA.ViewModels
+@using SCIRA.Utilidades
+@using Newtonsoft.Json
+@{ 
+    var db = new SCIRA.Models.SICIEntities();
+}
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#menuModal");
+    });
+</script>
+
+<table class="results table table-bordered table-striped table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("NormatividadOperacionIndex001")</th>
+            <th>@Strings.getMSG("NormatividadOperacionIndex002")</th>
+            <th>@Strings.getMSG("NormatividadOperacionIndex003")</th>
+            <th>@Strings.getMSG("NotificationEdit003")</th>
+            <th>@Strings.getMSG("NormatividadOperacionIndex004")</th>
+            <th>@Strings.getMSG("NormatividadOperacionIndex005")</th>
+            <th>@Strings.getMSG("NormatividadOperacionIndex006")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var tipo = Utilidades.tipoFicha(item);
+            string registro_ligado = Utilidades.registroLigado(item);
+            var reg = Utilidades.GetLastReg(item, db);
+            string status = "";
+            var felim = Utilidades.getFeLim(item);
+
+            if (reg.terminado)
+            {
+                status = @Strings.getMSG("CertificacionInforme037");
+            }
+            else
+            {
+                if(felim > DateTime.Now)
+                {
+                    status = @Strings.getMSG("CertificacionInforme038");
+                }
+                else
+                {
+                    status = @Strings.getMSG("Vencida");
+                }
+            }
+
+
+            <tr class="R@(item.id_evento)">
+                <td>@item.nb_evento</td>
+                <td>@tipo</td>
+                <td>@registro_ligado</td>
+                <td>@item.ds_evento</td>
+                <td>@(item.recordar_antes_de_vencer ? Strings.getMSG("PendientesVerTodoIndex010") : Strings.getMSG("PendientesVerTodoIndex011"))</td>
+                <td>@string.Format("{0:dd/MM/yyyy mm}", felim)</td>
+                <td>@status</td>
+            </tr>
+        }
+    </tbody>
+</table>   

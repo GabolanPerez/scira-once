@@ -1,0 +1,98 @@
+﻿@model SCIRA.Models.c_nivel_normatividad
+@using SCIRA.Utilidades
+
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("Normatividadelete004")</h4>
+    <hr />
+    @if (ViewBag.Error != null)
+    {
+        <span class="field-validation-error text-danger">@ViewBag.Error</span>
+        <hr />
+        <script>
+            $(document).ready(function () {
+                document.getElementById("submit").disabled = true;
+            });
+        </script>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                <p class="info">
+                    @Strings.getMSG("Normatividadelete002") @ViewBag.nb_normatividad @Strings.getMSG("NormatividadCreate027")
+                </p>
+            </div>
+        </div>
+
+        <hr />
+    }
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Strings.getMSG("Clave")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cl_nivel_normatividad)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Nombre")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nb_nivel_normatividad)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Normatividadelete003")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.no_orden)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu015")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_normatividad.cl_normatividad) - @Html.DisplayFor(model => model.c_normatividad.nb_normatividad)
+        </dd>
+
+    </dl>
+
+    <div class="form-actions no-color">
+        <input type="button" value="@Strings.getMSG("Borrar")" class="btn btn-primary" onclick="deleteLVLPost()" /> |
+        <input type="button" value="@Strings.getMSG("Regresar")" class="btn btn-default" onclick="showLVLs(@Model.id_normatividad)" />
+    </div>
+</div>
+
+
+<form id="FormLVLNorm">
+    <input type="hidden" name="id" value="@Model.id_nivel_normatividad" />
+    @Html.AntiForgeryToken()
+</form>
+
+<!-- #region Scripts -->
+<script>
+    function deleteLVLPost() {
+        var url = "@Url.Action("DeleteLVLP")";
+
+        executePost(url, "FormLVLNorm", "ModalSucces()", "modalError()");
+    }
+
+    function ModalSucces() {
+        toastr.success("@Strings.getMSG("CosteoIndex006")");
+        showLVLs(@Model.id_normatividad);
+    }
+
+    function modalError() {
+        toastr.error("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+    }
+
+</script>
+<!-- #endregion -->

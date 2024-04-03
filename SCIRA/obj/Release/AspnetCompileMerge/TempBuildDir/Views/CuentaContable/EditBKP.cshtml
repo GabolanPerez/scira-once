@@ -1,0 +1,81 @@
+﻿@model SCIRA.Models.c_cuenta_contable
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Editar";
+}
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+
+<h2>@Strings.getMSG(Editar"")</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal well">
+        <h4>@Strings.getMSG("BDEICreate052")</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_cuenta_contable)
+        @Html.HiddenFor(model => model.id_entidad)
+
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Entidad")</label>
+                <div class="col-xs-6 col-md-5">
+                    <input class="form-control" id="entidad" type="text" value="@(Model.c_entidad.cl_entidad + " - " + Model.c_entidad.nb_entidad)" disabled="">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.cl_cuenta_contable, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("CuentaContableCreate002")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.cl_cuenta_contable, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Nombre")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.nb_cuenta_contable, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("CuentaContableCreate003")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.nb_cuenta_contable, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

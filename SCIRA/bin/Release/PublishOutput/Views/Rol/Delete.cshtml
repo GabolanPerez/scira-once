@@ -1,0 +1,44 @@
+﻿@model SCIRA.Models.c_rol
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("RolCreate001")</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Strings.getMSG("Clave")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cl_rol)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Nombre")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nb_rol)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" /> |
+            <a class="btn btn-default" href="javascript:history.back()">@Strings.getMSG("Regresar")</a>
+        </div>
+    }
+</div>

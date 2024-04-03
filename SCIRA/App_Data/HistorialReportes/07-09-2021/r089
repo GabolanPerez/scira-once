@@ -1,0 +1,54 @@
+{
+  "RepName": "Reporte de Certificación de Procesos",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Macro Proceso",
+    "Responsable",
+    "Puesto",
+    "Proceso",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "1  - Banco X A",
+      "David Antonio Morales López ",
+      "N/A",
+      "MP11 - 1a",
+      "Sergio",
+      "Dirección Comercial Red Sucursales",
+      "P1 - de la Central de Operaciones",
+      "Sergio",
+      "Dirección Comercial Red Sucursales",
+      "B - 1991",
+      "Me he asegurado que los Subprocesos que integran el Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Proceso no existen mas Subprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "CC",
+      "Si"
+    ],
+    [
+      "01 - CONSUBANCO, S.A. Institución de Banca Múltiple",
+      "Berenice Serrano Jiménez",
+      "Subdirección de Contraloría Normativa",
+      "MP01.01 - Contraloría Interna",
+      "Berenice Serrano Jiménez",
+      "Subdirección de Contraloría Normativa",
+      "P01.01.0001 - Manual de Cumplimiento",
+      "AB",
+      "N/A",
+      "B - 1991",
+      "Me he asegurado que los Subprocesos que integran el Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Proceso no existen mas Subprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "p",
+      "No"
+    ]
+  ],
+  "NoCols": 13,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

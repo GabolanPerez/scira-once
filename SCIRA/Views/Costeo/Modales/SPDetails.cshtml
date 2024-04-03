@@ -1,0 +1,177 @@
+﻿@model SCIRA.Models.c_sub_proceso
+@using SCIRA.Utilidades
+@using SCIRA.Models
+@using System.Reflection;
+
+
+<script>
+    $(document).ready(function () {
+        menuModal.setTitle('@Strings.getMSG("UsuarioCreate011") @Model.cl_sub_proceso');
+    });
+</script>
+
+
+<button class="btn btn-default" onclick="menuModal.bodyLoad('@Url.Action("Details","Costeo")/@Model.id_sub_proceso')">@Strings.getMSG("Regresar")</button>
+<br />
+<div class="form-horizontal">
+
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("Entidad")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.c_proceso.c_macro_proceso.c_entidad.nb_entidad)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("MP")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.c_proceso.c_macro_proceso.nb_macro_proceso)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("P")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.c_proceso.nb_proceso)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("CosteoIndex002")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.cl_sub_proceso)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("SP")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.nb_sub_proceso)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.ds_sub_proceso)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("Sub Procesodelete009")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.c_usuario.nb_usuario)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("RevisionControlCreate033")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.cl_manual)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate009")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.cl_sp_anterior)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate010")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.cl_sp_siguiente)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate013")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.c_tipologia_sub_proceso.nb_tipologia_sub_proceso)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate014")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.c_etapa != null ? Model.c_etapa.nb_etapa : "N/A")" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate015")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.c_sub_etapa != null ? Model.c_sub_etapa.nb_sub_etapa : "N/A")" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("Sub Procesodelete006")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.ds_areas_involucradas)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate017")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.ds_aplicaciones_relacionadas)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("Sub Procesodelete007")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.nb_archivo_manual)" disabled="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">@Strings.getMSG("Sub Procesodelete008")</label>
+        <div class="col-md-10">
+            <input class="form-control" type="text" value="@(Model.nb_archivo_flujo)" disabled="">
+        </div>
+    </div>
+
+    @{
+        List<c_meta_campo> lista = Utilidades.infoCamposExtra("c_sub_proceso", 20);
+
+        Type m_tipo = null;
+        PropertyInfo[] m_propiedades = null;
+        m_tipo = Model.GetType();
+        m_propiedades = m_tipo.GetProperties();
+
+        for (int i = 0; i < 20; i++)
+        {
+            var item = lista.ElementAt(i);
+            if (item.es_visible)
+            {
+                var prop = m_propiedades.Where(p => p.Name == string.Format("campo{0:00}", i + 1)).First();
+
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@item.nb_campo</label>
+                    <div class="col-md-10">
+
+                        @if (item.cl_tipo_campo == "t")
+                        {
+                            <input class="form-control" type="text" value="@prop.GetValue(Model,null)" disabled>
+                        }
+                        else if (item.cl_tipo_campo == "a")
+                        {
+                            <textarea class="form-control" rows="5" disabled>@prop.GetValue(Model,null)</textarea>
+                        }
+                        else if (item.cl_tipo_campo == "n")
+                        {
+
+                            <input class="form-control" type="number" value="@prop.GetValue(Model,null)" disabled>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    }
+
+</div>

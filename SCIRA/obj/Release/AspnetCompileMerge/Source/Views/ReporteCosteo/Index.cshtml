@@ -1,0 +1,34 @@
+﻿@model SCIRA.ViewModels.ActividadesCosteoViewModel
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Reporte de Costeo";
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+}
+
+<script>
+    $(document).ready(function () {
+        $("#contenedor").load('@Url.Action("FilteredUsers", "ReporteCosteo")');
+
+        $("#usuarios").change(function () {
+            $this = $(this);
+
+            $("#contenedor").load('@Url.Action("FilteredUsers", "ReporteCosteo")/'+$this.val());
+
+        })
+    });
+</script>
+
+<h2>@Strings.getMSG("Menu114")</h2>
+
+<br />
+<br />
+
+<div class="row">
+    @Html.DropDownList("usuarios", (IEnumerable<SelectListItem>)ViewBag.usuariosL, Strings.getMSG("ReporteCosteoIndex001"), new { @class = "form-control" })
+</div>
+
+<br />
+<br />
+
+
+<div id="contenedor"></div>

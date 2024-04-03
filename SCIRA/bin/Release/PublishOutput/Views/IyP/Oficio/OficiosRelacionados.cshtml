@@ -1,0 +1,95 @@
+﻿@using SCIRA.Models
+@using SCIRA.Utilidades
+@{
+    List<k_objeto> ROD = ViewBag.RBelow;
+    List<k_objeto> RO = ViewBag.RAbove;
+}
+
+<table class="results table table-bordered table-striped table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("ContestacionOficioIndex011")</th>
+            <th>@Strings.getMSG("Entidad")</th>
+            <th>@Strings.getMSG("lyPIndex005")</th>
+            <th>@Strings.getMSG("GraphicsOficioIndex023")</th>
+            <th>@Strings.getMSG("lyPIndex007")</th>
+            <th>@Strings.getMSG("ContestacionOficioIndex012")</th>
+            <th width="120px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in RO)
+        {
+            <tr>
+                <td>@item.nb_objeto</td>
+                <td>@item.c_entidad.cl_entidad - @item.c_entidad.nb_entidad</td>
+                <td>@item.fe_alta.ToString()</td>
+                <td>@item.fe_vencimiento.ToString()</td>
+                <td>@item.fe_contestacion.ToString()</td>
+                <td>Anterior</td>
+                <td>
+                    <center>
+                        <center>
+                            @if (item.nb_archivo_1 != null)
+                            {
+                                <a href="@Url.Action("DescargaArchivo", new { id = item.id_objeto,index = 1 })">
+                                    <i class="fa fa-download fa-lg" title="@Strings.getMSG("Descargar copia del oficio")"></i>
+                                </a>
+
+                            }
+
+                            @if (item.nb_archivo_2 != null && item.nb_archivo_1 != null)
+                            {
+                                <span>|</span>
+                            }
+
+                            @if (item.nb_archivo_2 != null)
+                            {
+                                <a href="@Url.Action("DescargaArchivo", new { id = item.id_objeto,index = 2 })">
+                                    <i class="fa fa-file-o fa-lg" title="@Strings.getMSG("ContestacionOficioIndex010")"></i>
+                                </a>
+                            }
+                        </center>
+                    </center>
+                </td>
+            </tr>
+        }
+        @foreach (var item in ROD)
+        {
+            <tr>
+                <td>@item.nb_objeto</td>
+                <td>@item.c_entidad.cl_entidad - @item.c_entidad.nb_entidad</td>
+                <td>@item.fe_alta.ToString()</td>
+                <td>@item.fe_vencimiento.ToString()</td>
+                <td>@item.fe_contestacion.ToString()</td>
+                <td>Posterior</td>
+                <td>
+                    <center>
+                        <center>
+                            @if (item.nb_archivo_1 != null)
+                            {
+                                <a href="@Url.Action("DescargaArchivo", new { id = item.id_objeto,index = 1 })">
+                                    <i class="fa fa-download fa-lg" title="@Strings.getMSG("Descargar copia del oficio")"></i>
+                                </a>
+                                <span>|</span>
+                            }
+                            @if (item.nb_archivo_2 != null)
+                            {
+                                <a href="@Url.Action("DescargaArchivo", new { id = item.id_objeto,index = 2 })">
+                                    <i class="fa fa-file-o fa-lg" title="@Strings.getMSG("ContestacionOficioIndex010")"></i>
+                                </a>
+                                <span>|</span>
+                            }
+                            @if (item.r_contestacion_oficio.Count() > 0)
+                            {
+                                <a href="@Url.Action("DisplayInforme", new { id = item.id_objeto })">
+                                    <i class="fa fa-file-o fa-lg" title="@Strings.getMSG("ContestacionOficioIndex013")"></i>
+                                </a>
+                            }
+                        </center>
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

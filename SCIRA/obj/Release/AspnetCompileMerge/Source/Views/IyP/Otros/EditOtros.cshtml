@@ -1,0 +1,82 @@
+﻿@model SCIRA.Models.k_objeto
+@using SCIRA.Utilidades
+
+<script src="~/Scripts/sharedScripts.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $("#ind6").removeClass("IndicatorLoader");
+        activateDate("#contenedor6");
+
+        $("#form6#id_entidad option[value='@Model.id_entidad.ToString()']").attr("selected", true);
+    });
+</script>
+
+<h4>@Strings.getMSG("lyPCreate051")</h4>
+
+<form id="form6">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.id_objeto)
+    @Html.HiddenFor(model => model.id_entidad)
+    @Html.HiddenFor(model => model.tipo_objeto)
+
+    <input type="hidden" name="fe_alta" value="@(Model.fe_alta.HasValue ? Model.fe_alta.Value.ToString("dd/MM/yyyy") : "")" />
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("Entidad")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                <input class="form-control" value="@Model.c_entidad.cl_entidad - @Model.c_entidad.nb_entidad" disabled>
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("BDEIIndex003")</label>
+            <div class="col-xs-3 col-md-3">
+                <div class='input-group date datetimepicker' id='datetimepicker1'>
+                    <input class="form-control" value="@(Model.fe_alta.HasValue ? Model.fe_alta.Value.ToString("dd/MM/yyyy") : "")" disabled>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPOtrosIndex001")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.nb_objeto, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPOtrosCreate002")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.nb_objeto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                @Html.TextAreaFor(model => model.ds_objeto, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RiesgoCreate075") })
+                @Html.ValidationMessageFor(model => model.ds_objeto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-6 col-md-offset-9 col-md-3">
+                <input type="button" value="@Strings.getMSG("Guardar")" class="btn btn-primary" onclick="editOtrosPost()" />
+                <input type="button" class="btn btn-default" onclick="indexOtros()" value="@Strings.getMSG("Cancelar")" />
+            </div>
+        </div>
+    </div>
+</form>

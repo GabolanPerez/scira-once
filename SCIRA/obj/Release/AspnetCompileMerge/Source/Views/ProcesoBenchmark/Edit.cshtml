@@ -1,0 +1,108 @@
+﻿@model SCIRA.Models.c_proceso_benchmark
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Editar";
+    string entidad;
+    try
+    {
+        entidad = Model.c_actividad.c_entidad.cl_entidad + " - " + Model.c_actividad.c_entidad.nb_entidad;
+    }
+    catch
+    {
+        entidad = "General";
+    }
+}
+<script src="~/Scripts/sharedScripts.js"></script>
+
+<h2>Editar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal well">
+        <h4>@Strings.getMSG("ProcesoBenchmarkIndex001")</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_proceso_benchmark)
+        @Html.HiddenFor(model => model.id_actividad)
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Entidad")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control" disabled value="@entidad">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="Entidad a la que pertenece el Proceso de Benchmark.">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ActividadIndex001")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control" disabled value="@Model.c_actividad.cl_actividad - @Model.c_actividad.nb_actividad">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ProcesoBenchmarkCreate009")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.cl_proceso_benchmark, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ProcesoBenchmarkCreate006")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.cl_proceso_benchmark, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Nombre")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.nb_proceso_benchmark, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ProcesoBenchmarkCreate007")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.nb_proceso_benchmark, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

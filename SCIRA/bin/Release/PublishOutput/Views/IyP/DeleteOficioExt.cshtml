@@ -1,0 +1,91 @@
+﻿@model SCIRA.Models.k_objeto
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Borrar";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("PendientesVerTodoIndex009")</h4>
+    <hr />
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("Entidad")</label>
+            <div class="col-xs-3 col-md-3">
+                <input type="text" value="@Model.c_entidad.cl_entidad - @Model.c_entidad.nb_entidad" disabled class="form-control" />
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPCreate012")</label>
+            <div class="col-xs-3 col-md-3">
+                <input type="text" value="@Model.fe_alta" disabled class="form-control" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPIndex004")</label>
+            <div class="col-xs-3 col-md-3">
+                <input type="text" value="@Model.nb_objeto" disabled class="form-control" />
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPIndex006")</label>
+            <div class="col-xs-3 col-md-3">
+                <input type="text" value="@Model.fe_vencimiento" disabled class="form-control" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("AuditoriaIndexUniversoAuditable001")</label>
+            <div class="col-xs-3 col-md-3">
+                <input type="text" value="@Model.c_origen_autoridad.cl_origen_autoridad - @Model.c_origen_autoridad.nb_origen_autoridad" disabled class="form-control" />
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPIndex007")</label>
+            <div class="col-xs-3 col-md-3">
+                <input type="text" value="@Model.fe_contestacion" disabled class="form-control" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("Responsable")</label>
+            <div class="col-xs-3 col-md-3">
+                <input type="text" value="@Model.c_usuario.nb_usuario" disabled class="form-control" />
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPCreate013")</label>
+            <div class="col-xs-3 col-md-3">
+                <input type="text" value="@Model.no_incidencias" disabled class="form-control" />
+            </div>
+        </div>
+    </div>
+
+
+
+    @if (ViewBag.RR.Count == 0)
+    {
+        using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" />
+                |
+                @Html.ActionLink(Strings.getMSG("Regresar"), "Return", "Utilidades", new { catalogo = -1 }, new { @class = "btn btn-default" })
+            </div>
+        }
+    }
+    else
+    {
+        <div>
+            @Html.ActionLink(Strings.getMSG("Regresar"), "Return", "Utilidades", new { catalogo = -1 }, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

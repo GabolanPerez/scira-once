@@ -1,0 +1,59 @@
+{
+  "RepName": "Reporte de Fichas",
+  "ColNames": [
+    "Titulo",
+    "Responsable",
+    "Tipo de Ficha",
+    "Registro Ligado",
+    "Contenido",
+    "Tipo de Recordatorio",
+    "Fecha Límite",
+    "Estado"
+  ],
+  "Rows": [
+    [
+      "Prueba",
+      "Alma Laura Antonio Mateo ",
+      "Normatividad",
+      "Conjun Banco MX-SHCP de la normatividad Banco de México/Instituciones de banca múltiple",
+      "Prueba",
+      "Recurrente",
+      "01/10/2021 12:00:00 a. m.",
+      "Atendida"
+    ],
+    [
+      "Prueba",
+      "AB",
+      "Oficios/Informes",
+      "N/A",
+      "Contestar Oficio",
+      "Recurrente",
+      "01/11/2021 12:00:00 a. m.",
+      "Pendiente"
+    ],
+    [
+      "Prueba",
+      "AB",
+      "Incidencias",
+      "N/A",
+      "prueba",
+      "Recurrente",
+      "01/11/2021 12:00:00 a. m.",
+      "Pendiente"
+    ],
+    [
+      "Prueba",
+      "Adriana Donis Gonzalez",
+      "Incidencias",
+      "N/A",
+      "Prueba",
+      "Recurrente",
+      "01/01/2022 12:00:00 a. m.",
+      "Pendiente"
+    ]
+  ],
+  "NoCols": 8,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

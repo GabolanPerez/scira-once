@@ -1,0 +1,504 @@
+﻿@model SCIRA.ViewModels.AgregarSubProcesoViewModel
+@using System.Reflection;
+@using SCIRA.Utilidades
+
+@{
+    ViewBag.Title = "Agregar Sub Proceso";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/MSInitialize.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $("#id_entidad").change(function () {
+            var selectedItem = $(this).val();
+            var ddlMacroProcesos = $("#id_macro_proceso");
+            var ddlProcesos = $('#id_proceso');
+            var cargando = $("#cargando-macro-procesos");
+            cargando.show();
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneMacroProcesos"))",
+                data: { "IdEntidad": selectedItem },
+                success: function (data) {
+                    ddlMacroProcesos.html('');
+                    ddlMacroProcesos.append($('<option></option>').val(null).html("@Strings.getMSG("ProcesoCreate002")"))
+                    $.each(data, function (id, option) {
+                        ddlMacroProcesos.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    ddlProcesos.html('');
+                    ddlProcesos.append($('<option></option>').val(null).html("@Strings.getMSG("SubProcesoCreate002")"))
+                    cargando.hide();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //alert('Error al recuperar Macro Procesos.');
+                    cargando.hide();
+                }
+            });
+        });
+    });
+
+    $(function () {
+        $("#id_macro_proceso").change(function () {
+            var selectedItem = $(this).val();
+            var ddlStates = $("#id_proceso");
+            var statesProgress = $("#cargando-procesos");
+            statesProgress.show();
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneProcesos"))",
+                data: { "IdMacroProceso": selectedItem },
+                success: function (data) {
+                    ddlStates.html('');
+                    ddlStates.append($('<option></option>').val(null).html("@Strings.getMSG("SubProcesoCreate002")"))
+                    $.each(data, function (id, option) {
+                        ddlStates.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    statesProgress.hide();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //alert('Error al recuperar Procesos.');
+                    statesProgress.hide();
+                }
+            });
+        });
+    });
+
+    $(document).ready(function () {
+        var clave = $("#cl_sub_proceso").val();
+        var len = clave.length;
+        clave = clave.substr(2, (len - 1));
+
+        $("#aux").val(clave);
+
+
+        $("#aux").keyup(function () {
+            construyeClave();
+        });
+
+        $("#aviso").modal('show');
+
+
+
+        @{
+            Type m_tipo = null;
+            PropertyInfo[] m_propiedades = null;
+            m_tipo = Model.GetType();
+            m_propiedades = m_tipo.GetProperties();
+            for (int i = 0; i < 20; i++)
+            {
+                if (ViewBag.CamposExtraSubProceso[i].es_visible)
+                {
+                    var propiedad = m_propiedades.Where(p=>p.Name == string.Format("campo{0:00}",i+1)).First();
+                    string valor = "";
+                    try
+                    {
+                        valor = propiedad.GetValue(Model,null).ToString();
+                    }
+                    catch
+                    {
+                        valor = "";
+                    }
+                    @:encoded = "@valor";
+                    @:decoded = $("<div/>").html(encoded).text();
+                    @:$("#campo@(String.Format("{0:00}", i+1))").val(decoded);
+                    @:$(".campo@(String.Format("{0:00}", i+1))").val(decoded);
+
+                }
+            }
+        }
+    });
+
+    function construyeClave() {
+        var numero = $("#aux").val();
+        var clavef;
+        clavef = "SP" + numero;
+        $("#cl_sub_proceso").val(clavef);
+    }
+</script>
+
+
+<div class="modal fade" id="aviso" tabindex="-1" role="dialog" aria-labelledby="Aviso" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <center>
+                    <h2 class="modal-title" id="gridModalLabel" style="color: #fff;">@Strings.getMSG("Aviso")</h2>
+                </center>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-hover table-responsive table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                <center>@Strings.getMSG("antesDeLlenar")</center>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th width="120">
+                                <center>@Strings.getMSG("Campo")</center>
+                            </th>
+                            <th>
+                                <center>@Strings.getMSG("Catalogo")</center>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--Inicio de una fila-->
+                        <tr>
+                            <td>
+                                <center>
+                                    @Strings.getMSG("CertificacionInforme036")
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    @Strings.getMSG("MacroProcesoCreate001")
+                                </center>
+                            </td>
+                        </tr>
+                        <!--final de la fila-->
+                        <tr>
+                            <td>
+                                <center>
+                                    @Strings.getMSG("MacroProcesoCreate014")
+                                </center>
+                            </td>
+                            <td>
+                                <center>
+                                    @Strings.getMSG("MacroProcesoCreate015")
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>
+                                    @Strings.getMSG("ProcesoCreate010")
+                                </center>
+                                 </td>
+                            <td>
+                                <center>
+                                    @Strings.getMSG("SubProcesoCreate001")
+                                </center >
+
+                                 </td >
+
+                             </tr >
+
+                             <tr >
+
+                                 <td >
+
+                                     <center >
+                                    @Strings.getMSG("MacroProcesoCreate009")
+
+                                     </center >
+
+                                 </td >
+
+                                 <td >
+
+                                     <center >
+                                    @Strings.getMSG("EntidadCreate001")
+
+                                     </center >
+
+                                 </td >
+
+                             </tr >
+
+                         </tbody >
+
+</table >
+
+</div >
+
+<div class="modal-footer">
+                <button type = "button" class="btn btn-primary" data-dismiss="modal">@Strings.getMSG("Entendido")</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2>@Strings.getMSG("Agregar")</h2>
+
+@using (Html.BeginForm("Agregar", "SubProceso", FormMethod.Post, new { onsubmit = "deshabilitar()" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal well">
+    <h4>@Strings.getMSG("SP")</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group has-error">
+        <label class="control-label col-xs-3 col-md-2"> @Strings.getMSG("Entidad") </label>
+        <div class="col-xs-6 col-md-5">
+            @Html.DropDownListFor(model => model.id_entidad, Model.Entidades, Strings.getMSG("MacroProcesoCreate002"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("SubProcesoCreate028") })
+            @Html.ValidationMessageFor(model => model.id_entidad, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group has-error">
+        @* ---------------------------------------------------------------------------------------------- *@
+        <label class="control-label col-xs-3 col-md-2"> @Strings.getMSG("MP") </label>
+        <div class="col-xs-6 col-md-5">
+            @Html.DropDownListFor(model => model.id_macro_proceso, Model.MacroProcesos, Strings.getMSG("ProcesoCreate002"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("SubProcesoCreate028")})
+            <span id="cargando-macro-procesos" style="display: none;"> @Strings.getMSG("EventoRiesgoCreate010")</span>
+            @Html.ValidationMessageFor(model => model.id_macro_proceso, "", new { @class = "text-danger" })
+        </div>
+
+    </div>
+
+    <div class="form-group has-error">
+        @* ---------------------------------------------------------------------------------------------- *@
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("P")</label>
+        <div class="col-xs-6 col-md-5">
+            @Html.DropDownListFor(model => model.id_proceso, Model.Procesos, Strings.getMSG("SubProcesoCreate002"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("SubProcesoCreate028") })
+            <span id="cargando-procesos" style="display: none;">@Strings.getMSG("EventoRiesgoCreate010")</span>
+            @Html.ValidationMessageFor(model => model.id_proceso, "", new { @class = "text-danger" })
+        </div>
+
+    </div>
+
+    <div class="form-group has-error">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+        <div class="col-xs-6 col-md-5">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button type="button" id="clave" class="btn btn-default">@Strings.getMSG("SubProcesoCreate046")</button>
+                </div>
+                @Html.EditorFor(model => model.cl_sub_proceso, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                <input type="text" id="aux" class="form-control text-box single-line valid">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("SubProcesoCreate029")">
+                        <i class="glyphicon glyphicon-question-sign"></i>
+                    </button>
+                </div>
+            </div>
+            @Html.ValidationMessageFor(model => model.cl_sub_proceso, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group has-error">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SP")</label>
+        <div class="col-xs-6 col-md-5">
+            <div class="input-group">
+                @Html.EditorFor(model => model.nb_sub_proceso, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("SubProcesoCreate030")">
+                        <i class="glyphicon glyphicon-question-sign"></i>
+                    </button>
+                </div>
+            </div>
+            @Html.ValidationMessageFor(model => model.nb_sub_proceso, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group has-error">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>
+        <div class="col-xs-6 col-md-5">
+            @Html.TextAreaFor(model => model.ds_sub_proceso, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = @Strings.getMSG("SubProcesoCreate031") })
+            @Html.ValidationMessageFor(model => model.ds_sub_proceso, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group has-error">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Responsable")</label>
+        <div class="col-xs-6 col-md-5">
+            @Html.DropDownListFor(model => model.id_responsable, (IEnumerable<SelectListItem>)ViewBag.id_responsableL, Strings.getMSG("EntidadCreate002"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("SubProcesoCreate032") })
+            @Html.ValidationMessageFor(model => model.id_responsable, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <!--Multi Selects-->
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate012")</label>
+        <div class="col-xs-6 col-md-5">
+            <div class="input-group">
+                @Html.ListBox("id_responsables", (MultiSelectList)ViewBag.responsables, htmlAttributes: new { @class = "form-control selectpicker" })
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="Strings.getMSG("SubProcesoCreate033")">
+                        <i class="glyphicon glyphicon-question-sign"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Multi Selects-->
+
+
+
+    <div class="form-group has-error">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate011")</label>
+        <div class="col-xs-6 col-md-5">
+            <div class="input-group">
+                @Html.EditorFor(model => model.cl_manual, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("SubProcesoCreate034")">
+                        <i class="glyphicon glyphicon-question-sign"></i>
+                    </button>
+                </div>
+            </div>
+            @Html.ValidationMessageFor(model => model.cl_manual, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate009")</label>
+        <div class="col-xs-6 col-md-5">
+            <div class="input-group">
+                @Html.EditorFor(model => model.cl_sp_anterior, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("SubProcesoCreate035")">
+                        <i class="glyphicon glyphicon-question-sign"></i>
+                    </button>
+                </div>
+            </div>
+            @Html.ValidationMessageFor(model => model.cl_sp_anterior, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate010")</label>
+        <div class="col-xs-6 col-md-5">
+            <div class="input-group">
+                @Html.EditorFor(model => model.cl_sp_siguiente, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("SubProcesoCreate036")">
+                        <i class="glyphicon glyphicon-question-sign"></i>
+                    </button>
+                </div>
+            </div>
+            @Html.ValidationMessageFor(model => model.cl_sp_siguiente, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group has-error">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate013")</label>
+        <div class="col-xs-6 col-md-5">
+            @Html.DropDownListFor(model => model.id_tipologia_sub_proceso, (IEnumerable<SelectListItem>)ViewBag.id_tipologia_sub_procesoL, Strings.getMSG("SubProcesoCreate003"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("SubProcesoCreate037") })
+            @Html.ValidationMessageFor(model => model.id_tipologia_sub_proceso, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu005")</label>
+        <div class="col-xs-6 col-md-5">
+            <div class="input-group">
+                @Html.ListBox("id_lineas_negocio", (MultiSelectList)ViewBag.lineas_negocio, htmlAttributes: new { @class = "form-control selectpicker" })
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("SubProcesoCreate038")">
+                        <i class="glyphicon glyphicon-question-sign"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ReporteMRyCIndex012")</label>
+        <div class="col-xs-6 col-md-5">
+            @Html.DropDownList("id_etapa", null, Strings.getMSG("SubProcesoCreate047"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("SubProcesoCreate039") })
+            @Html.ValidationMessageFor(model => model.id_etapa, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ReporteMRyCIndex013")</label>
+        <div class="col-xs-6 col-md-5">
+            @Html.DropDownList("id_sub_etapa", null, Strings.getMSG("SubProcesoCreate048"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("SubProcesoCreate041") })
+            @Html.ValidationMessageFor(model => model.id_sub_etapa, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group has-error">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate016")</label>
+        <div class="col-xs-6 col-md-5">
+            @Html.TextAreaFor(model => model.ds_areas_involucradas, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("SubProcesoCreate040") })
+            @Html.ValidationMessageFor(model => model.ds_areas_involucradas, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group has-error">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate017")</label>
+        <div class="col-xs-6 col-md-5">
+            @Html.TextAreaFor(model => model.ds_aplicaciones_relacionadas, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("SubProcesoCreate042") })
+            @Html.ValidationMessageFor(model => model.ds_aplicaciones_relacionadas, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    @for (int i = 0; i < 20; i++)//Revisamos cada campo para saber cuales y de que forma se mostraran en pantalla
+    {
+        var campo = ViewBag.CamposExtraSubProceso[i];
+        if (campo.es_visible)
+        {
+            <div class="row">
+                <div class="form-group @(campo.es_requerido ? "has-error" : "")">
+                    <label class="control-label col-xs-3 col-md-2">@campo.nb_campo</label>
+                    <div class="col-xs-6 col-md-5">
+
+                        @if (campo.cl_tipo_campo == "t")
+                        {
+                            <div class="input-group">
+                                <input class="form-control text-box single-line" style=" @(campo.cl_color_borde == "0" ? "" : "border-color:" + campo.cl_color_borde + ";") @(campo.cl_color_fondo == "0" ? "" : "background-color:" + campo.cl_color_fondo + ";") " data-val="true" data-val-length="Este campo puede tener hasta @campo.longitud_campo caracteres." data-val-length-max="@campo.longitud_campo" @(campo.es_requerido ? "data-val-required=Obligatorio" : "") id="campo@(string.Format("{0:00}", i + 1))" name="campo@(string.Format("{0:00}", i + 1))" type="text" value="">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="" data-toggle="popover" data-trigger="hover" data-content="@(campo.msg_ayuda)." data-original-title="@Strings.getMSG("Atencion")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessage(string.Format("campo{0:00}", i + 1), new { @class = "text-danger" })
+                        }
+                        else if (campo.cl_tipo_campo == "a")
+                        {
+                            <textarea class="form-control " style=" @(campo.cl_color_borde == "0" ? "" : "border-color:" + campo.cl_color_borde + ";") @(campo.cl_color_fondo == "0" ? "" : "background-color:" + campo.cl_color_fondo + ";") " cols="20" data-content="@(campo.msg_ayuda)." data-toggle="popover" data-trigger="hover" data-val="true" data-val-length="La descripción puede tener hasta @campo.longitud_campo caracteres." data-val-length-max="@campo.longitud_campo" @(campo.es_requerido ? "data-val-required=Obligatorio" : "") id="campo@(string.Format("{0:00}", i + 1))" name="campo@(string.Format("{0:00}", i + 1))" rows="5" title="" data-original-title="@Strings.getMSG("Atencion")"></textarea>
+                            @Html.ValidationMessage(string.Format("campo{0:00}", i + 1), new { @class = "text-danger" })
+                        }
+                        else if (campo.cl_tipo_campo == "n")
+                        {
+                            <div class="input-group">
+                                <input class="form-control text-box single-line " style=" @(campo.cl_color_borde == "0" ? "" : "border-color:" + campo.cl_color_borde + ";") @(campo.cl_color_fondo == "0" ? "" : "background-color:" + campo.cl_color_fondo + ";") " data-val="true" data-val-number="Este campo debe ser numérico" @(campo.es_requerido ? "data-val-required=Obligatorio" : "") id="campo@(string.Format("{0:00}", i + 1))" name="campo@(string.Format("{0:00}", i + 1))" type="number" value="">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="" data-toggle="popover" data-trigger="hover" data-content="@(campo.msg_ayuda)." data-original-title="@Strings.getMSG("Atencion")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessage(string.Format("campo{0:00}", i + 1), new { @class = "text-danger" })
+                        }
+                        @if (ViewBag.MSError[i] != "" && ViewBag.MSError[i] != null)
+                        {
+                            <span class="field-validation-valid text-danger">@ViewBag.MSError[i]</span>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+        }
+    }
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" />
+            @Html.ActionLink(Strings.getMSG("Regresar"), "Index", "SubProceso", new { @class = "btn btn-default" })
+        </div>
+    </div>
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

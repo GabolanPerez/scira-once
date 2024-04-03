@@ -1,0 +1,140 @@
+﻿@model SCIRA.Models.c_indicador_diario
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Borrar el registro?</h3>
+<div>
+    <h4>Indicador Diario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Clave
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cl_indicador_diario)
+        </dd>
+
+        <dt>
+            Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nb_indicador_diario)
+        </dd>
+
+        <dt>
+            Descripción
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_indicador_diario)
+        </dd>
+
+        <dt>
+            Descripción del Numerador
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_numerador_diario)
+        </dd>
+
+        <dt>
+            Descripción del Denominador
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_denominador)
+        </dd>
+
+        <dt>
+            Umbral Asociado a la Nota (0.0)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.umbral000i)% - @Html.DisplayFor(model => model.umbral000f)%
+        </dd>
+
+        <dt>
+            Umbral Asociado a la Nota (0.0 a 5.0)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.umbral050i)% - @Html.DisplayFor(model => model.umbral050f)%
+        </dd>
+
+        <dt>
+            Umbral Asociado a la Nota (5.0 a 7.5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.umbral075i)% - @Html.DisplayFor(model => model.umbral075f)%
+        </dd>
+
+        <dt>
+            Umbral Asociado a la Nota (7.5 a 10)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.umbral100i)% - @Html.DisplayFor(model => model.umbral100f)%
+        </dd>
+
+        <dt>
+            Activo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.esta_activo)
+        </dd>
+
+        <dt>
+            Responsables
+        </dt>
+
+        <dd>
+            @foreach (var u in Model.c_usuario)
+            {
+                @u.nb_usuario
+                <br />
+            }
+        </dd>
+
+        <dt>
+            Grupo
+        </dt>
+
+        <dd>
+            @{ 
+                var contenido = Model.c_contenido_grupo;
+                string ruta = contenido.cl_contenido_grupo;
+
+                var padre = contenido.c_contenido_grupo2;
+
+                while (padre != null)
+                {
+                    ruta = padre.cl_contenido_grupo + " >> " + ruta;
+                    padre = padre.c_contenido_grupo2;
+                }
+            }
+            @ruta
+        </dd>
+
+    </dl>
+
+   
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Borrar" class="btn btn-primary" />
+        |
+        @Html.ActionLink("Regresar", "Index",null, new { @class = "btn btn-default btn-sm" })
+    </div>
+    }
+</div>

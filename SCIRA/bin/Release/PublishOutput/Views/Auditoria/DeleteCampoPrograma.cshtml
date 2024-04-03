@@ -1,0 +1,91 @@
+﻿@model SCIRA.Models.c_campo_programa
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = @Strings.getMSG("Borrar");
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("Menu103")</h4>
+    @if (Model.k_campo_programa.Count > 0)
+    {
+        <hr />
+        <p class="text-danger">@Strings.getMSG("AuditoriaDeleteCampoAuditoria001")</p>
+    }
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Strings.getMSG("Clave")
+        </dt>
+
+        <dd>
+            @(Model.cl_campo)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Nombre")
+        </dt>
+
+        <dd>
+            @(Model.nb_campo)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("MCSubProcesoIndex002")
+        </dt>
+
+        <dd>
+            @(Model.cl_tipo_campo == "t" ? Strings.getMSG("TipoCampo004"): Model.cl_tipo_campo == "n" ? Strings.getMSG("TipoCampo006"):Strings.getMSG("TipoCampo005") )
+        </dd>
+
+        <dt>
+            @Strings.getMSG("MCRiesgoEdit002")
+        </dt>
+
+        <dd>
+            @(Model.longitud)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("MCSubProcesoEdit005")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.es_editable)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("MCSubProcesoEdit004")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.es_requerido)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("MCSubProcesoEdit006")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.msg_ayuda)
+        </dd>
+
+    </dl>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" />
+            |
+            @Html.ActionLink(Strings.getMSG("Regresar"), "IndexCampoPrograma", null, new { @class = "btn btn-default btn-sm" })
+        </div>
+    }
+
+</div>

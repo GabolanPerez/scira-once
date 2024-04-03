@@ -1,0 +1,25 @@
+{
+  "RepName": "Reporte de Sub Procesos - Normatividad: Disposiciones de carácter general  ",
+  "ColNames": [
+    "M",
+    "M",
+    "pp",
+    "pp",
+    "¿Tiene Ficha?",
+    "Sub Procesos Ligados"
+  ],
+  "Rows": [
+    [
+      "AcuerdoA",
+      "Disposiciones de carácter general  ",
+      "",
+      "",
+      "No",
+      "N/A"
+    ]
+  ],
+  "NoCols": 5,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

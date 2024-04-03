@@ -1,0 +1,51 @@
+﻿@model SCIRA.Models.c_nivel_manual
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("lyPIncidenciasIndex002") @Model.no_orden @Strings.getMSG("EstructuraManualDeleteLvl004") @ViewBag.cl_estructura_manual </h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-xs-offset-2 col-xs-6 col-md-5">
+            <p class="info">
+                @Strings.getMSG("EstructuraManualDeleteLvl002")
+            </p>
+        </div>
+    </div>
+
+    <hr />
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Strings.getMSG("Clave")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cl_nivel_manual)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Nombre")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nb_nivel_manual)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { id = Model.id_nivel_manual }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" id="submit" /> |
+            @Html.ActionLink(Strings.getMSG("Regresar"), "Index", new { id = Model.id_estructura_manual }, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

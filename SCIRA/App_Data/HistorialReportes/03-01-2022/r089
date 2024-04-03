@@ -1,0 +1,57 @@
+{
+  "RepName": "Reporte de Certificación de Macro Procesos",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Macro Proceso",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "1  - Banco X A",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "MP1 - 1",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "Febrero - 2021",
+      "Me he asegurado que los Procesos que integran el Macro Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Macro Proceso no existen mas Procesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "CCCC",
+      "Si"
+    ],
+    [
+      "01 - BANCO A",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "MG002 - Prueba",
+      "AB",
+      "N/A",
+      "Febrero - 2021",
+      "Me he asegurado que los Procesos que integran el Macro Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Macro Proceso no existen mas Procesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "p",
+      "No"
+    ],
+    [
+      "01 - BANCO A",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "MG002 - Prueba",
+      "AB",
+      "N/A",
+      "Marzo - 2021",
+      "Me he asegurado que los Procesos que integran el Macro Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Macro Proceso no existen mas Procesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "prueba",
+      "Si"
+    ]
+  ],
+  "NoCols": 10,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

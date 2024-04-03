@@ -1,0 +1,92 @@
+﻿@model IEnumerable<SCIRA.Models.k_auditoria>
+@using SCIRA.Utilidades
+
+
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("CalificacionArea002")</th>
+            <th>@Strings.getMSG("ProcesosAuditoriaIndexInformes002")</th>
+            <th>@Strings.getMSG("DivisionAuditoria001")</th>
+            <th>@Strings.getMSG("Entidad")</th>
+            <th>@Strings.getMSG("Area")</th>
+            <th>@Strings.getMSG("AuditoriaIndexUniversoAuditable001")</th>
+            <th>@Strings.getMSG("ProcesosAuditoriaIndexPlaneacion001")</th>
+            <th>@Strings.getMSG("ProcesosAuditoriaIndexPlaneacion002")</th>
+            <th>@Strings.getMSG("ProcesosAuditoriaIndexPlaneacion003")</th>
+            <th>@Strings.getMSG("ProcesosAuditoriaIndexPlaneacion004")</th>
+            <th>@Strings.getMSG("ProcesosAuditoriaIndexPlaneacion005")</th>
+            <th>01</th>
+            <th>02</th>
+            <th>03</th>
+            <th>04</th>
+            <th>05</th>
+            <th>06</th>
+            <th>07</th>
+            <th>08</th>
+            <th>09</th>
+            <th>10</th>
+            <th>11</th>
+            <th>12</th>
+            <th width="100"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var auditoria = item.c_auditoria;
+            var entidad = auditoria.c_entidad;
+
+
+            var mesI = item.fe_inicial_planeada.Value.Month;
+            var mesF = item.fe_final_planeada.Value.Month;
+
+            if (item.fe_inicial_planeada.Value.Year < item.fe_final_planeada.Value.Year)
+            {
+                mesF = 12;
+            }
+
+            <tr>
+                <td class="resaltable" style="color:@item.c_auditoria.cl_color_campo;font-size: 2rem;background-color:white;"> <center><h5>@item.c_auditoria.riesgo</h5></center> <center>▰</center> </td>
+                <td>@item.fe_inicial_planeada.Value.Year</td>
+                <td>@((item.c_auditoria.id_division_auditoria ?? 0) != 0 ? item.c_auditoria.c_division_auditoria.ds_division_auditoria : "N/A")</td>
+                <td>@entidad.nb_entidad</td>
+                <td>@auditoria.c_area.nb_area</td>
+                <td>@(auditoria.es_regulada ? @Strings.getMSG("AuditoriaIndexUniversoAuditable006"):"No regulada")</td>
+                <td>@auditoria.c_solicitante_auditoria.nb_solicitante_auditoria</td>
+                <td>@auditoria.nb_auditoria</td>
+                <td>@(string.Format("{0:dd/MM/yyyy}", item.fe_inicial_planeada))  </td>
+                <td>@(string.Format("{0:dd/MM/yyyy}", item.fe_final_planeada))</td>
+                <td>@item.no_horas_estimadas</td>
+                <td style="color:black;background-color: @((mesI <= 1 && 1 <= mesF) ? "#000;" : "")">@((mesI <= 1 && 1 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 2 && 2 <= mesF) ? "#000;" : "")">@((mesI <= 2 && 2 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 3 && 3 <= mesF) ? "#000;" : "")">@((mesI <= 3 && 3 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 4 && 4 <= mesF) ? "#000;" : "")">@((mesI <= 4 && 4 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 5 && 5 <= mesF) ? "#000;" : "")">@((mesI <= 5 && 5 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 6 && 6 <= mesF) ? "#000;" : "")">@((mesI <= 6 && 6 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 7 && 7 <= mesF) ? "#000;" : "")">@((mesI <= 7 && 7 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 8 && 8 <= mesF) ? "#000;" : "")">@((mesI <= 8 && 8 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 9 && 9 <= mesF) ? "#000;" : "")">@((mesI <= 9 && 9 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 10 && 10 <= mesF) ? "#000;" : "")">@((mesI <= 10 && 10 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 11 && 11 <= mesF) ? "#000;" : "")">@((mesI <= 11 && 11 <= mesF) ? "•":"")</td>
+                <td style="color:black;background-color: @((mesI <= 12 && 12 <= mesF) ? "#000;" : "")">@((mesI <= 12 && 12 <= mesF) ? "•" :"")</td>
+                <td>
+                    <a href="@Url.Action("EditPlaneacion", new { id = item.idd_auditoria })">
+                        <i class="glyphicon glyphicon-pencil" title=@Strings.getMSG("Editar")></i>
+                    </a> |
+                    <a href="@Url.Action("DeletePlaneacion", new { id = item.idd_auditoria})">
+                        <i class="glyphicon glyphicon-trash" title=@Strings.getMSG("Borrar")></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<script>
+    $(document).ready(function () {
+        loadTables();
+    });
+</script>

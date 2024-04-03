@@ -1,0 +1,69 @@
+﻿@model IEnumerable<SCIRA.Models.c_area_costeo_n2>
+@using SCIRA.Models
+@{
+    c_sub_proceso sp = ViewBag.sp;
+    c_area_costeo ac = ViewBag.ac;
+}
+
+<script>
+    var lvl3URL = '@(Url.Action("LVL3","Costeo"))';
+    var returnURL = '@(Url.Action("ActividadesCosteo","Costeo"))/@sp.id_sub_proceso';
+
+    $(document).ready(function () {
+        menuModal.setTitle('@sp.cl_sub_proceso/@ac.nb_area_costeo');
+        initTables("#menuModal");
+    });
+
+    function showLVL3(id_ac_2) {
+        $("#f2i2").val(id_ac_2);
+
+        var data = $("#form2").serialize();
+
+        menuModal.bodyLoad(lvl3URL,null,data);
+    }
+</script>
+
+
+
+<input type="button" class="btn btn-default" value="Regresar" onclick="menuModal.bodyLoad(returnURL)" />
+<br /><br />
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                Clave
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th width="90px"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="RL2@(item.id_area_costeo_n2)">
+                <td>
+                    @item.cl_area_costeo_n2
+                </td>
+                <td>
+                    @item.nb_area_costeo_n2
+                </td>
+                <td>
+                    <center>
+                        <a onclick="showLVL3(@item.id_area_costeo_n2)">
+                            <i class="fa fa-check-circle-o" title="Calificar Sub Actividad"></i>
+                        </a>
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form id="form2" hidden>
+    <input type="hidden" id="f2i1" name="id_sp" value="@sp.id_sub_proceso" />
+    <input type="hidden" id="f2i2" name="id_ac_2" value="" />
+</form>

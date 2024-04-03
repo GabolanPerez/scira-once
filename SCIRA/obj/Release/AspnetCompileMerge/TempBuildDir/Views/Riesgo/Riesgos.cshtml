@@ -1,0 +1,147 @@
+﻿@model IEnumerable<SCIRA.ViewModels.ListaRiesgosViewModel>
+@using SCIRA.Models
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Riesgos";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    List<k_riesgo_derogado> RD = ViewBag.riesgos_derogados;
+    SICIEntities db = new SICIEntities();
+}
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+<h3>@Strings.getMSG("RiesgoRiesgos001")<br>[@ViewBag.cl_sub_proceso - @ViewBag.nb_sub_proceso]</h3>
+
+<p>
+    @Html.ActionLink(Strings.getMSG("Agregar Riesgo"), "Agregar", "Riesgo", new { id = ViewBag.id_sub_proceso }, new { @class = "btn btn-default" })
+    @Html.ActionLink(Strings.getMSG("Regresar"), "SubProcesos", "Riesgo", new { @class = "btn btn-default" })
+</p>
+
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#cnl" data-toggle="tab"><h4>@Strings.getMSG("Riesgos")</h4></a></li>
+    <li><a href="#cnnl" data-toggle="tab"><h4>@Strings.getMSG("RiesgoRiesgos004")</h4></a></li>
+</ul>
+
+
+<div id="myTabContent" class="tab-content">
+
+
+    <div class="tab-pane fade active in" id="cnl">
+
+        <br><br>
+        <table id="results" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("RiesgoRiesgos002")</th>
+                    <th>@Strings.getMSG("RiesgoRiesgos003")</th>
+                    <th>@Strings.getMSG("Menu019")</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    var riesgo = db.k_riesgo.Find(item.id_riesgo);
+                    <tr>
+                        <td>
+                            @(item.nb_riesgo)
+                        </td>
+                        <td>
+                            @(item.evento)
+                        </td>
+                        <td>
+                            @(item.nb_tipo_riesgo)
+                        </td>
+                        <td style="white-space: nowrap">
+                            <center>
+                                <a href="@Url.Action("Editar", new { id = item.id_riesgo })">
+                                    <i class="fa fa-pencil-square-o fa-lg" title="@Strings.getMSG("Editar")"></i>
+                                </a> |
+                                <a href="@Url.Action("Delete", new { id = item.id_riesgo })">
+                                    <i class="fa fa-trash fa-lg" title="@Strings.getMSG("Borrar")"></i>
+                                </a> |
+                                <a href="@Url.Action("Controles", new { id = item.id_riesgo })">
+                                    <i class="fa fa-fire-extinguisher fa-lg relative" title="@Strings.getMSG("Controles")"><span class="NotifCounterRight">@riesgo.k_control.Count</span></i>
+                                </a>
+                                @if (riesgo.r_riesgo.Count() > 0)
+                                {
+                                    @:|
+                                    <a href="@Url.Action("Historial", new { id = item.id_riesgo })">
+                                        <i class="fa fa-history fa-lg" title="@Strings.getMSG("Historial de cambios")"></i>
+                                    </a>
+                                }
+                            </center>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+    <div class="tab-pane" id="cnnl">
+
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("RiesgoRiesgos006")</th>
+                    <th>@Strings.getMSG("RiesgoRiesgos005")</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in RD)
+                {
+                    <tr id="RDR@(item.id_riesgo_derogado)">
+                        <td>
+                            @(item.evento)
+                        </td>
+                        <td>
+                            @(item.justificacion)
+                        </td>
+                        <td>
+                            <a onclick="deleteRD(@item.id_riesgo_derogado,'@item.nb_riesgo')">
+                                <i class="fa fa-trash fa-lg" title="@Strings.getMSG("Borrar")"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <script>
+            function deleteRD(id,codigo) {
+                confirmationModal.initModal({
+                    title: '@Strings.getMSG("RiesgoRiesgos019")' + codigo + '?',
+                    action: 'deleteRDConfirm(' + id + ')'
+                });
+            }
+
+            var delRDUrl = '@Url.Action("deleteRD")/';
+
+            function deleteRDConfirm(id) {
+
+
+
+                executePost(delRDUrl + id, null, "delRDSuccess(" + id + ");", "delRDError();")
+            }
+
+            function delRDSuccess(id) {
+                $("#RDR" + id).remove();
+                toastr.success("@Strings.getMSG("RiesgoRiesgos020")");
+            }
+
+            function delRDError() {
+                toastr.info("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+            }
+        </script>
+
+    </div>
+</div>
+
+

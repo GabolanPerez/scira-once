@@ -1,0 +1,48 @@
+﻿@using SCIRA.Utilidades
+
+@{
+
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Historial de diagramas " + ViewBag.nbRegistro; //Hay que traducir
+
+    List<Tuple<string, DateTime>> filesWithDates = ViewBag.filesWithDates;
+    var sortedList = filesWithDates.OrderBy(item => item.Item2).ToList();
+    bool isFirstElement = true;
+}
+
+<h2><span class="catalogName">@ViewBag.Title</span></h2>
+
+<button class="btn btn-default" onclick="window.history.back();">@Strings.getMSG("Regresar")</button>
+
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">Fecha</th>
+            <th width="80"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in sortedList)
+        {
+            int id = int.Parse(item.Item1.Split('_')[0]);
+            string cl_fecha = item.Item1.Substring(item.Item1.IndexOf('_') + 1);
+            <tr>
+                <td>
+                    @( string.Format("{0:dd/MM/yyyy HH:mm}", item.Item2))
+                </td>
+                <td>
+                    <center>
+                        <a href="@Url.Action("Editor" + ViewBag.clave, new { id = id,cl_fecha = cl_fecha })" class="diagram">
+                            <i class="fa fa-eye @(isFirstElement ? "text-success":"")" title="Ver"></i>
+                        </a>
+                    </center>
+                </td>
+            </tr>
+            isFirstElement = false;
+        }
+    </tbody>
+</table>
+
+<script>
+    var order = [[0, "desc"]];
+</script>

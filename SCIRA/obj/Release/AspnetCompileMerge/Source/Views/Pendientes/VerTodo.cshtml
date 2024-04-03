@@ -1,0 +1,929 @@
+﻿@using SCIRA.Models
+@using SCIRA.ViewModels
+@using SCIRA.Seguridad;
+@using SCIRA.Utilidades;
+@using Newtonsoft.Json
+
+@{
+    List<c_entidad> entidades = ViewBag.entidades;
+    List<c_macro_proceso> mps = ViewBag.mps;
+    List<c_proceso> prs = ViewBag.prs;
+    List<c_sub_proceso> sps= ViewBag.sps;
+    List<k_control> controles = ViewBag.controles;
+    List<c_indicador> indicadores = ViewBag.indicadores;
+    List<k_objeto> oficios = ViewBag.oficios;
+    List<k_objeto> informes = ViewBag.informes;
+    List<k_incidencia> incidencias = ViewBag.incidencias;
+    List<k_plan> planes = ViewBag.planes;
+    List<r_evento> fichas = ViewBag.fichas;
+    List<k_evaluacion_diaria> indicadoresDiarios= ViewBag.indicadores_diarios;
+
+    var db = new SICIEntities();
+
+    var user = (IdentityPersonalizado)HttpContext.Current.User.Identity;
+    var id = user.Id_usuario;
+
+    ViewBag.Title = "Pendientes";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+<script>
+
+    $(function () {
+        $('.scb0').change(function () {
+            var isChecked = $(this).prop('checked');
+            if (isChecked) $(".externo").show();
+            else $(".externo").hide();
+        })
+    })
+
+    function writeMessage(id_dest) {
+        $("#head").val("Notificaciones SCIRA");
+        $("#subject").val("");
+        $("#area1").val("");
+        $("#id_usuario").val(id_dest);
+        RenderHead();
+        $("#aviso").modal('show');
+    }
+
+    function sendMessage() {
+        $.ajax({
+            dataType: "html",
+            type: "post",
+            cache: false,
+            url: '@Url.Action("SendMessage","Pendientes")',
+            data: $("#form1").serialize(),
+            success: function (data) {
+                if (data == "success")
+                    toastr.success('@Strings.getMSG("PendientesVerTodoIndex014")');
+                else
+                    toastr.error("@Strings.getMSG("PendientesVerTodoIndex015")");
+            },
+            error: function (data) {
+                toastr.error("@Strings.getMSG("CosteoIndex009")");
+            }
+        });
+    }
+
+    function RenderView() {
+        $("#p0").html($("#area1").val());
+    }
+
+    function RenderHead() {
+        $("#h0").html($("#head").val());
+    }
+
+    function RenderSubject() {
+        $("#s0").html($("#subject").val());
+    }
+    function showView() {
+        $("#shView").hide();
+        $("#viewBox").show();
+    }
+    function hideView() {
+        $("#shView").show();
+        $("#viewBox").hide();
+    }
+
+    var areaId = "area1";
+    function endTask(id,title) {
+        confirmationModal.initModal({
+            title: '@Strings.getMSG("PendientesFichasIndex003")' + title+ '?',
+            action: 'endTaskConfirm('+id+')'
+        });
+    }
+
+    function endTaskConfirm(id) {
+        $("#reg_id").val(id);
+
+        var url = "@(Url.Action("EndTask", "Ficha"))";
+        var message = "@Strings.getMSG("PendientesVerTodoIndex012")";
+
+        $.ajax({
+            dataType: "html",
+            type: "post",
+            url: url,
+            data: $("#EndTaskForm").serialize(),
+            success: function (data) {
+                toastr.success(message);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                toastr.error("@Strings.getMSG("AvisoError003")");
+            }
+        });
+    }
+</script>
+
+
+<form id="EndTaskForm" hidden>
+    @Html.AntiForgeryToken()
+    <input type="text" id="reg_id" name="id" value="" />
+</form>
+
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/Extras.css" rel="stylesheet" />
+<script src="~/Scripts/sharedScripts.js"></script>
+<script src="~/Scripts/textControl.js"></script>
+
+<h3>@Strings.getMSG("AuditoriaIndexSeguimientoObservaciones005")</h3>
+<input class="scb0" type="checkbox" data-on="@Strings.getMSG("Ver Inferiores")" data-off="@Strings.getMSG("No ver Inferiores")" data-toggle="toggle" checked data-size="mini" data-width="120">
+
+<br /><br />
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#pes1e" data-toggle="tab"><h4>@Strings.getMSG("Entidades")<span id="ind1e"></span> </h4></a></li>
+    <li><a href="#pes1m" data-toggle="tab"><h4>@Strings.getMSG("MPS")<span id="ind1m"></span> </h4></a></li>
+    <li><a href="#pes1p" data-toggle="tab"><h4>@Strings.getMSG("PS")<span id="ind1p"></span> </h4></a></li>
+    <li><a href="#pes1s" data-toggle="tab"><h4>@Strings.getMSG("SPS")<span id="ind1s"></span> </h4></a></li>
+    <li><a href="#pes1" data-toggle="tab"><h4>@Strings.getMSG("Controles")<span id="ind1"></span> </h4></a></li>
+    <li><a href="#pes2" data-toggle="tab"><h4>@Strings.getMSG("Menu009")<span id="ind2"></span></h4></a></li>
+    <li><a href="#pes3" data-toggle="tab"><h4>@Strings.getMSG("Menu127")<span id="ind3"></span></h4></a></li>
+    <li><a href="#pes4" data-toggle="tab"><h4>@Strings.getMSG("lyPInformesIndex001")<span id="ind4"></span></h4></a></li>
+    <li><a href="#pes5" data-toggle="tab"><h4>@Strings.getMSG("Incidencias")<span id="ind5"></span></h4></a></li>
+    <li><a href="#pes6" data-toggle="tab"><h4>@Strings.getMSG("PendientesVerTodoIndex001")<span id="ind6"></span></h4></a></li>
+    <li><a href="#pes7" data-toggle="tab"><h4>@Strings.getMSG("Menu130")<span id="ind7"></span></h4></a></li>
+    <li><a href="#pes8" data-toggle="tab"><h4>@Strings.getMSG("Menu066")<span id="ind8"></span></h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active in" id="pes1e">
+        <br />
+
+        <table class="table results table-striped table-bordered table-hover" >
+            <thead>
+                <tr>
+                    <th class="search">@Strings.getMSG("Entidad")</th>
+                    <th class="search">@Strings.getMSG("Responsable")</th>
+                    <th class="search">@Strings.getMSG("Puestos")</th>
+                    <th width="55"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in entidades)
+                {
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>
+                            @( item.cl_entidad + " - " + item.nb_entidad)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.c_usuario.nb_usuario)
+                        </td>
+                        <td>
+                            @SCIRA.Utilidades.Utilidades.PuestoUsuario(item.id_responsable)
+                        </td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                <center>
+                                    <a href="@Url.Action("Certificados", "CertificacionEntidad", new { id = item.id_entidad })" target="_blank">
+                                        <i class="fa fa-bookmark fa-lg" title="@Strings.getMSG("Certificados")"></i>
+                                    </a>
+                                </center>
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="pes1m">
+        <br />
+        <table id="results" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="search">@Strings.getMSG("Entidad")</th>
+                    <th class="search">@Strings.getMSG("MP")</th>
+                    <th class="search">@Strings.getMSG("Responsable")</th>
+                    <th class="search">@Strings.getMSG("Puestos")</th>
+                    <th width="55"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in mps)
+                {
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>
+                            @( item.c_entidad.cl_entidad + " - " + item.c_entidad.nb_entidad)
+                        </td>
+                        <td>
+                            @( item.cl_macro_proceso + " - " + item.nb_macro_proceso)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.c_usuario.nb_usuario)
+                        </td>
+                        <td>
+                            @SCIRA.Utilidades.Utilidades.PuestoUsuario(item.id_responsable)
+                        </td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                <center>
+                                    <a href="@Url.Action("Certificados", "CertificacionMacroProceso", new { id = item.id_macro_proceso })" target="_blank">
+                                        <i class="fa fa-bookmark fa-lg" title="@Strings.getMSG("Certificados")"></i>
+                                    </a>
+                                </center>
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="pes1p">
+        <br />
+
+        <table id="results" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="search">@Strings.getMSG("Entidad")</th>
+                    <th class="search">@Strings.getMSG("MP")</th>
+                    <th class="search">@Strings.getMSG("P")</th>
+                    <th class="search">@Strings.getMSG("Responsable")</th>
+                    <th class="search">@Strings.getMSG("Puestos")</th>
+                    <th width="55"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in prs)
+                {
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>
+                            @(item.c_macro_proceso.c_entidad.cl_entidad + " - " + item.c_macro_proceso.c_entidad.nb_entidad)
+                        </td>
+                        <td>
+                            @(item.c_macro_proceso.cl_macro_proceso + " - " + item.c_macro_proceso.nb_macro_proceso)
+                        </td>
+                        <td>
+                            @( item.cl_proceso + " - " + item.nb_proceso)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.c_usuario.nb_usuario)
+                        </td>
+                        <td>
+                            @SCIRA.Utilidades.Utilidades.PuestoUsuario(item.id_responsable)
+                        </td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                <center>
+                                    <a href="@Url.Action("Certificados", "CertificacionProceso", new { id = item.id_proceso })" target="_blank">
+                                        <i class="fa fa-bookmark fa-lg" title="@Strings.getMSG("Certificados")"></i>
+                                    </a>
+                                </center>
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="tab-pane" id="pes1s">
+        <br />
+
+        <table id="results" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="search">@Strings.getMSG("Entidad")</th>
+                    <th class="search">@Strings.getMSG("MP")</th>
+                    <th class="search">@Strings.getMSG("P")</th>
+                    <th class="search">@Strings.getMSG("SP")</th>
+                    <th class="search">@Strings.getMSG("Responsable")</th>
+                    <th class="search">@Strings.getMSG("Puestos")</th>
+                    <th width="55"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in sps)
+                {
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>
+                            @(item.c_proceso.c_macro_proceso.c_entidad.cl_entidad + " - " + item.c_proceso.c_macro_proceso.c_entidad.nb_entidad)
+                        </td>
+                        <td>
+                            @(item.c_proceso.c_macro_proceso.cl_macro_proceso + " - " + item.c_proceso.c_macro_proceso.nb_macro_proceso)
+                        </td>
+                        <td>
+                            @(item.c_proceso.cl_proceso + " - " + item.c_proceso.nb_proceso)
+                        </td>
+                        <td>
+                            @( item.cl_sub_proceso + " - " + item.nb_sub_proceso)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.c_usuario.nb_usuario)
+                        </td>
+                        <td>
+                            @SCIRA.Utilidades.Utilidades.PuestoUsuario(item.id_responsable)
+                        </td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                <center>
+                                    <a href="@Url.Action("Certificados", "CertificacionSubProceso", new { id = item.id_sub_proceso })" target="_blank">
+                                        <i class="fa fa-bookmark fa-lg" title="@Strings.getMSG("Certificados")"></i>
+                                    </a>
+                                </center>
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="tab-pane" id="pes1">
+        <br />
+        <table class="table results table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("SP")</th>
+                    <th>@Strings.getMSG("CertificaciónIndex002")</th>
+                    <th>@Strings.getMSG("RiesgoRiesgos003")</th>
+                    <th>@Strings.getMSG("CertificaciónIndex001")</th>
+                    <th>@Strings.getMSG("ControlDelete003")</th>
+                    <th width="40"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in controles)
+                {
+                    <tr @(item.c_usuario1.id_usuario == id ? "" : "class=externo")>
+                        <td>
+                            @(item.c_usuario1.nb_usuario)
+                        </td>
+                        <td>
+                            @(item.c_sub_proceso.cl_sub_proceso)
+                        </td>
+                        <td>
+                            @(item.k_riesgo.First().nb_riesgo)
+                        </td>
+                        <td>
+                            @(item.k_riesgo.First().evento)
+                        </td>
+                        <td>
+                            @(item.relacion_control)
+                        </td>
+                        <td>
+                            @(item.actividad_control)
+                        </td>
+                        <td style="white-space: nowrap">
+                            @if (item.c_usuario1.id_usuario == id)
+                            {
+                                <center>
+                                    <a href="@Url.Action("Certificar", "Certificacion", new { id = item.id_control })" target="_blank">
+                                        <i class="fa fa-certificate fa-lg" title="@Strings.getMSG("Certificar")"></i>
+                                    </a>
+                                </center>
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario1.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="pes2">
+        <br />
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("Clave")</th>
+                    <th>@Strings.getMSG("Nombre")</th>
+                    <th>@Strings.getMSG("SubProcesoCreate018")</th>
+                    <th>@Strings.getMSG("Area")</th>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("Menu053")</th>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("IndicadorIndex002")</th>
+                    <th width="70"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in indicadores)
+                {
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>
+                            @item.c_usuario.nb_usuario
+                        </td>
+                        <td>
+                            @item.cl_indicador
+                        </td>
+                        <td>
+                            @item.nb_indicador
+                        </td>
+                        <td>
+                            @item.ds_indicador
+                        </td>
+                        <td>
+                            @item.c_area.cl_area - @item.c_area.nb_area
+                        </td>
+                        <td>
+                            @item.c_entidad.cl_entidad - @item.c_entidad.nb_entidad
+                        </td>
+                        <td>
+                            @item.c_frecuencia_indicador.nb_frecuencia_indicador
+                        </td>
+                        <td>
+                            @item.c_usuario.nb_usuario
+                        </td>
+                        <td>
+                            @item.c_unidad_indicador.nb_unidad_indicador
+                        </td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                <center>
+                                    <a href="@Url.Action("Create", "EvaluacionIndicador", new { id = item.id_indicador })" target="_blank">
+                                        <i class="fa fa-check-circle-o btn-lg" title="@Strings.getMSG("Evaluar")"></i>
+                                    </a>
+                                </center>
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="pes3">
+        <br />
+        <table class="results table table-bordered table-striped table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("Nombre")</th>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("lyPCreate012")</th>
+                    <th>@Strings.getMSG("lyPIndex006")</th>
+                    <th>@Strings.getMSG("ContestacionOficioIndex005")</th>
+                    <th>@Strings.getMSG("ContestacionOficioIndex004")</th>
+                    <th width="80px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in oficios)
+                {
+                    int nic = 0;
+                    foreach (var inc in item.k_incidencia)
+                    {
+                        if (inc.r_respuesta.Count > 0) { nic++; }
+                    }
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>@item.c_usuario.nb_usuario</td>
+                        <td>@item.nb_objeto</td>
+                        <td>@item.c_entidad.cl_entidad - @item.c_entidad.nb_entidad</td>
+                        <td>@item.fe_alta</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_vencimiento)</td>
+                        <td>@item.no_incidencias</td>
+                        <td>@nic</td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                if (item.no_incidencias == nic)
+                                {
+                                    <center>
+                                        <a href="@Url.Action("ContestarOficio", "ContestacionOficio", new { id = item.id_objeto })" target="_blank">
+                                            <i class="fa fa-reply" title="@Strings.getMSG("Contestar Oficio")"></i>
+                                        </a>
+                                    </center>
+                                }
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="pes4">
+        <br />
+        <table class="results table table-bordered table-striped table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("MCSubProcesoIndex002")</th>
+                    <th>@Strings.getMSG("Nombre")</th>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("lyPInformesIndex003")</th>
+                    <th>@Strings.getMSG("ContestacionOficioIndex005")</th>
+                    <th>@Strings.getMSG("ContestacionOficioIndex004")</th>
+                    <th width="80px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in informes)
+                {
+                    int nic = 0;
+                    foreach (var inc in item.k_incidencia)
+                    {
+                        if (inc.r_respuesta.Count > 0) { nic++; }
+                    }
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>@item.c_usuario.nb_usuario</td>
+                        <td>@(item.tipo_objeto == 2 ? Strings.getMSG("lyPIndex001") : Strings.getMSG("lyPIndex002"))</td>
+                        <td>@item.nb_objeto</td>
+                        <td>@item.c_entidad.cl_entidad - @item.c_entidad.nb_entidad</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta)</td>
+                        <td>@item.no_incidencias</td>
+                        <td>@nic</td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                if (item.no_incidencias == nic)
+                                {
+                                    <center>
+                                        <a href="@Url.Action("ContestarOficio", "ContestacionOficio", new { id = item.id_objeto })" target="_blank">
+                                            <i class="fa fa-reply" title="@Strings.getMSG("Contestar Oficio")"></i>
+                                        </a>
+                                    </center>
+                                }
+
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="pes5">
+        <br />
+        <table class="results table table-bordered table-striped table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("PlanesRemIndex001")</th>
+                    <th>@Strings.getMSG("Nombre")</th>
+                    <th>@Strings.getMSG("lyPIndex006")</th>
+                    <th>@Strings.getMSG("PendientesVerTodoIndex008")</th>
+                    <th>@Strings.getMSG("lyPIncidenciasIndex002")</th>
+                    <th>@Strings.getMSG("lyPIncidenciasIndex001")</th>
+                    <th width="80px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in incidencias)
+                {
+                    var nivel = item.lvl_5 ?? item.lvl_4 ?? item.lvl_3 ?? item.lvl_2 ?? item.lvl_1 ?? "N/A";
+                    string nb_objeto = "";
+                    if (item.id_objeto != null)
+                    {
+                        nb_objeto = item.k_objeto.nb_objeto;
+                    }
+
+
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>@item.c_usuario.nb_usuario</td>
+                        <td>@(item.k_objeto.tipo_objeto == 1 ? Strings.getMSG("PendientesVerTodoIndex009") : Strings.getMSG("Menu155"))</td>
+                        <td>@nb_objeto</td>
+                        <td>@(item.k_objeto.tipo_objeto == 1 ? string.Format("{0:dd/MM/yyyy}", item.k_objeto.fe_vencimiento) : "N/A")</td>
+                        <td>@item.id_incidencia</td>
+                        <td>@nivel</td>
+                        <td>@item.c_clasificacion_incidencia.cl_clasificacion_incidencia - @item.c_clasificacion_incidencia.nb_clasificacion_incidencia</td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                <center>
+                                    <a href="@Url.Action("ResponderIncidencia","RespuestaIncidencia", new { id = item.id_incidencia })" target="_blank">
+                                        <i class="fa fa-reply" title="@Strings.getMSG("Responder Incidencia")"></i>
+                                    </a>
+                                </center>
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="pes6">
+        <br />
+        <table class="results table table-bordered table-striped table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex026")</th>
+                    <th>@Strings.getMSG("Nombre")</th>
+                    <th>@Strings.getMSG("SubProcesoCreate018")</th>
+                    <th>@Strings.getMSG("Area")</th>
+                    <th>@Strings.getMSG("BDEIIndex003")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate011")</th>
+                    <th width="80px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in planes)
+                {
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>@item.c_usuario.nb_usuario</td>
+                        <td>@item.id_plan</td>
+                        <td>@item.nb_plan</td>
+                        <td>@item.ds_plan</td>
+                        <td>@item.c_area.cl_area - @item.c_area.nb_area</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_estimada_implantacion)</td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                <center>
+                                    <a href="@Url.Action("ConcluirPlan","ConclusionPlan", new { id = item.id_plan})" target="_blank">
+                                        <i class="fa fa-check" title="@Strings.getMSG("ConclusionPlanIndex003")"></i>
+                                    </a>
+                                </center>
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="pes7">
+        <br />
+        <table class="results table table-bordered table-striped table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("NormatividadOperacionIndex001")</th>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("NormatividadOperacionIndex002")</th>
+                    <th>@Strings.getMSG("NormatividadOperacionIndex003")</th>
+                    <th>@Strings.getMSG("NotificationEdit003")</th>
+                    <th>@Strings.getMSG("NormatividadOperacionIndex004")</th>
+                    <th>@Strings.getMSG("NormatividadOperacionIndex005")</th>
+                    <th>@Strings.getMSG("NormatividadOperacionIndex006")</th>
+                    <th width="80px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in fichas)
+                {
+                    var tipo = Utilidades.tipoFicha(item);
+                    string registro_ligado = Utilidades.registroLigado(item);
+                    var reg = Utilidades.GetLastReg(item, db);
+
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>@item.nb_evento</td>
+                        <td>@item.c_usuario.nb_usuario</td>
+                        <td>@tipo</td>
+                        <td>@registro_ligado</td>
+                        <td>@item.ds_evento</td>
+                        <td>@(item.recordar_antes_de_vencer ? Strings.getMSG("PendientesVerTodoIndex010") : Strings.getMSG("PendientesVerTodoIndex011"))</td>
+                        <td>@Utilidades.getFeLim(item)</td>
+                        <td>@Utilidades.GetStatus(item)</td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                <center>
+                                    <a onclick="endTask(@reg.id_registro,'@item.nb_evento')">
+                                        <i class="fa fa-check" title="@Strings.getMSG("Marcar como Finalizado")"></i>
+                                    </a>
+                                </center>
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="pes8">
+        <br />
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("ControlEdit001")</th>
+                    <th>@Strings.getMSG("Nombre")</th>
+                    <th>@Strings.getMSG("SubProcesoCreate018")</th>
+                    <th>@Strings.getMSG("Usuario")</th>
+                    <th>@Strings.getMSG("EvaluacionIndicadorDiarioIndex005")</th>
+                    <th>@Strings.getMSG("EvaluacionIndicadorDiarioIndex004")</th>
+                    <th width="70"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in indicadoresDiarios)
+                {
+                    <tr @(item.c_usuario.id_usuario == id ? "" : "class=externo")>
+                        <td>
+                            @item.c_indicador_diario.cl_indicador_diario
+                        </td>
+                        <td>
+                            @item.c_indicador_diario.nb_indicador_diario
+                        </td>
+                        <td>
+                            @item.c_indicador_diario.ds_indicador_diario
+                        </td>
+                        <td>
+                            @item.c_usuario.nb_usuario
+                        </td>
+                        <td>
+                            @item.c_usuario.c_area.cl_area - @item.c_usuario.c_area.nb_area
+                        </td>
+                        <td>
+                            @(Utilidades.getRuta(item.c_contenido_grupo))
+                        </td>
+                        <td>
+                            @if (item.c_usuario.id_usuario == id)
+                            {
+                                <center>
+                                    <a href="@Url.Action("Create", "EvaluacionIndicadorDiario", new { id = item.id_indicador_diario })" target="_blank">
+                                        <i class="fa fa-check-circle-o btn-lg" title="@Strings.getMSG("Evaluar")"></i>
+                                    </a>
+                                </center>
+                            }
+                            else
+                            {
+                                <center>
+                                    <a onclick="writeMessage(@item.c_usuario.id_usuario)">
+                                        <i class="fa fa-envelope-o fa-lg" title="@Strings.getMSG("Escribir Mensaje")"></i>
+                                    </a>
+                                </center>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="aviso" tabindex="-1" role="dialog" aria-labelledby="Aviso" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="font-size: 2em;" id="modalH">
+                <center>@Strings.getMSG("Escribir Mensaje")</center>
+            </div>
+            <div id="modalB" class="modal-body">
+                <form id="form1">
+                    <div class="row">
+                        <div class="form-group ">
+                            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NotificationEdit001")</label>
+                            <div class="col-xs-6 col-md-5">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" onkeyup="RenderHead();" id="head" name="head" />
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NotificationEdit005")">
+                                            <i class="glyphicon glyphicon-question-sign"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group ">
+                            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NotificationEdit002")</label>
+                            <div class="col-xs-6 col-md-5">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" onkeyup="RenderSubject();" id="subject" name="subject" />
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NotificationEdit006")">
+                                            <i class="glyphicon glyphicon-question-sign"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group ">
+                            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("NotificationEdit003")</label>
+                            <div class="col-xs-5 col-md-5">
+                                <textarea cols="100" rows="30" spellcheck="false" id="area1" name="body" class="form-control" title="@Strings.getMSG("Atencion")" data-trigger="hover" data-toggle="popover" data-content="@Strings.getMSG("PendientesVerTodoIndex003")" onkeyup="RenderView();"></textarea>
+                            </div>
+
+                            <div class="col-xs-5 col-md-5">
+                                <div class="card" style="width: 54rem;" id="viewBox">
+                                    <div class="card-body">
+                                        <h4 class="card-title" id="h0"></h4>
+                                        <h6 class="card-subtitle mb-2 text-muted" id="s0"></h6>
+                                        <br />
+                                        <div class="card-text" id="p0"></div>
+                                        <a>
+                                            <i class="fa fa-eye-slash" onclick="hideView()" title="@Strings.getMSG("Ocultar Vista")"></i>
+                                        </a>
+                                        <p class="text-muted pull-right">@Strings.getMSG("NotificationEdit004")</p>
+                                    </div>
+                                </div>
+                                <div id="shView" hidden>
+                                    <button type="button" class="btn btn-default" onclick="showView()" title="@Strings.getMSG("Mostrar Vista")">
+                                        <i class="fa fa-eye fa-lg"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <input hidden type="text" id="id_usuario" name="id_usuario">
+                </form>
+            </div>
+            <div id="modalF" class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="sendMessage();">@Strings.getMSG("Enviar")</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Strings.getMSG("Cancelar")</button>
+            </div>
+        </div>
+    </div>
+</div>

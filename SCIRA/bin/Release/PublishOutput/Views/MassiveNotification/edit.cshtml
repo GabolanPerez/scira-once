@@ -1,0 +1,172 @@
+﻿@model SCIRA.ViewModels.emailViewModel
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Editar";
+    int id = ViewBag.id;
+}
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/Extras.css" rel="stylesheet" />
+<script src="~/Scripts/sharedScripts.js"></script>
+<script src="~/Scripts/textControl.js"></script>
+<script>
+
+    $(document).ready(function () {
+        RenderView();
+    });
+
+    function RenderView() {
+        $("#p0").html($("#area1").val());
+    }
+
+    function RenderHead() {
+        $("#h0").html($("#head").val());
+    }
+
+    function RenderSubject() {
+        $("#s0").html($("#subject").val());
+    }
+    function showView() {
+        $("#shView").hide();
+        $("#viewBox").show();
+    }
+    function hideView() {
+        $("#shView").show();
+        $("#viewBox").hide();
+    }
+
+    var areaId = "area1";
+
+
+
+
+</script>
+
+
+
+<h2>@Strings.getMSG("NotificationEdit016")</h2>
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { onsubmit = "deshabilitar()" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.nb_email)
+    <div class="form-horizontal well">
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NotificationEdit001")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.head, new { htmlAttributes = new { @class = "form-control", @onkeyup = "RenderHead();" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NotificationEdit005")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.head, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NotificationEdit002")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.subject, new { htmlAttributes = new { @class = "form-control", @onkeyup = "RenderSubject();" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NotificationEdit006")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    @Html.ValidationMessageFor(model => model.subject, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("NotificationEdit003")</label>
+                <div class="col-xs-5 col-md-5">
+                    @Html.TextAreaFor(model => model.body, new { @spellcheck = "false", @id = "area1", @class = "form-control", @cols = "100", @rows = "30", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NotificationEdit007"), @onkeyup = "RenderView();" })
+                    @Html.ValidationMessageFor(model => model.body, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-xs-5 col-md-5">
+                    <div class="card" style="width: 54rem;" id="viewBox">
+                        <div class="card-body">
+                            <h4 class="card-title" id="h0">@Model.head</h4>
+                            <h6 class="card-subtitle mb-2 text-muted" id="s0">@Model.subject</h6>
+                            <br />
+                            <div class="card-text" id="p0"></div>
+                            <a>
+                                <i class="fa fa-eye-slash" onclick="hideView()" title="@Strings.getMSG("Ocultar Vista")"></i>
+                            </a>
+                            <p class="text-muted pull-right">@Strings.getMSG("NotificationEdit004")</p>
+                        </div>
+                    </div>
+                    <div id="shView" hidden>
+                        <button type="button" class="btn btn-default" onclick="showView()" title="@Strings.getMSG("Mostrar Vista")">
+                            <i class="fa fa-eye fa-lg"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        @if (id == 1)
+        {
+            <div class="row">
+                <div class="form-group ">
+                    <label class="control-label col-xs-3 col-md-2"></label>
+                    <div class="btn-group">
+                        <button type="button" onclick="replaceText('nb_usuario', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Nombre de Usuario")"><i class="fa fa-user"></i></button>
+                        <button type="button" onclick="replaceText('%lista_controles%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Lista de controles")"><i class="fa fa-list-ol"></i></button>
+                        <button type="button" onclick="replaceText('%nb_periodo%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Nombre del periodo de certificación")"><i class="fa fa-calendar-check-o"></i></button>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (id == 2)
+        {
+            <div class="row">
+                <div class="form-group ">
+                    <label class="control-label col-xs-3 col-md-2"></label>
+                    <div class="btn-group">
+                        <button type="button" onclick="replaceText('nb_usuario', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Nombre de Usuario")"><i class="fa fa-user"></i></button>
+                        <button type="button" onclick="replaceText('%lista_indicadores%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage035")"><i class="fa fa-list-ol"></i></button>
+                        <button type="button" onclick="replaceText('%nb_periodo%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage041")"><i class="fa fa-calendar-check-o"></i></button>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-3 col-md-2"></label>
+
+                <div class="btn-group">
+                    <button type="button" onclick="insertTextAroundSelection('<b>','</b>',areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Negritas")"><i class="fa fa-bold"></i></button>
+                    <button type="button" onclick="insertTextAroundSelection('<i>','</i>',areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Cursiva")"><i class="fa fa-italic"></i></button>
+                    <button type="button" onclick="insertTextAroundSelection('<u>','</u>',areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Subrayar")"><i class="fa fa-underline"></i></button>
+                    <button type="button" onclick="replaceText('<br/>\n', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Salto de Línea")"><i class="fa fa-level-down"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+
+        </div>
+    </div>
+}

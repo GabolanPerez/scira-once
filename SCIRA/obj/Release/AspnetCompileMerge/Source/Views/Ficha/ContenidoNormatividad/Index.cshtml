@@ -1,0 +1,45 @@
+﻿@using SCIRA.Utilidades
+<script>
+    $(document).ready(function () {
+        menuModal.setTitle('@ViewBag.title');
+
+    });
+</script>
+
+@if (ViewBag.root)
+{
+    <input type="button" class="btn btn-default" onclick="showContents(@ViewBag.id_lvl)" value=@Strings.getMSG("Regresar") />
+}
+else
+{
+    <input type="button" class="btn btn-default" onclick="loadContent(@ViewBag.id_padre)" value=@Strings.getMSG("Regresar") />
+}
+
+<br />
+<br />
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card hover" style="width: 100%;" onclick="menuModal.bodyLoad('@Url.Action("LigarSP","Normatividad")/@ViewBag.id_contenido')">
+                <div class="card-body">
+                    <br /><br /><br />
+                    <center>@Strings.getMSG("ManualesCreate017")</center>
+                    <br /><br /><br />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card hover" style="width: 100%;" onclick="menuModal.bodyLoad('@Url.Action("ContenidoNormatividad","Ficha")?id=@ViewBag.id_contenido&backURL=')">
+                <div class="card-body">
+                    <br /><br /><br />
+                    <center>@Strings.getMSG("Ficha")</center>
+                    <br /><br /><br />
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

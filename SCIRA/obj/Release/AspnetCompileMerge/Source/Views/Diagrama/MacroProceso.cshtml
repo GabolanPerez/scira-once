@@ -1,0 +1,111 @@
+﻿@model IEnumerable<SCIRA.Models.c_macro_proceso>
+@using SCIRA.Utilidades
+
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Diagrama Macro Procesos";
+
+    List<int> hasDiagram = ViewBag.hasDiagram;
+    List<int> HasHistorial = ViewBag.HasHistorial;
+}
+<button class="btn btn-circle btn-default pull-right" title="Tutorial" onclick="runTutorial();"><i class="fa fa-question fa-lg"></i></button>
+
+<h2><span class="catalogName">@Strings.getMSG("DiagramaEntidadIndex003")</span></h2>
+
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("Entidad")</th>
+            <th class="search">@Strings.getMSG("MP")</th>
+            <th class="search">@Strings.getMSG("Responsable")</th>
+            <th class="search">@Strings.getMSG("EntidadIndex001")</th>
+            <th class="search">@Strings.getMSG("DiagramaEntidadIndex002")</th>
+            <th width="80"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(item.c_entidad.cl_entidad + " - " + item.c_entidad.nb_entidad)
+                </td>
+                <td>
+                    @(item.cl_macro_proceso + " - " + item.nb_macro_proceso)
+                </td>
+                <td>
+                    @(item.c_usuario.nb_usuario)
+                </td>
+                <td>
+                    @SCIRA.Utilidades.Utilidades.PuestoUsuario(item.id_responsable)
+                </td>
+                <td id="tieneDiagrama@(item.id_macro_proceso)">
+                    @(hasDiagram.Contains(item.id_macro_proceso) ? @Strings.getMSG("UsuarioIndex004") : @Strings.getMSG("UsuarioIndex005"))
+                </td>
+                <td>
+                    <center>
+                        <a href="@Url.Action("EditorMP", new { id = item.id_macro_proceso})" class="diagram">
+                            <i class="fa fa-object-ungroup relative @(hasDiagram.Contains(item.id_macro_proceso) ? "text-success":"text-danger")" id="diagButton@(item.id_macro_proceso)" title="@Strings.getMSG("RiesgoCreate097")"><span class="notifCounter"></span></i>
+                        </a>
+                        @if (hasDiagram.Contains(item.id_macro_proceso) && false)
+                        {
+                            <span id="diagDelButton@(item.id_macro_proceso)">
+                                |
+                                <a href="javascript:void(0)" onclick="deleteDiagram('@item.nb_macro_proceso',@item.id_macro_proceso)" class="diagram">
+                                    <i class="fa fa-trash" title="@Strings.getMSG("Borrar")"></i>
+                                </a>
+                            </span>
+                        }
+                        @if (HasHistorial.Contains(item.id_macro_proceso))
+                        {
+                            <span>
+                                |
+                                <a href="@Url.Action("HistorialMP", new { id = item.id_macro_proceso})">
+                                    <i class="fa fa-history fa-lg" title="@Strings.getMSG("Historial de cambios")"></i>
+                                </a>
+                            </span>
+                        }
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    var options = {
+        title: '',
+        action: 'deleteDiagramPost()'
+    };
+
+    var idDiagrama = 0;
+    var baseUrl = "@Url.Action("Delete","Diagrama")";
+    var executeUrl;
+
+    function deleteDiagram(nbreg, idReg) {
+        options.title = "@(Strings.getMSG("DiagramaEntidadIndex013")) '" + nbreg + "'@(Strings.getMSG("DiagramaEntidadIndex014"))";
+        idDiagrama = idReg
+        executeUrl = baseUrl + "?id=" + idReg + "&clave=MP";
+        confirmationModal.initModal(options);
+    }
+
+
+    function deleteDiagramPost() {
+        executePost(executeUrl, null, 'deleteDiagramSuccess()','deleteDiagramError()');
+    }
+
+
+    function deleteDiagramSuccess() {
+        toastr.success("@(Strings.getMSG("DiagramaEntidadIndex015"))");
+        $("#diagButton" + idDiagrama).removeClass('text-success');
+        $("#diagButton" + idDiagrama).addClass('text-danger');
+        $("#diagDelButton" + idDiagrama).remove();
+        $("#tieneDiagrama2040").text("@Strings.getMSG("UsuarioIndex005")");
+    }
+
+    function deleteDiagramError() {
+        toastr.error("@Strings.getMSG("AvisoError003")");
+    }
+
+</script>
+

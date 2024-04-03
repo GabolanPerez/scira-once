@@ -1,0 +1,16 @@
+﻿
+
+
+
+<script>
+    $(document).ready(function () {
+        $('#chart-container').html("");
+
+        var datascource = @Html.Raw(ViewBag.data);
+
+        oc = $('#chart-container').orgchart({
+            'data': datascource,
+            'nodeContent': 'title'
+        });
+    });
+</script>

@@ -1,0 +1,54 @@
+{
+  "RepName": "Reporte de Accesos",
+  "ColNames": [
+    "Usuario",
+    "Función",
+    "Fecha"
+  ],
+  "Rows": [
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "6/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "6/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Agregar",
+      "6/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "6/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "6/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "6/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "6/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Create",
+      "6/19/2023"
+    ]
+  ],
+  "NoCols": 3,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

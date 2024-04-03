@@ -1,0 +1,43 @@
+{
+  "RepName": "Reporte de Controles con Riesgo Residual",
+  "ColNames": [
+    "Entidad",
+    "Responsable Entidad",
+    "Macro Proceso",
+    "Responsable Macro Proceso",
+    "Proceso",
+    "Responsable Proceso",
+    "Sub Proceso",
+    "Responsable Sub Proceso",
+    "Riesgo",
+    "Evento de Riesgo",
+    "Control",
+    "Actividad de Control",
+    "Riesgo Inherente",
+    "Cobertura de Control",
+    "Riesgo Residual"
+  ],
+  "Rows": [
+    [
+      "01 - CONSUBANCO, S.A. Institución de Banca Múltiple",
+      "Berenice Serrano Jiménez",
+      "MP01.01 - Contraloría Interna",
+      "Berenice Serrano Jiménez",
+      "P01.01.0001 - Manual de Cumplimiento",
+      "AB",
+      "SP01.01.0001.0002 - Proceso para Reportar Operaciones Inusuales",
+      "Berenice Serrano Jiménez",
+      "RO155",
+      "Omitir la revision y analisis de una posible operación inusual y No analizar el total de las alertas mensuales en Detectart",
+      "CO155",
+      "El Analista de prevención de lavado de dinero realizará una comparación de las alertas, entre los datos descargados por día y el total mensual que refleja en el sistema de monitoreo (DAW), a fin de mesy se realiza manualmente para corroborar que no se omitan analizar alertas.",
+      "$62500",
+      "101%",
+      "$-625"
+    ]
+  ],
+  "NoCols": 15,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

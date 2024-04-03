@@ -1,0 +1,433 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Criticidad";
+    int MI = 1;
+    int i = 0;
+    int j = 0;
+}
+@using SCIRA.Utilidades
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/AnimacionCarga.css" rel="stylesheet" />
+<link href="~/Content/Criticidad.css" rel="stylesheet" />
+
+<script>
+
+    $(document).ready(function () {
+        $("#CriticidadRiesgo").load('@(Url.Action("CriticidadNormatividad", "CriticidadNormatividad", null))');
+    });
+  
+    function disAbleForm(op) {
+        if (op == 0) {
+            $('#formCR input').prop('disabled', true);
+            $('#formCR .selectpicker').prop('disabled', true); //deshabilita todos los select dentro del formulario 
+        }
+        if (op == 1) {
+            $('#formCR input').prop('disabled', false);
+            $('#formCR .selectpicker').prop('disabled', false); //habilita todos los select dentro del formulario
+        }
+    }
+  
+    function ShowCreateCR() {
+        disAbleForm(1);
+        $("#cl_criticidad_normatividad").val("");
+        $("#nb_criticidad_normatividad").val("");
+        $(".createCRElement").show();
+        $(".editCRElement").hide();
+        $(".deleteCRElement").hide();
+        $('#createCR').modal('show');
+
+        
+    }
+
+    function ShowEditCR(id) {
+        disAbleForm(1);
+        var clave = $("#cl" + id).val();
+        var nombre = $("#nb" + id).val();
+        var color = $("#clc" + id).val();
+        debugger
+        $("#id_criticidad_normatividad").val(id);
+        $("#cl_criticidad_normatividad").val(clave);
+        $("#nb_criticidad_normatividad").val(nombre);
+        $("#cl_color_campo").selectpicker('val', color);
+
+        $(".createCRElement").hide();
+        $(".editCRElement").show();
+        $(".deleteCRElement").hide();
+        $('#createCR').modal('show');
+    }
+    debugger
+    function ShowDeleteCR(id) {
+        disAbleForm(0);
+        $(".deleteCRElement").prop('disabled', false);
+
+        var clave = $("#cl" + id).val();
+        var nombre = $("#nb" + id).val();
+        var color = $("#clc" + id).val();
+
+        $("#id_criticidad_normatividad").val(id);
+        $("#cl_criticidad_normatividad").val(clave);
+        $("#nb_criticidad_normatividad").val(nombre);
+        $("#cl_color_campo").selectpicker('val', color);
+
+        $(".createCRElement").hide();
+        $(".editCRElement").hide();
+        $(".deleteCRElement").show();
+        $('#createCR').modal('show');
+    }
+
+     function enviarCR() {
+        $('body').addClass('loading');
+         var cl = $("#cl_criticidad_normatividad").val();
+         var nb = $("#nb_criticidad_normatividad").val();
+        var msg = "";
+
+        if (cl == "") {
+            msg += "@Strings.getMSG("ManualesCreate001")<br>";
+        }
+        if (cl.length > 5) {
+            msg += "@Strings.getMSG("CriticidadIndex007")<br>";
+        }
+        if (nb == "") {
+            msg += "@Strings.getMSG("LineaNegocioCreate002")";
+        }
+        if (msg != "") {
+            $("#errorCR").html(msg);
+            $('body').removeClass('loading');
+        } else {
+            $("#errorCR").html("");
+            $('#createCR').modal('hide');
+            $("#id_criticidad_normatividad").val(0);
+            $.ajax({
+                dataType: "html",
+                type: "post",
+                url: '@(Url.Action("CreateCR", "CriticidadNormatividad"))',
+                data: $("#formCR").serialize(),
+                success: function (data) {
+                    $("#CriticidadNormatividad").html(data);
+                    $('body').removeClass('loading');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert("Fallo al agregar");
+                }
+            });
+        }
+
+    }
+
+     function editarCR() {
+        $('body').addClass('loading');
+         var cl = $("#cl_criticidad_normatividad").val();
+         var nb = $("#nb_criticidad_normatividad").val();
+        var msg = "";
+
+        if (cl == "") {
+            msg += "@Strings.getMSG("ManualesCreate001")<br>";
+        }
+        if (cl.length > 5) {
+            msg += "@Strings.getMSG("CriticidadIndex007")<br>";
+        }
+        if (nb == "") {
+            msg += "@Strings.getMSG("LineaNegocioCreate002")";
+        }
+        if (msg != "") {
+            $("#errorCR").html(msg);
+            $('body').removeClass('loading');
+        } else {
+            $("#errorCR").html("");
+            $('#createCR').modal('hide');
+
+            $.ajax({
+                dataType: "html",
+                type: "post",
+                url: '@(Url.Action("EditCR", "CriticidadNormatividad"))',
+                data: $("#formCR").serialize(),
+                success: function (data) {
+                    $("#CriticidadNormatividad").html(data);
+                    $('body').removeClass('loading');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert("Fallo al editar");
+                }
+            });
+        }
+    }
+
+     function borrarCR() {
+        $('body').addClass('loading');
+        $('#createCR').modal('hide');
+        disAbleForm(1);
+        $.ajax({
+            dataType: "html",
+            type: "post",
+            url: '@(Url.Action("DeleteCR", "CriticidadNormatividad"))',
+            data: $("#formCR").serialize(),
+            success: function (data) {
+                $("#CriticidadNormatividad").html(data);
+                $('body').removeClass('loading');
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert("Fallo al eliminar");
+            }
+        });
+    }
+
+    function showSC(idpo, idmi, idcr) {
+        var nbMI = $("#MI" + idmi).val();
+        var nbPO = $("#PO" + idpo).val();
+        $("#selectCRMI").val(nbMI);
+        $("#selectCRPO").val(nbPO);
+
+        $("#SCPO").val(idpo);
+        $("#SCMI").val(idmi);
+        $("#IDCA").val(idcr);
+
+        var html = $("#optionsSC").html();
+        $("#SC").html(html);
+        $("#SC .selectpicker").selectpicker();
+
+        $("#selectCR").modal('show');
+    }
+
+      function enviarSC() {
+        $("#selectCR").modal('hide');
+
+        var idpo = $("#SCPO").val();
+        var idmi = $("#SCMI").val();
+        var idcra = $("#IDCA").val();
+        //id actual de criticidad riesgo;
+        var idcr = $("#pr1").val();
+        var cell = "#M" + idmi + "P" + idpo;
+        var content = "#CRCM" + idmi + "P" + idpo;
+        var indicator = "#CRIM" + idmi + "P" + idpo;
+        var color = $("#clc" + idcr).val();
+        var clave = $("#cl" + idcr).val();
+
+        $(cell).css("background-color", color);
+        $(indicator).removeClass('success');
+        $(indicator).removeClass('error');
+        $(indicator).addClass('loading');
+        $(content).html(clave);
+
+        //renovar clases de la celd y su contenido
+        $(cell).removeClass('CCR' + idcra);
+        $(cell).addClass('CCR' + idcr);
+        $(content).removeClass('CRC' + idcra);
+        $(content).addClass('CRC' + idcr);
+
+        $.ajax({
+            dataType: "html",
+            async: true,
+            type: "post",
+            url: '@(Url.Action("Edit", "CriticidadNormatividad"))',
+            data: $("#formSC").serialize(),
+            success: function (data) {
+                $(indicator).removeClass('loading');
+                $(indicator).addClass('success');
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                $(indicator).removeClass('loading');
+                $(indicator).addClass('error');
+            }
+        });
+    }
+
+</script>
+
+<h2>@Strings.getMSG("Menu174")</h2>
+
+<div class="modal fade" id="createCR" tabindex="-1" role="dialog" aria-labelledby="Aviso" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <center>
+                    <h2 class="modal-title" id="gridModalLabel" style="color: #fff;">
+                        <span class="editCRElement" hidden>@Strings.getMSG("Editar")</span>
+                        <span class="createCRElement" hidden>@Strings.getMSG("Agregar")</span>
+                        <span class="deleteCRElement" hidden>@Strings.getMSG("Eliminar")</span>
+                        @Strings.getMSG("Menu174")
+                    </h2>
+                </center>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <span class="deleteCRElement" hidden>@Strings.getMSG("CriticidadIndex004")</span>
+                <br class="deleteCRElement" hidden><br class="deleteCRElement" hidden>
+
+                <form id="formCR">
+                    @Html.AntiForgeryToken()
+                    <input type="text" id="id_criticidad_normatividad" name="id_criticidad_normatividad" hidden>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="100">@Strings.getMSG("Clave")</td>
+                                <td width="100">
+                                    <div class="input-group">
+                                        <input class="form-control text-box single-line" data-val="true" data-val-required="@Strings.getMSG("EntidadCreate003")" id="cl_criticidad_normatividad" name="cl_criticidad_normatividad" type="text" value="">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default" title="" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("CriticidadIndex005")" data-original-title="@Strings.getMSG("Atencion")">
+                                                <i class="glyphicon glyphicon-question-sign"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="350"></td>
+                            </tr>
+                            <tr>
+                                <td>@Strings.getMSG("Nombre")</td>
+                                <td>
+                                    <div class="input-group">
+                                        <input class="form-control text-box single-line" data-val="true" data-val-required="@Strings.getMSG("EntidadCreate003")" id="nb_criticidad_normatividad" name="nb_criticidad_normatividad" type="text" value="">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default" title="" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("CriticidadIndex006")" data-original-title="@Strings.getMSG("Atencion")">
+                                                <i class="glyphicon glyphicon-question-sign"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <center>
+                                        <input type="button" class="btn btn-primary createCRElement" value="@Strings.getMSG("Guardar")" onclick="enviarCR()" hidden />
+                                        <input type="button" class="btn btn-primary editCRElement" value="@Strings.getMSG("Guardar")" onclick="editarCR()" hidden />
+                                        <input type="button" class="btn btn-default deleteCRElement" value="@Strings.getMSG("Borrar")" onclick="borrarCR()" hidden />
+                                    </center>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>@Strings.getMSG("Color")</td>
+                                <td>
+                                    <select class="selectpicker" data-live-search="true" id="cl_color_campo" name="cl_color_campo">
+                                        @foreach (var color in ViewBag.Colores)
+                                        {
+                                            <option value="@color.Value" style="background-color: @color.Value; color:black;">@color.Text</option>
+                                        }
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <span class="pull-left" style="color:darkred;" id="errorCR"></span>
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Strings.getMSG("Cancelar")</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="selectCR" tabindex="-1" role="dialog" aria-labelledby="SELECT" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <center>
+                    <h2 class="modal-title" id="gridModalLabel" style="color: #fff;">
+                        @Strings.getMSG("CriticidadIndex002")
+                    </h2>
+                </center>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <form id="formSC">
+                    @Html.AntiForgeryToken()
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="400"><b>@Strings.getMSG("Menu172")</b></td>
+                                <td width="400"><input id="selectCRPO" class="form-control text-box single-line" disabled type="text" value=""></td>
+                            </tr>
+                            <tr>
+                                <td><b>@Strings.getMSG("Frecuencia007")</b></td>
+                                <td><input id="selectCRMI" class="form-control text-box single-line" disabled type="text" value=""></td>
+                            </tr>
+                            <tr>
+                                <td><b>@Strings.getMSG("Menu026")</b></td>
+                                <td id="SC"></td>
+                            </tr>
+                            <tr hidden>
+                                <td>
+                                    <input type="text" id="SCPO" name="id_impacto_monetario" hidden />
+                                    <input type="text" id="SCMI" name="id_factibilidad" hidden />
+                                    <input type="text" id="IDCA" hidden />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <input type="text" hidden id="lastClase" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="enviarSC();">@Strings.getMSG("Guardar")</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Strings.getMSG("Cancelar")</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<table id="CriticidadTable">
+    <tr>
+        <td></td>
+        <td></td>
+        <td colspan="@(ViewBag.NPO)" class="PO"><div class="horizontal">@Strings.getMSG("Menu172")</div></td>
+    </tr>
+
+    <tr style="height: 150px;">
+        <td></td>
+        <td></td>
+
+        @foreach (var item in ViewBag.PO)
+        {
+            <td class="titSup">
+                <div class="Vertical">
+                    @item.nb_impacto_monetario
+                    <input type="text" hidden id="PO@(item.id_impacto_monetario)" value="@item.nb_impacto_monetario">
+                </div>
+            </td>
+        }
+    </tr>
+
+    @foreach (var item in @ViewBag.MI)
+    {
+        <tr>
+            @if (MI == 1)
+            {
+                MI = 0;
+                <td rowspan="@(ViewBag.NMI)" class="MO"><div class="VerticalNH">@Strings.getMSG("Menu173")</div></td>
+            }
+            <td class="colIzq">
+                <div class="horizontal">
+                    @item.nb_factibilidad
+                    <input type="text" hidden id="MI@(item.id_factibilidad)" value="@item.nb_factibilidad">
+                </div>
+            </td>
+            @for (j = 0; j < ViewBag.NPO; j++)
+            {
+                <td class="CRcontainer">
+                    <div class="CRCell CCR@(ViewBag.CRS[i, j].id_criticidad_normatividad)" style="background-color: @ViewBag.CRS[i, j].c_criticidad_normatividad.cl_color_campo;" onclick="showSC(@ViewBag.CRS[i, j].id_impacto_monetario,@ViewBag.CRS[i, j].id_factibilidad,@ViewBag.CRS[i, j].id_criticidad_normatividad)" id="M@(ViewBag.CRS[i, j].id_impacto_monetario)P@(ViewBag.CRS[i, j].id_factibilidad)">
+                        <div id="CRCM@(ViewBag.CRS[i, j].id_impacto_monetario)P@(ViewBag.CRS[i, j].id_factibilidad)" class="CRContent CRC@(ViewBag.CRS[i, j].c_criticidad_normatividad.id_criticidad_normatividad)">
+                            @ViewBag.CRS[i, j].c_criticidad_normatividad.cl_criticidad_normatividad
+                        </div>
+                        <div id="CRIM@(ViewBag.CRS[i, j].id_impacto_monetario)P@(ViewBag.CRS[i, j].id_factibilidad)" class="CRIndicator success">
+                        </div>
+                    </div>
+                </td>
+            }
+        </tr>
+        {
+            i++;
+        }
+    }
+
+
+</table>
+
+<br>
+<br>
+<br>
+
+<div id="CriticidadRiesgo">
+</div>

@@ -1,0 +1,44 @@
+﻿@model SCIRA.Models.c_rating_auditoria
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = @Strings.getMSG("Borrar");
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("AuditoriaIndexRatingAuditoria001")</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Strings.getMSG("Nombre")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nb_rating_auditoria)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("EvaluacionIndicadorEvaluaciones003")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.calificacion)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" />
+            |
+            @Html.ActionLink(Strings.getMSG("Regresar"), "IndexRatingAuditoria", null, new { @class = "btn btn-default btn-sm" })
+        </div>
+    }
+    
+</div>

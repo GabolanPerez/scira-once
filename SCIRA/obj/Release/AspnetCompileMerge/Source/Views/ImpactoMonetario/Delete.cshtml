@@ -1,0 +1,42 @@
+﻿@model SCIRA.Models.c_impacto_monetario
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>c_impacto_monetario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_impacto_monetario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_impacto_monetario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cl_impacto_monetario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cl_impacto_monetario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nb_impacto_monetario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nb_impacto_monetario)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

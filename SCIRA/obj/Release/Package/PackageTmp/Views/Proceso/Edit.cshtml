@@ -1,0 +1,139 @@
+﻿@model SCIRA.Models.c_proceso
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Editar Proceso";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+            //cargar el codigo numerico cuando hay un error de validacion
+            var clave = $("#cl_proceso").val();
+            var len = clave.length;
+            clave = clave.substr(1, (len - 1));
+
+            $("#aux").val(clave);
+
+            $("#aux").keyup(function () {
+                construyeClave();
+            });
+
+            $("#id_responsable").val(@Model.id_responsable);
+        });
+
+    function construyeClave() {
+        var numero = $("#aux").val();
+        var clavef;
+        clavef = "P" + numero;
+        $("#cl_proceso").val(clavef);
+    }
+</script>
+
+<h2>@Strings.getMSG("Editar")</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal well">
+        <h4>@Strings.getMSG("P")</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_proceso)
+
+        <input type="hidden" name="lu" value="@Model.id_responsable" />
+        <input type="hidden" name="clave" value="@ViewBag.clave" />
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Entidad")</label>
+                <div class="col-xs-6 col-md-5">
+                    <input class="form-control" id="entidad" type="text" value="@(Model.c_macro_proceso.c_entidad.cl_entidad + " - " + Model.c_macro_proceso.c_entidad.nb_entidad)" disabled="">
+                    @Html.ValidationMessageFor(model => model.id_macro_proceso, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MP")</label>
+                <div class="col-xs-6 col-md-5">
+
+                    @Html.DropDownListFor(model => model.id_macro_proceso, (IEnumerable<SelectListItem>)ViewBag.cl_macro_proceso, Strings.getMSG("EntidadCreate002"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("ProcesoCreate011"), @onchange = "toastr.warning('" + @Strings.getMSG("ProcesoCreate011") + "');" })
+                    <span id="states-loading-progress" style="display: none;">@Strings.getMSG("EventoRiesgoCreate010")</span>
+                    @Html.ValidationMessageFor(model => model.id_macro_proceso, "", new { @class = "text-danger" })
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" id="clave" class="btn btn-default">@Strings.getMSG("PP")</button>
+                        </div>
+                        @Html.EditorFor(model => model.cl_proceso, new { htmlAttributes = new { @class = "form-control", @type = "hidden" } })
+                        <input type="text" id="aux" class="form-control text-box single-line valid">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ProcesoCreate008")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.cl_proceso, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("P")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.nb_proceso, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MacroProcesoCreate010")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.nb_proceso, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Responsable")</label>
+                <div class="col-xs-6 col-md-5">
+                    @Html.DropDownListFor(model => model.id_responsable, (IEnumerable<SelectListItem>)ViewBag.id_responsable, Strings.getMSG("EntidadCreate002"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("ProcesoCreate009") })
+                    @Html.ValidationMessageFor(model => model.id_responsable, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Index", "Proceso", new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

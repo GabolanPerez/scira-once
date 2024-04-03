@@ -1,0 +1,26 @@
+﻿@model IEnumerable<SCIRA.Models.c_usuario_sub_proceso>
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#menuModal");
+    });
+</script>
+
+<table class="results table table-bordered table-striped table-hover table-responsive">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("SP")</th>
+            <th class="search">@Strings.getMSG("Tiempo")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.c_sub_proceso.cl_sub_proceso</td>
+                <td>@item.tiempo_sub_proceso</td>
+            </tr>
+        }
+    </tbody>
+</table>    

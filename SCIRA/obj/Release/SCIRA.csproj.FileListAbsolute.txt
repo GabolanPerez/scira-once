@@ -1,0 +1,1481 @@
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\ApplicationInsights.config
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\csc.exe
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\csc.exe.config
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\csc.rsp
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\csi.exe
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\csi.rsp
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\System.AppContext.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\vbc.exe
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\vbc.exe.config
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\vbc.rsp
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\VBCSCompiler.exe
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\SCIRA.dll.config
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\SCIRA.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\SCIRA.pdb
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\en-US\SCIRA.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Antlr3.Runtime.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\EntityFramework.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\EntityFramework.SqlServer.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Hangfire.Core.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Hangfire.SqlServer.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\itextsharp.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\LinqToExcel.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.Owin.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.Owin.Security.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\NCrontab.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Newtonsoft.Json.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Owin.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Remotion.Data.Linq.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Remotion.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Remotion.Interfaces.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Syncfusion.EJ2.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Syncfusion.Licensing.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.Helpers.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.Mvc.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.Optimization.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.Razor.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.WebPages.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.WebPages.Razor.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\WebGrease.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\EntityFramework.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\EntityFramework.SqlServer.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Hangfire.Core.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Hangfire.SqlServer.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\itextsharp.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\LinqToExcel.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.Owin.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Microsoft.Owin.Security.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\NCrontab.pdb
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Newtonsoft.Json.pdb
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Newtonsoft.Json.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Syncfusion.EJ2.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.Helpers.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.Mvc.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.Optimization.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.Razor.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.WebPages.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\System.Web.WebPages.Razor.xml
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\Antlr3.Runtime.pdb
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\es\Hangfire.Core.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\nl\Hangfire.Core.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\zh\Hangfire.Core.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\es\System.Web.Optimization.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\es\System.Web.Razor.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\obj\Release\SCIRA.csprojAssemblyReference.cache
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\obj\Release\SCIRA.dll
+C:\Users\Jorge\source\repos\SCIRA\SCIRA\obj\Release\SCIRA.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\ApplicationInsights.config
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\csc.exe
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\csc.exe.config
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\csc.rsp
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\csi.exe
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\csi.rsp
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\System.AppContext.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\vbc.exe
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\vbc.exe.config
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\vbc.rsp
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\VBCSCompiler.exe
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\SCIRA.dll.config
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\SCIRA.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\SCIRA.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\en-US\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Antlr3.Runtime.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\EntityFramework.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\EntityFramework.SqlServer.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Hangfire.Core.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Hangfire.SqlServer.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\itextsharp.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\LinqToExcel.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.Owin.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.Owin.Security.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\NCrontab.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Newtonsoft.Json.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Owin.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Remotion.Data.Linq.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Remotion.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Remotion.Interfaces.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Syncfusion.EJ2.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Syncfusion.Licensing.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.Helpers.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.Mvc.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.Optimization.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.Razor.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.WebPages.Deployment.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.WebPages.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.WebPages.Razor.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\WebGrease.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\EntityFramework.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\EntityFramework.SqlServer.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Hangfire.Core.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Hangfire.SqlServer.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\itextsharp.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\LinqToExcel.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.Owin.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Microsoft.Owin.Security.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\NCrontab.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Newtonsoft.Json.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Newtonsoft.Json.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Syncfusion.EJ2.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.Helpers.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.Mvc.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.Optimization.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.Razor.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.WebPages.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.WebPages.Deployment.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\System.Web.WebPages.Razor.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\Antlr3.Runtime.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\es\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\nl\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\zh\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\es\System.Web.Helpers.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\es\System.Web.Mvc.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\es\System.Web.Optimization.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\es\System.Web.Razor.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\es\System.Web.WebPages.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\obj\Release\SCIRA.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\obj\Release\SCIRA.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-15\SCIRA\obj\Release\SCIRA.csprojAssemblyReference.cache
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\ApplicationInsights.config
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csc.exe
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csc.exe.config
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csc.rsp
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csi.exe
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csi.rsp
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.AppContext.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\vbc.exe
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\vbc.exe.config
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\vbc.rsp
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\VBCSCompiler.exe
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\SCIRA.dll.config
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\SCIRA.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\SCIRA.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\en-US\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Antlr3.Runtime.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.SqlServer.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.Core.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.SqlServer.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\itextsharp.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\LinqToExcel.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Security.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\NCrontab.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Newtonsoft.Json.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Owin.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Remotion.Data.Linq.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Remotion.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Remotion.Interfaces.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Syncfusion.EJ2.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Syncfusion.Licensing.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Helpers.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Mvc.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Optimization.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Razor.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Deployment.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Razor.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\WebGrease.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.SqlServer.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.Core.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.SqlServer.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\itextsharp.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\LinqToExcel.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Security.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\NCrontab.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Newtonsoft.Json.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Newtonsoft.Json.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Syncfusion.EJ2.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Helpers.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Mvc.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Optimization.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Razor.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Deployment.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Razor.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Antlr3.Runtime.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\nl\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\zh\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Helpers.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Mvc.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Optimization.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Razor.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.WebPages.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csprojAssemblyReference.cache
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.pdb
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.abstractions.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.core.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.execution.desktop.dll
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.abstractions.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.core.xml
+Z:\OneDrive\trabajo\SICI\Proyectos\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.execution.desktop.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\ApplicationInsights.config
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csc.exe
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csc.exe.config
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csc.rsp
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csi.exe
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csi.rsp
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.AppContext.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\vbc.exe
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\vbc.exe.config
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\vbc.rsp
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\VBCSCompiler.exe
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\SCIRA.dll.config
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\SCIRA.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\SCIRA.pdb
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\en-US\SCIRA.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Antlr3.Runtime.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.SqlServer.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.Core.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.SqlServer.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\itextsharp.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\LinqToExcel.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Security.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\NCrontab.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Newtonsoft.Json.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Owin.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Remotion.Data.Linq.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Remotion.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Remotion.Interfaces.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Syncfusion.EJ2.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Syncfusion.Licensing.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Helpers.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Mvc.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Optimization.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Razor.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Deployment.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Razor.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\WebGrease.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.abstractions.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.core.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.execution.desktop.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.SqlServer.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.Core.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.SqlServer.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\itextsharp.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\LinqToExcel.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Security.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\NCrontab.pdb
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Newtonsoft.Json.pdb
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Newtonsoft.Json.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Syncfusion.EJ2.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Helpers.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Mvc.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Optimization.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Razor.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Deployment.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Razor.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\Antlr3.Runtime.pdb
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.abstractions.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.core.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.execution.desktop.xml
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\Hangfire.Core.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\nl\Hangfire.Core.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\zh\Hangfire.Core.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Helpers.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Mvc.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Optimization.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Razor.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.WebPages.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.AssemblyReference.cache
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.SuggestedBindingRedirects.cache
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.pdb
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\bin\de\SCIRA.resources.dll
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.Properties.Resources.de.resources
+D:\OneDrive\Documentos\Trabajo\SCIRA\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\de\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\ApplicationInsights.config
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csc.exe
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csc.exe.config
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csc.rsp
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csi.exe
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\csi.rsp
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.AppContext.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\vbc.exe
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\vbc.exe.config
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\vbc.rsp
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\VBCSCompiler.exe
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\SCIRA.dll.config
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\SCIRA.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\SCIRA.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\de\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\en-US\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Antlr3.Runtime.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.SqlServer.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.Core.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.SqlServer.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\itextsharp.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\LinqToExcel.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Security.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\NCrontab.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Newtonsoft.Json.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Owin.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Remotion.Data.Linq.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Remotion.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Remotion.Interfaces.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Syncfusion.EJ2.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Syncfusion.Licensing.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Helpers.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Mvc.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Optimization.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Razor.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Deployment.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Razor.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\WebGrease.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.abstractions.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.core.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.execution.desktop.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\EntityFramework.SqlServer.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.Core.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Hangfire.SqlServer.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\itextsharp.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\LinqToExcel.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Microsoft.Owin.Security.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\NCrontab.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Newtonsoft.Json.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Newtonsoft.Json.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Syncfusion.EJ2.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Helpers.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Mvc.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Optimization.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.Razor.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Deployment.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\System.Web.WebPages.Razor.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\Antlr3.Runtime.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.abstractions.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.core.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\xunit.execution.desktop.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\es\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\nl\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\zh\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Helpers.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Mvc.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Optimization.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.Razor.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.WebPages.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.AssemblyReference.cache
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.SuggestedBindingRedirects.cache
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.Properties.Resources.de.resources
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\de\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2021-04-16 traducción\SCIRA\obj\Release\SCIRA.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\ApplicationInsights.config
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\csc.exe
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\csc.exe.config
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\csc.rsp
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\csi.exe
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\csi.rsp
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\System.AppContext.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\vbc.exe
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\vbc.exe.config
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\vbc.rsp
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\VBCSCompiler.exe
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\SCIRA.dll.config
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\SCIRA.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\SCIRA.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\de\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\en-US\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Antlr3.Runtime.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\BouncyCastle.Crypto.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\EntityFramework.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\EntityFramework.SqlServer.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Hangfire.Core.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Hangfire.SqlServer.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\itextsharp.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\LinqToExcel.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.Owin.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.Owin.Security.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\NCrontab.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Newtonsoft.Json.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Owin.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Remotion.Data.Linq.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Remotion.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Remotion.Interfaces.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Syncfusion.EJ2.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Syncfusion.Licensing.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.Helpers.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.Mvc.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.Optimization.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.Razor.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.WebPages.Deployment.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.WebPages.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.WebPages.Razor.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\WebGrease.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\xunit.abstractions.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\xunit.core.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\xunit.execution.desktop.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\EntityFramework.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\EntityFramework.SqlServer.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Hangfire.Core.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Hangfire.SqlServer.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\itextsharp.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\LinqToExcel.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.AspNet.SignalR.Core.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.Owin.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Microsoft.Owin.Security.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\NCrontab.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Newtonsoft.Json.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Newtonsoft.Json.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Syncfusion.EJ2.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.Helpers.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.Mvc.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.Optimization.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.Razor.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.WebPages.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.WebPages.Deployment.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\System.Web.WebPages.Razor.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\Antlr3.Runtime.pdb
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\xunit.abstractions.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\xunit.core.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\xunit.execution.desktop.xml
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\ca\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\de\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\es\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\fa\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\fr\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\nb\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\nl\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\pt\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\pt-PT\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\tr-TR\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\zh\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\es\System.Web.Helpers.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\es\System.Web.Mvc.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\es\System.Web.Optimization.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\es\System.Web.Razor.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\es\System.Web.WebPages.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\SCIRA.csproj.AssemblyReference.cache
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\SCIRA.csproj.SuggestedBindingRedirects.cache
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\SCIRA.Properties.Resources.de.resources
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\de\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\SCIRA.dll
+Z:\OneDrive\trabajo\SCIRA\Proyectos\SCIRA 2022-06-24 Multilenguaje\SCIRA\obj\Release\SCIRA.pdb
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\ApplicationInsights.config
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\csc.exe
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\csc.exe.config
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\csc.rsp
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\csi.exe
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\csi.rsp
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.AppContext.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\vbc.exe
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\vbc.exe.config
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\vbc.rsp
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\VBCSCompiler.exe
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\SCIRA.dll.config
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\SCIRA.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\SCIRA.pdb
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\de\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\en-US\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Antlr3.Runtime.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\BouncyCastle.Crypto.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\EntityFramework.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\EntityFramework.SqlServer.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Hangfire.Core.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Hangfire.SqlServer.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\itextsharp.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqToExcel.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.Security.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\NCrontab.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Newtonsoft.Json.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Owin.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Remotion.Data.Linq.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Remotion.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Remotion.Interfaces.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Syncfusion.EJ2.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Syncfusion.Licensing.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Helpers.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Mvc.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Optimization.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Razor.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.Deployment.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.Razor.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\WebGrease.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.abstractions.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.core.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.execution.desktop.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\EntityFramework.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\EntityFramework.SqlServer.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Hangfire.Core.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Hangfire.SqlServer.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\itextsharp.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqToExcel.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.Core.pdb
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.Security.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\NCrontab.pdb
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Newtonsoft.Json.pdb
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Newtonsoft.Json.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Syncfusion.EJ2.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Helpers.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Mvc.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Optimization.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Razor.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.Deployment.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.Razor.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Antlr3.Runtime.pdb
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.abstractions.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.core.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.execution.desktop.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\ca\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\de\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\fa\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\fr\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\nb\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\nl\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\pt\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\pt-PT\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\tr-TR\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\zh\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.Helpers.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.Mvc.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.Optimization.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.Razor.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.WebPages.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.csproj.AssemblyReference.cache
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.csproj.SuggestedBindingRedirects.cache
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.Properties.Resources.de.resources
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\de\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.pdb
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqKit.Core.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqKit.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Linq.Dynamic.Core.dll
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqKit.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqKit.Core.xml
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Linq.Dynamic.Core.pdb
+Z:\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Linq.Dynamic.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\ApplicationInsights.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\csc.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\csc.exe.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\csc.rsp
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\csi.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\csi.rsp
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.AppContext.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\vbc.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\vbc.exe.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\vbc.rsp
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\VBCSCompiler.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\SCIRA.dll.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\SCIRA.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\SCIRA.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\de\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\en-US\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Antlr3.Runtime.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\BouncyCastle.Crypto.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\EntityFramework.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\EntityFramework.SqlServer.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Hangfire.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Hangfire.SqlServer.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\itextsharp.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqKit.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqKit.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqToExcel.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.Security.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\NCrontab.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Newtonsoft.Json.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Owin.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Remotion.Data.Linq.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Remotion.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Remotion.Interfaces.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Syncfusion.EJ2.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Syncfusion.Licensing.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Linq.Dynamic.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Helpers.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Mvc.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Optimization.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Razor.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.Razor.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\WebGrease.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.abstractions.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.execution.desktop.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\EntityFramework.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\EntityFramework.SqlServer.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Hangfire.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Hangfire.SqlServer.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\itextsharp.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqKit.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqKit.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\LinqToExcel.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Microsoft.Owin.Security.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\NCrontab.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Newtonsoft.Json.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Syncfusion.EJ2.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Linq.Dynamic.Core.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Linq.Dynamic.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Helpers.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Mvc.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Optimization.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.Razor.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\System.Web.WebPages.Razor.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\Antlr3.Runtime.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.abstractions.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\xunit.execution.desktop.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\ca\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\de\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\fa\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\fr\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\nb\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\nl\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\pt\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\pt-PT\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\tr-TR\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\zh\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.Helpers.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.Mvc.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.Optimization.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.Razor.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.WebPages.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.csproj.AssemblyReference.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.csproj.SuggestedBindingRedirects.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.Properties.Resources.de.resources
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\de\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2022-09-23 DIVISIONES AUDITORIA\SCIRA\obj\Release\SCIRA.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\ApplicationInsights.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\csc.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\csc.exe.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\csc.rsp
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\csi.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\csi.rsp
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\System.AppContext.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\vbc.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\vbc.exe.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\vbc.rsp
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\VBCSCompiler.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\SCIRA.dll.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\SCIRA.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\SCIRA.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\de\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\en-US\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Antlr3.Runtime.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\BouncyCastle.Crypto.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\EntityFramework.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\EntityFramework.SqlServer.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Hangfire.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Hangfire.SqlServer.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\itextsharp.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\LinqKit.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\LinqKit.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\LinqToExcel.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.Owin.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.Owin.Security.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\NCrontab.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Newtonsoft.Json.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Owin.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Remotion.Data.Linq.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Remotion.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Remotion.Interfaces.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Syncfusion.EJ2.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Syncfusion.Licensing.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.Helpers.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.Mvc.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.Optimization.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.Razor.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.WebPages.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.WebPages.Razor.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\WebGrease.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\xunit.abstractions.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\xunit.core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\xunit.execution.desktop.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\EntityFramework.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\EntityFramework.SqlServer.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Hangfire.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Hangfire.SqlServer.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\itextsharp.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\LinqKit.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\LinqKit.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\LinqToExcel.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.Owin.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Microsoft.Owin.Security.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\NCrontab.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Newtonsoft.Json.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Syncfusion.EJ2.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.Helpers.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.Mvc.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.Optimization.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.Razor.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.WebPages.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\System.Web.WebPages.Razor.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\Antlr3.Runtime.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\xunit.abstractions.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\xunit.core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\xunit.execution.desktop.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\ca\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\de\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\es\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\fa\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\fr\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\nb\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\nl\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\pt\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\pt-PT\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\tr-TR\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\zh\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\es\System.Web.Helpers.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\es\System.Web.Mvc.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\es\System.Web.Optimization.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\es\System.Web.Razor.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\es\System.Web.WebPages.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\SCIRA.csproj.AssemblyReference.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\SCIRA.csproj.SuggestedBindingRedirects.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.de.resources
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\de\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\SCIRA.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-04-26 Correcciones\SCIRA\obj\Release\SCIRA.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\ApplicationInsights.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csc.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csc.exe.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csc.rsp
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csi.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csi.rsp
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.AppContext.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\vbc.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\vbc.exe.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\vbc.rsp
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\VBCSCompiler.exe
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\SCIRA.dll.config
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\SCIRA.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\SCIRA.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\de\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\en-US\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Antlr3.Runtime.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\BouncyCastle.Crypto.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.SqlServer.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.SqlServer.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\itextsharp.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\LinqToExcel.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Security.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\NCrontab.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Newtonsoft.Json.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Owin.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Remotion.Data.Linq.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Remotion.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Remotion.Interfaces.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Syncfusion.EJ2.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Syncfusion.Licensing.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Helpers.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Mvc.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Optimization.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Razor.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Razor.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\WebGrease.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\xunit.abstractions.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\xunit.core.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\xunit.execution.desktop.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.SqlServer.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.SqlServer.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\itextsharp.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\LinqToExcel.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Security.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\NCrontab.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Newtonsoft.Json.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Syncfusion.EJ2.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Helpers.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Mvc.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Optimization.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Razor.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Razor.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\Antlr3.Runtime.pdb
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\xunit.abstractions.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\xunit.core.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\xunit.execution.desktop.xml
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\ca\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\de\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\es\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\fa\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\fr\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\nb\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\nl\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\pt\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\pt-PT\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\tr-TR\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\zh\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Helpers.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Mvc.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Optimization.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Razor.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.WebPages.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.AssemblyReference.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.SuggestedBindingRedirects.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.de.resources
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\de\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.dll
+C:\Users\cevi1\OneDrive\trabajo\SCIRA\v09\9.001\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.pdb
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\ApplicationInsights.config
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csc.exe
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csc.exe.config
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csc.rsp
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csi.exe
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csi.rsp
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.AppContext.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\vbc.exe
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\vbc.exe.config
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\vbc.rsp
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\VBCSCompiler.exe
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\SCIRA.dll.config
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\SCIRA.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\SCIRA.pdb
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\de\SCIRA.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\en-US\SCIRA.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Antlr3.Runtime.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\BouncyCastle.Crypto.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.SqlServer.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.Core.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.SqlServer.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\itextsharp.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.Core.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\LinqToExcel.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Security.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\NCrontab.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Newtonsoft.Json.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Owin.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Remotion.Data.Linq.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Remotion.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Remotion.Interfaces.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Syncfusion.EJ2.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Syncfusion.Licensing.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Helpers.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Mvc.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Optimization.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Razor.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Razor.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\WebGrease.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\xunit.abstractions.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\xunit.core.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\xunit.execution.desktop.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.SqlServer.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.Core.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.SqlServer.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\itextsharp.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.Core.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\LinqToExcel.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Security.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\NCrontab.pdb
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Newtonsoft.Json.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Syncfusion.EJ2.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.pdb
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Helpers.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Mvc.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Optimization.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Razor.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Razor.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\Antlr3.Runtime.pdb
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\xunit.abstractions.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\xunit.core.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\xunit.execution.desktop.xml
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\ca\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\de\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\es\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\fa\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\fr\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\nb\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\nl\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\pt\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\pt-PT\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\tr-TR\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\zh\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Helpers.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Mvc.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Optimization.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Razor.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.WebPages.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.AssemblyReference.cache
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.SuggestedBindingRedirects.cache
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.de.resources
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\de\SCIRA.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.CopyComplete
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.dll
+C:\Users\jisra\Desktop\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.pdb
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\ApplicationInsights.config
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csc.exe
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csc.exe.config
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csc.rsp
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csi.exe
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\csi.rsp
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.AppContext.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\vbc.exe
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\vbc.exe.config
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\vbc.rsp
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\VBCSCompiler.exe
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\SCIRA.dll.config
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\SCIRA.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\SCIRA.pdb
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\de\SCIRA.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\en-US\SCIRA.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Antlr3.Runtime.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\BouncyCastle.Crypto.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.SqlServer.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.Core.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.SqlServer.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\itextsharp.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.Core.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\LinqToExcel.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Security.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\NCrontab.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Newtonsoft.Json.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Owin.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Remotion.Data.Linq.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Remotion.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Remotion.Interfaces.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Syncfusion.EJ2.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Syncfusion.Licensing.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Helpers.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Mvc.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Optimization.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Razor.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Deployment.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Razor.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\WebGrease.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\xunit.abstractions.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\xunit.core.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\xunit.execution.desktop.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\EntityFramework.SqlServer.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.Core.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Hangfire.SqlServer.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\itextsharp.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\LinqKit.Core.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\LinqToExcel.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Microsoft.Owin.Security.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\NCrontab.pdb
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Newtonsoft.Json.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Syncfusion.EJ2.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.pdb
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Linq.Dynamic.Core.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Helpers.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Mvc.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Optimization.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.Razor.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Deployment.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\System.Web.WebPages.Razor.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\Antlr3.Runtime.pdb
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\xunit.abstractions.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\xunit.core.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\xunit.execution.desktop.xml
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\ca\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\de\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\es\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\fa\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\fr\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\nb\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\nl\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\pt\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\pt-BR\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\pt-PT\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\tr-TR\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\zh\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\zh-TW\Hangfire.Core.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Helpers.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Mvc.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Optimization.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.Razor.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.WebPages.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.AssemblyReference.cache
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.resources
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.de.resources
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.Properties.Resources.en-US.resources
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.GenerateResource.cache
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.CoreCompileInputs.cache
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\de\SCIRA.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\en-US\SCIRA.resources.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.csproj.Up2Date
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.dll
+C:\Users\gpelc\OneDrive\Escritorio\SCIRA 2023-Correcciones\SCIRA\obj\Release\SCIRA.pdb

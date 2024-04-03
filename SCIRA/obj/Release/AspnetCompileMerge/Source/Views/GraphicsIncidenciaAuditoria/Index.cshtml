@@ -1,0 +1,208 @@
+﻿@using SCIRA.Utilidades
+@{
+    ViewBag.Title = @Strings.getMSG("GraphicsCosteoIndex009");
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+<script src="~/Scripts/chart.js"></script>
+<script src="~/Scripts/graphics.js"></script>
+<link href="~/Content/Extras.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/MSInitialize.js"></script>
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    var modalOptions = {
+        title: "",
+        size: "xl",
+        show: true,
+        loadUrl: "@(Url.Action("Details", "GraphicsIncidenciaAuditoria"))",
+        formID: "form1"
+    }
+
+    var options1 = {
+        responsive: true,
+        title: {
+            display: true,
+            text: 'title'
+        }
+    };
+
+    var g0;
+    var gr0;
+    var tg0 = 'bar';
+    var tit0 = "@Strings.getMSG("GraphicsMRyCIndex002")";
+
+    //filtros para grafica general
+    var informes = [];
+
+    //Datos para la gráfica general
+    var data0 = @Html.Raw(ViewBag.data0); //Datos Gráfica General
+
+    $(document).ready(function () {
+        g0 = $("#g0");
+        gr0 = buildChart(data0, tg0, tit0, g0, options1);
+
+        //funciones al hacer clic en los elementos de la gráica 0;
+        document.getElementById("g0").onclick = function (evt) {
+            var activePoints = gr0.getElementsAtEvent(evt);
+            if (activePoints[0]) {
+                var chartData = activePoints[0]['_chart'].config.data;
+                var idx = activePoints[0]['_index'];
+                var id = chartData.ids[idx];
+
+
+                //DestroyActions(0);
+                details1(id);
+            }
+        };
+    });
+
+
+    function details1(id) {
+        $("#id_criticidad").val(id);
+
+        menuModal.initModal(modalOptions);
+    }
+
+
+    //$(function () {
+    //    $('.chbx').change(function () {
+    //        loadFilters();
+    //    })
+    //});
+
+    function loadFilters() {
+        $.ajax({
+            dataType: "html",
+            type: "post",
+            cache: false,
+            url: '@(Url.Action("loadFilters", "GraphicsIncidenciaAuditoria"))',
+            data: $("#form1").serialize(),
+            success: function (data) {
+                $("#contenedor1").html(data);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                toastr.error("@Strings.getMSG("GraphicsBDEIIndex012")");
+            }
+        });
+    }
+
+
+</script>
+
+<div id="contenedor1"></div>
+
+<h2>@ViewBag.Title @Strings.getMSG("GraphicsAuditoriandex003")</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active pes0"><a id="btn-pes0" href="#pes0" data-toggle="tab"><h4 class="title-pes0">@Strings.getMSG("GraphicsMRyCIndex002")</h4></a></li>
+    <li class="pes1"><a id="btn-pes1" href="#pes1" data-toggle="tab"><h4 class="title-pes1"></h4></a></li>
+    <li class="pes2"><a id="btn-pes2" href="#pes2" data-toggle="tab"><h4 class="title-pes2"></h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+    <!-- #region Generales -->
+    <div class="tab-pane fade active in pes0" id="pes0">
+        <div class="form-horizontal well">
+            <canvas id="g0" width="424" height="212" style="width: 424px; height: 212px;"></canvas>
+            <button id="ctp" class="btn btn-default" onclick="gr0.destroy(); tg0 = 'pie'; gr0 = buildChart(data0, tg0, tit0, g0, options1); $('#ctb').show(); $('#ctp').hide();">@Strings.getMSG("GraphicsMRyCIndex019")</button>
+            <button id="ctb" class="btn btn-default" onclick="gr0.destroy(); tg0 = 'bar'; gr0 = buildChart(data0, tg0, tit0, g0, options1); $('#ctp').show();  $('#ctb').hide()" style="display:none;">@Strings.getMSG("GraphicsMRyCIndex012")</button>
+        </div>
+    </div>
+    <!-- #endregion -->
+    <!-- #region Gráfica 1 -->
+    <!--<div class="tab-pane pes1" id="pes1" hidden>
+        <div class="form-horizontal well">
+            <canvas id="g1" width="424" height="212" style="width: 424px; height: 212px;"></canvas>
+            <button id="ctp1" class="btn btn-default" onclick="gr1.destroy(); tg1 = 'pie'; gr1 = buildChart(data1, tg1, tit1, g1, options1); $('#ctb1').show(); $('#ctp1').hide();">@Strings.getMSG("GraphicsMRyCIndex019")</button>
+            <button id="ctb1" class="btn btn-default" onclick="gr1.destroy(); tg1 = 'bar'; gr1 = buildChart(data1, tg1, tit1, g1, options1); $('#ctp1').show();  $('#ctb1').hide()" style="display:none;">@Strings.getMSG("GraphicsMRyCIndex012")</button>
+        </div>
+    </div>-->
+    <!-- #endregion -->
+    <!-- #region Gráfica 2 -->
+    <!--<div class="tab-pane pes2" id="pes2" hidden>
+        <div class="form-horizontal well">
+            <canvas id="g2" width="424" height="212" style="width: 424px; height: 212px;"></canvas>
+        </div>
+    </div>-->
+    <!-- #endregion -->
+</div>
+
+<!-- #region Filtros -->
+<h4>@Strings.getMSG("Filtros")</h4>
+<form id="form1">
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-1">@Strings.getMSG("GraphicsAuditoriandex004")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @Html.ListBox("informes", (MultiSelectList)ViewBag.informes, htmlAttributes: new { @class = "form-control selectpicker custom-picker", @id = "informes", @name = "informes" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("GraphicsMRyCIndex007")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <input type="text" hidden id="id_criticidad" name="id_criticidad" />
+    </div>
+</form>
+
+<!-- #endregion -->
+<!-- #region Scripts Filtros -->
+<script>
+    $(document).ready(function () {
+        $('.custom-picker').on('hide.bs.dropdown', function (e) {
+            var b1 = false;
+
+            var ninformes = $('#informes').val();
+
+
+            if (ninformes != null) {
+                ninformes.forEach(function (elemento) {
+                    if (!informes.includes(elemento)) {
+                        b1 = true;
+                    }
+                });
+                informes.forEach(function (elemento) {
+                    if (!ninformes.includes(elemento)) {
+                        b1 = true;
+                    }
+                });
+            } else {
+                if (informes.length != 0) {
+                    b1 = true;
+                }
+                ninformes = [];
+            }
+            if (b1) {
+                informes = ninformes;
+            }
+
+
+            if (b1) loadFilters();
+
+        });
+    });
+</script>
+
+<!-- #endregion -->
+<!-- #region Auxiliares -->
+<script>
+    function DestroyActions(id) {
+
+    }
+
+    function HideActions(id) {
+
+    }
+</script>
+<!-- #endregion -->

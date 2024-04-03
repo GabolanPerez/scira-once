@@ -1,0 +1,125 @@
+﻿@model SCIRA.Models.c_auditoria
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = @Strings.getMSG("AuditoriaCreateSolicitanteAuditoria004");
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+
+<button class="btn btn-circle btn-default pull-right" title="Tutorial" onclick="runTutorial();"><i class="fa fa-question fa-lg"></i></button>
+
+<h2>Agregar</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { onsubmit = "deshabilitar()" }))
+{
+    @Html.AntiForgeryToken()
+    <input type="text" id="claveh" hidden="hidden" value="MP" />
+
+    <div class="form-horizontal well">
+        <h4>Auditoría</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">Entidad</label>
+                <div class="col-xs-6 col-md-5">
+                    @Html.DropDownListFor(model => model.id_entidad, (IEnumerable<SelectListItem>)ViewBag.id_entidad, "-Seleccione Entidad-", htmlAttributes: new { @class = "form-control", @title = "Atención", data_trigger = "hover", data_toggle = "popover", data_content = "Seleccionar la entidad correspondiente." })
+                    @Html.ValidationMessageFor(model => model.id_entidad, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">Área</label>
+                <div class="col-xs-6 col-md-5">
+                    @Html.DropDownListFor(model => model.id_area, (IEnumerable<SelectListItem>)ViewBag.id_area, "-Seleccione Área-", htmlAttributes: new { @class = "form-control", @title = "Atención", data_trigger = "hover", data_toggle = "popover", data_content = "Seleccionar el área." })
+                    @Html.ValidationMessageFor(model => model.id_area, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">Clave</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.HiddenFor(model => model.cl_auditoria, new { htmlAttributes = new { @class = "form-control" } })
+                        <input type="text" id="aux" class="form-control text-box single-line valid">
+                        <div class="input-group-btn helper">
+                            <button type="button" class="btn btn-default" title="Atención" data-toggle="popover" data-trigger="hover" data-content="Clave asignada a la auditoría.">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.cl_auditoria, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">Auditoría</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.nb_auditoria, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="Atención" data-toggle="popover" data-trigger="hover" data-content="Nombre asignado a la auditoría.">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.nb_auditoria, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">¿Auditoría regulada?</label>
+                <div class="col-xs-3 col-md-2">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.es_regulada, new { htmlAttributes = new { data_toggle = "toggle", data_on = "Si", data_off = "No", data_width = "140" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="Atención" data-toggle="popover" data-trigger="hover" data-content="Una auditoría puede ser normal o regulada.">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">Horas estimadas</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.horas_estimadas, new { htmlAttributes = new { @class = "form-control", @type = "number", autocomplete = "new-password" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="Atención" data-toggle="popover" data-trigger="hover" data-content="...">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.horas_estimadas, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="form-group has-error">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="Guardar" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink("Regresar", "IndexAuditoria", "Macro Pr", new { @class = "btn btn-default return" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

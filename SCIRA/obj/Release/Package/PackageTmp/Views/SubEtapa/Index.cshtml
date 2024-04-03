@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SCIRA.Models.c_sub_etapa>
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+@{
+    ViewBag.Title = "Sub Etapas";
+}
+
+<h2>@Strings.getMSG("ReporteMRyCIndex013")</h2>
+
+<p>
+    @Html.ActionLink(Strings.getMSG("Agregar"), "Create", "SubEtapa", new { @class = "btn btn-default btn-sm" })
+</p>
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("Clave")</th>
+            <th class="search">@Strings.getMSG("ReporteMRyCIndex013")</th>
+            <th width="40"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cl_sub_etapa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nb_sub_etapa)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.id_sub_etapa })">
+                        <i class="glyphicon glyphicon-pencil" title="@Strings.getMSG("Editar")"></i>
+                    </a> |
+                    <a href="@Url.Action("Delete", new { id = item.id_sub_etapa })">
+                        <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

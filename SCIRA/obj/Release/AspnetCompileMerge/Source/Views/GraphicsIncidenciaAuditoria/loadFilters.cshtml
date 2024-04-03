@@ -1,0 +1,8 @@
+﻿<script>
+    $(document).ready(function () {
+
+        data0 = @Html.Raw(ViewBag.data0);
+        gr0.destroy();
+        gr0 = buildChart(data0, tg0, tit0, g0, options1);
+    });
+</script>

@@ -1,0 +1,117 @@
+﻿@model IEnumerable<SCIRA.Models.k_control>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.actividad_control)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.relacion_control)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.evidencia_control)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.es_control_clave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nb_aplicacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.accion_correctora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_categoria_control.cl_categoria_control)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_frecuencia_control.cl_frecuencia_control)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_grado_cobertura.cl_grado_cobertura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_naturaleza_control.cl_naturaleza_control)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_sub_proceso.cl_sub_proceso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_tipo_evidencia.cl_tipo_evidencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_tipologia_control.cl_tipologia_control)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_usuario.cl_usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_usuario1.cl_usuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.actividad_control)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.relacion_control)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.evidencia_control)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.es_control_clave)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nb_aplicacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.accion_correctora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_categoria_control.cl_categoria_control)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_frecuencia_control.cl_frecuencia_control)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_grado_cobertura.cl_grado_cobertura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_naturaleza_control.cl_naturaleza_control)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_sub_proceso.cl_sub_proceso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_tipo_evidencia.cl_tipo_evidencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_tipologia_control.cl_tipologia_control)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_usuario.cl_usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_usuario1.cl_usuario)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_control }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_control }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_control })
+        </td>
+    </tr>
+}
+
+</table>

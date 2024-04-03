@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SCIRA.Models.k_objeto>
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#menuModal");
+    });
+</script>
+
+<table class="results table table-bordered table-striped table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("DetalleOficios")</th>
+            <th>@Strings.getMSG("Entidad")</th>
+            <th>@Strings.getMSG("lyPIndex005")</th>
+            <th>@Strings.getMSG("lyPIndex006")</th>
+            <th>@Strings.getMSG("lyPIndex007")</th>
+            <th>@Strings.getMSG("Responsable")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.nb_objeto</td>
+                <td>@item.c_entidad.cl_entidad - @item.c_entidad.nb_entidad</td>
+                <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta)</td>
+                <td>@string.Format("{0:dd/MM/yyyy}", item.fe_vencimiento)</td>
+                <td>@string.Format("{0:dd/MM/yyyy}", item.fe_contestacion)</td>
+                <td>@item.c_usuario.nb_usuario</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

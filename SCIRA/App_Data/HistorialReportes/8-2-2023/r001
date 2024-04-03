@@ -1,0 +1,794 @@
+{
+  "RepName": "Reporte de Accesos",
+  "ColNames": [
+    "Usuario",
+    "Función",
+    "Fecha"
+  ],
+  "Rows": [
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/HistorialEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/HistorialEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/MacroProceso",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/MacroProceso",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/MacroProceso",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/MacroProceso",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Proceso",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorPR",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorPR",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/HistorialEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/HistorialEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/HistorialEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Historial",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/HistorialEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Proceso",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/Riesgos",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/19/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/HistorialEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/23/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/HistorialEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/Entidad",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/HistorialEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorEN",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/SubProceso",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/MacroProceso",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Diagrama/EditorSP",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Entidad/Index",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/27/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/28/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "MacroProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Edit",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Riesgo/SubProcesos",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "Proceso/Index",
+      "7/30/2023"
+    ],
+    [
+      "Jorge Rodriguez Ferreiro",
+      "SubProceso/Index",
+      "7/30/2023"
+    ]
+  ],
+  "NoCols": 3,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

@@ -1,0 +1,83 @@
+﻿@model SCIRA.Models.k_auditoria
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = @Strings.getMSG("Informe Definitivo");
+
+    var path = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data/InformesAuditoria/" + Model.idd_auditoria);
+
+
+}
+
+
+<script>
+    $(document).ready(function () {
+        $("#archivo").change(function () {
+            var filename = $("#archivo").val();
+            $("#nb_archivo").val(filename);
+            if (filename !== "") {
+                $("#submit").removeAttr("disabled");
+            } else {
+                $("#submit").attr("disabled", "disabled");
+            }
+        });
+    });
+
+    function loading() {
+        deshabilitar();
+        $("body").addClass('loading');
+    }
+
+</script>
+
+<h2>@ViewBag.Title</h2>
+
+
+@using (Html.BeginForm("InformeDefP", null, FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "loading()" }))
+    {
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("lyPIndex027")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        <input type="text" id="nb_archivo" class="form-control text-box single-line valid" readonly="readonly">
+                        <div class="input-group-btn">
+                            <label class="btn btn-default btn-file">
+                                @Strings.getMSG("Examinar") <input type="file" id="archivo" name="archivo" style="display: none;" accept="application/pdf">
+                            </label>
+                            <button type="reset" onclick="deshabilitar()" class="btn btn-default" title="Quitar archivo">
+                                <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="hidden" name="id" value="@Model.idd_auditoria" />
+
+        <br />
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" id="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" disabled="disabled"/>
+                    @Html.ActionLink(@Strings.getMSG("Regresar"),"IndexInformes","ProcesosAuditoria",new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    }
+
+<br />
+<br />
+<br />
+
+
+
+@if (ViewBag.hasFile)
+{
+    <span><embed src="@(Url.Action("GetInformeDef","ProcesosAuditoria"))/@(Model.idd_auditoria)" width="100%" height="700"></span>
+}
+
+<br />
+<br />
+<br />

@@ -1,0 +1,52 @@
+﻿@using SCIRA.Utilidades
+@model IEnumerable<SCIRA.Models.k_bdei>
+
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#modalB");
+    });
+</script>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("ReporteIyPIndex026")</th>
+            <th>@Strings.getMSG("Entidad")</th>
+            <th>@Strings.getMSG("GraphicsBDEIIndex010")</th>
+            <th>@Strings.getMSG("GraphicsBDEIIndex002")</th>
+            <th>@Strings.getMSG("GraphicsBDEIIndex003")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var perdidaRealizada = "N/A";
+            var recuperaciones = "N/A";
+            var perdidasProbables = "N/A";
+
+            try { perdidaRealizada = ((double)(item.mn_quebranto / 1000)).ToString().Replace(",", "."); } catch { }
+            try { recuperaciones = ((double)(item.mn_recuperacion / 1000)).ToString().Replace(",", "."); } catch { }
+            try { perdidasProbables = ((double)(item.mn_exposicion / 1000)).ToString().Replace(",", "."); } catch { }
+
+
+            <tr>
+                <td>
+                    @item.id_bdei
+                </td>
+                <td>
+                    @item.c_entidad.nb_entidad
+                </td>
+                <td>
+                    @perdidaRealizada
+                </td>
+                <td>
+                    @recuperaciones
+                </td>
+                <td>
+                    @perdidasProbables
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

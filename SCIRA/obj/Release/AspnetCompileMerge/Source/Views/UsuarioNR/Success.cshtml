@@ -1,0 +1,36 @@
+﻿@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Cambio exitoso";
+}
+<h2>@Strings.getMSG("UsuarioNRChangePasswordIndex016")</h2>
+
+
+@using (Html.BeginForm())
+{
+
+    <div class="form-horizontal">
+
+        <div class="form-horizontal">
+            <h4>@Strings.getMSG("Usuario") @User.Identity.Name</h4>
+            <hr />
+            
+            <div class="row">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <h5>@Strings.getMSG("UsuarioNRChangePasswordIndex015")</h5>                   
+                </div> 
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                        @Html.ActionLink(@Strings.getMSG("Regresar"), "Index", "Home","", new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

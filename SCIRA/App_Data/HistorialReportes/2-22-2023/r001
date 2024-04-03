@@ -1,0 +1,13 @@
+{
+  "RepName": "Reporte de Accesos",
+  "ColNames": [
+    "Usuario",
+    "Función",
+    "Fecha"
+  ],
+  "Rows": [],
+  "NoCols": 3,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

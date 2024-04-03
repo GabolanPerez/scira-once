@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SCIRA.Models.k_riesgo>
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#modalB");
+        $("#aviso").modal('show');
+    });
+</script>
+
+
+
+<div class="modal fade" id="aviso" tabindex="-1" role="dialog" aria-labelledby="Aviso" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="font-size: 2em;" id="modalH">
+                <center>@Strings.getMSG("GraphicsRevisionControlIndex011") "@ViewBag.nbpo", @Strings.getMSG("Menu025") "@ViewBag.nbmi" @Strings.getMSG("GraphicsRevisionControlIndex012") "@ViewBag.nbcr"</center>
+            </div>
+            <div id="modalB" class="modal-body">
+
+
+                <table class="results table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>@Strings.getMSG("Entidad")</th>
+                            <th>@Strings.getMSG("MP")</th>
+                            <th>@Strings.getMSG("P")</th>
+                            <th>@Strings.getMSG("SP")</th>
+                            <th>@Strings.getMSG("Código de Riesgo")</th>
+                            <th>@Strings.getMSG("RiesgoRiesgos003")</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @(item.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.cl_entidad + " - " + item.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.nb_entidad)
+                                </td>
+                                <td>
+                                    @(item.c_sub_proceso.c_proceso.c_macro_proceso.cl_macro_proceso + " - " + item.c_sub_proceso.c_proceso.c_macro_proceso.nb_macro_proceso)
+                                </td>
+                                <td>
+                                    @(item.c_sub_proceso.c_proceso.cl_proceso + " - " + item.c_sub_proceso.c_proceso.nb_proceso)
+                                </td>
+                                <td>
+                                    @(item.c_sub_proceso.cl_sub_proceso + " - " + item.c_sub_proceso.nb_sub_proceso)
+                                </td>
+                                <td>
+                                    @(item.nb_riesgo)
+                                </td>
+                                <td>
+                                    @(item.evento)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+            <div id="modalF" class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>

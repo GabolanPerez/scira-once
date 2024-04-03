@@ -1,0 +1,26 @@
+﻿@model SCIRA.ViewModels.AgregarProcesoViewModel
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Acceso Denegado";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+<h2>@Strings.getMSG("CertificacionInforme024")</h2>
+
+@using (Html.BeginForm())
+{
+
+    <div class="form-horizontal well">
+        <center>
+            <h4>@Strings.getMSG("CertificacionInforme025") @User.Identity.Name</h4><br><br>
+            <h1 style="font-size: 3cm"><span class="glyphicon glyphicon-lock"></span></h1><br><br>
+            <h4>@Strings.getMSG("CertificacionInforme026")</h4>
+            @Html.ActionLink(Strings.getMSG("Regresar"), "Index", "Home", "", new { @class = "btn btn-default" })
+        </center>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

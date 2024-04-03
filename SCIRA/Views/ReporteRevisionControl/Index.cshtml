@@ -1,0 +1,576 @@
+﻿@using SCIRA.Models
+@using SCIRA.Utilidades
+@using System.Reflection
+@{
+    ViewBag.Title = "Reporte de Revision de Controles";
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+
+    var db = new SICIEntities();
+
+    List<k_revision_control> revisiones = ViewBag.revisiones;
+    List<k_control> controlesSR = ViewBag.controlesSR;
+
+
+
+    var infoCEC = Utilidades.infoCamposExtra("k_control", 20);
+    var icec1 = infoCEC.ElementAt(0);
+    var icec2 = infoCEC.ElementAt(1);
+    var icec3 = infoCEC.ElementAt(2);
+
+    var calificaciones = db.c_calificacion.ToList();
+}
+
+<h2>@Strings.getMSG("Menu123")</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#cnl" data-toggle="tab"><h4>@Strings.getMSG("ReporteRevisionControlIndex036")</h4></a></li>
+    <li><a href="#cnnl" data-toggle="tab"><h4>@Strings.getMSG("ReporteFallasIndex004")</h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+
+
+    <div class="tab-pane fade active in" id="cnl">
+
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex001")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("MP")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex002")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("P")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex003")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("SP")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex004")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate015")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex005")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate017")</th>
+
+                    <th>@Strings.getMSG("CertificaciónIndex002")</th>
+                    <th>@Strings.getMSG("EventoRiesgoIndex001")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex006")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("Menu025")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex007")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("Menu023")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex008")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+
+                    <th>@Strings.getMSG("CertificaciónIndex001")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate033")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex009")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("RiesgoCreate085")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex010")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate037")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex011")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@icec1.nb_campo</th>
+                    <th>@icec2.nb_campo</th>
+                    <th>@icec1.nb_campo y @icec2.nb_campo Revisión</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@icec3.nb_campo</th>
+                    <th>@icec3.nb_campo Revisión</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate044")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex012")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("Responsable")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex013")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex014")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex014")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex037")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex015")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex038")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex016")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("Menu033")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex017")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("Menu031")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex018")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("Menu037")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex019")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("ControlDelete001")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex020")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate067")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex021")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+
+
+                    <th>@Strings.getMSG("RevisionControlCreate069")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("Menu032")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex022")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("Menu033")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex017")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("Menu035")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex023")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("Menu034")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex024")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate081")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex025")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex026")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex027")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex028")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex029")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate095")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate097")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate098")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+
+                    <th>@Strings.getMSG("RevisionControlCreate103")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate104")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate105")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th class="search">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</th>
+
+                    <th width="130px">@Strings.getMSG("RevisionControlCreate005")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate010")</th>
+                    <th width="130px">@Strings.getMSG("BDEICreate005")</th>
+
+                    <th width="130px">@Strings.getMSG("RevisionControlCreate006")</th>
+
+                    @foreach (var calif in calificaciones)
+                    {
+                        <th>@Strings.getMSG("ReporteRevisionControlIndex040") @calif.nb_calificacion</th>
+                    }
+
+
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex034")</th>
+                    <th>@Strings.getMSG("RevisionControlRevisiones003")</th>
+
+                    <th width="130px">@Strings.getMSG("Ficha")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var r in revisiones)
+                {
+                    var control = r.k_control;
+                    var riesgo = control.k_riesgo.First();
+                    var sp = control.c_sub_proceso;
+                    var pr = sp.c_proceso;
+                    var mp = pr.c_macro_proceso;
+                    var entidad = mp.c_entidad;
+                    var responsable = control.c_usuario1;
+                    var ejecutor = control.c_usuario;
+                    var area = responsable.c_area;
+
+                    var rrData = Utilidades.RRData(control);
+
+                    string asev = "";
+                    string asevr = "";
+
+                    foreach (var A in control.c_aseveracion)
+                    {
+                        asev += A.nb_aseveracion + "\n";
+                    }
+
+                    foreach (var A in r.c_aseveracion)
+                    {
+                        asevr += A.nb_aseveracion + "\n";
+                    }
+
+
+                    var rcTipologia = "";
+                    var rcFrecuencia = "";
+
+                    try
+                    {
+                        rcTipologia = r.c_tipologia_control.cl_tipologia_control + " - " + r.c_tipologia_control.nb_tipologia_control;
+                    }
+                    catch { }
+                    try
+                    {
+                        rcFrecuencia = r.c_frecuencia_control.cl_frecuencia_control + " - " + r.c_frecuencia_control.nb_frecuencia_control;
+                    }
+                    catch { }
+
+
+                    var edcNaturaleza = "";
+                    var edcTipologia = "";
+                    var edcTipoEvidencia = "";
+                    var edcCategoriaControl = "";
+
+                    try
+                    {
+                        edcNaturaleza = r.c_naturaleza_control.cl_naturaleza_control + " - " + r.c_naturaleza_control.nb_naturaleza_control;
+                    }
+                    catch { }
+                    try
+                    {
+                        edcTipologia = r.c_tipologia_control1.cl_tipologia_control + " - " + r.c_tipologia_control1.nb_tipologia_control;
+                    }
+                    catch { }
+                    try
+                    {
+                        edcTipoEvidencia = r.c_tipo_evidencia.cl_tipo_evidencia + " - " + r.c_tipo_evidencia.nb_tipo_evidencia;
+                    }
+                    catch { }
+                    try
+                    {
+                        edcCategoriaControl = r.c_categoria_control.cl_categoria_control + " - " + r.c_categoria_control.nb_categoria_control;
+                    }
+                    catch { }
+
+
+                    Type m_tipo = null;
+                    PropertyInfo[] m_propiedades = null;
+                    m_tipo = r.GetType();
+                    m_propiedades = m_tipo.GetProperties();
+
+                    int[] ncpc = new int[calificaciones.Count()];
+                    for (int i = 0; i < calificaciones.Count(); i++)
+                    {
+                        ncpc[i] = 0;
+                    }
+
+                    int prueba;
+                    int NoCalificados = 0;
+
+                    for (int i = 1; i < 41; i++)
+                    {
+                        if(i != 36)
+                        {
+                            if(i != 37)
+                            {
+                                string nb_campo = "id_cc" + i;
+
+                                var prop = m_propiedades.Where(c => c.Name == nb_campo).First();
+                                try
+                                {
+                                    prueba = int.Parse(prop.GetValue(r,null).ToString());
+                                }
+                                catch
+                                {
+                                    prueba = 0;
+                                }
+
+
+                                if(prueba != 0)
+                                {
+                                    var calif = calificaciones.Where(c => c.id_calificacion == prueba).First();
+                                    var index = calificaciones.IndexOf(calif);
+
+                                    ncpc[index]++;
+                                }
+                                else
+                                {
+                                    NoCalificados++;
+                                }
+                            }
+                        }
+                    }
+
+
+
+                <tr>
+                    <td>@entidad.cl_entidad - @entidad.nb_entidad</td>
+                    <td>@r.dg_entidad</td>
+                    <td>@r.dg_obs_1</td>
+                    <td>@(r.c_calificacion != null ? r.c_calificacion.nb_calificacion.ToString() : "")</td>
+                    <td>@mp.cl_macro_proceso - @mp.nb_macro_proceso</td>
+                    <td>@r.dg_marco_proceso</td>
+                    <td>@r.dg_obs_2</td>
+                    <td>@(r.c_calificacion1 != null ? r.c_calificacion1.nb_calificacion.ToString() : "")</td>
+                    <td>@pr.cl_proceso - @pr.nb_proceso</td>
+                    <td>@r.dg_proceso</td>
+                    <td>@r.dg_obs_3</td>
+                    <td>@(r.c_calificacion2 != null ? r.c_calificacion2.nb_calificacion.ToString() : "")</td>
+                    <td>@sp.cl_sub_proceso - @sp.nb_archivo_flujo</td>
+                    <td>@r.dg_sub_proceso</td>
+                    <td>@r.dg_obs_4</td>
+                    <td>@(r.c_calificacion3 != null ? r.c_calificacion3.nb_calificacion.ToString() : "")</td>
+                    <td>@sp.ds_sub_proceso</td>
+                    <td>@r.dg_tarea</td>
+                    <td>@r.dg_obs_5</td>
+                    <td>@(r.c_calificacion4 != null ? r.c_calificacion4.nb_calificacion.ToString() : "")</td>
+                    <td>@r.dg_nb_responsable_revision</td>
+
+                    <td>@riesgo.nb_riesgo</td>
+                    <td>@riesgo.evento</td>
+                    <td>@r.rr_evento_riesgo</td>
+                    <td>@r.rr_obs_1</td>
+                    <td>@(r.c_calificacion5 != null ? r.c_calificacion5.nb_calificacion.ToString() : "")</td>
+                    <td>@riesgo.c_magnitud_impacto.cl_magnitud_impacto - @riesgo.c_magnitud_impacto.nb_magnitud_impacto</td>
+                    <td>@r.rr_magnitud_impacto</td>
+                    <td>@r.rr_obs_2</td>
+                    <td>@(r.c_calificacion6 != null ? r.c_calificacion6.nb_calificacion.ToString() : "")</td>
+                    <td>@riesgo.c_probabilidad_ocurrencia.cl_probabilidad_ocurrencia - @riesgo.c_probabilidad_ocurrencia.nb_probabilidad_ocurrencia</td>
+                    <td>@r.rr_probabilidad_ocurrencia</td>
+                    <td>@r.rr_obs_3</td>
+                    <td>@(r.c_calificacion7 != null ? r.c_calificacion7.nb_calificacion.ToString() : "")</td>
+
+
+                    <td>@control.relacion_control</td>
+                    <td>@sp.cl_manual</td>
+                    <td>@r.rc_codigo_manual</td>
+                    <td>@r.rc_obs_1</td>
+                    <td>@(r.c_calificacion8 != null ? r.c_calificacion8.nb_calificacion.ToString() : "")</td>
+                    <td>@control.actividad_control</td>
+                    <td>@r.rc_actividad_control</td>
+                    <td>@r.rc_obs_2</td>
+                    <td>@(r.c_calificacion9 != null ? r.c_calificacion9.nb_calificacion.ToString() : "")</td>
+                    <td>@control.evidencia_control</td>
+                    <td>@r.rc_evidencia_control</td>
+                    <td>@r.rc_obs_3</td>
+                    <td>@(r.c_calificacion39 != null ? r.c_calificacion39.nb_calificacion.ToString() : "")</td>
+                    <td>@control.campo01</td>
+                    <td>@control.campo02</td>
+                    <td>@r.rc_ds_control</td>
+                    <td>@r.rc_obs_4</td>
+                    <td>@(r.c_calificacion10 != null ? r.c_calificacion10.nb_calificacion.ToString() : "")</td>
+                    <td>@control.campo03</td>
+                    <td>@r.rc_dir_general</td>
+                    <td>@r.rc_obs_5</td>
+                    <td>@(r.c_calificacion11 != null ? r.c_calificacion11.nb_calificacion.ToString() : "")</td>
+                    <td>@area.cl_area - @area.nb_area</td>
+                    <td>@r.rc_area</td>
+                    <td>@r.rc_obs_6</td>
+                    <td>@(r.c_calificacion12 != null ? r.c_calificacion12.nb_calificacion.ToString() : "")</td>
+                    <td>@responsable.nb_usuario</td>
+                    <td>@r.rc_responsable</td>
+                    <td>@r.rc_obs_7</td>
+                    <td>@(r.c_calificacion13 != null ? r.c_calificacion13.nb_calificacion.ToString() : "")</td>
+                    <td>@(Utilidades.PuestoUsuario(responsable.id_usuario))</td>
+                    <td>@r.rc_puesto_responsable</td>
+                    <td>@r.rc_obs_8</td>
+                    <td>@(r.c_calificacion14 != null ? r.c_calificacion14.nb_calificacion.ToString() : "")</td>
+                    <td>@ejecutor.nb_usuario</td>
+                    <td>@r.rc_ejecutor</td>
+                    <td>@r.rc_obs_9</td>
+                    <td>@(r.c_calificacion15 != null ? r.c_calificacion15.nb_calificacion.ToString() : "")</td>
+                    <td>@(Utilidades.PuestoUsuario(ejecutor.id_usuario))</td>
+                    <td>@r.rc_puesto_ejecutor</td>
+                    <td>@r.rc_obs_10</td>
+                    <td>@(r.c_calificacion16 != null ? r.c_calificacion16.nb_calificacion.ToString() : "")</td>
+                    <td>@control.c_tipologia_control.cl_tipologia_control - @control.c_tipologia_control.nb_tipologia_control</td>
+                    <td>@rcTipologia</td>
+                    <td>@r.rc_obs_11</td>
+                    <td>@(r.c_calificacion17 != null ? r.c_calificacion17.nb_calificacion.ToString() : "")</td>
+                    <td>@control.c_frecuencia_control.cl_frecuencia_control - @control.c_frecuencia_control.nb_frecuencia_control</td>
+                    <td>@rcFrecuencia</td>
+                    <td>@r.rc_obs_12</td>
+                    <td>@(r.c_calificacion18 != null ? r.c_calificacion18.nb_calificacion.ToString() : "")</td>
+                    <td>@Html.Raw(asev.Replace("\n", "<br/>"))</td>
+                    <td>@Html.Raw(asevr.Replace("\n", "<br/>"))</td>
+                    <td>@r.rc_obs_13</td>
+                    <td>@(r.c_calificacion19 != null ? r.c_calificacion19.nb_calificacion.ToString() : "")</td>
+                    <td>@(control.es_control_clave ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    <td>@(r.rc_control_clave ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    <td>@r.rc_obs_14</td>
+                    <td>@(r.c_calificacion20 != null ? r.c_calificacion20.nb_calificacion.ToString() : "")</td>
+                    <td>@("N/A")</td>
+                    <td>@(r.rc_control_dependiente ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    <td>@r.rc_obs_15</td>
+                    <td>@(r.c_calificacion21 != null ? r.c_calificacion21.nb_calificacion.ToString() : "")</td>
+
+
+
+                    <td>@r.edc_informacion_inputs</td>
+                    <td>@r.edc_obs_1</td>
+                    <td>@(r.c_calificacion22 != null ? r.c_calificacion22.nb_calificacion.ToString() : "")</td>
+                    <td>@control.c_naturaleza_control.cl_naturaleza_control - @control.c_naturaleza_control.nb_naturaleza_control</td>
+                    <td>@edcNaturaleza</td>
+                    <td>@r.edc_obs_2</td>
+                    <td>@(r.c_calificacion23 != null ? r.c_calificacion23.nb_calificacion.ToString() : "")</td>
+                    <td>@control.c_tipologia_control.cl_tipologia_control - @control.c_tipologia_control.nb_tipologia_control</td>
+                    <td>@edcTipologia</td>
+                    <td>@r.edc_obs_3</td>
+                    <td>@(r.c_calificacion24 != null ? r.c_calificacion24.nb_calificacion.ToString() : "")</td>
+                    <td>@control.c_tipo_evidencia.cl_tipo_evidencia - @control.c_tipo_evidencia.nb_tipo_evidencia</td>
+                    <td>@edcTipoEvidencia</td>
+                    <td>@r.edc_obs_4</td>
+                    <td>@(r.c_calificacion25 != null ? r.c_calificacion25.nb_calificacion.ToString() : "")</td>
+                    <td>@control.c_categoria_control.cl_categoria_control - @control.c_categoria_control.nb_categoria_control</td>
+                    <td>@edcCategoriaControl</td>
+                    <td>@r.edc_obs_5</td>
+                    <td>@(r.c_calificacion26 != null ? r.c_calificacion26.nb_calificacion.ToString() : "")</td>
+                    <td>@r.edc_proc_cert</td>
+                    <td>@r.edc_obs_6</td>
+                    <td>@(r.c_calificacion27 != null ? r.c_calificacion27.nb_calificacion.ToString() : "")</td>
+                    <td>@r.edc_fc1</td>
+                    <td>@r.edc_obs_7</td>
+                    <td>@(r.c_calificacion28 != null ? r.c_calificacion28.nb_calificacion.ToString() : "")</td>
+                    <td>@r.edc_fc2</td>
+                    <td>@r.edc_obs_8</td>
+                    <td>@(r.c_calificacion29 != null ? r.c_calificacion29.nb_calificacion.ToString() : "")</td>
+                    <td>@r.edc_fc3</td>
+                    <td>@r.edc_obs_9</td>
+                    <td>@(r.c_calificacion30 != null ? r.c_calificacion30.nb_calificacion.ToString() : "")</td>
+                    <td>@r.edc_fc4</td>
+                    <td>@r.edc_obs_10</td>
+                    <td>@(r.c_calificacion31 != null ? r.c_calificacion31.nb_calificacion.ToString() : "")</td>
+                    <td>@r.edc_fc5</td>
+                    <td>@r.edc_obs_11</td>
+                    <td>@(r.c_calificacion32 != null ? r.c_calificacion32.nb_calificacion.ToString() : "")</td>
+                    <td>@rrData[0]</td>
+                    <td>@(r.edc_diseño_efectivo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    <td>@r.edc_obs_12</td>
+                    <td>@(r.c_calificacion33 != null ? r.c_calificacion33.nb_calificacion.ToString() : "")</td>
+                    <td>@(r.edc_efectividad)</td>
+                    <td>@r.edc_obs_13</td>
+                    <td>@(r.c_calificacion34 != null ? r.c_calificacion34.nb_calificacion.ToString() : "")</td>
+
+                    <td>@rrData[1]</td>
+                    <td>@(r.eeo_diseño_efectivo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    <td>@(r.eeo_obs_1)</td>
+                    <td>@(r.c_calificacion37 != null ? r.c_calificacion37.nb_calificacion.ToString() : "")</td>
+                    <td>@(r.eeo_efectividad)</td>
+                    <td>@(r.eeo_obs_2)</td>
+                    <td>@(r.c_calificacion38 != null ? r.c_calificacion38.nb_calificacion.ToString() : "")</td>
+
+                    <td>@r.cg_conclusion</td>
+                    <td>@r.cg_obs_1</td>
+                    <td>@(r.c_calificacion_revision  != null ? r.c_calificacion_revision.nb_calificacion_revision : Strings.getMSG("ReporteRevisionControlIndex039"))</td>
+                    <td>@r.cg_conclusion</td>
+
+
+                    @for (int i = 0; i < calificaciones.Count(); i++)
+                    {
+                        <td>@ncpc[i]</td>
+                    }
+
+                    <td>@NoCalificados</td>
+                    
+                    <td>
+                        @foreach (var file in r.c_archivo)
+                        {
+                            <a href="@Url.Action("Download",Strings.getMSG("RevisionControlRevisiones003"), new { id = file.id_archivo})"><i class="fa fa-file@(Utilidades.getFileClass(file))" title="@file.nb_archivo"></i></a>
+                        }
+                        @if (r.c_archivo.Count() == 0)
+                        {
+                            @:@Strings.getMSG("GraphicsRevisionControlIndex010")
+                        }
+                    </td>
+                    
+                    <td>
+                        <center>
+                            <a href="#" onclick="GetPDF(@r.id_revision_control)">
+                                <i class="fa fa-file-pdf-o" title="@Strings.getMSG("Ver PDF")"></i>
+                            </a>
+                        </center>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <div class="tab-pane" id="cnnl">
+
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("MP")</th>
+                    <th>@Strings.getMSG("P")</th>
+                    <th>@Strings.getMSG("SP")</th>
+                    <th>@Strings.getMSG("RiesgoRiesgos002")</th>
+                    <th>@Strings.getMSG("RiesgoCreate084")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var control in controlesSR)
+                {
+                    var riesgo = control.k_riesgo.First();
+                    var sp = control.c_sub_proceso;
+                    var pr = sp.c_proceso;
+                    var mp = pr.c_macro_proceso;
+                    var entidad = mp.c_entidad;
+
+                    <tr>
+                        <td>@entidad.cl_entidad - @entidad.nb_entidad</td>
+                        <td>@mp.cl_macro_proceso - @mp.cl_macro_proceso</td>
+                        <td>@pr.cl_proceso - @pr.nb_proceso</td>
+                        <td>@sp.cl_sub_proceso - @sp.nb_sub_proceso</td>
+                        <td>@riesgo.nb_riesgo</td>
+                        <td>@control.relacion_control</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+<!-- #region Scripts -->
+<script>
+    function GetPDF(id) {
+        $("#menuModal .bodyContent").html('<span id="n"><embed src="@Url.Action("GetPDF","RevisionControl",null)/' + id + '" width="100%" height="700"></span>');
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("RevisionControlRevisiones005")");
+
+        $("#menuModal").modal('show');
+    }
+</script>
+<!-- #endregion -->

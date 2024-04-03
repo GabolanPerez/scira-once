@@ -1,0 +1,212 @@
+﻿@model SCIRA.Models.c_auditoria
+@using SCIRA.Models
+@using System.Reflection;
+@using SCIRA.Utilidades
+
+@{
+    var db = new SCIRA.Models.SICIEntities();
+}
+
+<script type="text/javascript" src="~/Scripts/moment-with-locales.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+
+<script>
+    function save(idAuditoria, idRangoCosteo) {
+        var id_au = idAuditoria;
+        var valor = $('#valor_' + idRangoCosteo).val();
+        var pr_costeo = idRangoCosteo;
+        res = "";
+        console.log(valor, pr_costeo, id_au);
+    debugger
+        dat = { "valor": valor, "pr_costeo": pr_costeo, "id_au": id_au };
+        url = '@(Url.Action("DCosteo", "Auditoria"))';
+        debugger
+            $.ajax({
+                dataType: "html",
+                async: false,
+                type: "post",
+                cache: false,
+                url: url,
+                data: dat,
+                success: function (data) {
+                    res = data;
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    res = null;
+                }
+            });
+        if (res == null) {
+            toastr.error('! Algo salió mal, por favor intentelo nuevamente ¡');
+        } else {
+            toastr.success('¡ Se han guardado los cambios con éxito !');
+        }
+    }
+</script>
+
+<link href="~/Content/AnimacionCarga.css" rel="stylesheet" />
+
+<input type="button" class="btn btn-default" value="Actualizar" onclick="showLVL2(@Model.id_auditoria)" />  <p class="pull-right">@Html.ActionLink(Strings.getMSG("Regresar"), "IndexUniversoAuditable", "Auditoria", new { @class = "btn btn-default return center" })</p>
+
+<form id="form1">
+    <table class="results table table-striped table-bordered table-hover tblresult tblrango">
+        <thead>
+            <tr>
+                <th>@Strings.getMSG("ValoracionRiesgoindex002")</th>
+                <th>@Strings.getMSG("RiesgoResidualConfigIndex030")</th>
+                <th>@Strings.getMSG("RiesgoResidualConfigIndex020") % </th>
+                <th>@Strings.getMSG("EvaluacionIndicadorEvaluaciones003") </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.c_rango_costeo_auditoria)
+            {
+                <tr>
+                    <td>@item.c_rango_costeo.cl_rango_costeo  -  @item.c_rango_costeo.nb_rango_costeo</td>
+
+                    <td>
+                        <center>
+                            <select class="form-control" data-content="@Strings.getMSG("IndicadorCreate037")" data-toggle="popover" data-trigger="hover" id="valor_@item.c_rango_costeo.id_rango_costeo" name="valor" title="@Strings.getMSG("Atencion")">
+                                <option value="0">-Seleccione Calificacion-</option>
+                                @foreach (SelectListItem option in ViewBag.valorL)
+                                {
+                                    <option value="@option.Value" selected="@(item.id_rango.ToString() == option.Value ? true  :  false)">@option.Text</option>
+                                }
+                            </select>
+                            @*@Html.DropDownList("valor", , Strings.getMSG("MacroProcesoCreate002"), htmlAttributes: new { @class = "form-control", id = "valor_" + item.c_rango_costeo.id_rango_costeo, @value = item.id_rango, @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content =  })*@
+                        </center>
+                    </td>
+                    <td> <input type="number" class="form-control val" id="val_@item.c_rango_costeo.id_rango_costeo" value="@item.c_rango_costeo.pr_costeo.ToString(".").Replace(",",".")" readonly /> </td>
+                    <td><span id="resultado">@item.pr_costeo.ToString(".00").Replace(",", ".")  </span></td>
+                    <td>
+                        <center>
+                            <a><i class="fa fa-save" title="@Strings.getMSG("Guardar")" onclick="save(@item.id_auditoria,@item.c_rango_costeo.id_rango_costeo);"></i></a>
+                        </center>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <center>
+        Total de calificacion : @ViewBag.Suma.ToString(".00").Replace(",", ".")
+    </center>
+    <center>
+        Riesgo : @ViewBag.nombre <span class="resaltable" style="color:@ViewBag.color;font-size: 3rem;background-color:white;">  ▰ </span>
+    </center>
+</form>
+
+<script>
+
+    var lvl2URL = '@(Url.Action("DetailsCosteo", "Auditoria"))';
+
+      $(document).ready(function () {
+        menuModal.setTitle('@Strings.getMSG("CalificacionArea001") ');
+        initTables("#menuModal");
+      });
+
+    function showLVL2() {
+        var data = $("#form2").serialize();
+
+        menuModal.bodyLoad(lvl2URL, null);
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

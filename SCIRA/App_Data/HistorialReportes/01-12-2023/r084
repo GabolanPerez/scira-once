@@ -1,0 +1,79 @@
+{
+  "RepName": "Reporte de Fichas",
+  "ColNames": [
+    "Titulo",
+    "Responsable",
+    "Tipo de Ficha",
+    "Registro Ligado",
+    "Contenido",
+    "Tipo de Recordatorio",
+    "Fecha Límite",
+    "Estado"
+  ],
+  "Rows": [
+    [
+      "Prueba Notificación Mensual",
+      "Sergio",
+      "Normatividad",
+      "PARRA-01 de la normatividad Banxico/Aplica a varias sectores",
+      "Prueba Notificación Mensual",
+      "Recurrente",
+      "01/01/2024 12:00:00 a. m.",
+      "Atendida"
+    ],
+    [
+      "Prueba Notificación Dia",
+      "Sergio",
+      "Planes de Remediación",
+      "N/A",
+      "0236",
+      "Recurrente",
+      "09/12/2023 12:00:00 a. m.",
+      "Pendiente"
+    ],
+    [
+      "Prueba",
+      "Sergio",
+      "Normatividad",
+      "ART-1 de la normatividad Circular Única de Bancos",
+      "Prueba",
+      "Único",
+      "25/10/2023 10:15:00 a. m.",
+      "Vencida"
+    ],
+    [
+      "Prueba Notificación Dia",
+      "Sergio",
+      "Incidencias",
+      "N/A",
+      "02360236023602360236",
+      "Único",
+      "03/10/2023 08:41:00 a. m.",
+      "Atendida"
+    ],
+    [
+      "Prueba Notificación Dia",
+      "Jorge Rodriguez",
+      "Planes de Remediación",
+      "N/A",
+      "PP",
+      "Recurrente",
+      "02/12/2023 12:00:00 a. m.",
+      "Pendiente"
+    ],
+    [
+      "0236",
+      "Sergio",
+      "Normatividad",
+      "Artículo 139 Bis 3 de la normatividad Reportes",
+      "0236",
+      "Recurrente",
+      "01/01/2024 12:00:00 a. m.",
+      "Pendiente"
+    ]
+  ],
+  "NoCols": 8,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

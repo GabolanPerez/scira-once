@@ -1,0 +1,33 @@
+{
+  "RepName": "Reporte de Certificación de Macro Procesos",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Macro Proceso",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "01 - Banco X",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "MP01.01 - Contraloría Interna a",
+      "Sergio",
+      "Dirección de Normatividad, cobranza y Recuperación",
+      "Enero - 2022",
+      "Me he asegurado que los Procesos que integran el Macro Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Macro Proceso no existen mas Procesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "p",
+      "No"
+    ]
+  ],
+  "NoCols": 10,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

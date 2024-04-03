@@ -1,0 +1,278 @@
+﻿@model SCIRA.Models.k_riesgo_derogado
+@using SCIRA.Models
+@using SCIRA.Utilidades
+
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Borrar";
+    k_riesgo riesgo = ViewBag.k_riesgo;
+}
+
+
+
+<script src="~/Scripts/sharedScripts.js"></script>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("Riesgo")</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Strings.getMSG("Clave")
+        </dt>
+
+        <dd>
+            @riesgo.cl_riesgo
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Nombre")
+        </dt>
+
+        <dd>
+            @riesgo.nb_riesgo
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoRiesgos003")
+        </dt>
+
+        <dd>
+            @riesgo.evento
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu026")
+        </dt>
+
+        <dd>
+            @ViewBag.Criticidad
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoCreate004")
+        </dt>
+
+        <dd>
+            @riesgo.tiene_afectacion_contable
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoCreate005")
+        </dt>
+
+        <dd>
+            @riesgo.supuesto_normativo
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoCreate098")
+        </dt>
+
+        <dd>
+            @riesgo.euc
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu025")
+        </dt>
+
+        <dd>
+            @(riesgo.c_magnitud_impacto.cl_magnitud_impacto + " - " + riesgo.c_magnitud_impacto.nb_magnitud_impacto)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu023")
+        </dt>
+
+        <dd>
+            @(riesgo.c_probabilidad_ocurrencia.cl_probabilidad_ocurrencia + " - " + riesgo.c_probabilidad_ocurrencia.nb_probabilidad_ocurrencia)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("SP")
+        </dt>
+
+        <dd>
+            @(riesgo.c_sub_proceso.cl_sub_proceso + " - " + riesgo.c_sub_proceso.nb_sub_proceso)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu024")
+        </dt>
+
+        <dd>
+            @(riesgo.c_tipo_impacto.cl_tipo_impacto + " - " + riesgo.c_tipo_impacto.nb_tipo_impacto)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu019")
+        </dt>
+
+        <dd>
+            @(riesgo.c_tipo_riesgo.cl_tipo_riesgo + " - " + riesgo.c_tipo_riesgo.nb_tipo_riesgo)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu022")
+        </dt>
+
+        <dd>
+            @(riesgo.c_tipologia_riesgo.cl_tipologia_riesgo + " - " + riesgo.c_tipologia_riesgo.nb_tipologia_riesgo)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoCreate095")
+        </dt>
+
+        <dd>
+            @(riesgo.es_riesgo_operativo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))
+        </dd>
+        @if (riesgo.es_riesgo_operativo)
+        {
+            var prs = "";
+            var stp = "";
+            var stro = "";
+            var lnro = "";
+            var fr = "";
+            var im = "";
+            var crit = "";
+
+            try { prs = riesgo.c_proceso_riesgo_operacional.nb_proceso_riesgo_operacional; } catch { }
+            try { stp = riesgo.c_sub_tipo_producto_riesgo_operacional.nb_sub_tipo_producto_riesgo_operacional; } catch { }
+            try { stro = riesgo.c_sub_tipo_riesgo_operacional.nb_sub_tipo_riesgo_operacional; } catch { }
+            try { lnro = riesgo.c_linea_negocio_riesgo_operacional.nb_linea_negocio_riesgo_operacional; } catch { }
+            try { fr = riesgo.c_frecuencia_riesgo_operacional.nb_frecuencia_riesgo_operacional; } catch { }
+            try { im = riesgo.c_impacto_riesgo_operacional.nb_impacto_riesgo_operacional; } catch { }
+            try { crit = Utilidades.Criticidad(riesgo.id_frecuencia_riesgo_operacional ?? 0, riesgo.id_impacto_riesgo_operacional ?? 0); } catch { }
+
+            <dt>
+                @Strings.getMSG("P")
+            </dt>
+
+            <dd>
+                @(prs)
+            </dd>
+
+            <dt>
+                @Strings.getMSG("Menu051")
+            </dt>
+
+            <dd>
+                @(stp)
+            </dd>
+
+            <dt>
+                @Strings.getMSG("SubTipoRiesgoOperacionalIndex001")
+            </dt>
+
+            <dd>
+                @(stro)
+            </dd>
+
+            <dt>
+                @Strings.getMSG("BDEICreate042")
+            </dt>
+
+            <dd>
+                @(lnro)
+            </dd>
+
+            <dt>
+                @Strings.getMSG("Menu053")
+            </dt>
+
+            <dd>
+                @(fr)
+            </dd>
+
+            <dt>
+                @Strings.getMSG("Menu054")
+            </dt>
+
+            <dd>
+                @(im)
+            </dd>
+
+            <dt>
+                @Strings.getMSG("BDEICreate100")
+            </dt>
+
+            <dd>
+                @(crit)
+            </dd>
+
+        }
+
+    </dl>
+
+    <br><hr /><br>
+
+    <h4>@Strings.getMSG("RiesgoDelete001")</h4>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.evento)
+        @Html.HiddenFor(model => model.id_sub_proceso)
+
+        <input id="id" name="id" hidden value="@riesgo.id_riesgo">
+
+        <div class="form-horizontal well">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RiesgoDelete002")</label>
+                <div class="col-xs-6 col-md-5">
+                    @Html.TextAreaFor(model => model.justificacion, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = @Strings.getMSG("RiesgoDelete005")})
+                    @Html.ValidationMessageFor(model => model.justificacion, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <br><hr /><br>
+        <h4>@Strings.getMSG("RiesgoDelete004")</h4>
+
+        <table id="results" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("RiesgoControles002")</th>
+                    <th width="400">@Strings.getMSG("RiesgoControles001")</th>
+                    <th>@Strings.getMSG("ReporteRevisionControlIndex037")</th>
+                    <th>@Strings.getMSG("Responsable")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.controles)
+                {
+                    <tr>
+                        <td style="white-space: nowrap">
+                            @(item.codigo_control)
+                        </td>
+                        <td style="white-space: nowrap">
+                            @(item.actividad_control)
+                        </td>
+                        <td>
+                            @(item.nb_ejecutor)
+                        </td>
+                        <td>
+                            @(item.nb_responsable)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" /> |
+            @Html.ActionLink(Strings.getMSG("Regresar"), "Return", "Utilidades", new { catalogo = 44, id = riesgo.id_sub_proceso }, new { @class = "btn btn-default btn-sm" })
+        </div>
+    }
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

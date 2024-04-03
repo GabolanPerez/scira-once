@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SCIRA.Models.c_macro_proceso>
+@using SCIRA.Utilidades
+
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#modalB");
+    });
+</script>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("Entidad")</th>
+            <th>@Strings.getMSG("MP")</th>
+            <th>@Strings.getMSG("Responsable")</th>
+            <th>@Strings.getMSG("EntidadIndex001")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(item.c_entidad.cl_entidad + " - " + item.c_entidad.nb_entidad)
+                </td>
+                <td>
+                    @(item.cl_macro_proceso + " - " + item.nb_macro_proceso)
+                </td>
+                <td>
+                    @(item.c_usuario.nb_usuario)
+                </td>
+                <td>
+                    @Utilidades.PuestoUsuario(item.id_responsable)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

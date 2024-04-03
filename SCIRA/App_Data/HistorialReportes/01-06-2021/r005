@@ -1,0 +1,33 @@
+{
+  "RepName": "Reporte de Certificación",
+  "ColNames": [
+    "Entidad",
+    "Responsable Entidad",
+    "Macro Proceso",
+    "Responsable Macro Proceso",
+    "Proceso",
+    "Responsable Proceso",
+    "Sub Proceso",
+    "Responsable Sub Proceso",
+    "Código de Riesgo",
+    "Evento de Riesgo",
+    "Código de Control",
+    "Actividad de Control/Acción Correctora",
+    "Clave de la Certificación",
+    "Periodo de Certificación",
+    "Procedimiento de Certificación",
+    "Tipo de Evaluación",
+    "No de Pruebas Mínimo ",
+    "No Semestre 1",
+    "No Semestre 2",
+    "No Pruebas Realizadas ",
+    "¿Tiene Funcionamiento Efectivo?",
+    "¿Tiene Diseño Efectivo?",
+    "¿Tiene Archivos?"
+  ],
+  "Rows": [],
+  "NoCols": 23,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

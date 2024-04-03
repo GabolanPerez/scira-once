@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SCIRA.Models.k_objeto>
+@using SCIRA.Utilidades
+
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#modalB");
+    });
+</script>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("Entidad")</th>
+            <th>@Strings.getMSG("MCSubProcesoIndex002")</th>
+            <th>@Strings.getMSG("GraphicsOficioIndex022")</th>
+            <th>@Strings.getMSG("Responsable")</th>
+            <th>@Strings.getMSG("GraphicsOficioIndex023")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            string tipo = item.tipo_objeto == 1 ? @Strings.getMSG("PendientesVerTodoIndex009") : item.tipo_objeto == 2 ? @Strings.getMSG("GraphicsOficioIndex020") : @Strings.getMSG("GraphicsOficioIndex021");
+            <tr>
+                <td>
+                    @item.c_entidad.nb_entidad
+                </td>
+                <td>
+                    @tipo
+                </td>
+                <td>
+                    @item.nb_objeto
+                </td>
+                <td>
+                    @item.c_usuario.nb_usuario
+                </td>
+                <td>
+                    @string.Format("{0:dd/MM/yyyy}", item.fe_vencimiento)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+{
+  "RepName": "Reporte de Riesgos Derogados",
+  "ColNames": [
+    "Macro Proceso",
+    "Proceso",
+    "Sub Proceso",
+    "Evento de Riesgo",
+    "Justificación"
+  ],
+  "Rows": [
+    [
+      "MP01.01 - Contraloría Interna",
+      "P01.01.0001 - Manual de Cumplimiento",
+      "SP01.01.0001.0002 - Proceso para Reportar Operaciones Inusuales",
+      "RO155 - Omitir la revision y analisis de una posible operación inusual y No analizar el total de las alertas mensuales en Detectart",
+      "Prueba de funcionalidad"
+    ]
+  ],
+  "NoCols": 5,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

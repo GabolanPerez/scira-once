@@ -1,0 +1,394 @@
+﻿@using SCIRA.Models;
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = Strings.getMSG("GraphicsCosteoIndex009");
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+
+    List<k_revision_control> revisiones = ViewBag.revisiones;
+
+
+}
+<script src="~/Scripts/chart.js"></script>
+<script src="~/Scripts/graphics.js"></script>
+<link href="~/Content/Extras.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/MSInitialize.js"></script>
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    var tableInitialize = 0;
+
+
+    var modalOptions = {
+        title: "",
+        size: "lg",
+        show: true,
+        loadUrl: "@(Url.Action("Details","GraphicsRevisionControl"))",
+        formID: "form1"
+    }
+
+    var options1 = {
+        responsive: true,
+        title: {
+            display: true,
+            text: 'title'
+        }
+    };
+
+    var g0;
+    var gr0;
+    var tg0 = 'bar';
+    var tit0 = "@Strings.getMSG("Menu084")";
+
+    //filtros para grafica general
+    var entidades = [];
+    var puestos = [];
+    var usuarios = [];
+    var niveles = [];
+
+    //Datos para la gráfica general
+    var data0 = @Html.Raw(ViewBag.d0) //Datos Gráfica General
+
+    $(document).ready(function () {
+        g0 = $("#g0");
+        gr0 = buildChart(data0, tg0, tit0, g0, options1);
+
+        //funciones al hacer clic en los elementos de la gráica 0;
+        document.getElementById("g0").onclick = function (evt) {
+            var activePoints = gr0.getElementsAtEvent(evt);
+            if (activePoints[0]) {
+                var chartData = activePoints[0]['_chart'].config.data;
+                var idx = activePoints[0]['_index'];
+                //var label = chartData.labels[idx];
+                //var value = chartData.datasets[0].data[idx];
+
+                details1(idx);
+            }
+        };
+    });
+
+
+    function details1(id) {
+        $("#TPg0").val(id);
+
+        menuModal.initModal(modalOptions);
+    }
+
+
+    $(function () {
+        $('.chbx').change(function () {
+            loadFilters();
+        })
+    });
+
+    function loadFilters() {
+
+        $.ajax({
+            dataType: "html",
+            type: "post",
+            cache: false,
+            url: '@(Url.Action("loadFilters", "GraphicsRevisionControl"))',
+            data: $("#form1").serialize(),
+            success: function (data) {
+                $("#contenedor1").html(data);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                toastr.error("@Strings.getMSG("GraphicsBDEIIndex012")");
+            }
+        });
+    }
+
+
+</script>
+
+<div id="contenedor1"></div>
+
+<h2>@ViewBag.Title @Strings.getMSG("Menu084")</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active pes0"><a id="btn-pes0" href="#pes0" data-toggle="tab"><h4 class="title-pes0">@Strings.getMSG("GraphicsMRyCIndex002")</h4></a></li>
+    <li class="pes1"><a id="btn-pes1" href="#pes1" data-toggle="tab"><h4 class="title-pes1">@Strings.getMSG("GraphicsRevisionControlIndex013")</h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+    <!-- #region Generales -->
+    <div class="tab-pane fade active in pes0" id="pes0">
+        <div class="form-horizontal well">
+            <canvas id="g0" width="424" height="212" style="width: 424px; height: 212px;"></canvas>
+            <button id="ctp" class="btn btn-default" onclick="gr0.destroy(); tg0 = 'pie'; gr0 = buildChart(data0, tg0, tit0, g0, options1); $('#ctb').show(); $('#ctp').hide();">@Strings.getMSG("GraphicsMRyCIndex019")</button>
+            <button id="ctb" class="btn btn-default" onclick="gr0.destroy(); tg0 = 'bar'; gr0 = buildChart(data0, tg0, tit0, g0, options1); $('#ctp').show();  $('#ctb').hide()" style="display:none;">@Strings.getMSG("GraphicsMRyCIndex012")</button>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <div class="tab-pane pes1" id="pes1">
+        <div class="form-horizontal well" id="tablaConteo">
+            @{Html.RenderPartial("tablaConteo", (object)revisiones);}
+        </div>
+    </div>
+</div>
+
+<!-- #region Filtros -->
+<h4>@Strings.getMSG("Filtros")</h4>
+<form id="form1">
+    <div class="form-horizontal">
+
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-1">@Strings.getMSG("Entidad")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @Html.ListBox("entidades", (MultiSelectList)ViewBag.entidades, htmlAttributes: new { @class = "form-control selectpicker custom-picker", @id = "entidades", @name = "entidades" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("GraphicsMRyCIndex007")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-1">@Strings.getMSG("Puestos")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @Html.ListBox("puestos", (MultiSelectList)ViewBag.puestos, htmlAttributes: new { @class = "form-control selectpicker custom-picker", @id = "puestos", @name = "puestos" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("GraphicsMRyCIndex007")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-1">@Strings.getMSG("Descendientes")</label>
+                <div class="col-xs-2 col-md-1">
+                    <div class="input-group">
+                        <input type="checkbox" class="chbx" id="check2" name="check2" data-toggle="toggle" data-on="@Strings.getMSG("UsuarioIndex004")" data-off="@Strings.getMSG("UsuarioIndex005")" data-width="40" />
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("GraphicsMRyCIndex008")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-1">@Strings.getMSG("Niveles")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @Html.ListBox("niveles", (MultiSelectList)ViewBag.niveles, htmlAttributes: new { @class = "form-control selectpicker custom-picker", @id = "niveles", @name = "niveles" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("GraphicsMRyCIndex007")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-1">@Strings.getMSG("Descendientes")</label>
+                <div class="col-xs-2 col-md-1">
+                    <div class="input-group">
+                        <input type="checkbox" class="chbx" id="check3" name="check3" data-toggle="toggle" data-on="@Strings.getMSG("UsuarioIndex004")" data-off="@Strings.getMSG("UsuarioIndex005")" data-width="40" />
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("GraphicsMRyCIndex009")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-1">@Strings.getMSG("Usuario")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @Html.ListBox("usuarios", (MultiSelectList)ViewBag.usuarios, htmlAttributes: new { @class = "form-control selectpicker custom-picker", @id = "usuarios", @name = "usuarios" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("GraphicsMRyCIndex007")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="form-group" id="chbx">
+                <label class="control-label col-xs-3 col-md-1">@Strings.getMSG("UOI")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        <input type="checkbox" class="chbx" id="check1" name="check1" data-toggle="toggle" data-on="@Strings.getMSG("Unir")" data-off="@Strings.getMSG("Intersectar")" data-width="232" />
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("GraphicsMRyCIndex010")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <input type="text" hidden id="TPg0" name="TPg0" />
+        <input type="text" hidden id="TPg1" name="TPg1" />
+        <input type="text" hidden id="TPg2" name="TPg2" />
+    </div>
+</form>
+
+<!-- #endregion -->
+<!-- #region Scripts Filtros -->
+<script>
+    $(document).ready(function () {
+        $('.custom-picker').on('hide.bs.dropdown', function (e) {
+            var b1 = false;
+            var b2 = false;
+            var b3 = false;
+            var b4 = false;
+
+            var nentidades = $('#entidades').val();
+            var npuestos = $('#puestos').val();
+            var nusuarios = $('#usuarios').val();
+            var nniveles = $('#niveles').val();
+
+
+            if (nentidades != null) {
+                nentidades.forEach(function (elemento) {
+                    if (!entidades.includes(elemento)) {
+                        b1 = true;
+                    }
+                });
+                entidades.forEach(function (elemento) {
+                    if (!nentidades.includes(elemento)) {
+                        b1 = true;
+                    }
+                });
+            } else {
+                if (entidades.length != 0) {
+                    b1 = true;
+                }
+                nentidades = [];
+            }
+            if (b1) {
+                entidades = nentidades;
+            }
+
+            if (npuestos != null) {
+                npuestos.forEach(function (elemento) {
+                    if (!puestos.includes(elemento)) {
+                        b2 = true;
+                    }
+                });
+                puestos.forEach(function (elemento) {
+                    if (!npuestos.includes(elemento)) {
+                        b2 = true;
+                    }
+                });
+            } else {
+                if (puestos.length != 0) {
+                    b2 = true;
+                }
+                npuestos = [];
+            }
+            if (b2) {
+                puestos = npuestos;
+            }
+
+            if (nusuarios != null) {
+                nusuarios.forEach(function (elemento) {
+                    if (!usuarios.includes(elemento)) {
+                        b3 = true;
+                    }
+                });
+                usuarios.forEach(function (elemento) {
+                    if (!nusuarios.includes(elemento)) {
+                        b3 = true;
+                    }
+                });
+            } else {
+                if (usuarios.length != 0) {
+                    b3 = true;
+                }
+                nusuarios = [];
+            }
+            if (b3) {
+                usuarios = nusuarios;
+            }
+
+            if (nniveles != null) {
+                nniveles.forEach(function (elemento) {
+                    if (!niveles.includes(elemento)) {
+                        b4 = true;
+                    }
+                });
+                niveles.forEach(function (elemento) {
+                    if (!nniveles.includes(elemento)) {
+                        b4 = true;
+                    }
+                });
+            } else {
+                if (niveles.length != 0) {
+                    b4 = true;
+                }
+                nniveles = [];
+            }
+
+            if (b4) {
+                niveles = nniveles;
+            }
+
+            if (b1 || b2 || b3 || b4) loadFilters();
+
+        });
+    });
+</script>
+
+<!-- #endregion -->
+<!-- #region Auxiliares -->
+<script>
+    function DestroyActions(id) {
+        if (gr1 != null) {
+            if (id == 0) {
+
+                gr1.destroy();
+            }
+            if (gr2 != null) {
+                gr2.destroy();
+            }
+        }
+    }
+
+    function HideActions(id) {
+        if (id == 1) {
+            $(".title-pes2").text("");
+        }
+    }
+</script>
+<!-- #endregion -->

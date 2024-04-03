@@ -1,0 +1,2356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.core.2.4.1\build\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.4.1\build\xunit.core.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A4796E1-BAD6-4239-B8E4-F432C6B57954}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCIRA</RootNamespace>
+    <AssemblyName>SCIRA</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TypeScriptToolsVersion>3.3</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptLib>dom,es2015</TypeScriptLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TypeScriptLib>dom,es2015</TypeScriptLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.Core, Version=1.7.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.7.30\lib\net46\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.7.30.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.SqlServer.1.7.30\lib\net45\Hangfire.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit, Version=1.2.2.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqKit.1.2.2\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit.Core, Version=1.2.2.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqKit.Core.1.2.2\lib\net45\LinqKit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.3\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.4.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.4.3\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="NCrontab, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NCrontab.3.3.1\lib\net35\NCrontab.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.EJ2, Version=19.1500.0.55, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.EJ2.MVC5.19.1.0.55\lib\net45\Syncfusion.EJ2.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=19.1460.0.55, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.19.1.0.55\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Linq.Dynamic.Core, Version=1.2.20.0, Culture=neutral, PublicKeyToken=0f07ec44de6ac832, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.Core.1.2.20\lib\net46\System.Linq.Dynamic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.4.1\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AjustesCertificacionController.cs" />
+    <Compile Include="Controllers\BDEIR2813Controller.cs" />
+    <Compile Include="Controllers\BDEIR2812Controller.cs" />
+    <Compile Include="Controllers\BDEIR2811Controller.cs" />
+    <Compile Include="Controllers\CertificacionInformeController.cs" />
+    <Compile Include="Controllers\CertificacionSubProcesoController.cs" />
+    <Compile Include="Controllers\CertificacionProcesoController.cs" />
+    <Compile Include="Controllers\CertificacionMacroProcesoController.cs" />
+    <Compile Include="Controllers\CertificacionEntidadController.cs" />
+    <Compile Include="Controllers\AuditoriaController.cs" />
+    <Compile Include="Controllers\CalificacionRevisionController.cs" />
+    <Compile Include="Controllers\CalificacionController.cs" />
+    <Compile Include="Controllers\AseveracionController.cs" />
+    <Compile Include="Controllers\CatalogoConceptoBDEIController.cs" />
+    <Compile Include="Controllers\CausaBDEIController.cs" />
+    <Compile Include="Controllers\ComiteController.cs" />
+    <Compile Include="Controllers\CriticidadContenidoController.cs" />
+    <Compile Include="Controllers\CriticidadNormatividadController.cs" />
+    <Compile Include="Controllers\ReporteSPNM1Controller.cs" />
+    <Compile Include="Controllers\RequiereFichaController.cs" />
+    <Compile Include="Controllers\FactibilidadController.cs" />
+    <Compile Include="Controllers\ImpactoMonetarioController.cs" />
+    <Compile Include="Controllers\TipoObligacionController.cs" />
+    <Compile Include="Controllers\FrecuenciaController.cs" />
+    <Compile Include="Controllers\GraphicsSeguimientoAuditoriaController.cs" />
+    <Compile Include="Controllers\GraphicsIncidenciaAuditoriaController.cs" />
+    <Compile Include="Controllers\MinimoRiesgoOperativoBDEIController.cs" />
+    <Compile Include="Controllers\CumplimientoController.cs" />
+    <Compile Include="Controllers\RangoController.cs" />
+    <Compile Include="Controllers\ReporteCambiosSubProcesosController.cs" />
+    <Compile Include="Controllers\ReporteCambiosProcesosController.cs" />
+    <Compile Include="Controllers\ReporteCambiosMacroProcesosController.cs" />
+    <Compile Include="Controllers\ReporteCertificacionSubProcesoController.cs" />
+    <Compile Include="Controllers\ReporteCertificacionProcesoController.cs" />
+    <Compile Include="Controllers\ReporteCertificacionMacroProcesoController.cs" />
+    <Compile Include="Controllers\ReporteCertificacionEntidadController.cs" />
+    <Compile Include="Controllers\RiesgoAsociadoBDEIController.cs" />
+    <Compile Include="Controllers\DiagramaTestController.cs" />
+    <Compile Include="Controllers\DiagramaController.cs" />
+    <Compile Include="Controllers\GraphicsRevisionControlController.cs" />
+    <Compile Include="Controllers\ConsultaNormatividadController.cs" />
+    <Compile Include="Controllers\NormatividadBKPController.cs" />
+    <Compile Include="Controllers\ProcesosAuditoriaController.cs" />
+    <Compile Include="Controllers\ReporteRevisionControlController.cs" />
+    <Compile Include="Controllers\RevisionControlController.cs" />
+    <Compile Include="Controllers\EvaluacionIndicadorDiarioController .cs" />
+    <Compile Include="Controllers\GraphicsIndicadorDiarioController.cs" />
+    <Compile Include="Controllers\IndicadorDiarioController.cs" />
+    <Compile Include="Controllers\ContenidoGrupoController.cs" />
+    <Compile Include="Controllers\ReporteIndicadorDiarioController.cs" />
+    <Compile Include="Controllers\RolAuditController.cs" />
+    <Compile Include="Controllers\TiemposSubProcesosController.cs" />
+    <Compile Include="Controllers\GraphicsFichasController.cs" />
+    <Compile Include="Controllers\NormatividadOperacionController.cs" />
+    <Compile Include="Controllers\FichaController.cs" />
+    <Compile Include="Controllers\ArchivosController.cs" />
+    <Compile Include="Controllers\AjustesMailController.cs" />
+    <Compile Include="Controllers\CriticidadRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\GraphicsCosteoController.cs" />
+    <Compile Include="Controllers\ManualesController.cs" />
+    <Compile Include="Controllers\ImpactoRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\FrecuenciaRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\HistorialReportesController.cs" />
+    <Compile Include="Controllers\CodeActionsController.cs" />
+    <Compile Include="Controllers\CategoriaLineaNegocioRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\CanalRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\AmbitoRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\ClaseEventoRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\EstructuraManualController.cs" />
+    <Compile Include="Controllers\CosteoController.cs" />
+    <Compile Include="Controllers\ReporteSubActividadesCosteoController.cs" />
+    <Compile Include="Controllers\ReporteFichasController.cs" />
+    <Compile Include="Controllers\ReportePersonalController.cs" />
+    <Compile Include="Controllers\SubTipoProductoRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\ProcesoRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\LineaNegocioRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\SubTipoRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\ProductoRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\TipoRiesgoOperacionalController.cs" />
+    <Compile Include="Controllers\GraphicsMapaCalorCriticidadController.cs" />
+    <Compile Include="Controllers\GraphicsOficioController.cs" />
+    <Compile Include="Controllers\GraphicsPlanesRem.cs" />
+    <Compile Include="Controllers\GraphicsIndicadorController.cs" />
+    <Compile Include="Controllers\GraphicsBDEIController.cs" />
+    <Compile Include="Controllers\MassiveNotificationController.cs" />
+    <Compile Include="Controllers\MCSubProcesoController.cs" />
+    <Compile Include="Controllers\PuestoController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\AjustesSeguridadController.cs" />
+    <Compile Include="Controllers\ActividadController.cs" />
+    <Compile Include="Controllers\ActividadCosteoController.cs" />
+    <Compile Include="Controllers\AreaController.cs" />
+    <Compile Include="Controllers\BDEIController.cs" />
+    <Compile Include="Controllers\BenchmarkController.cs" />
+    <Compile Include="Controllers\CategoriaControlController.cs" />
+    <Compile Include="Controllers\CategoriaRiesgoController.cs" />
+    <Compile Include="Controllers\ClasificacionIncidenciaController.cs" />
+    <Compile Include="Controllers\ConclusionPlanController.cs" />
+    <Compile Include="Controllers\ContestacionOficioController.cs" />
+    <Compile Include="Controllers\ReporteIyPController.cs" />
+    <Compile Include="Controllers\ReportePRController.cs" />
+    <Compile Include="Controllers\RespuestaIncidenciaController.cs" />
+    <Compile Include="Controllers\OrigenAutoridadController.cs" />
+    <Compile Include="Controllers\CentroCostoController.cs" />
+    <Compile Include="Controllers\CertificacionController.cs" />
+    <Compile Include="Controllers\ClaseTipologiaRiesgoController.cs" />
+    <Compile Include="Controllers\ContenidoNormatividadController.cs" />
+    <Compile Include="Controllers\ControlController.cs" />
+    <Compile Include="Controllers\CuentaContableController.cs" />
+    <Compile Include="Controllers\EntidadController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\EstatusBDEIController.cs" />
+    <Compile Include="Controllers\EtapaController.cs" />
+    <Compile Include="Controllers\EvaluacionIndicadorController.cs" />
+    <Compile Include="Controllers\EventoRiesgoController.cs" />
+    <Compile Include="Controllers\FlujoNarrativaController.cs" />
+    <Compile Include="Controllers\FrecuenciaControlController.cs" />
+    <Compile Include="Controllers\FrecuenciaIndicadorController.cs" />
+    <Compile Include="Controllers\GradoCoberturaController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndicadorController.cs" />
+    <Compile Include="Controllers\InicioController.cs" />
+    <Compile Include="Controllers\PlanesRemController.cs" />
+    <Compile Include="Controllers\LineaNegocioController.cs" />
+    <Compile Include="Controllers\MacroProcesoController.cs" />
+    <Compile Include="Controllers\MagnitudImpactoController.cs" />
+    <Compile Include="Controllers\IyPController.cs" />
+    <Compile Include="Controllers\MCControlController.cs" />
+    <Compile Include="Controllers\MCRiesgoController.cs" />
+    <Compile Include="Controllers\MonedaController.cs" />
+    <Compile Include="Controllers\NaturalezaControlController.cs" />
+    <Compile Include="Controllers\NivelNormatividadController.cs" />
+    <Compile Include="Controllers\NormatividadController.cs" />
+    <Compile Include="Controllers\PeriodoCertificacionController.cs" />
+    <Compile Include="Controllers\PeriodoIndicadorController.cs" />
+    <Compile Include="Controllers\ProbabilidadOcurrenciaController.cs" />
+    <Compile Include="Controllers\ProcesoBenchmarkController.cs" />
+    <Compile Include="Controllers\ProcesoController.cs" />
+    <Compile Include="Controllers\CriticidadController.cs" />
+    <Compile Include="Controllers\PruebaAutoEvaluacionController.cs" />
+    <Compile Include="Controllers\ReporteFallasController.cs" />
+    <Compile Include="Controllers\ReporteBenchmarkController.cs" />
+    <Compile Include="Controllers\ReporteController.cs" />
+    <Compile Include="Controllers\ReporteAccesoController.cs" />
+    <Compile Include="Controllers\ReporteCambiosMRyCController.cs" />
+    <Compile Include="Controllers\ReporteSPNMController.cs" />
+    <Compile Include="Controllers\ReporteRRController.cs" />
+    <Compile Include="Controllers\ReporteCosteoController.cs" />
+    <Compile Include="Controllers\ReporteEstructuraController.cs" />
+    <Compile Include="Controllers\ReporteFlujoNarrativaController.cs" />
+    <Compile Include="Controllers\ReporteCertificacionController.cs" />
+    <Compile Include="Controllers\ReporteGeneralBDEIController.cs" />
+    <Compile Include="Controllers\ReporteIndicadorController.cs" />
+    <Compile Include="Controllers\ReporteMRyCController.cs" />
+    <Compile Include="Controllers\RiesgoController.cs" />
+    <Compile Include="Controllers\RolController.cs" />
+    <Compile Include="Controllers\SelectListController.cs" />
+    <Compile Include="Controllers\SubClaseTipologiaRiesgoController.cs" />
+    <Compile Include="Controllers\SubEtapaController.cs" />
+    <Compile Include="Controllers\SubProcesoBenchmarkController.cs" />
+    <Compile Include="Controllers\SubProcesoController.cs" />
+    <Compile Include="Controllers\SubProcesosCUBController.cs" />
+    <Compile Include="Controllers\TipoEvaluacionController.cs" />
+    <Compile Include="Controllers\TipoEvidenciaController.cs" />
+    <Compile Include="Controllers\TipoImpactoController.cs" />
+    <Compile Include="Controllers\TipologiaControlController.cs" />
+    <Compile Include="Controllers\TipologiaRiesgoController.cs" />
+    <Compile Include="Controllers\TipologiaSubProcesoController.cs" />
+    <Compile Include="Controllers\TipoNormatividadController.cs" />
+    <Compile Include="Controllers\PendientesController.cs" />
+    <Compile Include="Controllers\TipoRiesgoController.cs" />
+    <Compile Include="Controllers\ManualController.cs" />
+    <Compile Include="Controllers\TipoSolucionController.cs" />
+    <Compile Include="Controllers\UnidadIndicadorController.cs" />
+    <Compile Include="Controllers\RiesgoResidualConfigController.cs" />
+    <Compile Include="Controllers\GraphicsMRyCController.cs" />
+    <Compile Include="Controllers\UsuarioAuditoriaController.cs" />
+    <Compile Include="Controllers\UtilidadesController.cs" />
+    <Compile Include="Controllers\UsuarioNRController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Hubs\HangfireBootstrapper.cs" />
+    <Compile Include="Hubs\ChatHub.cs" />
+    <Compile Include="Hubs\ApplicationPreload.cs" />
+    <Compile Include="Hubs\Startup.cs" />
+    <Compile Include="Models\a_campo_cobertura_control.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\a_input_rc.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\a_procedimiento_prueba_rc.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_actividad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_ambito_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_archivo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_area.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_area_costeo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_area_costeo_n2.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_area_costeo_n3.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_area_costeo_n3_sub_proceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_area_costeo_sub_proceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_aseveracion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_calificacion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_calificacion_indicador.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_calificacion_revision.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_campo_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_campo_programa.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_canal_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_catalogo_concepto.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_categoria_control.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_categoria_linea_negocio_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_categoria_riesgo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_causa_bdei.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_centro_costo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_clase_evento.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_clase_tipologia_riesgo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_clasificacion_incidencia.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_comite.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_concepto_cuenta_contable.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_contenido_grupo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_contenido_manual.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_contenido_normatividad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_criticidad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_criticidad1.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_criticidad_normatividad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_criticidad_programa_trabajo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_criticidad_riesgo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_criticidad_riesgo_ro.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_criticidad_ro.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_cuenta_contable.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_cumplimiento.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_division_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_ds_evento.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_entidad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_error_contable.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_estatus_bdei.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_estatus_programa_trabajo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_estatus_usuario.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_estructura_manual.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_etapa.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_evento_riesgo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_factibilidad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_frecuencia.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_frecuencia_control.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_frecuencia_indicador.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_frecuencia_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_funcion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_grado_cobertura.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_grupo_cuenta_contable.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_impacto_monetario.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_impacto_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_indicador.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_indicador_diario.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_linea_negocio.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_linea_negocio_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_macro_proceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_magnitud_impacto.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_menu_funcion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_mes.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_meta_campo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_minimo_riesgo_operativo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_moneda.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_naturaleza_control.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_nivel_manual.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_nivel_normatividad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_normatividad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_obligacion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_origen_autoridad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_parametro.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_periodo_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_periodo_certificacion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_periodo_indicador.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_probabilidad_ocurrencia.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_proceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_proceso_benchmark.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_proceso_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_producto_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_prueba_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_prueba_auto_eval.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_puesto.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_rango.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_rango_costeo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_rango_costeo_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_rating_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_requiere_ficha.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_riesgo_asociado_bdei.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_rol.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_solicitante_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_sub_clase_tipologia_riesgo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_sub_etapa.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_sub_proceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_sub_proceso_benchmark.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_sub_proceso_normatividad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_sub_tipo_producto_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_sub_tipo_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipologia_control.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipologia_riesgo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipologia_sub_proceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipo_evaluacion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipo_evidencia.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipo_impacto.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipo_normatividad.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipo_riesgo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipo_riesgo_asociado.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipo_riesgo_operacional.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_tipo_solucion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_unidad_indicador.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_usuario.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_usuario_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\c_usuario_sub_proceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\h_acceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\h_excepcion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\h_password.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\info_sici.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kd_r2811.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kd_r2812.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kd_r2813.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kg_r2811.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kg_r2812.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\kg_r2813.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_bdei.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_benchmarck.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_campo_auditoria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_campo_programa.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_certificacion_control.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_certificacion_estructura.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_comentario_programa_trabajo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_control.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_evaluacion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_evaluacion_diaria.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_incidencia.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_objeto.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_plan.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_programa_trabajo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_revision_control.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_riesgo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_riesgo_derogado.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\k_riesgo_residual.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\obtiene_controles_Result.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\obtiene_sub_procesos_Result.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReportTemplateModel.cs" />
+    <Compile Include="Models\DataTableAjaxPostModel.cs" />
+    <Compile Include="Models\ISelectListRepository.cs" />
+    <Compile Include="Models\r_conclusion_plan.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\r_contestacion_oficio.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\r_control.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\r_evento.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\r_macro_proceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\r_proceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\r_registro_evento.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\r_respuesta.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\r_riesgo.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\r_seguimiento.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\r_sub_proceso.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SelectListRepository.cs" />
+    <Compile Include="Models\SICIEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SICIEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SICIEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SICIEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SICIEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_bdei.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_benchmark.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_certificacion.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_estructura.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_flujo_narrativa.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_indicador.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_IyP_t1.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_IyP_t2.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_IyP_t3.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_IyP_t4.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_IyP_t5.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_IyP_t6.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\v_mryc.cs">
+      <DependentUpon>SICIEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\IdentityPersonalizado.cs" />
+    <Compile Include="Seguridad\PrincipalPersonalizado.cs" />
+    <Compile Include="Seguridad\ProveedorAutenticacion.cs" />
+    <Compile Include="Seguridad\UsuarioMembership.cs" />
+    <Compile Include="Utilidades\DecimalModelBinder.cs" />
+    <Compile Include="Utilidades\DropDown.cs" />
+    <Compile Include="Utilidades\DeleteActions.cs" />
+    <Compile Include="Utilidades\GenerateDoc.cs" />
+    <Compile Include="Utilidades\Globals.cs" />
+    <Compile Include="Utilidades\Notification.cs" />
+    <Compile Include="Utilidades\Strings.cs" />
+    <Compile Include="Utilidades\Utilidades.cs" />
+    <Compile Include="Utilidades\SeguridadUtilidades.cs" />
+    <Compile Include="Validaciones\AccessAudit.cs" />
+    <Compile Include="Validaciones\CustomErrorHandler.cs" />
+    <Compile Include="Validaciones\Access.cs" />
+    <Compile Include="Validaciones\AccionCorrectora.cs" />
+    <Compile Include="Validaciones\OnlySuperUser.cs" />
+    <Compile Include="Validaciones\OverloadAvoider.cs" />
+    <Compile Include="Validaciones\PasswordSettings.cs" />
+    <Compile Include="Validaciones\CompararClaveCifradaAttribute.cs" />
+    <Compile Include="Validaciones\CompararNumeradorAttribute.cs" />
+    <Compile Include="Validaciones\Exists.cs" />
+    <Compile Include="Validaciones\mpCode.cs" />
+    <Compile Include="Validaciones\NotOnlyRead.cs" />
+    <Compile Include="Validaciones\pCode.cs" />
+    <Compile Include="Validaciones\spCode.cs" />
+    <Compile Include="ViewModels\HistoricReportViewModel.cs" />
+    <Compile Include="ViewModels\AgregarClaseEventoViewModel.cs" />
+    <Compile Include="ViewModels\AjustesCertificacionViewModel.cs" />
+    <Compile Include="ViewModels\InfAudViewModel.cs" />
+    <Compile Include="ViewModels\FichasViewModel.cs" />
+    <Compile Include="ViewModels\Reportes\EstructuraRepModel.cs" />
+    <Compile Include="ViewModels\Reportes\RangoModel- Copia.cs" />
+    <Compile Include="ViewModels\RGRevViewModel.cs" />
+    <Compile Include="ViewModels\AsignaUsuarioRolViewModel.cs" />
+    <Compile Include="ViewModels\AjustesMailViewModel.cs" />
+    <Compile Include="ViewModels\GraphicsViewModel.cs" />
+    <Compile Include="ViewModels\ConfiguracionesEventosViewModel.cs" />
+    <Compile Include="ViewModels\NotificationsViewModel.cs" />
+    <Compile Include="ViewModels\CertificacionControlViewModel.cs" />
+    <Compile Include="ViewModels\AgregarEventoRiesgoViewModel.cs" />
+    <Compile Include="ViewModels\AgregarSubProcesoBenchViewModel.cs" />
+    <Compile Include="ViewModels\AgregarProcesoBenchViewModel.cs" />
+    <Compile Include="ViewModels\AjustesSeguridadViewModel.cs" />
+    <Compile Include="ViewModels\DirectionViewModel.cs" />
+    <Compile Include="ViewModels\emailViewModel.cs" />
+    <Compile Include="ViewModels\RegistrosRelacionadosViewModel.cs" />
+    <Compile Include="ViewModels\Reportes\IyP1RepModel.cs" />
+    <Compile Include="ViewModels\Reportes\MRyCRepModel.cs" />
+    <Compile Include="ViewModels\ParticipanteDearSanta.cs" />
+    <Compile Include="ViewModels\SPNMViewModel.cs" />
+    <Compile Include="ViewModels\PSPCosteoViewModel.cs" />
+    <Compile Include="ViewModels\AgregarBenchmarkViewModel.cs" />
+    <Compile Include="ViewModels\AgregarControlMGViewModel.cs" />
+    <Compile Include="ViewModels\AgregarControlViewModel.cs" />
+    <Compile Include="ViewModels\AgregarEvaluacionViewModel.cs" />
+    <Compile Include="ViewModels\AgregarNormatividadViewModel.cs" />
+    <Compile Include="ViewModels\AgregarProcesoViewModel.cs" />
+    <Compile Include="ViewModels\AgregarRiesgoMGViewModel.cs" />
+    <Compile Include="ViewModels\AgregarRiesgoViewModel.cs" />
+    <Compile Include="ViewModels\AgregarRolViewModel.cs" />
+    <Compile Include="ViewModels\AgregarSubProcesoViewModel.cs" />
+    <Compile Include="ViewModels\AsignaRolUsuarioViewModel.cs" />
+    <Compile Include="ViewModels\AsignaUsuarioPuestoViewModel.cs" />
+    <Compile Include="ViewModels\CambiarContrasenaViewModel.cs" />
+    <Compile Include="ViewModels\ContenidoNormatividadViewModel.cs" />
+    <Compile Include="ViewModels\EditarDatosUsuarioViewModel.cs" />
+    <Compile Include="ViewModels\EditarRiesgoMGViewModel.cs" />
+    <Compile Include="ViewModels\EditarRiesgoViewModel.cs" />
+    <Compile Include="ViewModels\ListaControlesCertificacionViewModel.cs" />
+    <Compile Include="ViewModels\ListaControlesViewModel.cs" />
+    <Compile Include="ViewModels\ListaMacroProcesoViewModel.cs" />
+    <Compile Include="ViewModels\ActividadesCosteoViewModel.cs" />
+    <Compile Include="ViewModels\ListaRiesgosViewModel.cs" />
+    <Compile Include="ViewModels\ListaSubProcesosCUBViewModel.cs" />
+    <Compile Include="ViewModels\ListaSubProcesosFNViewModel.cs" />
+    <Compile Include="ViewModels\ListaSubProcesosViewModel.cs" />
+    <Compile Include="ViewModels\SPCUBViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\logotipo.png" />
+    <Content Include="App_Data\Plantillas\Plantillas.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\Plantillas\TutorialMessages.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\AddedContent.css" />
+    <Content Include="Content\ej2\bootstrap-dark.css" />
+    <Content Include="Content\ej2\bootstrap.css" />
+    <Content Include="Content\ej2\bootstrap4.css" />
+    <Content Include="Content\ej2\compatibility\bootstrap.css" />
+    <Content Include="Content\ej2\compatibility\bootstrap4.css" />
+    <Content Include="Content\ej2\compatibility\fabric.css" />
+    <Content Include="Content\ej2\compatibility\highcontrast.css" />
+    <Content Include="Content\ej2\compatibility\material.css" />
+    <Content Include="Content\ej2\fabric-dark.css" />
+    <Content Include="Content\ej2\fabric.css" />
+    <Content Include="Content\ej2\highcontrast.css" />
+    <Content Include="Content\ej2\material-dark.css" />
+    <Content Include="Content\ej2\material.css" />
+    <Content Include="Content\logo.png" />
+    <Content Include="Content\AnimacionCarga.css" />
+    <Content Include="Content\avatar_2x.png" />
+    <Content Include="Content\base.css" />
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-select.min.css" />
+    <Content Include="Content\bootstrap-simplex.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap-toggle.min.css" />
+    <Content Include="Content\bootstrap-year-calendar.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\cron-picker.css" />
+    <Content Include="Content\dropzone.css" />
+    <Content Include="Content\enjoyhint.css" />
+    <Content Include="Content\Extras.css" />
+    <Content Include="Content\DataTables\css\autoFill.bootstrap.css" />
+    <Content Include="Content\DataTables\css\autoFill.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\autoFill.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.dataTables.css" />
+    <Content Include="Content\DataTables\css\autoFill.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.foundation.css" />
+    <Content Include="Content\DataTables\css\autoFill.foundation.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.jqueryui.css" />
+    <Content Include="Content\DataTables\css\autoFill.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\autoFill.semanticui.css" />
+    <Content Include="Content\DataTables\css\autoFill.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\buttons.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\buttons.dataTables.css" />
+    <Content Include="Content\DataTables\css\buttons.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\buttons.foundation.css" />
+    <Content Include="Content\DataTables\css\buttons.foundation.min.css" />
+    <Content Include="Content\DataTables\css\buttons.jqueryui.css" />
+    <Content Include="Content\DataTables\css\buttons.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\buttons.semanticui.css" />
+    <Content Include="Content\DataTables\css\buttons.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\colReorder.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.dataTables.css" />
+    <Content Include="Content\DataTables\css\colReorder.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.foundation.css" />
+    <Content Include="Content\DataTables\css\colReorder.foundation.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.jqueryui.css" />
+    <Content Include="Content\DataTables\css\colReorder.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\colReorder.semanticui.css" />
+    <Content Include="Content\DataTables\css\colReorder.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.foundation.css" />
+    <Content Include="Content\DataTables\css\dataTables.foundation.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.jqueryui.css" />
+    <Content Include="Content\DataTables\css\dataTables.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.material.css" />
+    <Content Include="Content\DataTables\css\dataTables.material.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.semanticui.css" />
+    <Content Include="Content\DataTables\css\dataTables.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\dataTables.uikit.css" />
+    <Content Include="Content\DataTables\css\dataTables.uikit.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.dataTables.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.foundation.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.foundation.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.jqueryui.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.semanticui.css" />
+    <Content Include="Content\DataTables\css\fixedColumns.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.dataTables.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.foundation.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.foundation.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.jqueryui.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.semanticui.css" />
+    <Content Include="Content\DataTables\css\fixedHeader.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\keyTable.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.dataTables.css" />
+    <Content Include="Content\DataTables\css\keyTable.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.foundation.css" />
+    <Content Include="Content\DataTables\css\keyTable.foundation.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.jqueryui.css" />
+    <Content Include="Content\DataTables\css\keyTable.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\keyTable.semanticui.css" />
+    <Content Include="Content\DataTables\css\keyTable.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\responsive.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\responsive.dataTables.css" />
+    <Content Include="Content\DataTables\css\responsive.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\responsive.foundation.css" />
+    <Content Include="Content\DataTables\css\responsive.foundation.min.css" />
+    <Content Include="Content\DataTables\css\responsive.jqueryui.css" />
+    <Content Include="Content\DataTables\css\responsive.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\responsive.semanticui.css" />
+    <Content Include="Content\DataTables\css\responsive.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.bootstrap.css" />
+    <Content Include="Content\DataTables\css\rowGroup.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\rowGroup.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.dataTables.css" />
+    <Content Include="Content\DataTables\css\rowGroup.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.foundation.css" />
+    <Content Include="Content\DataTables\css\rowGroup.foundation.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.jqueryui.css" />
+    <Content Include="Content\DataTables\css\rowGroup.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\rowGroup.semanticui.css" />
+    <Content Include="Content\DataTables\css\rowGroup.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\rowReorder.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.dataTables.css" />
+    <Content Include="Content\DataTables\css\rowReorder.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.foundation.css" />
+    <Content Include="Content\DataTables\css\rowReorder.foundation.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.jqueryui.css" />
+    <Content Include="Content\DataTables\css\rowReorder.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\rowReorder.semanticui.css" />
+    <Content Include="Content\DataTables\css\rowReorder.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\scroller.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\scroller.dataTables.css" />
+    <Content Include="Content\DataTables\css\scroller.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\scroller.foundation.css" />
+    <Content Include="Content\DataTables\css\scroller.foundation.min.css" />
+    <Content Include="Content\DataTables\css\scroller.jqueryui.css" />
+    <Content Include="Content\DataTables\css\scroller.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\scroller.semanticui.css" />
+    <Content Include="Content\DataTables\css\scroller.semanticui.min.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap.min.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap4.css" />
+    <Content Include="Content\DataTables\css\select.bootstrap4.min.css" />
+    <Content Include="Content\DataTables\css\select.dataTables.css" />
+    <Content Include="Content\DataTables\css\select.dataTables.min.css" />
+    <Content Include="Content\DataTables\css\select.foundation.css" />
+    <Content Include="Content\DataTables\css\select.foundation.min.css" />
+    <Content Include="Content\DataTables\css\select.jqueryui.css" />
+    <Content Include="Content\DataTables\css\select.jqueryui.min.css" />
+    <Content Include="Content\DataTables\css\select.semanticui.css" />
+    <Content Include="Content\DataTables\css\select.semanticui.min.css" />
+    <Content Include="Content\DataTables\images\details_close.png" />
+    <Content Include="Content\DataTables\images\details_open.png" />
+    <Content Include="Content\DataTables\images\sort_asc.png" />
+    <Content Include="Content\DataTables\images\sort_asc_disabled.png" />
+    <Content Include="Content\DataTables\images\sort_both.png" />
+    <Content Include="Content\DataTables\images\sort_desc.png" />
+    <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
+    <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\error.png" />
+    <Content Include="Content\fondo.jpg" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\1.jpg" />
+    <Content Include="Content\Images\10.jpg" />
+    <Content Include="Content\Images\11.jpg" />
+    <Content Include="Content\Images\12.GIF" />
+    <Content Include="Content\Images\2.jpg" />
+    <Content Include="Content\Images\3.jpg" />
+    <Content Include="Content\Images\4.jpg" />
+    <Content Include="Content\Images\5.jpg" />
+    <Content Include="Content\Images\6.jpg" />
+    <Content Include="Content\Images\7.jpg" />
+    <Content Include="Content\Images\8.jpg" />
+    <Content Include="Content\Images\9.jpg" />
+    <Content Include="Content\Images\ADRIES.png" />
+    <Content Include="Content\Images\ADRIESWBG.png" />
+    <Content Include="Content\Images\SICI.gif" />
+    <Content Include="Content\jquery.orgchart.css" />
+    <Content Include="Content\loader.gif" />
+    <Content Include="Content\loader2.gif" />
+    <Content Include="Content\maquetacion.css" />
+    <Content Include="Content\mensajes.css" />
+    <Content Include="Content\multiple-select.css" />
+    <Content Include="Content\Criticidad.css" />
+    <Content Include="Content\RiesgoResidual.css" />
+    <Content Include="Content\sb-admin-2.css" />
+    <Content Include="Content\success.png" />
+    <Content Include="Content\popper.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\DataTables\css\semanticui.scss" />
+    <Content Include="Content\DataTables\css\mixins.scss" />
+    <Content Include="Content\DataTables\css\common.scss" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="App_Data\Informes-Oficios\a1-1" />
+    <Content Include="App_Data\Informes-Oficios\a1-7" />
+    <Content Include="App_Data\Informes-Oficios\a1-8" />
+    <Content Include="App_Data\Informes-Oficios\a1-9" />
+    <Content Include="Connected Services\Application Insights\ConnectedService.json" />
+    <Content Include="Models\SICIEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SICIEntities.edmx</DependentUpon>
+      <LastGenOutput>SICIEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SICIEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SICIEntities.edmx</DependentUpon>
+      <LastGenOutput>SICIEntities.cs</LastGenOutput>
+    </Content>
+    <Content Include="package.json" />
+    <Content Include="libman.json" />
+    <Content Include="Content\Manual.pdf" />
+    <Content Include="Content\ManualEn.pdf" />
+    <EntityDeploy Include="Models\SICIEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SICIEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SICIEntities.edmx.diagram">
+      <DependentUpon>SICIEntities.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\sici.string.com.mx - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-2.2.4.intellisense.js" />
+    <Content Include="Scripts\ej2\ej2.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.3.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.3.min.js" />
+    <Content Include="Scripts\popover.js" />
+    <Content Include="Scripts\tools\sanitizer.js" />
+    <Content Include="Scripts\tooltip.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-select.js" />
+    <Content Include="Scripts\bootstrap-toggle.min.js" />
+    <Content Include="Scripts\bootstrap-year-calendar.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\BootstrapMenu.min.js" />
+    <Content Include="Scripts\chart.js" />
+    <Content Include="Scripts\cron-picker.js" />
+    <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
+    <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\autoFill.bootstrap4.js" />
+    <Content Include="Scripts\DataTables\autoFill.bootstrap4.min.js" />
+    <Content Include="Scripts\DataTables\autoFill.foundation.js" />
+    <Content Include="Scripts\DataTables\autoFill.foundation.min.js" />
+    <Content Include="Scripts\DataTables\autoFill.jqueryui.js" />
+    <Content Include="Scripts\DataTables\autoFill.jqueryui.min.js" />
+    <Content Include="Scripts\DataTables\autoFill.semanticui.js" />
+    <Content Include="Scripts\DataTables\autoFill.semanticui.min.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap4.js" />
+    <Content Include="Scripts\DataTables\buttons.bootstrap4.min.js" />
+    <Content Include="Scripts\DataTables\buttons.colVis.js" />
+    <Content Include="Scripts\DataTables\buttons.colVis.min.js" />
+    <Content Include="Scripts\DataTables\buttons.flash.js" />
+    <Content Include="Scripts\DataTables\buttons.flash.min.js" />
+    <Content Include="Scripts\DataTables\buttons.foundation.js" />
+    <Content Include="Scripts\DataTables\buttons.foundation.min.js" />
+    <Content Include="Scripts\DataTables\buttons.html5.js" />
+    <Content Include="Scripts\DataTables\buttons.html5.min.js" />
+    <Content Include="Scripts\DataTables\buttons.jqueryui.js" />
+    <Content Include="Scripts\DataTables\buttons.jqueryui.min.js" />
+    <Content Include="Scripts\DataTables\buttons.print.js" />
+    <Content Include="Scripts\DataTables\buttons.print.min.js" />
+    <Content Include="Scripts\DataTables\buttons.semanticui.js" />
+    <Content Include="Scripts\DataTables\buttons.semanticui.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.autoFill.js" />
+    <Content Include="Scripts\DataTables\dataTables.autoFill.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap4.js" />
+    <Content Include="Scripts\DataTables\dataTables.bootstrap4.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.buttons.js" />
+    <Content Include="Scripts\DataTables\dataTables.buttons.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.colReorder.js" />
+    <Content Include="Scripts\DataTables\dataTables.colReorder.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedColumns.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedColumns.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedHeader.js" />
+    <Content Include="Scripts\DataTables\dataTables.fixedHeader.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.foundation.js" />
+    <Content Include="Scripts\DataTables\dataTables.foundation.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.jqueryui.js" />
+    <Content Include="Scripts\DataTables\dataTables.jqueryui.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.keyTable.js" />
+    <Content Include="Scripts\DataTables\dataTables.keyTable.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.material.js" />
+    <Content Include="Scripts\DataTables\dataTables.material.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.responsive.js" />
+    <Content Include="Scripts\DataTables\dataTables.responsive.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.rowGroup.js" />
+    <Content Include="Scripts\DataTables\dataTables.rowGroup.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.rowReorder.js" />
+    <Content Include="Scripts\DataTables\dataTables.rowReorder.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.scroller.js" />
+    <Content Include="Scripts\DataTables\dataTables.scroller.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.select.js" />
+    <Content Include="Scripts\DataTables\dataTables.select.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.semanticui.js" />
+    <Content Include="Scripts\DataTables\dataTables.semanticui.min.js" />
+    <Content Include="Scripts\DataTables\dataTables.uikit.js" />
+    <Content Include="Scripts\DataTables\dataTables.uikit.min.js" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.js" />
+    <Content Include="Scripts\DataTables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\DataTables\jszip.min.js" />
+    <Content Include="Scripts\DataTables\pdfmake.min.js" />
+    <Content Include="Scripts\DataTables\responsive.bootstrap.js" />
+    <Content Include="Scripts\DataTables\responsive.bootstrap.min.js" />
+    <Content Include="Scripts\DataTables\responsive.bootstrap4.js" />
+    <Content Include="Scripts\DataTables\responsive.bootstrap4.min.js" />
+    <Content Include="Scripts\DataTables\responsive.foundation.js" />
+    <Content Include="Scripts\DataTables\responsive.foundation.min.js" />
+    <Content Include="Scripts\DataTables\responsive.jqueryui.js" />
+    <Content Include="Scripts\DataTables\responsive.jqueryui.min.js" />
+    <Content Include="Scripts\DataTables\responsive.semanticui.js" />
+    <Content Include="Scripts\DataTables\responsive.semanticui.min.js" />
+    <Content Include="Scripts\DataTables\vfs_fonts.js" />
+    <Content Include="Scripts\dropzone.js" />
+    <Content Include="Scripts\enjoyhint.js" />
+    <Content Include="Scripts\jquery-2.2.4.js" />
+    <Content Include="Scripts\jquery-2.2.4.min.js" />
+    <Content Include="Scripts\jquery-2.2.4.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.backstretch.js" />
+    <Content Include="Scripts\jquery.backstretch.min.js" />
+    <Content Include="Scripts\jquery.orgchart.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\kinetic.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\multiple-select.js" />
+    <Content Include="Scripts\OrgChart.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\MSInitialize.js" />
+    <Content Include="Scripts\Certificacion.js" />
+    <Content Include="Scripts\graphics.js" />
+    <Content Include="Scripts\sb-admin-2.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\dropzone-config.js" />
+    <Content Include="Scripts\Tutorial.js" />
+    <Content Include="Scripts\textControl.js" />
+    <Content Include="Scripts\sharedScripts.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Views\Riesgo\Editar.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Area\Create.cshtml" />
+    <Content Include="Views\Area\Delete.cshtml" />
+    <Content Include="Views\Area\Edit.cshtml" />
+    <Content Include="Views\Area\Index.cshtml" />
+    <Content Include="Views\Entidad\Create.cshtml" />
+    <Content Include="Views\Entidad\Delete.cshtml" />
+    <Content Include="Views\Entidad\Edit.cshtml" />
+    <Content Include="Views\Entidad\Index.cshtml" />
+    <Content Include="Views\MacroProceso\Create.cshtml" />
+    <Content Include="Views\MacroProceso\Delete.cshtml" />
+    <Content Include="Views\MacroProceso\Edit.cshtml" />
+    <Content Include="Views\MacroProceso\Index.cshtml" />
+    <Content Include="Views\Proceso\Delete.cshtml" />
+    <Content Include="Views\Proceso\Edit.cshtml" />
+    <Content Include="Views\Proceso\Index.cshtml" />
+    <Content Include="Views\LineaNegocio\Create.cshtml" />
+    <Content Include="Views\LineaNegocio\Delete.cshtml" />
+    <Content Include="Views\LineaNegocio\Edit.cshtml" />
+    <Content Include="Views\LineaNegocio\Index.cshtml" />
+    <Content Include="Views\Etapa\Create.cshtml" />
+    <Content Include="Views\Etapa\Delete.cshtml" />
+    <Content Include="Views\Etapa\Edit.cshtml" />
+    <Content Include="Views\Etapa\Index.cshtml" />
+    <Content Include="Views\SubEtapa\Create.cshtml" />
+    <Content Include="Views\SubEtapa\Delete.cshtml" />
+    <Content Include="Views\SubEtapa\Edit.cshtml" />
+    <Content Include="Views\SubEtapa\Index.cshtml" />
+    <Content Include="Views\PeriodoIndicador\Create.cshtml" />
+    <Content Include="Views\PeriodoIndicador\Delete.cshtml" />
+    <Content Include="Views\PeriodoIndicador\Edit.cshtml" />
+    <Content Include="Views\PeriodoIndicador\Index.cshtml" />
+    <Content Include="Views\PeriodoCertificacion\Create.cshtml" />
+    <Content Include="Views\PeriodoCertificacion\Delete.cshtml" />
+    <Content Include="Views\PeriodoCertificacion\Edit.cshtml" />
+    <Content Include="Views\PeriodoCertificacion\Index.cshtml" />
+    <Content Include="Views\CuentaContable\CreateBKP.cshtml" />
+    <Content Include="Views\CuentaContable\DeleteBKP.cshtml" />
+    <Content Include="Views\CuentaContable\EditBKP.cshtml" />
+    <Content Include="Views\CuentaContable\IndexBKP.cshtml" />
+    <Content Include="Views\CentroCosto\Create.cshtml" />
+    <Content Include="Views\CentroCosto\Delete.cshtml" />
+    <Content Include="Views\CentroCosto\Edit.cshtml" />
+    <Content Include="Views\CentroCosto\Index.cshtml" />
+    <Content Include="Views\Usuario\Delete.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Proceso\Agregar.cshtml" />
+    <Content Include="Views\SubProceso\Delete.cshtml" />
+    <Content Include="Views\SubProceso\Edit.cshtml" />
+    <Content Include="Views\SubProceso\Index.cshtml" />
+    <Content Include="Views\OrigenIncidencia\Create.cshtml" />
+    <Content Include="Views\OrigenIncidencia\Delete.cshtml" />
+    <Content Include="Views\OrigenIncidencia\Edit.cshtml" />
+    <Content Include="Views\OrigenIncidencia\Index.cshtml" />
+    <Content Include="Views\CategoriaRiesgo\Create.cshtml" />
+    <Content Include="Views\CategoriaRiesgo\Delete.cshtml" />
+    <Content Include="Views\CategoriaRiesgo\Edit.cshtml" />
+    <Content Include="Views\CategoriaRiesgo\Index.cshtml" />
+    <Content Include="Views\SubProceso\Agregar.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Shared\_LayoutIndex.cshtml" />
+    <Content Include="Views\Shared\_LayoutReporte.cshtml" />
+    <Content Include="Views\FlujoNarrativa\Index.cshtml" />
+    <Content Include="Views\ReporteEstructura\Index.cshtml" />
+    <Content Include="Views\Riesgo\Agregar.cshtml" />
+    <Content Include="Views\Riesgo\Delete.cshtml" />
+    <Content Include="Views\Riesgo\Index.cshtml" />
+    <Content Include="Views\TipoRiesgo\Create.cshtml" />
+    <Content Include="Views\TipoRiesgo\Delete.cshtml" />
+    <Content Include="Views\TipoRiesgo\Edit.cshtml" />
+    <Content Include="Views\TipoRiesgo\Index.cshtml" />
+    <Content Include="Views\ClaseTipologiaRiesgo\Create.cshtml" />
+    <Content Include="Views\ClaseTipologiaRiesgo\Delete.cshtml" />
+    <Content Include="Views\ClaseTipologiaRiesgo\Edit.cshtml" />
+    <Content Include="Views\ClaseTipologiaRiesgo\Index.cshtml" />
+    <Content Include="Views\SubClaseTipologiaRiesgo\Create.cshtml" />
+    <Content Include="Views\SubClaseTipologiaRiesgo\Delete.cshtml" />
+    <Content Include="Views\SubClaseTipologiaRiesgo\Edit.cshtml" />
+    <Content Include="Views\SubClaseTipologiaRiesgo\Index.cshtml" />
+    <Content Include="Views\TipologiaRiesgo\Create.cshtml" />
+    <Content Include="Views\TipologiaRiesgo\Delete.cshtml" />
+    <Content Include="Views\TipologiaRiesgo\Edit.cshtml" />
+    <Content Include="Views\TipologiaRiesgo\Index.cshtml" />
+    <Content Include="Views\ProbabilidadOcurrencia\Create.cshtml" />
+    <Content Include="Views\ProbabilidadOcurrencia\Delete.cshtml" />
+    <Content Include="Views\ProbabilidadOcurrencia\Edit.cshtml" />
+    <Content Include="Views\ProbabilidadOcurrencia\Index.cshtml" />
+    <Content Include="Views\Riesgo\SubProcesos.cshtml" />
+    <Content Include="Views\TipoImpacto\Create.cshtml" />
+    <Content Include="Views\TipoImpacto\Delete.cshtml" />
+    <Content Include="Views\TipoImpacto\Edit.cshtml" />
+    <Content Include="Views\TipoImpacto\Index.cshtml" />
+    <Content Include="Views\FlujoNarrativa\EliminarFlujo.cshtml" />
+    <Content Include="Views\FlujoNarrativa\EliminarNarrativa.cshtml" />
+    <Content Include="Views\FlujoNarrativa\Flujo.cshtml" />
+    <Content Include="Views\FlujoNarrativa\Narrativa.cshtml" />
+    <Content Include="Views\FlujoNarrativa\Subir.cshtml" />
+    <Content Include="Views\Riesgo\Riesgos.cshtml" />
+    <Content Include="Views\Control\Delete.cshtml" />
+    <Content Include="Views\Control\Edit.cshtml" />
+    <Content Include="Views\Control\Index.cshtml" />
+    <Content Include="Views\MagnitudImpacto\Create.cshtml" />
+    <Content Include="Views\MagnitudImpacto\Delete.cshtml" />
+    <Content Include="Views\MagnitudImpacto\Edit.cshtml" />
+    <Content Include="Views\MagnitudImpacto\Index.cshtml" />
+    <Content Include="Views\Inicio\Index.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Rol\Create.cshtml" />
+    <Content Include="Views\Rol\Delete.cshtml" />
+    <Content Include="Views\Rol\Details.cshtml" />
+    <Content Include="Views\Rol\Edit.cshtml" />
+    <Content Include="Views\Rol\Index.cshtml" />
+    <Content Include="Views\TipoNormatividad\Create.cshtml" />
+    <Content Include="Views\TipoNormatividad\Delete.cshtml" />
+    <Content Include="Views\TipoNormatividad\Edit.cshtml" />
+    <Content Include="Views\TipoNormatividad\Index.cshtml" />
+    <Content Include="Views\Normatividad\Index.cshtml" />
+    <Content Include="Views\NivelNormatividad\Create.cshtml" />
+    <Content Include="Views\NivelNormatividad\Delete.cshtml" />
+    <Content Include="Views\NivelNormatividad\Edit.cshtml" />
+    <Content Include="Views\NivelNormatividad\Index.cshtml" />
+    <Content Include="Views\Usuario\Agregar.cshtml" />
+    <Content Include="Views\Rol\Agregar.cshtml" />
+    <Content Include="Views\Error\Denied.cshtml" />
+    <Content Include="Views\Rol\AsignaUsuarios.cshtml" />
+    <Content Include="Views\Usuario\AsignaRol.cshtml" />
+    <Content Include="Views\Riesgo\Controles.cshtml" />
+    <Content Include="Views\Control\Agregar.cshtml" />
+    <Content Include="Views\Control\DeleteR.cshtml" />
+    <Content Include="Views\Control\EditR.cshtml" />
+    <Content Include="Views\GradoCobertura\Create.cshtml" />
+    <Content Include="Views\GradoCobertura\Delete.cshtml" />
+    <Content Include="Views\GradoCobertura\Edit.cshtml" />
+    <Content Include="Views\GradoCobertura\Index.cshtml" />
+    <Content Include="Views\FrecuenciaControl\Create.cshtml" />
+    <Content Include="Views\FrecuenciaControl\Delete.cshtml" />
+    <Content Include="Views\FrecuenciaControl\Edit.cshtml" />
+    <Content Include="Views\FrecuenciaControl\Index.cshtml" />
+    <Content Include="Views\NaturalezaControl\Create.cshtml" />
+    <Content Include="Views\NaturalezaControl\Delete.cshtml" />
+    <Content Include="Views\NaturalezaControl\Edit.cshtml" />
+    <Content Include="Views\NaturalezaControl\Index.cshtml" />
+    <Content Include="Views\TipologiaControl\Create.cshtml" />
+    <Content Include="Views\TipologiaControl\Delete.cshtml" />
+    <Content Include="Views\TipologiaControl\Edit.cshtml" />
+    <Content Include="Views\TipologiaControl\Index.cshtml" />
+    <Content Include="Views\CategoriaControl\Create.cshtml" />
+    <Content Include="Views\CategoriaControl\Delete.cshtml" />
+    <Content Include="Views\CategoriaControl\Edit.cshtml" />
+    <Content Include="Views\CategoriaControl\Index.cshtml" />
+    <Content Include="Views\TipoEvidencia\Create.cshtml" />
+    <Content Include="Views\TipoEvidencia\Delete.cshtml" />
+    <Content Include="Views\TipoEvidencia\Edit.cshtml" />
+    <Content Include="Views\TipoEvidencia\Index.cshtml" />
+    <Content Include="Views\TipoEvaluacion\Create.cshtml" />
+    <Content Include="Views\TipoEvaluacion\Delete.cshtml" />
+    <Content Include="Views\TipoEvaluacion\Edit.cshtml" />
+    <Content Include="Views\TipoEvaluacion\Index.cshtml" />
+    <Content Include="Views\PruebaAutoEvaluacion\Create.cshtml" />
+    <Content Include="Views\PruebaAutoEvaluacion\Delete.cshtml" />
+    <Content Include="Views\PruebaAutoEvaluacion\Edit.cshtml" />
+    <Content Include="Views\PruebaAutoEvaluacion\Index.cshtml" />
+    <Content Include="Views\Certificacion\Certificar.cshtml" />
+    <Content Include="Views\Certificacion\Denied.cshtml" />
+    <Content Include="Views\Indicador\Create.cshtml" />
+    <Content Include="Views\Indicador\Delete.cshtml" />
+    <Content Include="Views\Indicador\Edit.cshtml" />
+    <Content Include="Views\Indicador\Index.cshtml" />
+    <Content Include="Views\FrecuenciaIndicador\Create.cshtml" />
+    <Content Include="Views\FrecuenciaIndicador\Delete.cshtml" />
+    <Content Include="Views\FrecuenciaIndicador\Details.cshtml" />
+    <Content Include="Views\FrecuenciaIndicador\Edit.cshtml" />
+    <Content Include="Views\FrecuenciaIndicador\Index.cshtml" />
+    <Content Include="Views\UnidadIndicador\Create.cshtml" />
+    <Content Include="Views\UnidadIndicador\Delete.cshtml" />
+    <Content Include="Views\UnidadIndicador\Edit.cshtml" />
+    <Content Include="Views\UnidadIndicador\Index.cshtml" />
+    <Content Include="Views\ReporteMRyC\Index.cshtml" />
+    <Content Include="Views\ReporteFlujoNarrativa\Index.cshtml" />
+    <Content Include="Views\Certificacion\Certificados.cshtml" />
+    <Content Include="Views\Certificacion\Index.cshtml" />
+    <Content Include="Views\Certificacion\Delete.cshtml" />
+    <Content Include="Views\Certificacion\Details.cshtml" />
+    <Content Include="Views\Certificacion\Edit.cshtml" />
+    <Content Include="Views\EvaluacionIndicador\Create.cshtml" />
+    <Content Include="Views\EvaluacionIndicador\Delete.cshtml" />
+    <Content Include="Views\EvaluacionIndicador\Details.cshtml" />
+    <Content Include="Views\EvaluacionIndicador\Edit.cshtml" />
+    <Content Include="Views\EvaluacionIndicador\Index.cshtml" />
+    <Content Include="Views\BDEI\Create.cshtml" />
+    <Content Include="Views\BDEI\Delete.cshtml" />
+    <Content Include="Views\BDEI\Edit.cshtml" />
+    <Content Include="Views\BDEI\Index.cshtml" />
+    <Content Include="Views\EvaluacionIndicador\Evaluaciones.cshtml" />
+    <Content Include="Views\Control\AgregarMG.cshtml" />
+    <Content Include="Views\Control\EditMG.cshtml" />
+    <Content Include="Views\Control\EditRMG.cshtml" />
+    <Content Include="Views\Riesgo\AgregarMG.cshtml" />
+    <Content Include="Views\Riesgo\DeleteMG.cshtml" />
+    <Content Include="Views\Riesgo\EditarMG.cshtml" />
+    <Content Include="Views\SubProcesosCUB\Normatividades.cshtml" />
+    <Content Include="Views\SubProcesosCUB\SPCUB.cshtml" />
+    <Content Include="Views\SubProcesosCUB\Delete.cshtml" />
+    <Content Include="Views\SubProcesosCUB\Index.cshtml" />
+    <Content Include="Views\ContenidoNormatividad\Create.cshtml" />
+    <Content Include="Views\ContenidoNormatividad\Delete.cshtml" />
+    <Content Include="Views\ContenidoNormatividad\Edit.cshtml" />
+    <Content Include="Views\ContenidoNormatividad\Index.cshtml" />
+    <Content Include="Views\CategoriaError\Create.cshtml" />
+    <Content Include="Views\CategoriaError\Delete.cshtml" />
+    <Content Include="Views\CategoriaError\Edit.cshtml" />
+    <Content Include="Views\CategoriaError\Index.cshtml" />
+    <Content Include="Views\CategoriaPerdida\Create.cshtml" />
+    <Content Include="Views\CategoriaPerdida\Delete.cshtml" />
+    <Content Include="Views\CategoriaPerdida\Edit.cshtml" />
+    <Content Include="Views\CategoriaPerdida\Index.cshtml" />
+    <Content Include="Views\EstatusBDEI\Create.cshtml" />
+    <Content Include="Views\EstatusBDEI\Delete.cshtml" />
+    <Content Include="Views\EstatusBDEI\Edit.cshtml" />
+    <Content Include="Views\EstatusBDEI\Index.cshtml" />
+    <Content Include="Views\Moneda\Create.cshtml" />
+    <Content Include="Views\Moneda\Delete.cshtml" />
+    <Content Include="Views\Moneda\Edit.cshtml" />
+    <Content Include="Views\Moneda\Index.cshtml" />
+    <Content Include="Views\Actividad\Create.cshtml" />
+    <Content Include="Views\Actividad\Delete.cshtml" />
+    <Content Include="Views\Actividad\Edit.cshtml" />
+    <Content Include="Views\Actividad\Index.cshtml" />
+    <Content Include="Views\Benchmark\Create.cshtml" />
+    <Content Include="Views\Benchmark\Index.cshtml" />
+    <Content Include="Views\EventoRiesgo\Create.cshtml" />
+    <Content Include="Views\EventoRiesgo\Delete.cshtml" />
+    <Content Include="Views\EventoRiesgo\Edit.cshtml" />
+    <Content Include="Views\EventoRiesgo\Index.cshtml" />
+    <Content Include="Views\ProcesoBenchmark\Create.cshtml" />
+    <Content Include="Views\ProcesoBenchmark\Delete.cshtml" />
+    <Content Include="Views\ProcesoBenchmark\Edit.cshtml" />
+    <Content Include="Views\ProcesoBenchmark\Index.cshtml" />
+    <Content Include="Views\SubProcesoBenchmark\Create.cshtml" />
+    <Content Include="Views\SubProcesoBenchmark\Delete.cshtml" />
+    <Content Include="Views\SubProcesoBenchmark\Edit.cshtml" />
+    <Content Include="Views\SubProcesoBenchmark\Index.cshtml" />
+    <Content Include="Views\Benchmark\Delete.cshtml" />
+    <Content Include="Views\Benchmark\Edit.cshtml" />
+    <Content Include="Views\TipoSolucion\Create.cshtml" />
+    <Content Include="Views\TipoSolucion\Delete.cshtml" />
+    <Content Include="Views\TipoSolucion\Edit.cshtml" />
+    <Content Include="Views\TipoSolucion\Index.cshtml" />
+    <Content Include="Views\ReporteGeneralBDEI\Index.cshtml" />
+    <Content Include="Views\ActividadCosteo\Create.cshtml" />
+    <Content Include="Views\ActividadCosteo\Delete.cshtml" />
+    <Content Include="Views\ActividadCosteo\Edit.cshtml" />
+    <Content Include="Views\ActividadCosteo\Index.cshtml" />
+    <Content Include="Views\Error\OnlyRead.cshtml" />
+    <Content Include="Views\TipologiaSubProceso\Create.cshtml" />
+    <Content Include="Views\TipologiaSubProceso\Delete.cshtml" />
+    <Content Include="Views\TipologiaSubProceso\Edit.cshtml" />
+    <Content Include="Views\TipologiaSubProceso\Index.cshtml" />
+    <Content Include="Views\ReporteBenchmark\Index.cshtml" />
+    <Content Include="Views\ReporteCertificacion\Index.cshtml" />
+    <Content Include="Views\ReporteIndicador\Index.cshtml" />
+    <Content Include="Views\ReporteCosteo\Index.cshtml" />
+    <Content Include="Views\Error\CantErase.cshtml" />
+    <Content Include="Views\ReporteSPNM\Report.cshtml" />
+    <Content Include="Views\MacroProceso\Upload.cshtml" />
+    <Content Include="Views\Criticidad\Index.cshtml" />
+    <Content Include="Views\UsuarioNR\ChangePassword.cshtml" />
+    <Content Include="Views\UsuarioNR\Editar.cshtml" />
+    <Content Include="Views\UsuarioNR\Success.cshtml" />
+    <Content Include="Views\ReporteAcceso\Index.cshtml" />
+    <Content Include="Views\ReporteFallas\Index.cshtml" />
+    <Content Include="Views\Manual\Index.cshtml" />
+    <Content Include="Views\AjustesSeguridad\Index.cshtml" />
+    <Content Include="Views\MCControl\Edit.cshtml" />
+    <Content Include="Views\MCControl\Index.cshtml" />
+    <Content Include="Views\MCRiesgo\Edit.cshtml" />
+    <Content Include="Views\MCRiesgo\Index.cshtml" />
+    <Content Include="Views\RiesgoResidualConfig\Index.cshtml" />
+    <Content Include="Views\RiesgoResidualConfig\CampoCoberturaControl.cshtml" />
+    <Content Include="Views\Control\CreateRR.cshtml" />
+    <Content Include="Views\Control\DetailsRR.cshtml" />
+    <Content Include="Views\Certificacion\pruebaArchivos.cshtml" />
+    <Content Include="Views\RiesgoResidualConfig\Summary.cshtml" />
+    <Content Include="Views\ReporteSPNM\Index.cshtml" />
+    <Content Include="Views\Criticidad\CriticidadRiesgo.cshtml" />
+    <Content Include="Views\ReporteRR\Index.cshtml" />
+    <Content Include="Views\Riesgo\Historial.cshtml" />
+    <Content Include="Views\Riesgo\HistorialControl.cshtml" />
+    <Content Include="Views\ReporteCambiosMRyC\Index.cshtml" />
+    <Content Include="Views\IyP\Index.cshtml" />
+    <Content Include="Views\IyP\Oficio\CreateOficio.cshtml" />
+    <Content Include="Views\IyP\Oficio\IndexOficio.cshtml" />
+    <Content Include="Views\IyP\Oficio\DeleteOficio.cshtml" />
+    <Content Include="Views\IyP\Incidencias\Index.cshtml" />
+    <Content Include="Views\IyP\Oficio\EditOficio.cshtml" />
+    <Content Include="Views\IyP\AuExt\CreateAuExt.cshtml" />
+    <Content Include="Views\IyP\AuExt\DeleteAuExt.cshtml" />
+    <Content Include="Views\IyP\AuExt\EditAuExt.cshtml" />
+    <Content Include="Views\IyP\AuExt\IndexAuExt.cshtml" />
+    <Content Include="Views\IyP\AuInt\CreateAuInt.cshtml" />
+    <Content Include="Views\IyP\AuInt\DeleteAuInt.cshtml" />
+    <Content Include="Views\IyP\AuInt\EditAuInt.cshtml" />
+    <Content Include="Views\IyP\AuInt\IndexAuInt.cshtml" />
+    <Content Include="Views\IyP\Otros\CreateOtros.cshtml" />
+    <Content Include="Views\IyP\Otros\DeleteOtros.cshtml" />
+    <Content Include="Views\IyP\Otros\EditOtros.cshtml" />
+    <Content Include="Views\IyP\Otros\IndexOtros.cshtml" />
+    <Content Include="Views\IyP\Cert\IndexCert.cshtml" />
+    <Content Include="Views\IyP\MRyC\IndexMRyC.cshtml" />
+    <Content Include="Views\IyP\Incidencias\CreateIncidencia.cshtml" />
+    <Content Include="Views\IyP\Incidencias\EditIncidencia.cshtml" />
+    <Content Include="Views\IyP\Incidencias\DeleteIncidencia.cshtml" />
+    <Content Include="Views\IyP\Seguimiento\CreateSeguimiento.cshtml" />
+    <Content Include="Views\IyP\Seguimiento\DeleteSeguimiento.cshtml" />
+    <Content Include="Views\IyP\Seguimiento\IndexSeguimiento.cshtml" />
+    <Content Include="Views\IyP\Seguimiento\EditSeguimiento.cshtml" />
+    <Content Include="Views\IyP\Planes\Index.cshtml" />
+    <Content Include="Views\IyP\Planes\CreatePlan.cshtml" />
+    <Content Include="Views\IyP\Planes\EditPlan.cshtml" />
+    <Content Include="Views\IyP\Planes\DeletePlan.cshtml" />
+    <Content Include="Views\OrigenAutoridad\Create.cshtml" />
+    <Content Include="Views\OrigenAutoridad\Delete.cshtml" />
+    <Content Include="Views\OrigenAutoridad\Edit.cshtml" />
+    <Content Include="Views\OrigenAutoridad\Index.cshtml" />
+    <Content Include="Views\ClasificacionIncidencia\Create.cshtml" />
+    <Content Include="Views\ClasificacionIncidencia\Delete.cshtml" />
+    <Content Include="Views\ClasificacionIncidencia\Edit.cshtml" />
+    <Content Include="Views\ClasificacionIncidencia\Index.cshtml" />
+    <Content Include="Views\RespuestaIncidencia\Index.cshtml" />
+    <Content Include="Views\RespuestaIncidencia\ResponderIncidencia.cshtml" />
+    <Content Include="Views\RespuestaIncidencia\Edit.cshtml" />
+    <Content Include="Views\RespuestaIncidencia\Delete.cshtml" />
+    <Content Include="Views\PlanesRem\Index.cshtml" />
+    <Content Include="Views\PlanesRem\Seguimientos.cshtml" />
+    <Content Include="Views\PlanesRem\Create.cshtml" />
+    <Content Include="Views\PlanesRem\Edit.cshtml" />
+    <Content Include="Views\PlanesRem\Delete.cshtml" />
+    <Content Include="Views\ContestacionOficio\Delete.cshtml" />
+    <Content Include="Views\ContestacionOficio\Edit.cshtml" />
+    <Content Include="Views\ContestacionOficio\Index.cshtml" />
+    <Content Include="Views\ContestacionOficio\ContestarOficio.cshtml" />
+    <Content Include="Views\IyP\Oficio\OficiosRelacionados.cshtml" />
+    <Content Include="Views\ReporteIyP\Index.cshtml" />
+    <Content Include="Views\ConclusionPlan\ConcluirPlan.cshtml" />
+    <Content Include="Views\ConclusionPlan\Delete.cshtml" />
+    <Content Include="Views\ConclusionPlan\Edit.cshtml" />
+    <Content Include="Views\ConclusionPlan\Index.cshtml" />
+    <Content Include="Views\Notification\edit.cshtml" />
+    <Content Include="Views\ReportePR\Index.cshtml" />
+    <Content Include="Views\Notification\Index.cshtml" />
+    <Content Include="Views\MassiveNotification\edit.cshtml" />
+    <Content Include="Views\MassiveNotification\Index.cshtml" />
+    <Content Include="Views\MassiveNotification\WriteMessage.cshtml" />
+    <Content Include="Views\Puesto\LoadData.cshtml" />
+    <Content Include="Views\Puesto\Index.cshtml" />
+    <Content Include="Views\Puesto\AssignUsers.cshtml" />
+    <Content Include="Views\Usuario\Edit.cshtml" />
+    <Content Include="Views\Pendientes\Controles.cshtml" />
+    <Content Include="Views\Pendientes\Indicadores.cshtml" />
+    <Content Include="Views\Pendientes\Oficios.cshtml" />
+    <Content Include="Views\Pendientes\Informes.cshtml" />
+    <Content Include="Views\Pendientes\Incidencias.cshtml" />
+    <Content Include="Views\Pendientes\Planes.cshtml" />
+    <Content Include="Views\Pendientes\VerTodo.cshtml" />
+    <Content Include="Views\Home\dsb1.cshtml" />
+    <Content Include="Views\GraphicsMRyC\Index.cshtml" />
+    <Content Include="Views\GraphicsMRyC\DetailsMP.cshtml" />
+    <Content Include="Views\GraphicsMRyC\DetailsP.cshtml" />
+    <Content Include="Views\GraphicsMRyC\DetailsSP.cshtml" />
+    <Content Include="Views\GraphicsMRyC\DetailsC.cshtml" />
+    <Content Include="Views\GraphicsMRyC\DetailsR.cshtml" />
+    <Content Include="Views\GraphicsMRyC\loadFilters.cshtml" />
+    <Content Include="Views\GraphicsBDEI\Details.cshtml" />
+    <Content Include="Views\GraphicsBDEI\Index.cshtml" />
+    <Content Include="Views\GraphicsBDEI\loadFilters.cshtml" />
+    <Content Include="Views\GraphicsIndicador\Details.cshtml" />
+    <Content Include="Views\GraphicsIndicador\Index.cshtml" />
+    <Content Include="Views\GraphicsIndicador\loadFilters.cshtml" />
+    <Content Include="Views\GraphicsIndicador\DetailsIndicador.cshtml" />
+    <Content Include="Views\GraphicsPlanesRem\Details.cshtml" />
+    <Content Include="Views\GraphicsPlanesRem\Index.cshtml" />
+    <Content Include="Views\GraphicsPlanesRem\loadFilters.cshtml" />
+    <Content Include="Views\GraphicsOficio\Details.cshtml" />
+    <Content Include="Views\GraphicsOficio\Index.cshtml" />
+    <Content Include="Views\GraphicsOficio\loadFilters.cshtml" />
+    <Content Include="Views\GraphicsOficio\Details2.cshtml" />
+    <Content Include="Views\MCSubProceso\Edit.cshtml" />
+    <Content Include="Views\MCSubProceso\Index.cshtml" />
+    <Content Include="Views\GraphicsMapaCalorCriticidad\Index.cshtml" />
+    <Content Include="Views\GraphicsMapaCalorCriticidad\CriticidadRiesgo.cshtml" />
+    <Content Include="Views\GraphicsMapaCalorCriticidad\DetalleRiesgos.cshtml" />
+    <Content Include="Views\DescripcionEvento\Create.cshtml" />
+    <Content Include="Views\DescripcionEvento\Delete.cshtml" />
+    <Content Include="Views\DescripcionEvento\Edit.cshtml" />
+    <Content Include="Views\DescripcionEvento\Index.cshtml" />
+    <Content Include="Views\TipoRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\TipoRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\TipoRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\TipoRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\SubTipoRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\SubTipoRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\SubTipoRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\SubTipoRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\ProductoRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\ProductoRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\ProductoRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\ProductoRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\CanalRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\CanalRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\CanalRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\CanalRiesgoOperacional\AuxInfo.cshtml" />
+    <Content Include="Views\AmbitoRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\AmbitoRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\AmbitoRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\AmbitoRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\CategoriaLineaNegocioRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\CategoriaLineaNegocioRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\CategoriaLineaNegocioRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\CategoriaLineaNegocioRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\ProcesoRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\ProcesoRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\ProcesoRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\ProcesoRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\SubTipoProductoRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\SubTipoProductoRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\SubTipoProductoRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\SubTipoProductoRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\LineaNegocioRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\LineaNegocioRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\LineaNegocioRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\LineaNegocioRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\ClaseEventoRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\ClaseEventoRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\ClaseEventoRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\ClaseEventoRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\CodeActions\Index.cshtml" />
+    <Content Include="Views\HistorialReportes\Index.cshtml" />
+    <Content Include="Views\HistorialReportes\ReportList.cshtml" />
+    <Content Include="Views\HistorialReportes\ShowRep.cshtml" />
+    <Content Include="Views\FrecuenciaRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\FrecuenciaRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\FrecuenciaRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\FrecuenciaRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\ImpactoRiesgoOperacional\Create.cshtml" />
+    <Content Include="Views\ImpactoRiesgoOperacional\Delete.cshtml" />
+    <Content Include="Views\ImpactoRiesgoOperacional\Edit.cshtml" />
+    <Content Include="Views\ImpactoRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\CriticidadRiesgoOperacional\CriticidadRiesgo.cshtml" />
+    <Content Include="Views\CriticidadRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\EstructuraManual\Create.cshtml" />
+    <Content Include="Views\EstructuraManual\Delete.cshtml" />
+    <Content Include="Views\EstructuraManual\Edit.cshtml" />
+    <Content Include="Views\EstructuraManual\Index.cshtml" />
+    <Content Include="Views\EstructuraManual\CreateLvl.cshtml" />
+    <Content Include="Views\EstructuraManual\EditLvl.cshtml" />
+    <Content Include="Views\EstructuraManual\DeleteLvl.cshtml" />
+    <Content Include="Views\Manuales\Create.cshtml" />
+    <Content Include="Views\Manuales\Delete.cshtml" />
+    <Content Include="Views\Manuales\Index.cshtml" />
+    <Content Include="Views\Manuales\Edit.cshtml" />
+    <Content Include="Views\Costeo\Costeo.cshtml" />
+    <Content Include="Views\Costeo\Index.cshtml" />
+    <Content Include="Views\ReporteCosteo\FilteredUsers.cshtml" />
+    <Content Include="Views\Manuales\loadData.cshtml" />
+    <Content Include="Views\Manuales\AssignSP.cshtml" />
+    <Content Include="Views\GraphicsCosteo\DetailsSP.cshtml" />
+    <Content Include="Views\GraphicsCosteo\Index.cshtml" />
+    <Content Include="Views\GraphicsCosteo\loadFilters.cshtml" />
+    <Content Include="Views\AjustesMail\Index.cshtml" />
+    <Content Include="Views\IyP\DeleteOficioExt.cshtml" />
+    <Content Include="Views\IyP\DeleteIncidenciaExt.cshtml" />
+    <Content Include="Views\Usuario\GetUserObjects.cshtml" />
+    <Content Include="Views\ReportePersonal\Index.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsMP.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsP.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsCTR.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsIND.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsOFC.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsINF.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsINC.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsPLN.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsTime.cshtml" />
+    <Content Include="Views\Puesto\Index2.cshtml" />
+    <Content Include="Views\Puesto\LoadData2.cshtml" />
+    <Content Include="Views\Puesto\LoadData3.cshtml" />
+    <Content Include="Views\Puesto\LoadData4.cshtml" />
+    <Content Include="Views\Puesto\LoadData5.cshtml" />
+    <Content Include="Views\Manuales\loadData2.cshtml" />
+    <Content Include="Views\Manuales\LoadData3.cshtml" />
+    <Content Include="Views\Manuales\LoadData4.cshtml" />
+    <Content Include="Views\Manuales\LoadData5.cshtml" />
+    <Content Include="Views\Manuales\AssignU.cshtml" />
+    <Content Include="Views\Archivos\Index.cshtml" />
+    <Content Include="Views\Utilidades\MessageESTR.cshtml" />
+    <Content Include="Views\Ficha\ContenidoNormatividad\Index.cshtml" />
+    <Content Include="Views\ContenidoNormatividad\LigarSP.cshtml" />
+    <Content Include="Views\NormatividadOperacion\Index.cshtml" />
+    <Content Include="Views\NormatividadOperacion\Modales\Index.cshtml" />
+    <Content Include="Views\NormatividadOperacion\Modales\LigarSP.cshtml" />
+    <Content Include="Views\Pendientes\Fichas.cshtml" />
+    <Content Include="Views\GraphicsFichas\Index.cshtml" />
+    <Content Include="Views\GraphicsFichas\loadFilters.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsEV.cshtml" />
+    <Content Include="Views\ReporteFichas\Index.cshtml" />
+    <Content Include="Views\Costeo\Modales\Index.cshtml" />
+    <Content Include="Views\Costeo\Modales\SPDetails.cshtml" />
+    <Content Include="Views\Costeo\Modales\Participantes.cshtml" />
+    <Content Include="Views\Costeo\Modales\ActividadesCosteo.cshtml" />
+    <Content Include="Views\ActividadCosteo\N2\Index.cshtml" />
+    <Content Include="Views\ActividadCosteo\N2\Edit.cshtml" />
+    <Content Include="Views\ActividadCosteo\N2\Create.cshtml" />
+    <Content Include="Views\ActividadCosteo\N3\Create.cshtml" />
+    <Content Include="Views\ActividadCosteo\N3\Edit.cshtml" />
+    <Content Include="Views\ActividadCosteo\N3\Index.cshtml" />
+    <Content Include="Views\Costeo\N2\Index.cshtml" />
+    <Content Include="Views\Costeo\N3\Index.cshtml" />
+    <Content Include="Views\ReporteSubActividadesCosteo\Index.cshtml" />
+    <Content Include="Views\TiemposSubProcesos\Index.cshtml" />
+    <Content Include="Views\Ficha\ContenidoNormatividad\Details.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsFIC.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsENT.cshtml" />
+    <Content Include="Views\ContenidoGrupo\Create.cshtml" />
+    <Content Include="Views\ContenidoGrupo\Delete.cshtml" />
+    <Content Include="Views\ContenidoGrupo\Edit.cshtml" />
+    <Content Include="Views\ContenidoGrupo\Index.cshtml" />
+    <Content Include="Views\IndicadorDiario\Create.cshtml" />
+    <Content Include="Views\IndicadorDiario\Delete.cshtml" />
+    <Content Include="Views\IndicadorDiario\Edit.cshtml" />
+    <Content Include="Views\IndicadorDiario\Index.cshtml" />
+    <Content Include="Views\IndicadorDiario\Grupos.cshtml" />
+    <Content Include="Views\EvaluacionIndicadorDiario\Create.cshtml" />
+    <Content Include="Views\EvaluacionIndicadorDiario\Delete.cshtml" />
+    <Content Include="Views\EvaluacionIndicadorDiario\Edit.cshtml" />
+    <Content Include="Views\EvaluacionIndicadorDiario\Grupos.cshtml" />
+    <Content Include="Views\EvaluacionIndicadorDiario\Index.cshtml" />
+    <Content Include="Views\GraphicsIndicadorDiario\Index.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsEINDD.cshtml" />
+    <Content Include="Views\Shared\SingleDetailViews\DetailINDD.cshtml" />
+    <Content Include="Views\GraphicsIndicadorDiario\ContenidoGrupo.cshtml" />
+    <Content Include="Views\GraphicsIndicadorDiario\ContenidoGrupo2.cshtml" />
+    <Content Include="Views\GraphicsIndicadorDiario\loadFilters.cshtml" />
+    <Content Include="Views\Pendientes\IndicadoresDiarios.cshtml" />
+    <Content Include="Views\ReporteIndicadorDiario\Index.cshtml" />
+    <Content Include="Views\Aseveracion\Create.cshtml" />
+    <Content Include="Views\Aseveracion\Delete.cshtml" />
+    <Content Include="Views\Aseveracion\Edit.cshtml" />
+    <Content Include="Views\Aseveracion\Index.cshtml" />
+    <Content Include="Views\Calificacion\Create.cshtml" />
+    <Content Include="Views\Calificacion\Delete.cshtml" />
+    <Content Include="Views\Calificacion\Edit.cshtml" />
+    <Content Include="Views\Calificacion\Index.cshtml" />
+    <Content Include="Views\RevisionControl\Revisiones.cshtml" />
+    <Content Include="Views\RevisionControl\Create.cshtml" />
+    <Content Include="Views\RevisionControl\Index.cshtml" />
+    <Content Include="Views\RevisionControl\Edit.cshtml" />
+    <Content Include="Views\ReporteRevisionControl\Index.cshtml" />
+    <Content Include="Views\RevisionControl\Delete.cshtml" />
+    <Content Include="Views\GraphicsRevisionControl\Index.cshtml" />
+    <Content Include="Views\GraphicsRevisionControl\loadFilters.cshtml" />
+    <Content Include="Views\Shared\DetailViews\infoMI.cshtml" />
+    <Content Include="Views\GraphicsRevisionControl\tablaConteo.cshtml" />
+    <Content Include="Views\CalificacionRevision\Create.cshtml" />
+    <Content Include="Views\CalificacionRevision\Delete.cshtml" />
+    <Content Include="Views\CalificacionRevision\Edit.cshtml" />
+    <Content Include="Views\CalificacionRevision\Index.cshtml" />
+    <Content Include="Views\Ficha\Edit.cshtml" />
+    <Content Include="Views\Ficha\SA.cshtml" />
+    <Content Include="Views\Ficha\Details.cshtml" />
+    <Content Include="Views\Error\OnlySuperUser.cshtml" />
+    <Content Include="Views\ConsultaNormatividad\Content.cshtml" />
+    <Content Include="Views\RevisionControl\ReporteGeneral.cshtml" />
+    <Content Include="Views\ConsultaNormatividad\Index.cshtml" />
+    <Content Include="Views\ConsultaNormatividad\Levels.cshtml" />
+    <Content Include="Views\NormatividadBKP\Content.cshtml" />
+    <Content Include="Views\NormatividadBKP\Create.cshtml" />
+    <Content Include="Views\NormatividadBKP\Delete.cshtml" />
+    <Content Include="Views\NormatividadBKP\Edit.cshtml" />
+    <Content Include="Views\NormatividadBKP\Index.cshtml" />
+    <Content Include="Views\NormatividadBKP\loadData.cshtml" />
+    <Content Include="Views\Normatividad\TipoNormatividad\CreateTN.cshtml" />
+    <Content Include="Views\Normatividad\TipoNormatividad\DeleteTN.cshtml" />
+    <Content Include="Views\Normatividad\TipoNormatividad\EditTN.cshtml" />
+    <Content Include="Views\Normatividad\Delete.cshtml" />
+    <Content Include="Views\Normatividad\Create.cshtml" />
+    <Content Include="Views\Normatividad\Edit.cshtml" />
+    <Content Include="Views\Normatividad\Niveles\Index.cshtml" />
+    <Content Include="Views\Normatividad\Niveles\Create.cshtml" />
+    <Content Include="Views\Normatividad\Niveles\Edit.cshtml" />
+    <Content Include="Views\Normatividad\Niveles\Delete.cshtml" />
+    <Content Include="Views\Normatividad\Contenido\Index.cshtml" />
+    <Content Include="Views\Normatividad\Contenido\Create.cshtml" />
+    <Content Include="Views\Normatividad\Contenido\Edit.cshtml" />
+    <Content Include="Views\Normatividad\Contenido\Delete.cshtml" />
+    <Content Include="Views\Normatividad\Contenido\LigarSP.cshtml" />
+    <Content Include="Views\UsuarioAuditoria\Index.cshtml" />
+    <Content Include="Views\Auditoria\IndexAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\CreateAuditoria.cshtml" />
+    <Content Include="Views\RolAudit\Index.cshtml" />
+    <Content Include="Views\RolAudit\Agregar.cshtml" />
+    <Content Include="Views\RolAudit\Edit.cshtml" />
+    <Content Include="Views\RolAudit\Delete.cshtml" />
+    <Content Include="Views\RolAudit\AsignaUsuarios.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\IndexPlaneacion.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\CreatePlaneacion.cshtml" />
+    <Content Include="Views\Auditoria\CreateCampoAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\CreateCampoPrograma.cshtml" />
+    <Content Include="Views\Auditoria\CreatePeriodoAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\CreateRatingAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\CreateSolicitanteAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\CreateUniversoAuditable.cshtml" />
+    <Content Include="Views\Auditoria\Delete.cshtml" />
+    <Content Include="Views\Auditoria\DeletePeriodoAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\DeleteRatingAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\DeleteSolicitanteAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\DeleteUniversoAuditable.cshtml" />
+    <Content Include="Views\Auditoria\EditCampoAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\EditCampoPrograma.cshtml" />
+    <Content Include="Views\Auditoria\EditPeriodoAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\EditRatingAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\EditSolicitanteAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\EditUniversoAuditable.cshtml" />
+    <Content Include="Views\Auditoria\IndexCampoAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\IndexCampoPrograma.cshtml" />
+    <Content Include="Views\Auditoria\IndexPeriodoAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\IndexRatingAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\IndexSolicitanteAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\IndexUniversoAuditable.cshtml" />
+    <Content Include="Views\Auditoria\CreatePruebaAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\EditPruebaAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\IndexPruebaAuditoria.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\EditPlaneacion.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\IndexEjecucion.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\EditEjecucion.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\PruebasEjecucion.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\EditPrueba.cshtml" />
+    <Content Include="Views\Auditoria\EditSeguimientoObservaciones.cshtml" />
+    <Content Include="Views\Auditoria\IndexSeguimientoObservaciones.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\IndexInformes.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\EditInforme.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\Informe.cshtml" />
+    <Content Include="Views\Auditoria\DeleteCampoAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\DeleteCampoPrograma.cshtml" />
+    <Content Include="Views\Auditoria\DeletePruebaAuditoria.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\DeletePlaneacion.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\IndexTablePlaneacion.cshtml" />
+    <Content Include="Views\Auditoria\IndexTableSeguimientoObservaciones.cshtml" />
+    <Content Include="Views\Auditoria\IndexEstatusPrograma.cshtml" />
+    <Content Include="Views\Auditoria\CreateEstatusPrograma.cshtml" />
+    <Content Include="Views\Auditoria\EditEstatusPrograma.cshtml" />
+    <Content Include="Views\Auditoria\DeleteEstatusPrograma.cshtml" />
+    <Content Include="Views\Auditoria\IndexCriticidad.cshtml" />
+    <Content Include="Views\Auditoria\CreateCriticidad.cshtml" />
+    <Content Include="Views\Auditoria\EditCriticidad.cshtml" />
+    <Content Include="Views\Auditoria\DeleteCriticidad.cshtml" />
+    <Content Include="Views\Auditoria\IndexSeguimientosPrograma.cshtml" />
+    <Content Include="Views\Auditoria\CreateComentario.cshtml" />
+    <Content Include="Views\Auditoria\EditComentario.cshtml" />
+    <Content Include="Views\Auditoria\DeleteComentario.cshtml" />
+    <Content Include="Views\Utilidades\DearSanta.cshtml" />
+    <Content Include="Views\Diagrama\Entidad.cshtml" />
+    <Content Include="Views\Diagrama\MacroProceso.cshtml" />
+    <Content Include="Views\Diagrama\Proceso.cshtml" />
+    <Content Include="Views\Diagrama\SubProceso.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsSP.cshtml" />
+    <Content Include="Views\Diagrama\Editor.cshtml" />
+    <Content Include="Views\DiagramaTest\DefaultFunctionalities.cshtml" />
+    <Content Include="Views\DiagramaTest\Diagrama.cshtml" />
+    <Content Include="Views\DiagramaTest\Entidad.cshtml" />
+    <Content Include="Views\DiagramaTest\MacroProceso.cshtml" />
+    <Content Include="Views\DiagramaTest\Proceso.cshtml" />
+    <Content Include="Views\DiagramaTest\Serialization.cshtml" />
+    <Content Include="Views\DiagramaTest\SubProceso.cshtml" />
+    <Content Include="Views\DiagramaTest\Test.cshtml" />
+    <Content Include="Views\Shared\DetailViews\ExtendedDetailsCTR.cshtml" />
+    <Content Include="Views\Shared\DetailViews\ExtendedDetailsMGCTR.cshtml" />
+    <Content Include="Views\Shared\DetailViews\ExtendedDetailsRSG.cshtml" />
+    <Content Include="Views\Shared\DetailViews\ExtendedDetailsMGRSG.cshtml" />
+    <Content Include="Views\CuentaContable\Index.cshtml" />
+    <Content Include="Views\CuentaContable\Groups\Index.cshtml" />
+    <Content Include="Views\CuentaContable\Groups\Edit.cshtml" />
+    <Content Include="Views\CuentaContable\Groups\Create.cshtml" />
+    <Content Include="Views\CuentaContable\Accounts\Index.cshtml" />
+    <Content Include="Views\CuentaContable\Accounts\Edit.cshtml" />
+    <Content Include="Views\CuentaContable\Accounts\Create.cshtml" />
+    <Content Include="Views\RiesgoAsociadoBDEI\Create.cshtml" />
+    <Content Include="Views\RiesgoAsociadoBDEI\Delete.cshtml" />
+    <Content Include="Views\RiesgoAsociadoBDEI\Edit.cshtml" />
+    <Content Include="Views\RiesgoAsociadoBDEI\Index.cshtml" />
+    <Content Include="Views\MinimoRiesgoOperativoBDEI\Create.cshtml" />
+    <Content Include="Views\MinimoRiesgoOperativoBDEI\Delete.cshtml" />
+    <Content Include="Views\MinimoRiesgoOperativoBDEI\Edit.cshtml" />
+    <Content Include="Views\MinimoRiesgoOperativoBDEI\Index.cshtml" />
+    <Content Include="Views\CausaBDEI\Create.cshtml" />
+    <Content Include="Views\CausaBDEI\Delete.cshtml" />
+    <Content Include="Views\CausaBDEI\Edit.cshtml" />
+    <Content Include="Views\CausaBDEI\Index.cshtml" />
+    <Content Include="Views\CatalogoConceptoBDEI\Create.cshtml" />
+    <Content Include="Views\CatalogoConceptoBDEI\Delete.cshtml" />
+    <Content Include="Views\CatalogoConceptoBDEI\Edit.cshtml" />
+    <Content Include="Views\CatalogoConceptoBDEI\Index.cshtml" />
+    <Content Include="Views\Shared\DetailViews\info.cshtml" />
+    <Content Include="Views\CanalRiesgoOperacional\Index.cshtml" />
+    <Content Include="Views\CategoriaLineaNegocioRiesgoOperacional\AuxInfo.cshtml" />
+    <Content Include="Views\SubTipoProductoRiesgoOperacional\AuxInfo.cshtml" />
+    <Content Include="Views\ProcesoRiesgoOperacional\AuxInfo.cshtml" />
+    <Content Include="Views\CertificacionEntidad\Index.cshtml" />
+    <Content Include="Views\CertificacionEntidad\Certificados.cshtml" />
+    <Content Include="Views\CertificacionEntidad\Certificar.cshtml" />
+    <Content Include="Views\CertificacionEntidad\Edit.cshtml" />
+    <Content Include="Views\CertificacionEntidad\Delete.cshtml" />
+    <Content Include="Views\CertificacionMacroProceso\Certificados.cshtml" />
+    <Content Include="Views\CertificacionMacroProceso\Certificar.cshtml" />
+    <Content Include="Views\CertificacionMacroProceso\Delete.cshtml" />
+    <Content Include="Views\CertificacionMacroProceso\Edit.cshtml" />
+    <Content Include="Views\CertificacionMacroProceso\Index.cshtml" />
+    <Content Include="Views\CertificacionProceso\Certificados.cshtml" />
+    <Content Include="Views\CertificacionProceso\Certificar.cshtml" />
+    <Content Include="Views\CertificacionProceso\Delete.cshtml" />
+    <Content Include="Views\CertificacionProceso\Edit.cshtml" />
+    <Content Include="Views\CertificacionProceso\Index.cshtml" />
+    <Content Include="Views\CertificacionSubProceso\Certificados.cshtml" />
+    <Content Include="Views\CertificacionSubProceso\Certificar.cshtml" />
+    <Content Include="Views\CertificacionSubProceso\Delete.cshtml" />
+    <Content Include="Views\CertificacionSubProceso\Edit.cshtml" />
+    <Content Include="Views\CertificacionSubProceso\Index.cshtml" />
+    <Content Include="Views\AjustesCertificacion\Index.cshtml" />
+    <Content Include="Views\CertificacionInforme\Index.cshtml" />
+    <Content Include="Views\CertificacionInforme\SelectorPeriodo.cshtml" />
+    <Content Include="Views\CertificacionInforme\UniversoCertificado.cshtml" />
+    <Content Include="Views\CertificacionInforme\IncidenciasDetectadas.cshtml" />
+    <Content Include="Views\ReporteCertificacionEntidad\Index.cshtml" />
+    <Content Include="Views\ReporteCertificacionMacroProceso\Index.cshtml" />
+    <Content Include="Views\ReporteCertificacionProceso\Index.cshtml" />
+    <Content Include="Views\ReporteCertificacionSubProceso\Index.cshtml" />
+    <Content Include="Views\Pendientes\Entidades.cshtml" />
+    <Content Include="Views\Pendientes\MacroProcesos.cshtml" />
+    <Content Include="Views\Pendientes\Procesos.cshtml" />
+    <Content Include="Views\Pendientes\SubProcesos.cshtml" />
+    <Content Include="Views\ProcesosAuditoria\InformeDefinitivo.cshtml" />
+    <Content Include="Views\GraphicsIncidenciaAuditoria\Index.cshtml" />
+    <Content Include="Views\GraphicsIncidenciaAuditoria\loadFilters.cshtml" />
+    <Content Include="Views\GraphicsIncidenciaAuditoria\Details.cshtml" />
+    <Content Include="Views\GraphicsSeguimientoAuditoria\Index.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsINFAUD.cshtml" />
+    <Content Include="Views\BDEIR2811\Index.cshtml" />
+    <Content Include="Views\BDEIR2811\Detail.cshtml" />
+    <Content Include="Views\BDEIR2812\Detail.cshtml" />
+    <Content Include="Views\BDEIR2812\Index.cshtml" />
+    <Content Include="Views\BDEIR2813\Detail.cshtml" />
+    <Content Include="Views\BDEIR2813\Index.cshtml" />
+    <Content Include="Views\Inicio\SimpleQuery.cshtml" />
+    <Content Include="Views\Auditoria\CreateDivisionAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\IndexDivisionAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\EditDivisionAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\DeleteDivisionAuditoria.cshtml" />
+    <Content Include="Views\Auditoria\AsignaUsuariosDivisionAuditoria.cshtml" />
+    <Content Include="Views\Utilidades\EarringCounter.cshtml" />
+    <Content Include="Views\ReporteAcceso\Index BKP.cshtml" />
+    <Content Include="Views\Shared\_LayoutReporteLazyLoading.cshtml" />
+    <Content Include="Views\DiagramaTest\Index.cshtml" />
+    <Content Include="Views\Diagrama\Historial.cshtml" />
+    <Content Include="Views\MacroProceso\Historial.cshtml" />
+    <Content Include="Views\Proceso\Historial.cshtml" />
+    <Content Include="Views\SubProceso\Historial.cshtml" />
+    <Content Include="Views\ReporteCambiosMacroProcesos\Index.cshtml" />
+    <Content Include="Views\ReporteCambiosProcesos\Index.cshtml" />
+    <Content Include="Views\ReporteCambiosSubProcesos\Index.cshtml" />
+    <Content Include="Views\Rango\Index.cshtml" />
+    <Content Include="Views\Rango\EditCosteo.cshtml" />
+    <Content Include="Views\Rango\Edit.cshtml" />
+    <Content Include="Views\Rango\DeleteCosteo.cshtml" />
+    <Content Include="Views\Rango\Delete.cshtml" />
+    <Content Include="Views\Rango\CreateCosteo.cshtml" />
+    <Content Include="Views\Rango\Create.cshtml" />
+    <Content Include="Views\Auditoria\Modal\DetailsCosteo.cshtml" />
+    <Content Include="Views\Shared\DetailViews\DetailsCosVista.cshtml" />
+    <Content Include="Views\Cumplimiento\Index.cshtml" />
+    <Content Include="Views\Cumplimiento\Create.cshtml" />
+    <Content Include="Views\Cumplimiento\Edit.cshtml" />
+    <Content Include="Views\Cumplimiento\Delete.cshtml" />
+    <Content Include="Views\Frecuencia\Index.cshtml" />
+    <Content Include="Views\Frecuencia\Create.cshtml" />
+    <Content Include="Views\Frecuencia\Edit.cshtml" />
+    <Content Include="Views\Frecuencia\Delete.cshtml" />
+    <Content Include="Views\Comite\Index.cshtml" />
+    <Content Include="Views\Comite\Create.cshtml" />
+    <Content Include="Views\Comite\Edit.cshtml" />
+    <Content Include="Views\Comite\Delete.cshtml" />
+    <Content Include="Views\TipoObligacion\Index.cshtml" />
+    <Content Include="Views\TipoObligacion\Create.cshtml" />
+    <Content Include="Views\TipoObligacion\Edit.cshtml" />
+    <Content Include="Views\TipoObligacion\Delete.cshtml" />
+    <Content Include="Views\ImpactoMonetario\Index.cshtml" />
+    <Content Include="Views\ImpactoMonetario\Create.cshtml" />
+    <Content Include="Views\ImpactoMonetario\Edit.cshtml" />
+    <Content Include="Views\Factibilidad\Index.cshtml" />
+    <Content Include="Views\Factibilidad\Create.cshtml" />
+    <Content Include="Views\Factibilidad\Edit.cshtml" />
+    <Content Include="Views\CriticidadNormatividad\CriticidadNormatividad.cshtml" />
+    <Content Include="Views\CriticidadNormatividad\Index.cshtml" />
+    <Content Include="Views\ImpactoMonetario\Delete.cshtml" />
+    <Content Include="Views\Factibilidad\Delete.cshtml" />
+    <Content Include="Views\RequiereFicha\Index.cshtml" />
+    <Content Include="Views\RequiereFicha\Create.cshtml" />
+    <Content Include="Views\RequiereFicha\Edit.cshtml" />
+    <Content Include="Views\RequiereFicha\Delete.cshtml" />
+    <Content Include="Views\ReporteSPNM1\Index.cshtml" />
+    <Content Include="Views\ReporteSPNM1\Report.cshtml" />
+    <Content Include="Views\ReporteSPNM1\Report1.cshtml" />
+    <Content Include="Views\ReporteSPNM1\Report2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Archivos\" />
+    <Folder Include="App_Data\Certificacion\" />
+    <Folder Include="App_Data\Diagramas\EN\" />
+    <Folder Include="App_Data\Diagramas\MP\" />
+    <Folder Include="App_Data\Diagramas\PR\" />
+    <Folder Include="App_Data\Diagramas\SP\" />
+    <Folder Include="App_Data\HistorialReportes\" />
+    <Folder Include="App_Data\Incidencias\" />
+    <Folder Include="App_Data\InformesAuditoria\" />
+    <Folder Include="App_Data\RIncidencias\" />
+    <Folder Include="bin\" />
+    <Folder Include="Content\AuxInfo\" />
+    <Folder Include="Views\Ficha\Oficio\" />
+    <Folder Include="Views\ReporteEvaluacionIndicador\" />
+    <Folder Include="Views\SelectList\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\ej2\ej2.d.ts" />
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49949</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8080/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <servers defaultServer="">
+            <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:50950/" workingDir="" />
+          </servers>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.1\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.1\build\xunit.core.props'))" />
+    <Error Condition="!Exists('..\packages\xunit.core.2.4.1\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.4.1\build\xunit.core.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\xunit.core.2.4.1\build\xunit.core.targets" Condition="Exists('..\packages\xunit.core.2.4.1\build\xunit.core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

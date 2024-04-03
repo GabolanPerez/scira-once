@@ -1,0 +1,82 @@
+﻿@model IEnumerable<SCIRA.Models.c_criticidad_riesgo_ro>
+@using SCIRA.Utilidades
+<table>
+    <thead>
+        <tr>
+            <th colspan="3">@Strings.getMSG("BDEICreate100")</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr style="background-color:@item.cl_color_campo; color: @(item.cl_color_campo == "black" ? "white":"black")">
+                <td width="100"><center>@item.nb_criticidad_riesgo_ro</center></td>
+                <td width="50"><center>@item.cl_criticidad_riesgo_ro</center></td>
+                <td width="50">
+                    <center>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-pencil" title="@Strings.getMSG("Editar")" onclick="ShowEditCR(@(item.id_criticidad_riesgo_ro))"></i>
+                        </a>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")" onclick="ShowDeleteCR(@(item.id_criticidad_riesgo_ro))"></i>
+                        </a>
+                    </center>
+                </td>
+                <td hidden>
+                    <input type="text" id="cl@(item.id_criticidad_riesgo_ro)" value="@(item.cl_criticidad_riesgo_ro)">
+                    <input type="text" id="nb@(item.id_criticidad_riesgo_ro)" value="@(item.nb_criticidad_riesgo_ro)">
+                    <input type="text" id="clc@(item.id_criticidad_riesgo_ro)" value="@(item.cl_color_campo)">
+                </td>
+            </tr>
+        }
+
+        <tr style="background-color:gray">
+            <td colspan="3">
+                <center>
+                    <a href="#" onclick="ShowCreateCR();">
+                        <i class="fa fa-plus btn-lg" title="@Strings.getMSG("Agregar Calificación del Riesgo Operacional")"></i>
+                    </a>
+                </center>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<script>
+    $(document).ready(function () {
+        //Cambiar el color de los elementos cuando se regcargue la tabla
+        @foreach(var item in Model)
+        {
+        @:var CellIdentifier = '.CCR@(item.id_criticidad_riesgo_ro)';
+        @:var ContIdentifier = '.CRC@(item.id_criticidad_riesgo_ro)';
+        @:var cl = $("#cl@(item.id_criticidad_riesgo_ro)").val();
+        @:$(CellIdentifier).css("background-color", "@item.cl_color_campo");
+        @:$(ContIdentifier).html(cl);
+        }
+        @if (ViewBag.idcra != null)
+        {
+            @:var idcra = '@ViewBag.idcra';
+            @:var idcr = '@ViewBag.idcr';
+            @:var color = $("#clc" + idcr).val();
+            @:var clave = $("#cl" + idcr).val();
+            @:$(".CCR" + idcra).css("background-color", color);
+            @:$(".CRC" + idcra).html(clave);
+            @:$(".CCR" + idcra).addClass('CCR' + idcr);
+            @:$(".CRC" + idcra).addClass('CRC' + idcr);
+            @:$(".CCR" + idcra).removeClass('CCR' + idcra);
+            @:$(".CRC" + idcra).removeClass('CRC' + idcra);
+        }
+    });
+</script>
+
+
+<div id="optionsSC" hidden>
+    <select class="selectpicker selectCR" data-live-search="true" id="pr1" data-width="auto" name="id_criticidad_riesgo_ro">
+        @foreach (var CR in Model)
+        {
+            <option value="@CR.id_criticidad_riesgo_ro" style="background-color: @CR.cl_color_campo; color:black;">@CR.cl_criticidad_riesgo_ro - @CR.nb_criticidad_riesgo_ro</option>
+        }
+    </select>
+</div>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<SCIRA.Models.c_proceso>
+
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Diagrama Procesos";
+}
+
+<h2>Diagramas de Procesos</h2>
+
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">Entidad</th>
+            <th class="search">Macro Proceso</th>
+            <th class="search">Proceso</th>
+            <th class="search">Responsable</th>
+            <th class="search">Puesto</th>
+            <th width="35"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(item.c_macro_proceso.c_entidad.cl_entidad + " - " + item.c_macro_proceso.c_entidad.nb_entidad)
+                </td>
+                <td>
+                    @(item.c_macro_proceso.cl_macro_proceso + " - " + item.c_macro_proceso.nb_macro_proceso)
+                </td>
+                <td>
+                    @(item.cl_proceso + " - " + item.nb_proceso)
+                </td>
+                <td>
+                    @(item.c_usuario.nb_usuario)
+                </td>
+                <td>
+                    @SCIRA.Utilidades.Utilidades.PuestoUsuario(item.id_responsable)
+                </td>
+                <td>
+                    <a href="@Url.Action("Diagrama", new { id = item.id_proceso })" class="diagram">
+                        <i class="fa fa-object-ungroup" title="Diagrama"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,39 @@
+{
+  "RepName": "Reporte de Certificación de Procesos",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Macro Proceso",
+    "Responsable",
+    "Puesto",
+    "Proceso",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "04 - Empresa b",
+      "Sergio",
+      "Gerente",
+      "MG900 - Comités",
+      "Sergio",
+      "Gerente",
+      "P01 - Desarrollo de presupuestos",
+      "Nelson Camargo",
+      "General Adjunto",
+      "Enero - 2024",
+      "Me he asegurado que los Subprocesos que integran el Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Proceso no existen mas Subprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "ComitésComités",
+      "No"
+    ]
+  ],
+  "NoCols": 13,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

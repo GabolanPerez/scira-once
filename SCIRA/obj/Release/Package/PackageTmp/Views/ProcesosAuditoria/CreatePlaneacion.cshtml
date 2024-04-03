@@ -1,0 +1,387 @@
+﻿@model SCIRA.Models.k_auditoria
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+
+    List<SCIRA.Models.c_campo_auditoria> InfoCamposExtra = ViewBag.InfoCamposExtra;
+
+    Dictionary<int, string> Errors;
+    Dictionary<int, string> DCE;
+
+    if (ViewBag.Errors != null)
+    {
+        Errors = ViewBag.Errors;
+    }
+    else
+    {
+        Errors = new Dictionary<int, string>();
+    }
+
+    if (ViewBag.DCE != null)
+    {
+        DCE = ViewBag.DCE;
+    }
+    else
+    {
+        DCE = new Dictionary<int, string>();
+    }
+
+    bool AuditoriaSeleccionada = Model.id_auditoria != 0;
+}
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+
+<link href="~/Content/base.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+<script type="text/javascript" src="~/Scripts/moment-with-locales.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.js"></script>
+
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+<script>
+    var url = "@Url.Action("InfoAuditoria")";
+
+    $("document").ready(function () {
+        $('#id_auditoria').on('change', function () {
+            infoAudit(this.value);
+        });
+
+        $(".datetimepicker").datetimepicker({
+            locale: 'es',
+            format: '@ViewBag.DateFormat',
+            minDate: "01/01/1900"
+        });
+
+        @if(Model.id_auditoria > 0)
+        {
+            @:infoAudit(@Model.id_auditoria);
+        }
+
+    });
+
+    function infoAudit(id) {
+        $("#IdAud").val(id);
+        var data = getFromURL(url, "idAudForm");
+
+        if (data != null) {
+            var JsonData = JSON.parse(data);
+
+            $("#Entidad").val(JsonData.Entidad);
+            $("#Area").val(JsonData.Area);
+            $("#Tipo").val(JsonData.Tipo);
+            $("#Solicitante").val(JsonData.Solicitante);
+            $("#DivisionAuditoria").val(JsonData.Division);
+
+
+            $(".normalInput ").removeAttr("hidden");
+
+            if (JsonData.Tipo == "Normal") {
+                $(".AudRegulada").attr("disabled", "disabled");
+                $(".regulateInput").attr("hidden", "hidden");
+            } else {
+                $(".AudRegulada").removeAttr("disabled");
+                $(".regulateInput").removeAttr("hidden");
+            }
+
+        } else {
+            $("#Entidad").val("");
+            $("#Area").val("");
+            $("#Tipo").val("");
+            $("#Solicitante").val("");
+            $("#DivisionAuditoria").val("");
+
+            $(".AudRegulada").removeAttr("disabled");
+            $(".audInput").removeAttr("hidden");
+            $(".cex").attr("hidden","hidden");
+        }
+
+    }
+
+
+</script>
+
+
+<form id="idAudForm" hidden>
+    <input type="text" name="id_auditoria" id="IdAud">
+</form>
+
+<h2>@Strings.getMSG("Agregar")</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#pes1" id="pes1b" data-toggle="tab"><h4>@Strings.getMSG("UsuarioCreate011")<span id="ind1"></span> </h4></a></li>
+    <li><a href="#pes2" data-toggle="tab" id="pes2b"><h4>@Strings.getMSG("ProcesosAuditoriaCreatePlaneacion014")<span id="ind2"></span></h4></a></li>
+</ul>
+
+
+@using (Html.BeginForm(null,null,FormMethod.Post, htmlAttributes: new { autocomplete = "off" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="pes1">
+            <div class="form-horizontal well">
+                <h4>@Strings.getMSG("Menu105")</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @*<div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">¿Es súper usuario?</label>
+                <div class="col-xs-3 col-md-2">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.es_super_usuario, new { htmlAttributes = new { data_toggle = "toggle", data_on = "Si", data_off = "No", data_width = "140" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="Atención" data-toggle="popover" data-trigger="hover" data-content="Un Súper Usuario, no tendrá restricciones en cuanto a los Sub Procesos mostrados en las funcionalidades del menú Operación, sin importar que éste no sea responsable de ningún Macro Proceso, Proceso o Sub Proceso.">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+                <div class="row has-error">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu148")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_auditoria", null, Strings.getMSG("ProcesosAuditoriaCreatePlaneacion008"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("AuditoriaCreateCampoAuditoria006") })
+                            @Html.ValidationMessageFor(model => model.id_auditoria, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("DivisionAuditoria001")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control disabled" disabled id="DivisionAuditoria" />
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("DivisionAuditoria006")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Entidad")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control disabled" disabled id="Entidad" />
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ProcesosAuditoriaEditEjecucion016")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Area")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control disabled" disabled id="Area" />
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ProcesosAuditoriaEditEjecucion017")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MCSubProcesoIndex002")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control disabled" disabled id="Tipo" />
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ProcesosAuditoriaEditEjecucion018")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("AuditoriaIndexUniversoAuditable002")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control disabled" disabled id="Solicitante" />
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ProcesosAuditoriaEditEjecucion019")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ProcesosAuditoriaCreatePlaneacion001")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.no_auditores, new { htmlAttributes = new { @class = "form-control num S1", data_val_number = Strings.getMSG("IndicadorCreate029"), @type = "number", @min = "0", @max = "100000", autocomplete = "new-password" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ProcesosAuditoriaCreatePlaneacion009")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.no_auditores, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ProcesosAuditoriaIndexPlaneacion005")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.no_horas_estimadas, new { htmlAttributes = new { @class = "form-control num S1", data_val_number = Strings.getMSG("IndicadorCreate029"), @type = "number", @min = "0", @max = "100000" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ProcesosAuditoriaCreatePlaneacion010")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.no_horas_estimadas, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ProcesosAuditoriaCreatePlaneacion002")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                                @Html.TextBox("fe_inicial_planeada", (Model.fe_inicial_planeada == DateTime.MinValue ? System.DateTime.Now.ToString() : Model.fe_final_planeada.ToString()), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("ProcesosAuditoriaCreatePlaneacion011"), data_val = "false", autocomplete = "new-password" })
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.fe_inicial_planeada, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ProcesosAuditoriaCreatePlaneacion003")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                                @Html.TextBox("fe_final_planeada", (Model.fe_final_planeada == DateTime.MinValue ? System.DateTime.Now.ToString() : Model.fe_final_planeada.ToString()), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("ProcesosAuditoriaCreatePlaneacion012"), data_val = "false", autocomplete = "new-password" })
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.fe_final_planeada, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ProcesosAuditoriaCreatePlaneacion004")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.TextAreaFor(model => model.justificacion_incumplimiento, new { @class = "form-control", @rows = "3", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("ProcesosAuditoriaCreatePlaneacion013") })
+                            @Html.ValidationMessageFor(model => model.justificacion_incumplimiento, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane" id="pes2">
+
+            <div class="form-horizontal well">
+                <h4>@Strings.getMSG("ProcesosAuditoriaCreatePlaneacion014")</h4>
+                <hr />
+
+                @foreach (var campo in InfoCamposExtra)
+                {
+                    var val = "";
+                    if (DCE.ContainsKey(campo.id_campo_auditoria))
+                    {
+                        val = DCE[campo.id_campo_auditoria];
+                    }
+
+                    <div class="row @(campo.es_auditoria_regulada ? "regulateInput":"normalInput") cex" @(AuditoriaSeleccionada ? "" : "hidden")>
+                        <div class="form-group @(campo.es_requerido ? "has-error":"") ">
+                            <label class="control-label col-xs-3 col-md-2">@campo.nb_campo</label>
+                            <div class="col-xs-6 col-md-5">
+
+                                @if (campo.cl_tipo_campo == "t")
+                                {
+                                    <div class="input-group">
+                                        <input class="form-control text-box single-line @(campo.es_auditoria_regulada ? "AudRegulada":"AudNormal")" style=" @(campo.cl_color_borde == "0" ? "" : "border-color:" + campo.cl_color_borde+";") @(campo.cl_color_fondo == "0" ? "" : "background-color:" + campo.cl_color_fondo+";") " data-val-length="Este campo puede tener hasta @campo.longitud caracteres." data-val-length-max="@campo.longitud" name="campoe[]" type="text" value="@val">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default" title="" data-toggle="popover" data-trigger="hover" data-content="@(campo.msg_ayuda)." data-original-title="Atención">
+                                                <i class="glyphicon glyphicon-question-sign"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+                                else if (campo.cl_tipo_campo == "a")
+                                {
+                                    <textarea class="form-control @(campo.es_auditoria_regulada ? "AudRegulada":"AudNormal")" style=" @(campo.cl_color_borde == "0" ? "" : "border-color:" + campo.cl_color_borde+";") @(campo.cl_color_fondo == "0" ? "" : "background-color:" + campo.cl_color_fondo+";") " cols="20" data-content="@(campo.msg_ayuda)." data-toggle="popover" data-trigger="hover" data-val-length="La descripción puede tener hasta @campo.longitud caracteres." data-val-length-max="@campo.longitud" name="campoe[]" rows="5" title="" data-original-title="Atención">@val</textarea>
+                                }
+                                else if (campo.cl_tipo_campo == "n")
+                                {
+                                    <div class="input-group">
+                                        <input class="form-control text-box single-line @(campo.es_auditoria_regulada ? "AudRegulada":"AudNormal")" style=" @(campo.cl_color_borde == "0" ? "" : "border-color:" + campo.cl_color_borde+";") @(campo.cl_color_fondo == "0" ? "" : "background-color:" + campo.cl_color_fondo+";") " data-val-number="Este campo debe ser numérico" name="campoe[]" type="number" value="@val">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default" title="" data-toggle="popover" data-trigger="hover" data-content="@(campo.msg_ayuda)." data-original-title="Atención">
+                                                <i class="glyphicon glyphicon-question-sign"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+
+                                <input type="hidden" class="@(campo.es_auditoria_regulada ? "AudRegulada":"AudNormal")" name="idcampoe[]" value="@campo.id_campo_auditoria" />
+
+                                @if (Errors.ContainsKey(campo.id_campo_auditoria))
+                                {
+                                    <span class="field-validation-valid text-danger">@Errors[campo.id_campo_auditoria]</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                <input type="submit" value=@Strings.getMSG("Guardar") class="btn btn-primary" />
+                @Html.ActionLink(Strings.getMSG("Regresar"), "IndexPlaneacion", null, new { @class = "btn btn-default" })
+            </div>
+        </div>
+    </div>
+}

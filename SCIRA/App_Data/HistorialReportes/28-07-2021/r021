@@ -1,0 +1,51 @@
+{
+  "RepName": "Reporte de Controles sin Riesgo Residual",
+  "ColNames": [
+    "Entidad",
+    "Responsable Entidad",
+    "Macro Proceso",
+    "Responsable Macro Proceso",
+    "Proceso",
+    "Responsable Proceso",
+    "Sub Proceso",
+    "Responsable Sub Proceso",
+    "Riesgo",
+    "Evento de Riesgo",
+    "Control",
+    "Actividad de Control"
+  ],
+  "Rows": [
+    [
+      "01 - CONSUBANCO, S.A. Institución de Banca Múltiple",
+      "Berenice Serrano Jiménez",
+      "MP01.01 - Contraloría Interna",
+      "Berenice Serrano Jiménez",
+      "P01.01.0001 - Manual de Operación para Prevenir, Detectar y Reportar Operaciones con Recursos de Procedencia Ilícita y el Financiamiento al Terrorismo",
+      "Berenice Serrano Jiménez",
+      "SP01.01.0001.0002 - Proceso para Reportar Operaciones Inusuales",
+      "Berenice Serrano Jiménez",
+      "prueba",
+      "prueba",
+      null,
+      null
+    ],
+    [
+      "01 - CONSUBANCO, S.A. Institución de Banca Múltiple",
+      "Berenice Serrano Jiménez",
+      "MP01.01 - Contraloría Interna",
+      "Berenice Serrano Jiménez",
+      "P01.01.0001 - Manual de Operación para Prevenir, Detectar y Reportar Operaciones con Recursos de Procedencia Ilícita y el Financiamiento al Terrorismo",
+      "Berenice Serrano Jiménez",
+      "SP01.01.0001.0001 - Proceso de Entrevista Personal con el Cliente",
+      "Berenice Serrano Jiménez",
+      "RO154",
+      "Omitir la revision y analisis de una posible operación inusual y No analizar el total de las alertas mensuales en Detectart",
+      "CO154",
+      "El Analista de prevención de lavado de dinero realizará una comparación de las alertas, entre los datos descargados por día y el total mensual que refleja en el sistema de monitoreo (DAW), a fin de mes y se realiza manualmente para corroborar que no se omitan analizar alertas. Editado"
+    ]
+  ],
+  "NoCols": 12,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

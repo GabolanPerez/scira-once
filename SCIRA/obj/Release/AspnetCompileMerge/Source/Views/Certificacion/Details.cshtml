@@ -1,0 +1,149 @@
+﻿@model SCIRA.Models.k_certificacion_control
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Certificar";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+@using (Html.BeginForm("", ""))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal well">
+        <h4>@Strings.getMSG("CertificacionInforme023") @ViewBag.nb_control</h4>
+        <hr />
+
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+            <div class="col-xs-6 col-md-5">
+                <input class="form-control text-box single-line" disabled="disabled" type="text" value="@Model.cl_certificacion_control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("PeriodoCertificacionIndex002")</label>
+            <div class="col-xs-6 col-md-5">
+                <input class="form-control text-box single-line" disabled="disabled" type="text" value="@Model.c_periodo_certificacion.nb_periodo_certificacion">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionCertificar002")</label>
+            <div class="col-xs-6 col-md-5">
+                <textarea class="form-control text-box" disabled="disabled" rows="3">@Model.ds_procedimiento_certificacion</textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu010")</label>
+            <div class="col-xs-6 col-md-5">
+                <input class="form-control text-box single-line" disabled="disabled" type="text" value="@Model.c_tipo_evaluacion.nb_tipo_evaluacion">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("PruebaAutoEvaluacionIndex001")</label>
+            <div class="col-xs-6 col-md-5">
+                <input class="form-control text-box single-line" disabled="disabled" type="text" value="@Model.no_partidas_minimo">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("PruebaAutoEvaluacionIndex002")</label>
+            <div class="col-xs-6 col-md-5">
+                <input class="form-control text-box single-line" disabled="disabled" type="text" value="@Model.no_partidas_semestre1">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("PruebaAutoEvaluacionIndex003")</label>
+            <div class="col-xs-6 col-md-5">
+                <input class="form-control text-box single-line" disabled="disabled" type="text" value="@Model.no_partidas_semestre2">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionCertificar003")</label>
+            <div class="col-xs-6 col-md-5">
+                <input class="form-control text-box single-line" disabled="disabled" type="text" value="@Model.no_pruebas_realizadas">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionCertificar004")</label>
+            <div class="col-xs-6 col-md-5">
+                @(Model.tiene_funcionamiento_efectivo ? Strings.getMSG("UsuarioIndex004"):Strings.getMSG("UsuarioIndex005"))
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionCertificar005")</label>
+            <div class="col-xs-6 col-md-5">
+                @(Model.tiene_disenio_efectivo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))
+            </div>
+        </div>
+
+        @if(Model.nb_archivo_1 != null)
+        {
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionCertificar006")</label>
+            <div class="col-xs-6 col-md-5">
+                <textarea class="form-control text-box" disabled="disabled" rows="3">@Model.nb_archivo_1</textarea>
+            </div>
+        </div>
+        }
+
+        @if(Model.nb_archivo_2 != null)
+        {
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionInforme019")</label>
+            <div class="col-xs-6 col-md-5">
+                <textarea class="form-control text-box" disabled="disabled" rows="3">@Model.nb_archivo_2</textarea>
+            </div>
+        </div>
+        }
+
+        @if(Model.nb_archivo_3 != null)
+        {
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionInforme020")</label>
+            <div class="col-xs-6 col-md-5">
+                <textarea class="form-control text-box" disabled="disabled" rows="3">@Model.nb_archivo_3</textarea>
+            </div>
+        </div>
+        }
+
+        @if(Model.nb_archivo_4 != null)
+        {
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionInforme021")</label>
+            <div class="col-xs-6 col-md-5">
+                <textarea class="form-control text-box" disabled="disabled" rows="3">@Model.nb_archivo_4</textarea>
+            </div>
+        </div>
+        }
+
+        @if(Model.nb_archivo_5 != null)
+        {
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionInforme022")</label>
+            <div class="col-xs-6 col-md-5">
+                <textarea class="form-control text-box" disabled="disabled" rows="3">@Model.nb_archivo_5</textarea>
+            </div>
+        </div>
+        }
+        
+
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                @Html.ActionLink(Strings.getMSG("Regresar"), "Certificados", "Certificacion", new { id = Model.id_control }, new { @class = "btn btn-default" })
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

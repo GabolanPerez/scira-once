@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages>
+  <senderMail>
+    <mail>bricev.13@gmail.com</mail>
+    <password>bmlsaqxxxbowxims ED</password>
+    <host>smtp.gmail.com</host>
+    <puerto>587</puerto>
+    <ssl>true</ssl>
+    <credenciales>false</credenciales>
+  </senderMail>
+  <message1>
+    <!--Oficio-->
+    <send>true</send>
+    <head>Notificaciones SCIRA</head>
+    <body>&lt;style type="text/css"&gt;
+.contenido{
+width: 100%;
+height: 3rem;
+background-color: rgb(255,0,0);
+color: white;
+
+font-size: 19px;
+text-align: center;
+}
+&lt;/style&gt;
+
+
+&lt;div class="contenido"&gt;&lt;b&gt;Sistema Integral de Control Interno&lt;/b&gt;&lt;/div&gt;
+Buenos días &lt;b&gt;nb_usuario&lt;/b&gt;.&lt;br/&gt;
+&lt;br/&gt;
+Se le ha asignado el oficio &lt;b&gt;nb_objeto&lt;/b&gt; perteneciente a la entidad &lt;b&gt;nb_entidad&lt;/b&gt; y emitido por la autoridad: &lt;b&gt;origen_autoridad&lt;/b&gt;.&lt;br/&gt;
+&lt;br/&gt;
+El oficio fue emitido el: &lt;b&gt;fecha_registro &lt;/b&gt;y tiene como fecha de vencimiento el: &lt;b&gt;fe_vencimiento&lt;/b&gt;, también contará con &lt;b&gt;no_incidencias &lt;/b&gt;incidencias, favor de atenderlo a la brevedad.
+
+&lt;hr&gt;
+
+&lt;p style="color:rgb(206,208,210)"&gt; Saludos! Nvllivs in verba&lt;/p&gt;</body>
+    <subject>Se le ha asignado el oficio: nb_objeto </subject>
+  </message1>
+  <message2>
+    <!--Informes-->
+    <send>true</send>
+    <head>Notificaciones SCIRA</head>
+    <body>&lt;style type="text/css"&gt;
+.contenidoI{
+width: 100%;
+height: 3rem;
+background-color: rgb(60,200,255,.7);
+color: gray;
+
+font-size: 19px;
+text-align: center;
+}
+&lt;/style&gt;
+
+
+&lt;div class="contenidoI"&gt;&lt;b&gt;Sistema Integral de Control Interno&lt;/b&gt;&lt;/div&gt;
+Buenos días &lt;b&gt;nb_usuario&lt;/b&gt;.&lt;br/&gt;
+&lt;br/&gt;
+Se le ha asignado el informe &lt;b&gt;nb_objeto&lt;/b&gt; perteneciente a la entidad &lt;b&gt;nb_entidad&lt;/b&gt;.&lt;br/&gt;
+&lt;br/&gt;
+El informe fue emitido el: &lt;b&gt;fecha_registro &lt;/b&gt;, también contará con &lt;b&gt;no_incidencias &lt;/b&gt;incidencias, favor de atenderlo a la brevedad.
+
+&lt;hr&gt;
+
+&lt;p style="color:rgb(206,208,210)"&gt; Saludos! Nvllivs in verba&lt;/p&gt;</body>
+    <subject>Se le ha asignado el informe: nb_objeto</subject>
+  </message2>
+  <message3>
+    <!--Incidencias-->
+    <send>false</send>
+    <head>Notificaciones SCIRA</head>
+    <body>&lt;style type="text/css"&gt;
+.contenido2{
+width: 100%;
+height: 4rem;
+background-color: #398AA4;
+color: white;
+border: 5px  solid #555555;
+font-size: 2rem;
+text-align: center;
+}
+
+table.steelBlueCols {
+  border: 4px solid #555555;
+  background-color: #555555;
+  width: 400px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.steelBlueCols td, table.steelBlueCols th {
+  border: 1px solid #555555;
+  padding: 5px 10px;
+}
+table.steelBlueCols tbody td {
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+table.steelBlueCols td:nth-child(even) {
+  background: #398AA4;
+}
+table.steelBlueCols thead {
+  background: #398AA4;
+  border-bottom: 10px solid #398AA4;
+}
+table.steelBlueCols thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #398AA4;
+}
+table.steelBlueCols thead th:first-child {
+  border-left: none;
+}
+
+table.steelBlueCols tfoot td {
+  font-size: 13px;
+}
+table.steelBlueCols tfoot .links {
+  text-align: right;
+}
+table.steelBlueCols tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #398AA4;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+&lt;/style&gt;
+
+&lt;div class="contenido2"&gt;
+Notificaciones SCIRA
+&lt;/div&gt;
+
+Buen día &lt;b&gt;nb_usuario&lt;/b&gt;.&lt;br/&gt;
+&lt;br/&gt;
+Se le ha asignado una incidencia, sus atributos son los siguientes:&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;center&gt;
+&lt;table class="steelBlueCols"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parametro&lt;/th&gt;
+&lt;th&gt;Valor&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Objeto padre&lt;/td&gt;&lt;td&gt;nb_padre&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nivel&lt;/td&gt;&lt;td&gt;lvl_inc&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Descripción&lt;/td&gt;&lt;td&gt;desc_incidencia&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Clasificación&lt;/td&gt;&lt;td&gt;nb_clasificacion&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;¿Requiere plan?&lt;/td&gt;&lt;td&gt;requiere_plan&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Justificacion de no plan&lt;/td&gt;&lt;td&gt;js_no_plan&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;</body>
+    <subject>Se le ha asignado una incidencia</subject>
+  </message3>
+  <message4>
+    <!--Controles-->
+    <send>false</send>
+    <head>Notificaciones SCIRA</head>
+    <body>&lt;style type="text/css"&gt;
+.contenido3{
+width: 100%;
+height: 4rem;
+background-color: #A83131;
+color: white;
+border: 5px  solid #555555;
+font-size: 2rem;
+text-align: center;
+}
+
+table.steelBlueCols2 {
+  border: 4px solid #555555;
+  background-color: #555555;
+  width: 400px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.steelBlueCols2 td, table.steelBlueCols2 th {
+  border: 1px solid #555555;
+  padding: 5px 10px;
+}
+table.steelBlueCols2 tbody td {
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+table.steelBlueCols2 td:nth-child(even) {
+  background: #CB3629;
+}
+table.steelBlueCols2 thead {
+  background: #A83131;
+  border-bottom: 10px solid #9BA9AF;
+}
+table.steelBlueCols2 thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: left;
+  border-left: 2px solid #9BA9AF;
+}
+table.steelBlueCols2 thead th:first-child {
+  border-left: none;
+}
+
+table.steelBlueCols2 tfoot td {
+  font-size: 13px;
+}
+table.steelBlueCols2 tfoot .links {
+  text-align: right;
+}
+table.steelBlueCols2 tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #398AA4;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+&lt;/style&gt;
+
+&lt;div class="contenido3"&gt;
+Notificaciones SCIRA
+&lt;/div&gt;
+
+
+Buen día nb_usuario&lt;br/&gt;
+&lt;br/&gt;
+Se le ha asignado el control: &lt;b&gt;codigo_control&lt;/b&gt;, sus atributos son los siguientes:&lt;br/&gt;
+&lt;br/&gt;
+ &lt;center&gt;
+&lt;table class="steelBlueCols2"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parametro&lt;/th&gt;
+&lt;th&gt;Valor&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Entidad&lt;/td&gt;
+&lt;td&gt;nb_entidad&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Macro Proceso&lt;/td&gt;
+&lt;td&gt;macro_proceso_c&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Proceso&lt;/td&gt;
+&lt;td&gt;proceso_c&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sub Proceso&lt;/td&gt;
+&lt;td&gt;sub_proceso_c&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Riesgo&lt;/td&gt;
+&lt;td&gt;riesgo_control&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Actividad o Acción Correctora&lt;/td&gt;
+&lt;td&gt;actividad/accionCorrectora&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;</body>
+    <subject>Se le ha asignado un control</subject>
+  </message4>
+  <message5>
+    <!--Indicadores-->
+    <send>true</send>
+    <head>Notificaciones SCIRA</head>
+    <body>&lt;style type="text/css"&gt;
+#indCont1{
+width: 100%;
+height: 600px;
+background-color: rgb(0,0,0,.4);
+color: white;
+font-size: 1em;
+border: 3px solid brown;
+}
+
+#indCont2{
+width: 100%;
+height: 10%;
+background-color: rgb(0,0,0,.4);
+color: white;
+font-size: 1.5rem;
+text-align: right;
+padding: 5px;
+}
+&lt;/style&gt;
+
+&lt;div id="indCont1"&gt;
+&lt;div id="indCont2"&gt;&lt;br/&gt;
+Notificaciones SCIRA
+&lt;/div&gt;
+
+Buenos días nb_usuario.&lt;br/&gt;
+&lt;br/&gt;
+
+
+Se le ha asignado el Indicador nb_indicador:&lt;br/&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;b&gt;Clave&lt;/b&gt;: cl_indicador&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Entidad&lt;/b&gt;: nb_entidad&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Descripción&lt;/b&gt;: ds_indicador&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Área&lt;/b&gt;: nb_area&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br/&gt;
+Favor de realizar la(s) evaluación(es) correspondiente(s).
+
+&lt;/div&gt;</body>
+    <subject>Plantilla indicador</subject>
+  </message5>
+  <message6>
+    <!--Planes de Remediación-->
+    <send>false</send>
+    <head>Notificaciones SCIRA</head>
+    <body>&lt;style type="text/css"&gt;
+.contenido2{
+width: 100%;
+height: 4rem;
+background-color: #398AA4;
+color: white;
+border: 5px  solid #555555;
+font-size: 2rem;
+text-align: center;
+}
+
+table.steelBlueCols {
+  border: 4px solid #555555;
+  background-color: #555555;
+  width: 400px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.steelBlueCols td, table.steelBlueCols th {
+  border: 1px solid #555555;
+  padding: 5px 10px;
+}
+table.steelBlueCols tbody td {
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+table.steelBlueCols td:nth-child(even) {
+  background: #398AA4;
+}
+table.steelBlueCols thead {
+  background: #398AA4;
+  border-bottom: 10px solid #398AA4;
+}
+table.steelBlueCols thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #398AA4;
+}
+table.steelBlueCols thead th:first-child {
+  border-left: none;
+}
+
+table.steelBlueCols tfoot td {
+  font-size: 13px;
+}
+table.steelBlueCols tfoot .links {
+  text-align: right;
+}
+table.steelBlueCols tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #398AA4;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+&lt;/style&gt;
+
+&lt;div class="contenido2"&gt;
+Notificaciones SCIRA
+&lt;/div&gt;
+
+Buen día &lt;b&gt;nb_usuario&lt;/b&gt;.&lt;br/&gt;
+&lt;br/&gt;
+Se le ha asignado un plan de remediación, sus atributos son los siguientes:&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;center&gt;
+&lt;table class="steelBlueCols"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Parametro&lt;/th&gt;
+&lt;th&gt;Valor&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Área&lt;/td&gt;&lt;td&gt;nb_area&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ID Incidencia&lt;/td&gt;&lt;td&gt;id_incidencia&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ID Plan&lt;/td&gt;&lt;td&gt;id_plan&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nombre del Plan&lt;/td&gt;&lt;td&gt;nb_plan&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Descripción&lt;/td&gt;&lt;td&gt;ds_plan&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Fecha de alta&lt;/td&gt;&lt;td&gt;fe_alta&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/center&gt;</body>
+    <subject>Se le ha asignado el Plan de Remediación: nb_plan</subject>
+  </message6>
+  <message7>
+    <!--Pendientes del Usuario-->
+    <freq>Mensual</freq>
+    <send>false</send>
+    <head>Notificaciones SCIRA</head>
+    <body>&lt;style type="text/css"&gt;
+.contenido7{
+width: 100%;
+height: 4rem;
+background-color: #A83131;
+color: white;
+border: 5px  solid #555555;
+font-size: 2rem;
+text-align: center;
+}
+
+table.steelBlueCols7 {
+  border: 4px solid #555555;
+  background-color: #555555;
+  width: 400px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.steelBlueCols7 td, table.steelBlueCols7 th {
+  border: 1px solid #555555;
+  padding: 5px 10px;
+}
+table.steelBlueCols7 tbody td {
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+table.steelBlueCols7 td:nth-child(even) {
+  background: #CB3629;
+}
+table.steelBlueCols7 thead {
+  background: #A83131;
+  border-bottom: 10px solid #9BA9AF;
+}
+table.steelBlueCols7 thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: left;
+  border-left: 2px solid #9BA9AF;
+}
+table.steelBlueCols7 thead th:first-child {
+  border-left: none;
+}
+
+table.steelBlueCols7 tfoot td {
+  font-size: 13px;
+}
+table.steelBlueCols7 tfoot .links {
+  text-align: right;
+}
+table.steelBlueCols7 tfoot .links a{
+  display: inline-block;
+  background: #FFFFFF;
+  color: #398AA4;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+&lt;/style&gt;
+
+&lt;div class="contenido7"&gt;
+Notificaciones SCIRA
+&lt;/div&gt;
+
+Buenos días &lt;b&gt;&lt;i&gt;nb_usuario&lt;/i&gt;&lt;/b&gt;&lt;br/&gt;
+&lt;br/&gt;
+en este mensaje encontrará una lista de los distintos pendientes que tiene en el sistema &lt;b&gt;SCIRA&lt;/b&gt;
+
+
+
+
+
+
+ &lt;center&gt;
+&lt;table class="steelBlueCols7"&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Cátalogo&lt;/th&gt;
+&lt;th&gt;Pendientes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Entidades&lt;/td&gt;
+&lt;td&gt;%lista_entidades%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Macro Procesos&lt;/td&gt;
+&lt;td&gt;%lista_macro_procesos%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Procesos&lt;/td&gt;
+&lt;td&gt;%lista_procesos%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Sub Procesos&lt;/td&gt;
+&lt;td&gt;%lista_sub_procesos%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Controles&lt;/td&gt;
+&lt;td&gt;%lista_controles%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Indicadores&lt;/td&gt;
+&lt;td&gt;%lista_indicadores%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Oficios&lt;/td&gt;
+&lt;td&gt;%lista_oficios%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Informes&lt;/td&gt;
+&lt;td&gt;%lista_informes%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Incidencias&lt;/td&gt;
+&lt;td&gt;%lista_incidencias%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Planes de Remediación&lt;/td&gt;
+&lt;td&gt;%lista_planes%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Fichas&lt;/td&gt;
+&lt;td&gt;%lista_fichas%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+
+
+
+</body>
+    <subject>Pendientes SCIRA</subject>
+  </message7>
+  <message8>
+    <!--Plantilla-->
+    <send>true</send>
+    <head>Notificaciones SCIRA</head>
+    <body>
+    </body>
+    <subject>Plantilla</subject>
+  </message8>
+  <massMessage1>
+    <send>false</send>
+    <head>Notificaciones SCIRA</head>
+    <body>Buenos días nb_usuario.&lt;br/&gt;
+&lt;br/&gt;
+Se ha abierto un nuevo periodo de Certificación (Periodo: "%nb_periodo%"). Favor de atender sus controles a la brevedad. Los controles que están a su cargo son:&lt;br/&gt;
+&lt;br/&gt;
+%lista_controles%</body>
+    <subject>Se ha abierto un nuevo periodo de Certificación</subject>
+  </massMessage1>
+  <massMessage2>
+    <send>false</send>
+    <head>Notificaciones SCIRA</head>
+    <body>Buenos días nb_usuario.&lt;br/&gt;
+&lt;br/&gt;
+Se ha iniciado el periodo %nb_periodo% para la evaluación de indicadores, favor de atender los indicadores que tenga a su cargo, son los siguientes: 
+&lt;br/&gt;&lt;br/&gt;
+
+%lista_indicadores%</body>
+    <subject>Se ha iniciado un nuevo periodo para la evaluación de indicadores</subject>
+  </massMessage2>
+  <general0001>
+    <body>&lt;table border="0" cellpadding="0" cellspacing="0" width="100%" class="x_backgroundTable" bgcolor="#fff" style="transform: scale(1, 1); transform-origin: left top; width: 100%; height: 100%; align-items: center; justify-content: center;" min-scale="0.53 "&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td style="
+		height: 10em;
+		background-image: url(https://s03.s3c.es/imag/_v0/700x300/9/6/a/empresas-empresarios.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;"&gt;
+                &lt;table align="center" style=" width: 100%; height: 100%; align-items: center; justify-content: center; display: flex; background-color: rgb(0,0,0,.7);"&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td align="center" style="color:#ffffff; font-size:5em; font-family: sans-serif; " &gt;
+                                S C I R A
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;table align="center" cellpadding="0" cellspacing="0" width="83%"&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td class="" align="center" style="color:#000;  font-family:Helvetica,Arial,sans-serif; font-size:18px; line-height:24px; font-weight:bold; padding:30px 0px 20px 0px; text-transform:uppercase"&gt;
+                                %titulo%
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr&gt;
+                            &lt;td class="" align="left" style=" color:#000;  font-family:Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:normal; padding:30px 0px 20px 0px;"&gt;
+                                
+                                &lt;p&gt;
+%mensaje%
+                                &lt;/p&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;table cellpadding="0" cellspacing="0" border="0" width="100%"&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td align="center"&gt;
+                                &lt;table cellpadding="0" cellspacing="0" border="0" width="83%" align="center" class="x_buttonInnerShell"&gt;
+                                    &lt;tbody&gt;
+                                        &lt;tr&gt;
+                                            &lt;td class="x_buttonInnerShell_cell" style="padding:0px 0px 30px 0px"&gt;
+                                                &lt;table cellpadding="0" cellspacing="0" border="0" width="100%" align="center"&gt;
+                                                    &lt;tbody&gt;
+                                                        &lt;tr&gt;
+                                                            &lt;td class="x_buttonCell" width="100%" align="center" valign="top" bgcolor="#E70000" style=" background-color:rgb(255,255,255); display:inline-block; color:rgb(255,255,255); text-decoration:none"&gt;
+                                                                &lt;table cellpadding="0" cellspacing="0" border="0" width="100%" align="center"&gt;
+                                                                    &lt;tbody&gt;
+                                                                        &lt;tr&gt;
+                                                                            &lt;td align="center" valign="middle" style="padding:31px 0px 31px 0px; font-family:Helvetica,Arial,sans-serif; font-weight:normal; font-size:16px"&gt;&lt;/td&gt;
+                                                                        &lt;/tr&gt;
+                                                                    &lt;/tbody&gt;
+                                                                &lt;/table&gt;
+                                                            &lt;/td&gt;
+                                                        &lt;/tr&gt;
+                                                    &lt;/tbody&gt;
+                                                &lt;/table&gt;
+                                            &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                    &lt;/tbody&gt;
+                                &lt;/table&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+
+                &lt;table cellpadding="0" cellspacing="0" align="center" width="100%" bgcolor="#000"&gt;
+                    &lt;tbody&gt;
+                        &lt;tr&gt;
+                            &lt;td align="center" style="padding:21px 0 21px 0"&gt;
+                                &lt;table cellpadding="0" cellspacing="0" align="center" width="83%" class="x_footerInnerShell"&gt;
+                                    &lt;tbody&gt;
+                                        &lt;tr&gt;
+                                            &lt;td class="x_questions" style="color:rgb(179,179,179); font-size:14px; font-family:Helvetica,Arial,sans-serif; padding:0px 0px 10px 0px; line-height:16px"&gt;
+                                                
+                                            &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                            &lt;td class="x_questions" style="color:rgb(179,179,179); font-size:14px; font-family:Helvetica,Arial,sans-serif; padding:0px 0px 10px 0px; line-height:16px"&gt;
+                                                
+                                            &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                            &lt;td class="x_questions" style="color:rgb(179,179,179); font-size:14px; font-family:Helvetica,Arial,sans-serif; padding:0px 0px 10px 0px; line-height:16px"&gt;
+                                                &lt;center&gt;Sistema de Control Interno, Riesgos y Auditoría&lt;/center&gt;
+                                            &lt;/td&gt;
+                                        &lt;/tr&gt;
+                                        &lt;tr&gt;
+                                            &lt;td class="x_copyright" style="color:rgb(179,179,179); font-size:14px; font-family:Helvetica,Arial,sans-serif; padding:0px 0px 10px 0px; line-height:16px"&gt;
+                                            &lt;/td&gt;
+                                        &lt;/tr&gt;
+
+                                    &lt;/tbody&gt;
+                                &lt;/table&gt;
+                            &lt;/td&gt;
+                        &lt;/tr&gt;
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
+
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</body>
+  </general0001>
+</messages>

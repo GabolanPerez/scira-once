@@ -1,0 +1,414 @@
+﻿@model SCIRA.ViewModels.emailViewModel
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Enviar Mensaje";
+}
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/Extras.css" rel="stylesheet" />
+<script src="~/Scripts/sharedScripts.js"></script>
+<script src="~/Scripts/textControl.js"></script>
+
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/MSInitialize.js"></script>
+<script>
+
+    $(document).ready(function () {
+        RenderView();
+    });
+
+    function RenderView() {
+        $("#p0").html($("#area1").val());
+    }
+
+    function RenderHead() {
+        $("#h0").html($("#head").val());
+    }
+
+    function RenderSubject() {
+        $("#s0").html($("#subject").val());
+    }
+    function showView() {
+        $("#shView").hide();
+        $("#viewBox").show();
+    }
+    function hideView() {
+        $("#shView").show();
+        $("#viewBox").hide();
+    }
+
+
+    function checkTarget() {
+
+        var u1 = $("#controlR").val();
+        var u2 = $("#indicadorR").val();
+        var u3 = $("#oficioR").val();
+        var u4 = $("#informeR").val();
+        var u5 = $("#incidenciaR").val();
+        var u6 = $("#planesR").val();
+        var u7 = $("#fichasR").val();
+        var u8 = $("#users").val();
+        var u9 = $("#entidadR").val();
+        var u10 = $("#macroProcesoR").val();
+        var u11 = $("#subProcesoR").val();
+        var u12 = $("#procesoR").val();
+
+        if (u1 != null
+            || u2 != null
+            || u3 != null
+            || u4 != null
+            || u5 != null
+            || u6 != null
+            || u7 != null
+            || u8 != null
+            || u9 != null
+            || u10 != null
+            || u11 != null
+            || u12 != null
+        ) {
+            $("#form1").submit();
+
+
+
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "@(Url.Action("WriteMessage", "MassiveNotification", null))",
+                data: $("#form1").serialize(),
+                success: function (data) {
+
+                    if (data == "True") {
+                        toastr.success("@Strings.getMSG("MassiveNotificationWriteMessage042")");
+                    } else {
+                        toastr.error("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+                    }
+
+                    $("#head").val("Notificaciones SCIRA");
+                    $("#subject").val("");
+                    $("#area1").val("");
+
+                    RenderView();
+                    RenderHead();
+                    RenderSubject();
+
+                    $("#controlR").val([]);
+                    $("#indicadorR").val([]);
+                    $("#oficioR").val([]);
+                    $("#informeR").val([]);
+                    $("#incidenciaR").val([]);
+                    $("#planesR").val([]);
+                    $("#users option:selected").removeAttr("selected");
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    toastr.error("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+                }
+            });
+        } else {
+            toastr.error("@Strings.getMSG("MassiveNotificationWriteMessage043")");
+        }
+    }
+    var areaId = "area1";
+
+
+
+
+</script>
+
+
+
+<h2>Email</h2>
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { onsubmit = "deshabilitar()", @id = "form1" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.nb_email)
+    <div class="form-horizontal well">
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NotificationEdit001")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.head, new { htmlAttributes = new { @class = "form-control", @onkeyup = "RenderHead();" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NotificationEdit005")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.head, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NotificationEdit002")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.subject, new { htmlAttributes = new { @class = "form-control", @onkeyup = "RenderSubject();" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NotificationEdit006")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    @Html.ValidationMessageFor(model => model.subject, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("NotificationEdit003")</label>
+                <div class="col-xs-5 col-md-5">
+                    @Html.TextAreaFor(model => model.body, new { @spellcheck = "false", @id = "area1", @class = "form-control", @cols = "100", @rows = "30", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NotificationEdit007"), @onkeyup = "RenderView();" })
+                    @Html.ValidationMessageFor(model => model.body, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-xs-5 col-md-5">
+                    <div class="card" style="width: 54rem;" id="viewBox">
+                        <div class="card-body">
+                            <h4 class="card-title" id="h0">@Model.head</h4>
+                            <h6 class="card-subtitle mb-2 text-muted" id="s0">@Model.subject</h6>
+                            <br />
+                            <div class="card-text" id="p0"></div>
+                            <a>
+                                <i class="fa fa-eye-slash" onclick="hideView()" title="@Strings.getMSG("Ocultar Vista")"></i>
+                            </a>
+                            <p class="text-muted pull-right">@Strings.getMSG("NotificationEdit004")</p>
+                        </div>
+                    </div>
+                    <div id="shView" hidden>
+                        <button type="button" class="btn btn-default" onclick="showView()" title="@Strings.getMSG("Mostrar Vista")">
+                            <i class="fa fa-eye fa-lg"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-3 col-md-2"></label>
+
+                <div class="btn-group">
+                    <button type="button" onclick="insertTextAroundSelection('<b>','</b>',areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Negritas")"><i class="fa fa-bold"></i></button>
+                    <button type="button" onclick="insertTextAroundSelection('<i>','</i>',areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Cursiva")"><i class="fa fa-italic"></i></button>
+                    <button type="button" onclick="insertTextAroundSelection('<u>','</u>',areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Subrayar")"><i class="fa fa-underline"></i></button>
+                    <button type="button" onclick="replaceText('<br/>\n', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Salto de Línea")"><i class="fa fa-level-down"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h4>@Strings.getMSG("MassiveNotificationWriteMessage003")</h4>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage044")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("entidadR", (MultiSelectList)ViewBag.entidadR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage045")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage046")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("macroProcesoR", (MultiSelectList)ViewBag.macroProcesoR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage047")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage048")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("procesoR", (MultiSelectList)ViewBag.procesoR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage049")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage050")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("subProcesoR", (MultiSelectList)ViewBag.subProcesoR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage051")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage004")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("controlR", (MultiSelectList)ViewBag.controlR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage012")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage005")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("indicadorR", (MultiSelectList)ViewBag.indicadorR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage013")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage006")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("oficioR", (MultiSelectList)ViewBag.oficioR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage014")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage007")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("informeR", (MultiSelectList)ViewBag.informeR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage015")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage008")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("incidenciaR", (MultiSelectList)ViewBag.incidenciaR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage016")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage009")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("planesR", (MultiSelectList)ViewBag.planesR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage017")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage010")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("fichasR", (MultiSelectList)ViewBag.fichasR, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage018")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MassiveNotificationWriteMessage011")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.ListBox("users", (MultiSelectList)ViewBag.users, htmlAttributes: new { @class = "form-control selectpicker" })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MassiveNotificationWriteMessage019")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="button" value="@Strings.getMSG("Enviar")" class="btn btn-primary" id="submit" onclick="checkTarget()" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+
+        </div>
+    </div>
+}

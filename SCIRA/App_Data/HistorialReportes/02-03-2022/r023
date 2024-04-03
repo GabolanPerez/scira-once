@@ -1,0 +1,30 @@
+{
+  "RepName": "Reporte de Riesgos Derogados",
+  "ColNames": [
+    "Macro Proceso",
+    "Proceso",
+    "Sub Proceso",
+    "Evento de Riesgo",
+    "Justificación"
+  ],
+  "Rows": [
+    [
+      "MP01.01 - Contraloría Interna",
+      "P01.01.001 - Manual de Cumplimiento",
+      "SP01.01.0001.0002 - Proceso para Reportar Operaciones Inusuales",
+      "2812-12 - 2812-12",
+      "2812-12"
+    ],
+    [
+      "MP01.01 - Contraloría Interna",
+      "P01.01.001 - Manual de Cumplimiento",
+      "SP01.01.0001.0002 - Proceso para Reportar Operaciones Inusuales",
+      "2812-10 - 2812-10",
+      "2812-10"
+    ]
+  ],
+  "NoCols": 5,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

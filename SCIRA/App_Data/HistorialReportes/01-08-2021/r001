@@ -1,0 +1,6154 @@
+{
+  "RepName": "Reporte de Accesos",
+  "ColNames": [
+    "Usuario",
+    "Función",
+    "Fecha"
+  ],
+  "Rows": [
+    [
+      "Berenice Serrano Jiménez",
+      "CertificacionEntidad/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Edit",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CentroCosto/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Accounts",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "EstatusBDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoSolucion/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ClaseEventoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocioRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProductoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CriticidadRiesgoOperacional/Edit",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfoP",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CategoriaLineaNegocioRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoProductoRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CategoriaLineaNegocioRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesoRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoProceso",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Index",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteMRyC/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MacroProceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Proceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Indicador/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Details",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TiemposSubProcesos/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "NormatividadOperacion/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MacroProceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Proceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteMRyC/Index",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionEntidad/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Entidad/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/GetCriticidad",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProductoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocio/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MCControl/Edit",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MCControl/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MCControl/Edit",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Notification/Edit",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteIndicador/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteCosteo/FilteredUsers",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteSubActividadesCosteo/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteCertificacionEntidad/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CentroCosto/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CentroCosto/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CentroCosto/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "EstatusBDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Moneda/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Moneda/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Moneda/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoSolucion/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CentroCosto/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CentroCosto/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ClaseEventoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ClaseEventoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AmbitoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfoP",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoProductoRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesoRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesoRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MCSubProceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FlujoNarrativa/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "EvaluacionIndicador/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TiemposSubProcesos/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ContestacionOficio/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Entidad/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MacroProceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionInforme/Index",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionInforme/UniversoCertificado",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/Edit",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/CreateRR",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/CreateRR",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteFallas/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteGeneralBDEI/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Notification/Edit",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Edit",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Edit",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/CreateAccount",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/CreateAccount",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Accounts",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCategoriaLN",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoSubTipoProducto",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoProceso",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Controles",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/Agregar",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/Edit",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Notification/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteFlujoNarrativa/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Entidad/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RespuestaIncidencia/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReportePR/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Puesto/Index2",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Puesto/AssignUsers",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/Informe",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteBenchmark/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteGeneralBDEI/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteGeneralBDEI/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteGeneralBDEI/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/GetCriticidad",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CategoriaLineaNegocioRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CategoriaLineaNegocioRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocioRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Delete",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RespuestaIncidencia/Index",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Groups",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Accounts",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Certificados",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/ctrc",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MassiveNotification/WriteMessage",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/Informe",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Area/Index",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Delete",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoSolucion/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ImpactoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FrecuenciaRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FrecuenciaRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FrecuenciaRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FrecuenciaRiesgoOperacional/Edit",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FrecuenciaRiesgoOperacional/Edit",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FrecuenciaRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CriticidadRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ClaseEventoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Edit",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Edit",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/SPDetails",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Details",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Details",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Participantes",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Details",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/SPDetails",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Details",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/ActividadesCosteo",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReportePR/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReportePR/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReportePR/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Entidad/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Puesto/Index2",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Usuario/GetUserObjects",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteEstructura/Index",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteCambiosMRyC/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteSPNM/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Edit",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/GetCriticidad",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteIyP/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Delete",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Entidad/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoEvaluacion/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Area/Create",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocio/Create",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Etapa/Create",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Details",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Participantes",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Details",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/EditR",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/Edit",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SelectRiesgo",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/CreateRR",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionProceso/Certificados",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionProceso/Certificados",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionProceso/Certificar",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/Informe",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReportePR/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Edit",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateIncidencia",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details2",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/loadFilters",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/loadFilters",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/loadFilters",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/loadFilters",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/CreateRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Criticidad/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Area/Create",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Groups",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Accounts",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/Index",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditIncidencia",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditIncidencia",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MCControl/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MCControl/Edit",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MCControl/Edit",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "EvaluacionIndicadorDiario/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RevisionControl/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TiemposSubProcesos/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/Details",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionMacroProceso/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionEntidad/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionProceso/Certificar",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionProceso/Certificados",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditPlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Edit",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Edit",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Seguimientos",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Edit",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexEjecucion",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexTableSeguimientoObservaciones",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Entidad/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Entidad/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Edit",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Edit",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/GetCriticidad",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/GetCriticidad",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "EstatusBDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "EstatusBDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/CreateGroup",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProductoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CategoriaLineaNegocioRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfoP",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateIncidencia",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Costeo/ActividadesCosteo",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Certificados",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Notification/Edit",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreatePlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreatePlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditPlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/DeletePlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/ConcluirPlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexEjecucion",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateIncidencia",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoSolucion/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Groups",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CategoriaLineaNegocioRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/GetCriticidad",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PruebaAutoEvaluacion/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubEtapa/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocio/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Edit",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreatePlan",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MCControl/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/EditR",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/DetailsRR",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Groups",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RespuestaIncidencia/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Certificados",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Edit",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Certificados",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Notification/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/Informe",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/Informe",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/Informe",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/Informe",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteAcceso/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteGeneralBDEI/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Seguimientos",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Create",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Create",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Seguimientos",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditPlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/ConcluirPlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateAuExt",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexAuExt",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/CreateAccount",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Accounts",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/GetCriticidad",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/GetCriticidad",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/GetCriticidad",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoProductoRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CategoriaLineaNegocioRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoProductoRiesgoOperacional/AuxInfoP",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoProductoRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CategoriaLineaNegocioRiesgoOperacional/AuxInfoP",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CategoriaLineaNegocioRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesoRiesgoOperacional/AuxInfoP",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesoRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoSubTipoProducto",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificar",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Details",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocio/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Create",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Create",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Index",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Create",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditIncidencia",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditIncidencia",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/Entidad",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "EvaluacionIndicador/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Index",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Certificados",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Usuario/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Usuario/AsignaRol",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/Informe",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/Informe",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteRR/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteGeneralBDEI/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Notification/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditPlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/CreateRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubEtapa/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Etapa/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Index",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Accounts",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ContestacionOficio/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Index",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Entidad/Index",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReportePersonal/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteFichas/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificar",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreatePlan",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Delete",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FlujoNarrativa/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "EvaluacionIndicador/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rol/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteMRyC/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificar",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Certificados",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Certificados",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteCosteo/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteCertificacion/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteIyP/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteIndicadorDiario/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteRevisionControl/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "01/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Entidad/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/CreateAccount",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/GetCriticidad",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/GetCriticidad",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CentroCosto/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ClaseEventoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AmbitoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AmbitoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AmbitoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoProductoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CriticidadRiesgoOperacional/CriticidadRiesgo",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoRiesgoOperacional/Delete",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoRiesgoOperacional/Delete",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Indicador/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocio/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Create",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Index",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Edit",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteIyP/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexOtros",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Proceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/CreateGroup",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Groups",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Accounts",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ImpactoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ImpactoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfoP",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificar",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Edit",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/GetCriticidad",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Delete",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/CreateRR",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Area/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocio/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Etapa/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubEtapa/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PruebaAutoEvaluacion/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ActividadCosteo/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipologiaSubProceso/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FlujoNarrativa/Index",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "22/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MassiveNotification/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MassiveNotification/WriteMessage",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MassiveNotification/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Notification/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Notification/Edit",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Notification/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteMRyC/Index",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Delete",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Delete",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/Informe",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfo",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Create",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Area/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Etapa/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Indicador/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Etapa/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Edit",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Index",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificar",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificar",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateIncidencia",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CentroCosto/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProductoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoProductoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoProductoRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoProductoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocioRiesgoOperacional/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocioRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoProceso",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Area/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificar",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteCertificacion/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditIncidencia",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/GetCriticidad",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/GetCriticidad",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/GetCriticidad",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/EditR",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ContestacionOficio/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RespuestaIncidencia/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/Entidad",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Groups",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Accounts",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Moneda/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FrecuenciaRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ImpactoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Create",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "12/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificar",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Index",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "13/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "14/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Edit",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PeriodoCertificacion/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "16/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MCControl/Edit",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MCControl/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Usuario/GetUserObjects",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionProceso/Certificar",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionProceso/Certificar",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexOficio",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Edit",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/EditInforme",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ClasificacionIncidencia/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateAuExt",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details2",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Entidad/Index",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CausaBDEI/Delete",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MinimoRiesgoOperativoBDEI/Index",
+      "05/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "FlujoNarrativa/Index",
+      "19/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/SubProcesos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "AjustesSeguridad/Index",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionInforme/IncidenciasDetectadas",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/Agregar",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionInforme/Index",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Index",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/Agregar",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/EditR",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/CreateRR",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionProceso/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionSubProceso/Index",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Puesto/AssignUsers",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Puesto/Index2",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionProceso/Certificados",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionProceso/Certificar",
+      "26/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "27/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Edit",
+      "28/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditPlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditPlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/loadFilters",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexSeguimientoObservaciones",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "02/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CatalogoConceptoBDEI/Edit",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "RiesgoAsociadoBDEI/Index",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CuentaContable/Groups",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "06/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ClaseEventoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubTipoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "TipoRiesgoOperacional/Index",
+      "07/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/Create",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "BDEI/infoCanal",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/AuxInfoP",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CanalRiesgoOperacional/Index",
+      "08/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocio/Index",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "LineaNegocio/Create",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Certificacion/Certificados",
+      "15/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/GetCriticidad",
+      "20/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Riesgos",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "21/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Agregar",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CertificacionInforme/Index",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/Editar",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/GetCriticidad",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Riesgo/GetCriticidad",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Control/EditR",
+      "23/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Proceso/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateAuInt",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details2",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details2",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Criticidad/CriticidadRiesgo",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/CreateRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "MacroProceso/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/DeletePlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Edit",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditPlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Edit",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateAuInt",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexAuInt",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateIncidencia",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateIncidencia",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/DeleteIncidencia",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/DeleteIncidencia",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditPlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Edit",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/EditEjecucion",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexEjecucion",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexEjecucion",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ShowRep",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorSP",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Edit",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Index",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ConclusionPlan/Edit",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "HistorialReportes/ReportList",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/CreateRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreatePlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/listaIncidencias",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/EditInforme",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexInformes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/CreateRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Delete",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Delete",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "PlanesRem/Seguimientos",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/EditEjecucion",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditAuExt",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/EditAuExt",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexAuExt",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/DeletePlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/DeletePlan",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/IndexPlanes",
+      "29/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Index",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "IyP/CreateIncidencia",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsOficio/Details",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/SubProceso",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditRatingAuditoria",
+      "30/07/2021"
+    ],
+    [
+      "Rogelio",
+      "Certificacion/Index",
+      "14/07/2021"
+    ]
+  ],
+  "NoCols": 3,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

@@ -1,0 +1,105 @@
+﻿@model SCIRA.ViewModels.AjustesCertificacionViewModel
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Ajustes de Certificación";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        @if(ViewBag.Mensaje != null)
+            {
+                @:toastr.success('@ViewBag.Mensaje');
+            }
+    })
+</script>
+
+<h2>@Strings.getMSG("Menu153")</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal well">
+    <h4>@Strings.getMSG("AjustesSeguridadIndex001")</h4>
+    <hr />
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionCertificar024")</label>
+            <div class="col-xs-3 col-md-2">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.CertificacionSegura, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("CertificacionCertificar025")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionCertificar026")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.TextAreaFor(model => model.LeyendaCertificacionE, new { @class = "form-control", @rows = "7", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("CertificacionCertificar027") })
+                @Html.ValidationMessageFor(model => model.LeyendaCertificacionE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionCertificar028")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.TextAreaFor(model => model.LeyendaCertificacionM, new { @class = "form-control", @rows = "7", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("CertificacionCertificar029") })
+                @Html.ValidationMessageFor(model => model.LeyendaCertificacionM, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionCertificar030")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.TextAreaFor(model => model.LeyendaCertificacionP, new { @class = "form-control", @rows = "7", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("CertificacionCertificar031") })
+                @Html.ValidationMessageFor(model => model.LeyendaCertificacionP, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("CertificacionCertificar032")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.TextAreaFor(model => model.LeyendaCertificacionS, new { @class = "form-control", @rows = "7", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("CertificacionCertificar033") })
+                @Html.ValidationMessageFor(model => model.LeyendaCertificacionS, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" />
+                <a class="btn btn-default" href="javascript:history.back()">@Strings.getMSG("Regresar")</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

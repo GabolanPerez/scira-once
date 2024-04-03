@@ -1,0 +1,70 @@
+﻿@model SCIRA.Models.k_objeto
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $("#ind3").removeClass("IndicatorLoader");
+    });
+</script>
+
+<h4>@Strings.getMSG("lyPInformeAuditoriaInternaDelete001")</h4>
+
+<form id="form3">
+    @Html.AntiForgeryToken()
+    <input name="id" value="@Model.id_objeto" hidden />
+</form>
+
+
+<div class="row">
+    <div class="form-group">
+        <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("Entidad")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" value="@Model.c_entidad.cl_entidad  - @Model.c_entidad.nb_entidad" disabled class="form-control" />
+        </div>
+
+        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPInformesIndex003")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" value="@(Model.fe_alta.HasValue ? Model.fe_alta.Value.ToString("dd/MM/yyyy") : "")" disabled class="form-control" />
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group">
+        <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPInformesIndex002")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" value="@Model.nb_objeto" disabled class="form-control" />
+        </div>
+
+        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPIndex007")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" value="@(Model.fe_contestacion.HasValue ? Model.fe_contestacion.Value.ToString("dd/MM/yyyy") : "")" disabled class="form-control" />
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group">
+        <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("Responsable")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" value="@Model.c_usuario.nb_usuario" disabled class="form-control" />
+        </div>
+
+        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPCreate013")</label>
+        <div class="col-xs-3 col-md-3">
+            <input type="text" value="@Model.no_incidencias" disabled class="form-control" />
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-6 col-md-offset-9 col-md-3">
+            <input type="button" class="btn btn-primary " onclick="deleteAuIntPost()" value="@Strings.getMSG("Borrar")" />
+            <input type="button" class="btn btn-default " onclick="indexAuInt()" value="@Strings.getMSG("Regresar")" />
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,2707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SICIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="c_actividad">
+    <Key>
+      <PropertyRef Name="id_actividad" />
+    </Key>
+    <Property Name="id_actividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_actividad" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_actividad" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="id_entidad" Type="int" />
+  </EntityType>
+  <EntityType Name="c_area">
+    <Key>
+      <PropertyRef Name="id_area" />
+    </Key>
+    <Property Name="id_area" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_area" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_area" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_area_costeo">
+    <Key>
+      <PropertyRef Name="id_area_costeo" />
+    </Key>
+    <Property Name="id_area_costeo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_area_costeo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_area_costeo" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_area_costeo_sub_proceso">
+    <Key>
+      <PropertyRef Name="id_sub_proceso" />
+      <PropertyRef Name="id_area_costeo" />
+    </Key>
+    <Property Name="id_sub_proceso" Type="int" Nullable="false" />
+    <Property Name="id_area_costeo" Type="int" Nullable="false" />
+    <Property Name="pr_costeo" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_calificacion_indicador">
+    <Key>
+      <PropertyRef Name="id_calificacion_indicador" />
+    </Key>
+    <Property Name="id_calificacion_indicador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_calificacion_indicador" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_calificacion_indicador" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_categoria_control">
+    <Key>
+      <PropertyRef Name="id_categoria_control" />
+    </Key>
+    <Property Name="id_categoria_control" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_categoria_control" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_categoria_control" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_categoria_error">
+    <Key>
+      <PropertyRef Name="id_categoria_error" />
+    </Key>
+    <Property Name="id_categoria_error" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_categoria_error" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_categoria_error" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_categoria_perdida">
+    <Key>
+      <PropertyRef Name="id_categoria_perdida" />
+    </Key>
+    <Property Name="id_categoria_perdida" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_categoria_perdida" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_categoria_perdida" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_categoria_riesgo">
+    <Key>
+      <PropertyRef Name="id_categoria_riesgo" />
+    </Key>
+    <Property Name="id_categoria_riesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_categoria_riesgo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_categoria_riesgo" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_centro_costo">
+    <Key>
+      <PropertyRef Name="id_centro_costo" />
+    </Key>
+    <Property Name="id_centro_costo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_entidad" Type="int" Nullable="false" />
+    <Property Name="cl_centro_costo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_centro_costo" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_clase_tipologia_riesgo">
+    <Key>
+      <PropertyRef Name="id_clase_tipologia_riesgo" />
+    </Key>
+    <Property Name="id_clase_tipologia_riesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_clase_tipologia_riesgo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_clase_tipologia_riesgo" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_contenido_normatividad">
+    <Key>
+      <PropertyRef Name="id_contenido_normatividad" />
+    </Key>
+    <Property Name="id_contenido_normatividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_contenido_normatividad_padre" Type="int" />
+    <Property Name="cl_contenido_normatividad" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ds_contenido_normatividad" Type="varchar(max)" />
+    <Property Name="id_nivel_normatividad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_cuenta_contable">
+    <Key>
+      <PropertyRef Name="id_cuenta_contable" />
+    </Key>
+    <Property Name="id_cuenta_contable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_entidad" Type="int" Nullable="false" />
+    <Property Name="cl_cuenta_contable" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nb_cuenta_contable" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_entidad">
+    <Key>
+      <PropertyRef Name="id_entidad" />
+    </Key>
+    <Property Name="id_entidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_entidad" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="nb_entidad" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="id_responsable" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_error_contable">
+    <Key>
+      <PropertyRef Name="id_error_contable" />
+    </Key>
+    <Property Name="id_error_contable" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_error_contable" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_error_contable" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_estatus_bdei">
+    <Key>
+      <PropertyRef Name="id_estatus_bdei" />
+    </Key>
+    <Property Name="id_estatus_bdei" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_estatus_bdei" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_estatus_bdei" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_etapa">
+    <Key>
+      <PropertyRef Name="id_etapa" />
+    </Key>
+    <Property Name="id_etapa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_etapa" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_etapa" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_evento_riesgo">
+    <Key>
+      <PropertyRef Name="id_evento_riesgo" />
+    </Key>
+    <Property Name="id_evento_riesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_evento_riesgo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_evento_riesgo" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="id_entidad" Type="int" />
+  </EntityType>
+  <EntityType Name="c_frecuencia_control">
+    <Key>
+      <PropertyRef Name="id_frecuencia_control" />
+    </Key>
+    <Property Name="id_frecuencia_control" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_frecuencia_control" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_frecuencia_control" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_frecuencia_indicador">
+    <Key>
+      <PropertyRef Name="id_frecuencia_indicador" />
+    </Key>
+    <Property Name="id_frecuencia_indicador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_frecuencia_indicador" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_frecuencia_indicador" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_funcion">
+    <Key>
+      <PropertyRef Name="id_funcion" />
+    </Key>
+    <Property Name="id_funcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_funcion" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_funcion" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="orden" Type="smallint" Nullable="false" />
+    <Property Name="id_menu_funcion" Type="int" />
+  </EntityType>
+  <EntityType Name="c_funcion_rol">
+    <Key>
+      <PropertyRef Name="id_rol" />
+      <PropertyRef Name="id_funcion" />
+    </Key>
+    <Property Name="id_rol" Type="int" Nullable="false" />
+    <Property Name="id_funcion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_grado_cobertura">
+    <Key>
+      <PropertyRef Name="id_grado_cobertura" />
+    </Key>
+    <Property Name="id_grado_cobertura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_grado_cobertura" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_grado_cobertura" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_indicador">
+    <Key>
+      <PropertyRef Name="id_indicador" />
+    </Key>
+    <Property Name="id_indicador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_entidad" Type="int" Nullable="false" />
+    <Property Name="cl_indicador" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_indicador" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="ds_indicador" Type="varchar" MaxLength="512" />
+    <Property Name="ds_numerador" Type="varchar" MaxLength="512" />
+    <Property Name="ds_denominador" Type="varchar" MaxLength="512" />
+    <Property Name="id_frecuencia_indicador" Type="int" Nullable="false" />
+    <Property Name="id_unidad_indicador" Type="int" />
+    <Property Name="control_asociado" Type="varchar" MaxLength="512" />
+    <Property Name="peso" Type="smallmoney" Nullable="false" />
+    <Property Name="umbral000i" Type="money" Nullable="false" />
+    <Property Name="umbral000f" Type="money" Nullable="false" />
+    <Property Name="umbral050i" Type="money" Nullable="false" />
+    <Property Name="umbral050f" Type="money" Nullable="false" />
+    <Property Name="umbral075i" Type="money" Nullable="false" />
+    <Property Name="umbral075f" Type="money" Nullable="false" />
+    <Property Name="umbral100i" Type="money" Nullable="false" />
+    <Property Name="umbral100f" Type="money" Nullable="false" />
+    <Property Name="esta_activo" Type="bit" Nullable="false" />
+    <Property Name="id_area" Type="int" />
+    <Property Name="id_responsable" Type="int" />
+  </EntityType>
+  <EntityType Name="c_linea_negocio">
+    <Key>
+      <PropertyRef Name="id_linea_negocio" />
+    </Key>
+    <Property Name="id_linea_negocio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_linea_negocio" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_linea_negocio" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_linea_negocio_sub_proceso">
+    <Key>
+      <PropertyRef Name="id_sub_proceso" />
+      <PropertyRef Name="id_linea_negocio" />
+    </Key>
+    <Property Name="id_sub_proceso" Type="int" Nullable="false" />
+    <Property Name="id_linea_negocio" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_macro_proceso">
+    <Key>
+      <PropertyRef Name="id_macro_proceso" />
+    </Key>
+    <Property Name="id_macro_proceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_entidad" Type="int" Nullable="false" />
+    <Property Name="cl_macro_proceso" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="nb_macro_proceso" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="id_responsable" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_magnitud_impacto">
+    <Key>
+      <PropertyRef Name="id_magnitud_impacto" />
+    </Key>
+    <Property Name="id_magnitud_impacto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_magnitud_impacto" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_magnitud_impacto" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_menu_funcion">
+    <Key>
+      <PropertyRef Name="id_menu_funcion" />
+    </Key>
+    <Property Name="id_menu_funcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_menu_funcion" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_menu_funcion" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="orden" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_meta_campo">
+    <Key>
+      <PropertyRef Name="id_meta_campo" />
+    </Key>
+    <Property Name="id_meta_campo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nb_entidad" Type="varchar" MaxLength="256" />
+    <Property Name="cl_campo" Type="varchar" MaxLength="128" />
+    <Property Name="nb_campo" Type="varchar" MaxLength="256" />
+    <Property Name="cl_tipo_campo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="longitud_campo" Type="int" Nullable="false" />
+    <Property Name="es_visible" Type="bit" Nullable="false" />
+    <Property Name="es_editable" Type="bit" Nullable="false" />
+    <Property Name="es_requerido" Type="bit" Nullable="false" />
+    <Property Name="cl_color_borde" Type="varchar" MaxLength="20" />
+    <Property Name="cl_color_fondo" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="c_moneda">
+    <Key>
+      <PropertyRef Name="id_moneda" />
+    </Key>
+    <Property Name="id_moneda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_moneda" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_moneda" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_naturaleza_control">
+    <Key>
+      <PropertyRef Name="id_naturaleza_control" />
+    </Key>
+    <Property Name="id_naturaleza_control" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_naturaleza_control" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_naturaleza_control" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_nivel_normatividad">
+    <Key>
+      <PropertyRef Name="id_nivel_normatividad" />
+    </Key>
+    <Property Name="id_nivel_normatividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_nivel_normatividad" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_nivel_normatividad" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="no_orden" Type="smallint" Nullable="false" />
+    <Property Name="id_normatividad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_normatividad">
+    <Key>
+      <PropertyRef Name="id_normatividad" />
+    </Key>
+    <Property Name="id_normatividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_normatividad" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_normatividad" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="ds_normatividad" Type="varchar" MaxLength="512" />
+    <Property Name="fe_publicacion_dof" Type="datetime" />
+    <Property Name="ds_sectores" Type="varchar" MaxLength="512" />
+    <Property Name="id_tipo_normatividad" Type="int" />
+    <Property Name="id_root_contenido" Type="int" />
+  </EntityType>
+  <EntityType Name="c_origen_incidencia">
+    <Key>
+      <PropertyRef Name="id_origen_incidencia" />
+    </Key>
+    <Property Name="id_origen_incidencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_origen_incidencia" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_origen_incidencia" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_periodo_certificacion">
+    <Key>
+      <PropertyRef Name="id_periodo_certificacion" />
+    </Key>
+    <Property Name="id_periodo_certificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_periodo_certificacion" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_periodo_certificacion" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="esta_activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_periodo_indicador">
+    <Key>
+      <PropertyRef Name="id_periodo_indicador" />
+    </Key>
+    <Property Name="id_periodo_indicador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_periodo_indicador" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_periodo_indicador" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="esta_activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_probabilidad_ocurrencia">
+    <Key>
+      <PropertyRef Name="id_probabilidad_ocurrencia" />
+    </Key>
+    <Property Name="id_probabilidad_ocurrencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_probabilidad_ocurrencia" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_probabilidad_ocurrencia" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="pr_probabilidad_ocurrencia" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_proceso">
+    <Key>
+      <PropertyRef Name="id_proceso" />
+    </Key>
+    <Property Name="id_proceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_macro_proceso" Type="int" Nullable="false" />
+    <Property Name="cl_proceso" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="nb_proceso" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="id_responsable" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_proceso_benchmark">
+    <Key>
+      <PropertyRef Name="id_proceso_benchmark" />
+    </Key>
+    <Property Name="id_proceso_benchmark" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_proceso_benchmark" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_proceso_benchmark" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="id_entidad" Type="int" />
+  </EntityType>
+  <EntityType Name="c_prueba_auto_eval">
+    <Key>
+      <PropertyRef Name="id_naturaleza_control" />
+      <PropertyRef Name="id_frecuencia_control" />
+    </Key>
+    <Property Name="id_naturaleza_control" Type="int" Nullable="false" />
+    <Property Name="id_frecuencia_control" Type="int" Nullable="false" />
+    <Property Name="no_partidas_minimo" Type="smallint" Nullable="false" />
+    <Property Name="no_partidas_semestre1" Type="smallint" Nullable="false" />
+    <Property Name="no_partidas_semestre2" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_rol">
+    <Key>
+      <PropertyRef Name="id_rol" />
+    </Key>
+    <Property Name="id_rol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_rol" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_rol" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_rol_usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+      <PropertyRef Name="id_rol" />
+    </Key>
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="id_rol" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_sub_clase_tipologia_riesgo">
+    <Key>
+      <PropertyRef Name="id_sub_clase_tipologia_riesgo" />
+    </Key>
+    <Property Name="id_sub_clase_tipologia_riesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_clase_tipologia_riesgo" Type="int" Nullable="false" />
+    <Property Name="cl_sub_clase_tipologia_riesgo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_sub_clase_tipologia_riesgo" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_sub_etapa">
+    <Key>
+      <PropertyRef Name="id_sub_etapa" />
+    </Key>
+    <Property Name="id_sub_etapa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_sub_etapa" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_sub_etapa" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_sub_proceso">
+    <Key>
+      <PropertyRef Name="id_sub_proceso" />
+    </Key>
+    <Property Name="id_sub_proceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_proceso" Type="int" Nullable="false" />
+    <Property Name="cl_sub_proceso" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="nb_sub_proceso" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="ds_sub_proceso" Type="varchar" MaxLength="4000" />
+    <Property Name="id_responsable" Type="int" Nullable="false" />
+    <Property Name="no_meses_antiguedad" Type="int" Nullable="false" />
+    <Property Name="cl_manual" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cl_sp_anterior" Type="varchar" MaxLength="256" />
+    <Property Name="cl_sp_siguiente" Type="varchar" MaxLength="256" />
+    <Property Name="id_tipologia_sub_proceso" Type="int" />
+    <Property Name="id_etapa" Type="int" />
+    <Property Name="id_sub_etapa" Type="int" />
+    <Property Name="ds_areas_involucradas" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="ds_aplicaciones_relacionadas" Type="varchar" MaxLength="512" Nullable="false" />
+    <Property Name="nb_archivo_manual" Type="varchar" MaxLength="256" />
+    <Property Name="nb_archivo_flujo" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="c_sub_proceso_benchmark">
+    <Key>
+      <PropertyRef Name="id_sub_proceso_benchmark" />
+    </Key>
+    <Property Name="id_sub_proceso_benchmark" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_sub_proceso_benchmark" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_sub_proceso_benchmark" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="id_proceso_benchmark" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_sub_proceso_normatividad">
+    <Key>
+      <PropertyRef Name="id_sub_proceso" />
+      <PropertyRef Name="id_contenido_normatividad" />
+    </Key>
+    <Property Name="id_sub_proceso" Type="int" Nullable="false" />
+    <Property Name="id_contenido_normatividad" Type="int" Nullable="false" />
+    <Property Name="es_raiz" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_tipo_evaluacion">
+    <Key>
+      <PropertyRef Name="id_tipo_evaluacion" />
+    </Key>
+    <Property Name="id_tipo_evaluacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_tipo_evaluacion" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_tipo_evaluacion" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_tipo_evidencia">
+    <Key>
+      <PropertyRef Name="id_tipo_evidencia" />
+    </Key>
+    <Property Name="id_tipo_evidencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_tipo_evidencia" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_tipo_evidencia" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_tipo_impacto">
+    <Key>
+      <PropertyRef Name="id_tipo_impacto" />
+    </Key>
+    <Property Name="id_tipo_impacto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_tipo_impacto" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_tipo_impacto" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_tipo_normatividad">
+    <Key>
+      <PropertyRef Name="id_tipo_normatividad" />
+    </Key>
+    <Property Name="id_tipo_normatividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_tipo_normatividad" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_tipo_normatividad" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_tipo_riesgo">
+    <Key>
+      <PropertyRef Name="id_tipo_riesgo" />
+    </Key>
+    <Property Name="id_tipo_riesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_categoria_riesgo" Type="int" Nullable="false" />
+    <Property Name="cl_tipo_riesgo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_tipo_riesgo" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_tipo_solucion">
+    <Key>
+      <PropertyRef Name="id_tipo_solucion" />
+    </Key>
+    <Property Name="id_tipo_solucion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_tipo_solucion" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_tipo_solucion" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_tipologia_control">
+    <Key>
+      <PropertyRef Name="id_tipologia_control" />
+    </Key>
+    <Property Name="id_tipologia_control" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_tipologia_control" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_tipologia_control" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_tipologia_riesgo">
+    <Key>
+      <PropertyRef Name="id_tipologia_riesgo" />
+    </Key>
+    <Property Name="id_tipologia_riesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_sub_clase_tipologia_riesgo" Type="int" Nullable="false" />
+    <Property Name="cl_tipologia_riesgo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_tipologia_riesgo" Type="varchar" MaxLength="1024" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_tipologia_sub_proceso">
+    <Key>
+      <PropertyRef Name="id_tipologia_sub_proceso" />
+    </Key>
+    <Property Name="id_tipologia_sub_proceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_tipologia_sub_proceso" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_tipologia_sub_proceso" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_unidad_indicador">
+    <Key>
+      <PropertyRef Name="id_unidad_indicador" />
+    </Key>
+    <Property Name="id_unidad_indicador" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_unidad_indicador" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_unidad_indicador" Type="varchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_usuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_usuario" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="e_mail_principal" Type="varchar" MaxLength="100" />
+    <Property Name="e_mail_alterno" Type="varchar" MaxLength="100" />
+    <Property Name="no_telefono" Type="varchar" MaxLength="20" />
+    <Property Name="esta_activo" Type="bit" Nullable="false" />
+    <Property Name="es_super_usuario" Type="bit" Nullable="false" />
+    <Property Name="nb_puesto" Type="varchar" MaxLength="100" />
+    <Property Name="id_area" Type="int" Nullable="false" />
+    <Property Name="solo_lectura" Type="bit" Nullable="false" />
+    <Property Name="costo_minuto" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="c_usuario_sub_proceso">
+    <Key>
+      <PropertyRef Name="id_sub_proceso" />
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_sub_proceso" Type="int" Nullable="false" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="tiempo_sub_proceso" Type="int" Nullable="false" />
+    <Property Name="es_responsable" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="k_bdei">
+    <Key>
+      <PropertyRef Name="id_bdei" />
+    </Key>
+    <Property Name="id_bdei" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_estatus_bdei" Type="int" Nullable="false" />
+    <Property Name="id_sub_proceso" Type="int" />
+    <Property Name="id_responsable_captura" Type="int" />
+    <Property Name="id_tipologia_riesgo" Type="int" />
+    <Property Name="id_linea_negocio" Type="int" />
+    <Property Name="ds_evento" Type="varchar" MaxLength="4000" />
+    <Property Name="id_categoria_error" Type="int" />
+    <Property Name="id_origen_incidencia" Type="int" />
+    <Property Name="id_categoria_perdida" Type="int" />
+    <Property Name="fe_alta" Type="datetime" />
+    <Property Name="fe_ocurrencia" Type="datetime" />
+    <Property Name="hr_ocurrencia" Type="char" MaxLength="5" />
+    <Property Name="duracion" Type="smallint" />
+    <Property Name="fe_solucion" Type="datetime" />
+    <Property Name="id_tipo_solucion" Type="int" />
+    <Property Name="comentarios" Type="varchar" MaxLength="4000" />
+    <Property Name="id_moneda" Type="int" />
+    <Property Name="id_cuenta_contable_perdida" Type="int" />
+    <Property Name="mn_exposicion" Type="money" />
+    <Property Name="mn_quebranto" Type="money" />
+    <Property Name="id_centro_costo" Type="int" />
+    <Property Name="fe_registro_perdida" Type="datetime" />
+    <Property Name="fe_quebranto" Type="datetime" />
+    <Property Name="mn_recuperacion" Type="money" />
+    <Property Name="id_responsable_recuperacion" Type="int" />
+    <Property Name="id_cuenta_contable_recuperacion" Type="int" />
+    <Property Name="fe_registro_recuperacion" Type="datetime" />
+    <Property Name="via_recuperacion" Type="varchar" MaxLength="256" />
+    <Property Name="mn_costo_recuperacion" Type="money" />
+    <Property Name="id_cuenta_contable_costo" Type="int" />
+    <Property Name="fe_registro_costo_recuperacion" Type="datetime" />
+    <Property Name="id_entidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="k_benchmarck">
+    <Key>
+      <PropertyRef Name="id_benchmark" />
+    </Key>
+    <Property Name="id_benchmark" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_sub_proceso" Type="int" Nullable="false" />
+    <Property Name="id_actividad" Type="int" Nullable="false" />
+    <Property Name="id_sub_proceso_benchmark" Type="int" Nullable="false" />
+    <Property Name="id_evento_riesgo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="k_certificacion_control">
+    <Key>
+      <PropertyRef Name="id_certificacion_control" />
+    </Key>
+    <Property Name="id_certificacion_control" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cl_certificacion_control" Type="varchar" MaxLength="20" />
+    <Property Name="id_control" Type="int" Nullable="false" />
+    <Property Name="id_periodo_certificacion" Type="int" Nullable="false" />
+    <Property Name="ds_procedimiento_certificacion" Type="varchar" MaxLength="4000" />
+    <Property Name="id_tipo_evaluacion" Type="int" Nullable="false" />
+    <Property Name="no_partidas_minimo" Type="smallint" />
+    <Property Name="no_partidas_semestre1" Type="smallint" />
+    <Property Name="no_partidas_semestre2" Type="smallint" />
+    <Property Name="no_pruebas_realizadas" Type="smallint" Nullable="false" />
+    <Property Name="tiene_funcionamiento_efectivo" Type="bit" Nullable="false" />
+    <Property Name="tiene_disenio_efectivo" Type="bit" Nullable="false" />
+    <Property Name="ds_plan_remediacion" Type="varchar" MaxLength="4000" />
+    <Property Name="nb_archivo_1" Type="varchar" MaxLength="256" />
+    <Property Name="nb_archivo_2" Type="varchar" MaxLength="256" />
+    <Property Name="nb_archivo_3" Type="varchar" MaxLength="256" />
+    <Property Name="nb_archivo_4" Type="varchar" MaxLength="256" />
+    <Property Name="nb_archivo_5" Type="varchar" MaxLength="256" />
+    <Property Name="fe_registro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="k_control">
+    <Key>
+      <PropertyRef Name="id_control" />
+    </Key>
+    <Property Name="id_control" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_sub_proceso" Type="int" Nullable="false" />
+    <Property Name="actividad_control" Type="varchar" MaxLength="4000" />
+    <Property Name="relacion_control" Type="varchar" MaxLength="1024" />
+    <Property Name="evidencia_control" Type="varchar" MaxLength="4000" />
+    <Property Name="id_ejecutor" Type="int" />
+    <Property Name="id_responsable" Type="int" />
+    <Property Name="es_control_clave" Type="bit" Nullable="false" />
+    <Property Name="id_grado_cobertura" Type="int" />
+    <Property Name="id_frecuencia_control" Type="int" />
+    <Property Name="id_naturaleza_control" Type="int" />
+    <Property Name="nb_aplicacion" Type="varchar" MaxLength="256" />
+    <Property Name="id_tipologia_control" Type="int" />
+    <Property Name="id_categoria_control" Type="int" />
+    <Property Name="id_tipo_evidencia" Type="int" />
+    <Property Name="tiene_accion_correctora" Type="bit" Nullable="false" />
+    <Property Name="accion_correctora" Type="varchar" MaxLength="4000" />
+    <Property Name="ds_notificacion_incidencia" Type="varchar" MaxLength="4000" />
+    <Property Name="campo01" Type="varchar(max)" />
+    <Property Name="campo02" Type="varchar(max)" />
+    <Property Name="campo03" Type="varchar(max)" />
+    <Property Name="campo04" Type="varchar(max)" />
+    <Property Name="campo05" Type="varchar(max)" />
+    <Property Name="campo06" Type="varchar(max)" />
+    <Property Name="campo07" Type="varchar(max)" />
+    <Property Name="campo08" Type="varchar(max)" />
+    <Property Name="campo09" Type="varchar(max)" />
+    <Property Name="campo10" Type="varchar(max)" />
+    <Property Name="campo11" Type="varchar(max)" />
+    <Property Name="campo12" Type="varchar(max)" />
+    <Property Name="campo13" Type="varchar(max)" />
+    <Property Name="campo14" Type="varchar(max)" />
+    <Property Name="campo15" Type="varchar(max)" />
+    <Property Name="campo16" Type="varchar(max)" />
+    <Property Name="campo17" Type="varchar(max)" />
+    <Property Name="campo18" Type="varchar(max)" />
+    <Property Name="campo19" Type="varchar(max)" />
+    <Property Name="campo20" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="k_control_riesgo">
+    <Key>
+      <PropertyRef Name="id_riesgo" />
+      <PropertyRef Name="id_control" />
+    </Key>
+    <Property Name="id_riesgo" Type="int" Nullable="false" />
+    <Property Name="id_control" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="k_error_contable_riesgo">
+    <Key>
+      <PropertyRef Name="id_riesgo" />
+      <PropertyRef Name="id_error_contable" />
+    </Key>
+    <Property Name="id_riesgo" Type="int" Nullable="false" />
+    <Property Name="id_error_contable" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="k_evaluacion">
+    <Key>
+      <PropertyRef Name="id_evaluacion" />
+    </Key>
+    <Property Name="id_evaluacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_indicador" Type="int" />
+    <Property Name="id_periodo_indicador" Type="int" Nullable="false" />
+    <Property Name="numerador" Type="smallmoney" Nullable="false" />
+    <Property Name="denominador" Type="smallmoney" Nullable="false" />
+    <Property Name="medicion" Type="smallmoney" Nullable="false" />
+    <Property Name="id_calificacion_indicador" Type="int" />
+  </EntityType>
+  <EntityType Name="k_riesgo">
+    <Key>
+      <PropertyRef Name="id_riesgo" />
+    </Key>
+    <Property Name="id_riesgo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_sub_proceso" Type="int" Nullable="false" />
+    <Property Name="cl_riesgo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="nb_riesgo" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="evento" Type="varchar" MaxLength="4000" Nullable="false" />
+    <Property Name="id_tipo_riesgo" Type="int" />
+    <Property Name="id_tipologia_riesgo" Type="int" />
+    <Property Name="id_probabilidad_ocurrencia" Type="int" />
+    <Property Name="id_tipo_impacto" Type="int" />
+    <Property Name="id_magnitud_impacto" Type="int" />
+    <Property Name="criticidad" Type="varchar" MaxLength="256" />
+    <Property Name="tiene_afectacion_contable" Type="bit" Nullable="false" />
+    <Property Name="supuesto_normativo" Type="varchar" MaxLength="1024" />
+    <Property Name="euc" Type="varchar" MaxLength="1024" />
+    <Property Name="campo01" Type="varchar(max)" />
+    <Property Name="campo02" Type="varchar(max)" />
+    <Property Name="campo03" Type="varchar(max)" />
+    <Property Name="campo04" Type="varchar(max)" />
+    <Property Name="campo05" Type="varchar(max)" />
+    <Property Name="campo06" Type="varchar(max)" />
+    <Property Name="campo07" Type="varchar(max)" />
+    <Property Name="campo08" Type="varchar(max)" />
+    <Property Name="campo09" Type="varchar(max)" />
+    <Property Name="campo10" Type="varchar(max)" />
+    <Property Name="campo11" Type="varchar(max)" />
+    <Property Name="campo12" Type="varchar(max)" />
+    <Property Name="campo13" Type="varchar(max)" />
+    <Property Name="campo14" Type="varchar(max)" />
+    <Property Name="campo15" Type="varchar(max)" />
+    <Property Name="campo16" Type="varchar(max)" />
+    <Property Name="campo17" Type="varchar(max)" />
+    <Property Name="campo18" Type="varchar(max)" />
+    <Property Name="campo19" Type="varchar(max)" />
+    <Property Name="campo20" Type="varchar(max)" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SICI.dbo.v_bdei' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="v_bdei">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="nb_estatus_bdei" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="nb_entidad" Type="varchar" MaxLength="256" />
+    <Property Name="nb_estatus_bdei" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="nb_sub_proceso" Type="varchar" MaxLength="256" />
+    <Property Name="nb_usuario_sub_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="nb_usuario_captura" Type="varchar" MaxLength="100" />
+    <Property Name="nb_tipologia_riesgo" Type="varchar" MaxLength="1024" />
+    <Property Name="nb_linea_negocio" Type="varchar" MaxLength="256" />
+    <Property Name="ds_evento" Type="varchar" MaxLength="4000" />
+    <Property Name="nb_categoria_error" Type="varchar" MaxLength="256" />
+    <Property Name="nb_origen_incidencia" Type="varchar" MaxLength="256" />
+    <Property Name="nb_categoria_perdida" Type="varchar" MaxLength="256" />
+    <Property Name="fe_alta" Type="datetime" />
+    <Property Name="fe_ocurrencia" Type="datetime" />
+    <Property Name="hr_ocurrencia" Type="char" MaxLength="5" />
+    <Property Name="duracion" Type="smallint" />
+    <Property Name="fe_solucion" Type="datetime" />
+    <Property Name="nb_tipo_solucion" Type="varchar" MaxLength="256" />
+    <Property Name="comentarios" Type="varchar" MaxLength="4000" />
+    <Property Name="nb_moneda" Type="varchar" MaxLength="256" />
+    <Property Name="cl_cuenta_contable_perdida" Type="varchar" MaxLength="50" />
+    <Property Name="nb_cuenta_contable_perdida" Type="varchar" MaxLength="256" />
+    <Property Name="mn_exposicion" Type="money" />
+    <Property Name="mn_quebranto" Type="money" />
+    <Property Name="cl_centro_costo" Type="varchar" MaxLength="20" />
+    <Property Name="nb_centro_costo" Type="varchar" MaxLength="256" />
+    <Property Name="fe_registro_perdida" Type="datetime" />
+    <Property Name="fe_quebranto" Type="datetime" />
+    <Property Name="mn_recuperacion" Type="money" />
+    <Property Name="nb_usuario_recuperacion" Type="varchar" MaxLength="100" />
+    <Property Name="cl_cuenta_contable_recuperacion" Type="varchar" MaxLength="50" />
+    <Property Name="nb_cuenta_contable_recuperacion" Type="varchar" MaxLength="256" />
+    <Property Name="fe_registro_recuperacion" Type="datetime" />
+    <Property Name="via_recuperacion" Type="varchar" MaxLength="256" />
+    <Property Name="mn_costo_recuperacion" Type="money" />
+    <Property Name="cl_cuenta_contable_costo" Type="varchar" MaxLength="50" />
+    <Property Name="nb_cuenta_contable_costo" Type="varchar" MaxLength="256" />
+    <Property Name="fe_registro_costo_recuperacion" Type="datetime" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SICI.dbo.v_benchmark' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="v_benchmark">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="cnb_sub_proceso" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="cnb_entidad" Type="varchar" MaxLength="261" />
+    <Property Name="cnb_macro_proceso" Type="varchar" MaxLength="264" />
+    <Property Name="cnb_proceso" Type="varchar" MaxLength="262" />
+    <Property Name="cnb_sub_proceso" Type="varchar" MaxLength="265" Nullable="false" />
+    <Property Name="nb_actividad" Type="varchar" MaxLength="256" />
+    <Property Name="nb_proceso_benchmark" Type="varchar" MaxLength="256" />
+    <Property Name="nb_sub_proceso_benchmark" Type="varchar" MaxLength="256" />
+    <Property Name="nb_evento_riesgo" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SICI.dbo.v_certificacion' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="v_certificacion">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="tiene_accion_correctora" />
+      <PropertyRef Name="no_pruebas_realizadas" />
+      <PropertyRef Name="tiene_funcionamiento_efectivo" />
+      <PropertyRef Name="tiene_disenio_efectivo" />
+      <PropertyRef Name="fe_registro" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="cnb_entidad" Type="varchar" MaxLength="261" />
+    <Property Name="cnb_macro_proceso" Type="varchar" MaxLength="264" />
+    <Property Name="cnb_proceso" Type="varchar" MaxLength="262" />
+    <Property Name="cnb_sub_proceso" Type="varchar" MaxLength="265" />
+    <Property Name="codigo_riesgo" Type="varchar" MaxLength="256" />
+    <Property Name="evento" Type="varchar" MaxLength="4000" />
+    <Property Name="codigo_control" Type="varchar" MaxLength="1024" />
+    <Property Name="actividad_control" Type="varchar" MaxLength="4000" />
+    <Property Name="tiene_accion_correctora" Type="bit" Nullable="false" />
+    <Property Name="accion_correctora" Type="varchar" MaxLength="4000" />
+    <Property Name="cl_certificacion_control" Type="varchar" MaxLength="20" />
+    <Property Name="nb_periodo_certificacion" Type="varchar" MaxLength="256" />
+    <Property Name="ds_procedimiento_certificacion" Type="varchar" MaxLength="4000" />
+    <Property Name="nb_tipo_evaluacion" Type="varchar" MaxLength="256" />
+    <Property Name="no_partidas_minimo" Type="smallint" />
+    <Property Name="no_partidas_semestre1" Type="smallint" />
+    <Property Name="no_partidas_semestre2" Type="smallint" />
+    <Property Name="no_pruebas_realizadas" Type="smallint" Nullable="false" />
+    <Property Name="tiene_funcionamiento_efectivo" Type="bit" Nullable="false" />
+    <Property Name="tiene_disenio_efectivo" Type="bit" Nullable="false" />
+    <Property Name="ds_plan_remediacion" Type="varchar" MaxLength="4000" />
+    <Property Name="fe_registro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SICI.dbo.v_estructura' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="v_estructura">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="cl_entidad" Type="char" MaxLength="2" />
+    <Property Name="nb_entidad" Type="varchar" MaxLength="256" />
+    <Property Name="nb_responsable_entidad" Type="varchar" MaxLength="100" />
+    <Property Name="nb_puesto_entidad" Type="varchar" MaxLength="100" />
+    <Property Name="cl_macro_proceso" Type="char" MaxLength="5" />
+    <Property Name="nb_macro_proceso" Type="varchar" MaxLength="256" />
+    <Property Name="nb_responsable_macro_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="nb_puesto_macro_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="cl_proceso" Type="char" MaxLength="3" />
+    <Property Name="nb_proceso" Type="varchar" MaxLength="256" />
+    <Property Name="nb_responsbale_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="nb_puesto_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="cl_sub_proceso" Type="char" MaxLength="6" />
+    <Property Name="nb_sub_proceso" Type="varchar" MaxLength="256" />
+    <Property Name="cl_manual" Type="varchar" MaxLength="20" />
+    <Property Name="nb_responsable_sub_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="nb_puesto_sub_proceso" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SICI.dbo.v_flujo_narrativa' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="v_flujo_narrativa">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="cl_entidad" Type="char" MaxLength="2" />
+    <Property Name="nb_entidad" Type="varchar" MaxLength="256" />
+    <Property Name="cl_macro_proceso" Type="char" MaxLength="5" />
+    <Property Name="nb_macro_proceso" Type="varchar" MaxLength="256" />
+    <Property Name="cl_proceso" Type="char" MaxLength="3" />
+    <Property Name="nb_proceso" Type="varchar" MaxLength="256" />
+    <Property Name="cl_sub_proceso" Type="char" MaxLength="6" />
+    <Property Name="nb_sub_proceso" Type="varchar" MaxLength="256" />
+    <Property Name="nb_archivo_flujo" Type="varchar" MaxLength="256" />
+    <Property Name="nb_archivo_manual" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SICI.dbo.v_indicador' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="v_indicador">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="cl_indicador" />
+      <PropertyRef Name="nb_indicador" />
+      <PropertyRef Name="peso" />
+      <PropertyRef Name="umbral000i" />
+      <PropertyRef Name="umbral000f" />
+      <PropertyRef Name="umbral050i" />
+      <PropertyRef Name="umbral050f" />
+      <PropertyRef Name="umbral075i" />
+      <PropertyRef Name="umbral075f" />
+      <PropertyRef Name="umbral100i" />
+      <PropertyRef Name="umbral100f" />
+      <PropertyRef Name="esta_activo" />
+      <PropertyRef Name="numerador" />
+      <PropertyRef Name="denominador" />
+      <PropertyRef Name="medicion" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="nb_entidad" Type="varchar" MaxLength="256" />
+    <Property Name="cl_indicador" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nb_indicador" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="ds_indicador" Type="varchar" MaxLength="512" />
+    <Property Name="ds_numerador" Type="varchar" MaxLength="512" />
+    <Property Name="ds_denominador" Type="varchar" MaxLength="512" />
+    <Property Name="nb_frecuencia_indicador" Type="varchar" MaxLength="256" />
+    <Property Name="nb_unidad_indicador" Type="varchar" MaxLength="256" />
+    <Property Name="control_asociado" Type="varchar" MaxLength="512" />
+    <Property Name="peso" Type="smallmoney" Nullable="false" />
+    <Property Name="umbral000i" Type="money" Nullable="false" />
+    <Property Name="umbral000f" Type="money" Nullable="false" />
+    <Property Name="umbral050i" Type="money" Nullable="false" />
+    <Property Name="umbral050f" Type="money" Nullable="false" />
+    <Property Name="umbral075i" Type="money" Nullable="false" />
+    <Property Name="umbral075f" Type="money" Nullable="false" />
+    <Property Name="umbral100i" Type="money" Nullable="false" />
+    <Property Name="umbral100f" Type="money" Nullable="false" />
+    <Property Name="esta_activo" Type="bit" Nullable="false" />
+    <Property Name="nb_area" Type="varchar" MaxLength="256" />
+    <Property Name="nb_responsable" Type="varchar" MaxLength="100" />
+    <Property Name="nb_periodo_indicador" Type="varchar" MaxLength="256" />
+    <Property Name="numerador" Type="smallmoney" Nullable="false" />
+    <Property Name="denominador" Type="smallmoney" Nullable="false" />
+    <Property Name="medicion" Type="smallmoney" Nullable="false" />
+    <Property Name="nb_calificacion_indicador" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SICI.dbo.v_mryc' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="v_mryc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" />
+    <Property Name="cl_entidad" Type="char" MaxLength="2" />
+    <Property Name="nb_entidad" Type="varchar" MaxLength="256" />
+    <Property Name="nb_responsable_entidad" Type="varchar" MaxLength="100" />
+    <Property Name="nb_puesto_entidad" Type="varchar" MaxLength="100" />
+    <Property Name="cl_macro_proceso" Type="char" MaxLength="5" />
+    <Property Name="nb_macro_proceso" Type="varchar" MaxLength="256" />
+    <Property Name="nb_responsable_macro_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="nb_puesto_macro_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="cl_proceso" Type="char" MaxLength="3" />
+    <Property Name="nb_proceso" Type="varchar" MaxLength="256" />
+    <Property Name="nb_responsable_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="nb_puesto_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="id_sub_proceso" Type="int" />
+    <Property Name="cl_sub_proceso" Type="char" MaxLength="6" />
+    <Property Name="nb_sub_proceso" Type="varchar" MaxLength="256" />
+    <Property Name="cl_manual" Type="varchar" MaxLength="20" />
+    <Property Name="nb_responsable_sub_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="nb_puesto_sub_proceso" Type="varchar" MaxLength="100" />
+    <Property Name="nb_etapa" Type="varchar" MaxLength="256" />
+    <Property Name="nb_sub_etapa" Type="varchar" MaxLength="256" />
+    <Property Name="ds_areas_involucradas" Type="varchar" MaxLength="512" />
+    <Property Name="ds_aplicaciones_relacionadas" Type="varchar" MaxLength="512" />
+    <Property Name="cl_riesgo" Type="varchar" MaxLength="10" />
+    <Property Name="nb_riesgo" Type="varchar" MaxLength="256" />
+    <Property Name="evento" Type="varchar" MaxLength="4000" />
+    <Property Name="nb_tipo_riesgo" Type="varchar" MaxLength="256" />
+    <Property Name="nb_categoria_riesgo" Type="varchar" MaxLength="256" />
+    <Property Name="nb_clase_tipologia_riesgo" Type="varchar" MaxLength="256" />
+    <Property Name="nb_sub_clase_tipologia_riesgo" Type="varchar" MaxLength="256" />
+    <Property Name="nb_tipologia_riesgo" Type="varchar" MaxLength="1024" />
+    <Property Name="criticidad" Type="varchar" MaxLength="256" />
+    <Property Name="tiene_afectacion_contable" Type="bit" />
+    <Property Name="supuesto_normativo" Type="varchar" MaxLength="1024" />
+    <Property Name="euc" Type="varchar" MaxLength="1024" />
+    <Property Name="nb_tipo_impacto" Type="varchar" MaxLength="256" />
+    <Property Name="nb_magnitud_impacto" Type="varchar" MaxLength="256" />
+    <Property Name="nb_probabilidad_ocurrencia" Type="varchar" MaxLength="256" />
+    <Property Name="relacion_control" Type="varchar" MaxLength="1024" />
+    <Property Name="actividad_control" Type="varchar" MaxLength="4000" />
+    <Property Name="evidencia_control" Type="varchar" MaxLength="4000" />
+    <Property Name="es_control_clave" Type="bit" />
+    <Property Name="nb_aplicacion" Type="varchar" MaxLength="256" />
+    <Property Name="accion_correctora" Type="varchar" MaxLength="4000" />
+    <Property Name="nb_naturaleza_control" Type="varchar" MaxLength="256" />
+    <Property Name="nb_frecuencia_control" Type="varchar" MaxLength="256" />
+    <Property Name="nb_categoria_control" Type="varchar" MaxLength="256" />
+    <Property Name="nb_tipologia_control" Type="varchar" MaxLength="256" />
+    <Property Name="nb_tipo_evidencia" Type="varchar" MaxLength="256" />
+    <Property Name="nb_grado_cobertura" Type="varchar" MaxLength="256" />
+    <Property Name="nb_responsable_control" Type="varchar" MaxLength="100" />
+    <Property Name="nb_ejecutor_control" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__c_activid__id_en__71A7CADF">
+    <End Role="c_entidad" Type="Self.c_entidad" Multiplicity="0..1" />
+    <End Role="c_actividad" Type="Self.c_actividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_entidad">
+        <PropertyRef Name="id_entidad" />
+      </Principal>
+      <Dependent Role="c_actividad">
+        <PropertyRef Name="id_entidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_area_co__id_ar__729BEF18">
+    <End Role="c_area_costeo" Type="Self.c_area_costeo" Multiplicity="1" />
+    <End Role="c_area_costeo_sub_proceso" Type="Self.c_area_costeo_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_area_costeo">
+        <PropertyRef Name="id_area_costeo" />
+      </Principal>
+      <Dependent Role="c_area_costeo_sub_proceso">
+        <PropertyRef Name="id_area_costeo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_area_co__id_su__73901351">
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="1" />
+    <End Role="c_area_costeo_sub_proceso" Type="Self.c_area_costeo_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Principal>
+      <Dependent Role="c_area_costeo_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_centro___id_en__7484378A">
+    <End Role="c_entidad" Type="Self.c_entidad" Multiplicity="1" />
+    <End Role="c_centro_costo" Type="Self.c_centro_costo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_entidad">
+        <PropertyRef Name="id_entidad" />
+      </Principal>
+      <Dependent Role="c_centro_costo">
+        <PropertyRef Name="id_entidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_conteni__id_co__766C7FFC">
+    <End Role="c_contenido_normatividad" Type="Self.c_contenido_normatividad" Multiplicity="0..1" />
+    <End Role="c_contenido_normatividad1" Type="Self.c_contenido_normatividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_contenido_normatividad">
+        <PropertyRef Name="id_contenido_normatividad" />
+      </Principal>
+      <Dependent Role="c_contenido_normatividad1">
+        <PropertyRef Name="id_contenido_normatividad_padre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_conteni__id_ni__75785BC3">
+    <End Role="c_nivel_normatividad" Type="Self.c_nivel_normatividad" Multiplicity="1" />
+    <End Role="c_contenido_normatividad" Type="Self.c_contenido_normatividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_nivel_normatividad">
+        <PropertyRef Name="id_nivel_normatividad" />
+      </Principal>
+      <Dependent Role="c_contenido_normatividad">
+        <PropertyRef Name="id_nivel_normatividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_cuenta___id_en__7760A435">
+    <End Role="c_entidad" Type="Self.c_entidad" Multiplicity="1" />
+    <End Role="c_cuenta_contable" Type="Self.c_cuenta_contable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_entidad">
+        <PropertyRef Name="id_entidad" />
+      </Principal>
+      <Dependent Role="c_cuenta_contable">
+        <PropertyRef Name="id_entidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_entidad__id_re__7854C86E">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="1" />
+    <End Role="c_entidad" Type="Self.c_entidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="c_entidad">
+        <PropertyRef Name="id_responsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_evento___id_en__7948ECA7">
+    <End Role="c_entidad" Type="Self.c_entidad" Multiplicity="0..1" />
+    <End Role="c_evento_riesgo" Type="Self.c_evento_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_entidad">
+        <PropertyRef Name="id_entidad" />
+      </Principal>
+      <Dependent Role="c_evento_riesgo">
+        <PropertyRef Name="id_entidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_funcion__id_fu__7B313519">
+    <End Role="c_funcion" Type="Self.c_funcion" Multiplicity="1" />
+    <End Role="c_funcion_rol" Type="Self.c_funcion_rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_funcion">
+        <PropertyRef Name="id_funcion" />
+      </Principal>
+      <Dependent Role="c_funcion_rol">
+        <PropertyRef Name="id_funcion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_funcion__id_me__7A3D10E0">
+    <End Role="c_menu_funcion" Type="Self.c_menu_funcion" Multiplicity="0..1" />
+    <End Role="c_funcion" Type="Self.c_funcion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_menu_funcion">
+        <PropertyRef Name="id_menu_funcion" />
+      </Principal>
+      <Dependent Role="c_funcion">
+        <PropertyRef Name="id_menu_funcion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_funcion__id_ro__7C255952">
+    <End Role="c_rol" Type="Self.c_rol" Multiplicity="1" />
+    <End Role="c_funcion_rol" Type="Self.c_funcion_rol" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_rol">
+        <PropertyRef Name="id_rol" />
+      </Principal>
+      <Dependent Role="c_funcion_rol">
+        <PropertyRef Name="id_rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_indicad__id_ar__7FF5EA36">
+    <End Role="c_area" Type="Self.c_area" Multiplicity="0..1" />
+    <End Role="c_indicador" Type="Self.c_indicador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_area">
+        <PropertyRef Name="id_area" />
+      </Principal>
+      <Dependent Role="c_indicador">
+        <PropertyRef Name="id_area" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_indicad__id_en__7E0DA1C4">
+    <End Role="c_entidad" Type="Self.c_entidad" Multiplicity="1" />
+    <End Role="c_indicador" Type="Self.c_indicador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_entidad">
+        <PropertyRef Name="id_entidad" />
+      </Principal>
+      <Dependent Role="c_indicador">
+        <PropertyRef Name="id_entidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_indicad__id_fr__7D197D8B">
+    <End Role="c_frecuencia_indicador" Type="Self.c_frecuencia_indicador" Multiplicity="1" />
+    <End Role="c_indicador" Type="Self.c_indicador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_frecuencia_indicador">
+        <PropertyRef Name="id_frecuencia_indicador" />
+      </Principal>
+      <Dependent Role="c_indicador">
+        <PropertyRef Name="id_frecuencia_indicador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_indicad__id_re__00EA0E6F">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="0..1" />
+    <End Role="c_indicador" Type="Self.c_indicador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="c_indicador">
+        <PropertyRef Name="id_responsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_indicad__id_un__7F01C5FD">
+    <End Role="c_unidad_indicador" Type="Self.c_unidad_indicador" Multiplicity="0..1" />
+    <End Role="c_indicador" Type="Self.c_indicador" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_unidad_indicador">
+        <PropertyRef Name="id_unidad_indicador" />
+      </Principal>
+      <Dependent Role="c_indicador">
+        <PropertyRef Name="id_unidad_indicador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_linea_n__id_li__01DE32A8">
+    <End Role="c_linea_negocio" Type="Self.c_linea_negocio" Multiplicity="1" />
+    <End Role="c_linea_negocio_sub_proceso" Type="Self.c_linea_negocio_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_linea_negocio">
+        <PropertyRef Name="id_linea_negocio" />
+      </Principal>
+      <Dependent Role="c_linea_negocio_sub_proceso">
+        <PropertyRef Name="id_linea_negocio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_linea_n__id_su__02D256E1">
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="1" />
+    <End Role="c_linea_negocio_sub_proceso" Type="Self.c_linea_negocio_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Principal>
+      <Dependent Role="c_linea_negocio_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_macro_p__id_en__03C67B1A">
+    <End Role="c_entidad" Type="Self.c_entidad" Multiplicity="1" />
+    <End Role="c_macro_proceso" Type="Self.c_macro_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_entidad">
+        <PropertyRef Name="id_entidad" />
+      </Principal>
+      <Dependent Role="c_macro_proceso">
+        <PropertyRef Name="id_entidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_macro_p__id_re__04BA9F53">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="1" />
+    <End Role="c_macro_proceso" Type="Self.c_macro_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="c_macro_proceso">
+        <PropertyRef Name="id_responsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_nivel_n__id_no__05AEC38C">
+    <End Role="c_normatividad" Type="Self.c_normatividad" Multiplicity="1" />
+    <End Role="c_nivel_normatividad" Type="Self.c_nivel_normatividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_normatividad">
+        <PropertyRef Name="id_normatividad" />
+      </Principal>
+      <Dependent Role="c_nivel_normatividad">
+        <PropertyRef Name="id_normatividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_normati__id_ti__06A2E7C5">
+    <End Role="c_tipo_normatividad" Type="Self.c_tipo_normatividad" Multiplicity="0..1" />
+    <End Role="c_normatividad" Type="Self.c_normatividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_tipo_normatividad">
+        <PropertyRef Name="id_tipo_normatividad" />
+      </Principal>
+      <Dependent Role="c_normatividad">
+        <PropertyRef Name="id_tipo_normatividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_proceso__id_en__097F5470">
+    <End Role="c_entidad" Type="Self.c_entidad" Multiplicity="0..1" />
+    <End Role="c_proceso_benchmark" Type="Self.c_proceso_benchmark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_entidad">
+        <PropertyRef Name="id_entidad" />
+      </Principal>
+      <Dependent Role="c_proceso_benchmark">
+        <PropertyRef Name="id_entidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_proceso__id_ma__07970BFE">
+    <End Role="c_macro_proceso" Type="Self.c_macro_proceso" Multiplicity="1" />
+    <End Role="c_proceso" Type="Self.c_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_macro_proceso">
+        <PropertyRef Name="id_macro_proceso" />
+      </Principal>
+      <Dependent Role="c_proceso">
+        <PropertyRef Name="id_macro_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_proceso__id_re__088B3037">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="1" />
+    <End Role="c_proceso" Type="Self.c_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="c_proceso">
+        <PropertyRef Name="id_responsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_prueba___id_fr__0B679CE2">
+    <End Role="c_frecuencia_control" Type="Self.c_frecuencia_control" Multiplicity="1" />
+    <End Role="c_prueba_auto_eval" Type="Self.c_prueba_auto_eval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_frecuencia_control">
+        <PropertyRef Name="id_frecuencia_control" />
+      </Principal>
+      <Dependent Role="c_prueba_auto_eval">
+        <PropertyRef Name="id_frecuencia_control" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_prueba___id_na__0A7378A9">
+    <End Role="c_naturaleza_control" Type="Self.c_naturaleza_control" Multiplicity="1" />
+    <End Role="c_prueba_auto_eval" Type="Self.c_prueba_auto_eval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_naturaleza_control">
+        <PropertyRef Name="id_naturaleza_control" />
+      </Principal>
+      <Dependent Role="c_prueba_auto_eval">
+        <PropertyRef Name="id_naturaleza_control" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_rol_usu__id_ro__0C5BC11B">
+    <End Role="c_rol" Type="Self.c_rol" Multiplicity="1" />
+    <End Role="c_rol_usuario" Type="Self.c_rol_usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_rol">
+        <PropertyRef Name="id_rol" />
+      </Principal>
+      <Dependent Role="c_rol_usuario">
+        <PropertyRef Name="id_rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_rol_usu__id_us__0D4FE554">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="1" />
+    <End Role="c_rol_usuario" Type="Self.c_rol_usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="c_rol_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_sub_cla__id_cl__0E44098D">
+    <End Role="c_clase_tipologia_riesgo" Type="Self.c_clase_tipologia_riesgo" Multiplicity="1" />
+    <End Role="c_sub_clase_tipologia_riesgo" Type="Self.c_sub_clase_tipologia_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_clase_tipologia_riesgo">
+        <PropertyRef Name="id_clase_tipologia_riesgo" />
+      </Principal>
+      <Dependent Role="c_sub_clase_tipologia_riesgo">
+        <PropertyRef Name="id_clase_tipologia_riesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_sub_pro__id_co__14F1071C">
+    <End Role="c_contenido_normatividad" Type="Self.c_contenido_normatividad" Multiplicity="1" />
+    <End Role="c_sub_proceso_normatividad" Type="Self.c_sub_proceso_normatividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_contenido_normatividad">
+        <PropertyRef Name="id_contenido_normatividad" />
+      </Principal>
+      <Dependent Role="c_sub_proceso_normatividad">
+        <PropertyRef Name="id_contenido_normatividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_sub_pro__id_et__102C51FF">
+    <End Role="c_etapa" Type="Self.c_etapa" Multiplicity="0..1" />
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_etapa">
+        <PropertyRef Name="id_etapa" />
+      </Principal>
+      <Dependent Role="c_sub_proceso">
+        <PropertyRef Name="id_etapa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_sub_pro__id_pr__0F382DC6">
+    <End Role="c_proceso" Type="Self.c_proceso" Multiplicity="1" />
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_proceso">
+        <PropertyRef Name="id_proceso" />
+      </Principal>
+      <Dependent Role="c_sub_proceso">
+        <PropertyRef Name="id_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_sub_pro__id_pr__13FCE2E3">
+    <End Role="c_proceso_benchmark" Type="Self.c_proceso_benchmark" Multiplicity="1" />
+    <End Role="c_sub_proceso_benchmark" Type="Self.c_sub_proceso_benchmark" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_proceso_benchmark">
+        <PropertyRef Name="id_proceso_benchmark" />
+      </Principal>
+      <Dependent Role="c_sub_proceso_benchmark">
+        <PropertyRef Name="id_proceso_benchmark" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_sub_pro__id_re__1308BEAA">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="1" />
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="c_sub_proceso">
+        <PropertyRef Name="id_responsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_sub_pro__id_su__11207638">
+    <End Role="c_sub_etapa" Type="Self.c_sub_etapa" Multiplicity="0..1" />
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_etapa">
+        <PropertyRef Name="id_sub_etapa" />
+      </Principal>
+      <Dependent Role="c_sub_proceso">
+        <PropertyRef Name="id_sub_etapa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_sub_pro__id_su__15E52B55">
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="1" />
+    <End Role="c_sub_proceso_normatividad" Type="Self.c_sub_proceso_normatividad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Principal>
+      <Dependent Role="c_sub_proceso_normatividad">
+        <PropertyRef Name="id_sub_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_sub_pro__id_ti__12149A71">
+    <End Role="c_tipologia_sub_proceso" Type="Self.c_tipologia_sub_proceso" Multiplicity="0..1" />
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_tipologia_sub_proceso">
+        <PropertyRef Name="id_tipologia_sub_proceso" />
+      </Principal>
+      <Dependent Role="c_sub_proceso">
+        <PropertyRef Name="id_tipologia_sub_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_tipo_ri__id_ca__16D94F8E">
+    <End Role="c_categoria_riesgo" Type="Self.c_categoria_riesgo" Multiplicity="1" />
+    <End Role="c_tipo_riesgo" Type="Self.c_tipo_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_categoria_riesgo">
+        <PropertyRef Name="id_categoria_riesgo" />
+      </Principal>
+      <Dependent Role="c_tipo_riesgo">
+        <PropertyRef Name="id_categoria_riesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_tipolog__id_su__17CD73C7">
+    <End Role="c_sub_clase_tipologia_riesgo" Type="Self.c_sub_clase_tipologia_riesgo" Multiplicity="1" />
+    <End Role="c_tipologia_riesgo" Type="Self.c_tipologia_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_clase_tipologia_riesgo">
+        <PropertyRef Name="id_sub_clase_tipologia_riesgo" />
+      </Principal>
+      <Dependent Role="c_tipologia_riesgo">
+        <PropertyRef Name="id_sub_clase_tipologia_riesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_usuario__id_ar__18C19800">
+    <End Role="c_area" Type="Self.c_area" Multiplicity="1" />
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_area">
+        <PropertyRef Name="id_area" />
+      </Principal>
+      <Dependent Role="c_usuario">
+        <PropertyRef Name="id_area" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_usuario__id_su__19B5BC39">
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="1" />
+    <End Role="c_usuario_sub_proceso" Type="Self.c_usuario_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Principal>
+      <Dependent Role="c_usuario_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__c_usuario__id_us__1AA9E072">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="1" />
+    <End Role="c_usuario_sub_proceso" Type="Self.c_usuario_sub_proceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="c_usuario_sub_proceso">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_categ__2803DB90">
+    <End Role="c_categoria_error" Type="Self.c_categoria_error" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_categoria_error">
+        <PropertyRef Name="id_categoria_error" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_categoria_error" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_categ__29EC2402">
+    <End Role="c_categoria_perdida" Type="Self.c_categoria_perdida" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_categoria_perdida">
+        <PropertyRef Name="id_categoria_perdida" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_categoria_perdida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_centr__1E7A7156">
+    <End Role="c_centro_costo" Type="Self.c_centro_costo" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_centro_costo">
+        <PropertyRef Name="id_centro_costo" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_centro_costo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_cuent__1D864D1D">
+    <End Role="c_cuenta_contable" Type="Self.c_cuenta_contable" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_cuenta_contable">
+        <PropertyRef Name="id_cuenta_contable" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_cuenta_contable_perdida" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_cuent__2062B9C8">
+    <End Role="c_cuenta_contable" Type="Self.c_cuenta_contable" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_cuenta_contable">
+        <PropertyRef Name="id_cuenta_contable" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_cuenta_contable_recuperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_cuent__2156DE01">
+    <End Role="c_cuenta_contable" Type="Self.c_cuenta_contable" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_cuenta_contable">
+        <PropertyRef Name="id_cuenta_contable" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_cuenta_contable_costo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_entid__224B023A">
+    <End Role="c_entidad" Type="Self.c_entidad" Multiplicity="1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_entidad">
+        <PropertyRef Name="id_entidad" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_entidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_estat__233F2673">
+    <End Role="c_estatus_bdei" Type="Self.c_estatus_bdei" Multiplicity="1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_estatus_bdei">
+        <PropertyRef Name="id_estatus_bdei" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_estatus_bdei" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_linea__261B931E">
+    <End Role="c_linea_negocio" Type="Self.c_linea_negocio" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_linea_negocio">
+        <PropertyRef Name="id_linea_negocio" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_linea_negocio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_moned__1C9228E4">
+    <End Role="c_moneda" Type="Self.c_moneda" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_moneda">
+        <PropertyRef Name="id_moneda" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_moneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_orige__28F7FFC9">
+    <End Role="c_origen_incidencia" Type="Self.c_origen_incidencia" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_origen_incidencia">
+        <PropertyRef Name="id_origen_incidencia" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_origen_incidencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_respo__1F6E958F">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_responsable_recuperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_respo__270FB757">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_responsable_captura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_sub_p__24334AAC">
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_sub_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_tipo___1B9E04AB">
+    <End Role="c_tipo_solucion" Type="Self.c_tipo_solucion" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_tipo_solucion">
+        <PropertyRef Name="id_tipo_solucion" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_tipo_solucion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_bdei__id_tipol__25276EE5">
+    <End Role="c_tipologia_riesgo" Type="Self.c_tipologia_riesgo" Multiplicity="0..1" />
+    <End Role="k_bdei" Type="Self.k_bdei" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_tipologia_riesgo">
+        <PropertyRef Name="id_tipologia_riesgo" />
+      </Principal>
+      <Dependent Role="k_bdei">
+        <PropertyRef Name="id_tipologia_riesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_benchma__id_ac__2BD46C74">
+    <End Role="c_actividad" Type="Self.c_actividad" Multiplicity="1" />
+    <End Role="k_benchmarck" Type="Self.k_benchmarck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_actividad">
+        <PropertyRef Name="id_actividad" />
+      </Principal>
+      <Dependent Role="k_benchmarck">
+        <PropertyRef Name="id_actividad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_benchma__id_ev__2DBCB4E6">
+    <End Role="c_evento_riesgo" Type="Self.c_evento_riesgo" Multiplicity="1" />
+    <End Role="k_benchmarck" Type="Self.k_benchmarck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_evento_riesgo">
+        <PropertyRef Name="id_evento_riesgo" />
+      </Principal>
+      <Dependent Role="k_benchmarck">
+        <PropertyRef Name="id_evento_riesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_benchma__id_su__2AE0483B">
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="1" />
+    <End Role="k_benchmarck" Type="Self.k_benchmarck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Principal>
+      <Dependent Role="k_benchmarck">
+        <PropertyRef Name="id_sub_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_benchma__id_su__2CC890AD">
+    <End Role="c_sub_proceso_benchmark" Type="Self.c_sub_proceso_benchmark" Multiplicity="1" />
+    <End Role="k_benchmarck" Type="Self.k_benchmarck" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_proceso_benchmark">
+        <PropertyRef Name="id_sub_proceso_benchmark" />
+      </Principal>
+      <Dependent Role="k_benchmarck">
+        <PropertyRef Name="id_sub_proceso_benchmark" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_certifi__id_co__2EB0D91F">
+    <End Role="k_control" Type="Self.k_control" Multiplicity="1" />
+    <End Role="k_certificacion_control" Type="Self.k_certificacion_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="k_control">
+        <PropertyRef Name="id_control" />
+      </Principal>
+      <Dependent Role="k_certificacion_control">
+        <PropertyRef Name="id_control" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_certifi__id_pe__2FA4FD58">
+    <End Role="c_periodo_certificacion" Type="Self.c_periodo_certificacion" Multiplicity="1" />
+    <End Role="k_certificacion_control" Type="Self.k_certificacion_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_periodo_certificacion">
+        <PropertyRef Name="id_periodo_certificacion" />
+      </Principal>
+      <Dependent Role="k_certificacion_control">
+        <PropertyRef Name="id_periodo_certificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_certifi__id_ti__30992191">
+    <End Role="c_tipo_evaluacion" Type="Self.c_tipo_evaluacion" Multiplicity="1" />
+    <End Role="k_certificacion_control" Type="Self.k_certificacion_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_tipo_evaluacion">
+        <PropertyRef Name="id_tipo_evaluacion" />
+      </Principal>
+      <Dependent Role="k_certificacion_control">
+        <PropertyRef Name="id_tipo_evaluacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_ca__383A4359">
+    <End Role="c_categoria_control" Type="Self.c_categoria_control" Multiplicity="0..1" />
+    <End Role="k_control" Type="Self.k_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_categoria_control">
+        <PropertyRef Name="id_categoria_control" />
+      </Principal>
+      <Dependent Role="k_control">
+        <PropertyRef Name="id_categoria_control" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_co__3B16B004">
+    <End Role="k_control" Type="Self.k_control" Multiplicity="1" />
+    <End Role="k_control_riesgo" Type="Self.k_control_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="k_control">
+        <PropertyRef Name="id_control" />
+      </Principal>
+      <Dependent Role="k_control_riesgo">
+        <PropertyRef Name="id_control" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_ej__32816A03">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="0..1" />
+    <End Role="k_control" Type="Self.k_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="k_control">
+        <PropertyRef Name="id_ejecutor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_fr__355DD6AE">
+    <End Role="c_frecuencia_control" Type="Self.c_frecuencia_control" Multiplicity="0..1" />
+    <End Role="k_control" Type="Self.k_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_frecuencia_control">
+        <PropertyRef Name="id_frecuencia_control" />
+      </Principal>
+      <Dependent Role="k_control">
+        <PropertyRef Name="id_frecuencia_control" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_gr__3469B275">
+    <End Role="c_grado_cobertura" Type="Self.c_grado_cobertura" Multiplicity="0..1" />
+    <End Role="k_control" Type="Self.k_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_grado_cobertura">
+        <PropertyRef Name="id_grado_cobertura" />
+      </Principal>
+      <Dependent Role="k_control">
+        <PropertyRef Name="id_grado_cobertura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_na__3651FAE7">
+    <End Role="c_naturaleza_control" Type="Self.c_naturaleza_control" Multiplicity="0..1" />
+    <End Role="k_control" Type="Self.k_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_naturaleza_control">
+        <PropertyRef Name="id_naturaleza_control" />
+      </Principal>
+      <Dependent Role="k_control">
+        <PropertyRef Name="id_naturaleza_control" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_re__33758E3C">
+    <End Role="c_usuario" Type="Self.c_usuario" Multiplicity="0..1" />
+    <End Role="k_control" Type="Self.k_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="k_control">
+        <PropertyRef Name="id_responsable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_ri__3A228BCB">
+    <End Role="k_riesgo" Type="Self.k_riesgo" Multiplicity="1" />
+    <End Role="k_control_riesgo" Type="Self.k_control_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="k_riesgo">
+        <PropertyRef Name="id_riesgo" />
+      </Principal>
+      <Dependent Role="k_control_riesgo">
+        <PropertyRef Name="id_riesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_su__318D45CA">
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="1" />
+    <End Role="k_control" Type="Self.k_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Principal>
+      <Dependent Role="k_control">
+        <PropertyRef Name="id_sub_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_ti__37461F20">
+    <End Role="c_tipologia_control" Type="Self.c_tipologia_control" Multiplicity="0..1" />
+    <End Role="k_control" Type="Self.k_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_tipologia_control">
+        <PropertyRef Name="id_tipologia_control" />
+      </Principal>
+      <Dependent Role="k_control">
+        <PropertyRef Name="id_tipologia_control" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_control__id_ti__392E6792">
+    <End Role="c_tipo_evidencia" Type="Self.c_tipo_evidencia" Multiplicity="0..1" />
+    <End Role="k_control" Type="Self.k_control" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_tipo_evidencia">
+        <PropertyRef Name="id_tipo_evidencia" />
+      </Principal>
+      <Dependent Role="k_control">
+        <PropertyRef Name="id_tipo_evidencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_error_c__id_er__3C0AD43D">
+    <End Role="c_error_contable" Type="Self.c_error_contable" Multiplicity="1" />
+    <End Role="k_error_contable_riesgo" Type="Self.k_error_contable_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_error_contable">
+        <PropertyRef Name="id_error_contable" />
+      </Principal>
+      <Dependent Role="k_error_contable_riesgo">
+        <PropertyRef Name="id_error_contable" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_error_c__id_ri__3CFEF876">
+    <End Role="k_riesgo" Type="Self.k_riesgo" Multiplicity="1" />
+    <End Role="k_error_contable_riesgo" Type="Self.k_error_contable_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="k_riesgo">
+        <PropertyRef Name="id_riesgo" />
+      </Principal>
+      <Dependent Role="k_error_contable_riesgo">
+        <PropertyRef Name="id_riesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_evaluac__id_ca__3FDB6521">
+    <End Role="c_calificacion_indicador" Type="Self.c_calificacion_indicador" Multiplicity="0..1" />
+    <End Role="k_evaluacion" Type="Self.k_evaluacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_calificacion_indicador">
+        <PropertyRef Name="id_calificacion_indicador" />
+      </Principal>
+      <Dependent Role="k_evaluacion">
+        <PropertyRef Name="id_calificacion_indicador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_evaluac__id_in__3EE740E8">
+    <End Role="c_indicador" Type="Self.c_indicador" Multiplicity="0..1" />
+    <End Role="k_evaluacion" Type="Self.k_evaluacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_indicador">
+        <PropertyRef Name="id_indicador" />
+      </Principal>
+      <Dependent Role="k_evaluacion">
+        <PropertyRef Name="id_indicador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_evaluac__id_pe__3DF31CAF">
+    <End Role="c_periodo_indicador" Type="Self.c_periodo_indicador" Multiplicity="1" />
+    <End Role="k_evaluacion" Type="Self.k_evaluacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_periodo_indicador">
+        <PropertyRef Name="id_periodo_indicador" />
+      </Principal>
+      <Dependent Role="k_evaluacion">
+        <PropertyRef Name="id_periodo_indicador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_riesgo__id_mag__45943E77">
+    <End Role="c_magnitud_impacto" Type="Self.c_magnitud_impacto" Multiplicity="0..1" />
+    <End Role="k_riesgo" Type="Self.k_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_magnitud_impacto">
+        <PropertyRef Name="id_magnitud_impacto" />
+      </Principal>
+      <Dependent Role="k_riesgo">
+        <PropertyRef Name="id_magnitud_impacto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_riesgo__id_pro__43ABF605">
+    <End Role="c_probabilidad_ocurrencia" Type="Self.c_probabilidad_ocurrencia" Multiplicity="0..1" />
+    <End Role="k_riesgo" Type="Self.k_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_probabilidad_ocurrencia">
+        <PropertyRef Name="id_probabilidad_ocurrencia" />
+      </Principal>
+      <Dependent Role="k_riesgo">
+        <PropertyRef Name="id_probabilidad_ocurrencia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_riesgo__id_sub__40CF895A">
+    <End Role="c_sub_proceso" Type="Self.c_sub_proceso" Multiplicity="1" />
+    <End Role="k_riesgo" Type="Self.k_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_sub_proceso">
+        <PropertyRef Name="id_sub_proceso" />
+      </Principal>
+      <Dependent Role="k_riesgo">
+        <PropertyRef Name="id_sub_proceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_riesgo__id_tip__41C3AD93">
+    <End Role="c_tipo_riesgo" Type="Self.c_tipo_riesgo" Multiplicity="0..1" />
+    <End Role="k_riesgo" Type="Self.k_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_tipo_riesgo">
+        <PropertyRef Name="id_tipo_riesgo" />
+      </Principal>
+      <Dependent Role="k_riesgo">
+        <PropertyRef Name="id_tipo_riesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_riesgo__id_tip__42B7D1CC">
+    <End Role="c_tipologia_riesgo" Type="Self.c_tipologia_riesgo" Multiplicity="0..1" />
+    <End Role="k_riesgo" Type="Self.k_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_tipologia_riesgo">
+        <PropertyRef Name="id_tipologia_riesgo" />
+      </Principal>
+      <Dependent Role="k_riesgo">
+        <PropertyRef Name="id_tipologia_riesgo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__k_riesgo__id_tip__44A01A3E">
+    <End Role="c_tipo_impacto" Type="Self.c_tipo_impacto" Multiplicity="0..1" />
+    <End Role="k_riesgo" Type="Self.k_riesgo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="c_tipo_impacto">
+        <PropertyRef Name="id_tipo_impacto" />
+      </Principal>
+      <Dependent Role="k_riesgo">
+        <PropertyRef Name="id_tipo_impacto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="obtiene_controles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_usuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="obtiene_sub_procesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_usuario" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="SICIModelStoreContainer">
+    <EntitySet Name="c_actividad" EntityType="Self.c_actividad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_area" EntityType="Self.c_area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_area_costeo" EntityType="Self.c_area_costeo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_area_costeo_sub_proceso" EntityType="Self.c_area_costeo_sub_proceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_calificacion_indicador" EntityType="Self.c_calificacion_indicador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_categoria_control" EntityType="Self.c_categoria_control" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_categoria_error" EntityType="Self.c_categoria_error" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_categoria_perdida" EntityType="Self.c_categoria_perdida" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_categoria_riesgo" EntityType="Self.c_categoria_riesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_centro_costo" EntityType="Self.c_centro_costo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_clase_tipologia_riesgo" EntityType="Self.c_clase_tipologia_riesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_contenido_normatividad" EntityType="Self.c_contenido_normatividad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_cuenta_contable" EntityType="Self.c_cuenta_contable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_entidad" EntityType="Self.c_entidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_error_contable" EntityType="Self.c_error_contable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_estatus_bdei" EntityType="Self.c_estatus_bdei" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_etapa" EntityType="Self.c_etapa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_evento_riesgo" EntityType="Self.c_evento_riesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_frecuencia_control" EntityType="Self.c_frecuencia_control" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_frecuencia_indicador" EntityType="Self.c_frecuencia_indicador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_funcion" EntityType="Self.c_funcion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_funcion_rol" EntityType="Self.c_funcion_rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_grado_cobertura" EntityType="Self.c_grado_cobertura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_indicador" EntityType="Self.c_indicador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_linea_negocio" EntityType="Self.c_linea_negocio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_linea_negocio_sub_proceso" EntityType="Self.c_linea_negocio_sub_proceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_macro_proceso" EntityType="Self.c_macro_proceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_magnitud_impacto" EntityType="Self.c_magnitud_impacto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_menu_funcion" EntityType="Self.c_menu_funcion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_meta_campo" EntityType="Self.c_meta_campo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_moneda" EntityType="Self.c_moneda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_naturaleza_control" EntityType="Self.c_naturaleza_control" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_nivel_normatividad" EntityType="Self.c_nivel_normatividad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_normatividad" EntityType="Self.c_normatividad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_origen_incidencia" EntityType="Self.c_origen_incidencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_periodo_certificacion" EntityType="Self.c_periodo_certificacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_periodo_indicador" EntityType="Self.c_periodo_indicador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_probabilidad_ocurrencia" EntityType="Self.c_probabilidad_ocurrencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_proceso" EntityType="Self.c_proceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_proceso_benchmark" EntityType="Self.c_proceso_benchmark" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_prueba_auto_eval" EntityType="Self.c_prueba_auto_eval" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_rol" EntityType="Self.c_rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_rol_usuario" EntityType="Self.c_rol_usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_sub_clase_tipologia_riesgo" EntityType="Self.c_sub_clase_tipologia_riesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_sub_etapa" EntityType="Self.c_sub_etapa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_sub_proceso" EntityType="Self.c_sub_proceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_sub_proceso_benchmark" EntityType="Self.c_sub_proceso_benchmark" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_sub_proceso_normatividad" EntityType="Self.c_sub_proceso_normatividad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_tipo_evaluacion" EntityType="Self.c_tipo_evaluacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_tipo_evidencia" EntityType="Self.c_tipo_evidencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_tipo_impacto" EntityType="Self.c_tipo_impacto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_tipo_normatividad" EntityType="Self.c_tipo_normatividad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_tipo_riesgo" EntityType="Self.c_tipo_riesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_tipo_solucion" EntityType="Self.c_tipo_solucion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_tipologia_control" EntityType="Self.c_tipologia_control" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_tipologia_riesgo" EntityType="Self.c_tipologia_riesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_tipologia_sub_proceso" EntityType="Self.c_tipologia_sub_proceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_unidad_indicador" EntityType="Self.c_unidad_indicador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_usuario" EntityType="Self.c_usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="c_usuario_sub_proceso" EntityType="Self.c_usuario_sub_proceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="k_bdei" EntityType="Self.k_bdei" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="k_benchmarck" EntityType="Self.k_benchmarck" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="k_certificacion_control" EntityType="Self.k_certificacion_control" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="k_control" EntityType="Self.k_control" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="k_control_riesgo" EntityType="Self.k_control_riesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="k_error_contable_riesgo" EntityType="Self.k_error_contable_riesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="k_evaluacion" EntityType="Self.k_evaluacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="k_riesgo" EntityType="Self.k_riesgo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_bdei" EntityType="Self.v_bdei" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_bdei].[ID] AS [ID], 
+    [v_bdei].[nb_entidad] AS [nb_entidad], 
+    [v_bdei].[nb_estatus_bdei] AS [nb_estatus_bdei], 
+    [v_bdei].[nb_sub_proceso] AS [nb_sub_proceso], 
+    [v_bdei].[nb_usuario_sub_proceso] AS [nb_usuario_sub_proceso], 
+    [v_bdei].[nb_usuario_captura] AS [nb_usuario_captura], 
+    [v_bdei].[nb_tipologia_riesgo] AS [nb_tipologia_riesgo], 
+    [v_bdei].[nb_linea_negocio] AS [nb_linea_negocio], 
+    [v_bdei].[ds_evento] AS [ds_evento], 
+    [v_bdei].[nb_categoria_error] AS [nb_categoria_error], 
+    [v_bdei].[nb_origen_incidencia] AS [nb_origen_incidencia], 
+    [v_bdei].[nb_categoria_perdida] AS [nb_categoria_perdida], 
+    [v_bdei].[fe_alta] AS [fe_alta], 
+    [v_bdei].[fe_ocurrencia] AS [fe_ocurrencia], 
+    [v_bdei].[hr_ocurrencia] AS [hr_ocurrencia], 
+    [v_bdei].[duracion] AS [duracion], 
+    [v_bdei].[fe_solucion] AS [fe_solucion], 
+    [v_bdei].[nb_tipo_solucion] AS [nb_tipo_solucion], 
+    [v_bdei].[comentarios] AS [comentarios], 
+    [v_bdei].[nb_moneda] AS [nb_moneda], 
+    [v_bdei].[cl_cuenta_contable_perdida] AS [cl_cuenta_contable_perdida], 
+    [v_bdei].[nb_cuenta_contable_perdida] AS [nb_cuenta_contable_perdida], 
+    [v_bdei].[mn_exposicion] AS [mn_exposicion], 
+    [v_bdei].[mn_quebranto] AS [mn_quebranto], 
+    [v_bdei].[cl_centro_costo] AS [cl_centro_costo], 
+    [v_bdei].[nb_centro_costo] AS [nb_centro_costo], 
+    [v_bdei].[fe_registro_perdida] AS [fe_registro_perdida], 
+    [v_bdei].[fe_quebranto] AS [fe_quebranto], 
+    [v_bdei].[mn_recuperacion] AS [mn_recuperacion], 
+    [v_bdei].[nb_usuario_recuperacion] AS [nb_usuario_recuperacion], 
+    [v_bdei].[cl_cuenta_contable_recuperacion] AS [cl_cuenta_contable_recuperacion], 
+    [v_bdei].[nb_cuenta_contable_recuperacion] AS [nb_cuenta_contable_recuperacion], 
+    [v_bdei].[fe_registro_recuperacion] AS [fe_registro_recuperacion], 
+    [v_bdei].[via_recuperacion] AS [via_recuperacion], 
+    [v_bdei].[mn_costo_recuperacion] AS [mn_costo_recuperacion], 
+    [v_bdei].[cl_cuenta_contable_costo] AS [cl_cuenta_contable_costo], 
+    [v_bdei].[nb_cuenta_contable_costo] AS [nb_cuenta_contable_costo], 
+    [v_bdei].[fe_registro_costo_recuperacion] AS [fe_registro_costo_recuperacion]
+    FROM [dbo].[v_bdei] AS [v_bdei]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_benchmark" EntityType="Self.v_benchmark" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_benchmark].[ID] AS [ID], 
+    [v_benchmark].[cnb_entidad] AS [cnb_entidad], 
+    [v_benchmark].[cnb_macro_proceso] AS [cnb_macro_proceso], 
+    [v_benchmark].[cnb_proceso] AS [cnb_proceso], 
+    [v_benchmark].[cnb_sub_proceso] AS [cnb_sub_proceso], 
+    [v_benchmark].[nb_actividad] AS [nb_actividad], 
+    [v_benchmark].[nb_proceso_benchmark] AS [nb_proceso_benchmark], 
+    [v_benchmark].[nb_sub_proceso_benchmark] AS [nb_sub_proceso_benchmark], 
+    [v_benchmark].[nb_evento_riesgo] AS [nb_evento_riesgo]
+    FROM [dbo].[v_benchmark] AS [v_benchmark]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_certificacion" EntityType="Self.v_certificacion" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_certificacion].[ID] AS [ID], 
+    [v_certificacion].[cnb_entidad] AS [cnb_entidad], 
+    [v_certificacion].[cnb_macro_proceso] AS [cnb_macro_proceso], 
+    [v_certificacion].[cnb_proceso] AS [cnb_proceso], 
+    [v_certificacion].[cnb_sub_proceso] AS [cnb_sub_proceso], 
+    [v_certificacion].[codigo_riesgo] AS [codigo_riesgo], 
+    [v_certificacion].[evento] AS [evento], 
+    [v_certificacion].[codigo_control] AS [codigo_control], 
+    [v_certificacion].[actividad_control] AS [actividad_control], 
+    [v_certificacion].[tiene_accion_correctora] AS [tiene_accion_correctora], 
+    [v_certificacion].[accion_correctora] AS [accion_correctora], 
+    [v_certificacion].[cl_certificacion_control] AS [cl_certificacion_control], 
+    [v_certificacion].[nb_periodo_certificacion] AS [nb_periodo_certificacion], 
+    [v_certificacion].[ds_procedimiento_certificacion] AS [ds_procedimiento_certificacion], 
+    [v_certificacion].[nb_tipo_evaluacion] AS [nb_tipo_evaluacion], 
+    [v_certificacion].[no_partidas_minimo] AS [no_partidas_minimo], 
+    [v_certificacion].[no_partidas_semestre1] AS [no_partidas_semestre1], 
+    [v_certificacion].[no_partidas_semestre2] AS [no_partidas_semestre2], 
+    [v_certificacion].[no_pruebas_realizadas] AS [no_pruebas_realizadas], 
+    [v_certificacion].[tiene_funcionamiento_efectivo] AS [tiene_funcionamiento_efectivo], 
+    [v_certificacion].[tiene_disenio_efectivo] AS [tiene_disenio_efectivo], 
+    [v_certificacion].[ds_plan_remediacion] AS [ds_plan_remediacion], 
+    [v_certificacion].[fe_registro] AS [fe_registro]
+    FROM [dbo].[v_certificacion] AS [v_certificacion]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_estructura" EntityType="Self.v_estructura" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_estructura].[ID] AS [ID], 
+    [v_estructura].[cl_entidad] AS [cl_entidad], 
+    [v_estructura].[nb_entidad] AS [nb_entidad], 
+    [v_estructura].[nb_responsable_entidad] AS [nb_responsable_entidad], 
+    [v_estructura].[nb_puesto_entidad] AS [nb_puesto_entidad], 
+    [v_estructura].[cl_macro_proceso] AS [cl_macro_proceso], 
+    [v_estructura].[nb_macro_proceso] AS [nb_macro_proceso], 
+    [v_estructura].[nb_responsable_macro_proceso] AS [nb_responsable_macro_proceso], 
+    [v_estructura].[nb_puesto_macro_proceso] AS [nb_puesto_macro_proceso], 
+    [v_estructura].[cl_proceso] AS [cl_proceso], 
+    [v_estructura].[nb_proceso] AS [nb_proceso], 
+    [v_estructura].[nb_responsbale_proceso] AS [nb_responsbale_proceso], 
+    [v_estructura].[nb_puesto_proceso] AS [nb_puesto_proceso], 
+    [v_estructura].[cl_sub_proceso] AS [cl_sub_proceso], 
+    [v_estructura].[nb_sub_proceso] AS [nb_sub_proceso], 
+    [v_estructura].[cl_manual] AS [cl_manual], 
+    [v_estructura].[nb_responsable_sub_proceso] AS [nb_responsable_sub_proceso], 
+    [v_estructura].[nb_puesto_sub_proceso] AS [nb_puesto_sub_proceso]
+    FROM [dbo].[v_estructura] AS [v_estructura]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_flujo_narrativa" EntityType="Self.v_flujo_narrativa" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_flujo_narrativa].[ID] AS [ID], 
+    [v_flujo_narrativa].[cl_entidad] AS [cl_entidad], 
+    [v_flujo_narrativa].[nb_entidad] AS [nb_entidad], 
+    [v_flujo_narrativa].[cl_macro_proceso] AS [cl_macro_proceso], 
+    [v_flujo_narrativa].[nb_macro_proceso] AS [nb_macro_proceso], 
+    [v_flujo_narrativa].[cl_proceso] AS [cl_proceso], 
+    [v_flujo_narrativa].[nb_proceso] AS [nb_proceso], 
+    [v_flujo_narrativa].[cl_sub_proceso] AS [cl_sub_proceso], 
+    [v_flujo_narrativa].[nb_sub_proceso] AS [nb_sub_proceso], 
+    [v_flujo_narrativa].[nb_archivo_flujo] AS [nb_archivo_flujo], 
+    [v_flujo_narrativa].[nb_archivo_manual] AS [nb_archivo_manual]
+    FROM [dbo].[v_flujo_narrativa] AS [v_flujo_narrativa]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_indicador" EntityType="Self.v_indicador" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_indicador].[ID] AS [ID], 
+    [v_indicador].[nb_entidad] AS [nb_entidad], 
+    [v_indicador].[cl_indicador] AS [cl_indicador], 
+    [v_indicador].[nb_indicador] AS [nb_indicador], 
+    [v_indicador].[ds_indicador] AS [ds_indicador], 
+    [v_indicador].[ds_numerador] AS [ds_numerador], 
+    [v_indicador].[ds_denominador] AS [ds_denominador], 
+    [v_indicador].[nb_frecuencia_indicador] AS [nb_frecuencia_indicador], 
+    [v_indicador].[nb_unidad_indicador] AS [nb_unidad_indicador], 
+    [v_indicador].[control_asociado] AS [control_asociado], 
+    [v_indicador].[peso] AS [peso], 
+    [v_indicador].[umbral000i] AS [umbral000i], 
+    [v_indicador].[umbral000f] AS [umbral000f], 
+    [v_indicador].[umbral050i] AS [umbral050i], 
+    [v_indicador].[umbral050f] AS [umbral050f], 
+    [v_indicador].[umbral075i] AS [umbral075i], 
+    [v_indicador].[umbral075f] AS [umbral075f], 
+    [v_indicador].[umbral100i] AS [umbral100i], 
+    [v_indicador].[umbral100f] AS [umbral100f], 
+    [v_indicador].[esta_activo] AS [esta_activo], 
+    [v_indicador].[nb_area] AS [nb_area], 
+    [v_indicador].[nb_responsable] AS [nb_responsable], 
+    [v_indicador].[nb_periodo_indicador] AS [nb_periodo_indicador], 
+    [v_indicador].[numerador] AS [numerador], 
+    [v_indicador].[denominador] AS [denominador], 
+    [v_indicador].[medicion] AS [medicion], 
+    [v_indicador].[nb_calificacion_indicador] AS [nb_calificacion_indicador]
+    FROM [dbo].[v_indicador] AS [v_indicador]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_mryc" EntityType="Self.v_mryc" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_mryc].[ID] AS [ID], 
+    [v_mryc].[cl_entidad] AS [cl_entidad], 
+    [v_mryc].[nb_entidad] AS [nb_entidad], 
+    [v_mryc].[nb_responsable_entidad] AS [nb_responsable_entidad], 
+    [v_mryc].[nb_puesto_entidad] AS [nb_puesto_entidad], 
+    [v_mryc].[cl_macro_proceso] AS [cl_macro_proceso], 
+    [v_mryc].[nb_macro_proceso] AS [nb_macro_proceso], 
+    [v_mryc].[nb_responsable_macro_proceso] AS [nb_responsable_macro_proceso], 
+    [v_mryc].[nb_puesto_macro_proceso] AS [nb_puesto_macro_proceso], 
+    [v_mryc].[cl_proceso] AS [cl_proceso], 
+    [v_mryc].[nb_proceso] AS [nb_proceso], 
+    [v_mryc].[nb_responsable_proceso] AS [nb_responsable_proceso], 
+    [v_mryc].[nb_puesto_proceso] AS [nb_puesto_proceso], 
+    [v_mryc].[id_sub_proceso] AS [id_sub_proceso], 
+    [v_mryc].[cl_sub_proceso] AS [cl_sub_proceso], 
+    [v_mryc].[nb_sub_proceso] AS [nb_sub_proceso], 
+    [v_mryc].[cl_manual] AS [cl_manual], 
+    [v_mryc].[nb_responsable_sub_proceso] AS [nb_responsable_sub_proceso], 
+    [v_mryc].[nb_puesto_sub_proceso] AS [nb_puesto_sub_proceso], 
+    [v_mryc].[nb_etapa] AS [nb_etapa], 
+    [v_mryc].[nb_sub_etapa] AS [nb_sub_etapa], 
+    [v_mryc].[ds_areas_involucradas] AS [ds_areas_involucradas], 
+    [v_mryc].[ds_aplicaciones_relacionadas] AS [ds_aplicaciones_relacionadas], 
+    [v_mryc].[cl_riesgo] AS [cl_riesgo], 
+    [v_mryc].[nb_riesgo] AS [nb_riesgo], 
+    [v_mryc].[evento] AS [evento], 
+    [v_mryc].[nb_tipo_riesgo] AS [nb_tipo_riesgo], 
+    [v_mryc].[nb_categoria_riesgo] AS [nb_categoria_riesgo], 
+    [v_mryc].[nb_clase_tipologia_riesgo] AS [nb_clase_tipologia_riesgo], 
+    [v_mryc].[nb_sub_clase_tipologia_riesgo] AS [nb_sub_clase_tipologia_riesgo], 
+    [v_mryc].[nb_tipologia_riesgo] AS [nb_tipologia_riesgo], 
+    [v_mryc].[criticidad] AS [criticidad], 
+    [v_mryc].[tiene_afectacion_contable] AS [tiene_afectacion_contable], 
+    [v_mryc].[supuesto_normativo] AS [supuesto_normativo], 
+    [v_mryc].[euc] AS [euc], 
+    [v_mryc].[nb_tipo_impacto] AS [nb_tipo_impacto], 
+    [v_mryc].[nb_magnitud_impacto] AS [nb_magnitud_impacto], 
+    [v_mryc].[nb_probabilidad_ocurrencia] AS [nb_probabilidad_ocurrencia], 
+    [v_mryc].[relacion_control] AS [relacion_control], 
+    [v_mryc].[actividad_control] AS [actividad_control], 
+    [v_mryc].[evidencia_control] AS [evidencia_control], 
+    [v_mryc].[es_control_clave] AS [es_control_clave], 
+    [v_mryc].[nb_aplicacion] AS [nb_aplicacion], 
+    [v_mryc].[accion_correctora] AS [accion_correctora], 
+    [v_mryc].[nb_naturaleza_control] AS [nb_naturaleza_control], 
+    [v_mryc].[nb_frecuencia_control] AS [nb_frecuencia_control], 
+    [v_mryc].[nb_categoria_control] AS [nb_categoria_control], 
+    [v_mryc].[nb_tipologia_control] AS [nb_tipologia_control], 
+    [v_mryc].[nb_tipo_evidencia] AS [nb_tipo_evidencia], 
+    [v_mryc].[nb_grado_cobertura] AS [nb_grado_cobertura], 
+    [v_mryc].[nb_responsable_control] AS [nb_responsable_control], 
+    [v_mryc].[nb_ejecutor_control] AS [nb_ejecutor_control]
+    FROM [dbo].[v_mryc] AS [v_mryc]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__c_activid__id_en__71A7CADF" Association="Self.FK__c_activid__id_en__71A7CADF">
+      <End Role="c_entidad" EntitySet="c_entidad" />
+      <End Role="c_actividad" EntitySet="c_actividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_area_co__id_ar__729BEF18" Association="Self.FK__c_area_co__id_ar__729BEF18">
+      <End Role="c_area_costeo" EntitySet="c_area_costeo" />
+      <End Role="c_area_costeo_sub_proceso" EntitySet="c_area_costeo_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_area_co__id_su__73901351" Association="Self.FK__c_area_co__id_su__73901351">
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+      <End Role="c_area_costeo_sub_proceso" EntitySet="c_area_costeo_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_centro___id_en__7484378A" Association="Self.FK__c_centro___id_en__7484378A">
+      <End Role="c_entidad" EntitySet="c_entidad" />
+      <End Role="c_centro_costo" EntitySet="c_centro_costo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_conteni__id_co__766C7FFC" Association="Self.FK__c_conteni__id_co__766C7FFC">
+      <End Role="c_contenido_normatividad" EntitySet="c_contenido_normatividad" />
+      <End Role="c_contenido_normatividad1" EntitySet="c_contenido_normatividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_conteni__id_ni__75785BC3" Association="Self.FK__c_conteni__id_ni__75785BC3">
+      <End Role="c_nivel_normatividad" EntitySet="c_nivel_normatividad" />
+      <End Role="c_contenido_normatividad" EntitySet="c_contenido_normatividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_cuenta___id_en__7760A435" Association="Self.FK__c_cuenta___id_en__7760A435">
+      <End Role="c_entidad" EntitySet="c_entidad" />
+      <End Role="c_cuenta_contable" EntitySet="c_cuenta_contable" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_entidad__id_re__7854C86E" Association="Self.FK__c_entidad__id_re__7854C86E">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="c_entidad" EntitySet="c_entidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_evento___id_en__7948ECA7" Association="Self.FK__c_evento___id_en__7948ECA7">
+      <End Role="c_entidad" EntitySet="c_entidad" />
+      <End Role="c_evento_riesgo" EntitySet="c_evento_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_funcion__id_fu__7B313519" Association="Self.FK__c_funcion__id_fu__7B313519">
+      <End Role="c_funcion" EntitySet="c_funcion" />
+      <End Role="c_funcion_rol" EntitySet="c_funcion_rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_funcion__id_me__7A3D10E0" Association="Self.FK__c_funcion__id_me__7A3D10E0">
+      <End Role="c_menu_funcion" EntitySet="c_menu_funcion" />
+      <End Role="c_funcion" EntitySet="c_funcion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_funcion__id_ro__7C255952" Association="Self.FK__c_funcion__id_ro__7C255952">
+      <End Role="c_rol" EntitySet="c_rol" />
+      <End Role="c_funcion_rol" EntitySet="c_funcion_rol" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_indicad__id_ar__7FF5EA36" Association="Self.FK__c_indicad__id_ar__7FF5EA36">
+      <End Role="c_area" EntitySet="c_area" />
+      <End Role="c_indicador" EntitySet="c_indicador" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_indicad__id_en__7E0DA1C4" Association="Self.FK__c_indicad__id_en__7E0DA1C4">
+      <End Role="c_entidad" EntitySet="c_entidad" />
+      <End Role="c_indicador" EntitySet="c_indicador" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_indicad__id_fr__7D197D8B" Association="Self.FK__c_indicad__id_fr__7D197D8B">
+      <End Role="c_frecuencia_indicador" EntitySet="c_frecuencia_indicador" />
+      <End Role="c_indicador" EntitySet="c_indicador" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_indicad__id_re__00EA0E6F" Association="Self.FK__c_indicad__id_re__00EA0E6F">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="c_indicador" EntitySet="c_indicador" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_indicad__id_un__7F01C5FD" Association="Self.FK__c_indicad__id_un__7F01C5FD">
+      <End Role="c_unidad_indicador" EntitySet="c_unidad_indicador" />
+      <End Role="c_indicador" EntitySet="c_indicador" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_linea_n__id_li__01DE32A8" Association="Self.FK__c_linea_n__id_li__01DE32A8">
+      <End Role="c_linea_negocio" EntitySet="c_linea_negocio" />
+      <End Role="c_linea_negocio_sub_proceso" EntitySet="c_linea_negocio_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_linea_n__id_su__02D256E1" Association="Self.FK__c_linea_n__id_su__02D256E1">
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+      <End Role="c_linea_negocio_sub_proceso" EntitySet="c_linea_negocio_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_macro_p__id_en__03C67B1A" Association="Self.FK__c_macro_p__id_en__03C67B1A">
+      <End Role="c_entidad" EntitySet="c_entidad" />
+      <End Role="c_macro_proceso" EntitySet="c_macro_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_macro_p__id_re__04BA9F53" Association="Self.FK__c_macro_p__id_re__04BA9F53">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="c_macro_proceso" EntitySet="c_macro_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_nivel_n__id_no__05AEC38C" Association="Self.FK__c_nivel_n__id_no__05AEC38C">
+      <End Role="c_normatividad" EntitySet="c_normatividad" />
+      <End Role="c_nivel_normatividad" EntitySet="c_nivel_normatividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_normati__id_ti__06A2E7C5" Association="Self.FK__c_normati__id_ti__06A2E7C5">
+      <End Role="c_tipo_normatividad" EntitySet="c_tipo_normatividad" />
+      <End Role="c_normatividad" EntitySet="c_normatividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_proceso__id_en__097F5470" Association="Self.FK__c_proceso__id_en__097F5470">
+      <End Role="c_entidad" EntitySet="c_entidad" />
+      <End Role="c_proceso_benchmark" EntitySet="c_proceso_benchmark" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_proceso__id_ma__07970BFE" Association="Self.FK__c_proceso__id_ma__07970BFE">
+      <End Role="c_macro_proceso" EntitySet="c_macro_proceso" />
+      <End Role="c_proceso" EntitySet="c_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_proceso__id_re__088B3037" Association="Self.FK__c_proceso__id_re__088B3037">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="c_proceso" EntitySet="c_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_prueba___id_fr__0B679CE2" Association="Self.FK__c_prueba___id_fr__0B679CE2">
+      <End Role="c_frecuencia_control" EntitySet="c_frecuencia_control" />
+      <End Role="c_prueba_auto_eval" EntitySet="c_prueba_auto_eval" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_prueba___id_na__0A7378A9" Association="Self.FK__c_prueba___id_na__0A7378A9">
+      <End Role="c_naturaleza_control" EntitySet="c_naturaleza_control" />
+      <End Role="c_prueba_auto_eval" EntitySet="c_prueba_auto_eval" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_rol_usu__id_ro__0C5BC11B" Association="Self.FK__c_rol_usu__id_ro__0C5BC11B">
+      <End Role="c_rol" EntitySet="c_rol" />
+      <End Role="c_rol_usuario" EntitySet="c_rol_usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_rol_usu__id_us__0D4FE554" Association="Self.FK__c_rol_usu__id_us__0D4FE554">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="c_rol_usuario" EntitySet="c_rol_usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_sub_cla__id_cl__0E44098D" Association="Self.FK__c_sub_cla__id_cl__0E44098D">
+      <End Role="c_clase_tipologia_riesgo" EntitySet="c_clase_tipologia_riesgo" />
+      <End Role="c_sub_clase_tipologia_riesgo" EntitySet="c_sub_clase_tipologia_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_sub_pro__id_co__14F1071C" Association="Self.FK__c_sub_pro__id_co__14F1071C">
+      <End Role="c_contenido_normatividad" EntitySet="c_contenido_normatividad" />
+      <End Role="c_sub_proceso_normatividad" EntitySet="c_sub_proceso_normatividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_sub_pro__id_et__102C51FF" Association="Self.FK__c_sub_pro__id_et__102C51FF">
+      <End Role="c_etapa" EntitySet="c_etapa" />
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_sub_pro__id_pr__0F382DC6" Association="Self.FK__c_sub_pro__id_pr__0F382DC6">
+      <End Role="c_proceso" EntitySet="c_proceso" />
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_sub_pro__id_pr__13FCE2E3" Association="Self.FK__c_sub_pro__id_pr__13FCE2E3">
+      <End Role="c_proceso_benchmark" EntitySet="c_proceso_benchmark" />
+      <End Role="c_sub_proceso_benchmark" EntitySet="c_sub_proceso_benchmark" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_sub_pro__id_re__1308BEAA" Association="Self.FK__c_sub_pro__id_re__1308BEAA">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_sub_pro__id_su__11207638" Association="Self.FK__c_sub_pro__id_su__11207638">
+      <End Role="c_sub_etapa" EntitySet="c_sub_etapa" />
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_sub_pro__id_su__15E52B55" Association="Self.FK__c_sub_pro__id_su__15E52B55">
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+      <End Role="c_sub_proceso_normatividad" EntitySet="c_sub_proceso_normatividad" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_sub_pro__id_ti__12149A71" Association="Self.FK__c_sub_pro__id_ti__12149A71">
+      <End Role="c_tipologia_sub_proceso" EntitySet="c_tipologia_sub_proceso" />
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_tipo_ri__id_ca__16D94F8E" Association="Self.FK__c_tipo_ri__id_ca__16D94F8E">
+      <End Role="c_categoria_riesgo" EntitySet="c_categoria_riesgo" />
+      <End Role="c_tipo_riesgo" EntitySet="c_tipo_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_tipolog__id_su__17CD73C7" Association="Self.FK__c_tipolog__id_su__17CD73C7">
+      <End Role="c_sub_clase_tipologia_riesgo" EntitySet="c_sub_clase_tipologia_riesgo" />
+      <End Role="c_tipologia_riesgo" EntitySet="c_tipologia_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_usuario__id_ar__18C19800" Association="Self.FK__c_usuario__id_ar__18C19800">
+      <End Role="c_area" EntitySet="c_area" />
+      <End Role="c_usuario" EntitySet="c_usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_usuario__id_su__19B5BC39" Association="Self.FK__c_usuario__id_su__19B5BC39">
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+      <End Role="c_usuario_sub_proceso" EntitySet="c_usuario_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__c_usuario__id_us__1AA9E072" Association="Self.FK__c_usuario__id_us__1AA9E072">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="c_usuario_sub_proceso" EntitySet="c_usuario_sub_proceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_categ__2803DB90" Association="Self.FK__k_bdei__id_categ__2803DB90">
+      <End Role="c_categoria_error" EntitySet="c_categoria_error" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_categ__29EC2402" Association="Self.FK__k_bdei__id_categ__29EC2402">
+      <End Role="c_categoria_perdida" EntitySet="c_categoria_perdida" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_centr__1E7A7156" Association="Self.FK__k_bdei__id_centr__1E7A7156">
+      <End Role="c_centro_costo" EntitySet="c_centro_costo" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_cuent__1D864D1D" Association="Self.FK__k_bdei__id_cuent__1D864D1D">
+      <End Role="c_cuenta_contable" EntitySet="c_cuenta_contable" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_cuent__2062B9C8" Association="Self.FK__k_bdei__id_cuent__2062B9C8">
+      <End Role="c_cuenta_contable" EntitySet="c_cuenta_contable" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_cuent__2156DE01" Association="Self.FK__k_bdei__id_cuent__2156DE01">
+      <End Role="c_cuenta_contable" EntitySet="c_cuenta_contable" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_entid__224B023A" Association="Self.FK__k_bdei__id_entid__224B023A">
+      <End Role="c_entidad" EntitySet="c_entidad" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_estat__233F2673" Association="Self.FK__k_bdei__id_estat__233F2673">
+      <End Role="c_estatus_bdei" EntitySet="c_estatus_bdei" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_linea__261B931E" Association="Self.FK__k_bdei__id_linea__261B931E">
+      <End Role="c_linea_negocio" EntitySet="c_linea_negocio" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_moned__1C9228E4" Association="Self.FK__k_bdei__id_moned__1C9228E4">
+      <End Role="c_moneda" EntitySet="c_moneda" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_orige__28F7FFC9" Association="Self.FK__k_bdei__id_orige__28F7FFC9">
+      <End Role="c_origen_incidencia" EntitySet="c_origen_incidencia" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_respo__1F6E958F" Association="Self.FK__k_bdei__id_respo__1F6E958F">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_respo__270FB757" Association="Self.FK__k_bdei__id_respo__270FB757">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_sub_p__24334AAC" Association="Self.FK__k_bdei__id_sub_p__24334AAC">
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_tipo___1B9E04AB" Association="Self.FK__k_bdei__id_tipo___1B9E04AB">
+      <End Role="c_tipo_solucion" EntitySet="c_tipo_solucion" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_bdei__id_tipol__25276EE5" Association="Self.FK__k_bdei__id_tipol__25276EE5">
+      <End Role="c_tipologia_riesgo" EntitySet="c_tipologia_riesgo" />
+      <End Role="k_bdei" EntitySet="k_bdei" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_benchma__id_ac__2BD46C74" Association="Self.FK__k_benchma__id_ac__2BD46C74">
+      <End Role="c_actividad" EntitySet="c_actividad" />
+      <End Role="k_benchmarck" EntitySet="k_benchmarck" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_benchma__id_ev__2DBCB4E6" Association="Self.FK__k_benchma__id_ev__2DBCB4E6">
+      <End Role="c_evento_riesgo" EntitySet="c_evento_riesgo" />
+      <End Role="k_benchmarck" EntitySet="k_benchmarck" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_benchma__id_su__2AE0483B" Association="Self.FK__k_benchma__id_su__2AE0483B">
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+      <End Role="k_benchmarck" EntitySet="k_benchmarck" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_benchma__id_su__2CC890AD" Association="Self.FK__k_benchma__id_su__2CC890AD">
+      <End Role="c_sub_proceso_benchmark" EntitySet="c_sub_proceso_benchmark" />
+      <End Role="k_benchmarck" EntitySet="k_benchmarck" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_certifi__id_co__2EB0D91F" Association="Self.FK__k_certifi__id_co__2EB0D91F">
+      <End Role="k_control" EntitySet="k_control" />
+      <End Role="k_certificacion_control" EntitySet="k_certificacion_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_certifi__id_pe__2FA4FD58" Association="Self.FK__k_certifi__id_pe__2FA4FD58">
+      <End Role="c_periodo_certificacion" EntitySet="c_periodo_certificacion" />
+      <End Role="k_certificacion_control" EntitySet="k_certificacion_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_certifi__id_ti__30992191" Association="Self.FK__k_certifi__id_ti__30992191">
+      <End Role="c_tipo_evaluacion" EntitySet="c_tipo_evaluacion" />
+      <End Role="k_certificacion_control" EntitySet="k_certificacion_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_ca__383A4359" Association="Self.FK__k_control__id_ca__383A4359">
+      <End Role="c_categoria_control" EntitySet="c_categoria_control" />
+      <End Role="k_control" EntitySet="k_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_co__3B16B004" Association="Self.FK__k_control__id_co__3B16B004">
+      <End Role="k_control" EntitySet="k_control" />
+      <End Role="k_control_riesgo" EntitySet="k_control_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_ej__32816A03" Association="Self.FK__k_control__id_ej__32816A03">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="k_control" EntitySet="k_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_fr__355DD6AE" Association="Self.FK__k_control__id_fr__355DD6AE">
+      <End Role="c_frecuencia_control" EntitySet="c_frecuencia_control" />
+      <End Role="k_control" EntitySet="k_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_gr__3469B275" Association="Self.FK__k_control__id_gr__3469B275">
+      <End Role="c_grado_cobertura" EntitySet="c_grado_cobertura" />
+      <End Role="k_control" EntitySet="k_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_na__3651FAE7" Association="Self.FK__k_control__id_na__3651FAE7">
+      <End Role="c_naturaleza_control" EntitySet="c_naturaleza_control" />
+      <End Role="k_control" EntitySet="k_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_re__33758E3C" Association="Self.FK__k_control__id_re__33758E3C">
+      <End Role="c_usuario" EntitySet="c_usuario" />
+      <End Role="k_control" EntitySet="k_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_ri__3A228BCB" Association="Self.FK__k_control__id_ri__3A228BCB">
+      <End Role="k_riesgo" EntitySet="k_riesgo" />
+      <End Role="k_control_riesgo" EntitySet="k_control_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_su__318D45CA" Association="Self.FK__k_control__id_su__318D45CA">
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+      <End Role="k_control" EntitySet="k_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_ti__37461F20" Association="Self.FK__k_control__id_ti__37461F20">
+      <End Role="c_tipologia_control" EntitySet="c_tipologia_control" />
+      <End Role="k_control" EntitySet="k_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_control__id_ti__392E6792" Association="Self.FK__k_control__id_ti__392E6792">
+      <End Role="c_tipo_evidencia" EntitySet="c_tipo_evidencia" />
+      <End Role="k_control" EntitySet="k_control" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_error_c__id_er__3C0AD43D" Association="Self.FK__k_error_c__id_er__3C0AD43D">
+      <End Role="c_error_contable" EntitySet="c_error_contable" />
+      <End Role="k_error_contable_riesgo" EntitySet="k_error_contable_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_error_c__id_ri__3CFEF876" Association="Self.FK__k_error_c__id_ri__3CFEF876">
+      <End Role="k_riesgo" EntitySet="k_riesgo" />
+      <End Role="k_error_contable_riesgo" EntitySet="k_error_contable_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_evaluac__id_ca__3FDB6521" Association="Self.FK__k_evaluac__id_ca__3FDB6521">
+      <End Role="c_calificacion_indicador" EntitySet="c_calificacion_indicador" />
+      <End Role="k_evaluacion" EntitySet="k_evaluacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_evaluac__id_in__3EE740E8" Association="Self.FK__k_evaluac__id_in__3EE740E8">
+      <End Role="c_indicador" EntitySet="c_indicador" />
+      <End Role="k_evaluacion" EntitySet="k_evaluacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_evaluac__id_pe__3DF31CAF" Association="Self.FK__k_evaluac__id_pe__3DF31CAF">
+      <End Role="c_periodo_indicador" EntitySet="c_periodo_indicador" />
+      <End Role="k_evaluacion" EntitySet="k_evaluacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_riesgo__id_mag__45943E77" Association="Self.FK__k_riesgo__id_mag__45943E77">
+      <End Role="c_magnitud_impacto" EntitySet="c_magnitud_impacto" />
+      <End Role="k_riesgo" EntitySet="k_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_riesgo__id_pro__43ABF605" Association="Self.FK__k_riesgo__id_pro__43ABF605">
+      <End Role="c_probabilidad_ocurrencia" EntitySet="c_probabilidad_ocurrencia" />
+      <End Role="k_riesgo" EntitySet="k_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_riesgo__id_sub__40CF895A" Association="Self.FK__k_riesgo__id_sub__40CF895A">
+      <End Role="c_sub_proceso" EntitySet="c_sub_proceso" />
+      <End Role="k_riesgo" EntitySet="k_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_riesgo__id_tip__41C3AD93" Association="Self.FK__k_riesgo__id_tip__41C3AD93">
+      <End Role="c_tipo_riesgo" EntitySet="c_tipo_riesgo" />
+      <End Role="k_riesgo" EntitySet="k_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_riesgo__id_tip__42B7D1CC" Association="Self.FK__k_riesgo__id_tip__42B7D1CC">
+      <End Role="c_tipologia_riesgo" EntitySet="c_tipologia_riesgo" />
+      <End Role="k_riesgo" EntitySet="k_riesgo" />
+    </AssociationSet>
+    <AssociationSet Name="FK__k_riesgo__id_tip__44A01A3E" Association="Self.FK__k_riesgo__id_tip__44A01A3E">
+      <End Role="c_tipo_impacto" EntitySet="c_tipo_impacto" />
+      <End Role="k_riesgo" EntitySet="k_riesgo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

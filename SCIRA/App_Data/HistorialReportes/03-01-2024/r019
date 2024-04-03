@@ -1,0 +1,20 @@
+{
+  "RepName": "Reporte de Planes de Remediación Concluidos",
+  "ColNames": [
+    "Origen Incidencia",
+    "Nombre del objeto origen",
+    "ID",
+    "Nombre",
+    "Plan",
+    "Área",
+    "Conclusión",
+    "Fecha de Alta",
+    "Fecha estimada de Implantación",
+    "Fecha real de Solución"
+  ],
+  "Rows": [],
+  "NoCols": 10,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

@@ -1,0 +1,81 @@
+{
+  "RepName": "Reporte de Certificación de Entidades",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "05 - BANCO E",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "Enero - 2020",
+      "Me he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.AB",
+      "A",
+      "Si"
+    ],
+    [
+      "01 - BANCO A",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "Febrero - 2021",
+      "NMe he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.AB",
+      "pp",
+      "No"
+    ],
+    [
+      "1  - Banco X A",
+      "Sergio",
+      "N/A",
+      "Febrero - 2021",
+      "NMe he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.AB",
+      "CCC",
+      "Si"
+    ],
+    [
+      "1  - Banco X A",
+      "Sergio",
+      "N/A",
+      "Febrero - 2021",
+      "NMe he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.AB",
+      "CCC",
+      "Si"
+    ],
+    [
+      "1  - Banco X A",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "Febrero - 2021",
+      "NMe he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.AB",
+      null,
+      "Si"
+    ],
+    [
+      "01 - BANCO A",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "Marzo - 2021",
+      "Me he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "pp",
+      "Si"
+    ],
+    [
+      "03 - BANCO C",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "Marzo - 2021",
+      "Me he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "prueba",
+      "Si"
+    ]
+  ],
+  "NoCols": 7,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

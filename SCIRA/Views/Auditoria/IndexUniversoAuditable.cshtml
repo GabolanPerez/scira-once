@@ -1,0 +1,88 @@
+﻿@model IEnumerable<SCIRA.Models.c_auditoria>
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+    ViewBag.Title = "Universo Auditable";
+}
+
+<style type="text/css">
+    .resaltable {
+    }
+
+        .resaltable:hover {
+            color: deepskyblue;
+            background-color: lightslategray;
+        }
+</style>
+
+<link href="~/Content/Extras.css" rel="stylesheet" />
+
+
+<h2>@Strings.getMSG("Menu104")</h2>
+
+<p>
+    @Html.ActionLink(Strings.getMSG("Agregar"), "CreateUniversoAuditable", "Auditoria", new { @class = "btn btn-default btn-sm" })
+</p>
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("Clave")</th>
+            <th>@Strings.getMSG("DivisionAuditoria001")</th>
+            <th>@Strings.getMSG("Menu148")</th>
+            <th>@Strings.getMSG("AuditoriaIndexUniversoAuditable001")</th>
+            <th>@Strings.getMSG("AuditoriaIndexUniversoAuditable002")</th>
+            <th>@Strings.getMSG("AuditoriaIndexUniversoAuditable003")</th>
+            <th>@Strings.getMSG("Entidad")</th>
+            <th>@Strings.getMSG("Area")</th>
+            <th>@Strings.getMSG("AuditoriaIndexUniversoAuditable004")</th>
+            <th>@Strings.getMSG("CalificacionArea002")</th>
+            <th>@Strings.getMSG("AuditoriaIndexUniversoAuditable005")</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(modelItem => item.cl_auditoria)</td>
+                <td> @((item.id_division_auditoria ?? 0) != 0 ? item.c_division_auditoria.ds_division_auditoria : "N/A")</td>
+                <td> @Html.DisplayFor(modelItem => item.nb_auditoria)</td>
+                <td> @(item.es_regulada ? Strings.getMSG("AuditoriaIndexUniversoAuditable006") : Strings.getMSG("AuditoriaIndexUniversoAuditable007")) </td>
+                <td> @Html.DisplayFor(modelItem => item.c_solicitante_auditoria.nb_solicitante_auditoria) </td>
+                <td> @Html.DisplayFor(modelItem => item.c_periodo_auditoria.nb_periodo_auditoria)</td>
+                <td> @Html.DisplayFor(modelItem => item.c_entidad.nb_entidad) </td>
+                <td> @Html.DisplayFor(modelItem => item.c_area.nb_area) </td>
+                <td> @Html.DisplayFor(modelItem => item.fundamento_normativo) </td>
+
+                <td class="resaltable" style="color:@item.cl_color_campo;font-size: 2rem;background-color:white;" onclick="mpDetail(@item.id_auditoria);"> <center><h4>@item.riesgo</h4></center> <center>▰</center> </td>
+
+                <td> @Html.DisplayFor(modelItem => item.nb_firmante) </td>
+                <td>
+                    <a href="@Url.Action("EditUniversoAuditable", new { id = item.id_auditoria })">
+                        <i class="glyphicon glyphicon-pencil" title="@Strings.getMSG("Editar")"></i>
+                    </a> |
+                    <a href="@Url.Action("IndexPruebaAuditoria", new { id = item.id_auditoria })">
+                        <i class="glyphicon glyphicon-list" title="@Strings.getMSG("AuditoriaIndexUniversoAuditable008")"></i>
+                    </a> |
+                    <a href="@Url.Action("DeleteUniversoAuditable", new { id = item.id_auditoria })">
+                        <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+   
+    function mpDetail(id) {
+     
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("CalificacionArea001") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsCosteo", "Auditoria"))/' + id);
+        
+    }
+
+  
+</script>

@@ -1,0 +1,74 @@
+﻿@model SCIRA.Models.c_contenido_normatividad
+
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Editar";
+}
+<script src="~/Scripts/sharedScripts.js"></script>
+
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+
+<h2>Editar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal well">
+        @if (Model.id_contenido_normatividad_padre != null)
+        {
+            <h4>@Model.c_nivel_normatividad.nb_nivel_normatividad de @Model.c_contenido_normatividad2.cl_contenido_normatividad - @Model.c_contenido_normatividad2.ds_contenido_normatividad</h4>
+        }
+        else
+        {
+            <h4>@Model.c_nivel_normatividad.nb_nivel_normatividad de @Model.ds_contenido_normatividad</h4>
+        }
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_contenido_normatividad_padre)
+        @Html.HiddenFor(model => model.id_nivel_normatividad)
+        @Html.HiddenFor(model => model.id_contenido_normatividad)
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">Clave</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.cl_contenido_normatividad, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="Atención" data-toggle="popover" data-trigger="hover" data-content="Ingresar la clave que se le asignará al Contenido de Normatividad. Dicha clave puede ser alfanumérica.">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.cl_contenido_normatividad, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">Descripción</label>
+                <div class="col-xs-6 col-md-5">
+                    @Html.TextAreaFor(model => model.ds_contenido_normatividad, new { @class = "form-control", @rows = "5", @title = "Atención", data_trigger = "hover", data_toggle = "popover", data_content = "Ingresar el nombre del contenido de la normatividad." })
+                    @Html.ValidationMessageFor(model => model.ds_contenido_normatividad, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="Guardar" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink("Regresar", "Index", new { id = Model.id_contenido_normatividad_padre }, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

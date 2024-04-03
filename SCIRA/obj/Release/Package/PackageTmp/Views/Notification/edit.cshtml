@@ -1,0 +1,255 @@
+﻿@model SCIRA.ViewModels.emailViewModel
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Editar";
+    int id = ViewBag.id;
+}
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/Extras.css" rel="stylesheet" />
+<script src="~/Scripts/sharedScripts.js"></script>
+<script src="~/Scripts/textControl.js"></script>
+<script>
+
+    $(document).ready(function () {
+        RenderView();
+    });
+
+    function RenderView() {
+        $("#p0").html($("#area1").val());
+    }
+
+    function RenderHead() {
+        $("#h0").html($("#head").val());
+    }
+
+    function RenderSubject() {
+        $("#s0").html($("#subject").val());
+    }
+    function showView() {
+        $("#shView").hide();
+        $("#viewBox").show();
+    }
+    function hideView() {
+        $("#shView").show();
+        $("#viewBox").hide();
+    }
+
+    var areaId = "area1";
+
+
+
+
+</script>
+
+
+
+<h2>@Strings.getMSG("NotificationEdit016")</h2>
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { onsubmit = "deshabilitar()" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.nb_email)
+    <div class="form-horizontal well">
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NotificationEdit001")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.head, new { htmlAttributes = new { @class = "form-control", @onkeyup = "RenderHead();" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NotificationEdit005")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.head, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NotificationEdit002")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.subject, new { htmlAttributes = new { @class = "form-control", @onkeyup = "RenderSubject();" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NotificationEdit006")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    @Html.ValidationMessageFor(model => model.subject, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("NotificationEdit003")</label>
+                <div class="col-xs-5 col-md-5">
+                    @Html.TextAreaFor(model => model.body, new { @spellcheck = "false", @id = "area1", @class = "form-control", @cols = "100", @rows = "30", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NotificationEdit007"), @onkeyup = "RenderView();" })
+                    @Html.ValidationMessageFor(model => model.body, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-xs-5 col-md-5">
+                    <div class="card" style="width: 54rem;" id="viewBox">
+                        <div class="card-body">
+                            <h4 class="card-title" id="h0">@Model.head</h4>
+                            <h6 class="card-subtitle mb-2 text-muted" id="s0">@Model.subject</h6>
+                            <br />
+                            <div class="card-text" id="p0"></div>
+                            <a>
+                                <i class="fa fa-eye-slash" onclick="hideView()" title="@Strings.getMSG("Ocultar Vista")"></i>
+                            </a>
+                            <p class="text-muted pull-right">@Strings.getMSG("NotificationEdit004")</p>
+                        </div>
+                    </div>
+                    <div id="shView" hidden>
+                        <button type="button" class="btn btn-default" onclick="showView()" title="@Strings.getMSG("Mostrar Vista")">
+                            <i class="fa fa-eye fa-lg"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        @if (id == 1 || id == 2)
+        {
+            <div class="row">
+                <div class="form-group ">
+                    <label class="control-label col-xs-3 col-md-2"></label>
+                    <div class="btn-group">
+                        <button type="button" onclick="replaceText('nb_usuario', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Nombre de Usuario")"><i class="fa fa-user"></i></button>
+                        <button type="button" onclick="replaceText('nb_entidad', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Nombre de Entidad")"><i class="fa fa-building"></i></button>
+                        <button type="button" onclick="replaceText('fecha_registro', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Fecha del Oficio/Informe")"><i class="fa fa-calendar"></i></button>
+                        <button type="button" onclick="replaceText('no_incidencias', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("lyPCreate013")"><i class="fa fa-hashtag"></i></button>
+                        <button type="button" onclick="replaceText('nb_objeto', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage022")"><i class="fa fa-tag"></i></button>
+                        @if (id == 1)
+                        {
+                            <button type="button" onclick="replaceText('fe_vencimiento', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("lyPIndex006")"><i class="fa fa-calendar"></i></button>
+                            <button type="button" onclick="replaceText('origen_autoridad', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("GraphicsOficioIndex005")"><i class="fa fa-circle-o"></i></button>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (id == 3)
+        {
+            <div class="row">
+                <div class="form-group ">
+                    <label class="control-label col-xs-3 col-md-2"></label>
+                    <div class="btn-group">
+                        <button type="button" onclick="replaceText('nb_usuario', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Nombre de Usuario")"><i class="fa fa-user"></i></button>
+                        <button type="button" onclick="replaceText('nb_padre', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage023")"><i class="fa fa-circle-o"></i></button>
+                        <button type="button" onclick="replaceText('lvl_inc', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("ReporteIyPIndex003")"><i class="fa fa-sitemap"></i></button>
+                        <button type="button" onclick="replaceText('desc_incidencia', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("RiesgoCreate074")"><i class="fa fa-info"></i></button>
+                        <button type="button" onclick="replaceText('nb_clasificacion', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("RiesgoCreatMenu063e074")"><i class="fa fa-folder-open"></i></button>
+                        <button type="button" onclick="replaceText('requiere_plan', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage024")"><i class="fa fa-question"></i></button>
+                        <button type="button" onclick="replaceText('js_no_plan', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage025")"><i class="fa fa-file-text-o"></i></button>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (id == 4)
+        {
+            <div class="row">
+                <div class="form-group ">
+                    <label class="control-label col-xs-3 col-md-2"></label>
+                    <div class="btn-group">
+                        <button type="button" onclick="replaceText('nb_usuario', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Nombre de Usuario")"><i class="fa fa-user"></i></button>
+                        <button type="button" onclick="replaceText('codigo_control', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("RiesgoCreate084")"><i class="fa fa-id-badge"></i></button>
+                        <button type="button" onclick="replaceText('actividad/accionCorrectora', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage026")"><i class="fa fa-info"></i></button>
+                        <button type="button" onclick="replaceText('riesgo_control', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Riesgo")"><i class="fa fa-fire"></i></button>
+                        <button type="button" onclick="replaceText('sub_proceso_c', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("SP")"><i><b>SP</b></i></button>
+                        <button type="button" onclick="replaceText('proceso_c', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("P")"><i><b>P</b></i></button>
+                        <button type="button" onclick="replaceText('macro_proceso_c', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MP")"><i><b>MP</b></i></button>
+                        <button type="button" onclick="replaceText('nb_entidad', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Entidad")"><i class="fa fa-building"></i></button>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (id == 5)
+        {
+            <div class="row">
+                <div class="form-group ">
+                    <label class="control-label col-xs-3 col-md-2"></label>
+                    <div class="btn-group">
+                        <button type="button" onclick="replaceText('nb_usuario', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Nombre de Usuario")"><i class="fa fa-user"></i></button>
+                        <button type="button" onclick="replaceText('nb_entidad', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Entidad")"><i class="fa fa-building"></i></button>
+                        <button type="button" onclick="replaceText('cl_indicador', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage027")"><i class="fa fa-id-badge"></i></button>
+                        <button type="button" onclick="replaceText('nb_indicador', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage028")"><i class="fa fa-tag"></i></button>
+                        <button type="button" onclick="replaceText('ds_indicador', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage029")"><i class="fa fa-info"></i></button>
+                        <button type="button" onclick="replaceText('nb_area', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Area")"><i class="fa fa-group"></i></button>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (id == 6)
+        {
+            <div class="row">
+                <div class="form-group ">
+                    <label class="control-label col-xs-3 col-md-2"></label>
+                    <div class="btn-group">
+                        <button type="button" onclick="replaceText('nb_usuario', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Nombre de Usuario")"><i class="fa fa-user"></i></button>
+                        <button type="button" onclick="replaceText('nb_area', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Area")"><i class="fa fa-group"></i></button>
+                        <button type="button" onclick="replaceText('id_incidencia', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("ReporteIyPIndex002")"><i class="fa fa-circle-o"></i></button>
+                        <button type="button" onclick="replaceText('id_plan', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("ReporteIyPIndex002")"><i class="fa fa-id-badge"></i></button>
+                        <button type="button" onclick="replaceText('nb_plan', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("lyPlanesdeRemediacionCreate004")"><i class="fa fa-tag"></i></button>
+                        <button type="button" onclick="replaceText('ds_plan', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("ReporteIyPIndex007")"><i class="fa fa-info"></i></button>
+                        <button type="button" onclick="replaceText('fe_alta', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("BDEIIndex003")"><i class="fa fa-calendar"></i></button>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (id == 7)
+        {
+            <div class="row">
+                <div class="form-group ">
+                    <label class="control-label col-xs-3 col-md-2"></label>
+                    <div class="btn-group">
+                        <button type="button" onclick="replaceText('nb_usuario', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Nombre de Usuario")"><i class="fa fa-user"></i></button>
+                        <button type="button" onclick="replaceText('%lista_entidades%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage030")"><i class="fa fa-list-ol">Entidades</i></button>
+                        <button type="button" onclick="replaceText('%lista_macro_procesos%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage031")"><i class="fa fa-list-ol">Macro Procesos</i></button>
+                        <button type="button" onclick="replaceText('%lista_procesos%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage032")"><i class="fa fa-list-ol">Procesos</i></button>
+                        <button type="button" onclick="replaceText('%lista_sub_procesos%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage033")"><i class="fa fa-list-ol">Sub Procesos</i></button>
+                        <button type="button" onclick="replaceText('%lista_controles%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage034")"><i class="fa fa-list-ol">Controles</i></button>
+                        <button type="button" onclick="replaceText('%lista_indicadores%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage035")"><i class="fa fa-list-ol">Indicadores</i></button>
+                        <button type="button" onclick="replaceText('%lista_oficios%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage036")"><i class="fa fa-list-ol">Oficios</i></button>
+                        <button type="button" onclick="replaceText('%lista_informes%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage037")"><i class="fa fa-list-ol">Informes</i></button>
+                        <button type="button" onclick="replaceText('%lista_incidencias%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage038")"><i class="fa fa-list-ol">Incidencias</i></button>
+                        <button type="button" onclick="replaceText('%lista_planes%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage030")"><i class="fa fa-list-ol">Planes</i></button>
+                        <button type="button" onclick="replaceText('%lista_fichas%', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("MassiveNotificationWriteMessage030")"><i class="fa fa-list-ol">Fichas</i></button>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="row">
+            <div class="form-group ">
+                <label class="control-label col-xs-3 col-md-2"></label>
+
+                <div class="btn-group">
+                    <button type="button" onclick="insertTextAroundSelection('<b>','</b>',areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Negritas")"><i class="fa fa-bold"></i></button>
+                    <button type="button" onclick="insertTextAroundSelection('<i>','</i>',areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Cursiva")"><i class="fa fa-italic"></i></button>
+                    <button type="button" onclick="insertTextAroundSelection('<u>','</u>',areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Subrayar")"><i class="fa fa-underline"></i></button>
+                    <button type="button" onclick="replaceText('<br/>\n', areaId); RenderView();" class="btn btn-default" title="@Strings.getMSG("Salto de Línea")"><i class="fa fa-level-down"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+
+        </div>
+    </div>
+}

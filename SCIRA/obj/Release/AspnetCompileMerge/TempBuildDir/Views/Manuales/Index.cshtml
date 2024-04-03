@@ -1,0 +1,94 @@
+﻿@model IEnumerable<SCIRA.Models.c_contenido_manual>
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = Strings.getMSG("Menu094");
+}
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+
+<script>
+    function GetPDF(id) {
+        $("#menuModal .bodyContent").html('<span id="n"><embed src="@Url.Action("GetPDF","Manuales",null)/' + id + '" width="100%" height="700"></span>');
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ManualesEdit008")");
+
+        $("#menuModal").modal('show');
+    }
+
+    function GetPDFWSP(id) {
+        $("#menuModal .bodyContent").html('<span id="n"><embed src="@Url.Action("GetPDF","Manuales",null)?id=' + id + '&sp=1" width="100%" height="700"></span>');
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ManualesEdit008")");
+
+        $("#menuModal").modal('show');
+    }
+</script>
+
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink(Strings.getMSG("Agregar"), "Create", null, new { @class = "btn btn-default btn-sm" })
+</p>
+
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Strings.getMSG("ManualesIndex001")
+            </th>
+            <th style="white-space: nowrap">
+                @Strings.getMSG("lyPIncidenciasIndex002")
+            </th>
+            <th style="white-space: nowrap">
+                @Strings.getMSG("Clave")
+            </th>
+            <th style="white-space: nowrap">
+                @Strings.getMSG("NotificationEdit003")
+            </th>
+            <th width="120"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(item.c_nivel_manual.c_estructura_manual.cl_estructura_manual)
+                </td>
+                <td>
+                    @(item.c_nivel_manual.cl_nivel_manual + " - " + item.c_nivel_manual.nb_nivel_manual)
+                </td>
+                <td>
+                    @(item.cl_contenido_manual)
+                </td>
+                <td>
+                    @(item.ds_contenido_manual)
+                </td>
+                <td>
+                    <center>
+                        <a href="#" onclick="GetPDF(@item.id_contenido_manual)">
+                            <i class="fa fa-file-pdf-o" title="@Strings.getMSG("Ver PDF")"></i>
+                        </a>
+                        |
+                        <a href="#" onclick="GetPDFWSP(@item.id_contenido_manual)">
+                            <i class="fa fa-file-pdf-o" title="@Strings.getMSG("Ver PDF con sub Procesos")"></i>
+                        </a>
+                        |
+                        <a href="@Url.Action("Edit", new { id = item.id_contenido_manual })">
+                            <i class="glyphicon glyphicon-pencil" title="@Strings.getMSG("Editar")"></i>
+                        </a>
+                        @if (ViewBag.su == 1)
+                        {
+                            @:|
+                            <a href="@Url.Action("Delete", new { id = item.id_contenido_manual })">
+                                <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")"></i>
+                            </a>
+                        }
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

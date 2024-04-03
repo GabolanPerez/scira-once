@@ -1,0 +1,25 @@
+{
+  "RepName": "Reporte de Controles con Riesgo Residual",
+  "ColNames": [
+    "Entidad",
+    "Responsable Entidad",
+    "Macro Proceso",
+    "Responsable Macro Proceso",
+    "Proceso",
+    "Responsable Proceso",
+    "Sub Proceso",
+    "Responsable Sub Proceso",
+    "Riesgo",
+    "Evento de Riesgo",
+    "Control",
+    "Actividad de Control",
+    "Riesgo Inherente",
+    "Cobertura de Control",
+    "Riesgo Residual"
+  ],
+  "Rows": [],
+  "NoCols": 15,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

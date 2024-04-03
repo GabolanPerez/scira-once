@@ -1,0 +1,31 @@
+{
+  "RepName": "Reporte de Incidencias y Planes: MRyC",
+  "ColNames": [
+    "Ruta Riesgo",
+    "Código de Riesgo",
+    "Evento de Riesgo",
+    "Acción Correctora",
+    "Id de la Incidencia",
+    "Nivel de la Incidencia",
+    "Descripción de la Incidencia",
+    "Responsable de la Incidencia",
+    "Clasificación de la Incidencia",
+    "Requiere Plan de Remediación",
+    "Id del plan",
+    "Nombre del Plan",
+    "Descripción del Plan",
+    "Área Responsable",
+    "Responsable del Plan",
+    "Responsable del Seguimiento",
+    "Fecha de Alta",
+    "Fecha estimada de implantación",
+    "Fecha real de solución",
+    "Comentarios de Seguimiento",
+    "Fecha del Seguimiento"
+  ],
+  "Rows": [],
+  "NoCols": 21,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

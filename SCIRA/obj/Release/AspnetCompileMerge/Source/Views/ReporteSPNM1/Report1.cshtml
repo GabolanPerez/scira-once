@@ -1,0 +1,96 @@
+﻿@model IEnumerable<SCIRA.Models.c_nivel_normatividad>
+@using SCIRA.Utilidades
+
+
+<link href="~/Content/AnimacionCarga.css" rel="stylesheet" />
+
+<script>
+
+    function getReport(id) {
+
+        $("#contentO").hide();
+
+        $("body").addClass('loading');
+        debugger
+        $.ajax({
+            dataType: "html",
+            type: "get",
+            url: '@(Url.Action("Report2","ReporteSPNM1"))',
+            data: { id },
+            success: function (data) {
+                $("body").removeClass('loading');
+                $("#content").html(data);
+                $("#content").show();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                $("body").removeClass('loading');
+                $(".modalLoad").hide();
+                $("#contentO").show();
+                $("#content").hide();
+                toastr.error("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+            }
+        });
+    }
+
+
+</script>
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+<div id="contentO">
+    
+    <input type="button" class="btn btn-default" value="@Strings.getMSG("Atrás")" onclick="$('#content').show(); $('#content').hide();">
+
+    <table id="results" class="results table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.id_nivel_normatividad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.cl_nivel_normatividad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.nb_nivel_normatividad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.no_orden)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.id_normatividad)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id_nivel_normatividad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cl_nivel_normatividad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nb_nivel_normatividad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.no_orden)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id_normatividad)
+                    </td>
+                    <td>
+                        <center>
+                            <a onclick="getReport('@(item.id_nivel_normatividad)')">
+                                <i class="glyphicon glyphicon-list-alt" title="@Strings.getMSG("_Empty[1]")"></i>
+                            </a>
+                        </center>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div id="content"></div>

@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Carga Masiva de Macro Procesos";
+}
+<link href="~/Content/AnimacionCarga.css" rel="stylesheet" />
+<script>
+    $(document).ready(function () {
+        $("#archivo").change(function () {
+            var filename = $("#archivo").val();
+            $("#nb_archivo").val(filename);
+            if (filename !== "") {
+                $("#submit").removeAttr("disabled");
+            } else {
+                $("#submit").attr("disabled", "disabled");
+            }
+        });
+    });
+
+    function loading() {
+        deshabilitar();
+        $("body").addClass('loading');
+    }
+
+</script>
+
+<h2>Carga Masiva de MacroProcesos</h2>
+
+@using (Html.BeginForm("Upload", "MacroProceso", FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "loading()" }))
+{
+    <div class="form-horizontal well">
+        <h4>Seleccione el archivo de excel que desea cargar a la Base de Datos</h4>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">Formato de Macro Procesos</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        <input type="text" id="nb_archivo" class="form-control text-box single-line valid" readonly="readonly">
+                        <div class="input-group-btn">
+                            <label class="btn btn-default btn-file">
+                                Examinar <input type="file" id="archivo" name="archivo" style="display: none;">
+                            </label>
+                            <button type="reset" onclick="deshabilitar()" class="btn btn-default" title="Quitar archivo">
+                                <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" id="submit" value="Guardar" class="btn btn-primary" disabled="disabled"/>
+                    @Html.ActionLink("Regresar", "Index", "MacroProceso", new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    
+    </div>
+}
+

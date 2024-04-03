@@ -1,0 +1,1053 @@
+﻿@model SCIRA.ViewModels.AgregarControlViewModel
+@using System.Reflection;
+@using SCIRA.Models;
+@using SCIRA.Utilidades;
+
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    string aux;
+}
+
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<script src="~/Scripts/sharedScripts.js"></script>
+<script type="text/javascript" src="~/Scripts/multiple-select.js"></script>
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/MSInitialize.js"></script>
+
+
+<script src="~/Scripts/dropzone.js"></script>
+<script src="~/Scripts/dropzone-config.js"></script>
+<link href="~/Content/dropzone.css" rel="stylesheet" />
+
+<script type="text/javascript">
+    function printFile(nombre, id) {
+        if (extension(nombre) == "pdf") {
+
+        } else {
+            var html = 'No se puede mostrar vista previa.';
+            $("#" + id).html(html);
+        }
+    }
+
+    function extension(filename) {
+        return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
+    }
+
+    $(document).ready(function () {
+        printFile("@(Model.c_sub_proceso.nb_archivo_flujo)", "f");
+        printFile("@(Model.c_sub_proceso.nb_archivo_manual)", "n");
+
+    });
+
+    $(document).ready(function () {
+
+        if ($("#tiene_accion_correctora").is(':checked')) {
+            $("#accion_correctora").html('<a href="#plan"  class="sig_boton" data-toggle="tab" id="accion_correctora_boton"><h4>Acción Correctora</h4></a>');
+            $("#accion_correctora").removeClass("disabled");
+            $("#controlTab").html('<a><h4>Control</h4></a>');
+            $("#controlTab").addClass("disabled");
+            $('#respControl').appendTo('#vacio2');
+            $('#AcCr').appendTo('#Contenedor2');
+            $('#accion_correctora_boton').trigger('click');
+        }
+
+        @{
+            Type m_tipo = null;
+            PropertyInfo[] m_propiedades = null;
+            m_tipo = Model.GetType();
+            m_propiedades = m_tipo.GetProperties();
+            for (int i = 0; i < 20; i++)
+            {
+                if (ViewBag.CamposExtraControl[i].es_visible)
+                {
+                    var propiedad = m_propiedades.First(p => p.Name == "campo" + String.Format("{0:00}", i + 1)); ;
+                    string valor = "";
+                    try
+                    {
+                        valor = propiedad.GetValue(Model,null).ToString();
+                    }
+                    catch
+                    {
+                        valor = "";
+                    }
+                    @:$("#campo@(String.Format("{0:00}", i+1))").val("@Html.Raw(valor)");
+                }
+
+            }
+
+            m_tipo = Model.k_riesgo.GetType();
+            m_propiedades = m_tipo.GetProperties();
+
+            for (int i = 0; i < 20; i++)
+            {
+                if (ViewBag.CamposExtraRiesgo[i].es_visible)
+                {
+                    var propiedad = m_propiedades.Where(p => p.Name == "campo" + string.Format("{0:00}", i + 1)).First();
+                    string valor = "";
+                    try
+                    {
+                        valor = propiedad.GetValue(Model.k_riesgo, null).ToString();
+
+                    }
+                    catch
+                    {
+                        valor = "";
+                    }
+                    @:$("#campor@(String.Format("{0:00}", i+1))").val("@Html.Raw(valor)");
+                }
+
+            }
+        }
+
+
+        $(function () {
+            $('#AcCr .toggle').click(function () {
+                setTimeout(function () {
+                    if ($("#tiene_accion_correctora").is(':checked')) {
+                        $("#accion_correctora").html('<a href="#plan" data-toggle="tab" id="accion_correctora_boton"><h4>@Strings.getMSG("RiesgoCreate079")</h4></a>');
+                        $("#accion_correctora").removeClass("disabled");
+                        $("#controlTab").html('<a><h4>@Strings.getMSG("Control")</h4></a>')
+                        $("#controlTab").addClass("disabled");
+                        $('#AcCr').appendTo('#Contenedor2');
+                        $('#respControl').appendTo('#vacio2');
+                        $('#accion_correctora_boton').trigger('click');
+                    } else {
+                        $("#accion_correctora").html('<a><h4>@Strings.getMSG("RiesgoCreate079")</h4></a>');
+                        $("#accion_correctora").addClass("disabled");
+                        $("#controlTab").html('<a href="#control" data-toggle="tab" id="controlTab_boton"><h4>@Strings.getMSG("Control")</h4></a>')
+                        $("#controlTab").removeClass("disabled");
+                        $('#AcCr').appendTo('#Contenedor1');
+                        $('#respControl').appendTo('#vacio');
+                        $('#controlTab_boton').trigger('click');
+                    }
+                }, 250);
+            })
+        })
+
+
+        setTimeout(function () {
+            if ($("#requiere_plan").is(':checked')) {
+                $("#justificacion").hide();
+            } else {
+                $("#justificacion").show();
+            }
+        }, 250);
+    });
+
+    $(function () {
+        $('#RPR .toggle').click(function () {
+            setTimeout(function () {
+                if ($("#requiere_plan").is(':checked')) {
+                    $("#justificacion").hide();
+                } else {
+                    $("#justificacion").show();
+                }
+            }, 250);
+        })
+    });
+</script>
+
+<h3>@Strings.getMSG("RiesgoCreate096"): @Model.k_riesgo.nb_riesgo</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <ul class="nav nav-tabs">
+        <li><a href="#generales" data-toggle="tab"><h4>@Strings.getMSG("RiesgoCreate078")</h4></a></li>
+        <li><a href="#riesgo" data-toggle="tab"><h4>@Strings.getMSG("Riesgo")</h4></a></li>
+        <li class="active" id="controlTab"><a href="#control" data-toggle="tab"><h4>@Strings.getMSG("Control")</h4></a></li>
+        <li class="disabled" id="accion_correctora"><a><h4>@Strings.getMSG("RiesgoCreate079")</h4></a></li>
+        <li><a href="#flujo" data-toggle="tab"><h4>@Strings.getMSG("RiesgoCreate080")</h4></a></li>
+        <li><a href="#narrativa" data-toggle="tab"><h4>@Strings.getMSG("RiesgoCreate081")</h4></a></li>
+        <li><a href="#manual" data-toggle="tab"><h4>@Strings.getMSG("RiesgoCreate082")</h4></a></li>
+        <li><a href="#diagrama" data-toggle="tab"><h4>@Strings.getMSG("RiesgoCreate097")</h4></a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+
+        <div class="tab-pane fade" id="generales">
+            <br />
+            <div class="form-horizontal well">
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Entidad")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.cl_entidad + " - " + Model.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.nb_entidad)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("MP")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.c_sub_proceso.c_proceso.c_macro_proceso.cl_macro_proceso + " - " + Model.c_sub_proceso.c_proceso.c_macro_proceso.nb_macro_proceso)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("P")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.c_sub_proceso.c_proceso.cl_proceso + " - " + Model.c_sub_proceso.c_proceso.nb_proceso)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("SP")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.c_sub_proceso.cl_sub_proceso + " - " + Model.c_sub_proceso.nb_sub_proceso)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control" rows="5" disabled="">@(Model.c_sub_proceso.ds_sub_proceso)
+                    </textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate011")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.c_sub_proceso.cl_manual)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate009")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.c_sub_proceso.cl_sp_anterior)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate010")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.c_sub_proceso.cl_sp_siguiente)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate013")</label>
+                    <div class="col-md-10">
+                        @if (Model.c_sub_proceso.id_tipologia_sub_proceso != null)
+                        {
+                            <input class="form-control" type="text" value="@(Model.c_sub_proceso.c_tipologia_sub_proceso.nb_tipologia_sub_proceso)" disabled="">
+                        }
+                        else
+                        {
+                            <input class="form-control" type="text" value="Sin Tipología" disabled="">
+                        }
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("SubProcesoCreate016")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.c_sub_proceso.ds_areas_involucradas)" disabled="">
+                    </div>
+                </div>
+
+                @{
+                    List<c_meta_campo> lista = ViewBag.CamposExtraSubProceso;
+
+                    m_tipo = null;
+                    m_propiedades = null;
+                    m_tipo = Model.c_sub_proceso.GetType();
+                    m_propiedades = m_tipo.GetProperties();
+
+                    for (int i = 0; i < 20; i++)
+                    {
+                        var item = lista.ElementAt(i);
+                        if (item.es_visible)
+                        {
+                            var prop = m_propiedades.Where(p => p.Name == string.Format("campo{0:00}", i + 1)).First();
+
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2">@item.nb_campo</label>
+                                <div class="col-md-10">
+
+                                    @if (item.cl_tipo_campo == "t")
+                                    {
+                                        <input class="form-control" type="text" value="@prop.GetValue(Model.c_sub_proceso,null)" disabled>
+                                    }
+                                    else if (item.cl_tipo_campo == "a")
+                                    {
+                                        <textarea class="form-control" rows="5" disabled>@prop.GetValue(Model.c_sub_proceso, null)</textarea>
+                                    }
+                                    else if (item.cl_tipo_campo == "n")
+                                    {
+
+                                        <input class="form-control" type="number" value="@prop.GetValue(Model.c_sub_proceso,null)" disabled>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @Html.ActionLink(Strings.getMSG("Regresar"), "Controles", "Riesgo", new { id = Model.k_riesgo.id_riesgo }, new { @class = "btn btn-default btn-sm" })
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="riesgo">
+            <br />
+            <div class="form-horizontal well">
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Riesgo")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.cl_riesgo + " - " + Model.k_riesgo.nb_riesgo)" disabled="">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("RiesgoRiesgos003")</label>
+                    <div class="col-md-10">
+                        <textarea class="form-control" rows="5" disabled="">@(Model.k_riesgo.evento)
+                    </textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Menu018")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.c_tipo_riesgo.c_categoria_riesgo.cl_categoria_riesgo + " - " + Model.k_riesgo.c_tipo_riesgo.c_categoria_riesgo.nb_categoria_riesgo)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Menu019")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.c_tipo_riesgo.cl_tipo_riesgo + " - " + Model.k_riesgo.c_tipo_riesgo.nb_tipo_riesgo)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Menu020")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.c_clase_tipologia_riesgo.cl_clase_tipologia_riesgo+ " - " + Model.k_riesgo.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.c_clase_tipologia_riesgo.nb_clase_tipologia_riesgo)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Menu021")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.cl_sub_clase_tipologia_riesgo + " - " + Model.k_riesgo.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.nb_sub_clase_tipologia_riesgo)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Menu022")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.c_tipologia_riesgo.cl_tipologia_riesgo + " - " + Model.k_riesgo.c_tipologia_riesgo.nb_tipologia_riesgo)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Menu023")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.c_probabilidad_ocurrencia.cl_probabilidad_ocurrencia+ " - " + Model.k_riesgo.c_probabilidad_ocurrencia.nb_probabilidad_ocurrencia)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Menu024")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.c_tipo_impacto.cl_tipo_impacto + " - " + Model.k_riesgo.c_tipo_impacto.nb_tipo_impacto)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate003")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.c_magnitud_impacto.cl_magnitud_impacto + " - " + Model.k_riesgo.c_magnitud_impacto.nb_magnitud_impacto)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("Menu026")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.criticidad)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate004")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.cl_riesgo + " - " + Model.k_riesgo.nb_riesgo)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate004")</label>
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.k_riesgo.tiene_afectacion_contable, new { htmlAttributes = new { @disabled = "" } })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate005")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.supuesto_normativo)" disabled="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate098")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="text" value="@(Model.k_riesgo.euc)" disabled="">
+                    </div>
+                </div>
+                <hr />
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">@Strings.getMSG("RiesgoCreate095")</label>
+                    <div class="col-md-10">
+                        <input class="form-control" value="@(Model.k_riesgo.es_riesgo_operativo ? @Strings.getMSG("AjustesMailIndex015"):@Strings.getMSG("AjustesMailIndex016"))" readonly />
+                    </div>
+                </div>
+                @if (Model.k_riesgo.es_riesgo_operativo)
+                {
+                    <div class="form-group">
+                        <label class="control-label col-md-2">@Strings.getMSG("P")</label>
+                        <div class="col-md-10">
+                            <input class="form-control" value="@(Model.k_riesgo.c_proceso_riesgo_operacional.nb_proceso_riesgo_operacional)" readonly />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">@Strings.getMSG("BDEIDelete003")</label>
+                        <div class="col-md-10">
+                            <input class="form-control" value="@(Model.k_riesgo.c_sub_tipo_producto_riesgo_operacional.nb_sub_tipo_producto_riesgo_operacional)" readonly />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">@Strings.getMSG("SubTipoRiesgoOperacionalIndex001")</label>
+                        <div class="col-md-10">
+                            <input class="form-control" value="@(Model.k_riesgo.c_sub_tipo_riesgo_operacional.nb_sub_tipo_riesgo_operacional)" readonly />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">@Strings.getMSG("BDEICreate042")</label>
+                        <div class="col-md-10">
+                            <input class="form-control" value="@(Model.k_riesgo.c_linea_negocio_riesgo_operacional.nb_linea_negocio_riesgo_operacional)" readonly />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">@Strings.getMSG("Menu053")</label>
+                        <div class="col-md-10">
+                            <input class="form-control" value="@(Model.k_riesgo.c_frecuencia_riesgo_operacional.nb_frecuencia_riesgo_operacional)" readonly />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">@Strings.getMSG("Menu054")</label>
+                        <div class="col-md-10">
+                            <input class="form-control" value="@(Model.k_riesgo.c_impacto_riesgo_operacional.nb_impacto_riesgo_operacional)" readonly />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">@Strings.getMSG("Menu152")</label>
+                        <div class="col-md-10">
+                            <input class="form-control" value="@(SCIRA.Utilidades.Utilidades.Criticidad(Model.k_riesgo.id_frecuencia_riesgo_operacional??0,Model.k_riesgo.id_impacto_riesgo_operacional??0))" readonly />
+                        </div>
+                    </div>
+                }
+                <hr />
+
+                @for (int i = 0; i < 20; i++)//Revisamos cada campo para saber cuales y de que forma se mostraran en pantalla
+                {
+                    var campo = ViewBag.CamposExtraRiesgo[i];
+                    if (campo.es_visible)
+                    {
+                        <div class="form-group">
+                            <label class="control-label col-md-2">@campo.nb_campo</label>
+                            <div class="col-md-10">
+
+                                @if (campo.cl_tipo_campo == "t")
+                                {
+                                    <input class="form-control" id="campor@(string.Format("{0:00}",i+1))" type="text" value="" disabled>
+                                }
+                                else if (campo.cl_tipo_campo == "a")
+                                {
+                                    <textarea class="form-control" id="campor@(string.Format("{0:00}",i+1))" rows="5" disabled></textarea>
+                                }
+                                else if (campo.cl_tipo_campo == "n")
+                                {
+
+                                    <input class="form-control" id="campor@(string.Format("{0:00}",i+1))" type="number" value="" disabled>
+                                }
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                    }
+                }
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @Html.ActionLink(Strings.getMSG("Regresar"), "Controles", "Riesgo", new { id = Model.k_riesgo.id_riesgo }, new { @class = "btn btn-default btn-sm" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade active in" id="control">
+            <div class="form-horizontal well">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.id_sub_proceso)
+                @Html.HiddenFor(model => model.k_riesgo.id_riesgo)
+                <br />
+
+                <div class="row" id="Contenedor1">
+                    <div class="form-group" id="AcCr">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ControlDelete002")</label>
+                        <div class="col-xs-3 col-md-2">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.tiene_accion_correctora, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RiesgoCreate062")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RiesgoCreate084")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.relacion_control, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RiesgoCreate049")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.relacion_control, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RiesgoCreate085")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.TextAreaFor(model => model.actividad_control, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate050") })
+                            @Html.ValidationMessageFor(model => model.actividad_control, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RiesgoCreate086")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.evidencia_control, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RiesgoCreate051")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.evidencia_control, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RiesgoCreate087")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_ejecutor", null, Strings.getMSG("RiesgoCreate041"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate052") })
+                            @Html.ValidationMessageFor(model => model.id_ejecutor, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div id="vacio">
+                    <div class="row" id="respControl">
+                        <div class="form-group has-error">
+                            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RiesgoCreate088")</label>
+                            <div class="col-xs-6 col-md-5">
+                                @Html.DropDownList("id_responsable", null, Strings.getMSG("RiesgoCreate063"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate053") })
+                                @Html.ValidationMessageFor(model => model.id_responsable, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row class1">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ControlDelete001")</label>
+                        <div class="col-xs-3 col-md-2">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.es_control_clave, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RiesgoCreate054")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu030")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_grado_cobertura", null, Strings.getMSG("RiesgoCreate043"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate055") })
+                            @Html.ValidationMessageFor(model => model.id_grado_cobertura, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu053")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_frecuencia_control", null, Strings.getMSG("RiesgoCreate044"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate056") })
+                            @Html.ValidationMessageFor(model => model.id_frecuencia_control, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu032")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_naturaleza_control", null, Strings.getMSG("RiesgoCreate045"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate057") })
+                            @Html.ValidationMessageFor(model => model.id_naturaleza_control, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RiesgoCreate090")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.nb_aplicacion, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RiesgoCreate058")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.nb_aplicacion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu033")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_tipologia_control", null, Strings.getMSG("RiesgoCreate046"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate059") })
+                            @Html.ValidationMessageFor(model => model.id_tipologia_control, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu034")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_categoria_control", null, Strings.getMSG("RiesgoCreate047"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate060") })
+                            @Html.ValidationMessageFor(model => model.id_categoria_control, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu035")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_tipo_evidencia", null, Strings.getMSG("RiesgoCreate048"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate061") })
+                            @Html.ValidationMessageFor(model => model.id_tipo_evidencia, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu037")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.ListBox("id_aseveracion", (MultiSelectList)ViewBag.aseveracionesMSL, htmlAttributes: new { @class = "form-control selectpicker" })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RiesgoCreate099")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @for (int i = 0; i < 20; i++)//Revisamos cada campo para saber cuales y de que forma se mostraran en pantalla
+                {
+                    var campo = ViewBag.CamposExtraControl[i];
+                    if (campo.es_visible)
+                    {
+                        <div class="row">
+                            <div class="form-group @if (campo.es_requerido) {@(aux="has-error"); } ">
+                                <label class="control-label col-xs-3 col-md-2">@campo.nb_campo</label>
+                                <div class="col-xs-6 col-md-5">
+
+                                    @if (campo.cl_tipo_campo == "t")
+                                    {
+                                        <div class="input-group">
+                                            <input class="form-control text-box single-line" style=" @(campo.cl_color_borde == "0" ? "" : "border-color:" + campo.cl_color_borde+";") @(campo.cl_color_fondo == "0" ? "" : "background-color:" + campo.cl_color_fondo+";") " data-val="true" data-val-length="Este campo puede tener hasta @campo.longitud_campo caracteres." data-val-length-max="@campo.longitud_campo" @(campo.es_requerido ? "data-val-required=\"Este campo es un obligtorio.\"" : "") id="campo@(string.Format("{0:00}",i+1))" name="campo@(string.Format("{0:00}",i+1))" type="text" value="">
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@(campo.msg_ayuda)." data-original-title="@Strings.getMSG("Atencion")">
+                                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    }
+                                    else if (campo.cl_tipo_campo == "a")
+                                    {
+                                        <textarea class="form-control" style=" @(campo.cl_color_borde == "0" ? "" : "border-color:" + campo.cl_color_borde+";") @(campo.cl_color_fondo == "0" ? "" : "background-color:" + campo.cl_color_fondo+";") " cols="20" data-content="@(campo.msg_ayuda)." data-toggle="popover" data-trigger="hover" data-val="true" data-val-length="La descripción puede tener hasta @campo.longitud_campo caracteres." data-val-length-max="@campo.longitud_campo" @(campo.es_requerido ? "data-val-required=\"Este campo es un obligtorio.\"" : "") id="campo@(string.Format("{0:00}",i+1))" name="campo@(string.Format("{0:00}",i+1))" rows="5" title="" data-original-title="@Strings.getMSG("Atencion")"></textarea>
+                                    }
+                                    else if (campo.cl_tipo_campo == "n")
+                                    {
+                                        <div class="input-group">
+                                            <input class="form-control text-box single-line" style=" @(campo.cl_color_borde == "0" ? "" : "border-color:" + campo.cl_color_borde+";") @(campo.cl_color_fondo == "0" ? "" : "background-color:" + campo.cl_color_fondo+";") " data-val="true" data-val-number="Este campo debe ser numérico" @(campo.es_requerido ? "data-val-required=\"Este campo es un obligtorio.\"" : "") id="campo@(string.Format("{0:00}",i+1))" name="campo@(string.Format("{0:00}",i+1))" type="number" value="">
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-default" title="" data-toggle="popover" data-trigger="hover" data-content="@(campo.msg_ayuda)." data-original-title="@Strings.getMSG("Atencion")">
+                                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    }
+                                    @if (ViewBag.MCError[i] != "" && ViewBag.MCError[i] != null)
+                                    {
+                                        <span class="field-validation-valid text-danger">@ViewBag.MCError[i]</span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                    }
+                }
+
+
+                <br />
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit" />
+                            @Html.ActionLink(Strings.getMSG("Regresar"), "Controles", "Riesgo", new { id = Model.k_riesgo.id_riesgo }, new { @class = "btn btn-default btn-sm" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade disabled" id="plan">
+            <div class="form-horizontal well">
+                <br />
+
+                <div class="row" id="Contenedor2"></div>
+
+                <div id="vacio2"></div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RiesgoCreate079")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.TextAreaFor(model => model.accion_correctora, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RiesgoCreate070") })
+                            @Html.ValidationMessageFor(model => model.accion_correctora, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+                <h4>@Strings.getMSG("RiesgoCreate067")</h4>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("RiesgoCreate074")</label>
+
+                        <label class="control-label col-xs-offset-5 col-md-offset-5 col-xs-2 col-md-1">@Strings.getMSG("Responsable")</label>
+                        <div class="col-xs-3 col-md-3 has-error">
+                            @Html.DropDownList("id_responsable_i", null, Strings.getMSG("lyPCreate009"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate065") })
+                            @Html.ValidationMessageFor(model => model.id_responsable_i, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-xs-offset-1 col-md-offset-1 col-xs-4 col-md-4 has-error">
+                            @Html.TextAreaFor(model => model.ds_incidencia, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RiesgoCreate075") })
+                            @Html.ValidationMessageFor(model => model.ds_incidencia, "", new { @class = "text-danger" })
+                        </div>
+
+                        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("Menu063")</label>
+                        <div class="col-xs-3 col-md-3 has-error">
+                            @Html.DropDownList("id_clasificacion_incidencia", null, Strings.getMSG("RiesgoCreate073"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate072") })
+                            @Html.ValidationMessageFor(model => model.id_clasificacion_incidencia, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group" id="RPR">
+                        <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("RiesgoCreate068")</label>
+                        <div class="col-xs-2 col-md-2">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.requiere_plan, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140", @id = "requiere_plan" + ViewBag.Origen } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RiesgoCreate076")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="justificacion" hidden>
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("RiesgoCreate069")</label>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-xs-offset-1 col-md-offset-1 col-xs-4 col-md-4 has-error">
+                                @Html.TextAreaFor(model => model.js_incidencia, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RiesgoCreate077") })
+                                @Html.ValidationMessageFor(model => model.js_incidencia, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit2" />
+                            @Html.ActionLink(Strings.getMSG("Regresar"), "Controles", "Riesgo", new { id = Model.k_riesgo.id_riesgo }, new { @class = "btn btn-default btn-sm" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="flujo">
+            <div class="form-horizontal well">
+                <div class="form-group">
+                    <br /><br /><br />
+                    @if (Model.c_sub_proceso.nb_archivo_flujo != null)
+                    {
+                        <h4 style="text-align:center">
+                            <b>@Model.c_sub_proceso.nb_archivo_flujo</b>
+                            <br><br>
+                            <span id="f"><embed src="@Url.Action("DisplayPDF","FlujoNarrativa",new { id = Model.id_sub_proceso, fon = "f"})" width="80%" height="400"></span>
+                            <br><br>
+                            <a href="@Url.Action("DescargaFlujo", "FlujoNarrativa", new { id = Model.c_sub_proceso.id_sub_proceso })">
+                                <i class="fa fa-download fa-2x"> </i>  @Strings.getMSG("RiesgoCreate100")
+                            </a>
+                        </h4>
+                    }
+                    else
+                    {
+                        <h4 style="text-align:center">@Strings.getMSG("RiesgoCreate092")</h4>
+                    }
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @Html.ActionLink(Strings.getMSG("Regresar"), "Controles", "Riesgo", new { id = Model.k_riesgo.id_riesgo }, new { @class = "btn btn-default btn-sm" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="narrativa">
+            <div class="form-horizontal well">
+                <div class="form-group">
+                    <br /><br /><br />
+                    @if (Model.c_sub_proceso.nb_archivo_manual != null)
+                    {
+                        <h4 style="text-align:center">
+                            <b>@Model.c_sub_proceso.nb_archivo_manual</b>
+                            <br><br>
+                            <span id="n"><embed src="@Url.Action("DisplayPDF","FlujoNarrativa",new { id = Model.id_sub_proceso, fon = "n"})" width="80%" height="400"></span>
+                            <br><br>
+                            <a href="@Url.Action("DescargaNarrativa", "FlujoNarrativa", new { id = Model.c_sub_proceso.id_sub_proceso })">
+                                <i class="fa fa-download fa-2x"> </i>  @Strings.getMSG("RiesgoCreate101")
+                            </a>
+                        </h4>
+                    }
+                    else
+                    {
+                        <h4 style="text-align:center">@Strings.getMSG("RiesgoCreate093")</h4>
+                    }
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @Html.ActionLink(Strings.getMSG("Regresar"), "Controles", "Riesgo", new { id = Model.k_riesgo.id_riesgo }, new { @class = "btn btn-default btn-sm" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="manual">
+            <div class="form-horizontal well">
+                <div class="form-group">
+                    <br /><br /><br />
+                    @if (Model.c_sub_proceso.c_contenido_manual.Count > 0)//Si existe algun manual ligado
+                    {
+                        if (Model.c_sub_proceso.c_contenido_manual.Count > 1)
+                        {
+                            foreach (var manual in Model.c_sub_proceso.c_contenido_manual)
+                            {
+                                <h4 style="text-align:center">
+                                    <b>@manual.cl_contenido_manual</b>
+                                    <br><br>
+                                    <span id="mn"><embed src="@Url.Action("GetPDFManual","Riesgo",new { id = manual.id_contenido_manual, sp = 1})" width="80%" height="400"></span>
+                                    <br>
+                                </h4>
+                            }
+                        }
+                        else
+                        {
+                            var manual = Model.c_sub_proceso.c_contenido_manual.First();
+                            <h4 style="text-align:center">
+                                <b>@manual.cl_contenido_manual</b>
+                                <br><br>
+                                <span id="mn"><embed src="@Url.Action("GetPDFManual","Riesgo",new { id = manual.id_contenido_manual, sp = 1})" width="80%" height="400"></span>
+                                <br>
+                            </h4>
+                        }
+
+                    }
+                    else
+                    {
+                        <h4 style="text-align:center">@Strings.getMSG("RiesgoCreate091")</h4>
+                    }
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @Html.ActionLink(Strings.getMSG("Regresar"), "Riesgos", "Riesgo", new { id = Model.id_sub_proceso }, new { @class = "btn btn-default btn-sm" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="diagrama">
+            <div class="form-horizontal well">
+                <div class="form-group">
+
+                    @using Syncfusion.EJ2.Diagrams;
+                    @using Syncfusion.EJ2.Navigations;
+                    @if (ViewBag.JsonData != "")//Si existe diagrama ligado
+                    {
+                        <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css" />
+
+                        <!-- Syncfusion Essential JS 2 Scripts -->
+                        <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js"></script>
+
+                        <div class="control-section">
+                            <div id="diagram-space" class="sb-mobile-diagram">
+                                @(Html.EJS().Diagram("containerD").Width("100%").Height("850px").Render())
+                                @*.ContextMenuClick("contextMenuClick").ContextMenuOpen("contextMenuOpen")*@
+                            </div>
+                        </div>
+
+                        <script>
+                            @{
+                                var JsonData = Html.Raw(ViewBag.JsonData.Replace("\\", "\\\\").Replace("'", "\\'"));
+                            }
+
+                            var diagramAsString = '@(JsonData)';
+
+                            $(document).ready(function () {
+                                diagram = document.getElementById("containerD").ej2_instances[0];
+                                if (diagramAsString !== "") {
+                                    diagram.loadDiagram(diagramAsString);
+                                }
+                                for (var i = 0; i < diagram.nodes.length; i++) {
+                                    node = diagram.nodes[i];
+                                    node.constraints &= ~(ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.Rotate | ej.diagrams.NodeConstraints.Drag);
+                                    node.constraints |= ej.diagrams.NodeConstraints.ReadOnly;
+                                    diagram.dataBind();
+                                }
+                                for (var i = 0; i < diagram.connectors.length; i++) {
+                                    connector = diagram.connectors[i];
+                                    connector.constraints &= ~(ej.diagrams.ConnectorConstraints.DragSourceEnd
+                                        | ej.diagrams.ConnectorConstraints.DragTargetEnd | ej.diagrams.ConnectorConstraints.DragSegmentThumb);
+                                    connector.constraints |= ej.diagrams.ConnectorConstraints.ReadOnly;
+                                    diagram.dataBind();
+                                }
+                            });
+
+
+
+                        </script>
+
+                    }
+                    else
+                    {
+                        <br /><br /><br />
+                        <h4 style="text-align:center">@Strings.getMSG("RiesgoCreate102")</h4>
+                    }
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @Html.ActionLink(Strings.getMSG("Regresar"), "Riesgos", "Riesgo", new { id = Model.id_sub_proceso }, new { @class = "btn btn-default btn-sm" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <select multiple id="files" name="files" hidden>
+    </select>
+}
+
+<h4>@Strings.getMSG("RevisionControlCreate007")</h4>
+
+<div class="row">
+    <div class="col-md-12">
+        <form action="@Url.Action("Upload","Archivos")"
+              class="dropzone"
+              data-target="files"
+              id="fileUploader"></form>
+        <!--data-target es el elemento select multiple a donde se agregaran los ids de los archivos elegidos-->
+        <!--el id siempre debera ser fileUploader-->
+    </div>
+</div>

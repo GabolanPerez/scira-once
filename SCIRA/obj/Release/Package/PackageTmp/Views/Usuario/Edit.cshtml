@@ -1,0 +1,370 @@
+﻿@model SCIRA.Models.c_usuario
+@using SCIRA.Seguridad
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+
+    bool thisUser = ((IdentityPersonalizado)HttpContext.Current.User.Identity).Id_usuario == Model.id_usuario;
+    string msg = thisUser ? @Strings.getMSG("UsuarioCreate061") : @Strings.getMSG("UsuarioCreate023");
+
+    bool usingActiveD;
+}
+@{
+    ViewBag.Title = "Edit";
+}
+
+@try
+{
+    usingActiveD = ((IdentityPersonalizado)User.Identity).activeD;
+}
+catch
+{
+    usingActiveD = false;
+}
+
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<script src="~/Scripts/OrgChart.js"></script>
+<h2>@Strings.getMSG("Editar")</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#pes1" id="pes1b" data-toggle="tab" onclick="$('#chartContainer').hide();"><h4>@Strings.getMSG("UsuarioCreate011")<span id="ind1"></span> </h4></a></li>
+    <li><a href="#pes2" data-toggle="tab" id="pes2b" onclick="$('#chartContainer').show();"><h4>@Strings.getMSG("UsuarioCreate012")<span id="ind2"></span></h4></a></li>
+</ul>
+
+<script>
+
+    $(document).ready(function () {
+        trigg("pes2b");
+
+        setTimeout(
+            function () {
+                trigg("pes1b");
+            }, 3000);
+
+
+        @if(ViewBag.puesto != null)
+        {
+            @:$("#id_puesto").val(@ViewBag.puesto);
+            @:$("#puesto").val('@ViewBag.nbPuesto');
+        }
+
+    });
+
+    function trigg(elemento) {
+        $("#" + elemento).trigger('click');
+    }
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="pes1">
+
+            <div class="form-horizontal well">
+                <h4>@Strings.getMSG("Usuario")</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.id_usuario)
+                @Html.HiddenFor(model => model.esta_activo)
+                @Html.HiddenFor(model => model.id_estatus_usuario)
+                @if (thisUser)
+                {
+                    <input type="text" id="extr" name="e_mail_principal" value="@Model.e_mail_principal" hidden />
+                }
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2"></label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.ValidationMessageFor(model => model.es_super_usuario, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.cl_usuario, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate035")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.cl_usuario, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Nombre")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.nb_usuario, new { htmlAttributes = new { @class = "form-control", @autocomplete = "new-password" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate021")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.nb_usuario, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" @(usingActiveD ? "hidden":"")>
+                    <div class="form-group has-error" >
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate016")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", @type = "password", @autocomplete = "new-password" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate022")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate017")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @if (thisUser)
+                                {
+                                    <input type="text" readonly value="@Model.e_mail_principal" class="form-control">
+                                }
+                                else
+                                {
+                                    @Html.EditorFor(model => model.e_mail_principal, new { htmlAttributes = new { @class = "form-control" } });
+                                }
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@msg">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.e_mail_principal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate018")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.e_mail_alterno, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate024")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.e_mail_alterno, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate019")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.no_telefono, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate025")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.no_telefono, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                @*<div class="row">
+                        <div class="form-group">
+                            <label class="control-label col-xs-3 col-md-2">¿Está activo?</label>
+                            <div class="col-xs-3 col-md-2">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.esta_activo, new { htmlAttributes = new { data_toggle = "toggle", data_on = "Activo", data_off = "Inactivo", data_width = "140" } })
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default" title="Atención" data-toggle="popover" data-trigger="hover" data-content="Un usuario inactivo, no podrá acceder al Sistema.">
+                                            <i class="glyphicon glyphicon-question-sign"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>*@
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate007")</label>
+                        <div class="col-xs-3 col-md-2">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.es_super_usuario, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("UsuarioIndex004"), data_off = Strings.getMSG("UsuarioIndex005"), data_width = "140" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate026")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate008")</label>
+                        <div class="col-xs-3 col-md-2">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.solo_lectura, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("UsuarioIndex004"), data_off = Strings.getMSG("UsuarioIndex005"), data_width = "140" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate027")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioIndex002")</label>
+                        <div class="col-xs-3 col-md-2">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.es_auditor, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("UsuarioIndex004"), data_off = Strings.getMSG("UsuarioIndex005"), data_width = "140" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate036")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate009")</label>
+                        <div class="col-xs-3 col-md-2">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.es_auditor_admin, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("UsuarioIndex004"), data_off = Strings.getMSG("UsuarioIndex005"), data_width = "140" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate037")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <span style="color:darkred">@Strings.getMSG("UsuarioCreate010")</span>
+
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EntidadIndex001")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="puesto" readonly />
+                                <input type="hidden" class="form-control" id="id_puesto" name="id_puesto" hidden="hidden" />
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate028")" onclick="trigg('pes2b')">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Area")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_area", null, htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("UsuarioCreate029") })
+                            @Html.ValidationMessageFor(model => model.id_area, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                            <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" />
+                            @Html.ActionLink(Strings.getMSG("Regresar"), "Index", "Usuario", new { @class = "btn btn-default" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="pes2">
+
+        </div>
+        <div id="chartContainer" class="jumbotron well">
+            <div style="width:100%; height:700px;" id="orgchart"></div>
+        </div>
+
+
+
+        <script type="text/javascript">
+         var chart;
+            $(document).ready(function () {
+
+
+                var EncData2 = @Html.Raw(ViewBag.JsonData);
+
+                chart = new OrgChart(document.getElementById("orgchart"), {
+                    nodeMouseClickBehaviour: BALKANGraph.action.none,
+                    onClick: onChartClick,
+                    template: "ula",
+                    nodeBinding: {
+                        field_0: "Nombre",
+                        field_1: "Clave",
+                    },
+                    nodes: EncData2
+                });
+            });
+
+
+        function onChartClick(sender, node) {
+            var id = node['id'];
+            var nb_p = node['Nombre'];
+
+            $("#puesto").val(nb_p);
+            $("#id_puesto").val(id);
+
+            trigg("pes1b");
+
+            toastr.info("@Strings.getMSG("UsuarioCreate038") " + nb_p);
+        }
+        </script>
+
+
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

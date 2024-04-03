@@ -1,0 +1,63 @@
+{
+  "RepName": "Reporte de Certificación de Entidades",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "05 - FISOFO, S.A. DE C.V. SOFOM ER",
+      "Berenice Serrano Jiménez",
+      "Subdirección de Contraloría Normativa",
+      "A - 2001",
+      "Me he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.AB",
+      "A",
+      "Si"
+    ],
+    [
+      "01 - CONSUBANCO, S.A. Institución de Banca Múltiple",
+      "Berenice Serrano Jiménez",
+      "Subdirección de Contraloría Normativa",
+      "B - 1991",
+      "NMe he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.AB",
+      "pp",
+      "No"
+    ],
+    [
+      "1  - Banco X A",
+      "Sergio",
+      "Dirección Comercial Red Sucursales",
+      "B - 1991",
+      "NMe he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.AB",
+      "CCC",
+      "Si"
+    ],
+    [
+      "1  - Banco X A",
+      "Sergio",
+      "Dirección Comercial Red Sucursales",
+      "B - 1991",
+      "NMe he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.AB",
+      "CCC",
+      "Si"
+    ],
+    [
+      "1  - Banco X A",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "B - 1991",
+      "NMe he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.AB",
+      null,
+      "Si"
+    ]
+  ],
+  "NoCols": 7,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

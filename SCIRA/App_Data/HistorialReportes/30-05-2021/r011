@@ -1,0 +1,33 @@
+{
+  "RepName": "Reporte de Indicadores",
+  "ColNames": [
+    "Entidad",
+    "Responsable Entidad",
+    "Clave",
+    "Nombre",
+    "Descripción",
+    "Descripción Numerador",
+    "Descripción Denominador",
+    "Frecuencia",
+    "Unidad",
+    "Control Asociado",
+    "Peso",
+    "Umbral (0.0)",
+    "Umbral (0.0 - 5.0)",
+    "Umbral (5.0 - 7.5)",
+    "Umbral (7.5 - 10.0)",
+    "Activo",
+    "Área",
+    "Responsable",
+    "Periodo Indicador",
+    "Numerador",
+    "Denominador",
+    "Medición",
+    "Calificación"
+  ],
+  "Rows": [],
+  "NoCols": 22,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

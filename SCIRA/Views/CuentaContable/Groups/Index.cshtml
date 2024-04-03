@@ -1,0 +1,98 @@
+﻿@model IEnumerable<SCIRA.Models.c_grupo_cuenta_contable>
+@using SCIRA.Utilidades
+@using SCIRA.Models
+@using System.Reflection;
+@{
+    c_entidad en = ViewBag.en;
+}
+
+<script>
+    var createURL = '@(Url.Action("CreateGroup","CuentaContable") + "/" + en.id_entidad)';
+    var editURL = '@(Url.Action("EditGroup","CuentaContable"))';
+    var deleteURL = '@(Url.Action("DeleteGroup","CuentaContable"))';
+    var accountsURL = '@(Url.Action("Accounts","CuentaContable"))';
+
+    function deleteRequest(id,name) {
+        var options = {
+            title: "@Strings.getMSG("ActividadCosteoIndex008")" + name +" @Strings.getMSG("ActividadCosteoIndex011")",
+            action: "deleteConfirmed(" + id + ")"
+        }
+        confirmationModal.initModal(options);
+    }
+
+    function deleteConfirmed(id) {
+        executePost(
+                deleteURL + "/" +id,
+                null,
+                "deleteSuccess(" + id + ")",
+                "deleteError()"
+            );
+    }
+
+    $(document).ready(function () {
+        menuModal.setTitle('@Strings.getMSG("CuentaContableCreate007") @en.nb_entidad');
+        initTables("#menuModal");
+    });
+
+    function deleteSuccess(id) {
+        $(".RL2" + id).remove();
+    }
+
+    function deleteError() {
+        toastr.error("@Strings.getMSG("ActividadCosteoIndex009")");
+    }
+</script>
+
+
+
+<input type="button" class="btn btn-default" value="@Strings.getMSG("Agregar")" onclick="menuModal.bodyLoad(createURL)" />
+<br /><br />
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Strings.getMSG("Clave")
+            </th>
+            <th>
+                @Strings.getMSG("Nombre")
+            </th>
+            <th>
+                @Strings.getMSG("CuentaContableCreate008")
+            </th>
+            <th width="90px"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr class="RL2@(item.id_grupo_cuenta_contable)">
+            <td>
+                @item.cl_grupo_cuenta_contable
+            </td>
+            <td>
+                @item.nb_grupo_cuenta_contable
+            </td>
+            <td>
+                @(item.c_cuenta_contable.Where(c => (c.esta_activo??false)).Count())
+            </td>
+            <td>
+                <center>
+                    <a onclick="menuModal.bodyLoad(editURL + '/@item.id_grupo_cuenta_contable')">
+                        <i class="fa fa-pencil" title="@Strings.getMSG("Editar")"></i>
+                    </a>
+                    |
+                    <a onclick="deleteRequest(@item.id_grupo_cuenta_contable, '@item.cl_grupo_cuenta_contable - @item.nb_grupo_cuenta_contable')">
+                        <i class="fa fa-trash" title="@Strings.getMSG("Borrar")"></i>
+                    </a>
+                    |
+                    <a onclick="menuModal.bodyLoad(accountsURL + '/@item.id_grupo_cuenta_contable')">
+                        <i class="fa fa-sitemap" title="@Strings.getMSG("Detalle")"></i>
+                    </a>
+                </center>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

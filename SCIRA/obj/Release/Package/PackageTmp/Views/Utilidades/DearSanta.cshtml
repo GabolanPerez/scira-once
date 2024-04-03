@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SCIRA.ViewModels.ParticipanteDearSanta>
+
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Participantes";
+}
+
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">
+                Familia
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Amigo Secreto
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.familia
+                </td>
+                <td>
+                    @item.nombre
+                </td>
+                <td>
+                    @item.correo
+                </td>
+                <td>
+                    @item.amigoSecreto
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

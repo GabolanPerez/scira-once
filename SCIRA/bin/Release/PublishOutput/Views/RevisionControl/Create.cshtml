@@ -1,0 +1,1865 @@
+﻿@model SCIRA.Models.k_revision_control
+@using SCIRA.Models;
+@using SCIRA.Utilidades
+
+@{
+    ViewBag.Title = "Revisión del Control";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    k_control control = ViewBag.control;
+
+    var entidad = control.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad;
+    var mp = control.c_sub_proceso.c_proceso.c_macro_proceso;
+    var pr = control.c_sub_proceso.c_proceso;
+    var sp = control.c_sub_proceso;
+    var riesgo = control.k_riesgo.First();
+    var responsable = control.c_usuario1;
+    var ejecutor = control.c_usuario;
+    var area = responsable.c_area;
+    var aseveraciones = control.c_aseveracion.ToList();
+    var rrData = Utilidades.RRData(control);
+
+    var infoCEC = Utilidades.infoCamposExtra("k_control", 20);
+    var icec1 = infoCEC.ElementAt(0);
+    var icec2 = infoCEC.ElementAt(1);
+    var icec3 = infoCEC.ElementAt(2);
+
+    string asev = "";
+
+
+
+    foreach (var ase in aseveraciones)
+    {
+        asev += ase.cl_aseveracion + " " + ase.nb_aseveracion + "\n";
+    }
+}
+
+
+
+
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/MSInitialize.js"></script>
+
+
+
+<script src="~/Scripts/dropzone.js"></script>
+<script src="~/Scripts/dropzone-config.js"></script>
+<link href="~/Content/dropzone.css" rel="stylesheet" />
+
+<script>
+    var nInput = 0;
+    var InputCount = 0;
+    var nPrueba = 0;
+    var PruebaCount = 0;
+    var $options;
+
+
+    $("document").ready(function () {
+        $options = $("#id_cc1 > option").sort().clone();
+    });
+
+
+    function addInput() {
+
+        $("#deleteInput").removeAttr("hidden");
+
+        var input = $("<div/>");
+        var inputTitle = $("<h4/>");
+        var delButton = '<button type="button" class="btn btn-default" onclick="delInput(' + nInput + '); "><i class="fa fa-times" title="@Strings.getMSG("RevisionControlCreate123")"></i></button>';
+
+        input.addClass("row");
+        input.attr("id", "I" + nInput);
+
+        inputTitle.addClass("iTitle");
+
+        //nombre
+        var nombre = $('<div class="form-group col-md-3"/>');
+        var inputName = $('<div class="col-md-12"/>');
+        inputName.append('<input type="text" name="nb_input[]" class="form-control" value="" />');
+
+        nombre.append('<label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Nombre")</label>');
+        nombre.append(inputName);
+
+
+        //descripción
+        var desc = $('<div class="form-group col-md-3"/>');
+        var inputDesc = $('<div class="col-md-12"/>');
+        inputDesc.append('<textarea rows="5" name="ds_input[]" class="form-control"></textarea>');
+
+        desc.append('<label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>');
+        desc.append(inputDesc);
+
+
+        //trazabilidad
+        var traz = $('<div class="form-group col-md-3"/>');
+        var inputTraz = $('<div class="col-md-12"/>');
+        inputTraz.append('<textarea rows="5" name="tr_input[]" class="form-control"></textarea>');
+
+        traz.append('<label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate117")</label>');
+        traz.append(inputTraz);
+
+        //observaciones
+        var observaciones = $('<div class="form-group col-md-3"/>');
+        var inputObservaciones = $('<div class="col-md-12"/>');
+        inputObservaciones.append('<textarea rows="5" name="obs_input[]" class="form-control"></textarea>');
+
+        observaciones.append('<label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>');
+        observaciones.append(inputObservaciones);
+
+        //calificacion
+        var calif = $('<div class="form-group col-md-3"/>');
+        var inputCalif = $('<div class="col-md-12"/>');
+        var selectCalif = $('<select class="form-control" data-content="@Strings.getMSG("RevisionControlCreate020")" data-toggle="popover" data-trigger="hover"  name="calif_input[]" title="" data-original-title="@Strings.getMSG("Atencion")"/>');
+        selectCalif.append($options.clone());
+        inputCalif.append(selectCalif);
+
+
+        calif.append('<label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>');
+        calif.append(inputCalif);
+
+
+
+
+        input.append(inputTitle);
+        input.append(delButton);
+        input.append(nombre);
+        input.append(desc);
+        input.append(traz);
+        input.append(observaciones);
+        input.append(calif);
+
+
+        $("#inputs").append(input);
+
+        nInput++;
+
+        assignInputName();
+    }
+
+    function delInput(id) {
+        $("#I" + id).remove();
+
+        assignInputName();
+    }
+
+
+    function assignInputName() {
+        InputCount = 0;
+
+        $(".iTitle").each(function () {
+            InputCount++;
+            var $this = $(this);
+
+            $this.text("Input " + InputCount);
+        });
+    }
+
+    function assignPruebaName() {
+        PruebaCount = 0;
+
+        $(".pTitle").each(function () {
+            PruebaCount++;
+            var $this = $(this);
+
+            $this.text("Prueba " + PruebaCount);
+        });
+    }
+
+
+    function addPrueba() {
+
+        $("#deletePrueba").removeAttr("hidden");
+
+        var prueba = $("<div/>");
+        var pruebaTitle = $("<h4/>");
+        var delButton = '<button type="button" class="btn btn-default" onclick="delPrueba(' + nPrueba + '); "><i class="fa fa-times" title="@Strings.getMSG("RevisionControlCreate123")"></i></button>';
+
+        prueba.addClass("row");
+        prueba.attr("id", "P" + nPrueba);
+
+        pruebaTitle.addClass("pTitle");
+
+        //descripción
+        var desc = $('<div class="form-group col-md-4"/>');
+        var pruebaDesc = $('<div class="col-md-12"/>');
+        pruebaDesc.append('<textarea rows="5" name="ds_pp[]" class="form-control"></textarea>');
+
+        desc.append('<label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>');
+        desc.append(pruebaDesc);
+
+        //observaciones
+        var observaciones = $('<div class="form-group col-md-4"/>');
+        var inputObservaciones = $('<div class="col-md-12"/>');
+        inputObservaciones.append('<textarea rows="5" name="obs_pp[]" class="form-control"></textarea>');
+
+        observaciones.append('<label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>');
+        observaciones.append(inputObservaciones);
+
+        //calificacion
+        var calif = $('<div class="form-group col-md-4"/>');
+        var pruebaCalif = $('<div class="col-md-12"/>');
+        var selectCalif = $('<select class="form-control" data-content="@Strings.getMSG("RevisionControlCreate020")" data-toggle="popover" data-trigger="hover"  name="calif_pp[]" title="" data-original-title="@Strings.getMSG("Atencion")"/>');
+        selectCalif.append($options.clone());
+        pruebaCalif.append(selectCalif);
+
+
+        calif.append('<label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>');
+        calif.append(pruebaCalif);
+
+
+
+
+        prueba.append(pruebaTitle);
+        prueba.append(delButton);
+        prueba.append(desc);
+        prueba.append(observaciones);
+        prueba.append(calif);
+
+
+        $("#pruebas").append(prueba);
+
+        nPrueba++;
+
+        assignPruebaName();
+    }
+
+    function delPrueba(id) {
+        $("#P" + id).remove();
+
+        assignPruebaName();
+    }
+
+    $(function () {
+        $('#cg_calificacion_toggle').change(function () {
+            var val = $(this).prop('checked');
+            if (val) {
+                $('#cg_calificacion').val("1");
+            } else {
+                $('#cg_calificacion').val("0");
+            }
+        });
+    });
+
+    $(function () {
+        $('.panel-heading').click(function () {
+            var $this = $(this);
+            setTimeout(function () {
+                var offset2 = $this.offset().top;
+                $('html,body').animate({
+                    scrollTop: offset2 - 100
+                }, 100);
+            }, 500);
+        });
+    });
+</script>
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { onsubmit = "loading()" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal well">
+        <h4>@Strings.getMSG("RevisionControlCreate111") @ViewBag.nb_control - @control.relacion_control</h4>
+        <hr />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_control)
+
+        <div id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse0">
+                            @Strings.getMSG("UsuarioCreate011")
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse0" class="panel-collapse collapse">
+                    <div class="panel-body well">
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("Entidad")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate124")</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" value="@entidad.cl_entidad - @entidad.nb_entidad" readonly />
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_entidad, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate018") })
+                                    @Html.ValidationMessageFor(model => model.dg_entidad, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_obs_1, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.dg_obs_1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc1, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Datos Generales campo 1-->
+
+                        <div class="row">
+
+
+                            <h4>@Strings.getMSG("MP")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate125")</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" value="@mp.cl_macro_proceso - @mp.nb_macro_proceso" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_marco_proceso, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate126") })
+                                    @Html.ValidationMessageFor(model => model.dg_marco_proceso, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_obs_2, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.dg_obs_2, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc2, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc2, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Datos Generales campo 2-->
+
+                        <div class="row">
+
+
+                            <h4>@Strings.getMSG("P")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate127")</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" value="@pr.cl_proceso - @pr.nb_proceso" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_proceso, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate022") })
+                                    @Html.ValidationMessageFor(model => model.dg_proceso, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_obs_3, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.dg_obs_3, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc3, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc3, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Datos Generales campo 3-->
+
+                        <div class="row">
+
+
+                            <h4>@Strings.getMSG("SP")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate128")</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" value="@sp.cl_sub_proceso - @sp.nb_sub_proceso" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_sub_proceso, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate023") })
+                                    @Html.ValidationMessageFor(model => model.dg_sub_proceso, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_obs_4, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.dg_obs_4, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc4, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc4, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Datos Generales campo 4-->
+
+                        <div class="row">
+                            <h4>@Strings.getMSG("RevisionControlCreate015")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate129")</label>
+                                <div class="col-md-12">
+                                    <textarea class="form-control" rows="5" readonly>@sp.ds_sub_proceso </textarea>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_tarea, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate024") })
+                                    @Html.ValidationMessageFor(model => model.dg_tarea, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_obs_5, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.dg_obs_5, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc5, (IEnumerable<SelectListItem>)ViewBag.califList, "-Califique este Punto-", htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc5, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Datos Generales campo 5-->
+
+                        <div class="row">
+
+
+                            <h4>@Strings.getMSG("RevisionControlCreate017")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.dg_nb_responsable_revision, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate025") })
+                                    @Html.ValidationMessageFor(model => model.dg_nb_responsable_revision, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div> <!--Datos Generales campo 6-->
+                    </div>
+                </div>
+            </div> <!--Panel de datos Generales-->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                            @Strings.getMSG("RevisionControlCreate001")
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body well">
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("CertificaciónIndex002")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" value="@riesgo.nb_riesgo" readonly />
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Riesgo campo 1-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("EventoRiesgoIndex001")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate130")</label>
+                                <div class="col-md-12">
+                                    <textarea rows="5" class="form-control" readonly>@riesgo.evento</textarea>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rr_evento_riesgo, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate027") })
+                                    @Html.ValidationMessageFor(model => model.rr_evento_riesgo, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rr_obs_1, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rr_obs_1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc6, (IEnumerable<SelectListItem>)ViewBag.califList, "-Califique este Punto-", htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc6, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Riesgo campo 2-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("Menu025")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate131")</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" value="@riesgo.c_magnitud_impacto.cl_magnitud_impacto - @riesgo.c_magnitud_impacto.nb_magnitud_impacto" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rr_magnitud_impacto, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate029") })
+                                    @Html.ValidationMessageFor(model => model.rr_magnitud_impacto, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rr_obs_2, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rr_obs_2, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc7, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc7, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Riesgo campo 3-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("Menu023")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate132")</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" value="@riesgo.c_probabilidad_ocurrencia.cl_probabilidad_ocurrencia - @riesgo.c_probabilidad_ocurrencia.nb_probabilidad_ocurrencia" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rr_probabilidad_ocurrencia, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate031") })
+                                    @Html.ValidationMessageFor(model => model.rr_probabilidad_ocurrencia, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rr_obs_3, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rr_obs_3, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc8, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc8, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Riesgo campo 4-->
+
+
+                    </div>
+                </div>
+            </div> <!--Panel de Resumen del Riesgo-->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                            @Strings.getMSG("RevisionControlCreate002")
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body well">
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("CertificaciónIndex001")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" value="@control.relacion_control" readonly />
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 1-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate033")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate032")</label>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" value="@sp.cl_manual" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_codigo_manual, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate034") })
+                                    @Html.ValidationMessageFor(model => model.rc_codigo_manual, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_1, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc9, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc9, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 2-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("ControlDelete003")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate035")</label>
+                                <div class="col-md-12">
+                                    <textarea rows="5" class="form-control" readonly>@control.actividad_control</textarea>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_actividad_control, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate036") })
+                                    @Html.ValidationMessageFor(model => model.rc_actividad_control, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_2, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_2, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc10, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc10, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 3-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate037")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate038")</label>
+                                <div class="col-md-12">
+                                    <textarea rows="5" class="form-control" readonly>@control.evidencia_control</textarea>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_evidencia_control, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate039") })
+                                    @Html.ValidationMessageFor(model => model.rc_evidencia_control, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_3, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_3, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc40, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc40, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo añadido Evidencia del Control-->
+
+                        <div class="row">
+
+                            <h4>@icec1.nb_campo y @icec2.nb_campo</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate042")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@control.campo01" readonly />
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea rows="5" class="form-control" readonly>@control.campo02</textarea>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_ds_control, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate043") + icec1.nb_campo + Strings.getMSG("RevisionControlCreate134") + icec2.nb_campo + "." })
+                                    @Html.ValidationMessageFor(model => model.rc_ds_control, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_4, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_4, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc11, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc11, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 4-->
+
+                        <div class="row">
+
+                            <h4>@icec3.nb_campo</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate041")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@control.campo03" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_dir_general, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate043") + icec3.nb_campo + "." })
+                                    @Html.ValidationMessageFor(model => model.rc_dir_general, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_5, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_5, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc12, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc12, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 5-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate044")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate045")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@area.cl_area - @area.nb_area" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_area, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate046") })
+                                    @Html.ValidationMessageFor(model => model.rc_area, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_6, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_6, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc13, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc13, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 6-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RiesgoCreate088")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate047")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@responsable.nb_usuario" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_responsable, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate048") })
+                                    @Html.ValidationMessageFor(model => model.rc_responsable, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_7, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_7, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc14, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc14, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 7-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate049")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate050")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@Utilidades.PuestoUsuario(responsable.id_usuario)" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_puesto_responsable, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate051") })
+                                    @Html.ValidationMessageFor(model => model.rc_puesto_responsable, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_8, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_8, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc15, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc15, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 8-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RiesgoCreate087")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate052")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@ejecutor.nb_usuario" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_ejecutor, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate053") })
+                                    @Html.ValidationMessageFor(model => model.rc_ejecutor, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_9, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_9, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc16, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc16, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 9-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate054")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate055")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@Utilidades.PuestoUsuario(ejecutor.id_usuario)" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_puesto_ejecutor, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate135") })
+                                    @Html.ValidationMessageFor(model => model.rc_puesto_ejecutor, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_10, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_10, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc17, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc17, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 10-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("Menu033")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate057")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@control.c_tipologia_control.cl_tipologia_control - @control.c_tipologia_control.nb_tipologia_control" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_tipologia_control_rc, (IEnumerable<SelectListItem>)ViewBag.tipologiaCL, Strings.getMSG("RevisionControlCreate058"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate059") })
+                                    @Html.ValidationMessageFor(model => model.id_tipologia_control_rc, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_11, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_11, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc18, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc18, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 11-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("Menu031")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate060")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@control.c_frecuencia_control.cl_frecuencia_control - @control.c_frecuencia_control.nb_frecuencia_control" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_frecuencia_control_rc, (IEnumerable<SelectListItem>)ViewBag.frecuenciaCL, Strings.getMSG("RevisionControlCreate061"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate062") })
+                                    @Html.ValidationMessageFor(model => model.id_frecuencia_control_rc, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_12, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_12, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc19, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc19, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 12-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("Menu037")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate063")</label>
+                                <div class="col-md-12 mb-4">
+                                    <textarea class="form-control" readonly>@Html.Raw(asev)</textarea>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    <div class="input-group col-md-12">
+                                        @Html.ListBox("id_aseveracion", (MultiSelectList)ViewBag.aseveracionesMSL, htmlAttributes: new { @class = "form-control selectpicker" })
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RevisionControlCreate065")">
+                                                <i class="glyphicon glyphicon-question-sign"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_13, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_13, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc20, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc20, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 13-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("ControlDelete001")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate066")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@(control.es_control_clave ? Strings.getMSG("AjustesMailIndex015") : Strings.getMSG("AjustesMailIndex016"))" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.EditorFor(model => model.rc_control_clave, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140" } })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_14, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_14, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc21, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc21, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 14-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate067")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate068")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="N/A" readonly />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.EditorFor(model => model.rc_control_dependiente, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140" } })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.rc_obs_15, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.rc_obs_15, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc22, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc22, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Resumen del Control campo 14-->
+
+                    </div>
+                </div>
+            </div> <!--Panel de Resumen del Control -->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                            @Strings.getMSG("RevisionControlCreate003")
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body well">
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate069")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate070")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_informacion_inputs, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate071") })
+                                    @Html.ValidationMessageFor(model => model.edc_informacion_inputs, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_1, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc23, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc23, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 1-->
+
+                        <input type="button" class="btn btn-default" value="@Strings.getMSG("Agregar Input")" onclick="addInput()" />
+
+                        <div id="inputs"></div>
+
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("Menu032")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate072")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@control.c_naturaleza_control.cl_naturaleza_control - @control.c_naturaleza_control.nb_naturaleza_control" readonly />
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_naturaleza_control_edc, (IEnumerable<SelectListItem>)ViewBag.naturalezaCL, Strings.getMSG("RevisionControlCreate074"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate073") })
+                                    @Html.ValidationMessageFor(model => model.id_naturaleza_control_edc, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_2, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_2, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc24, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc24, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 2-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("Menu033")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate057")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@control.c_tipologia_control.cl_tipologia_control - @control.c_tipologia_control.nb_tipologia_control" readonly />
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_tipologia_control_edc, (IEnumerable<SelectListItem>)ViewBag.tipologiaCL, Strings.getMSG("RevisionControlCreate058"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate076") })
+                                    @Html.ValidationMessageFor(model => model.id_tipologia_control_edc, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_3, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_3, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc25, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc25, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 3-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("Menu035")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate077")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@control.c_tipo_evidencia.cl_tipo_evidencia - @control.c_tipo_evidencia.nb_tipo_evidencia" readonly />
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_tipo_evidencia_control_edc, (IEnumerable<SelectListItem>)ViewBag.tipoEvidenciaCL, Strings.getMSG("RevisionControlCreate058"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate137") })
+                                    @Html.ValidationMessageFor(model => model.id_tipo_evidencia_control_edc, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_4, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_4, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc26, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc26, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 4-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("Menu034")</h4>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-md-12">@Strings.getMSG("RevisionControlCreate078")</label>
+                                <div class="col-md-12 mb-4">
+                                    <input class="form-control" value="@control.c_categoria_control.cl_categoria_control - @control.c_categoria_control.nb_categoria_control" readonly />
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_categoría_control_edc, (IEnumerable<SelectListItem>)ViewBag.categoriaCL, Strings.getMSG("RevisionControlCreate058"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate080") })
+                                    @Html.ValidationMessageFor(model => model.id_categoría_control_edc, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_5, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_5, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc27, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc27, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 5-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate081")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-6 col-md-6">@Strings.getMSG("SubProcesoCreate018")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_proc_cert, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate082") })
+                                    @Html.ValidationMessageFor(model => model.edc_proc_cert, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_6, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_6, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-3">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc28, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc28, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 6-->
+
+                        <h3>@Strings.getMSG("RevisionControlCreate084")</h3>
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("ReporteRevisionControlIndex025")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-6 col-md-6">@Strings.getMSG("SubProcesoCreate018")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_fc1, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate086") })
+                                    @Html.ValidationMessageFor(model => model.edc_fc1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_7, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_7, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc29, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc29, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 7-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("ReporteRevisionControlIndex026")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-6 col-md-6">@Strings.getMSG("SubProcesoCreate018")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_fc2, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate088") })
+                                    @Html.ValidationMessageFor(model => model.edc_fc2, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_8, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_8, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc30, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc30, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 8-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("ReporteRevisionControlIndex027")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-6 col-md-6">@Strings.getMSG("SubProcesoCreate018")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_fc3, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate090") })
+                                    @Html.ValidationMessageFor(model => model.edc_fc3, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_9, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_9, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc31, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc31, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 9-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("ReporteRevisionControlIndex028")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-6 col-md-6">@Strings.getMSG("SubProcesoCreate018")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_fc4, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate092") })
+                                    @Html.ValidationMessageFor(model => model.edc_fc4, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_10, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_10, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc32, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc32, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 10-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("ReporteRevisionControlIndex029")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-6 col-md-6">@Strings.getMSG("SubProcesoCreate018")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_fc5, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate094") })
+                                    @Html.ValidationMessageFor(model => model.edc_fc5, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_11, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_11, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc33, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc33, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 11-->
+
+                        <h3>@Strings.getMSG("RevisionControlCreate096")</h3>
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate095")</h4>
+
+                            <div class="form-group  col-md-6">
+                                <input type="text" value="@(rrData[0] ?? "N/A")" class="form-control" readonly />
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 12-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate097")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.EditorFor(model => model.edc_diseño_efectivo, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("AjustesMailIndex015"), data_off = Strings.getMSG("AjustesMailIndex016"), data_width = "140" } })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_12, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_12, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc34, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc34, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 13-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate098")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_efectividad, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate099") })
+                                    @Html.ValidationMessageFor(model => model.edc_efectividad, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.edc_obs_13, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.edc_obs_13, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc35, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc35, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación del Diseño del Control campo 14-->
+
+                    </div>
+                </div>
+            </div> <!--Panel de Evaluación del Diseño del Control -->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                            @Strings.getMSG("RevisionControlCreate100")
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body well">
+
+                        <h4>@Strings.getMSG("RevisionControlCreate101")</h4>
+                        <input type="button" class="btn btn-default" value="@Strings.getMSG("RevisionControlCreate102")" onclick="addPrueba()" />
+
+                        <div id="pruebas"></div>
+
+
+
+
+                        <h3>@Strings.getMSG("RevisionControlCreate096")</h3>
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate103")</h4>
+
+                            <div class="form-group  col-md-6">
+                                <input type="text" value="@(rrData[1] ?? "N/A")" class="form-control" readonly />
+                            </div>
+                        </div> <!--Evaluación de la eficacia operativa del Control campo 3-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate104")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate009")</label>
+                                <div class="col-md-12">
+                                    @Html.EditorFor(model => model.eeo_diseño_efectivo, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("UsuarioIndex004"), data_off = Strings.getMSG("UsuarioIndex005"), data_width = "140" } })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.eeo_obs_1, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.eeo_obs_1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc38, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc38, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación de la eficacia operativa del Control campo 4-->
+
+                        <div class="row">
+
+                            <h4>@Strings.getMSG("RevisionControlCreate105")</h4>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.eeo_efectividad, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate106") })
+                                    @Html.ValidationMessageFor(model => model.eeo_efectividad, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                                <div class="col-md-12">
+                                    @Html.TextAreaFor(model => model.eeo_obs_2, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                    @Html.ValidationMessageFor(model => model.eeo_obs_2, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group  col-md-4">
+                                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("EvaluacionIndicadorEvaluaciones003")</label>
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(model => model.id_cc39, (IEnumerable<SelectListItem>)ViewBag.califList, Strings.getMSG("RevisionControlCreate012"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate020") })
+                                    @Html.ValidationMessageFor(model => model.id_cc39, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div> <!--Evaluación de la eficacia operativa del Control campo 5-->
+
+                    </div>
+                </div>
+            </div> <!--Panel de Evaluación de la Eficacia Operativa del Control -->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                            @Strings.getMSG("RevisionControlCreate005")
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body well">
+
+                        <div class="row col-md-4">
+                            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate096")</label>
+                            <div class="form-group  col-md-12">
+                                @Html.TextAreaFor(model => model.cg_conclusion, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate107") })
+                                @Html.ValidationMessageFor(model => model.cg_conclusion, "", new { @class = "text-danger" })
+                            </div>
+                        </div> <!--Conclusión General 1-->
+
+                        <div class="form-group col-md-4">
+                            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("RevisionControlCreate010")</label>
+                            <div class="col-md-12">
+                                @Html.TextAreaFor(model => model.cg_obs_1, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate019") })
+                                @Html.ValidationMessageFor(model => model.cg_obs_1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group  col-md-4">
+                            <label class="control-label col-xs-6 col-md-6">@Strings.getMSG("CalificacionRevisionDelete002")</label>
+                            <div class="col-md-12">
+
+                                <div class="form-group  col-md-12">
+                                    <div class="col-md-12">
+                                        @Html.DropDownListFor(model => model.id_calificacion_revision, (IEnumerable<SelectListItem>)ViewBag.CalificacionRevision, Strings.getMSG("RevisionControlCreate108"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate109") })
+                                        @Html.ValidationMessageFor(model => model.id_calificacion_revision, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> <!--Panel de Conclusiones-->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                            @Strings.getMSG("RevisionControlCreate006")
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div class="panel-body well">
+
+                        <div class="row col-md-8">
+                            <div class="form-group  col-md-12">
+                                @Html.TextAreaFor(model => model.cg_comentarios_revision, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RevisionControlCreate110") })
+                                @Html.ValidationMessageFor(model => model.cg_comentarios_revision, "", new { @class = "text-danger" })
+                            </div>
+                        </div> <!--Comentarios de Revisión 1-->
+                    </div>
+                </div>
+            </div> <!--Panel de Comentarios de Revisión-->
+
+        </div>
+
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Revisiones", "RevisionControl", new { id = control.id_control }, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    <select multiple id="files" name="files" hidden>
+    </select>
+}
+
+
+<h4>@Strings.getMSG("RevisionControlCreate007")</h4>
+
+<div class="row">
+    <div class="col-md-12">
+        <form action="@Url.Action("Upload","Archivos")"
+              class="dropzone"
+              data-target="files"
+              id="fileUploader"></form>
+        <!--data-target es el elemento select multiple a donde se agregaran los ids de los archivos elegidos-->
+        <!--el id siempre debera ser fileUploader-->
+    </div>
+</div>
+
+

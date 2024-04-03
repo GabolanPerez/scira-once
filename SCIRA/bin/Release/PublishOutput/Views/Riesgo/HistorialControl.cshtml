@@ -1,0 +1,440 @@
+﻿@model IEnumerable<SCIRA.Models.r_control>
+@using SCIRA.Models
+@using System.Reflection
+@using SCIRA.Utilidades
+@{
+    SICIEntities db = new SICIEntities();
+    int ncambios = Model.Count();
+    var control = db.k_control.Find(Model.First().id_control);
+    var controlA = Model.First();
+    ViewBag.Title = "Historial del Control" + control.relacion_control;
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+
+    List<c_meta_campo> camposExtra = ViewBag.CamposExtraControl;
+
+    Type m_tipo = null;
+    PropertyInfo[] m_propiedades = null;
+    PropertyInfo[] m_propiedades_a = null;
+}
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/RiesgoResidual.css" rel="stylesheet" />
+
+<script>
+    function sleep(milliseconds) {
+        var start = new Date().getTime();
+        for (var i = 0; i < 1e7; i++) {
+            if ((new Date().getTime() - start) > milliseconds) {
+                break;
+            }
+        }
+    }
+</script>
+
+<h2>@Strings.getMSG("RiesgoHistorial006") @control.relacion_control</h2>
+<div>
+    @Html.ActionLink(Strings.getMSG("Regresar"), "Controles", "Riesgo", new { id = control.k_riesgo.First().id_riesgo }, new { @class = "btn btn-default" })
+</div>
+<br />
+<br />
+<br />
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#pes1" data-toggle="tab"><h4>@Strings.getMSG("RiesgoHistorial001")</h4></a></li>
+    <li><a href="#pes2" data-toggle="tab"><h4>@Strings.getMSG("HistorialReportesIndex003")</h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+
+
+    <div class="tab-pane fade active in" id="pes1">
+        <div id="accordion">
+
+            @for (int i = 0; i < Model.Count(); i++)
+            {
+                var registro = Model.ElementAt(i);
+                r_control anterior;
+                if (i + 1 != Model.Count())
+                {
+                    anterior = Model.ElementAt(i + 1);
+                }
+                else
+                {
+                    anterior = registro;
+                }
+                bool MG = registro.k_control.c_sub_proceso.c_proceso.c_macro_proceso.cl_macro_proceso.Substring(0, 2) == "MG";
+                bool AC = registro.tiene_accion_correctora;
+
+                <div class="card" id="11" w-75>
+                    <div class="card-header" id="@registro.id_registro_control">
+                        <h5>
+                            <button id="ps@(registro.id_registro_control)" class="btn btn-default collapsed" data-toggle="collapse" data-target="#dt@(registro.id_registro_control)" aria-expanded="false" aria-controls="dt@(registro.id_registro_control)" style="display: block; width: 100%;">
+                                Modificado por: @registro.c_usuario2.nb_usuario el @registro.fe_modificacion.ToString()
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="dt@(registro.id_registro_control)" class="collapse" aria-labelledby="@registro.c_usuario2.nb_usuario" data-parent="#accordion">
+                        <div class="card-body">
+                            <table class="table table-bordered table-hover table-responsive table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>@Strings.getMSG("Campo")</th>
+                                        <th>@Strings.getMSG("RiesgoResidualConfigIndex030")</th>
+                                        <th>@Strings.getMSG("RiesgoHistorial004")</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (!AC)
+                                    {
+                                        <tr>
+                                            <td>@Strings.getMSG("RiesgoCreate084")</td>
+                                            <td>@registro.relacion_control</td>
+                                            <td>@(registro.relacion_control != anterior.relacion_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("RiesgoCreate085")</td>
+                                            <td>@registro.actividad_control</td>
+                                            <td>@(registro.actividad_control != anterior.actividad_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("RevisionControlCreate037")</td>
+                                            <td>@registro.evidencia_control</td>
+                                            <td>@(registro.evidencia_control != anterior.evidencia_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                    }
+                                    @if (!MG && !AC)
+                                    {
+
+                                        <tr>
+                                            <td>@Strings.getMSG("RiesgoCreate087")</td>
+                                            <td>@registro.c_usuario.nb_usuario</td>
+
+                                            <td>@(registro.c_usuario.id_usuario != anterior.c_usuario.id_usuario ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                    }
+                                    <tr>
+                                        <td>@Strings.getMSG("RiesgoCreate088")</td>
+                                        <td>@registro.c_usuario1.nb_usuario</td>
+                                        <td>@(registro.c_usuario1.id_usuario != anterior.c_usuario1.id_usuario ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                    </tr>
+                                    @if (!AC)
+                                    {
+                                        if (!MG)
+                                        {
+                                            <tr>
+                                                <td>@Strings.getMSG("ControlDelete001")</td>
+                                                <td>@(registro.es_control_clave ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                                <td>@(registro.es_control_clave != anterior.es_control_clave ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                            </tr>
+                                            <tr>
+                                                <td>@Strings.getMSG("Menu030")</td>
+                                                <td>@registro.c_grado_cobertura.cl_grado_cobertura - @registro.c_grado_cobertura.nb_grado_cobertura</td>
+                                                <td>@(registro.id_grado_cobertura != anterior.id_grado_cobertura ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                            </tr>
+                                        }
+                                        <tr>
+                                            <td>@Strings.getMSG("Menu031")</td>
+                                            <td>@registro.c_frecuencia_control.cl_frecuencia_control - @registro.c_frecuencia_control.nb_frecuencia_control</td>
+                                            <td>@(registro.id_frecuencia_control != anterior.id_frecuencia_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("Menu032")</td>
+                                            <td>@registro.c_naturaleza_control.cl_naturaleza_control - @registro.c_naturaleza_control.nb_naturaleza_control</td>
+                                            <td>@(registro.id_naturaleza_control != anterior.id_naturaleza_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        if (!MG)
+                                        {
+                                            <tr>
+                                                <td>@Strings.getMSG("RiesgoCreate090")</td>
+                                                <td>@registro.nb_aplicacion</td>
+                                                <td>@(registro.nb_aplicacion != anterior.nb_aplicacion ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                            </tr>
+                                            <tr>
+                                                <td>@Strings.getMSG("Menu033")</td>
+                                                <td>@registro.c_tipologia_control.cl_tipologia_control - @registro.c_tipologia_control.nb_tipologia_control</td>
+                                                <td>@(registro.c_tipologia_control.id_tipologia_control != anterior.c_tipologia_control.id_tipologia_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                            </tr>
+                                            <tr>
+                                                <td>@Strings.getMSG("Menu034")</td>
+                                                <td>@registro.c_categoria_control.cl_categoria_control - @registro.c_categoria_control.nb_categoria_control</td>
+                                                <td>@(registro.c_categoria_control.id_categoria_control != anterior.c_categoria_control.id_categoria_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                            </tr>
+                                            <tr>
+                                                <td>@Strings.getMSG("Menu035")</td>
+                                                <td>@registro.c_tipo_evidencia.cl_tipo_evidencia - @registro.c_tipo_evidencia.nb_tipo_evidencia</td>
+                                                <td>@(registro.c_tipo_evidencia.id_tipo_evidencia != anterior.c_tipo_evidencia.id_tipo_evidencia ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                            </tr>
+
+
+                                        }
+
+                                        m_tipo = registro.GetType();
+                                        m_propiedades = m_tipo.GetProperties();
+                                        m_tipo = anterior.GetType();
+                                        m_propiedades_a = m_tipo.GetProperties();
+
+                                        for (int j = 0; j < 20; j++)
+                                        {
+                                            var prop = m_propiedades.Where(m => m.Name == string.Format("campo{0:00}", j + 1)).First();
+                                            var propa = m_propiedades_a.Where(m => m.Name == string.Format("campo{0:00}", j + 1)).First();
+                                            var ce = camposExtra[j];
+                                            var valor = "";
+                                            var valorA = "";
+                                            try
+                                            {
+                                                valor = prop.GetValue(registro, null).ToString();
+                                            }
+                                            catch
+                                            {
+                                                valor = "";
+                                            }
+                                            try
+                                            {
+                                                valorA = propa.GetValue(anterior, null).ToString();
+                                            }
+                                            catch
+                                            {
+                                                valorA = "";
+                                            }
+                                            if (MG)
+                                            {
+                                                if (ce.es_visible && ce.aparece_en_mg)
+                                                {
+                                                    <tr>
+                                                        <td>@ce.nb_campo</td>
+                                                        <td>@valor</td>
+                                                        <td>@(valor != valorA ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                                    </tr>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                if (ce.es_visible)
+                                                {
+                                                    <tr>
+                                                        <td>@ce.nb_campo</td>
+                                                        <td>@valor</td>
+                                                        <td>@(valor != valorA ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                                    </tr>
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td>@Strings.getMSG("ControlDelete002")</td>
+                                            <td>@registro.accion_correctora</td>
+                                            <td>@(registro.accion_correctora != anterior.accion_correctora ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+
+
+    <div class="tab-pane" id="pes2">
+        <br /><br /><br />
+        <table class="table table-bordered table-hover table-responsive table-striped">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Campo")</th>
+                    <th>@Strings.getMSG("RiesgoResidualConfigIndex030")</th>
+                    <th>@Strings.getMSG("RiesgoHistorial004")</th>
+                </tr>
+            </thead>
+            @{
+                bool AAC = control.tiene_accion_correctora;
+                bool MMG = control.c_sub_proceso.c_proceso.c_macro_proceso.cl_macro_proceso.Substring(0, 2) == "MG";
+            }
+            <tbody>
+                @if (!AAC)
+                {
+                    <tr>
+                        <td>@Strings.getMSG("RiesgoCreate084")</td>
+                        <td>@control.relacion_control</td>
+                        <td>@(control.relacion_control != controlA.relacion_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("RiesgoCreate085")</td>
+                        <td>@control.actividad_control</td>
+                        <td>@(control.actividad_control != controlA.actividad_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("RevisionControlCreate037")</td>
+                        <td>@control.evidencia_control</td>
+                        <td>@(control.evidencia_control != controlA.evidencia_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                }
+                @if (!MMG && !AAC)
+                {
+                    var cej = "";
+                    try
+                    {
+                        cej = control.c_usuario.id_usuario != controlA.c_usuario.id_usuario ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005");
+                    }
+                    catch
+                    {
+                    }
+
+                    <tr>
+                        <td>@Strings.getMSG("RiesgoCreate087")</td>
+                        <td>@control.c_usuario.nb_usuario</td>
+
+                        <td>@(cej)</td>
+                    </tr>
+                }
+                <tr>
+                    <td>@Strings.getMSG("RiesgoCreate088")</td>
+                    <td>@control.c_usuario1.nb_usuario</td>
+                    <td>@(control.c_usuario1.id_usuario != controlA.c_usuario1.id_usuario ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                </tr>
+                @if (!AAC)
+                {
+                    if (!MMG)
+                    {
+                        <tr>
+                            <td>@Strings.getMSG("ControlDelete001")</td>
+                            <td>@(control.es_control_clave ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                            <td>@(control.es_control_clave != controlA.es_control_clave ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                        </tr>
+                        <tr>
+                            <td>@Strings.getMSG("Menu030")</td>
+                            <td>@control.c_grado_cobertura.cl_grado_cobertura - @control.c_grado_cobertura.nb_grado_cobertura</td>
+                            <td>@(control.id_grado_cobertura != controlA.id_grado_cobertura ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                        </tr>
+                    }
+                    <tr>
+                        <td>@Strings.getMSG("Menu031")</td>
+                        <td>@control.c_frecuencia_control.cl_frecuencia_control - @control.c_frecuencia_control.nb_frecuencia_control</td>
+                        <td>@(control.id_frecuencia_control != controlA.id_frecuencia_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("Menu032")</td>
+                        <td>@control.c_naturaleza_control.cl_naturaleza_control - @control.c_naturaleza_control.nb_naturaleza_control</td>
+                        <td>@(control.id_naturaleza_control != controlA.id_naturaleza_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    if (!MMG)
+                    {
+                        var ctp = "";
+                        try
+                        {
+                            ctp = control.c_tipologia_control.id_tipologia_control != controlA.c_tipologia_control.id_tipologia_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005");
+                        }
+                        catch { }
+
+
+                        var cct = "";
+                        try
+                        {
+                            cct = control.c_categoria_control.id_categoria_control != controlA.c_categoria_control.id_categoria_control ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005");
+                        }
+                        catch { }
+
+                        var cte = "";
+                        try
+                        {
+                            cte = control.c_tipo_evidencia.id_tipo_evidencia != controlA.c_tipo_evidencia.id_tipo_evidencia ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005");
+                        }
+                        catch { }
+
+                        <tr>
+                            <td>@Strings.getMSG("RiesgoCreate090")</td>
+                            <td>@control.nb_aplicacion</td>
+                            <td>@(control.nb_aplicacion != controlA.nb_aplicacion ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                        </tr>
+                        <tr>
+                            <td>@Strings.getMSG("Menu033")</td>
+                            <td>@control.c_tipologia_control.cl_tipologia_control - @control.c_tipologia_control.nb_tipologia_control</td>
+                            <td>@(ctp)</td>
+                        </tr>
+                        <tr>
+                            <td>@Strings.getMSG("Menu034")</td>
+                            <td>@control.c_categoria_control.cl_categoria_control - @control.c_categoria_control.nb_categoria_control</td>
+                            <td>@(cct)</td>
+                        </tr>
+                        <tr>
+                            <td>@Strings.getMSG("Menu035")</td>
+                            <td>@control.c_tipo_evidencia.cl_tipo_evidencia - @control.c_tipo_evidencia.nb_tipo_evidencia</td>
+                            <td>@(cte)</td>
+                        </tr>
+                    }
+
+                    m_tipo = control.GetType();
+                    m_propiedades = m_tipo.GetProperties();
+                    m_tipo = controlA.GetType();
+                    m_propiedades_a = m_tipo.GetProperties();
+
+                    for (int j = 0; j < 20; j++)
+                    {
+                        var prop = m_propiedades.Where(m => m.Name == string.Format("campo{0:00}", j + 1)).First();
+                        var propa = m_propiedades_a.Where(m => m.Name == string.Format("campo{0:00}", j + 1)).First();
+                        var ce = camposExtra[j];
+                        var valor = "";
+                        var valorA = "";
+                        try
+                        {
+                            valor = prop.GetValue(control, null).ToString();
+                        }
+                        catch
+                        {
+                            valor = "";
+                        }
+                        try
+                        {
+                            valorA = propa.GetValue(controlA, null).ToString();
+                        }
+                        catch
+                        {
+                            valorA = "";
+                        }
+                        if (MMG)
+                        {
+                            if (ce.es_visible && ce.aparece_en_mg)
+                            {
+                                <tr>
+                                    <td>@ce.nb_campo</td>
+                                    <td>@valor</td>
+                                    <td>@(valor != valorA ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            if (ce.es_visible)
+                            {
+                                <tr>
+                                    <td>@ce.nb_campo</td>
+                                    <td>@valor</td>
+                                    <td>@(valor != valorA ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                </tr>
+                            }
+                        }
+
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td>@Strings.getMSG("ControlDelete002")</td>
+                        <td>@control.accion_correctora</td>
+                        <td>@(control.accion_correctora != controlA.accion_correctora ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

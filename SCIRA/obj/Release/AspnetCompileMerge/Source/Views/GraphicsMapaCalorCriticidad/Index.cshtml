@@ -1,0 +1,98 @@
+﻿@using SCIRA.Utilidades
+@using SCIRA.Seguridad
+
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Criticidad";
+    int MI = 1;
+    int i = 0;
+    int j = 0;
+}
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/AnimacionCarga.css" rel="stylesheet" />
+<link href="~/Content/Criticidad.css" rel="stylesheet" />
+
+
+
+
+<script>
+
+    $(document).ready(function () {
+        $("#CriticidadRiesgo").load('@(Url.Action("CriticidadRiesgo", "GraphicsMapaCalorCriticidad", null))');
+    });
+
+    function DetalleRiesgos(po, mi) {
+        $("#modalLoad").load('@(Url.Action("DetalleRiesgos", "GraphicsMapaCalorCriticidad", null))?po='+po+'&mi='+mi);
+    }
+
+</script>
+
+
+
+<h2>@Strings.getMSG("Menu129")</h2>
+
+<div id="modalLoad"></div>
+
+<table id="CriticidadTable">
+    <tr>
+        <td></td>
+        <td></td>
+        <td colspan="@(ViewBag.NPO)" class="PO"><div class="horizontal">@Strings.getMSG("Menu023")</div></td>
+    </tr>
+
+    <tr style="height: 150px;">
+        <td></td>
+        <td></td>
+
+        @foreach (var item in ViewBag.PO)
+        {
+        <td class="titSup">
+            <div class="Vertical">
+                @item.nb_probabilidad_ocurrencia
+                <input type="text" hidden id="PO@(item.id_probabilidad_ocurrencia)" value="@item.nb_probabilidad_ocurrencia">
+            </div>
+        </td>
+        }
+    </tr>
+
+    @foreach (var item in @ViewBag.MI)
+    {
+    <tr>
+        @if (MI == 1)
+        {
+            MI = 0;
+        <td rowspan="@(ViewBag.NMI)" class="MO"><div class="VerticalNH">@Strings.getMSG("Menu025")</div></td>
+        }
+        <td class="colIzq">
+            <div class="horizontal">
+                @item.nb_magnitud_impacto
+                <input type="text" hidden id="MI@(item.id_magnitud_impacto)" value="@item.nb_magnitud_impacto">
+            </div>
+        </td>
+        @for (j = 0; j < ViewBag.NPO; j++)
+        {
+        <td class="CRcontainer">
+            <div class="CRCell CCR@(ViewBag.CRS[i, j].id_criticidad_riesgo)" style="background-color: @ViewBag.CRS[i, j].c_criticidad_riesgo.cl_color_campo;" onclick="DetalleRiesgos(@ViewBag.CRS[i, j].id_probabilidad_ocurrencia,@ViewBag.CRS[i, j].id_magnitud_impacto)" id="M@(ViewBag.CRS[i, j].id_magnitud_impacto)P@(ViewBag.CRS[i, j].id_probabilidad_ocurrencia)">
+                <div id="CRCM@(ViewBag.CRS[i, j].id_magnitud_impacto)P@(ViewBag.CRS[i, j].id_probabilidad_ocurrencia)" class="CRContent CRC@(ViewBag.CRS[i, j].c_criticidad_riesgo.id_criticidad_riesgo)">
+                    @Utilidades.NRiesgosPorCriticidad(ViewBag.CRS[i, j].id_probabilidad_ocurrencia, ViewBag.CRS[i, j].id_magnitud_impacto,((IdentityPersonalizado)User.Identity).Id_usuario)
+                </div>
+            </div>
+        </td>
+        }
+    </tr>
+        {
+            i++;
+        }
+    }
+
+
+</table>
+
+<br><br><br>
+
+<div id="CriticidadRiesgo">
+</div>

@@ -1,0 +1,45 @@
+{
+  "RepName": "Reporte de Certificación de Sub Procesos",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Macro Proceso",
+    "Responsable",
+    "Puesto",
+    "Proceso",
+    "Responsable",
+    "Puesto",
+    "Sub Proceso",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "04 - Empresa b",
+      "Sergio",
+      "Gerente",
+      "MG900 - Comités",
+      "Sergio",
+      "Gerente",
+      "P01 - Desarrollo de presupuestos",
+      "Nelson Camargo",
+      "General Adjunto",
+      "SP9069 - Desarrollo de presupuestos y autorización ",
+      "Jorge Rodriguez",
+      "Director General",
+      "Enero - 2024",
+      "Me he asegurado que los controles que mitigan los riesgos identificados en el Subproceso “XXXXX”, fueron certificados por cada uno de sus responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este subproceso no existen mas riesgos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "SP9069 - Desarrollo de presupuestos y autorización",
+      "Si"
+    ]
+  ],
+  "NoCols": 16,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

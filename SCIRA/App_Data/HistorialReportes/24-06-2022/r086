@@ -1,0 +1,29 @@
+{
+  "RepName": "Reporte de Fichas",
+  "ColNames": [
+    "Titulo",
+    "Responsable",
+    "Tipo de Ficha",
+    "Registro Ligado",
+    "Contenido",
+    "Tipo de Recordatorio",
+    "Fecha Límite",
+    "Estado"
+  ],
+  "Rows": [
+    [
+      "Prueba para eliminar",
+      "Ivan Celis",
+      "Oficios/Informes",
+      "N/A",
+      "prueba",
+      "Único",
+      "10/07/2022 16:02:00",
+      "Pendiente"
+    ]
+  ],
+  "NoCols": 8,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

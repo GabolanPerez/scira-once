@@ -1,0 +1,147 @@
+﻿@model SCIRA.ViewModels.EditarDatosUsuarioViewModel
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+
+<script>
+    function send() {
+        $("#aviso").modal('show');
+    }
+
+    function sm() {
+        $("#form").submit();
+    }
+</script>
+
+<div class="modal fade" id="aviso" tabindex="-1" role="dialog" aria-labelledby="Aviso" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <center>
+                    <h2 class="modal-title" id="gridModalLabel" style="color: #fff;">@Strings.getMSG("Aviso")</h2>
+                </center>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                @Strings.getMSG("UsuarioNREditarIndex007")<br/><br/>
+                @Strings.getMSG("UsuarioNREditarIndex008")
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="sm();">@Strings.getMSG("Guardar")</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">@Strings.getMSG("Cancelar")</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<h2>@Strings.getMSG("Editar")</h2>
+
+
+@using (Html.BeginForm(null, null,FormMethod.Post, new { @id="form"}))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal well">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-horizontal well">
+            <h4>@Strings.getMSG("Usuario") @User.Identity.Name</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="row">
+                <div class="form-group has-error">
+                    <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Nombre")</label>
+                    <div class="col-xs-6 col-md-5">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.nb_usuario, new { htmlAttributes = new { @class = "form-control" } })
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioNREditarIndex002")">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </button>
+                            </div>
+                        </div>
+                        @Html.ValidationMessageFor(model => model.nb_usuario, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group has-error">
+                    <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate017")</label>
+                    <div class="col-xs-6 col-md-5">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.e_mail_principal, new { htmlAttributes = new { @class = "form-control" } })
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioNREditarIndex003")">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </button>
+                            </div>
+                        </div>
+                        @Html.ValidationMessageFor(model => model.e_mail_principal, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioNREditarIndex001")</label>
+                    <div class="col-xs-6 col-md-5">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.e_mail_alterno, new { htmlAttributes = new { @class = "form-control"} })
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioNREditarIndex004")">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </button>
+                            </div>
+                        </div>
+                        @Html.ValidationMessageFor(model => model.e_mail_alterno, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group has-error">
+                    <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate019")</label>
+                    <div class="col-xs-6 col-md-5">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.no_telefono, new { htmlAttributes = new { @class = "form-control" } })
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate025")">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </button>
+                            </div>
+                        </div>
+                        @Html.ValidationMessageFor(model => model.no_telefono, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                        <input type="button" value="@Strings.getMSG("Guardar")" class="btn btn-primary" onclick="send();"/>
+                        @Html.ActionLink(Strings.getMSG("Regresar"), "Index", "Home","", new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

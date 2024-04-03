@@ -1,0 +1,1409 @@
+{
+  "RepName": "Reporte de Accesos",
+  "ColNames": [
+    "Usuario",
+    "Función",
+    "Fecha"
+  ],
+  "Rows": [
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Index",
+      "12/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsSeguimientoAuditoria/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/CreatePlaneacion",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/EditPlaneacion",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ReporteEstructura/Index",
+      "23/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CodeActions/Index",
+      "26/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Edit",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "CodeActions/Index",
+      "26/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/Entidad",
+      "06/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Diagrama/EditorEN",
+      "06/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Agregar",
+      "09/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Index",
+      "09/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Delete",
+      "09/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Delete",
+      "09/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Index",
+      "09/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Delete",
+      "09/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Index",
+      "09/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsSeguimientoAuditoria/DetailsCosVista",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "26/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Edit",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/EditUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Edit",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexCampoAuditoria",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Index",
+      "09/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsSeguimientoAuditoria/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Delete",
+      "09/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "23/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/ActualizarNombres",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "GraphicsSeguimientoAuditoria/DetailsCosVista",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexPlaneacion",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "ProcesosAuditoria/IndexTablePlaneacion",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/DeleteCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "SubProceso/Agregar",
+      "09/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "16/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Create",
+      "17/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "23/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "27/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/CreateCosteo",
+      "31/10/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Edit",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "01/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Rango/Index",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Auditoria/IndexUniversoAuditable",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Area/Index",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Area/Create",
+      "06/11/2023"
+    ],
+    [
+      "Jorge Rodriguez",
+      "Area/Index",
+      "06/11/2023"
+    ]
+  ],
+  "NoCols": 3,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

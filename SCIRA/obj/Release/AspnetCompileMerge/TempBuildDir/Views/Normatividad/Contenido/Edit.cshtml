@@ -1,0 +1,353 @@
+﻿@model SCIRA.Models.c_contenido_normatividad
+@using SCIRA.Utilidades;
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/MSInitialize.js"></script>
+
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+
+<script src="~/Scripts/sharedScripts.js"></script>
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<script type="text/javascript" src="~/Scripts/multiple-select.js"></script>
+
+<script>
+    loadPopover();
+</script>
+
+<script type="text/javascript">
+
+            $(document).ready(function () {
+
+            $("#id_impacto_monetario").change(function () {
+                c_criticidad1();
+            });
+
+            $("#id_factibilidad").change(function () {
+                c_criticidad1();
+            });
+
+            c_criticidad1();
+
+            function c_criticidad1() {
+                var mi = parseInt($("#id_impacto_monetario").val());
+                var po = parseInt($("#id_factibilidad").val());
+
+                console.log(mi, po);
+                $("#criticidad1").val("");
+                $("#criticidadAux").val("");
+
+            //encontrar la criticidad dependiendo de ambos IDs
+            @{
+                foreach(var criticidad1 in ViewBag.Criticidad1)
+                {
+                    @:if (po == @(criticidad1.id_factibilidad) && mi == @(criticidad1.id_impacto_monetario))
+                    @:{
+                        @:$("#criticidad1").val("@Html.Raw(criticidad1.c_criticidad_normatividad.nb_criticidad_normatividad)");
+                        @:$("#criticidadAux").val("@Html.Raw(criticidad1.c_criticidad_normatividad.nb_criticidad_normatividad)");
+                    @:}
+                }
+            }
+
+            };
+        });
+</script>
+
+
+<h2>@Strings.getMSG("Editar")</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "FormModal" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    @if (Model.id_contenido_normatividad_padre != null)
+    {
+        <h4>@Model.c_nivel_normatividad.nb_nivel_normatividad @Strings.getMSG("NormatividadCreate032") @Model.c_contenido_normatividad2.cl_contenido_normatividad - @Model.c_contenido_normatividad2.ds_contenido_normatividad</h4>
+    }
+    else
+    {
+        <h4>@Model.c_nivel_normatividad.nb_nivel_normatividad @Strings.getMSG("NormatividadCreate032") @Model.ds_contenido_normatividad</h4>
+    }
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.id_contenido_normatividad_padre)
+    @Html.HiddenFor(model => model.id_nivel_normatividad)
+    @Html.HiddenFor(model => model.id_contenido_normatividad)
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.cl_contenido_normatividad, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ContenidoGrupoCreate002")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.cl_contenido_normatividad, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.TextAreaFor(model => model.ds_contenido_normatividad, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NormatividadCreate030") })
+                @Html.ValidationMessageFor(model => model.ds_contenido_normatividad, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Cumplimiento001")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("id_cumplimiento", (MultiSelectList)ViewBag.cumplimientoL, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RolCreate004")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Areas")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("id_area", (MultiSelectList)ViewBag.areaL, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RolCreate004")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Frecuencia007")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("id_frecuencia", (MultiSelectList)ViewBag.frecuenciaL, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RolCreate004")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu170")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("id_comite", (MultiSelectList)ViewBag.comiteL, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RolCreate004")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu171")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("id_obligacion", (MultiSelectList)ViewBag.obligacionL, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("RolCreate004")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("ProcesosAuditoriaEditPrueba004")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.TextAreaFor(model => model.tema, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NormatividadCreate030") })
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MontoMulta")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.TextAreaFor(model => model.monto_multa, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NormatividadCreate030") })
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("PlazoOtorgado")</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.TextAreaFor(model => model.plazo_otorgado, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NormatividadCreate030") })
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">Consejo Administrativo</label>
+            <div class="col-xs-3 col-md-2">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.consejo_admo, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("UsuarioIndex004"), data_off = Strings.getMSG("UsuarioIndex005"), data_width = "140" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("MCRiesgoEdit006")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">Factibilidad</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.DropDownList("id_factibilidad", null, Strings.getMSG("RiesgoCreate024"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate013") })
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">Impacto Monetario</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.DropDownList("id_impacto_monetario", null, Strings.getMSG("RiesgoCreate026"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("RiesgoCreate015") })
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">Criticidad de Normatividad</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.HiddenFor(model => model.criticidad1)
+                <input class="form-control text-box single-line" id="criticidadAux" type="text" disabled="disabled">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">¿Requiere Ficha?</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.DropDownList("requiere_ficha", null, @Strings.getMSG("ActividadCreate002"), htmlAttributes: new { @class = "form-control", @title = @Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = @Strings.getMSG("ActividadCreate003") })
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">Cabildeo</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.TextAreaFor(model => model.cabildeo, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NormatividadCreate030") })
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">Transitorios</label>
+            <div class="col-xs-6 col-md-5">
+                @Html.TextAreaFor(model => model.transitorios, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NormatividadCreate030") })
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                <input type="button" value="@Strings.getMSG("Guardar")" class="btn btn-primary" onclick="editCPost();" />
+                @if (Model.id_contenido_normatividad_padre == null)
+                {
+                    <input type="button" value="@Strings.getMSG("Regresar")" class="btn btn-default" onclick="showContents(@Model.c_nivel_normatividad.id_nivel_normatividad)" />
+                }
+                else
+                {
+                    <input type="button" value="@Strings.getMSG("Regresar")" class="btn btn-default" onclick="loadContent(@Model.id_contenido_normatividad_padre);" />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<!-- #region Scripts -->
+<script>
+    function editCPost() {
+
+        var url = "@Url.Action("EditCP")";
+
+        if ($("#FormModal").valid()) {
+            executePost(url, "FormModal", "modalSucces()", "modalError()");
+        } else {
+            toastr.error("@Strings.getMSG("NormatividadCreate025")");
+        }
+
+    }
+
+    function modalSucces() {
+        toastr.success("@Strings.getMSG("NormatividadCreate031")");
+
+        @if(Model.id_contenido_normatividad_padre == null)
+        {
+        @:showContents(@Model.c_nivel_normatividad.id_nivel_normatividad);
+        }
+        else
+        {
+        @:loadContent(@Model.id_contenido_normatividad_padre);
+        }
+
+    }
+
+    function modalError() {
+        toastr.error("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+    }
+
+</script>
+<!-- #endregion -->

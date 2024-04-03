@@ -1,0 +1,196 @@
+﻿@model SCIRA.ViewModels.ListaRiesgosViewModel
+@using SCIRA.Utilidades
+
+@{
+    ViewBag.Title = "Riesgos";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#id_entidad").change(function () {
+            var selectedItem = $(this).val();
+            var ddlMacroProcesos = $("#id_macro_proceso");
+            var ddlProcesos = $('#id_proceso');
+            var ddlSubProcesos = $('#id_sub_proceso');
+            $("#agregar").attr("href", "Create/");
+            var cargando = $("#cargando-macro-procesos");
+            cargando.show();
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneMacroProcesos"))",
+                data: { "IdEntidad": selectedItem },
+                success: function (data) {
+                    ddlMacroProcesos.html('');
+                    ddlMacroProcesos.append($('<option></option>').val(null).html(@Strings.getMSG("ProcesoCreate002")))
+                    $.each(data, function (id, option) {
+                        ddlMacroProcesos.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    ddlProcesos.html('');
+                    ddlProcesos.append($('<option></option>').val(null).html(@Strings.getMSG("SubProcesoCreate002")))
+                    ddlSubProcesos.html('');
+                    ddlSubProcesos.append($('<option></option>').val(null).html(@Strings.getMSG("RiesgoRiesgos008")))
+                    cargando.hide();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert('Error al recuperar Macro Procesos.');
+                    cargando.hide();
+                }
+            });
+        });
+    });
+
+    $(function () {
+        $("#id_macro_proceso").change(function () {
+            var selectedItem = $(this).val();
+            var ddlProcesos = $("#id_proceso");
+            var ddlSubProcesos = $('#id_sub_proceso');
+            $("#agregar").attr("href", "Create/");
+            var statesProgress = $("#cargando-procesos");
+            statesProgress.show();
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneProcesos"))",
+                data: { "IdMacroProceso": selectedItem },
+                success: function (data) {
+                    ddlProcesos.html('');
+                    ddlProcesos.append($('<option></option>').val(null).html(@Strings.getMSG("SubProcesoCreate002")))
+                    $.each(data, function (id, option) {
+                        ddlProcesos.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    ddlSubProcesos.html('');
+                    ddlSubProcesos.append($('<option></option>').val(null).html(@Strings.getMSG("RiesgoRiesgos008")))
+                    statesProgress.hide();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert('Error al recuperar Procesos.');
+                    statesProgress.hide();
+                }
+            });
+        });
+    });
+
+    $(function () {
+        $("#id_proceso").change(function () {
+            var selectedItem = $(this).val();
+            var ddlSubProcesos = $("#id_sub_proceso");
+            $("#agregar").attr("href", "Create/");
+            var statesProgress = $("#cargando-sub-procesos");
+            statesProgress.show();
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneSubProcesos"))",
+                data: { "IdProceso": selectedItem },
+                success: function (data) {
+                    ddlSubProcesos.html('');
+                    ddlSubProcesos.append($('<option></option>').val(null).html(@Strings.getMSG("RiesgoRiesgos008")))
+                    $.each(data, function (id, option) {
+                        ddlSubProcesos.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    statesProgress.hide();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert('Error al recuperar Sub Procesos.');
+                    statesProgress.hide();
+                }
+            });
+        });
+    });
+
+    $(function () {
+        $("#id_sub_proceso").change(function () {
+            var selectedItem = $(this).val();
+            var tabla = $("#results");
+            $("#agregar").attr("href", "Create/" + selectedItem);
+            @*$.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneSubProcesos"))",
+                data: { "IdProceso": selectedItem },
+                success: function (data) {
+                    ddlStates.html('');
+                    //ddlStates.append($('<option></option>').val(null).html("-Seleccione Sub Proceso-"))
+                    //$.each(data, function (id, option) {
+                    //    ddlStates.append($('<option></option>').val(option.id).html(option.name));
+                    //});
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert('Error al recuperar Sub Procesos.');
+                }
+            });*@
+        });
+    });
+
+</script>
+
+<h2>@Strings.getMSG("Agregar")</h2>
+
+
+@using (Html.BeginForm("Create", "SubProceso", "POST"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Riesgo / Control(es)</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <label class="control-label col-md-2">@Strings.getMSG("Entidad")</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.id_entidad, Model.Entidades, Strings.getMSG("MacroProcesoCreate002"), htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @* ---------------------------------------------------------------------------------------------- *@
+            <label class="control-label col-md-2">@Strings.getMSG("MP")</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.id_macro_proceso, Model.MacroProcesos, Strings.getMSG("ProcesoCreate002"), htmlAttributes: new { @class = "form-control" })
+                <span id="cargando-macro-procesos" style="display: none;">@Strings.getMSG("EventoRiesgoCreate010")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @* ---------------------------------------------------------------------------------------------- *@
+            <label class="control-label col-md-2">@Strings.getMSG("P")</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.id_proceso, Model.Procesos, Strings.getMSG("SubProcesoCreate002")SubProcesoCreate002, htmlAttributes: new { @class = "form-control" })
+                <span id="cargando-procesos" style="display: none;">@Strings.getMSG("EventoRiesgoCreate010")</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @* ---------------------------------------------------------------------------------------------- *@
+            <label class="control-label col-md-2">@Strings.getMSG("SP")</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.id_sub_proceso, Model.SubProcesos, Strings.getMSG("RiesgoRiesgos008"), htmlAttributes: new { @class = "form-control" })
+                <span id="cargando-sub-procesos" style="display: none;">@Strings.getMSG("EventoRiesgoCreate010")</span>
+            </div>
+        </div>
+
+        <hr />
+
+        <p>
+            <a id="agregar" class="btn btn-default btn-sm" href="/Riesgo/Create/">@Strings.getMSG("Agregar")</a>
+
+        </p>
+
+        <table id="results" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Clave")</th>
+                    <th>@Strings.getMSG("Riesgo")</th>
+                    <th>@Strings.getMSG("RiesgoRiesgos003")</th>
+                    <th width="40"></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+}

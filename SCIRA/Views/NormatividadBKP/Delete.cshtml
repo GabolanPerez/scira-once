@@ -1,0 +1,84 @@
+﻿@model SCIRA.Models.c_normatividad
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Borrar el registro?</h3>
+<div>
+    <h4>Normatividad</h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-xs-offset-2 col-xs-6 col-md-5">
+            <p class="info">
+                Se eliminará la Normatividad así como todos sus Niveles y todos sus contenidos. Confirme para eliminar.
+            </p>
+        </div>
+    </div>
+
+    <hr/>
+
+    <dl class="dl-horizontal">
+        <dt>
+            Clave
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cl_normatividad)
+        </dd>
+
+        <dt>
+            Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nb_normatividad)
+        </dd>
+
+        <dt>
+            Descripción
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_normatividad)
+        </dd>
+
+        <dt>
+            Fecha de Publicación
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fe_publicacion_dof)
+        </dd>
+
+        <dt>
+            Descripción de los Sectores
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_sectores)
+        </dd>
+
+        <dt>
+            Tipo de Normatividad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_tipo_normatividad.nb_tipo_normatividad)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-primary" /> |
+            @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

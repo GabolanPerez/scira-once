@@ -1,0 +1,125 @@
+﻿@model IEnumerable<SCIRA.Models.c_tipo_normatividad>
+@using SCIRA.Models;
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Normatividades";
+}
+
+<link href="~/Content/base.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+<script type="text/javascript" src="~/Scripts/moment-with-locales.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.js"></script>
+
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+
+
+<h2>@Strings.getMSG("NormatividadIndex001")</h2>
+
+<a href="@Url.Action("CreateTN","Normatividad")" class="btn btn-default">@Strings.getMSG("Agregar Tipo de Normatividad")</a>
+
+<br />
+<br />
+
+@if (Model != null)
+{
+    <div id="accordion">
+        @foreach (var tipoN in Model)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse@(tipoN.id_tipo_normatividad)">
+                            @tipoN.cl_tipo_normatividad - @tipoN.nb_tipo_normatividad
+                        </a>
+                        <span>
+                            <a href="@Url.Action("EditTN","Normatividad",new { id = tipoN.id_tipo_normatividad })"><i class="fa fa-pencil text-danger" title="@Strings.getMSG("Editar Tipo de Normatividad")"></i></a>
+                            <a href="@Url.Action("DeleteTN","Normatividad",new { id = tipoN.id_tipo_normatividad })"><i class="fa fa-trash text-danger" title="@Strings.getMSG("Borrar Tipo de Normatividad")"></i></a>
+                        </span>
+                    </h4>
+                </div>
+                <div id="collapse@(tipoN.id_tipo_normatividad)" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>@Strings.getMSG("Clave")</th>
+                                    <th>@Strings.getMSG("ConsultaNormatividadIndex001")</th>
+                                    <th>@Strings.getMSG("NormatividadIndex003")</th>
+                                    <th width="90px"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var norm in tipoN.c_normatividad)
+                                {
+                                    <tr>
+                                        <td>@norm.cl_normatividad</td>
+                                        <td>@norm.nb_normatividad</td>
+                                        <td>@string.Format("{0:dd/MM/yyyy}", norm.fe_publicacion_dof)</td>
+                                        <td>
+                                            <center>
+                                                <a href="@Url.Action("Edit",null,new { id=norm.id_normatividad })"><i class="fa fa-pencil" title="@Strings.getMSG("Editar Normatividad")"></i></a>
+                                                |
+                                                <a href="@Url.Action("Delete",null,new { id=norm.id_normatividad })"><i class="fa fa-trash" title="@Strings.getMSG("Borrar Normatividad")"></i></a>
+                                                |
+                                                <a onclick="showLVLs(@norm.id_normatividad)"><i class="fa fa-sitemap" title="@Strings.getMSG("Niveles de la Normatividad")"></i></a>
+                                            </center>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">
+                                        <center>
+                                            <a href="@Url.Action("Create",new { id = tipoN.id_tipo_normatividad})"><i class="fa fa-plus" title="@Strings.getMSG("Agregar Normatividad")"></i></a>
+                                        </center>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+}
+
+
+<!-- #region Scripts -->
+<script>
+    function showLVLs(id_norm) {
+
+        var options = {
+            title: "@Strings.getMSG("NormatividadIndex014")",
+            size: "lg",
+            show: true,
+            loadUrl: "@Url.Action("IndexLVL","Normatividad")/" + id_norm
+        };
+
+        menuModal.initModal(options);
+    }
+
+    function showContents(id_lvl) {
+
+        var options = {
+            title: "@Strings.getMSG("NormatividadIndex015")",
+            size: "lg",
+            show: true,
+            loadUrl: "@Url.Action("Content","Normatividad")/" + id_lvl
+        };
+
+        menuModal.initModal(options);
+    }
+
+    function loadContent(id_cont) {
+        var url = "@Url.Action("DescendantContent","Normatividad")/" + id_cont;
+
+        menuModal.setTitle("@Strings.getMSG("NormatividadIndex015")");
+        menuModal.bodyLoad(url);
+    }
+</script>
+<!-- #endregion -->

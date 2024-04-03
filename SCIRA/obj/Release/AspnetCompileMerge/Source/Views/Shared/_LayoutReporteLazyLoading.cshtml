@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+@using SCIRA.Utilidades
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SCIRA</title>
+
+    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" type="text/css" href="~/Content/DataTables/css/buttons.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/DataTables/css/buttons.dataTables.min.css" />
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/general")
+    <script src="~/Scripts/jquery.signalR-2.4.3.min.js"></script>
+    <script type="text/javascript" src="~/signalr/hubs"></script>
+
+    <script type="text/javascript" src="~/Scripts/DataTables/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/buttons.flash.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/jszip.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/pdfmake.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/vfs_fonts.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/buttons.print.min.js"></script>
+
+    <script>
+        toastr.options.positionClass = 'toast-bottom-left';
+
+        $(document).ready(function () {
+            $('body').removeClass('loading');
+        });
+    </script>
+</head>
+<body class="loading">
+    @Html.Partial("_Menu")
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        @Html.Partial("_Footer")
+    </div>
+    @RenderSection("scripts", required: false)
+<script type="text/javascript" class="init">
+        $(document).ready(function () {
+            loadTables();
+        });
+
+
+        
+
+        function loadTables() {
+            $('.lazyLoadingTable').each(function () {
+                var key = $(this).attr("data-reportName");
+
+                var colDefs;
+                var dataURL;
+                var lengthMenu;
+
+                eval("colDefs = " + key + "Cols");
+                eval("dataURL = " + key + "URL");
+                try {
+                    eval("lengthMenu = " + key + "lengthMenu");
+                } catch {
+                    lengthMenu = [[10, 25, 50, 100, 1000], [10, 25, 50, 100, 1000]];
+                }
+
+                console.log("Key " + key);
+                console.log("ColDefs " + JSON.stringify(colDefs));
+                console.log("dataURL " + dataURL);
+                console.log("lengthMenu " + lengthMenu);
+
+
+                $(this).DataTable({
+                    dom: "Blfrtip",
+                    buttons: [
+                            { extend: "csv", text: "@Strings.getMSG("CSV")" },
+                            { extend: "excel", text: "@Strings.getMSG("Excel")" },
+                            { extend: "print", text: "@Strings.getMSG("Imprimir...")" }
+                        ],
+                    serverSide: true,
+                    processing: true,
+                    ajax: {
+                        url: dataURL,
+                        type: 'POST',
+                        contentType: 'application/json',
+                        data: function (d) {
+                            return JSON.stringify(d);
+                        },
+                    },
+                    columns: colDefs,
+                    language: {
+                            emptyTable: "@Strings.getMSG("LineaNegocioIndex001")",
+                            info: "@Strings.getMSG("Registros") _START_ @Strings.getMSG("al") _END_ @Strings.getMSG("de") _TOTAL_",
+                            infoEmpty: "@Strings.getMSG("LineaNegocioIndex002")",
+                            infoFiltered: "(@Strings.getMSG("PlantallaIndex001") _MAX_)",
+                            search: "@Strings.getMSG("Buscar")",
+                            zeroRecords: "@Strings.getMSG("PlantillaIndex001")",
+                            paginate: {
+                                first: "<<",
+                                next: ">",
+                                last: ">>",
+                                previous: "<"
+                            },
+                            lengthMenu: "@Strings.getMSG("Mostrar") _MENU_ @Strings.getMSG("Registros")"
+                     },
+                    responsive: true,
+                    pagingType: "full_numbers",
+                    lengthChange: true,
+                    lengthMenu: lengthMenu,
+                });
+
+
+            });
+        }
+
+
+</script>
+</body>
+</html>
+

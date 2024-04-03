@@ -1,0 +1,128 @@
+{
+  "RepName": "Reporte de Riesgos Derogados",
+  "ColNames": [
+    "Macro Proceso",
+    "Proceso",
+    "Sub Proceso",
+    "Evento de Riesgo",
+    "Justificación"
+  ],
+  "Rows": [
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "RSP0002 - p",
+      "sergio"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "00 - hola",
+      "Solo por una prueba"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "RSP0002-03 - prueba",
+      "j"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "RSP0002-04 - prueba",
+      "j"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "dfghdgh - fg",
+      "Prueba"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "RSP0001-01 - XXXX",
+      "N/A"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "f - f",
+      "Error en la carga"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9002 - Aprobación del Consejo del Código de Conducta",
+      "RSP9002-01 - No contar con la aprobación del consejo",
+      "Prueba"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "02 - PRUEBA",
+      "PRUEBA"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9002 - Aprobación del Consejo del Código de Conducta",
+      "3 - 3",
+      "12"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "RSP0004-01 - prueba63",
+      "prueba"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "RSP0002-05 - prueba",
+      "j"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "RSP0002-06 - Prueba",
+      "j"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "RSP0004-01 - prueba",
+      "j"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "RSP9001-01 - prueba",
+      "j"
+    ],
+    [
+      "MG901 - Comités",
+      "P01.1 - Consejo de Administración",
+      "SP9001 - Aprobación del Consejo de objetivos y lineamientos del MCI",
+      "RSP0004-01 - 1",
+      "prueba"
+    ]
+  ],
+  "NoCols": 5,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

@@ -1,0 +1,15 @@
+{
+  "RepName": "Reporte de Riesgos Derogados",
+  "ColNames": [
+    "Macro Proceso",
+    "Proceso",
+    "Sub Proceso",
+    "Evento de Riesgo",
+    "Justificación"
+  ],
+  "Rows": [],
+  "NoCols": 5,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

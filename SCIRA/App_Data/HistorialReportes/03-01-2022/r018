@@ -1,0 +1,99 @@
+{
+  "RepName": "Reporte de Planes de Remediación Pendientes",
+  "ColNames": [
+    "Origen Incidencia",
+    "Nombre del objeto origen",
+    "ID",
+    "Nombre",
+    "Plan",
+    "Área",
+    "Fecha de Alta",
+    "Fecha estimada de Implantación"
+  ],
+  "Rows": [
+    [
+      "Oficios",
+      "131/3026363/2021",
+      "2086",
+      "Prueba",
+      "Prueba",
+      "01 - Jurídico y Cumplimiento",
+      "04/08/2021 04:12:24 p. m.",
+      "05/08/2021 04:12:00 p. m."
+    ],
+    [
+      "Informes Auditoría Externa",
+      "1",
+      "2087",
+      "dfg",
+      "dfg",
+      "02 - Contraloría Normativa",
+      "04/08/2021 04:27:39 p. m.",
+      "04/08/2021 04:21:00 p. m."
+    ],
+    [
+      "Informes Auditoría Interna",
+      "1",
+      "2088",
+      "p",
+      "p",
+      "05 - Administración y Finanzas",
+      "04/08/2021 04:28:42 p. m.",
+      "04/08/2021 04:28:00 p. m."
+    ],
+    [
+      "Oficios",
+      "prueba",
+      "2092",
+      "Prueuba",
+      "Prueuba",
+      "16 - Comercial",
+      "17/09/2021 10:27:35 a. m.",
+      "23/09/2021 10:27:00 a. m."
+    ],
+    [
+      "Riesgo Operativo/Otros",
+      "PRU",
+      "2090",
+      "p",
+      "p",
+      "01 - Jurídico y Cumplimiento",
+      "04/08/2021 04:29:57 p. m.",
+      "04/08/2021 04:29:00 p. m."
+    ],
+    [
+      "Informes Auditoría Interna",
+      "Prueuba",
+      "2094",
+      "Prueuba",
+      "PrueubaPrueubaPrueuba",
+      "04 - Jurídico",
+      "17/09/2021 10:43:18 a. m.",
+      "29/09/2021 10:43:00 a. m."
+    ],
+    [
+      "Oficios",
+      "prueba",
+      "2091",
+      "Prueuba",
+      "Prueuba",
+      "11 - Cobranza",
+      "17/09/2021 10:21:15 a. m.",
+      "24/09/2021 10:23:00 a. m."
+    ],
+    [
+      "Informes Auditoría Externa",
+      "Prueuba",
+      "2093",
+      "Prueuba",
+      "PrueubaPrueubaPrueuba",
+      "11 - Cobranza",
+      "17/09/2021 10:34:50 a. m.",
+      "29/09/2021 10:35:00 a. m."
+    ]
+  ],
+  "NoCols": 8,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

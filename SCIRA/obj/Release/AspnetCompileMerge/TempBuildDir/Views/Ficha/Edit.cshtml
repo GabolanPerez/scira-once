@@ -1,0 +1,373 @@
+﻿@model SCIRA.Models.r_evento
+@using SCIRA.Utilidades
+@{
+
+}
+
+
+<style>
+    button.btn.btn-default.active {
+        background-color: ActiveBorder;
+        color: black;
+    }
+
+    select.form-control.cron-picker-hours,
+    select.form-control.cron-picker-month-repeater,
+    select.form-control.cron-picker-minutes {
+        width: auto;
+    }
+</style>
+
+
+<script src="~/Scripts/dropzone.js"></script>
+<link href="~/Content/cron-picker.css" rel="stylesheet" />
+<script src="~/Scripts/dropzone-config.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/cron-picker.js"></script>
+
+
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+
+<script src="~/Scripts/MSInitialize.js"></script>
+
+<script>
+    $(document).ready(function () {
+        menuModal.setTitle('@ViewBag.title');
+        loadPopover();
+
+        $('#cron-picker').cronPicker();
+
+        $(".datetimepicker").datetimepicker({
+            locale: 'es',
+            format: '@ViewBag.DateFormat',
+            minDate: "@(DateTime.Now.ToString("MM/dd/yyyy"))"
+        });
+
+        if ($("#no_dias_antes_de_vencer").val() == '') {
+            $("#no_dias_antes_de_vencer").val(0);
+        }
+
+
+
+    });
+
+    $(function () {
+        $('#recordar_antes_de_vencer').change(function () {
+            var ch = $(this).prop('checked');
+            if (ch) {
+                $(".recurrent").hide();
+                $(".limitDate").show();
+
+            } else {
+                $(".recurrent").show();
+                $(".limitDate").hide();
+            }
+        })
+
+        $("#no_dias_antes_de_vencer").change(function () {
+            if ($(this).val() == '')
+            {
+                $(this).val(0)
+            }
+        })
+    });
+
+    function trySubmit() {
+
+        deshabilitar();
+
+        var fe_vencimiento_valida = true;
+
+        if ($("#recordar_antes_de_vencer").prop("checked")) {
+            if ($("#fe_vencimiento").val() == '') {
+                fe_vencimiento_valida = false;
+
+                $("#fe_vencimiento-error").attr('hidden', false);
+            } else {
+                $("#fe_vencimiento-error").attr('hidden', true);
+            }
+        }
+
+        if ($("#FichaForm").valid() && fe_vencimiento_valida) {
+            var url = "@(Model.id_evento == 0 ? Url.Action(ViewBag.CreateURL, "Ficha") : Url.Action("EditFicha", "Ficha"))";
+            var message = "@(Model.id_evento == 0 ? Strings.getMSG("lyPCreate052"):Strings.getMSG("CosteoIndex006"))";
+
+            executePost(url, "FichaForm", "toastr.success(\"" + message + "\");menuModal.hide();", "toastr.error(\"@Strings.getMSG("AvisoError003")\");menuModal.hide();");
+        }
+    }
+
+    function deleteFile(id,nb_archivo) {
+        confirmationModal.initModal({
+            title: '@Strings.getMSG("AuditoriaEditSeguimientoObservaciones007") ' + nb_archivo + '?',
+            action: 'deleteFileConfirm('+id+')'
+        });
+    }
+
+    function deleteFileConfirm(id) {
+        //eliminar archivo con ajax
+        $.ajax({
+            dataType: "html",
+            type: "post",
+            url: '@(Url.Action("DeleteByUser","Archivos"))',
+            data: { id },
+            success: function (data) {
+                if (data == id) {
+                    toastr.success("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones008")");
+                    //eliminar fila
+                    $("#fr" + id).remove();
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                toastr.error("@Strings.getMSG("AvisoError003")");
+            }
+        });
+    }
+
+</script>
+
+@if (ViewBag.FromCN != null)
+{
+    <button class="btn btn-default" onclick="menuModal.bodyLoad('@Url.Action("ContenidoNormatividadI","Ficha")/@ViewBag.id_objeto')">@Strings.getMSG("Regresar")</button>
+}
+
+@if (ViewBag.FromSomewhere != null)
+{
+    <button class="btn btn-default" onclick="menuModal.bodyLoad(lastURL)">@Strings.getMSG("Regresar")</button>
+}
+
+
+<br />
+<br />
+<br />
+
+<div id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#SECC001">
+                    @Strings.getMSG("lyPIndex008")
+                </a>
+            </h4>
+        </div>
+        <div id="SECC001" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <form id="FichaForm">
+                    <div class="form-horizontal">
+                        @if (Model.id_evento != 0)
+                        {
+                            <input type="hidden" name="id_evento" value="@Model.id_evento" />
+                            <input type="hidden" name="tipo" value="@Model.tipo" />
+                            <input type="hidden" name="config" value="@Model.config" />
+                            <input type="hidden" name="lu" value="@Model.id_responsable" />
+                        }
+
+
+                        <input type="hidden" name="id_objeto" value="@ViewBag.id_objeto" />
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(model => model.c_usuario1)
+                        @Html.HiddenFor(model => model.c_usuario2)
+
+
+                        <div class="row has-error">
+                            <label class="control-label col-xs-3 col-sm-2 col-md-2 col-lg-2">@Strings.getMSG("lyPIndex009")</label>
+                            <div class="col-xs-9 col-sm-10 col-md-4 col-lg-4">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.nb_evento, new { htmlAttributes = new { @class = "form-control" } })
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIndex016")">
+                                            <i class="glyphicon glyphicon-question-sign"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                @Html.ValidationMessageFor(model => model.nb_evento, "", new { @class = "text-danger" })
+                            </div>
+
+                            <label class="control-label col-xs-3 col-sm-2 col-md-2 col-lg-2">@Strings.getMSG("Responsable")</label>
+                            <div class="col-xs-9 col-sm-10 col-md-4 col-lg-4">
+                                @Html.DropDownListFor(model => model.id_responsable, (IEnumerable<SelectListItem>)ViewBag.id_responsableL, Strings.getMSG("EntidadCreate002"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("lyPIndex023") })
+                                @Html.ValidationMessageFor(model => model.id_responsable, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <label class="control-label col-xs-4 col-sm-4 col-md-3 col-lg-2">@Strings.getMSG("lyPIndex010")</label>
+                            <div class="col-xs-8 col-sm-8 col-md-3 col-lg-4">
+                                <div class="input-group">
+                                    @Html.ListBox("ustr", (MultiSelectList)ViewBag.UsuariosMS, htmlAttributes: new { @class = "form-control selectpicker" })
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIndex017")">
+                                            <i class="glyphicon glyphicon-question-sign"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <label class="control-label col-xs-4 col-sm-4 col-md-3 col-lg-2  limitDate" @(Model.recordar_antes_de_vencer ? "" : "hidden")>@Strings.getMSG("lyPIndex024")</label>
+                            <div class="col-xs-8 col-sm-8 col-md-3 col-lg-4 limitDate" @(Model.recordar_antes_de_vencer ? "" : "hidden")>
+                                <div class="input-group">
+                                    @Html.ListBox("ustrf", (MultiSelectList)ViewBag.Usuarios2MS, htmlAttributes: new { @class = "form-control selectpicker" })
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIndex025")">
+                                            <i class="glyphicon glyphicon-question-sign"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <br />
+
+                        <div class="row">
+
+                            <label class="control-label col-xs-3 col-sm-2 col-md-2 col-lg-2">@Strings.getMSG("MCSubProcesoIndex002")</label>
+
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.recordar_antes_de_vencer, new { htmlAttributes = new { data_toggle = "toggle", data_on = Strings.getMSG("NormatividadOperacionIndex005"), data_off = Strings.getMSG("PendientesVerTodoIndex011"), data_width = "160" } })
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIndex018")">
+                                            <i class="glyphicon glyphicon-question-sign"></i>
+                                        </button>
+                                    </div>
+                                    <div class="toggleLayer" onclick="$('#recordar_antes_de_vencer').bootstrapToggle('toggle');"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="row recurrent" @(Model.recordar_antes_de_vencer ? "hidden" : "")>
+                            <label class="control-label col-xs-3 col-sm-2 col-md-2 col-lg-2">@Strings.getMSG("lyPIndex011")</label>
+                            <div class="col-xs-9 col-sm-10 col-md-6 col-lg-6 well">
+                                <input id="cron-picker" name="perioricidad" value="@(Model.perioricidad)" />
+                            </div>
+                        </div>
+
+                        <div class="row limitDate has-error" @(Model.recordar_antes_de_vencer ? "" : "hidden")>
+                            <label class="control-label col-xs-3 col-sm-2 col-md-2 col-lg-2">@Strings.getMSG("lyPIndex006")</label>
+                            <div class="col-xs-9 col-sm-10 col-md-6 col-lg-6">
+                                <div class='input-group date datetimepicker'>
+                                    @Html.TextBox("fe_vencimiento", (string.Format("{0:dd/MM/yyyy hh:mm}", Model.fe_vencimiento)), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("lyPIndex022"), data_val = "false" })
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                                <span class="text-danger field-validation-error" data-valmsg-for="fe_vencimiento" data-valmsg-replace="true"><span id="fe_vencimiento-error" hidden class="">@Strings.getMSG("Validacion001")</span></span>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <label class="control-label col-xs-3 col-sm-2 col-md-2 col-lg-2">@Strings.getMSG("lyPIndex020")</label>
+                            <div class="col-xs-9 col-sm-10 col-md-6 col-lg-6">
+                                <div class="input-group">
+                                    @Html.EditorFor(model => model.no_dias_antes_de_vencer, new { htmlAttributes = new { @class = "form-control", @min = "0", @max = "365", @value = "0" } })
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default">
+                                            @Strings.getMSG("Días antes")
+                                        </button>
+                                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPIndex021")">
+                                            <i class="glyphicon glyphicon-question-sign"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+                        <div class="row has-error">
+                            <label class="control-label col-xs-3 col-sm-2 col-md-2 col-lg-2">@Strings.getMSG("NotificationEdit003")</label>
+                            <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10">
+                                @Html.TextAreaFor(model => model.ds_evento, new { @spellcheck = "false", @id = "area1", @class = "form-control", @cols = "50", @rows = "30", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NotificationEdit007") })
+                                @Html.ValidationMessageFor(model => model.ds_evento, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <select multiple id="files" name="files" hidden></select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#SECC002">
+                    @Strings.getMSG("lyPIndex027")
+                </a>
+            </h4>
+        </div>
+        <div id="SECC002" class="panel-collapse collapse">
+            <div class="panel-body">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <label class="control-label col-xs-3 col-sm-2 col-md-2 col-lg-2">@Strings.getMSG("RevisionControlRevisiones003")</label>
+                        <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10">
+                            <form action="@Url.Action("Upload","Archivos")"
+                                  class="dropzone"
+                                  data-target="files"
+                                  id="fileUploader"></form>
+                            <!--data-target es el elemento select multiple a donde se agregaran los ids de los archivos elegidos-->
+                            <!--el id siempre debera ser fileUploader-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (Model.id_evento != 0)
+    {
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#SECC003">
+                        @Strings.getMSG("lyPIndex028")
+                    </a>
+                </h4>
+            </div>
+            <div id="SECC003" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>@Strings.getMSG("RevisionControlRevisiones006")</th>
+                                <th>@Strings.getMSG("BDEIIndex003")</th>
+                                <th width="80px"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var file in Model.c_archivo)
+                            {
+                                <tr id="fr@(file.id_archivo)">
+                                    <td>@file.nb_archivo</td>
+                                    <td>@file.fe_alta.Value.ToString("dd/MM/yyyy hh:mm:ss")</td>
+                                    <td>
+                                        <center>
+                                            <a href="@Url.Action("Download","Archivos", new { id = file.id_archivo})"><i class="fa fa-download" title=@Strings.getMSG("Descargar")></i></a>|
+                                            <a onclick="deleteFile(@file.id_archivo,'@file.nb_archivo')"><i class="fa fa-trash" title=@Strings.getMSG("Borrar")></i></a>
+                                        </center>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+
+<div class="row">
+    <div class="pull-right col-md-2">
+        <input type="button" id="smtBtn" class="btn btn-primary submit" value="@Strings.getMSG("Guardar")" onclick="trySubmit()" />
+    </div>
+</div>
+
+
+

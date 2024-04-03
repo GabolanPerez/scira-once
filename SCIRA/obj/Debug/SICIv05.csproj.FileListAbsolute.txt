@@ -1,0 +1,2 @@
+Z:\OneDrive\trabajo\SICI\SICIv05\1.- Recordatorios\03-04-2019\SICIv01\obj\Debug\SICIv05.csprojAssemblyReference.cache
+Z:\OneDrive\trabajo\SICI\SICIv05\1.- Recordatorios\03-04-2019\SICIv01\obj\Debug\SICIv05.csproj.CoreCompileInputs.cache

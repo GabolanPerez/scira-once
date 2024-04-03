@@ -1,0 +1,2375 @@
+{
+  "RepName": "Reporte de Riesgos Derogados",
+  "ColNames": [
+    "Macro Proceso",
+    "Proceso",
+    "Sub Proceso",
+    "Evento de Riesgo",
+    "Justificación"
+  ],
+  "Rows": [
+    [
+      "MP03.02 - Crédito",
+      "P03.02.0001 - Manual de Políticas y Procedimientos de Crédito",
+      "SP03.02.0001.0001 - Proceso de Apertura, Modificación y Baja de convenios de colaboración",
+      "RO34 - Que no se pueda llevar a cabo la dictaminación de la personalidad jurídica al faltar documentación del Representante Legal que firma el Convenio de Colaboración, retrasando el proceso de firma del Convenio",
+      "duplicado"
+    ],
+    [
+      "MP01.03 - Crédito",
+      "P01.03.0005 - Procedimiento de Conciliación de Pagos Corresponsalía Chedraui. (Obsoleto)",
+      "SP01.03.0005.0001 - Procedimiento de Conciliación de Pagos Chedraui. (Obsoleto)",
+      "N/A RO292 - Hacer registros contables de forma manual se puede incurrir en errores\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0006 - Proceso para el alta de Personal",
+      "N/A RO75 - No realizar los cambios de personal en los Sistemas SAC y SAP lo que genera desviaciones en el pago de comisiones\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0002 - Proceso de Pago de Nómina Quincenal",
+      "N/A RO81 - No reportar a la Gerencia de Nóminas las incidencias ocurridas en la quincena\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0007 - Proceso de Pago de Nómina Semanal",
+      "N/A RO78 - Captura de datos del empleado con errores en puesto y sueldo, lo que ocasiona pagarle su nómina con desviaciones\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP03.07 - Operaciones",
+      "P03.07.0003 - Procedimiento de Atención a Clientes de la Central de Operaciones",
+      "SP03.07.0003.0001 - Proceso de entrega de Estados de Cuenta",
+      "RO360 - Que el área de cobranza, notifique vía correo electrónico que ya se realizo la desistalación del crédito",
+      "Error de Carga"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0001 - Alta de Llave o Cuenta (Obsoleto)",
+      "N/A RO175 - La documentación archivada de cada proceso no se encuentra en resguardo seguro\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP03.07 - Operaciones",
+      "P03.07.0003 - Procedimiento de Atención a Clientes de la Central de Operaciones",
+      "SP03.07.0003.0001 - Proceso de entrega de Estados de Cuenta",
+      "RO412 - Elegir de forma incorrecta créditos a reestructurar",
+      "Error de Carga"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0009 - Pago a Proveedores y Prestadores de Servicios y su Registro Contable (Obsoleto)",
+      "N/A RO238 - La solicitud de pago no cumple con los puntos de validación\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP03.07 - Operaciones",
+      "P03.07.0003 - Procedimiento de Atención a Clientes de la Central de Operaciones",
+      "SP03.07.0003.0001 - Proceso de entrega de Estados de Cuenta",
+      "RO414 - No contar con el acuse de recibo del MAE del envío en tiempo y forma el aviso de cesión a Banxico",
+      "Error de Carga"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0009 - Pago a Proveedores y Prestadores de Servicios y su Registro Contable (Obsoleto)",
+      "N/A RO242 - El registro contable de la póliza de pagos muestra información incorrecta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP02.05 - Administración y Finanzas",
+      "P02.05.0001 - Manual de Políticas y Procedimientos de Recursos Materiales y Logística",
+      "SP02.05.0001.0019 - Proceso de Renovación de Contratos de Arrendamiento",
+      "RO375 - No notificar en tiempo al arrendador provocando con ello el no contar con el local",
+      "Duplicado"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0001 - Manual de Políticas y Procedimientos de Recursos Materiales y Logística",
+      "SP01.06.0001.0019 - Proceso de Renovación de Contratos de arrendamiento",
+      "RO609 - No notificar en tiempo al arrendador provocando con ello el no contar con el local",
+      "Duplicado"
+    ],
+    [
+      "MP02.05 - Administración y Finanzas",
+      "P02.05.0001 - Manual de Políticas y Procedimientos de Recursos Materiales y Logística",
+      "SP02.05.0001.0016 - Proceso de Apertura de Oficina Administrativa",
+      "RO315 - Retraso en la entrega de la oficina administrativa a la Dirección Comercial",
+      "Duplicado"
+    ],
+    [
+      "MP02.05 - Administración y Finanzas",
+      "P02.05.0001 - Manual de Políticas y Procedimientos de Recursos Materiales y Logística",
+      "SP02.05.0001.0017 - Proceso para Acondicionamiento de Oficina Administrativa",
+      "RO379 - Retraso en la entrega de los acondicionamientos",
+      "Duplicado"
+    ],
+    [
+      "MP02.05 - Administración y Finanzas",
+      "P02.05.0005 - Manual de Políticas y Procedimientos de Recursos Humanos (Obsoleto)",
+      "SP02.05.0005.0007 - Proceso para el alta de Personal (Obsoleto)",
+      "RO158 - Incumplimiento de políticas al dar de alta personal que no cumple con los requisitos solicitados por la Institución",
+      "Se elimina porque el riesgo y control se encuentran duplicados dentro del mismo proceso."
+    ],
+    [
+      "MP03.08 - Administración y Finanzas",
+      "P03.08.0002 - Manual de Políticas y Procedimientos de Recursos Materiales y Logística",
+      "SP03.08.0002.0003 - Proceso de Compra, Recepción y Entrega de Equipo de Transporte Utilitario",
+      "RO179 - Generar orden de compra incorrecta",
+      "El Riesgo y Control se encuentran duplicados dentro del mismo subproceso"
+    ],
+    [
+      "MP03.05 - Contraloría Interna",
+      "P03.05.0003 - Manual de Políticas y Procedimientos de Control Interno",
+      "SP03.05.0003.0007 - Proceso para Publicar un Documento Institucional en la Intranet",
+      "RO28 - No publicar el documento autorizado o publicarlo con errores en la Intranet de Consupago",
+      "El riesgo y control se encuentran duplicados dentro del mismo subproceso."
+    ],
+    [
+      "MP03.07 - Operaciones",
+      "P03.07.0003 - Procedimiento de Atención a Clientes de la Central de Operaciones",
+      "SP03.07.0003.0001 - Proceso de entrega de Estados de Cuenta",
+      "RO138 - Al otorgar un saldo insoluto del crédito equivocado dado que este no se genera en forma automática del sistema de gestión de cartera, se elabora manualmente con la posibilidad de equivocarse",
+      "Erro de Carga"
+    ],
+    [
+      "MP03.07 - Operaciones",
+      "P03.07.0003 - Procedimiento de Atención a Clientes de la Central de Operaciones",
+      "SP03.07.0003.0001 - Proceso de entrega de Estados de Cuenta",
+      "RO34 - Que no se pueda llevar a cabo la dictaminación de la personalidad jurídica al faltar documentación del Representante Legal que firma el Convenio de Colaboración, retrasando el proceso de firma del Convenio",
+      "Error de Carga"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0013 - Manual de Políticas y Procedimientos del Área de Finanzas",
+      "SP01.06.0013.0014 - Proceso de Pago a Proveedores y Prestadores de Servicios y su Registro Contable",
+      "RT04 - La validación hecha por el SIP en el SAT es incorrecta.",
+      "Duplicado"
+    ],
+    [
+      "MP02.05 - Administración y Finanzas",
+      "P02.05.0001 - Manual de Políticas y Procedimientos de Recursos Materiales y Logística",
+      "SP02.05.0001.0018 - Proceso de Contratación de Servicio de Telefonía Fija e Internet",
+      "RO381 - Factibilidad de instalción por coobertura",
+      "Duplicado"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0004 - Registro Contable de Movimientos de Capital Contribuido y Ganado (Obsoleto)",
+      "N/A RO258 - Registro erróneo de la información referente a la capitalización de la deuda.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.12 - Jurídico",
+      "P01.12.0002 - Manual de Operación de la Oficina de Fraudes",
+      "SP01.12.0002.0003 - Proceso de atención de casos de aclaraciones por contrato digital",
+      "N/A RO187 - Convenios vencidos o no ratificados con la dependencia.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0014 - Políticas y Procedimientos de Monitoreo y Revisión de Bitácoras (Obsoleto)",
+      "SP01.01.0014.0002 - Escalamiento. (Obsoleto)",
+      "N/A RO226 - La documentación electrónica archivada de cada procedimiento no se encuentra respaldada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0003 - Proceso de contratación en Corporativo",
+      "N/A RO31 - Seleccionar candidatos sin cubrir el perfil del puesto\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0009 - Pago a Proveedores y Prestadores de Servicios y su Registro Contable (Obsoleto)",
+      "N/A RO236 - La factura ingresada no cumple con políticas y documentación correspondiente\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0009 - Pago a Proveedores y Prestadores de Servicios y su Registro Contable (Obsoleto)",
+      "N/A RO239 - Las facturas ingresadas no son clasificadas adecuadamente dentro del sistema contable\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0013 - Políticas y Procedimientos de Lugar de Trabajo Seguro (Obsoleto)",
+      "SP01.01.0013.0002 - Control de Lugar de Trabajo Seguro por Gerencia de Contraloría de Seguridad de la Información. (Obsoleto)",
+      "N/A RO429 - No se cuenta con un listado de software institucional para la revisión de equipos de cómputo\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0003 - Registro Contable de Transaccionalidad Diaria de Créditos de Consumo-Tarjeta de Crédito (Obsoleto)",
+      "N/A RO498 - No Aplica\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0003 - Cambio de Llaves y Cuentas Programados. (Obsoleto)",
+      "N/A RO186 - La documentación archivada de cada proceso no se encuentra en resguardo seguro",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0014 - Políticas y Procedimientos de Monitoreo y Revisión de Bitácoras (Obsoleto)",
+      "SP01.01.0014.0001 - Revisión de Bitácoras. (Obsoleto)",
+      "N/A RO221 - Los sistemas de información no permiten obtener la información requerida para la emisión y revisión de las bitácoras\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0003 - Baja de Usuario. (Obsoleto)",
+      "N/A RO427 - Recursos Humanos no notifica la baja de un colaborador de manera oportuna\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0046 - Manual de Políticas y Procedimientos para la Asignación y Reembolso del Fondo Revolvente (Obsoleto)",
+      "SP01.06.0046.0002 - Procedimiento de Solicitud de Fondo Revolvente (Obsoleto)",
+      "N/A RO688 - extravío del pagaré en el transcurso del envió\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO388 - Que no se registre oportunamente el pago y no se refleje el saldo correcto del proveedor\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO390 - Que no realice la validación de la póliza contable\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO391 - Que la información de estado de cuenta no esté actualizada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.22 - Planeación y Desarrollo Comercial",
+      "P01.22.0001 - Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial",
+      "SP01.22.0001.0009 - Proceso del programa ganadores",
+      "N/A RO349 - No contar con esta información detendría el servicio de apoyo y soporte a los participantes que se comunican al área de Inteligencia Comercial\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0004 - Conciliación del Inventario de Llaves y Cuentas. (Obsoleto)",
+      "N/A RO189 - Solicitar a las áreas correspondientes en un lapso posterior a 5 días hábiles información de los clientes para atención de quejas CONDUSEF\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP03.07 - Operaciones",
+      "P03.07.0003 - Procedimiento de Atención a Clientes de la Central de Operaciones",
+      "SP03.07.0003.0001 - Proceso de entrega de Estados de Cuenta",
+      "RO357 - Que un incidente de prioridad alta no sea identificado",
+      "Error de Carga"
+    ],
+    [
+      "MP03.07 - Operaciones",
+      "P03.07.0003 - Procedimiento de Atención a Clientes de la Central de Operaciones",
+      "SP03.07.0003.0001 - Proceso de entrega de Estados de Cuenta",
+      "RO411 - No cumplir con las disposiciones para comprobar el aviso al cliente sobre su reestructura de crédito",
+      "Error de Carga"
+    ],
+    [
+      "MP03.07 - Operaciones",
+      "P03.07.0003 - Procedimiento de Atención a Clientes de la Central de Operaciones",
+      "SP03.07.0003.0001 - Proceso de entrega de Estados de Cuenta",
+      "RO413 - Ejecución incorrecta por parte de sistemas",
+      "Error de Carga"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0002 - Manual de Políticas y Procedimientos de Tesorería y Planeación Financiera",
+      "SP01.06.0002.0008 - Proceso para la elaboración de Presupuesto",
+      "RT09 - Perdida sustancial de la información.",
+      "Duplicado"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0013 - Manual de Políticas y Procedimientos del Área de Finanzas",
+      "SP01.06.0013.0014 - Proceso de Pago a Proveedores y Prestadores de Servicios y su Registro Contable",
+      "RO96 - La XML emitido por el proveedor o prestador de servicios no es válido para el SAT o el RFC de la receptora es incorrecto",
+      "Duplicado"
+    ],
+    [
+      "MP02.05 - Administración y Finanzas",
+      "P02.05.0001 - Manual de Políticas y Procedimientos de Recursos Materiales y Logística",
+      "SP02.05.0001.0019 - Proceso de Renovación de Contratos de Arrendamiento",
+      "RO375 - No notificar en tiempo al arrendador provocando con ello el no contar con el local",
+      "Duplicado"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0001 - Manual de Políticas y Procedimientos de Recursos Materiales y Logística",
+      "SP01.06.0001.0011 - Proceso de Contratación de Servicio de Telefonía Fija e Internet",
+      "RO613 - Factibilidad de instalación por cobertura",
+      "Duplicado"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0005 - Baja de Llave o Cuenta. (Obsoleto)",
+      "N/A RO195 - La documentación física archivada de cada procedimiento no se encuentra respaldada",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0001 - Registro Contable de Originación Diaria de Créditos de Consumo sin Destino Específico (Obsoleto)",
+      "N/A RO251 - La transaccionalidad de las cuentas no coincide con el reporte de dispersión, incurriendo en información contable errónea\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0009 - Pago a Proveedores y Prestadores de Servicios y su Registro Contable (Obsoleto)",
+      "N/A RO240 - El registro contable de la solicitud de pago a proveedores es registrado en el sistema contable de manera incorrecta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO319 - Depositar al mismo usuario un depósito más, aun teniendo un saldo por comprobar\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.10 - Contabilidad",
+      "P01.10.0001 - Procedimiento para Determinar el Cálculo de Cuotas IPAB",
+      "SP01.10.0001.0001 - Proceso de las Cuotas IPAB Previas y Definitivas, Metodología Descrita en el Anexo 1 de la Ley del IPAB",
+      "N/A RO295 - La información que sirve para llenar el reporte puede tener errores o puede ser tomada de campos erróneos, esto al ser una carga manual\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0003 - Cambio de Llaves y Cuentas Programados. (Obsoleto)",
+      "N/A RO185 - El Inventario del CAUS no coincide con los sobres que se encuentran resguardados en este.\r\n",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0013 - Manual de Políticas y Procedimientos del Área de Finanzas",
+      "SP01.06.0013.0025 - Proceso para la Elaboración y Emisión de Estados Financieros Consolidados e Individuales Versión Consejo",
+      "N/A RO593 - Las cuentas contables están agrupadas de manera incorrecta, conteniendo incongruencias en la información presentada\r\n",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO629 - No contar con los insumos o stock de tarjetas\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.03 - Crédito",
+      "P01.03.0001 - Manual de Políticas y Procedimientos de Crédito",
+      "SP01.03.0001.0021 - Proceso de Solicitud de Liquidación Anticipada (Definitiva)",
+      "N/A RO168 - Que la identificación de los clientes incumpla con los criterios para su recalendarización\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0003 - Baja de Usuario. (Obsoleto)",
+      "N/A RO206 - Recursos Humanos no notifica la baja de un colaborador de manera oportuna\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0003 - Cambio de Llaves y Cuentas Programados. (Obsoleto)",
+      "N/A RO183 - Recibir la información solicitada incompleta y con errores\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0012 - Registro Contable del diferimiento de Gastos Financieros (Obsoleto)",
+      "N/A RO255 - Los movimientos de Gastos Financieros son ingresados en el sistema contable de forma incorrecta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0013 - Registro Contable de la Adquisición y Depreciación de Activo Fijo (Obsoleto)",
+      "N/A RO230 - El activo fijo ha sido catalogado de manera incorrecta, siendo que sea un bien que no corresponda al activo fijo, o bien un activo fijo que no haya sido ingresado dentro de esta clasificación.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0032 - Coordinación de Precios de Transferencia (Obsoleto)",
+      "N/A RO279 - Proporcionar información incongruente a Consultora que elaborará estudio de precios de transferencia\r\n",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO317 - Que la solicitud no se revise correctamente y se realice el depósito a otra cuenta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0030 - Elaboración y envío del Dictamen Fiscal (SIPRED)Información Alternativa de Dictamen (SIPIAD) (Obsoleto)",
+      "N/A RO378 - No considerar las cifras de cierre aprobadas por auditor externo\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0006 - Proceso para el alta de Personal",
+      "N/A RO768 - Realizar el alta promotores que rebasan el límite máximo de descuento INFONAVIT\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP03.05 - Contraloría Interna",
+      "P03.05.0003 - Manual de Políticas y Procedimientos de Control Interno",
+      "SP03.05.0003.0004 - Proceso de Solicitud de Autorización de Procedimientos al Subcomité de Normas y Procedimientos",
+      "RO22 - No considerar en la orden del día los documentos sujetos a aprobación por el órgano facultado",
+      "El Riesgo se encuentra duplicado dentro del mismo subproceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0007 - Proceso de Pago de Nómina Semanal",
+      "N/A RO80 - No se apliquen de manera exitosa los pagos, por cuentas canceladas o cuentas erróneas\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0009 - Pago a Proveedores y Prestadores de Servicios y su Registro Contable (Obsoleto)",
+      "N/A RO241 - Depósitos a proveedores efectuados incorrectamente (Cuenta bancaria, Monto, Proveedor, etc.)\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0002 - Manual de Políticas y Procedimientos de Tesorería y Planeación Financiera",
+      "SP01.06.0002.0008 - Proceso para la elaboración de Presupuesto",
+      "N/A RO4 - Emitir balanzas de comprobación que no correspondan al cierre de mes autorizado por el área de Contabilidad\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0001 - Alta y Cambio de Usuario. (Obsoleto)",
+      "N/A RO196 - Falta de inclusión de todos los sistemas de información críticos de la entidad en el procedimiento\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0008 - Elaboración de Conciliaciones Bancarias de Bancos (Obsoleto)",
+      "N/A RO248 - Los depósitos efectuados no son plenamente identificados\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0023 - Creación e Inactivación de Cuentas Contables (Obsoleto)",
+      "N/A RO419 - No asegurarse de validar la balanza de comprobación sea la definitiva\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0013 - Políticas y Procedimientos de Lugar de Trabajo Seguro (Obsoleto)",
+      "SP01.01.0013.0001 - Control de Lugar de Trabajo Seguro por Áreas de Negocio. (Obsoleto)",
+      "N/A RO216 - Los activos de información retirados no se resguardan en un lugar seguro\r\n",
+      "Rieso obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0007 - Registro Contable de Inversiones Temporales y sus Rendimientos (Obsoleto)",
+      "N/A RO253 - Los rendimientos y las retenciones son registradas en el sistema contable de manera errónea\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0007 - Registro Contable de Inversiones Temporales y sus Rendimientos (Obsoleto)",
+      "N/A RO254 - Los saldos de los estados de cuenta bancarios no coinciden con los saldos de registros contables\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.10 - Contabilidad",
+      "P01.10.0001 - Procedimiento para Determinar el Cálculo de Cuotas IPAB",
+      "SP01.10.0001.0001 - Proceso de las Cuotas IPAB Previas y Definitivas, Metodología Descrita en el Anexo 1 de la Ley del IPAB",
+      "N/A RO294 - En el llenado del archivo de saldos diarios de operaciones pasivas ya que es elaborado de forma manual por una persona\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0014 - Políticas y Procedimientos de Monitoreo y Revisión de Bitácoras (Obsoleto)",
+      "SP01.01.0014.0001 - Revisión de Bitácoras. (Obsoleto)",
+      "N/A RO223 - La documentación electrónica archivada de cada procedimiento no se encuentra respaldada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0046 - Manual de Políticas y Procedimientos para la Asignación y Reembolso del Fondo Revolvente (Obsoleto)",
+      "SP01.06.0046.0001 - Procedimiento de anticipo, comprobación y reembolso de fondo (Obsoleto)",
+      "N/A RO383 - La solicitud de autorización no lleve la firma del jefe inmediato\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO410 - Seleccionar candidatos sin cubrir el perfil del puesto\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0002 - Solicitud de Uso de Llave o Cuenta. (Obsoleto)",
+      "N/A RO179 - Elabora el cálculo del VPN con datos incorrectos sin validarlos previamente con el Gerente de Convenios\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0013 - Políticas y Procedimientos de Lugar de Trabajo Seguro (Obsoleto)",
+      "SP01.01.0013.0002 - Control de Lugar de Trabajo Seguro por Gerencia de Contraloría de Seguridad de la Información. (Obsoleto)",
+      "N/A RO219 - Los activos de información retirados no se resguardan en un lugar seguro\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0014 - Políticas y Procedimientos de Monitoreo y Revisión de Bitácoras (Obsoleto)",
+      "SP01.01.0014.0002 - Escalamiento. (Obsoleto)",
+      "N/A RO225 - La documentación archivada de cada proceso no se encuentra en resguardo seguro\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0006 - Registro Contable de Financiamiento No Bancario y sus Intereses (Obsoleto)",
+      "N/A RO228 - El registro contable del Financiamiento Externo no Bancario no corresponde con lo reflejado en los estados de cuenta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0007 - Registro Contable de Inversiones Temporales y sus Rendimientos (Obsoleto)",
+      "N/A RO252 - Se incurre en errores de registros contables referentes a la inversión realizada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0026 - Determinación y Registro de la Provisión de ISR Diferido (Obsoleto)",
+      "N/A RO270 - Se ha realizado un cálculo erróneo del ISR diferido\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0004 - Baja de grupos, roles y perfiles. (Obsoleto)",
+      "N/A RO211 - La documentación archivada de cada procedimiento no se encuentra respaldada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0017 - Solicitud, Emisión y Registro Contable de la facturación a Partes Relacionadas y a Terceros de Reembolsos de Gastos (Obsoleto)",
+      "N/A RO235 - La información contenida en la solicitud de facturación es incorrecta, repercutiendo en la emisión de una factura con datos erróneos\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.22 - Planeación y Desarrollo Comercial",
+      "P01.22.0001 - Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial",
+      "SP01.22.0001.0009 - Proceso del programa ganadores",
+      "N/A RO352 - Al no realizar el diferido no se podría pasar a pago la factura por lo que no se podría pagar al proveedor el servicio ofrecido\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.22 - Planeación y Desarrollo Comercial",
+      "P01.22.0001 - Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial",
+      "SP01.22.0001.0009 - Proceso del programa ganadores",
+      "N/A RO353 - No enviar esta información afectaría al área de finanzas ya que no tendrían el control de los gastos y no podrían ellos emitir reportes mensuales\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0017 - Solicitud, Emisión y Registro Contable de la facturación a Partes Relacionadas y a Terceros de Reembolsos de Gastos (Obsoleto)",
+      "N/A RO582 - Los saldos finales de las facturas y del concentrado en Excel no corresponde\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO631 - La no transmisión de los archivos a CECOBAN o la transmisión de los archivos fuera de los horarios establecidos.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO632 - Que el cliente no coincida con los registros de la base de datos\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO637 - Que la firma del cliente no coincida con la de la documentación oficial\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0007 - Proceso para la emisión de Estado de Cuenta en Sucursal",
+      "N/A RO634 - Que la firma del cliente no coincida con la de la documentación oficial\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO649 - No contar con los insumos o reporteria requerida\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0001 - Alta y Cambio de Usuario. (Obsoleto)",
+      "N/A RO198 - Durante la ejecución del alta o cambio de usuario, otorgar privilegios diferentes a los requeridos para las funciones del Colaborador\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.11 - Sistemas",
+      "P01.11.0005 - Plan de Recuperación en Caso de Desastre (DRP)",
+      "SP01.11.0005.0002 - Proceso actividades a realizar durante el desastre y regreso al SITE principal",
+      "N/A RT04 - Cambios en Sistemas que afecten el DRP o posterior\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.10 - Contabilidad",
+      "P01.10.0001 - Procedimiento para Determinar el Cálculo de Cuotas IPAB",
+      "SP01.10.0001.0001 - Proceso de las Cuotas IPAB Previas y Definitivas, Metodología Descrita en el Anexo 1 de la Ley del IPAB",
+      "N/A RO297 - La información que sirve para llenar el reporte puede tener errores o puede ser tomada de campos erróneos, esto al ser una carga manual\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO758 - Seleccionar candidatos sin cubrir el perfil del puesto\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0006 - Proceso para el alta de Personal",
+      "N/A RO759 - Incumplimiento de políticas al dar de alta personal que no cumple con los requisitos solicitados por la Institución\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO762 - No enviar la lista de asistencia, reporte de capacitación y cédula de certificación en los casos que corresponda\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO761 - No enviar la lista de asistencia, reporte de capacitación y cédula de certificación en los casos que corresponda\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.11 - Sistemas",
+      "P01.11.0005 - Plan de Recuperación en Caso de Desastre (DRP)",
+      "SP01.11.0005.0002 - Proceso actividades a realizar durante el desastre y regreso al SITE principal",
+      "N/A RT03 - No conocer los pasos llevados a cabo\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0002 - Procedimiento de Solicitud de Reembolso de Viáticos (Obsoleto)",
+      "N/A RO781 - Que la solicitud no se revise correctamente y se realice el depósito a otra cuenta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO760 - No verificar el catálogo de promotores\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO763 - No enviar la lista de asistencia, reporte de capacitación y cédula de certificación en los casos que corresponda\r\n",
+      "Riesgo obsoleto por cambios en el reporte"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO61 - No cumplir con el plan de trabajo acordado lo que implica retrasos en la operación y gastos de la Institución\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO765 - No cumplir con el plan de trabajo acordado lo que implica retrasos en la operación y gastos de la Institución\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0006 - Revisión de facultades. (Obsoleto)",
+      "N/A RO213 - La documentación archivada de cada procedimiento no se encuentra en resguardo seguro\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0014 - Políticas y Procedimientos de Monitoreo y Revisión de Bitácoras (Obsoleto)",
+      "SP01.01.0014.0002 - Escalamiento. (Obsoleto)",
+      "N/A RO224 - No se cuenta con el apoyo por parte de las áreas del negocio para la atención y respuesta a las desviaciones identificadas durante la revisión\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0002 - Manual de Políticas y Procedimientos de Tesorería y Planeación Financiera",
+      "SP01.06.0002.0008 - Proceso para la elaboración de Presupuesto",
+      "N/A RO6 - Solicitar reclasificaciones al área de cuentas por pagar de gastos sin revisar el concepto de estos\r\n",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO55 - No verificar el catálogo de promotores\r\n",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO764 - No cumplir con el plan de trabajo acordado lo que implica retrasos en la operación y gastos de la Institución\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0013 - Registro Contable de la Adquisición y Depreciación de Activo Fijo (Obsoleto)",
+      "N/A RO257 - La depreciación no está calculada de manera correcta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0005 - Registro Contable de Financiamiento Bancario y sus Intereses (Obsoleto)",
+      "N/A RO243 - El Reporte Global de Fondeos no corresponde con las cifras reflejadas en los registros contables\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0014 - Registro Contable de la Adquisición y Amortización de Activos Intangibles (Obsoleto)",
+      "N/A RO232 - La depreciación no está calculada de manera correcta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0039 - Procedimiento de Generación, Integración y Entrega del Reporte de Operaciones en Efectivo en Moneda Nacional (OEMN)",
+      "SP01.06.0039.0001 - Proceso para la generación, integración y entrega del reporte de operaciones en efectivo en moneda nacional (OEMN)",
+      "N/ARO946 - Integración del Reporte Regulatorio con errores en la información.",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0026 - Procedimiento para la Elaboración y Envío de los Reportes Regulatorios A-0411, A-0415, A-0417, A-0419, A-0420 Y A-0424",
+      "SP01.06.0026.0001 - Proceso para la Elaboración y Envío de los Reportes A-0411, A-0415, A-0417, A-0419, A-0420 y A-0424",
+      "N/ARO866 - Integración del Reporte Regulatorio con errores en la información.",
+      "Riesgo obsoleto por cambio en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0046 - Manual de Políticas y Procedimientos para la Asignación y Reembolso del Fondo Revolvente (Obsoleto)",
+      "SP01.06.0046.0002 - Procedimiento de Solicitud de Fondo Revolvente (Obsoleto)",
+      "N/ARO687 - Retraso en liberación de recursos y retardar los procesos operativos de la sucursal",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0025 - Determinación y Registro de la Provisión de ISR Causado (Obsoleto)",
+      "N/ARO264 - Los saldos para comisionistas no corresponden con los movimientos de las cédulas",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0012 - Registro Contable del diferimiento de Gastos Financieros (Obsoleto)",
+      "N/ARO256 - Los plazos y los montos han sido ingresados de manera incorrecta en las pólizas contables",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0005 - Registro Contable de Financiamiento Bancario y sus Intereses (Obsoleto)",
+      "N/A RO244 - El registro contable del Financiamiento Bancario no corresponde con lo reflejado en los estados de cuenta\r\n",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0013 - Registro Contable de la Adquisición y Depreciación de Activo Fijo (Obsoleto)",
+      "N/A RO231 - No se reporte una compra de activo fijo\r\n",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0046 - Manual de Políticas y Procedimientos para la Asignación y Reembolso del Fondo Revolvente (Obsoleto)",
+      "SP01.06.0046.0001 - Procedimiento de anticipo, comprobación y reembolso de fondo (Obsoleto)",
+      "N/A RO322 - La solicitud de autorización no lleve la firma del jefe inmediato\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0019 - Elaboración y Emisión de Estados Financieros Versión CNBV Trimestrales (Obsoleto)",
+      "N/A RO417 - No recibir autorización y validación del flujo de efectivo y variaciones de capital\r\n",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO638 - Que el expediente no se encuentre en la BBDD\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0001 - Alta y Cambio de Usuario. (Obsoleto)",
+      "N/A RO200 - La documentación archivada de cada proceso no se encuentra en resguardo seguro\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0002 - Alta y Cambio de Grupos, Roles y Perfiles. (Obsoleto)",
+      "N/A RO203 - Falta de segregación de funciones en los grupos, roles y perfiles creados\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0001 - Alta de Llave o Cuenta (Obsoleto)",
+      "N/A RO172 - La contraseña generada en control dual (Seguridad de la Información y Sistemas) y resguardada en sobres, no es la misma que se encuentra en el sistema de información\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0003 - Proceso de contratación en Corporativo",
+      "N/A RO30 - No validar el presupuesto y estructura organizacional autorizada",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0019 - Elaboración y Emisión de Estados Financieros Versión CNBV Trimestrales (Obsoleto)",
+      "N/A RO260 - La información del estado trimestral es incorrecta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.10 - Contabilidad",
+      "P01.10.0001 - Procedimiento para Determinar el Cálculo de Cuotas IPAB",
+      "SP01.10.0001.0001 - Proceso de las Cuotas IPAB Previas y Definitivas, Metodología Descrita en el Anexo 1 de la Ley del IPAB",
+      "N/A RO298 - Inconsistencias en el llenado del archivo de saldos diarios de operaciones pasivas ya que es elaborado de forma manual por una persona, lo cual podría hacernos merecedores de multas\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0026 - Procedimiento para la Elaboración y Envío de los Reportes Regulatorios A-0411, A-0415, A-0417, A-0419, A-0420 Y A-0424",
+      "SP01.06.0026.0001 - Proceso para la Elaboración y Envío de los Reportes A-0411, A-0415, A-0417, A-0419, A-0420 y A-0424",
+      "N/A RO868 - Ausencia de validación de la información, en la integración del reporte regulatorio.",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0032 - Coordinación de Precios de Transferencia (Obsoleto)",
+      "N/A RO279 - Proporcionar información incongruente a Consultora que elaborará estudio de precios de transferencia\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0039 - Procedimiento de Generación, Integración y Entrega del Reporte de Operaciones en Efectivo en Moneda Nacional (OEMN)",
+      "SP01.06.0039.0001 - Proceso para la generación, integración y entrega del reporte de operaciones en efectivo en moneda nacional (OEMN)",
+      "N/ARO945 - Falta de calidad o consistencia en la información contenida en reportes regulatorios.",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0020 - Elaboración y Emisión de Estados Financieros Consolidados e Individuales Versión Consejo (Obsoleto)",
+      "N/A RO418 - No validar la información de las reservas\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.11 - Sistemas",
+      "P01.11.0005 - Plan de Recuperación en Caso de Desastre (DRP)",
+      "SP01.11.0005.0002 - Proceso actividades a realizar durante el desastre y regreso al SITE principal",
+      "N/ART07 - No contemos con la información respaldada durante la contingencia",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0009 - Proceso para baja de personal Voluntaria",
+      "N/ARO74 - No realizar la suspensión o baja y continuar pagando sueldo",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0001 - Alta y Cambio de Usuario. (Obsoleto)",
+      "N/A RO201 - La documentación archivada de cada procedimiento no se encuentra respaldada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO389 - No validar los adeudos del empleado y comprobaciones pendientes y autorizar el pago\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0030 - Proceso de certificación Normativa",
+      "N/ARO65 - Personal no capacitado lo que ocasiona reprocesos y rechazos de las solicitudes de los clientes",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO392 - Ingresar una póliza con datos incorrectos\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO56 - No verificar el domicilio de las sedes vía telefónica con el Gerente de la OAAP y realizar la logística para la capacitación",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0046 - Manual de Políticas y Procedimientos para la Asignación y Reembolso del Fondo Revolvente (Obsoleto)",
+      "SP01.06.0046.0001 - Procedimiento de anticipo, comprobación y reembolso de fondo (Obsoleto)",
+      "N/A RO384 - La solicitud de autorización no lleve la firma del jefe inmediato\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.22 - Planeación y Desarrollo Comercial",
+      "P01.22.0001 - Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial",
+      "SP01.22.0001.0009 - Proceso del programa ganadores",
+      "N/A RO348 - Al no generar esta información no se tendrían datos para la carga de monedas a los participantes\r\n",
+      "Riesgo obsoleto por cambos en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO644 - Que la anulación de la transacción no pueda aplicarse en sucursal\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.14 - Subdirección de Desarrollo y Gestión Estratégica",
+      "P01.14.0001 - Manual de Políticas y Procedimientos de la Subdirección de Desarrollo y Gestión Estratégica (OBSOLETO, se sustituye por el Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial)",
+      "SP01.14.0001.0001 - Proceso de alta de oficinas administrativas con atención al público (OAAP)",
+      "N/A - Imposibilidad de realizar operaciones de manera regular en las instalaciones primarias corporativas por amenazas naturales en el entorno (p. ej. incendio, terremoto, derrumbe, tornado, huracán e inundación)\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.14 - Subdirección de Desarrollo y Gestión Estratégica",
+      "P01.14.0001 - Manual de Políticas y Procedimientos de la Subdirección de Desarrollo y Gestión Estratégica (OBSOLETO, se sustituye por el Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial)",
+      "SP01.14.0001.0001 - Proceso de alta de oficinas administrativas con atención al público (OAAP)",
+      "N/A - Imposibilidad de realizar operaciones de manera regular en las instalaciones primarias corporativas por amenazas tecnológicas en el entorno (p. ej. fallas eléctricas)\r\n",
+      "Riesgo obsoleto por cambios en el proceso "
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0030 - Proceso de certificación Normativa",
+      "N/A RO64 - El participante no se certifique dentro del período asignado\r\n",
+      "Riesgo obsoleto por cambos en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0001 - Registro Contable de Originación Diaria de Créditos de Consumo sin Destino Específico (Obsoleto)",
+      "N/A RO250 - La salida de bancos no coincide con el reporte de dispersión, incurriendo en información contable errónea\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0025 - Determinación y Registro de la Provisión de ISR Causado (Obsoleto)",
+      "N/A RO261 - La cédula de Activo Fijo no corresponde con las cédulas fiscales\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0027 - Determinación y Registro de pagos Provisionales de ISR (Obsoleto)",
+      "N/A RO272 - El cálculo de pagos provisionales de ISR es incorrecto\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0001 - Alta de Llave o Cuenta (Obsoleto)",
+      "N/A RO172 - La información proporcionada por las áreas contables al despacho de Auditoría Externa sufre cambios posteriores a su entrega, o esta no es correcta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0030 - Elaboración y envío del Dictamen Fiscal (SIPRED)Información Alternativa de Dictamen (SIPIAD) (Obsoleto)",
+      "N/A RO276 - Las observaciones hechas por auditoría externa no fueron corregidas mediante el plan de acción para la siguiente auditoría.\r\n",
+      "Riesgo obsoleto por cambios en el proceso "
+    ],
+    [
+      "MP01.10 - Contabilidad",
+      "P01.10.0001 - Procedimiento para Determinar el Cálculo de Cuotas IPAB",
+      "SP01.10.0001.0001 - Proceso de las Cuotas IPAB Previas y Definitivas, Metodología Descrita en el Anexo 1 de la Ley del IPAB",
+      "N/A RO779 - La información que sirve para llenar el reporte puede tener errores o puede ser tomada de campos erróneos, esto al ser una carga manual\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0013 - Manual de Políticas y Procedimientos del Área de Finanzas",
+      "SP01.06.0013.0016 - Proceso del Cálculo y Registro Contable del Diferimiento del Sobreprecio y de los Gastos de Originación",
+      "N/A RO1088 - Las pólizas procesadas en automático del registro del diferido de gastos de originación, no son correctas\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.14 - Subdirección de Desarrollo y Gestión Estratégica",
+      "P01.14.0001 - Manual de Políticas y Procedimientos de la Subdirección de Desarrollo y Gestión Estratégica (OBSOLETO, se sustituye por el Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial)",
+      "SP01.14.0001.0001 - Proceso de alta de oficinas administrativas con atención al público (OAAP)",
+      "N/A - Pérdida de la información de los sistemas por amenazas naturales en el entorno (p. ej. incendio, terremoto, derrumbe, tornado, huracán e inundación)\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.14 - Subdirección de Desarrollo y Gestión Estratégica",
+      "P01.14.0001 - Manual de Políticas y Procedimientos de la Subdirección de Desarrollo y Gestión Estratégica (OBSOLETO, se sustituye por el Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial)",
+      "SP01.14.0001.0001 - Proceso de alta de oficinas administrativas con atención al público (OAAP)",
+      "N/A - Pérdida de la información de los sistemas por amenazas tecnológicas en el entorno (p. ej. fallas eléctricas)\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor SACCA (Proveedor Sergio Monzón)\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Prosa\r\n",
+      "Resgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Vector\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Nomina para validar\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Banxico\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO37 - No validar la documentación del candidato",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO33 - No validar la plantilla productiva autorizada",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor IPAB\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor IPAB\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor CNBV\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0030 - Elaboración y envío del Dictamen Fiscal (SIPRED)Información Alternativa de Dictamen (SIPIAD) (Obsoleto)",
+      "N/A RO315 - Términos contractuales incorrectos en la elaboración de Carta Arreglo",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Falta de segregación de funciones en personal responsable de capturar y autorizar la orden de transferencia solicitada por el cliente, en sistema ABT Teller o ICBS, causando errores o duplicidades en la operación\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - cotejar o comprobar incorrectamente la documentación de la orden de transferencia SPEI de los titulares de la cuenta, provocando que la orden se opere a otra cuenta distinta a la del solicitante, o realizar el cargo a cuenta incorrecta.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0002 - Solicitud de Uso de Llave o Cuenta. (Obsoleto)",
+      "N/A RO178 - Entregar información incompleta y extemporánea",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - cotejar o comprobar incorrectamente la documentación de la orden de transferencia SPEI del cliente, provocando que la orden se opere a otra cuenta distinta a la del solicitante, o realizar el cargo a cuenta incorrecta.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Envío de recursos a un proveedor no aprobado por el titular de la cuenta por no cumplir con una adecuada autentificación del cliente, incumpliendo con el marco normativo, lo cual podría ocasionar un quebranto.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Praxis\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Afrontar insuficiencia en la capacidad de almacenamiento en los servidores y/o que fallen los componentes mínimos de seguridad de las máquinas de dichos servidores asignados para la operación de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Exposición a vulnerabilidades a causa de hackeo o virus, y afecte la operación de los servidores de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Afrontar insuficiencia en la capacidad de almacenamiento en los servidores y/o que fallen los componentes mínimos de seguridad de las máquinas de dichos servidores asignados para la operación de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Afrontar insuficiencia en la capacidad de almacenamiento en los servidores y/o que fallen los componentes mínimos de seguridad de las máquinas de dichos servidores asignados para la operación de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Exposición a vulnerabilidades a causa de hackeo o virus, y afecte la operación de los servidores de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Exposición a vulnerabilidades a causa de hackeo o virus, y afecte la operación de los servidores de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Afrontar insuficiencia en la capacidad de almacenamiento en los servidores y/o que fallen los componentes mínimos de seguridad de las máquinas de dichos servidores asignados para la operación de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Error en la cuenta destino\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0011 - Registro Contable del Diferimiento de Gastos de Originación Incurridos con Anterioridad a la Implementación del esquema de Sobreprecio (Obsoleto)",
+      "N/A RO293 - Que el Analista de Operaciones realiza las bonificaciones sin contar con el visto bueno de otra área u otra persona que disperse los montos bonificados",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0028 - Determinación y Registro de pagos Definitivos Mensuales de IVA (Obsoleto)",
+      "N/A RO312 - Los registros contables del IVA acreditado no corresponden con los cálculos internos",
+      "Registro obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Falta de segregación de funciones en personal responsable de capturar y autorizar la orden de transferencia solicitada por el cliente, en sistema ABT Teller o ICBS, causando errores o duplicidades en la operación\r\n",
+      "Riesgo obsoleto por cambios en el proceso "
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Que algún crédito no se haya enviado al sistema de dispersión RP o que una operación vía spei se haya devuelto y no se haya reversado el asiento original\r\n",
+      "Riesgo obsoleto por cambios en el proceso "
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0002 - Alta y Cambio de Grupos, Roles y Perfiles. (Obsoleto)",
+      "N/A RO204 - La documentación archivada de cada procedimiento no se encuentra respaldada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0014 - Registro Contable de la Adquisición y Amortización de Activos Intangibles (Obsoleto)",
+      "N/A RO233 - El activo intangible se ha catalogado en una clasificación que no le corresponde en el sistema contable\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0025 - Determinación y Registro de la Provisión de ISR Causado (Obsoleto)",
+      "N/A RO263 - Las integraciones refertes al Impuesto Sobre la Renta no corresponden a las integraciones contables\r\n",
+      "Riesgo obsoleto por cambios en el proceso "
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0025 - Determinación y Registro de la Provisión de ISR Causado (Obsoleto)",
+      "N/A RO268 - La conciliación contable y la póliza de provisión no coinciden\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0006 - Proceso para el alta de Personal",
+      "N/A RO772 - No realizar los cambios de personal en los Sistemas SAC y SAP lo que genera desviaciones en el pago de comisiones\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Capturar erróneamente los datos del beneficiario de la transferencia electrónica del cliente en el sistema ABT Teller, lo cual podría ocasionar contratiempos, e incluso que no se pueda recuperar los recursos además de algún impacto reputacional.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Exposición a vulnerabilidades a causa de hackeo o virus, y afecte la operación de los servidores de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0005 - Registro Contable de Financiamiento Bancario y sus Intereses (Obsoleto)",
+      "N/A RO553 - El registro contable de los intereses devengados del mes, son incorrectos.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0005 - Registro Contable de Financiamiento Bancario y sus Intereses (Obsoleto)",
+      "N/A RO554 - Los saldos de los estados de cuenta bancarios no coinciden con los saldos de registros contables\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0013 - Manual de Políticas y Procedimientos del Área de Finanzas",
+      "SP01.06.0013.0016 - Proceso del Cálculo y Registro Contable del Diferimiento del Sobreprecio y de los Gastos de Originación",
+      "N/A RO569 - Las pólizas por procesar no se encuentran registradas en su totalidad en el sistema contable\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0013 - Políticas y Procedimientos de Lugar de Trabajo Seguro (Obsoleto)",
+      "SP01.01.0013.0002 - Control de Lugar de Trabajo Seguro por Gerencia de Contraloría de Seguridad de la Información. (Obsoleto)",
+      "N/A RO218 - No se cuenta con un listado de software institucional para la revisión de equipos de cómputo\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0017 - Solicitud, Emisión y Registro Contable de la facturación a Partes Relacionadas y a Terceros de Reembolsos de Gastos (Obsoleto)",
+      "N/A RO581 - La información contenida en la solicitud de facturación es incorrecta, repercutiendo en la emisión de una factura con datos erróneos\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Circulo de crédito\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0026 - Procedimiento para la Elaboración y Envío de los Reportes Regulatorios A-0411, A-0415, A-0417, A-0419, A-0420 Y A-0424",
+      "SP01.06.0026.0001 - Proceso para la Elaboración y Envío de los Reportes A-0411, A-0415, A-0417, A-0419, A-0420 y A-0424",
+      "N/A RO867 - Pérdidas derivadas del incumplimiento de la normativa",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.11 - Sistemas",
+      "P01.11.0011 - Procedimiento apertura, baja y cambio de convenios (Obsoleto)",
+      "SP01.11.0011.0001 - Procedimiento Apertura de un Nuevo Convenio (Obsoleto)",
+      "N/A RO182 - Verificación de la personalidad del funcionario facultado para firma de Convenio (Toma de nota, poderes, identificación, etc.).",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0025 - Determinación y Registro de la Provisión de ISR Causado (Obsoleto)",
+      "N/A RO265 - La cédula de movimientos presenta información errónea en relación con la cuenta de balance\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0029 - Elaboración y Envío de la Declaración Informativa de Operaciones con Terceros (DIOT) (Obsoleto)",
+      "N/A RO274 - El cálculo y la información base para la elaboración de la DIOT es incorrecta o mal clasificada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0005 - Registro Contable de Financiamiento Bancario y sus Intereses (Obsoleto)",
+      "N/A RO548 - El Reporte Global de Fondeos no corresponde con las cifras reflejadas en los registros contables para el financiamiento externo no bancario\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor CNBV\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor KARPAY",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.07 - Capital Humano",
+      "P01.07.0002 - Manual de Políticas y Procedimientos de Capital Humano",
+      "SP01.07.0002.0005 - Proceso para la Administración de Boletos de Comedor",
+      "N/A RO44 - Falta de control de las tarjetas asignadas al personal",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.07 - Capital Humano",
+      "P01.07.0002 - Manual de Políticas y Procedimientos de Capital Humano",
+      "SP01.07.0002.0005 - Proceso para la Administración de Boletos de Comedor",
+      "N/A RO45 - Importe de depósito de vales distinto al establecido en las políticas internas",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0045 - Procedimiento para la generación, integración y entrega del reporte regulatorio R14",
+      "SP01.06.0045.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R14",
+      "N/A RO897 - Manipulación de la información durante la elaboración del Reporte Regulatorio",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Afectar la cuenta del cliente por la ejecución inadecuada de sus instrucciones de transferencias de entrada o salida sin correspondencia en nuestros sistemas, pudiendo representar posibles quebrantos.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor ALFA Send\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0001 - Alta de Llave o Cuenta (Obsoleto)",
+      "N/A RO176 - La documentación electrónica archivada de cada procedimiento no se encuentra respaldada\r\n",
+      "riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor VYOND\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Deloitte\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Imposibilidad del personal responsable operación SPEI de asistir de manera regular a las instalaciones operativas principales por situaciones de causa natural, social, política o TI, por lo que la entidad podría negar el servicio a sus clientes",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor CNBV\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Capturar intencionalmente otros datos diferentes al beneficiario en el sistema Karpay, lo que podría ocasionar no recuperar los fondos e impacto reputacional.",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Exposición a vulnerabilidades a causa de hackeo o virus, y afecte la operación de los servidores de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor CNBV",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Exposición a vulnerabilidades a causa de hackeo o virus, y afecte la operación de los servidores de SPEI.",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Afrontar insuficiencia en la capacidad de almacenamiento en los servidores y/o que fallen los componentes mínimos de seguridad de las máquinas de dichos servidores asignados para la operación de SPEI.",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0043 - Procedimiento para la generación, integración y entrega del reporte regulatorio R32",
+      "SP01.06.0043.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R32",
+      "N/A RO1043 - Manipulación de la información durante la elaboración del Reporte Regulatorio",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0009 - Procedimiento para la generación, integración y entrega del reporte regulatorio R07",
+      "SP01.06.0009.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R07",
+      "N/A RO1031 - Falta de calidad o consistencia en la información contenida en reportes regulatorios.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0045 - Procedimiento para la generación, integración y entrega del reporte regulatorio R14",
+      "SP01.06.0045.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R14",
+      "N/A RO901 - Integración del Reporte Regulatorio con errores en la información.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0045 - Procedimiento para la generación, integración y entrega del reporte regulatorio R14",
+      "SP01.06.0045.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R14",
+      "N/A RO899 - Reporte Regulatorio enviado fuera del tiempo establecido y con información errónea.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Capturar erróneamente los datos del beneficiario de la transferencia electrónica del cliente en el sistema KarPay, lo cual podría ocasionar contratiempos, e incluso que no se pueda recuperar los recursos además de algún impacto reputacional.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Afrontar insuficiencia en la capacidad de almacenamiento en los servidores y/o que fallen los componentes mínimos de seguridad de las máquinas de dichos servidores asignados para la operación de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0001 - Alta y Cambio de Usuario. (Obsoleto)",
+      "N/A RO409 - No Aplica\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Banxico\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor TAEC",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Prosa",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0045 - Procedimiento para la generación, integración y entrega del reporte regulatorio R14",
+      "SP01.06.0045.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R14",
+      "N/A RO1036 - Falta de calidad o consistencia en la información contenida en reportes regulatorios.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0009 - Procedimiento para la generación, integración y entrega del reporte regulatorio R07",
+      "SP01.06.0009.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R07",
+      "N/A RO1029 - Manipulación de la información durante la elaboración del Reporte Regulatorio",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0045 - Procedimiento para la generación, integración y entrega del reporte regulatorio R14",
+      "SP01.06.0045.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R14",
+      "N/A RO1035 - Reporte Regulatorio enviado fuera del tiempo establecido y con información errónea.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0002 - Solicitud de Uso de Llave o Cuenta. (Obsoleto)",
+      "N/A RO220 - La documentación electrónica archivada de cada procedimiento no se encuentra respaldada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Exposición a vulnerabilidades a causa de hackeo o virus, y afecte la operación de los servidores de SPEI.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0026 - Determinación y Registro de la Provisión de ISR Diferido (Obsoleto)",
+      "N/A RO269 - No todas las cuentas de activo y pasivo han sido incluidas en el cálculo del ISR Diferido\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO320 - Que se acepten pagos que no se apegan a políticas\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO321 - Que se acepten pagos que no son políticas\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0005 - Registro Contable de Financiamiento Bancario y sus Intereses (Obsoleto)",
+      "N/A RO552 - El registro contable del Financiamiento Externo no Bancario no corresponde con lo reflejado en los estados de cuenta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Vector\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Banxico",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Spilbit\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Valmer",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Condusef",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Indeval",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.22 - Planeación y Desarrollo Comercial",
+      "P01.22.0001 - Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial",
+      "SP01.22.0001.0079 - Proceso solicitud de materiales publicitarios y de promoción",
+      "N/A - Incremento de morosidad y(o) pérdidas por cálculo erróneo en la modelación de capacidad de pago de clientes",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0002 - Proceso de Pago de Nómina Quincenal",
+      "N/A RO82 - No recabar la evidencia de la obligación patronal por pago de nómina",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0045 - Procedimiento para la generación, integración y entrega del reporte regulatorio R14",
+      "SP01.06.0045.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R14",
+      "N/A RO900 - Reporte Regulatorio enviado fuera del tiempo establecido y con información errónea.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0045 - Procedimiento para la generación, integración y entrega del reporte regulatorio R14",
+      "SP01.06.0045.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R14",
+      "N/A RO898 - Ausencia de validación de la información, en la integración del reporte regulatorio.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0043 - Procedimiento para la generación, integración y entrega del reporte regulatorio R32",
+      "SP01.06.0043.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R32",
+      "N/A RO1045 - Reporte Regulatorio enviado fuera del tiempo establecido y con información errónea.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0043 - Procedimiento para la generación, integración y entrega del reporte regulatorio R32",
+      "SP01.06.0043.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R32",
+      "N/A RO1044 - Ausencia de validación de la información, en la integración del reporte regulatorio.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0044 - Procedimiento para la generación, integración y entrega del reporte regulatorio R29",
+      "SP01.06.0044.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R29",
+      "N/A RO1041 - Falta de calidad o consistencia en la información contenida en reportes regulatorios.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0012 - Análisis de Impactos al Negocio (BIA)",
+      "SP01.02.0012.0001 - Proceso para la Elaboración, Aprobación y Actualización del Análisis de Impacto al Negocio",
+      "N/A - Retrasos en los procesos por fallo en la transmisión de datos y disrupción en servicios por parte del proveedor Banxico",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.14 - Subdirección de Desarrollo y Gestión Estratégica",
+      "P01.14.0001 - Manual de Políticas y Procedimientos de la Subdirección de Desarrollo y Gestión Estratégica (OBSOLETO, se sustituye por el Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial)",
+      "SP01.14.0001.0001 - Proceso de alta de oficinas administrativas con atención al público (OAAP)",
+      "N/A - Pérdida de la información de los sistemas por amenazas humanas en el entorno (p. ej. Terrorismo, amenaza de bomba, incendio provocado, huelga, vandalismo y desórdenes civiles)",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.14 - Subdirección de Desarrollo y Gestión Estratégica",
+      "P01.14.0001 - Manual de Políticas y Procedimientos de la Subdirección de Desarrollo y Gestión Estratégica (OBSOLETO, se sustituye por el Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial)",
+      "SP01.14.0001.0001 - Proceso de alta de oficinas administrativas con atención al público (OAAP)",
+      "N/A - Imposibilidad de realizar operaciones de manera regular en las instalaciones primarias corporativas por amenazas humanas en el entorno (p. ej. Terrorismo, amenaza de bomba, incendio provocado, huelga, vandalismo y desórdenes civiles)",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.14 - Subdirección de Desarrollo y Gestión Estratégica",
+      "P01.14.0001 - Manual de Políticas y Procedimientos de la Subdirección de Desarrollo y Gestión Estratégica (OBSOLETO, se sustituye por el Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial)",
+      "SP01.14.0001.0001 - Proceso de alta de oficinas administrativas con atención al público (OAAP)",
+      "N/A - Imposibilidad de realizar operaciones de manera regular en las instalaciones primarias corporativas por alerta sanitaria en el entorno (p. ej. amenaza de pandemia)",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Afrontar insuficiencia en la capacidad de almacenamiento en los servidores y/o que fallen los componentes mínimos de seguridad de las máquinas de dichos servidores asignados para la operación de SPEI.",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "N/A - Afrontar insuficiencia en la capacidad de almacenamiento en los servidores y/o que fallen los componentes mínimos de seguridad de las máquinas de dichos servidores asignados para la operación de SPEI.",
+      "Riesgo obsoleto por cambios en el registro"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0044 - Procedimiento para la generación, integración y entrega del reporte regulatorio R29",
+      "SP01.06.0044.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R29",
+      "N/A RO1038 - Manipulación de la información durante la elaboración del Reporte Regulatorio",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0045 - Procedimiento para la generación, integración y entrega del reporte regulatorio R14",
+      "SP01.06.0045.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R14",
+      "N/A RO1034 - Ausencia de validación de la información, en la integración del reporte regulatorio.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0045 - Procedimiento para la generación, integración y entrega del reporte regulatorio R14",
+      "SP01.06.0045.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R14",
+      "N/A RO1033 - Manipulación de la información durante la elaboración del Reporte Regulatorio",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0009 - Procedimiento para la generación, integración y entrega del reporte regulatorio R07",
+      "SP01.06.0009.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R07",
+      "N/A RO1030 - Reporte Regulatorio enviado fuera del tiempo establecido y con información errónea.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0030 - Elaboración y envío del Dictamen Fiscal (SIPRED)Información Alternativa de Dictamen (SIPIAD) (Obsoleto)",
+      "N/A RO314 - La posible selección de un despacho que no cumpla con la expectativas o condiciones mínimas que sean requeridas por la compañía.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0039 - Procedimiento de Generación, Integración y Entrega del Reporte de Operaciones en Efectivo en Moneda Nacional (OEMN)",
+      "SP01.06.0039.0001 - Proceso para la generación, integración y entrega del reporte de operaciones en efectivo en moneda nacional (OEMN)",
+      "N/A RO943 - Ausencia de validación de la información, en la integración del reporte regulatorio.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0039 - Procedimiento de Generación, Integración y Entrega del Reporte de Operaciones en Efectivo en Moneda Nacional (OEMN)",
+      "SP01.06.0039.0001 - Proceso para la generación, integración y entrega del reporte de operaciones en efectivo en moneda nacional (OEMN)",
+      "N/A RO942 - Manipulación de la información durante la elaboración del Reporte Regulatorio",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0047 - Procedimiento para Determinar el Cálculo de Coeficiente de Cobertura de Liquidez (OBSOLETO)",
+      "SP01.06.0047.0001 - Proceso para el cálculo de coeficiente de cobertura de liquidez (Obsoleto)",
+      "N/A RO819 - Reporte Regulatorio enviado fuera del tiempo establecido y con información errónea.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0047 - Procedimiento para Determinar el Cálculo de Coeficiente de Cobertura de Liquidez (OBSOLETO)",
+      "SP01.06.0047.0001 - Proceso para el cálculo de coeficiente de cobertura de liquidez (Obsoleto)",
+      "N/A RO817 - Manipulación de la información durante la elaboración del Reporte Regulatorio",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO577 - Manipulación de la información durante la elaboración del Reporte Regulatorio",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0047 - Procedimiento para Determinar el Cálculo de Coeficiente de Cobertura de Liquidez (OBSOLETO)",
+      "SP01.06.0047.0001 - Proceso para el cálculo de coeficiente de cobertura de liquidez (Obsoleto)",
+      "N/A RO820 - Falta de calidad o consistencia en la información contenida en reportes regulatorios.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0003 - Cambio de Llaves y Cuentas Programados. (Obsoleto)",
+      "N/A RO184 - Realizar registros incorrectos de los asuntos en la Relación de Juicios y Contingencia\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.03 - Crédito",
+      "P01.03.0002 - Manual de Políticas y Procedimientos de Tarjeta de Crédito",
+      "SP01.03.0002.0032 - Proceso Quality Control (Obsoleto)",
+      "N/A RO290 - Al bloquear inadecuadamente una cuenta y afecte al cliente que desea hacer uso de su tarjeta y no sabía que esta está bloqueada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0005 - Registro Contable de Financiamiento Bancario y sus Intereses (Obsoleto)",
+      "N/A RO245 - Los saldos de los estados de cuenta no coinciden con los saldos de registros contables\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0002 - Alta y Cambio de Grupos, Roles y Perfiles. (Obsoleto)",
+      "N/A RO212 - El archivo “Perfiles_Roles_Grupos y Aplicaciones no coincide con los perfiles y roles activos y dados de baja en los sistemas de información\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0007 - Proceso de Pago de Nómina Semanal",
+      "N/A RO79 - Pagar comisiones menores a las generadas\r\n",
+      "Riesgo obsoleto por cambios en el sistema"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0007 - Proceso de Pago de Nómina Semanal",
+      "N/A RO79 - Pagar comisiones menores a las generadas\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0002 - Manual de Políticas y Procedimientos de Tesorería y Planeación Financiera",
+      "SP01.06.0002.0008 - Proceso para la elaboración de Presupuesto",
+      "N/A RO5 - No informar de las desviaciones encontradas en el presupuesto vs real ejercido a las áreas correspondientes\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0006 - Registro Contable de Financiamiento No Bancario y sus Intereses (Obsoleto)",
+      "N/A RO227 - El Reporte Global de Fondeos no corresponde con las cifras reflejadas en los registros contables para el financiamiento externo no bancario\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0008 - Elaboración de Conciliaciones Bancarias de Bancos (Obsoleto)",
+      "N/A RO249 - Cheques emitidos por el banco son clasificados en una cuenta que no corresponde\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.22 - Planeación y Desarrollo Comercial",
+      "P01.22.0001 - Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial",
+      "SP01.22.0001.0079 - Proceso solicitud de materiales publicitarios y de promoción",
+      "No Aplica - Imposibilidad de ejecución de labores, causando pérdidas o costo de oportunidad por fallos en plataforma BI",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0004 - Baja de grupos, roles y perfiles. (Obsoleto)",
+      "N/A RO210 - Falta de baja de grupo, rol y/o perfil\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0006 - Revisión de facultades. (Obsoleto)",
+      "N/A RO214 - La documentación archivada de cada procedimiento no se encuentra respaldada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0002 - Registro Contable de Transaccionalidad Diaria de Cartera de Créditos de Consumo sin Destino Específico (Obsoleto)",
+      "N/A RO415 - Dar de alta una cuenta contable en una clasificación incorrecta",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0026 - Procedimiento para la Elaboración y Envío de los Reportes Regulatorios A-0411, A-0415, A-0417, A-0419, A-0420 Y A-0424",
+      "SP01.06.0026.0001 - Proceso para la Elaboración y Envío de los Reportes A-0411, A-0415, A-0417, A-0419, A-0420 y A-0424",
+      "N/A RO869 - Reporte Regulatorio enviado fuera del tiempo establecido y con información errónea.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0013 - Manual de Políticas y Procedimientos del Área de Finanzas",
+      "SP01.06.0013.0025 - Proceso para la Elaboración y Emisión de Estados Financieros Consolidados e Individuales Versión Consejo",
+      "N/A RO1102 - Las cuentas contables están agrupadas de manera incorrecta, conteniendo incongruencias en la información presentada",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "No Aplica - Omitir registros con incidencia o sin correspondencia de acuerdo a la fecha de liquidación, lo cual podría afectar las cuentas de los clientes y un impacto reputacional.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0001 - Alta de Llave o Cuenta (Obsoleto)",
+      "N/A RO177 - La documentación física archivada de cada procedimiento no se encuentra respaldada\r\n",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0013 - Políticas y Procedimientos de Lugar de Trabajo Seguro (Obsoleto)",
+      "SP01.01.0013.0001 - Control de Lugar de Trabajo Seguro por Áreas de Negocio. (Obsoleto)",
+      "N/A RO215 - Falta de clasificación e identificación de los activos de información que contienen información restringida yo confidencial\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0011 - Proceso de elaboración del programa Institucional de capacitación",
+      "N/A RO57 - No enviar la lista de asistencia, reporte de capacitación y cédula de certificación en los casos que corresponda\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0032 - Manual de Políticas y Procedimientos del Sistema de Pagos Electrónicos Interbancarios (SPEI)",
+      "SP01.08.0032.0001 - Proceso para la captura de instrucciones manuales en el sistema Karpay",
+      "No Aplica - Enviar ordenes de pago por duplicado a los beneficiarios de nuestros clientes, derivado de una falla tecnológica, pudiendo ocasionar la no recuperación de los fondos e impacto reputacional.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0006 - Proceso para el alta de Personal",
+      "N/A RO71 - Realizar el alta promotores que rebasan el límite máximo de descuento INFONAVIT\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0003 - Manual de políticas y procedimientos de Recursos Humanos (Obsoleto)",
+      "SP01.06.0003.0009 - Proceso para baja de personal Voluntaria",
+      "N/A RO73 - No realizar la baja a empleados que tengan 60 días y continuar pagando las cuotas obrero patronales\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0003 - Baja de Usuario. (Obsoleto)",
+      "N/A RO208 - La documentación archivada de cada procedimiento no se encuentra respaldada\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.03 - Crédito",
+      "P01.03.0002 - Manual de Políticas y Procedimientos de Tarjeta de Crédito",
+      "SP01.03.0002.0032 - Proceso Quality Control (Obsoleto)",
+      "N/A RL06 - Incumplimiento en tiempo de entrega del Reporte Regulatorio R27\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.03 - Crédito",
+      "P01.03.0002 - Manual de Políticas y Procedimientos de Tarjeta de Crédito",
+      "SP01.03.0002.0032 - Proceso Quality Control (Obsoleto)",
+      "N/A RO718 - No cancelar la cuenta del cliente en los tiempos establecidos\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.22 - Planeación y Desarrollo Comercial",
+      "P01.22.0001 - Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial",
+      "SP01.22.0001.0009 - Proceso del programa ganadores",
+      "N/A RO350 - Al no recibir esta información no se sabría si las monedas asignadas por participantes son correctas y no se tendría el control de este programa\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO645 - Que los sellos no se encuentren completos y en buen estado\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO650 - Reportar de forma incorrecta el historial crediticio del cliente\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0047 - Procedimiento para Determinar el Cálculo de Coeficiente de Cobertura de Liquidez (OBSOLETO)",
+      "SP01.06.0047.0001 - Proceso para el cálculo de coeficiente de cobertura de liquidez (Obsoleto)",
+      "N/A RO705 - NO CUMPLIR EN TIEMPO Y FORMA CON EL ENVÍO DE INFORMACIÓN A BANCO DE MÉXICO\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0011 - Políticas y Procedimientos para la Administración de la Seguridad de la Información (Obsoleto)",
+      "SP01.01.0011.0001 - Alta y Cambio de Usuario. (Obsoleto)",
+      "N/A RO199 - La persona que llama al CAT para solicitar su contraseña no sea la dueña de la cuenta dada de alta\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0002 - Manual de Políticas y Procedimientos de Tesorería y Planeación Financiera",
+      "SP01.06.0002.0026 - Proceso para la conciliación Diaria de Dispersión (Obsoleto)",
+      "N/A RO18 - Activar créditos como comprados y el banco reporta el estatus de cancelados\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0001 - Alta de Llave o Cuenta (Obsoleto)",
+      "N/A RO172 - La contraseña generada en control dual (Seguridad de la Información y Sistemas) y resguardada en sobres, no es la misma que se encuentra en el sistema de información",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0032 - Coordinación de Precios de Transferencia (Obsoleto)",
+      "N/A RO280 - Que la información proporcionada en el borrador de Estudio de Precios de Transferencia no sea correcta\r\n",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0008 - Elaboración de Conciliaciones Bancarias de Bancos (Obsoleto)",
+      "N/A RO247 - Los registros contables no corresponden con los movimientos bancarios\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0027 - Determinación y Registro de pagos Provisionales de ISR (Obsoleto)",
+      "N/A RO273 - La cuenta bancaria a la que se realizó el pago de ISR no es la que corresponde\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO318 - La solicitud de autorización no sea la del jefe inmediato\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.11 - Sistemas",
+      "P01.11.0005 - Plan de Recuperación en Caso de Desastre (DRP)",
+      "SP01.11.0005.0002 - Proceso actividades a realizar durante el desastre y regreso al SITE principal",
+      "N/A RT06 - No conocer el estatus de los sistemas afectados\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.02 - Riesgos",
+      "P01.02.0001 - Manual Metodológico para la Administración Integral de Riesgos",
+      "SP01.02.0001.0005 - Proceso para modificar los límites de tolerancia",
+      "N/A RO701 - Que no se encuentre la persona del área involucrada encargada de emitir los comentarios relacionados a los límites a la exposición del riesgo.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0039 - Procedimiento de Generación, Integración y Entrega del Reporte de Operaciones en Efectivo en Moneda Nacional (OEMN)",
+      "SP01.06.0039.0001 - Proceso para la generación, integración y entrega del reporte de operaciones en efectivo en moneda nacional (OEMN)",
+      "N/A RO944 - Reporte Regulatorio enviado fuera del tiempo establecido y con información errónea.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0026 - Procedimiento para la Elaboración y Envío de los Reportes Regulatorios A-0411, A-0415, A-0417, A-0419, A-0420 Y A-0424",
+      "SP01.06.0026.0001 - Proceso para la Elaboración y Envío de los Reportes A-0411, A-0415, A-0417, A-0419, A-0420 y A-0424",
+      "N/A RO870 - Falta de calidad o consistencia en la información contenida en reportes regulatorios.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0047 - Procedimiento para Determinar el Cálculo de Coeficiente de Cobertura de Liquidez (OBSOLETO)",
+      "SP01.06.0047.0001 - Proceso para el cálculo de coeficiente de cobertura de liquidez (Obsoleto)",
+      "N/A RO818 - Ausencia de validación de la información, en la integración del reporte regulatorio.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0044 - Procedimiento para la generación, integración y entrega del reporte regulatorio R29",
+      "SP01.06.0044.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R29",
+      "N/A RO1039 - Ausencia de validación de la información, en la integración del reporte regulatorio.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0054 - Manual de Políticas y Procedimientos de Viáticos (Obsoleto)",
+      "SP01.06.0054.0001 - Procedimiento de anticipo, comprobación y reembolso de viáticos (Obsoleto)",
+      "N/A RO394 - No revisar las comprobaciones que cumplan los requisitos de deducibilidad\r\n",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.11 - Sistemas",
+      "P01.11.0005 - Plan de Recuperación en Caso de Desastre (DRP)",
+      "SP01.11.0005.0002 - Proceso actividades a realizar durante el desastre y regreso al SITE principal",
+      "N/ART05 - No contar con información para restaurar en el Site principal al término de la contingencia",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0006 - Registro Contable de Financiamiento No Bancario y sus Intereses (Obsoleto)",
+      "N/A RO229 - Los saldos de los estados de cuenta bancarios no coinciden con los saldos de registros contables\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0047 - Procedimiento para Determinar el Cálculo de Coeficiente de Cobertura de Liquidez (OBSOLETO)",
+      "SP01.06.0047.0001 - Proceso para el cálculo de coeficiente de cobertura de liquidez (Obsoleto)",
+      "N/A RO816 - Integración del Reporte Regulatorio con errores en la información.",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0030 - Elaboración y envío del Dictamen Fiscal (SIPRED)Información Alternativa de Dictamen (SIPIAD) (Obsoleto)",
+      "N/A RO277 - Reprocesos en la elaboración y emisión de estados financieros sobre los que emitirá su opinión el Auditor Externo Independiente, pudiendo causar tiempos y costos adicionales a la Compañía\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0025 - Determinación y Registro de la Provisión de ISR Causado (Obsoleto)",
+      "N/A RO262 - La cédula del numeral anterior no corresponde a registros contables\r\n",
+      "Riesgo obsoleto por cambios en en proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0013 - Políticas y Procedimientos de Lugar de Trabajo Seguro (Obsoleto)",
+      "SP01.01.0013.0002 - Control de Lugar de Trabajo Seguro por Gerencia de Contraloría de Seguridad de la Información. (Obsoleto)",
+      "N/A RO425 - La documentación archivada de cada proceso no se encuentra en resguardo seguro\r\n",
+      "Riesgo Obsoleto por cambios en el proceso."
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0004 - Registro Contable de Movimientos de Capital Contribuido y Ganado (Obsoleto)",
+      "N/A RO258 - Registro erróneo de la información referente a la capitalización de la deuda.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.01 - Contraloría Interna a",
+      "P01.01.0012 - Políticas de seguridad de la información para el control de cuentas privilegiadas. (Obsoleto)",
+      "SP01.01.0012.0004 - Conciliación del Inventario de Llaves y Cuentas. (Obsoleto)",
+      "N/A RO188 - Los Autorizadores no son los adecuados\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.03 - Crédito",
+      "P01.03.0002 - Manual de Políticas y Procedimientos de Tarjeta de Crédito",
+      "SP01.03.0002.0032 - Proceso Quality Control (Obsoleto)",
+      "N/A RO285 - Envío de información incorrecta en la elaboración del Reporte Regulatorio R27\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0025 - Determinación y Registro de la Provisión de ISR Causado (Obsoleto)",
+      "N/A RO266 - Las cuentas contables no están incluidas en los papeles de trabajo\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.10 - Contabilidad",
+      "P01.10.0001 - Procedimiento para Determinar el Cálculo de Cuotas IPAB",
+      "SP01.10.0001.0001 - Proceso de las Cuotas IPAB Previas y Definitivas, Metodología Descrita en el Anexo 1 de la Ley del IPAB",
+      "N/A RO296 - En el llenado del archivo de saldos diarios de operaciones pasivas ya que es elaborado de forma manual por una persona\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0047 - Procedimiento para Determinar el Cálculo de Coeficiente de Cobertura de Liquidez (OBSOLETO)",
+      "SP01.06.0047.0001 - Proceso para el cálculo de coeficiente de cobertura de liquidez (Obsoleto)",
+      "N/A RO704 - QUE LOS INSUMOS ENVIADOS POR LAS ÁREAS NO SEAN CORRECTOS\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.11 - Sistemas",
+      "P01.11.0005 - Plan de Recuperación en Caso de Desastre (DRP)",
+      "SP01.11.0005.0002 - Proceso actividades a realizar durante el desastre y regreso al SITE principal",
+      "N/A RT02 - No activar DRP\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.03 - Crédito",
+      "P01.03.0002 - Manual de Políticas y Procedimientos de Tarjeta de Crédito",
+      "SP01.03.0002.0032 - Proceso Quality Control (Obsoleto)",
+      "N/A RO284 - Inadecuado control en la descarga de los tickets del portal de servicio a clientes\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0008 - Elaboración de Conciliaciones Bancarias de Bancos (Obsoleto)",
+      "N/A RO246 - Los estados de cuenta no coinciden con los saldos de los auxiliares contables\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0025 - Determinación y Registro de la Provisión de ISR Causado (Obsoleto)",
+      "N/A RO267 - El papel de trabajo no coincide con los saldos de la balanza contable\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.22 - Planeación y Desarrollo Comercial",
+      "P01.22.0001 - Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial",
+      "SP01.22.0001.0009 - Proceso del programa ganadores",
+      "N/A RO351 - No contar con la factura del proveedor correspondiente a las monedas cargadas del mes en cuestión no se podrá elaborar los diferidos ni la solicitud de pago de la factura.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO646 - Que la documentación proporcionada no sea legitima\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.08 - Operaciones",
+      "P01.08.0020 - Manual de Políticas y Procedimientos de Captación",
+      "SP01.08.0020.0010 - Proceso para la cancelación de cuentas sin saldo",
+      "N/A RO648 - Que existan errores en la transaccionalidad generada en el día\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0046 - Manual de Políticas y Procedimientos para la Asignación y Reembolso del Fondo Revolvente (Obsoleto)",
+      "SP01.06.0046.0001 - Procedimiento de anticipo, comprobación y reembolso de fondo (Obsoleto)",
+      "N/A RO323 - La solicitud de autorización no lleve la firma del jefe inmediato\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.22 - Planeación y Desarrollo Comercial",
+      "P01.22.0001 - Manual de Políticas y Procedimientos de la Dirección de Planeación y Desarrollo Comercial",
+      "SP01.22.0001.0009 - Proceso del programa ganadores",
+      "N/A RO347 - No enviar esta información causaría un descontrol de los participantes en este programa ya que hay reglas específicas para la fuerza de venta que esta con estatus de Activo, Baja y los nuevos ingresos\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0018 - Elaboración y Emisión de Estados Financieros Versión CNBV Mensuales (Obsoleto)",
+      "N/A RO414 - No corregir la información sobre la presentación de los Estados Financieros individuales del mes correspondiente de las Instituciones Financieros reguladas\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0030 - Elaboración y envío del Dictamen Fiscal (SIPRED)Información Alternativa de Dictamen (SIPIAD) (Obsoleto)",
+      "N/A RO315 - Términos contractuales incorrectos en la elaboración de Carta Arreglo\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0009 - Procedimiento para la generación, integración y entrega del reporte regulatorio R07",
+      "SP01.06.0009.0001 - Proceso para la generación, integración y entrega del reporte regulatorio R07",
+      "N/A RO1029 - Ausencia de validación de la información, en la integración del reporte regulatorio.\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ],
+    [
+      "MP01.06 - Administración y Finanzas",
+      "P01.06.0053 - Manual de Políticas y Procedimientos de Contabilidad, de Impuestos y Reportes Regulatorios y de Contraloría Financiera (Obsoleto)",
+      "SP01.06.0053.0014 - Registro Contable de la Adquisición y Amortización de Activos Intangibles (Obsoleto)",
+      "N/A RO234 - No todos los activos intangibles se han catalogado dentro del sistema contable\r\n",
+      "Riesgo obsoleto por cambios en el proceso"
+    ]
+  ],
+  "NoCols": 5,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

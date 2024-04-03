@@ -1,0 +1,76 @@
+﻿@model SCIRA.Models.k_objeto
+@using SCIRA.Utilidades
+
+<script src="~/Scripts/sharedScripts.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $("#ind6").removeClass("IndicatorLoader");
+        activateDate("#contenedor6");
+    });
+</script>
+
+<h4>@Strings.getMSG("lyPCreate050")</h4>
+
+<form id="form6">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("Entidad")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                @Html.DropDownList("id_entidad", null, Strings.getMSG("lyPCreate028"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("lyPCreate002") })
+                @Html.ValidationMessageFor(model => model.id_entidad, "", new { @class = "text-danger" })
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("BDEIIndex003")</label>
+            <div class="col-xs-3 col-md-3">
+                <div class='input-group date datetimepicker' id='datetimepicker1'>
+                    <input class="form-control" disabled>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPOtrosIndex001")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.nb_objeto, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPOtrosCreate002")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.nb_objeto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("SubProcesoCreate018")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                @Html.TextAreaFor(model => model.ds_objeto, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("RiesgoCreate075") })
+                @Html.ValidationMessageFor(model => model.ds_objeto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-6 col-md-offset-9 col-md-3">
+                <input type="button" value="@Strings.getMSG("Guardar")" class="btn btn-primary" onclick="createOtrosPost()" />
+                <input type="button" class="btn btn-default" onclick="indexOtros()" value="@Strings.getMSG("Cancelar")" />
+            </div>
+        </div>
+    </div>
+</form>

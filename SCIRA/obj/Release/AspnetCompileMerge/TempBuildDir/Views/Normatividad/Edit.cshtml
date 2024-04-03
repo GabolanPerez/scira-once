@@ -1,0 +1,122 @@
+﻿@model SCIRA.Models.c_normatividad
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Editar";
+}
+<script>
+    loadPopover();
+</script>
+<script>
+    $(document).ready(function () {
+        $(".datetimepicker").datetimepicker({
+            locale: 'es',
+            format: '@ViewBag.DateFormat',
+            minDate: "01/01/1900"
+        });
+    });
+</script>
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/base.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+<script type="text/javascript" src="~/Scripts/moment-with-locales.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.js"></script>
+<script src="~/Scripts/sharedScripts.js"></script>
+
+<h2>@Strings.getMSG("Editar")</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal well">
+        <h4>@Strings.getMSG("Menu015")</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_normatividad)
+        @Html.HiddenFor(model => model.id_root_contenido)
+        @Html.HiddenFor(model => model.id_tipo_normatividad)
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NormatividadCreate001")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.cl_normatividad, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NormatividadCreate012")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.cl_normatividad, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NormatividadIndex002")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.nb_normatividad, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NormatividadCreate013")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.nb_normatividad, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NormatividadCreate002")</label>
+                <div class="col-xs-6 col-md-5">
+                    @Html.TextAreaFor(model => model.ds_normatividad, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NormatividadCreate014") })
+                    @Html.ValidationMessageFor(model => model.ds_normatividad, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group has-error">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NormatividadCreate003")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class='input-group date datetimepicker' id='datetimepicker1'>
+                    @Html.TextBox("fe_publicacion_dof", string.Format("{0:dd/MM/yyyy}", Model.fe_publicacion_dof), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("NormatividadCreate015"), data_val = "false" })
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                @Html.ValidationMessageFor(model => model.fe_publicacion_dof, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("NormatividadCreate004")</label>
+                <div class="col-xs-6 col-md-5">
+                    @Html.TextAreaFor(model => model.ds_sectores, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("NormatividadCreate016") })
+                    @Html.ValidationMessageFor(model => model.ds_sectores, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

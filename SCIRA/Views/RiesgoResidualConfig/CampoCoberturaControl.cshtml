@@ -1,0 +1,108 @@
+﻿@model IEnumerable<SCIRA.Models.a_campo_cobertura_control>
+@using SCIRA.Utilidades
+@if (ViewBag.show != null)
+{
+    <script>
+    $(document).ready(function() {
+        $("#ps@(ViewBag.catalogo)@(ViewBag.cl_campo)").click();
+    });
+    </script>
+}
+
+
+<div class="card-header" id="@ViewBag.id_card">
+    <h5>
+        <button id="ps@(ViewBag.catalogo)@(ViewBag.cl_campo)" class="btn btn-default collapsed" data-toggle="collapse" data-target="#@ViewBag.id_collapse" aria-expanded="false" aria-controls="@ViewBag.id_collapse" style="display: block; width: 100%;">
+            @ViewBag.nb_campo
+        </button>
+    </h5>
+</div>
+<div id="@ViewBag.id_collapse" class="collapse" aria-labelledby="@ViewBag.nb_campo" data-parent="#accordion">
+    <div class="card-body">
+        <form id="form@(ViewBag.catalogo)@(ViewBag.cl_campo)" method="post" action="/RiesgoResidualConfig/Create">
+            @Html.AntiForgeryToken()
+            <input type="text" name="cl_campo" value="@(ViewBag.cl_campo)" hidden>
+            <input type="text" name="cl_catalogo" value="@(ViewBag.catalogo)" hidden>
+            <table class="table table-bordered table-hover table-striped" id="TABLE@(ViewBag.catalogo)@(ViewBag.cl_campo)">
+                <thead>
+                    <tr>
+                        <th>@Strings.getMSG("RiesgoResidualConfigIndex018")</th>
+                        <th>@Strings.getMSG("RiesgoResidualConfigIndex019")</th>
+                        <th>@Strings.getMSG("RiesgoResidualConfigIndex020")</th>
+                        <th width="60"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr id="C@(ViewBag.catalogo)@(ViewBag.cl_campo)@(item.no_orden)">
+                            <td>@item.nb_campo</td>
+                            <td>@item.ds_campo</td>
+                            <td>@((String.Format("{0:0.00}", item.valor)).Replace(",", ".")) %</td>
+                            <td hidden>
+                                <input hidden value="@item.nb_campo" id="nb@(ViewBag.catalogo)@(ViewBag.cl_campo)@(item.no_orden)">
+                                <input hidden value="@item.ds_campo" id="ds@(ViewBag.catalogo)@(ViewBag.cl_campo)@(item.no_orden)">
+                                <input hidden value="@((String.Format("{0:0.00}", item.valor)).Replace(",", "."))" id="val@(ViewBag.catalogo)@(ViewBag.cl_campo)@(item.no_orden)">
+                            </td>
+                            <td>
+                                <center>
+                                    <a href="#" onclick="editar(@(ViewBag.catalogo),@(ViewBag.cl_campo),@(item.no_orden));">
+                                        <i class="glyphicon glyphicon-pencil" title="@Strings.getMSG("Editar")"></i>
+                                    </a>
+                                    |
+                                    <a href="#" onclick="eliminar('@item.nb_campo','@item.ds_campo','@((String.Format("{0:0.00}", item.valor)).Replace(",", "."))','@ViewBag.nb_campo',@(ViewBag.catalogo),@item.id_campo_cobertura_control,@(ViewBag.cl_campo));">
+                                        <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")"></i>
+                                    </a>
+                                </center>
+                            </td>
+                        </tr>
+                    }
+                    <!--Formulario para Altas y Edicion-->
+                    <tr class="AddForm@(ViewBag.catalogo)@(ViewBag.cl_campo) EditForm@(ViewBag.catalogo)@(ViewBag.cl_campo)" hidden>
+                        <td><input type="text" class="form-control" placeholder="@Strings.getMSG("RiesgoResidualConfigIndex039")" name="nb_campo" id="nb_campo@(ViewBag.catalogo)@(ViewBag.cl_campo)" style="width: 100%;"></td>
+                        <td><input type="text" class="form-control" placeholder="@Strings.getMSG("RiesgoResidualConfigIndex019")" name="ds_campo" id="ds_campo@(ViewBag.catalogo)@(ViewBag.cl_campo)" style="width: 100%;"></td>
+                        <td><input type="text" class="form-control valor" placeholder="@Strings.getMSG("RiesgoResidualConfigIndex040")" name="valor" id="valor@(ViewBag.catalogo)@(ViewBag.cl_campo)" style="width: 100%;"></td>
+                        <td hidden><input type="text" name="no_orden" id="no_orden@(ViewBag.catalogo)@(ViewBag.cl_campo)" hidden></td>
+                        <td class="AddForm@(ViewBag.catalogo)@(ViewBag.cl_campo)" hidden>
+                            <center>
+                                <a href="#" onclick="enviar(@ViewBag.catalogo,@ViewBag.cl_campo);">
+                                    <i class="fa fa-floppy-o fa-lg" title="@Strings.getMSG("Guardar")"></i>
+                                </a>
+                                |
+                                <a href="#" onclick="CloseAddForm(@ViewBag.catalogo,@ViewBag.cl_campo);">
+                                    <i class="fa fa-times fa-lg" title="@Strings.getMSG("Cancelar")"></i>
+                                </a>
+                            </center>
+                        </td>
+                        <td class="EditForm@(ViewBag.catalogo)@(ViewBag.cl_campo)" hidden>
+                            <center>
+                                <a href="#" onclick="enviar_e(@ViewBag.catalogo,@ViewBag.cl_campo);">
+                                    <i class="fa fa-floppy-o fa-lg" title="@Strings.getMSG("Guardar")"></i>
+                                </a>
+                                |
+                                <a href="#" onclick="CloseEditForm(@ViewBag.catalogo,@ViewBag.cl_campo);">
+                                    <i class="fa fa-times fa-lg" title="@Strings.getMSG("Cancelar")"></i>
+                                </a>
+                            </center>
+                        </td>
+
+                    </tr>
+
+                    <tr id="AddButton@(ViewBag.catalogo)@(ViewBag.cl_campo)">
+
+
+                        <td colspan="4">
+                            <center>
+                                <a onclick="ToggleAddForm(@ViewBag.catalogo,@ViewBag.cl_campo);">
+                                    <i class="fa fa-plus btn-lg" title="@Strings.getMSG("Agregar Opción")"></i>
+                                </a>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr id="RowError@(ViewBag.catalogo)@(ViewBag.cl_campo)" hidden></tr>
+                </tbody>
+            </table>
+        </form>
+
+    </div>
+</div>

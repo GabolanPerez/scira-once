@@ -1,0 +1,101 @@
+﻿@model SCIRA.Models.c_auditoria
+@using SCIRA.Models
+@using System.Reflection;
+@using SCIRA.Utilidades
+
+@{
+    var db = new SCIRA.Models.SICIEntities();
+}
+
+<script type="text/javascript" src="~/Scripts/moment-with-locales.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+
+<link href="~/Content/AnimacionCarga.css" rel="stylesheet" />
+
+<form id="form1">
+    <table class="results table table-striped table-bordered table-hover tblresult tblrango">
+        <thead>
+            <tr>
+                <th>@Strings.getMSG("ValoracionRiesgoindex002")</th>
+                <th>@Strings.getMSG("RiesgoResidualConfigIndex030")</th>
+                <th>@Strings.getMSG("RiesgoResidualConfigIndex020") % </th>
+                <th>@Strings.getMSG("EvaluacionIndicadorEvaluaciones003") </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.c_rango_costeo_auditoria)
+            {
+                <tr>
+                    <td>@item.c_rango_costeo.cl_rango_costeo  -  @item.c_rango_costeo.nb_rango_costeo</td>
+
+                    <td> @item.id_rango </td>
+
+                    <td>@item.c_rango_costeo.pr_costeo.ToString("00.").Replace(",", ".") </td>
+
+                    <td>@item.pr_costeo.ToString(".00").Replace(",", ".") </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <center>
+        Total de calificacion : @((Model.cali_audi).ToString().Replace(",", "."))
+    </center>
+
+    <center>
+        Riesgo : @Model.riesgo <span class="resaltable" style="color:@Model.cl_color_campo;font-size: 3rem;background-color:white;">  ▰ </span>
+    </center>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

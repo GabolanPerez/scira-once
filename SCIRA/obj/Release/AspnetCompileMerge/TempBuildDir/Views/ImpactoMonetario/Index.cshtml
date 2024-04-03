@@ -1,0 +1,56 @@
+﻿@model IEnumerable<SCIRA.Models.c_impacto_monetario>
+@using SCIRA.Models
+@using System.Reflection;
+@using SCIRA.Utilidades
+
+@{
+    ViewBag.Title = "Configuración Riesgo Residual";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    var db = new SCIRA.Models.SICIEntities();
+}
+
+<link href="~/Content/AnimacionCarga.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/base.css" rel="stylesheet" />
+
+<h2>@Strings.getMSG("Menu172")</h2>
+
+<p>
+    @Html.ActionLink(Strings.getMSG("Agregar"), "Create", null, new { @class = "btn btn-default btn-sm" })
+</p>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("Clave")</th>
+            <th class="search">@Strings.getMSG("Menu172")</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cl_impacto_monetario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nb_impacto_monetario)
+                </td>
+                <td>
+                    <center>
+                        |
+                        <a href="@Url.Action("Edit", new { id = item.id_impacto_monetario })">
+                            <i class="glyphicon glyphicon-pencil" title="@Strings.getMSG("Editar")"></i>
+                        </a>
+                        |
+                        <a href="@Url.Action("Delete", new { id = item.id_impacto_monetario })">
+                            <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")"></i>
+                        </a>
+                        |
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

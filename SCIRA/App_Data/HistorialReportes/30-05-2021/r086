@@ -1,0 +1,25 @@
+{
+  "RepName": "Reporte de Controles sin Revisión",
+  "ColNames": [
+    "Entidad",
+    "Macro Proceso",
+    "Proceso",
+    "Sub Proceso",
+    "Código de Riesgo",
+    "Código de Control"
+  ],
+  "Rows": [
+    [
+      "01 - CONSUBANCO, S.A. Institución de Banca Múltiple",
+      "MP01.01 - MP01.01",
+      "P01.01.0001 - Manual de Operación para Prevenir, Detectar y Reportar Operaciones con Recursos de Procedencia Ilícita y el Financiamiento al Terrorismo",
+      "SP01.01.0001.0001 - Proceso de Entrevista Personal con el Cliente",
+      "RO154",
+      "CO154"
+    ]
+  ],
+  "NoCols": 6,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

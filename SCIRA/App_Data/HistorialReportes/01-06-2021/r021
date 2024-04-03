@@ -1,0 +1,29 @@
+{
+  "RepName": "Reporte de Controles sin Riesgo Residual",
+  "ColNames": [
+    "Entidad",
+    "Macro Proceso",
+    "Proceso",
+    "Sub Proceso",
+    "Riesgo",
+    "Evento de Riesgo",
+    "Control",
+    "Actividad de Control"
+  ],
+  "Rows": [
+    [
+      "01 - CONSUBANCO, S.A. Institución de Banca Múltiple",
+      "MP01.01 - Contraloría Interna",
+      "P01.01.0001 - Manual de Operación para Prevenir, Detectar y Reportar Operaciones con Recursos de Procedencia Ilícita y el Financiamiento al Terrorismo",
+      "SP01.01.0001.0001 - Proceso de Entrevista Personal con el Cliente",
+      "RO154",
+      "Omitir la revision y analisis de una posible operación inusual y No analizar el total de las alertas mensuales en Detectart",
+      "CO154",
+      "El Analista de prevención de lavado de dinero realizará una comparación de las alertas, entre los datos descargados por día y el total mensual que refleja en el sistema de monitoreo (DAW), a fin de mes y se realiza manualmente para corroborar que no se omitan analizar alertas. Editado"
+    ]
+  ],
+  "NoCols": 8,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

@@ -1,0 +1,98 @@
+﻿@model IEnumerable<string>
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Historíal de reportes";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+<script>
+    var urlRepList = "@Url.Action("ReportList", new { folder = "" })";
+
+    $(function () {
+        chat.client.BackUpProgress1 = function (progress, message) {
+            if (progress > 100) {
+
+                if (progress == 101) {
+                    $("#BkpProgress").css("width","100%");
+                    $("#BkpProgress").html("Guardando Archivos");
+                }
+
+                if (progress == 102) {
+                    $("#BkpProgress").css("width", "0%");
+                    $("#BkpProgress").html("0%");
+                    $("#progressBar").hide();
+                    $("#Respaldo").show();
+                    var url = urlRepList + '?folder=' + message;
+                    var row = '<tr><td>' + message + '</td><td><center><a href="' + url + '"><i class="glyphicon glyphicon-list-alt" title="Lista de Reportes"></i></a></center></td></tr>';
+
+                    var col1 = message;
+                    var col2 = '<center><a href="' + url + '"><i class="glyphicon glyphicon-list-alt" title="Lista de Reportes"></i></a></center>';
+
+                    table
+                        .rows('.' + message)
+                        .remove()
+                        .row.add([
+                            col1,
+                            col2
+                        ])
+                        .draw();
+
+                    $('#Respaldo tr:last').addClass(message);
+                }
+
+            } else {
+                $("#BkpProgress").css("width", progress + "%");
+                $("#BkpProgress").html(message);
+            }
+
+        };
+    });
+
+    function makeBkp() {
+        $("#progressBar").show();
+        $("#Respaldo").hide();
+
+        $("#contenedor1").load('@(Url.Action("BackUpActions", "Utilidades", null))');
+        //llamar con ajax el método que construye el reporte
+    }
+</script>
+
+<div hidden id="contenedor1"></div>
+
+<h2>@Strings.getMSG("HistorialReportesIndex001")</h2>
+<br><br>
+
+
+<input type="button" class="btn btn-default" id="Respaldo" value="@Strings.getMSG("Respaldar Reportes")" onclick="makeBkp()"/>
+<div class="progress" id="progressBar" hidden>
+    <div id="BkpProgress" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar"
+         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+        0%
+    </div>
+</div>
+
+<br><br>
+<table class="results table table-striped table-bordered table-hover" id="histRepTable">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("HistorialReportesIndex002")</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="@item">
+                <td>@item</td>
+                <td>
+                    <center>
+                        <a href="@Url.Action("ReportList", new { folder = item })">
+                            <i class="glyphicon glyphicon-list-alt" title="@Strings.getMSG("Lista de Reportes")"></i>
+                        </a>
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

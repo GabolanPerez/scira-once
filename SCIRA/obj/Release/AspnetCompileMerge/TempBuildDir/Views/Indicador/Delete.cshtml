@@ -1,0 +1,211 @@
+﻿@model SCIRA.Models.c_indicador
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("ControlEdit001")</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Strings.getMSG("Clave")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cl_indicador)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Nombre")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nb_indicador)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("SubProcesoCreate018")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_indicador)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("IndicadorDelete001")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_numerador)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("IndicadorDelete002")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_denominador)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("IndicadorDelete003")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.k_control.relacion_control)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("IndicadorCreate010")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.peso)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("IndicadorDelete004")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.umbral000i)% - @Html.DisplayFor(model => model.umbral000f)%
+        </dd>
+
+        <dt>
+            @Strings.getMSG("IndicadorDelete005")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.umbral050i)% - @Html.DisplayFor(model => model.umbral050f)%
+        </dd>
+
+        <dt>
+            @Strings.getMSG("IndicadorDelete006")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.umbral075i)% - @Html.DisplayFor(model => model.umbral075f)%
+        </dd>
+
+        <dt>
+            @Strings.getMSG("IndicadorDelete007")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.umbral100i)% - @Html.DisplayFor(model => model.umbral100f)%
+        </dd>
+
+        <dt>
+            @Strings.getMSG("IndicadorIndex001")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.esta_activo)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Area")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_area.cl_area) - @Html.DisplayFor(model => model.c_area.nb_area)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Entidad")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_entidad.cl_entidad) - @Html.DisplayFor(model => model.c_entidad.nb_entidad)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu053")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_frecuencia_indicador.nb_frecuencia_indicador)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Responsable")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_usuario.nb_usuario)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("IndicadorIndex002")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_unidad_indicador.nb_unidad_indicador)
+        </dd>
+
+    </dl>
+
+    @if (ViewBag.RR.Count > 0)
+    {
+
+        <h4>@Strings.getMSG("EntidadDelete003")</h4>
+
+        <table id="results" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Catalogo")</th>
+                    <th>@Strings.getMSG("EntidadDelete004")</th>
+                    <th>@Strings.getMSG("EntidadDelete005")</th>
+                    <th width="40"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.RR)
+                {
+                    <tr>
+                        <td style="white-space: nowrap">
+                            @(item.nb_catalogo)
+                        </td>
+                        <td>
+                            @(item.cl_registro)
+                        </td>
+                        <td>
+                            @(item.nb_registro)
+                        </td>
+                        <td style="white-space: nowrap">
+                            <center>
+                                <a href="@Url.Action(item.accion,item.controlador, new { id = item.id_registro,redirect = "Indicador/Delete/" + Model.id_indicador })">
+                                    <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")"></i>
+                                </a>
+                            </center>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    @if (ViewBag.RR.Count == 0)
+    {
+        using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" />
+                |
+                @Html.ActionLink(Strings.getMSG("Regresar"), "Return", "Utilidades", new { catalogo = 12 }, new { @class = "btn btn-default" })
+            </div>
+        }
+    }
+    else
+    {
+        <div>
+            @Html.ActionLink(Strings.getMSG("Regresar"), "Return", "Utilidades", new { catalogo = 12 }, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>

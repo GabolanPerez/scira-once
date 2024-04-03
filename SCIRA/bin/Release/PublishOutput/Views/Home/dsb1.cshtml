@@ -1,0 +1,197 @@
+﻿@using SCIRA.Utilidades;
+@{
+    Layout = null;
+    var user = (SCIRA.Seguridad.IdentityPersonalizado)User.Identity;
+    var db = new SCIRA.Models.SICIEntities();
+}
+
+
+
+<!-- Content Row -->
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+
+        <!-- Project Card Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h3 class="m-0 font-weight-bold text-primary">@Strings.getMSG("DashboardIndex036")</h3>
+            </div>
+            <div class="card-body">
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("CertificacionInforme031")<span class="float-right NotifEntidadesTC"></span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar ProgressBarEntidadesTC" role="progressbar" style="width: 50%;background-color:#467ff3" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("CertificacionesEntidad002")<span class="float-right NotifMacroProcesosTC"></span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar ProgressBarMacroProcesosTC" role="progressbar" style="width: 50%;background-color:#10ebff" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("CertificacionesMacroProceso001")<span class="float-right NotifProcesosTC"></span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar ProgressBarProcesosTC" role="progressbar" style="width: 50%;background-color:#8626b4" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("CertificacionesProceso002")<span class="float-right NotifSubProcesosTC"></span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar ProgressBarSubProcesosTC" role="progressbar" style="width: 50%;background-color:#ff0064" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("DashboardIndex015")<span class="float-right NotifControlesTC"></span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-danger ProgressBarControlesTC" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("EvaluacionIndicadorDiarioIndex002") <span class="float-right NotifIndicadoresTC"></span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-warning ProgressBarIndicadoresTC" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("GraphicsOficioIndex003") <span class="float-right NotifOficiosTC"></span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar ProgressBarOficiosTC" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("DashboardIndex016") <span class="float-right NotifInformesTC"></span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-info ProgressBarInformesTC" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("RespuestaIncidenciaIndex002")<span class="float-right NotifIncidenciasTC"></span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-success ProgressBarIncidenciasTC" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("DashboardIndex017")<span class="float-right NotifPlanesTC"></span></h4>
+                <div class="progress">
+                    <div class="progress-bar bg-secondary ProgressBarPlanesTC" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("DashboardIndex018")<span class="float-right NotifFichasTC"></span></h4>
+                <div class="progress">
+                    <div class="progress-bar bg-secondary ProgressBarFichasTC" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <h4 class="small font-weight-bold">@Strings.getMSG("DashboardIndex019")<span class="float-right NotifIndicadoresDiariosTC"></span></h4>
+                <div class="progress">
+                    <div class="progress-bar bg-danger ProgressBarIndicadoresDiariosTC" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,1);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-Entidades" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 1, db)</p>
+                    <p class="text-center">@Strings.getMSG("Entidades")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,2);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-MacroProcesos" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 2, db)</p>
+                    <p class="text-center">@Strings.getMSG("MPS")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,3);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-Procesos" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 3, db)</p>
+                    <p class="text-center">@Strings.getMSG("PS")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,4);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-SubProcesos" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 4, db)</p>
+                    <p class="text-center">@Strings.getMSG("SPS")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,5);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-Controles" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 5, db)</p>
+                    <p class="text-center">@Strings.getMSG("Controles")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,6);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-Indicadores" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 6, db)</p>
+                    <p class="text-center">@Strings.getMSG("Menu009")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,7);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-Oficios" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 7, db)</p>
+                    <p class="text-center">@Strings.getMSG("Menu127")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,8);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-Informes" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 8, db)</p>
+                    <p class="text-center">@Strings.getMSG("lyPInformesIndex001")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,9);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-Incidencias" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 9, db)</p>
+                    <p class="text-center">@Strings.getMSG("Incidencias")</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,10);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-Planes" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 10, db)</p>
+                    <p class="text-center">@Strings.getMSG("DashboardIndex034")</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,11);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-Fichas" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 11, db)</p>
+                    <p class="text-center">@Strings.getMSG("Menu130")</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2 mb-4">
+            <div class="card hover shadow" onclick="showDetails(2,12);">
+                <div class="card-body">
+                    <p class="text-center font-weight-bold">@Strings.getMSG("DashboardIndex033")</p>
+                    <p class="text-center font-weight-bold TCC-IndicadoresDiarios" style="font-size:3em">@Utilidades.TCC_Count(user.Id_usuario, 12, db)</p>
+                    <p class="text-center">@Strings.getMSG("DashboardIndex035")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

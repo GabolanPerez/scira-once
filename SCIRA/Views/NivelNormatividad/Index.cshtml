@@ -1,0 +1,73 @@
+﻿@model IEnumerable<SCIRA.Models.c_nivel_normatividad>
+
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Niveles de Normatividad";
+}
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<h2>Niveles de Normatividad</h2>
+
+@if (ViewBag.Niveles != null)
+{
+    <div  id="accordion">
+        @foreach (var niveles in ViewBag.Niveles)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse@(niveles[0].c_normatividad.id_normatividad)">
+                            @niveles[0].c_normatividad.nb_normatividad
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse@(niveles[0].c_normatividad.id_normatividad)" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Clave</th>
+                                    <th>Nombre</th>
+                                    <th width="90"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int id_ultimo = 0;
+                                }
+                                @foreach (var nivel in niveles)
+                                {
+                                    <tr>
+                                        <td>@nivel.cl_nivel_normatividad</td>
+                                        <td>@nivel.nb_nivel_normatividad</td>
+                                        <td>
+                                            <center>
+                                                <a href="@Url.Action("Edit", new { id = nivel.id_nivel_normatividad })">
+                                                    <i class="glyphicon glyphicon-pencil" title="Editar"></i>
+                                                </a>
+                                            </center>
+                                        </td>
+                                    </tr>
+                                    id_ultimo = nivel.id_nivel_normatividad;
+                                }
+                                <tr>
+                                    <td colspan="3">
+                                        <center>
+                                            <a href="@Url.Action("Delete", new { id = id_ultimo })">
+                                                <i class="fa fa-minus fa-5 btn-lg" title="Quitar un Nivel" aria-hidden="true"></i>
+                                            </a>
+                                            |
+                                            <a href="@Url.Action("Create", new { id = niveles[0].c_normatividad.id_normatividad })">
+                                                <i class="fa fa-plus btn-lg" title="Agregar un Nivel"></i>
+                                            </a>
+                                        </center>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        }
+    </div>
+}

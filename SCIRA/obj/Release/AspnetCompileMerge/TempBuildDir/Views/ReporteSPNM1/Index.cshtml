@@ -1,0 +1,124 @@
+﻿@model IEnumerable<SCIRA.Models.c_normatividad>
+@using SCIRA.Utilidades
+
+@{
+    ViewBag.Title = "Sub Procesos - Normatividad";
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+}
+<link href="~/Content/AnimacionCarga.css" rel="stylesheet" />
+
+
+
+<script>
+
+    function getReport(id) {
+
+        $("#contentO").hide();
+
+        $("body").addClass('loading');
+       
+        $.ajax({
+            dataType: "html",
+            type: "get",
+            url: '@(Url.Action("Report","ReporteSPNM1"))',
+            data: { id },
+            success: function (data) {
+                $("body").removeClass('loading');
+                $("#content").html(data);
+                $("#content").show();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                $("body").removeClass('loading');
+                $(".modalLoad").hide();
+                $("#contentO").show();
+                $("#content").hide();
+                toastr.error("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+            }
+        });
+    }
+
+     function getReport1(id) {
+
+        $("#contentO").hide();
+
+        $("body").addClass('loading');
+       
+        $.ajax({
+            dataType: "html",
+            type: "get",
+            url: '@(Url.Action("Report1","ReporteSPNM1"))',
+            data: { id },
+            success: function (data) {
+                $("body").removeClass('loading');
+                $("#content").html(data);
+                $("#content").show();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                $("body").removeClass('loading');
+                $(".modalLoad").hide();
+                $("#contentO").show();
+                $("#content").hide();
+                toastr.error("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+            }
+        });
+    }
+</script>
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+
+
+<div id="content">
+    <h2>@Strings.getMSG("ReporteSPNMIndex001")</h2>
+    
+    <table id="results" class="results table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="search">@Strings.getMSG("Clave")</th>
+                <th class="search">@Strings.getMSG("NormatividadIndex002")</th>
+                <th class="search">@Strings.getMSG("SubProcesoCreate018")</th>
+                <th class="search">@Strings.getMSG("NormatividadIndex003")</th>
+                <th class="search">@Strings.getMSG("ReporteSPNMIndex002")</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cl_normatividad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nb_normatividad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ds_normatividad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fe_publicacion_dof)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ds_sectores)
+                    </td>
+                  
+                    <td>
+                        <center>
+                            <a onclick="getReport('@(item.id_normatividad)')">
+                                <i class="glyphicon glyphicon-list-alt" title="@Strings.getMSG("_Empty[1]")"></i>
+                            </a>
+                        </center>
+                        -
+                        <center>
+                            <a onclick="getReport1('@(item.id_normatividad)')">
+                                <i class="fa-solid fa-keyboard" title="@Strings.getMSG("_Empty[1]")"></i><i class="fa-thin fa-rss"></i>
+                            </a>
+                        </center>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+    <div id="content"></div>

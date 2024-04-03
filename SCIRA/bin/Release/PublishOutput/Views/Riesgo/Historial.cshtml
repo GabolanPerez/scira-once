@@ -1,0 +1,370 @@
+﻿@model IEnumerable<SCIRA.Models.r_riesgo>
+@using SCIRA.Models
+@using System.Reflection
+@using SCIRA.Utilidades
+@{
+    SICIEntities db = new SICIEntities();
+    int ncambios = Model.Count();
+    var riesgo = db.k_riesgo.Find(Model.First().id_riesgo);
+    var riesgoA = Model.First();
+    ViewBag.Title = "Historial del riesgo" + riesgo.nb_riesgo;
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    bool MG = (bool)ViewBag.MG;
+    List<c_meta_campo> camposExtra = ViewBag.CamposExtraRiesgo;
+
+    Type m_tipo = null;
+    PropertyInfo[] m_propiedades = null;
+    PropertyInfo[] m_propiedades_a = null;
+}
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/RiesgoResidual.css" rel="stylesheet" />
+
+<script>
+    function sleep(milliseconds) {
+        var start = new Date().getTime();
+        for (var i = 0; i < 1e7; i++) {
+            if ((new Date().getTime() - start) > milliseconds) {
+                break;
+            }
+        }
+    }
+</script>
+
+<h2>@Strings.getMSG("RiesgoHistorial005") @riesgo.nb_riesgo</h2>
+<div>
+    @Html.ActionLink(Strings.getMSG("Regresar"), "Riesgos", "Riesgo", new { id = riesgo.id_sub_proceso }, new { @class = "btn btn-default" })
+</div>
+<br />
+<br />
+<br />
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#pes1" data-toggle="tab"><h4>@Strings.getMSG("RiesgoHistorial001")</h4></a></li>
+    <li><a href="#pes2" data-toggle="tab"><h4>@Strings.getMSG("RiesgoHistorial002")</h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+
+
+    <div class="tab-pane fade active in" id="pes1">
+        <div id="accordion">
+
+            @for (int i = 0; i < Model.Count(); i++)
+            {
+                var registro = Model.ElementAt(i);
+                r_riesgo anterior;
+                if (i + 1 != Model.Count())
+                {
+                    anterior = Model.ElementAt(i + 1);
+                }
+                else
+                {
+                    anterior = registro;
+                }
+
+                <div class="card" id="11" w-75>
+                    <div class="card-header" id="@registro.id_registro_riesgo">
+                        <h5>
+                            <button id="ps@(registro.id_registro_riesgo)" class="btn btn-default collapsed" data-toggle="collapse" data-target="#dt@(registro.id_registro_riesgo)" aria-expanded="false" aria-controls="dt@(registro.id_registro_riesgo)" style="display: block; width: 100%;">
+                                @Strings.getMSG("RiesgoHistorial003") @registro.c_usuario.nb_usuario @Strings.getMSG("RiesgoHistorial007") @registro.fe_modificacion.Value.ToString("dd/MM/yyyy hh:mm:ss")
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="dt@(registro.id_registro_riesgo)" class="collapse" aria-labelledby="@registro.c_usuario.nb_usuario" data-parent="#accordion">
+                        <div class="card-body">
+                            <table class="table table-bordered table-hover table-responsive table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>@Strings.getMSG("Campo")</th>
+                                        <th>@Strings.getMSG("RiesgoResidualConfigIndex030")</th>
+                                        <th>@Strings.getMSG("RiesgoHistorial004")</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>@Strings.getMSG("RiesgoRiesgos002")</td>
+                                        <td>@registro.nb_riesgo</td>
+                                        <td>@(registro.nb_riesgo != anterior.nb_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                    </tr>
+                                    <tr>
+                                        <td>@Strings.getMSG("RiesgoRiesgos003")</td>
+                                        <td>@registro.evento</td>
+                                        <td>@(registro.evento != anterior.evento ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                    </tr>
+
+                                    @if (!MG)
+                                    {
+                                        <tr>
+                                            <td>@Strings.getMSG("Menu018")</td>
+                                            <td>@registro.c_tipo_riesgo.c_categoria_riesgo.cl_categoria_riesgo - @registro.c_tipo_riesgo.c_categoria_riesgo.nb_categoria_riesgo</td>
+                                            <td>@(registro.c_tipo_riesgo.c_categoria_riesgo.id_categoria_riesgo != anterior.c_tipo_riesgo.c_categoria_riesgo.id_categoria_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("Menu019")</td>
+                                            <td>@registro.c_tipo_riesgo.cl_tipo_riesgo - @registro.c_tipo_riesgo.nb_tipo_riesgo</td>
+                                            <td>@(registro.c_tipo_riesgo.id_tipo_riesgo != anterior.c_tipo_riesgo.id_tipo_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("Menu020")</td>
+                                            <td>@registro.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.c_clase_tipologia_riesgo.cl_clase_tipologia_riesgo - @registro.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.c_clase_tipologia_riesgo.nb_clase_tipologia_riesgo</td>
+                                            <td>@(registro.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.c_clase_tipologia_riesgo.id_clase_tipologia_riesgo != anterior.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.c_clase_tipologia_riesgo.id_clase_tipologia_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("Menu021")</td>
+                                            <td>@registro.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.cl_sub_clase_tipologia_riesgo - @registro.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.nb_sub_clase_tipologia_riesgo</td>
+                                            <td>@(registro.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.id_sub_clase_tipologia_riesgo != anterior.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.id_sub_clase_tipologia_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("Menu022")</td>
+                                            <td>@registro.c_tipologia_riesgo.cl_tipologia_riesgo - @registro.c_tipologia_riesgo.nb_tipologia_riesgo</td>
+                                            <td>@(registro.c_tipologia_riesgo.id_tipologia_riesgo != anterior.c_tipologia_riesgo.id_tipologia_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("Menu023")</td>
+                                            <td>@registro.c_probabilidad_ocurrencia.cl_probabilidad_ocurrencia - @registro.c_probabilidad_ocurrencia.nb_probabilidad_ocurrencia</td>
+                                            <td>@(registro.c_probabilidad_ocurrencia.id_probabilidad_ocurrencia != anterior.c_probabilidad_ocurrencia.id_probabilidad_ocurrencia ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("Menu024")</td>
+                                            <td>@registro.c_tipo_impacto.cl_tipo_impacto - @registro.c_tipo_impacto.nb_tipo_impacto</td>
+                                            <td>@(registro.c_tipo_impacto.id_tipo_impacto != anterior.c_tipo_impacto.id_tipo_impacto ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("RiesgoCreate003")</td>
+                                            <td>@registro.c_magnitud_impacto.cl_magnitud_impacto - @registro.c_magnitud_impacto.nb_magnitud_impacto</td>
+                                            <td>@(registro.c_magnitud_impacto.id_magnitud_impacto != anterior.c_magnitud_impacto.id_magnitud_impacto ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("Menu026")</td>
+                                            <td>@registro.criticidad</td>
+                                            <td>@(registro.criticidad != anterior.criticidad ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("RiesgoCreate004")</td>
+                                            <td>@(registro.tiene_afectacion_contable ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                            <td>@(registro.tiene_afectacion_contable != anterior.tiene_afectacion_contable ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("RiesgoCreate005")</td>
+                                            <td>@registro.supuesto_normativo</td>
+                                            <td>@(registro.supuesto_normativo != anterior.supuesto_normativo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                        <tr>
+                                            <td>@Strings.getMSG("RiesgoCreate098")</td>
+                                            <td>@registro.euc</td>
+                                            <td>@(registro.euc != anterior.euc ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                        </tr>
+                                    }
+
+                                    @{
+                                        m_tipo = registro.GetType();
+                                        m_propiedades = m_tipo.GetProperties();
+                                        m_tipo = anterior.GetType();
+                                        m_propiedades_a = m_tipo.GetProperties();
+                                    }
+
+                                    @for (int j = 0; j < 20; j++)
+                                    {
+                                        var prop = m_propiedades.Where(m => m.Name == string.Format("campo{0:00}", j + 1)).First();
+                                        var propa = m_propiedades_a.Where(m => m.Name == string.Format("campo{0:00}", j + 1)).First();
+                                        var ce = camposExtra[j];
+                                        var valor = "";
+                                        var valorA = "";
+                                        try
+                                        {
+                                            valor = prop.GetValue(registro, null).ToString();
+                                        }
+                                        catch
+                                        {
+                                            valor = "";
+                                        }
+                                        try
+                                        {
+                                            valorA = propa.GetValue(anterior, null).ToString();
+                                        }
+                                        catch
+                                        {
+                                            valorA = "";
+                                        }
+                                        if (MG)
+                                        {
+                                            if (ce.es_visible && ce.aparece_en_mg)
+                                            {
+                                                <tr>
+                                                    <td>@ce.nb_campo</td>
+                                                    <td>@valor</td>
+                                                    <td>@(valor != valorA ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                                </tr>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (ce.es_visible)
+                                            {
+                                                <tr>
+                                                    <td>@ce.nb_campo</td>
+                                                    <td>@valor</td>
+                                                    <td>@(valor != valorA ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                                                </tr>
+                                            }
+                                        }
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+
+
+    <div class="tab-pane" id="pes2">
+        <br /><br /><br />
+        <table class="table table-bordered table-hover table-responsive table-striped">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Campo")</th>
+                    <th>@Strings.getMSG("RiesgoResidualConfigIndex030")</th>
+                    <th>@Strings.getMSG("RiesgoHistorial004")</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Strings.getMSG("RiesgoRiesgos002")</td>
+                    <td>@riesgo.nb_riesgo</td>
+                    <td>@(riesgo.nb_riesgo != riesgoA.nb_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                </tr>
+                <tr>
+                    <td>@Strings.getMSG("RiesgoRiesgos003")</td>
+                    <td>@riesgo.evento</td>
+                    <td>@(riesgo.evento != riesgoA.evento ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                </tr>
+                @if (!MG)
+                {
+                    <tr>
+                        <td>@Strings.getMSG("Menu018")</td>
+                        <td>@riesgo.c_tipo_riesgo.c_categoria_riesgo.cl_categoria_riesgo - @riesgo.c_tipo_riesgo.c_categoria_riesgo.nb_categoria_riesgo</td>
+                        <td>@(riesgo.c_tipo_riesgo.c_categoria_riesgo.id_categoria_riesgo != riesgoA.c_tipo_riesgo.c_categoria_riesgo.id_categoria_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("Menu019")</td>
+                        <td>@riesgo.c_tipo_riesgo.cl_tipo_riesgo - @riesgo.c_tipo_riesgo.nb_tipo_riesgo</td>
+                        <td>@(riesgo.c_tipo_riesgo.id_tipo_riesgo != riesgoA.c_tipo_riesgo.id_tipo_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("Menu048")</td>
+                        <td>@riesgo.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.c_clase_tipologia_riesgo.cl_clase_tipologia_riesgo - @riesgo.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.c_clase_tipologia_riesgo.nb_clase_tipologia_riesgo</td>
+                        <td>@(riesgo.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.c_clase_tipologia_riesgo.id_clase_tipologia_riesgo != riesgoA.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.c_clase_tipologia_riesgo.id_clase_tipologia_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("Menu021")</td>
+                        <td>@riesgo.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.cl_sub_clase_tipologia_riesgo - @riesgo.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.nb_sub_clase_tipologia_riesgo</td>
+                        <td>@(riesgo.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.id_sub_clase_tipologia_riesgo != riesgoA.c_tipologia_riesgo.c_sub_clase_tipologia_riesgo.id_sub_clase_tipologia_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("Menu022")</td>
+                        <td>@riesgo.c_tipologia_riesgo.cl_tipologia_riesgo - @riesgo.c_tipologia_riesgo.nb_tipologia_riesgo</td>
+                        <td>@(riesgo.c_tipologia_riesgo.id_tipologia_riesgo != riesgoA.c_tipologia_riesgo.id_tipologia_riesgo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("Menu023")</td>
+                        <td>@riesgo.c_probabilidad_ocurrencia.cl_probabilidad_ocurrencia - @riesgo.c_probabilidad_ocurrencia.nb_probabilidad_ocurrencia</td>
+                        <td>@(riesgo.c_probabilidad_ocurrencia.id_probabilidad_ocurrencia != riesgoA.c_probabilidad_ocurrencia.id_probabilidad_ocurrencia ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("Menu024")</td>
+                        <td>@riesgo.c_tipo_impacto.cl_tipo_impacto - @riesgo.c_tipo_impacto.nb_tipo_impacto</td>
+                        <td>@(riesgo.c_tipo_impacto.id_tipo_impacto != riesgoA.c_tipo_impacto.id_tipo_impacto ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("RiesgoCreate003")</td>
+                        <td>@riesgo.c_magnitud_impacto.cl_magnitud_impacto - @riesgo.c_magnitud_impacto.nb_magnitud_impacto</td>
+                        <td>@(riesgo.c_magnitud_impacto.id_magnitud_impacto != riesgoA.c_magnitud_impacto.id_magnitud_impacto ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("Menu026")</td>
+                        <td>@riesgo.criticidad</td>
+                        <td>@(riesgo.criticidad != riesgoA.criticidad ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("RiesgoCreate004")</td>
+                        <td>@(riesgo.tiene_afectacion_contable ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                        <td>@(riesgo.tiene_afectacion_contable != riesgoA.tiene_afectacion_contable ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("RiesgoCreate005")</td>
+                        <td>@riesgo.supuesto_normativo</td>
+                        <td>@(riesgo.supuesto_normativo != riesgoA.supuesto_normativo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                    <tr>
+                        <td>@Strings.getMSG("RiesgoCreate098")</td>
+                        <td>@riesgo.euc</td>
+                        <td>@(riesgo.euc != riesgoA.euc ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                    </tr>
+                }
+                @{
+                    m_tipo = riesgo.GetType();
+                    m_propiedades = m_tipo.GetProperties();
+                    m_tipo = riesgoA.GetType();
+                    m_propiedades_a = m_tipo.GetProperties();
+                }
+                @for (int j = 0; j < 20; j++)
+                {
+                    var prop = m_propiedades.Where(m => m.Name == string.Format("campo{0:00}", j + 1)).First();
+                    var propa = m_propiedades_a.Where(m => m.Name == string.Format("campo{0:00}", j + 1)).First();
+                    var ce = camposExtra[j];
+                    var valor = "";
+                    var valorA = "";
+                    try
+                    {
+                        valor = prop.GetValue(riesgo, null).ToString();
+                    }
+                    catch
+                    {
+                        valor = "";
+                    }
+                    try
+                    {
+                        valorA = propa.GetValue(riesgoA, null).ToString();
+                    }
+                    catch
+                    {
+                        valorA = "";
+                    }
+                    if (MG)
+                    {
+                        if (ce.es_visible && ce.aparece_en_mg)
+                        {
+                            <tr>
+                                <td>@ce.nb_campo</td>
+                                <td>@valor</td>
+                                <td>@(valor != valorA ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        if (ce.es_visible)
+                        {
+                            <tr>
+                                <td>@ce.nb_campo</td>
+                                <td>@valor</td>
+                                <td>@(valor != valorA ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))</td>
+                            </tr>
+                        }
+                    }
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

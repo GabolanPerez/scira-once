@@ -1,0 +1,74 @@
+﻿@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Subir archivo de Flujo";
+}
+<link href="~/Content/AnimacionCarga.css" rel="stylesheet" />
+<script>
+    $(document).ready(function () {
+        $("#archivo").change(function () {
+            var filename = $("#archivo").val();
+            $("#nb_archivo").val(filename);
+            if (filename !== "") {
+                $("#submit").removeAttr("disabled");
+            } else {
+                $("#submit").attr("disabled", "disabled");
+            }
+        });
+    });
+
+    function loading() {
+        deshabilitar();
+        $("body").addClass('loading');
+    }
+
+</script>
+
+<h2>@Strings.getMSG("Agregar")</h2>
+
+@using (Html.BeginForm("Subir", "FlujoNarrativa", FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "loading()" }))
+{
+    <div class="form-horizontal well">
+        <h4>@Strings.getMSG("RiesgoCreate080") @ViewBag.nb_sub_proceso</h4>
+
+        <input type="hidden" name="id" value="@ViewBag.id">
+        <input type="hidden" name="fon" value="1">
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("FlujoNarrativaFlujo001")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @if (ViewBag.nb_archivo_flujo != "" && ViewBag.nb_archivo_flujo != null)
+                        {
+                            <input type="text" id="nb_archivo" class="form-control text-box single-line valid" readonly="readonly" value="@ViewBag.nb_archivo_flujo">
+                        }
+                        else
+                        {
+                            <input type="text" id="nb_archivo" class="form-control text-box single-line valid" readonly="readonly">
+                        }
+                        <div class="input-group-btn">
+                            <label class="btn btn-default btn-file">
+                                @Strings.getMSG("Examinar") <input type="file" id="archivo" name="archivo" style="display: none;">
+                            </label>
+                            <button type="reset" onclick="deshabilitar()" class="btn btn-default" title="@Strings.getMSG("RiesgoCreate119")">
+                                <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" id="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" disabled="disabled"/>
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Index", "FlujoNarrativa", new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    
+    </div>
+}
+

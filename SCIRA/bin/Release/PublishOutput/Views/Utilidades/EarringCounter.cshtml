@@ -1,0 +1,21 @@
+﻿@model SCIRA.ViewModels.NotificationsViewModel
+@using SCIRA.Utilidades;
+
+@{
+    Layout = null;
+}
+
+<li><span id="NotifEntidades" class="NotifCounterLeft">@(Model.n_entidades > 99 ? "+99":Model.n_entidades.ToString())</span>@Html.ActionLink(Strings.getMSG("NotificationIndex011"), "Entidades", "Pendientes")</li>
+<li><span id="NotifMacroProcesos" class="NotifCounterLeft">@(Model.n_macro_procesos > 99 ? "+99" : Model.n_macro_procesos.ToString())</span>@Html.ActionLink(Strings.getMSG("NotificationIndex012"), "MacroProcesos", "Pendientes")</li>
+<li><span id="NotifProcesos" class="NotifCounterLeft">@(Model.n_procesos > 99 ? "+99" : Model.n_procesos.ToString())</span>@Html.ActionLink(Strings.getMSG("NotificationIndex013"), "Procesos", "Pendientes")</li>
+<li><span id="NotifSubProcesos" class="NotifCounterLeft">@(Model.n_sub_procesos > 99 ? "+99" : Model.n_sub_procesos.ToString())</span>@Html.ActionLink(Strings.getMSG("NotificationIndex014"), "SubProcesos", "Pendientes")</li>
+<li><span id="NotifControles" class="NotifCounterLeft">@(Model.n_controles > 99 ? "+99" : Model.n_controles.ToString())</span>@Html.ActionLink(Strings.getMSG("Menu131"), "Controles", "Pendientes")</li>
+<li><span id="NotifIndicadores" class="NotifCounterLeft">@(Model.n_indicadores > 99 ? "+99" : Model.n_indicadores.ToString())</span>@Html.ActionLink(Strings.getMSG("Menu132"), "Indicadores", "Pendientes")</li>
+<li><span id="NotifOficios" class="NotifCounterLeft">@(Model.n_oficios > 99 ? "+99" : Model.n_oficios.ToString())</span>@Html.ActionLink(Strings.getMSG("Menu133"), "Oficios", "Pendientes")</li>
+<li><span id="NotifInformes" class="NotifCounterLeft">@(Model.n_informes > 99 ? "+99" : Model.n_informes.ToString())</span>@Html.ActionLink(Strings.getMSG("Menu134"), "Informes", "Pendientes")</li>
+<li><span id="NotifIncidencias" class="NotifCounterLeft">@(Model.n_incidencias > 99 ? "+99" : Model.n_incidencias.ToString())</span>@Html.ActionLink(Strings.getMSG("Menu135"), "Incidencias", "Pendientes")</li>
+<li><span id="NotifPlanes" class="NotifCounterLeft">@(Model.n_planes > 99 ? "+99" : Model.n_planes.ToString())</span>@Html.ActionLink(Strings.getMSG("Menu136"), "Planes", "Pendientes")</li>
+<li><span id="NotifFichas" class="NotifCounterLeft">@(Model.n_fichas > 99 ? "+99" : Model.n_fichas.ToString())</span>@Html.ActionLink(Strings.getMSG("Menu137"), "Fichas", "Pendientes")</li>
+<li><span id="NotifIndicadoresDiarios" class="NotifCounterLeft">@(Model.n_indicadores_diarios > 100 ? "+99" : Model.n_entidades.ToString())</span>@Html.ActionLink(Strings.getMSG("Menu138"), "IndicadoresDiarios", "Pendientes")</li>
+<li class="divider"></li>
+<li>@Html.ActionLink(Strings.getMSG("Menu139"), "VerTodo", "Pendientes")</li>

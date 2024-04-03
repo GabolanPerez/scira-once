@@ -1,0 +1,75 @@
+﻿@model SCIRA.Models.c_auditoria
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = @Strings.getMSG("Borrar");
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("Menu148")</h4>
+    <hr />
+    <p class="text-danger">@Strings.getMSG("AuditoriaDeleteUniversoAuditable001")</p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Strings.getMSG("Clave")</dt>
+        <dd>@Html.DisplayFor(model => model.cl_auditoria)</dd>
+
+        <dt>@Strings.getMSG("Nombre")</dt>
+        <dd>@Html.DisplayFor(model => model.nb_auditoria)</dd>
+
+        <dt>@Strings.getMSG("Entidad")</dt>
+        <dd>@Html.DisplayFor(model => model.c_entidad.nb_entidad)</dd>
+
+        <dt>@Strings.getMSG("Area")</dt>
+        <dd>@Html.DisplayFor(model => model.c_area.nb_area)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate001")</dt>
+        <dd>@Html.DisplayFor(model => model.horas_estimadas)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate002")</dt>
+        <dd>@Html.DisplayFor(model => model.c_solicitante_auditoria)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate003")</dt>
+        <dd>@Html.DisplayFor(model => model.sociedades_que_aplica)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaIndexUniversoAuditable004")</dt>
+        <dd>@Html.DisplayFor(model => model.fundamento_normativo)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate004")</dt>
+        <dd>@Html.DisplayFor(model => model.c_periodo_auditoria.nb_periodo_auditoria)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate005")</dt>
+        <dd>@Html.DisplayFor(model => model.c_mes.nb_mes)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate006")</dt>
+        <dd>@Html.DisplayFor(model => model.nb_firmante)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate007")</dt>
+        <dd>@Html.DisplayFor(model => model.es_regulada)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate008")</dt>
+        <dd>@Html.DisplayFor(model => model.presenta_cair)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate009")</dt>
+        <dd>@Html.DisplayFor(model => model.presenta_comite)</dd>
+
+        <dt>@Strings.getMSG("AuditoriaCreateUniversoAuditableCreate010")</dt>
+        <dd>@Html.DisplayFor(model => model.presenta_consejo)</dd>
+
+    </dl>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" />
+            |
+            @Html.ActionLink(Strings.getMSG("Regresar"), "Return", "Utilidades", new { catalogo = 71 }, new { @class = "btn btn-default btn-sm" })
+        </div>
+    }
+</div>

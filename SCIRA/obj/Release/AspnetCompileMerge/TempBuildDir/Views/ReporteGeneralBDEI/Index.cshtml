@@ -1,0 +1,205 @@
+﻿@model IEnumerable<SCIRA.Models.k_bdei>
+@using SCIRA.Utilidades
+
+@{
+    ViewBag.Title = "Reporte General de BDEI";
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+    string SP;
+    string ResponsableSP;
+    string ResponsableRec;
+    string CuentaContable;
+    string CuentaContableCosto;
+    string Criticidad;
+    string CC;
+    string RiesgoAsociado;
+    string MinimoRiesgoOperativo;
+}
+
+<h2>@Strings.getMSG("ReporteGeneralBDEIIndex001")</h2>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">ID</th>
+            <th class="search">@Strings.getMSG("Entidad")</th>
+            <th class="search">@Strings.getMSG("BDEICreate005")</th>
+            <th class="search">@Strings.getMSG("SP")</th>
+            <th class="search">@Strings.getMSG("BDEICreate178")</th>
+            <th class="search">@Strings.getMSG("BDEIIndex001")</th>
+
+
+            <th class="search">@Strings.getMSG("BDEIIndex003")</th>
+            <th class="search">@Strings.getMSG("BDEIIndex002")</th>
+            <th class="search">@Strings.getMSG("BDEICreate012")</th>
+            <th class="search">@Strings.getMSG("BDEICreate027")</th>
+            <th class="search">@Strings.getMSG("BDEICreate102")</th>
+            <th class="search">@Strings.getMSG("BDEICreate028")</th>
+            <th class="search">@Strings.getMSG("BDEICreate104")</th>
+            <th class="search">@Strings.getMSG("BDEICreate105")</th>
+            <th class="search">@Strings.getMSG("BDEICreate106")</th>
+            <th class="search">@Strings.getMSG("Menu043")</th>
+            <th class="search">@Strings.getMSG("RiesgoCreate074")</th>
+
+            <th class="search">@Strings.getMSG("ReporteMRyCIndex022")</th>
+            <th class="search">@Strings.getMSG("Menu047")</th>
+            <th class="search">@Strings.getMSG("Menu020")</th>
+            <th class="search">@Strings.getMSG("BDEICreate029")</th>
+            <th class="search">@Strings.getMSG("P")</th>
+            <th class="search">@Strings.getMSG("BDEICreate107")</th>
+            <th class="search">@Strings.getMSG("BDEICreate109")</th>
+            <th class="search">@Strings.getMSG("Menu050")</th>
+            <th class="search">@Strings.getMSG("BDEIDelete003")</th>
+            <th class="search">@Strings.getMSG("BDEICreate111")</th>
+            <th class="search">@Strings.getMSG("BDEICreate179")</th>
+            <th class="search">@Strings.getMSG("BDEICreate180")</th>
+            <th class="search">@Strings.getMSG("Menu053")</th>
+            <th class="search">@Strings.getMSG("Menu054")</th>
+            <th class="search">@Strings.getMSG("BDEICreate100")</th>
+            <th class="search">@Strings.getMSG("Menu154")</th>
+            @*<th class="search">@Strings.getMSG("BDEICreate115")</th>*@
+            <th class="search">@Strings.getMSG("BDEICreate116")</th>
+
+
+            <th class="search">@Strings.getMSG("Menu042")</th>
+            <th class="search">@Strings.getMSG("ReporteGeneralBDEIIndex003")</th>
+            <th class="search">@Strings.getMSG("BDEICreate119")</th>
+            <th class="search">@Strings.getMSG("ReporteGeneralBDEIIndex004")</th>
+            <th class="search">@Strings.getMSG("BDEICreate055")</th>
+            <th class="search">@Strings.getMSG("ReporteGeneralBDEIIndex006")</th>
+            <th class="search">@Strings.getMSG("BDEICreate059")</th>
+            <th class="search">@Strings.getMSG("BDEICreate061")</th>
+            <th class="search">@Strings.getMSG("ReporteGeneralBDEIIndex008")</th>
+            <th class="search">@Strings.getMSG("ReporteGeneralBDEIIndex009")</th>
+            <th class="search">@Strings.getMSG("BDEIDelete004")</th>
+            <th class="search">@Strings.getMSG("BDEIDelete005")</th>
+            <th class="search">@Strings.getMSG("ReporteGeneralBDEIIndex010")</th>
+            <th class="search">@Strings.getMSG("BDEICreate073")</th>
+            <th class="search">@Strings.getMSG("ReporteGeneralBDEIIndex012")</th>
+            <th class="search">@Strings.getMSG("ReporteGeneralBDEIIndex013")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            try
+            {
+                Criticidad = Utilidades.Criticidad(item);
+            }
+            catch
+            {
+                Criticidad = "N/A";
+            }
+
+            try
+            {
+                SP = item.c_sub_proceso.cl_sub_proceso + " - " +item.c_sub_proceso.nb_sub_proceso;
+                ResponsableSP = item.c_sub_proceso.c_usuario.nb_usuario;
+            }
+            catch
+            {
+                ResponsableSP = SP = "N/A";
+            }
+            try
+            {
+                ResponsableRec = item.c_usuario.nb_usuario;
+            }
+            catch
+            {
+                ResponsableRec = "N/A";
+            }
+            try
+            {
+                CuentaContable = item.c_cuenta_contable2.cl_cuenta_contable + item.c_cuenta_contable2.nb_cuenta_contable;
+            }
+            catch
+            {
+                CuentaContable = "N/A";
+            }
+            try
+            {
+                CuentaContableCosto = item.c_cuenta_contable3.cl_cuenta_contable + item.c_cuenta_contable3.nb_cuenta_contable;
+            }
+            catch
+            {
+                CuentaContableCosto = "N/A";
+            }
+
+            try
+            {
+                RiesgoAsociado = item.c_riesgo_asociado_bdei.cl_riesgo_asociado_bdei + " - " + item.c_riesgo_asociado_bdei.nb_riesgo_asociado_bdei;
+            }
+            catch
+            {
+                RiesgoAsociado = "N/A";
+            }
+
+            try
+            {
+                MinimoRiesgoOperativo = item.c_minimo_riesgo_operativo.cl_minimo_riesgo_operativo + " - " + item.c_minimo_riesgo_operativo.nb_minimo_riesgo_operativo;
+            }
+            catch
+            {
+                MinimoRiesgoOperativo = "N/A";
+            }
+
+        <tr>
+            <td>@( item.id_bdei)</td>
+            <td>@( item.c_entidad.nb_entidad)</td>
+            <td>@( item.c_estatus_bdei.nb_estatus_bdei)</td>
+            <td>@( SP)</td>
+            <td>@( ResponsableSP)</td>
+            <td>@( item.c_usuario1.nb_usuario)</td>
+
+
+
+            <td>@( string.Format("{0:dd/MM/yyyy}", item.fe_alta))</td>
+            <td>@( string.Format("{0:dd/MM/yyyy}", item.fe_ocurrencia))</td>
+            <td>@( item.hr_ocurrencia)</td>
+            <td>@( item.duracion)</td>
+            <td>@( string.Format("{0:dd/MM/yyyy}", item.fe_ocurrencia_manual))</td>
+            <td>@( string.Format("{0:dd/MM/yyyy}", item.fe_solucion))</td>
+            <td>@( item.no_evento_sencillo)</td>
+            <td>@( item.no_evento_multiple)</td>
+            <td>@( item.folio_riesgo_operacional)</td>
+            <td>@( item.c_tipo_solucion.nb_tipo_solucion)</td>
+            <td>@( item.comentarios)</td>
+
+            <td>@item.c_clase_evento.c_sub_tipo_riesgo_operacional.c_tipo_riesgo_operacional.cl_tipo_riesgo_operacional - @item.c_clase_evento.c_sub_tipo_riesgo_operacional.c_tipo_riesgo_operacional.nb_tipo_riesgo_operacional</td>
+            <td>@item.c_clase_evento.c_sub_tipo_riesgo_operacional.cl_sub_tipo_riesgo_operacional - @item.c_clase_evento.c_sub_tipo_riesgo_operacional.nb_sub_tipo_riesgo_operacional</td>
+            <td>@item.c_clase_evento.cl_clase_evento - @item.c_clase_evento.nb_clase_evento</td>
+            <td>@item.c_proceso_riesgo_operacional.c_ambito_riesgo_operacional.cl_ambito_riesgo_operacional - @item.c_proceso_riesgo_operacional.c_ambito_riesgo_operacional.nb_ambito_riesgo_operacional</td>
+            <td>@item.c_proceso_riesgo_operacional.cl_proceso_riesgo_operacional - @item.c_proceso_riesgo_operacional.nb_proceso_riesgo_operacional</td>
+            <td>@item.no_procesos_afectados</td>
+            <td>@item.no_productos_afectados</td>
+            <td>@item.c_sub_tipo_producto_riesgo_operacional.c_producto_riesgo_operacional.cl_producto_riesgo_operacional - @item.c_sub_tipo_producto_riesgo_operacional.c_producto_riesgo_operacional.nb_producto_riesgo_operacional </td>
+            <td>@item.c_sub_tipo_producto_riesgo_operacional.cl_sub_tipo_producto_riesgo_operacional - @item.c_sub_tipo_producto_riesgo_operacional.nb_sub_tipo_producto_riesgo_operacional</td>
+            <td>@item.no_lineas_negocio_afectadas</td>
+            <td>@item.c_linea_negocio_riesgo_operacional.c_categoria_linea_negocio_riesgo_operacional.cl_categoria_linea_negocio_riesgo_operacional - @item.c_linea_negocio_riesgo_operacional.c_categoria_linea_negocio_riesgo_operacional.nb_categoria_linea_negocio_riesgo_operacional</td>
+            <td>@item.c_linea_negocio_riesgo_operacional.cl_linea_negocio_riesgo_operacional - @item.c_linea_negocio_riesgo_operacional.nb_linea_negocio_riesgo_operacional</td>
+            <td>@item.c_frecuencia_riesgo_operacional.cl_frecuencia_riesgo_operacional - @item.c_frecuencia_riesgo_operacional.nb_frecuencia_riesgo_operacional</td>
+            <td>@item.c_impacto_riesgo_operacional.cl_impacto_riesgo_operacional - @item.c_impacto_riesgo_operacional.nb_impacto_riesgo_operacional</td>
+            <td>@Criticidad</td>
+            <td>@RiesgoAsociado</td>
+            @*<td>@MinimoRiesgoOperativo</td>*@
+            <td>@item.c_causa_bdei.cl_causa_bdei - @item.c_causa_bdei.nb_causa_bdei</td>
+
+            <td>@( item.c_moneda.nb_moneda)</td>
+            <td>@( item.c_cuenta_contable1.cl_cuenta_contable + item.c_cuenta_contable1.nb_cuenta_contable)</td>
+            <td>@item.c_catalogo_concepto.cl_catalogo_concepto - @item.c_catalogo_concepto.nb_catalogo_concepto</td>
+            <td>@( (item.mn_exposicion ?? 0).ToString())</td>
+            <td>@( (item.mn_quebranto ?? 0).ToString())</td>
+            <td>@( item.c_centro_costo.cl_centro_costo + item.c_centro_costo.nb_centro_costo)</td>
+            <td>@( string.Format("{0:dd/MM/yyyy}", item.fe_registro_perdida))</td>
+            <td>@( string.Format("{0:dd/MM/yyyy}", item.fe_quebranto))</td>
+            <td>@( (item.mn_recuperacion ?? 0).ToString())</td>
+            <td>@( ResponsableRec)</td>
+            <td>@( CuentaContable)</td>
+            <td>@( string.Format("{0:dd/MM/yyyy}", item.fe_registro_recuperacion))</td>
+            <td>@( item.via_recuperacion)</td>
+            <td>@( (item.mn_costo_recuperacion ?? 0).ToString())</td>
+            <td>@( CuentaContableCosto)</td>
+            <td>@( string.Format("{0:dd/MM/yyyy}", item.fe_registro_costo_recuperacion))</td>
+        </tr>
+        }
+    </tbody>
+</table>

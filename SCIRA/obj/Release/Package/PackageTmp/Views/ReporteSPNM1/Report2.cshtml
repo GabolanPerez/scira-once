@@ -1,0 +1,153 @@
+﻿@model IEnumerable<SCIRA.Models.c_contenido_normatividad>
+@using SCIRA.Models
+@using SCIRA.Utilidades
+
+
+@{
+   // Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+    var db = new SICIEntities();
+}
+
+<link href="~/Views/Shared/_LayoutReporte.cshtml" rel="stylesheet" />
+
+<link href="~/Content/AnimacionCarga.css" rel="stylesheet" />
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+<script src="~/Scripts/MSInitialize.js"></script>
+
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<link href="~/Content/bootstrap-toggle.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-toggle.min.js"></script>
+
+<script src="~/Scripts/sharedScripts.js"></script>
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<script type="text/javascript" src="~/Scripts/multiple-select.js"></script>
+
+
+
+<input type="button" class="btn btn-default" value="@Strings.getMSG("Atrás")" onclick="$('#contentO').show(); $('#contentO').hide();">
+
+
+<div id="content">
+
+    <h2>@Strings.getMSG("ReporteSPNMIndex003")</h2>
+
+    <table id="results" class="results table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="search">@Strings.getMSG("ReporteSPNMIndex005")</th>
+                <th class="search">@Strings.getMSG("Clave")</th>
+                <th class="search">@Strings.getMSG("Nombre")</th>
+                <th class="search">@Strings.getMSG("Tema")</th>
+                <th class="search">@Strings.getMSG("Menu026")</th>
+                <th class="search">@Strings.getMSG("MontoMulta")</th>
+                <th class="search">@Strings.getMSG("PlazoOtorgado")</th>
+                <th class="search">@Strings.getMSG("Menu175")</th>
+                <th class="search">@Strings.getMSG("Area")</th>
+                <th class="search">@Strings.getMSG("Menu169")</th>
+                <th class="search">@Strings.getMSG("Menu170")</th>
+                <th class="search">@Strings.getMSG("Cumplimiento001")</th>
+                <th class="search">Cabildeo</th>
+                <th class="search">Transitorios</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var area = item.c_area.ToList();
+                List<c_contenido_normatividad> conts = new List<c_contenido_normatividad>();
+                string rls = "";
+                foreach (var r in area)
+                {
+                    rls += r.nb_area + "\n";
+                    conts = conts.Union(r.c_contenido_normatividad).ToList();
+                }
+
+                var cump = item.c_frecuencia.ToList();
+                string cmp = "";
+                foreach (var r in cump)
+                {
+                    cmp += r.nb_frecuencia + "\n";
+                    conts = conts.Union(r.c_contenido_normatividad).ToList();
+                }
+
+                var comi = item.c_comite.ToList();
+                string comit = "";
+                foreach (var r in comi)
+                {
+                    comit += r.nb_comite + "\n";
+                    conts = conts.Union(r.c_contenido_normatividad).ToList();
+                }
+
+                var cumplimiento = item.c_cumplimiento.ToList();
+                string cumpli = "";
+                foreach (var r in cumplimiento)
+                {
+                    cumpli += r.nb_cumplimiento + "\n";
+                    conts = conts.Union(r.c_contenido_normatividad).ToList();
+                }
+
+
+                string ruta = "";
+                var padre = item.c_contenido_normatividad2;
+                while (padre != null)
+                {
+                    var noRoot = padre.id_contenido_normatividad_padre != null ? "" : "";
+
+                    ruta = padre.id_contenido_normatividad_padre != null ? "<a onclick = 'loadContent(" + padre.id_contenido_normatividad_padre + ")'>" + padre.cl_contenido_normatividad + "</a> >> " + ruta : padre.cl_contenido_normatividad + " >> " + ruta;
+
+                    padre = padre.c_contenido_normatividad2;
+                }
+
+                <tr>
+                    <td>@Html.Raw(ruta)</td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cl_contenido_normatividad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ds_contenido_normatividad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tema)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.criticidad1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.monto_multa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.plazo_otorgado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.requiere_ficha)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cabildeo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.transitorios)
+                    </td>
+
+                    <td>@Html.Raw(Html.Encode(rls).Replace("\n", "<br />"))</td>
+                    <td>@Html.Raw(Html.Encode(cmp).Replace("\n", "<br />"))</td>
+                    <td>@Html.Raw(Html.Encode(comit).Replace("\n", "<br />"))</td>
+                    <td>@Html.Raw(Html.Encode(cumpli).Replace("\n", "<br />"))</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<div id="content"></div>
+
+

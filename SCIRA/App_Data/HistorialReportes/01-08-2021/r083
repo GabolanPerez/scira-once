@@ -1,0 +1,18 @@
+{
+  "RepName": "Reporte de Fichas",
+  "ColNames": [
+    "Titulo",
+    "Responsable",
+    "Tipo de Ficha",
+    "Registro Ligado",
+    "Contenido",
+    "Tipo de Recordatorio",
+    "Fecha Límite",
+    "Estado"
+  ],
+  "Rows": [],
+  "NoCols": 8,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

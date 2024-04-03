@@ -1,0 +1,441 @@
+﻿@using SCIRA.Models
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Reporte de Incidencias y Planes de Remediación";
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+
+    List<SCIRA.ViewModels.IyP1RepModel> tipo1 = ViewBag.tipo1;
+    List<SCIRA.ViewModels.IyP1RepModel> tipo2 = ViewBag.tipo2;
+    List<SCIRA.ViewModels.IyP1RepModel> tipo3 = ViewBag.tipo3;
+    List<SCIRA.ViewModels.IyP1RepModel> tipo4 = ViewBag.tipo4;
+    List<SCIRA.ViewModels.IyP1RepModel> tipo5 = ViewBag.tipo5;
+    List<SCIRA.ViewModels.IyP1RepModel> tipo6 = ViewBag.tipo6;
+}
+
+<h2>@Strings.getMSG("Menu119")</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#pes1" data-toggle="tab"><h4>@Strings.getMSG("Menu127")</h4></a></li>
+    <li><a href="#pes2" data-toggle="tab"><h4>@Strings.getMSG("ReporteIyPIndex019")</h4></a></li>
+    <li><a href="#pes3" data-toggle="tab"><h4>@Strings.getMSG("ReporteIyPIndex020")</h4></a></li>
+    <li><a href="#pes4" data-toggle="tab"><h4>@Strings.getMSG("Menu014")</h4></a></li>
+    <li><a href="#pes5" data-toggle="tab"><h4>@Strings.getMSG("Menu077")</h4></a></li>
+    <li><a href="#pes6" data-toggle="tab"><h4>@Strings.getMSG("ReporteIyPIndex021")</h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+
+
+    <div class="tab-pane fade active in" id="pes1">
+
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("ReporteIyPIndex001")</th>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("lyPCreate005")</th>
+                    <th>@Strings.getMSG("lyPCreate008")</th>
+                    <th>@Strings.getMSG("lyPCreate013")</th>
+                    <th>@Strings.getMSG("lyPCreate012")</th>
+                    <th>@Strings.getMSG("lyPIndex006")</th>
+                    <th>@Strings.getMSG("lyPIndex007")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex002")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex003")</th>
+                    <th>@Strings.getMSG("RiesgoCreate074")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex004")</th>
+                    <th>@Strings.getMSG("Menu063")</th>
+                    <th>@Strings.getMSG("RiesgoCreate068")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex006")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate004")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex007")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate044")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate008")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate010")</th>
+                    <th>@Strings.getMSG("BDEIIndex003")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate011")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate013")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex008")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex009")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in tipo1)
+                {
+                    bool tiene_incidencia = item.ds_incidencia != null;
+                    string requiere_plan = item.requiere_plan != false ? Strings.getMSG("UsuarioIndex004"): Strings.getMSG("UsuarioIndex005") + " " + Strings.getMSG("ReporteIyPIndex022") + " " + Utilidades.JustificacionNoPlan((int)item.id_incidencia);
+                    string lvl = item.lvl_5 ?? item.lvl_4 ?? item.lvl_3 ?? item.lvl_2 ?? item.lvl_1 ?? "N/A";
+                    if (!tiene_incidencia)
+                    {
+                        lvl = "";
+                        requiere_plan = "";
+                    }
+
+                    <tr>
+                        <td>@item.nb_objeto</td>
+                        <td>@item.cnb_entidad</td>
+                        <td>@item.cnb_autoridad</td>
+                        <td>@item.nb_resp_oficio</td>
+                        <td>@item.no_incidencias</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_objeto)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_vencimiento)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_contestacion)</td>
+                        <td>@item.id_incidencia</td>
+                        <td>@(lvl)</td>
+                        <td>@item.ds_incidencia</td>
+                        <td>@item.nb_resp_inc</td>
+                        <td>@item.cnb_clasificacion_incidencia</td>
+                        <td>@(requiere_plan)</td>
+                        <td>@item.id_plan</td>
+                        <td>@item.nb_plan</td>
+                        <td>@item.ds_plan</td>
+                        <td>@item.cnb_area</td>
+                        <td>@item.nb_resp_plan</td>
+                        <td>@item.nb_resp_seguimiento</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta_p)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_estimada_implantacion)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_real_solucion)</td>
+                        <td>@item.obs_seguimiento</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_seguimiento)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="tab-pane" id="pes2">
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("ReporteIyPIndex023")</th>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("lyPInformesCreate007")</th>
+                    <th>@Strings.getMSG("lyPCreate013")</th>
+                    <th>@Strings.getMSG("lyPInformesIndex003")</th>
+                    <th>@Strings.getMSG("lyPIndex007")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex002")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex003")</th>
+                    <th>@Strings.getMSG("RiesgoCreate074")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex004")</th>
+                    <th>@Strings.getMSG("Menu063")</th>
+                    <th>@Strings.getMSG("RiesgoCreate068")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex006")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate004")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex007")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate044")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate008")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate010")</th>
+                    <th>@Strings.getMSG("BDEIIndex003")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate011")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate013")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex008")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex009")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in tipo2)
+                {
+                    bool tiene_incidencia = item.ds_incidencia != null;
+                    string requiere_plan = item.requiere_plan != false ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005") + " " + Strings.getMSG("ReporteIyPIndex022") + " " + Utilidades.JustificacionNoPlan((int)item.id_incidencia);
+                    string lvl = item.lvl_5 ?? item.lvl_4 ?? item.lvl_3 ?? item.lvl_2 ?? item.lvl_1 ?? "N/A";
+                    if (!tiene_incidencia)
+                    {
+                        lvl = "";
+                        requiere_plan = "";
+                    }
+
+                    <tr>
+                        <td>@item.nb_objeto</td>
+                        <td>@item.cnb_entidad</td>
+                        <td>@item.nb_resp_oficio</td>
+                        <td>@item.no_incidencias</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_objeto)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_contestacion)</td>
+                        <td>@item.id_incidencia</td>
+                        <td>@(lvl)</td>
+                        <td>@item.ds_incidencia</td>
+                        <td>@item.nb_resp_inc</td>
+                        <td>@item.cnb_clasificacion_incidencia</td>
+                        <td>@(requiere_plan)</td>
+                        <td>@item.id_plan</td>
+                        <td>@item.nb_plan</td>
+                        <td>@item.ds_plan</td>
+                        <td>@item.cnb_area</td>
+                        <td>@item.nb_resp_plan</td>
+                        <td>@item.nb_resp_seguimiento</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta_p)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_estimada_implantacion)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_real_solucion)</td>
+                        <td>@item.obs_seguimiento</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_seguimiento)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="tab-pane" id="pes3">
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("ReporteIyPIndex023")</th>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("lyPInformesCreate007")</th>
+                    <th>@Strings.getMSG("lyPCreate013")</th>
+                    <th>@Strings.getMSG("lyPInformesIndex003")</th>
+                    <th>@Strings.getMSG("lyPIndex007")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex002")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex003")</th>
+                    <th>@Strings.getMSG("RiesgoCreate074")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex004")</th>
+                    <th>@Strings.getMSG("Menu063")</th>
+                    <th>@Strings.getMSG("RiesgoCreate068")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex006")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate004")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex007")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate044")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate008")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate010")</th>
+                    <th>@Strings.getMSG("BDEIIndex003")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate011")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate013")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex008")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex009")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in tipo3)
+                {
+                    bool tiene_incidencia = item.ds_incidencia != null;
+                    string requiere_plan = item.requiere_plan != false ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005") + " " + Strings.getMSG("ReporteIyPIndex022") + " " + Utilidades.JustificacionNoPlan((int)item.id_incidencia);
+                    string lvl = item.lvl_5 ?? item.lvl_4 ?? item.lvl_3 ?? item.lvl_2 ?? item.lvl_1 ?? "N/A";
+                    if (!tiene_incidencia)
+                    {
+                        lvl = "";
+                        requiere_plan = "";
+                    }
+
+                <tr>
+                    <td>@item.nb_objeto</td>
+                    <td>@item.cnb_entidad</td>
+                    <td>@item.nb_resp_oficio</td>
+                    <td>@item.no_incidencias</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_objeto)</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_contestacion)</td>
+                    <td>@item.id_incidencia</td>
+                    <td>@(lvl)</td>
+                    <td>@item.ds_incidencia</td>
+                    <td>@item.nb_resp_inc</td>
+                    <td>@item.cnb_clasificacion_incidencia</td>
+                    <td>@(requiere_plan)</td>
+                    <td>@item.id_plan</td>
+                    <td>@item.nb_plan</td>
+                    <td>@item.ds_plan</td>
+                    <td>@item.cnb_area</td>
+                    <td>@item.nb_resp_plan</td>
+                    <td>@item.nb_resp_seguimiento</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta_p)</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_estimada_implantacion)</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_real_solucion)</td>
+                    <td>@item.obs_seguimiento</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_seguimiento)</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="tab-pane" id="pes4">
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("lyPCertificacionesIndex002")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex012")</th>
+                    <th>@Strings.getMSG("ReporteCertificacionIndex003")</th>
+                    <th>@Strings.getMSG("PeriodoCertificacionIndex002")</th>
+                    <th>@Strings.getMSG("CertificacionCertificar002")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex002")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex003")</th>
+                    <th>@Strings.getMSG("RiesgoCreate074")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex004")</th>
+                    <th>@Strings.getMSG("Menu063")</th>
+                    <th>@Strings.getMSG("RiesgoCreate068")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex006")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate004")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex007")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate044")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate008")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate010")</th>
+                    <th>@Strings.getMSG("BDEIIndex003")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate011")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate013")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex008")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex009")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in tipo4)
+                {
+                    <tr>
+                        <td>@item.ruta_control</td>
+                        <td>@item.codigo_control</td>
+                        <td>@item.cl_certificacion_control</td>
+                        <td>@item.periodo_certificacion</td>
+                        <td>@item.ds_procedimiento_certificacion</td>
+                        <td>@item.id_incidencia</td>
+                        <td>@(item.lvl_5 ?? item.lvl_4 ?? item.lvl_3 ?? item.lvl_2 ?? item.lvl_1 ?? "N/A")</td>
+                        <td>@item.ds_incidencia</td>
+                        <td>@item.nb_resp_inc</td>
+                        <td>@item.cnb_clasificacion_incidencia</td>
+                        <td>@(item.requiere_plan != false ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005") + " " + Strings.getMSG("ReporteIyPIndex022") + " " + Utilidades.JustificacionNoPlan((int)item.id_incidencia))</td>
+                        <td>@item.id_plan</td>
+                        <td>@item.nb_plan</td>
+                        <td>@item.ds_plan</td>
+                        <td>@item.cnb_area</td>
+                        <td>@item.nb_resp_plan</td>
+                        <td>@item.nb_resp_seguimiento</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta_p)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_estimada_implantacion)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_real_solucion)</td>
+                        <td>@item.obs_seguimiento</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_seguimiento)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="tab-pane" id="pes5">
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("ReporteIyPIndex013")</th>
+                    <th>@Strings.getMSG("RiesgoRiesgos002")</th>
+                    <th>@Strings.getMSG("EventoRiesgoIndex001")</th>
+                    <th>@Strings.getMSG("RiesgoCreate079")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex002")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex003")</th>
+                    <th>@Strings.getMSG("RiesgoCreate074")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex004")</th>
+                    <th>@Strings.getMSG("Menu063")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex005")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex006")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate004")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex007")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate044")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate008")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate010")</th>
+                    <th>@Strings.getMSG("BDEIIndex003")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate011")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate013")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex008")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex009")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in tipo5)
+                {
+                <tr>
+                    <td>@item.ruta_control</td>
+                    <td>@item.codigo_riesgo</td>
+                    <td>@item.evento_riesgo</td>
+                    <td>@item.accion_correctora</td>
+                    <td>@item.id_incidencia</td>
+                    <td>@(item.lvl_5 ?? item.lvl_4 ?? item.lvl_3 ?? item.lvl_2 ?? item.lvl_1 ?? "N/A")</td>
+                    <td>@item.ds_incidencia</td>
+                    <td>@item.nb_resp_inc</td>
+                    <td>@item.cnb_clasificacion_incidencia</td>
+                    <td>@(item.requiere_plan != false ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005") + " " + Strings.getMSG("ReporteIyPIndex022") + " " + Utilidades.JustificacionNoPlan((int)item.id_incidencia))</td>
+                    <td>@item.id_plan</td>
+                    <td>@item.nb_plan</td>
+                    <td>@item.ds_plan</td>
+                    <td>@item.cnb_area</td>
+                    <td>@item.nb_resp_plan</td>
+                    <td>@item.nb_resp_seguimiento</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta_p)</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_estimada_implantacion)</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_real_solucion)</td>
+                    <td>@item.obs_seguimiento</td>
+                    <td>@string.Format("{0:dd/MM/yyyy}", item.fe_seguimiento)</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="tab-pane" id="pes6">
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("ReporteIyPIndex014")</th>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex015")</th>
+                    <th>@Strings.getMSG("lyPSeguimientosIndex002")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex002")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex003")</th>
+                    <th>@Strings.getMSG("RiesgoCreate074")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex004")</th>
+                    <th>@Strings.getMSG("Menu063")</th>
+                    <th>@Strings.getMSG("RiesgoCreate068")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex006")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate004")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex007")</th>
+                    <th>@Strings.getMSG("RevisionControlCreate044")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate008")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate010")</th>
+                    <th>@Strings.getMSG("BDEIIndex003")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate011")</th>
+                    <th>@Strings.getMSG("lyPlanesdeRemediacionCreate013")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex008")</th>
+                    <th>@Strings.getMSG("ReporteIyPIndex009")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in tipo6)
+                {
+                    <tr>
+                        <td>@item.nb_objeto</td>
+                        <td>@item.cnb_entidad</td>
+                        <td>@item.ds_objeto</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_objeto)</td>
+                        <td>@item.id_incidencia</td>
+                        <td>@(item.lvl_5 ?? item.lvl_4 ?? item.lvl_3 ?? item.lvl_2 ?? item.lvl_1 ?? "N/A")</td>
+                        <td>@item.ds_incidencia</td>
+                        <td>@item.nb_resp_inc</td>
+                        <td>@item.cnb_clasificacion_incidencia</td>
+                        <td>@(item.requiere_plan != false ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005") + " " + Strings.getMSG("ReporteIyPIndex022") + " " + Utilidades.JustificacionNoPlan((int)item.id_incidencia))</td>
+                        <td>@item.id_plan</td>
+                        <td>@item.nb_plan</td>
+                        <td>@item.ds_plan</td>
+                        <td>@item.cnb_area</td>
+                        <td>@item.nb_resp_plan</td>
+                        <td>@item.nb_resp_seguimiento</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_alta_p)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_estimada_implantacion)</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_real_solucion)</td>
+                        <td>@item.obs_seguimiento</td>
+                        <td>@string.Format("{0:dd/MM/yyyy}", item.fe_seguimiento)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

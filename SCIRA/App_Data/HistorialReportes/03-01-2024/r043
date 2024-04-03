@@ -1,0 +1,219 @@
+{
+  "RepName": "Reporte de Sub Procesos - Normatividad: Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+  "ColNames": [
+    "Root",
+    "Raíz",
+    "1 ",
+    "Componentes",
+    "2",
+    "Principios",
+    "¿Tiene Ficha?",
+    "Sub Procesos Ligados"
+  ],
+  "Rows": [
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "01",
+      "GOBIERNO Y CULTURA - El gobierno establece el tono de la organización, reforzando la  importancia de, y estableciendo responsabilidades de supervisión, para la  gestión de riesgos empresariales. La cultura se refiere a valores éticos,  comportamientos deseados y comprensión del riesgo en la entidad.",
+      "01",
+      "La junta directiva ejerce supervisión sobre los riesgos",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "01",
+      "GOBIERNO Y CULTURA - El gobierno establece el tono de la organización, reforzando la  importancia de, y estableciendo responsabilidades de supervisión, para la  gestión de riesgos empresariales. La cultura se refiere a valores éticos,  comportamientos deseados y comprensión del riesgo en la entidad.",
+      "02",
+      "Establece estructuras operativas",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "01",
+      "GOBIERNO Y CULTURA - El gobierno establece el tono de la organización, reforzando la  importancia de, y estableciendo responsabilidades de supervisión, para la  gestión de riesgos empresariales. La cultura se refiere a valores éticos,  comportamientos deseados y comprensión del riesgo en la entidad.",
+      "03",
+      "Define la cultura deseada",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "01",
+      "GOBIERNO Y CULTURA - El gobierno establece el tono de la organización, reforzando la  importancia de, y estableciendo responsabilidades de supervisión, para la  gestión de riesgos empresariales. La cultura se refiere a valores éticos,  comportamientos deseados y comprensión del riesgo en la entidad.",
+      "04",
+      "Demuestra compromiso con los valores éticos",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "01",
+      "GOBIERNO Y CULTURA - El gobierno establece el tono de la organización, reforzando la  importancia de, y estableciendo responsabilidades de supervisión, para la  gestión de riesgos empresariales. La cultura se refiere a valores éticos,  comportamientos deseados y comprensión del riesgo en la entidad.",
+      "05",
+      "Atrae, desarrolla y retiene individuos competentes. ",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "02",
+      "ESTRATEGIA Y OBJETIVOS - Gestión de riesgos empresariales, estrategia y objetivos trabajan juntos  en el proceso de planeación estratégica. El apetito al riesgo es definido y  alineado con la estrategia; los objetivos de negocio ponen la estrategia en  practica mientras sirve para identificar, evaluar y responder a los riesgos.",
+      "06",
+      "Analiza el contexto empresarial  ",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "02",
+      "ESTRATEGIA Y OBJETIVOS - Gestión de riesgos empresariales, estrategia y objetivos trabajan juntos  en el proceso de planeación estratégica. El apetito al riesgo es definido y  alineado con la estrategia; los objetivos de negocio ponen la estrategia en  practica mientras sirve para identificar, evaluar y responder a los riesgos.",
+      "07",
+      "Define el apetito al riesgo  ",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "02",
+      "ESTRATEGIA Y OBJETIVOS - Gestión de riesgos empresariales, estrategia y objetivos trabajan juntos  en el proceso de planeación estratégica. El apetito al riesgo es definido y  alineado con la estrategia; los objetivos de negocio ponen la estrategia en  practica mientras sirve para identificar, evaluar y responder a los riesgos.",
+      "08",
+      " Evalúa estrategias alternativas  ",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "02",
+      "ESTRATEGIA Y OBJETIVOS - Gestión de riesgos empresariales, estrategia y objetivos trabajan juntos  en el proceso de planeación estratégica. El apetito al riesgo es definido y  alineado con la estrategia; los objetivos de negocio ponen la estrategia en  practica mientras sirve para identificar, evaluar y responder a los riesgos.",
+      "09",
+      "Formula los objetivos empresariales",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "03",
+      "DESEMPEÑO - Riesgos que pueden afectar el logro de la estrategia y los objetivos de  negocio pueden ser identificados y evaluados. Riesgos son priorizados por  severidad y en el contexto del apetito al riesgo. La organización  selecciona las respuestas al riesgo y toma el riesgo que ha asumido.",
+      "10",
+      "Identifica riesgos",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "03",
+      "DESEMPEÑO - Riesgos que pueden afectar el logro de la estrategia y los objetivos de  negocio pueden ser identificados y evaluados. Riesgos son priorizados por  severidad y en el contexto del apetito al riesgo. La organización  selecciona las respuestas al riesgo y toma el riesgo que ha asumido.",
+      "11",
+      " Evalúa la severidad de los riesgos",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "03",
+      "DESEMPEÑO - Riesgos que pueden afectar el logro de la estrategia y los objetivos de  negocio pueden ser identificados y evaluados. Riesgos son priorizados por  severidad y en el contexto del apetito al riesgo. La organización  selecciona las respuestas al riesgo y toma el riesgo que ha asumido.",
+      "12",
+      "Prioriza los riesgos",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "03",
+      "DESEMPEÑO - Riesgos que pueden afectar el logro de la estrategia y los objetivos de  negocio pueden ser identificados y evaluados. Riesgos son priorizados por  severidad y en el contexto del apetito al riesgo. La organización  selecciona las respuestas al riesgo y toma el riesgo que ha asumido.",
+      "13",
+      "Implementas las respuestas al riesgo",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "03",
+      "DESEMPEÑO - Riesgos que pueden afectar el logro de la estrategia y los objetivos de  negocio pueden ser identificados y evaluados. Riesgos son priorizados por  severidad y en el contexto del apetito al riesgo. La organización  selecciona las respuestas al riesgo y toma el riesgo que ha asumido.",
+      "14",
+      " Desarrollar un portafolio de riesgos",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "04",
+      "REVISIÓN - Para revisar el desempeño de la entidad, una organización puede  considerar qué tan bien funcionan los componentes de gestión de riesgos  empresariales a lo largo del tiempo a la luz de cambios sustanciales y qué  revisiones se necesitan.",
+      "15",
+      "Evalúa los cambios sustanciales",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "04",
+      "REVISIÓN - Para revisar el desempeño de la entidad, una organización puede  considerar qué tan bien funcionan los componentes de gestión de riesgos  empresariales a lo largo del tiempo a la luz de cambios sustanciales y qué  revisiones se necesitan.",
+      "16",
+      "Revisa los riesgos y el desempeño",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "04",
+      "REVISIÓN - Para revisar el desempeño de la entidad, una organización puede  considerar qué tan bien funcionan los componentes de gestión de riesgos  empresariales a lo largo del tiempo a la luz de cambios sustanciales y qué  revisiones se necesitan.",
+      "17",
+      "Propone mejoras en la gestión de riesgos empresariales",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "05",
+      "INFORMACIÓN, COMUNICACIÓN Y REPORTE - La gestión de riesgos empresariales requiere un proceso continuo para  obtener y compartir información necesaria, de fuentes internas y  externas, que fluya en todas las direcciones y a través de toda la  organización. ",
+      "18",
+      "Aprovecha la información y la tecnología",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "05",
+      "INFORMACIÓN, COMUNICACIÓN Y REPORTE - La gestión de riesgos empresariales requiere un proceso continuo para  obtener y compartir información necesaria, de fuentes internas y  externas, que fluya en todas las direcciones y a través de toda la  organización. ",
+      "19",
+      "Comunica los riesgos de información",
+      "No",
+      "N/A"
+    ],
+    [
+      "COSO-ERM",
+      "Committe of Sponsoring Organizations of the Treadway Commission - Enterprise Risk Management",
+      "05",
+      "INFORMACIÓN, COMUNICACIÓN Y REPORTE - La gestión de riesgos empresariales requiere un proceso continuo para  obtener y compartir información necesaria, de fuentes internas y  externas, que fluya en todas las direcciones y a través de toda la  organización. ",
+      "20",
+      "Informes sobre riesgos, cultura y desempeño",
+      "No",
+      "N/A"
+    ]
+  ],
+  "NoCols": 7,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

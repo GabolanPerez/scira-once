@@ -1,0 +1,115 @@
+.CRcontainer {
+    background-color: transparent;
+    width: 85px;
+    height: 40px;
+}
+
+.CRCell {
+    left: 5%;
+    top: 10%;
+    width: 90%;
+    height: 80%;
+    background-color: darkseagreen;
+    border-radius: 0 15% 0 15%;
+    position: relative;
+    transition: width .4s, height .4s, background-color 3s;
+}
+
+    .CRCell:hover {
+        width: 100%;
+        height: 100%;
+        opacity: .7;
+    }
+
+    .CRCell .CRContent {
+        position: absolute;
+        top: 20%;
+        left: 40%;
+        width: 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .CRCell .CRIndicator {
+        width: 20px;
+        height: 20px;
+        float: right;
+        border-radius: 50%;
+        background-color: transparent;
+        background-size: 20px;
+    }
+
+        .CRCell .CRIndicator.success {
+            background-image: url(success.png);
+        }
+
+        .CRCell .CRIndicator.loading {
+            background-image: url(loader2.gif);
+            background-size: 35px;
+        }
+
+        .CRCell .CRIndicator.error {
+            background-image: url(error.png);
+        }
+
+.Vertical {
+    text-align: center;
+    position: absolute;
+    width: 175px;
+    height: 100px;
+    transform: translateY(-50%) translateX(-20%)rotate(-90deg);
+    transform-origin: LEFT 1;
+    transition: background-color .5s;
+    border-radius: 10%;
+}
+
+    .Vertical:hover {
+        background-color: rgb(200,200,200,.4);
+        position: absolute;
+        width: 100px;
+        height: 175px;
+        transform: translateY(-50%)rotate(0deg);
+        transform-origin: center;
+    }
+
+.VerticalNH {
+    text-align: center;
+    position: absolute;
+    transform: translateY(-50%) translateX(-20%)rotate(-90deg);
+    transform-origin: LEFT 1;
+}
+
+.horizontal {
+    text-align: center;
+    width: 100%;
+}
+
+.titSup {
+    position: relative;
+    width: 100px;
+    height: 175px;
+    background-color: azure;
+}
+
+.PO {
+    background-color: azure;
+}
+
+.colIzq {
+    background-color: cadetblue;
+    color: white;
+    position: relative;
+    width: 250px;
+    height: 50px;
+    border-bottom: 2px solid white;
+}
+
+.MO {
+    width: 50px;
+    background-color: cadetblue;
+    color: white;
+}
+
+#CriticidadTable {
+    border-collapse: collapse;
+}

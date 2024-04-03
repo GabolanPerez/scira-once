@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SCIRA</title>
+
+    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" type="text/css" href="~/Content/DataTables/css/buttons.bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/DataTables/css/buttons.dataTables.min.css" />
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/general")
+
+
+    
+    <script type="text/javascript" src="~/signalr/hubs"></script>
+
+    <script type="text/javascript" src="~/Scripts/DataTables/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/buttons.flash.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/jszip.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/pdfmake.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/vfs_fonts.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/DataTables/buttons.print.min.js"></script>
+
+    <script>
+        toastr.options.positionClass = 'toast-bottom-left';
+    </script>
+</head>
+<body class="loading">
+    @Html.Partial("_Menu")
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        @Html.Partial("_Footer")
+    </div>
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" class="init">
+        $(document).ready(function () {
+            loadTables();
+        });
+
+
+        var table;
+        var table2;
+
+        function loadTables() {
+            $('.results thead th.search').each(function () {
+                var title = $(this).text();
+                $(this).html(title + '<br><input type="text" class="form-control" placeholder="Buscar ' + title + '" />');
+            });
+
+            $('.results2 thead th.search').each(function () {
+                var title = $(this).text();
+                $(this).html(title + '<br><input type="text" class="form-control" placeholder="Buscar ' + title + '" />');
+            });
+
+            var colDefs = [{ orderable: false, targets: -1 }];
+            if (typeof columnDefs !== 'undefined'  ) {
+                colDefs = columnDefs;
+            }
+
+            var ord = [];
+            if (typeof order !== 'undefined'  ) {
+                ord = order;
+            }
+
+            table = $('.results').DataTable({
+                dom: "Bfrtip",
+                buttons: [
+                    { extend: "csv", text: "Exportar a CSV" },
+                    { extend: "excel", text: "Exportar a MS Excel" },
+                    { extend: "pdf", text: "Generar PDF" },
+                    { extend: "print", text: "Imprimir..." }
+                ],
+
+                responsive: true,
+                paginate: false,
+                pagingType: "full_numbers",
+                lengthChange: true,
+                lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "Todos"]],
+                columnDefs: colDefs,
+                order: ord,
+                language: {
+                    emptyTable: "Sin resultados para los criterios de consulta",
+                    info: "Registros _START_ al _END_ de _TOTAL_",
+                    infoEmpty: "Sin resultados que mostrar",
+                    infoFiltered: "(filtrados de un total de _MAX_)",
+                    search: "Buscar",
+                    zeroRecords: "Ning&uacute;n dato encontrado",
+                    paginate: {
+                        first: "<<",
+                        next: ">",
+                        last: ">>",
+                        previous: "<"
+                    },
+                    lengthMenu: "Mostrar _MENU_ registros"
+                }
+            });
+
+
+            table.columns().every(function () {
+                var that = this;
+                $('input', this.header()).on('keyup change', function () {
+                    if (that.search() !== this.value) {
+                        that
+                            .search(this.value)
+                            .draw();
+                    }
+                });
+            });
+
+            table2 = $('.results2').DataTable({
+                dom: "Bfrtip",
+                buttons: [
+                    { extend: "csv", text: "Exportar a CSV" },
+                    { extend: "excel", text: "Exportar a MS Excel" },
+                    { extend: "pdf", text: "Generar PDF" },
+                    { extend: "print", text: "Imprimir..." }
+                ],
+
+                responsive: true,
+                paginate: false,
+                pagingType: "full_numbers",
+                lengthChange: true,
+                lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "Todos"]],
+                columnDefs: colDefs,
+                order: ord,
+                language: {
+                    emptyTable: "Sin resultados para los criterios de consulta",
+                    info: "Registros _START_ al _END_ de _TOTAL_",
+                    infoEmpty: "Sin resultados que mostrar",
+                    infoFiltered: "(filtrados de un total de _MAX_)",
+                    search: "Buscar",
+                    zeroRecords: "Ning&uacute;n dato encontrado",
+                    paginate: {
+                        first: "<<",
+                        next: ">",
+                        last: ">>",
+                        previous: "<"
+                    },
+                    lengthMenu: "Mostrar _MENU_ registros"
+                }
+            });
+
+
+            table2.columns().every(function () {
+                var that = this;
+                $('input', this.header()).on('keyup change', function () {
+                    if (that.search() !== this.value) {
+                        that
+                            .search(this.value)
+                            .draw();
+                    }
+                });
+            });
+        }
+
+        $(document).ready(function () {
+            $('body').removeClass('loading');
+        });
+    </script>
+</body>
+</html>
+

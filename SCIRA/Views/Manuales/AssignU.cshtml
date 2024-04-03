@@ -1,0 +1,57 @@
+﻿@model SCIRA.ViewModels.AsignaUsuarioPuestoViewModel
+@using SCIRA.Utilidades
+@{
+    Layout = null;
+}
+
+
+
+<script src="~/Scripts/sharedScripts.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#formAux .selectpicker').selectpicker({
+            style: 'btn-default',
+            liveSearch: 'true',
+            noneSelectedText: '@Strings.getMSG("RevisionControlCreate064")',
+            selectAllText: '@Strings.getMSG("ManualesCreate014")',
+            actionsBox: 'true',
+            deselectAllText: '@Strings.getMSG("Deseleccionar todos")',
+            selectAllText: '@Strings.getMSG("Seleccionar todos")',
+            selectedTextFormat: 'count > 1',
+            size: 'auto',
+            countSelectedText: "{0} @Strings.getMSG("OBS")"
+        });
+
+        var array = @Html.Raw(Json.Encode(Model.users));
+
+        $('select[name=users]').val(array);
+        $('#formAux .selectpicker').selectpicker('refresh');
+
+    });
+</script>
+
+
+
+<form id="formAux">
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.id_puesto)
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("btn003")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("users", (MultiSelectList)ViewBag.sps, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atención")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ManualesEdit006")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-xs-offset-1 col-md-offset-1 col-xs-2 col-md-4">
+                <input type="button" class="btn btn-primary" onclick="saveU();" value="@Strings.getMSG("Guardar")" />
+            </div>
+        </div>
+    </div>
+</form>

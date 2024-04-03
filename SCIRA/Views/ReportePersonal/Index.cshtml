@@ -1,0 +1,183 @@
+﻿@model IEnumerable<SCIRA.Models.c_usuario>
+@using SCIRA.Utilidades
+@using SCIRA.Models
+
+@{
+    ViewBag.Title = "Reporte de Personal";
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+}
+
+
+<style type="text/css">
+    .resaltable {
+
+    }
+
+    .resaltable:hover {
+        color: deepskyblue;
+        background-color: lightslategray;
+    }
+</style>
+
+<link href="~/Content/Extras.css" rel="stylesheet" />
+
+<h2>@Strings.getMSG("Menu120")</h2>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("Nombre")</th>
+            <th class="search">@Strings.getMSG("EntidadIndex001")</th>
+            <th class="search">@Strings.getMSG("AjustesMailIndex003")</th>
+            <th class="search">@Strings.getMSG("Area")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex001")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex002")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex003")</th>
+            <th class="search">@Strings.getMSG("UsuarioCreate008")</th>
+            <th class="search">@Strings.getMSG("UsuarioIndex001")</th>
+            <th class="search">@Strings.getMSG("Menu068")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex004")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex005")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex006")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex007")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex008")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex009")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex010")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex011")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex012")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex013")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex014")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex015")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var roles = item.c_rol.ToList();
+            List<c_funcion> funciones = new List<c_funcion>();
+            string rls = "";
+            string fcs = "";
+            foreach (var r in roles)
+            {
+                rls += r.nb_rol + "\n";
+                funciones = funciones.Union(r.c_funcion).ToList();
+            }
+            foreach (var f in funciones)
+            {
+                fcs += f.nb_funcion + "\n";
+            }
+
+            var tiempos = item.c_usuario_sub_proceso;
+            int tiempoTotal = 0;
+            foreach (var t in tiempos)
+            {
+                tiempoTotal += t.tiempo_sub_proceso;
+            }
+
+            <tr>
+                <td class="u@(item.id_usuario)">@item.nb_usuario</td>
+                <td>@Utilidades.PuestoUsuario(item.id_usuario)</td>
+                <td>@item.e_mail_principal</td>
+                <td>@item.c_area.nb_area</td>
+                <td>@Html.Raw(Html.Encode(Utilidades.JefeDirecto(item.id_usuario)).Replace("\n", "<br />"))</td>
+                <td>@Utilidades.PuestoJefeDirecto(item.id_usuario)</td>
+                <td>@(item.es_super_usuario ? Strings.getMSG("AjustesMailIndex015") : Strings.getMSG("AjustesMailIndex016"))</td>
+                <td>@(item.solo_lectura ? Strings.getMSG("AjustesMailIndex015") : Strings.getMSG("AjustesMailIndex016"))</td>
+                <td>@(item.esta_activo ? Strings.getMSG("AjustesMailIndex015") : Strings.getMSG("AjustesMailIndex016"))</td>
+                <td>@Html.Raw(Html.Encode(rls).Replace("\n", "<br />"))</td>
+                <td>@Html.Raw(Html.Encode(fcs).Replace("\n", "<br />"))</td>
+                <td class="resaltable" onclick="mpDetail(@item.id_usuario);">@item.c_macro_proceso.Count</td>
+                <td class="resaltable" onclick="pDetail(@item.id_usuario);">@item.c_proceso.Count</td>
+                <td class="resaltable" onclick="spDetail(@item.id_usuario);">@item.c_sub_proceso.Count</td>
+                <td class="resaltable" onclick="ctrDetail(@item.id_usuario);">@item.k_control1.Count</td>
+                <td class="resaltable" onclick="indDetail(@item.id_usuario);">@item.c_indicador.Count</td>
+                <td class="resaltable" onclick="ofcDetail(@item.id_usuario);">@item.k_objeto.Where(o => o.tipo_objeto == 1).Count()</td>
+                <td class="resaltable" onclick="infDetail(@item.id_usuario);">@item.k_objeto.Where(o => o.tipo_objeto == 2 || o.tipo_objeto == 3).Count()</td>
+                <td class="resaltable" onclick="incDetail(@item.id_usuario);"> @item.k_incidencia.Count</td>
+                <td class="resaltable" onclick="plnDetail(@item.id_usuario);">@item.k_plan.Count</td>
+                <td class="resaltable" onclick="ficDetail(@item.id_usuario);">@item.r_evento.Count</td>
+                <td class="resaltable" onclick="timeDetail(@item.id_usuario);">@tiempoTotal</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function mpDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex029") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsMP", "ReportePersonal"))/' + id);
+    }
+
+    function pDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex030") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsP", "ReportePersonal"))/' + id);
+    }
+
+    function spDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex031") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsSP", "ReportePersonal"))/' + id);
+    }
+
+    function ctrDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex032") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsCTR", "ReportePersonal"))/' + id);
+    }
+
+    function indDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex033") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsIND", "ReportePersonal"))/' + id);
+    }
+
+    function ofcDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex034") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsOFC", "ReportePersonal"))/' + id);
+    }
+
+    function infDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex035") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsINF", "ReportePersonal"))/' + id);
+    }
+
+    function incDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex036") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsINC", "ReportePersonal"))/' + id);
+    }
+
+    function plnDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex037") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsPLN", "ReportePersonal"))/' + id);
+    }
+
+    function ficDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex038") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsFIC", "ReportePersonal"))/' + id);
+    }
+
+    function timeDetail(id) {
+        $("#menuModal .HeadLabel").html("@Strings.getMSG("ReporteIyPIndex039") " + $(".u" + id).text());
+        $("#menuModal .partialModal").html('<div class="row"><div class="col-md-offset-5 col-xs-offset-1 col-md-1 col-xs-1"><span id="ind1" class="IndicatorLoader centered"></span></div></div>');
+        $("#menuModal").modal('show');
+        $("#menuModal .partialModal").load('@(Url.Action("DetailsTIME", "ReportePersonal"))/' + id);
+    }
+
+</script>

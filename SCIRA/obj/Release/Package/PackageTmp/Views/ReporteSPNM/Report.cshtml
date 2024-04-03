@@ -1,0 +1,102 @@
+﻿@model IEnumerable<SCIRA.Models.c_contenido_normatividad>
+@using Newtonsoft.Json
+@using SCIRA.ViewModels
+@using SCIRA.Models
+@using SCIRA.Utilidades
+@{
+    var db = new SICIEntities();
+    List<c_nivel_normatividad> niveles = ViewBag.Niveles;
+    int nNiveles = niveles.Count();
+
+    List<ConfiguracionesEventosViewModel.Config0001> config0001s = new List<ConfiguracionesEventosViewModel.Config0001>();
+
+    var fichasNorm = db.r_evento.Where(r => r.tipo == "0001");
+    foreach(var ficha in fichasNorm)
+    {
+        var conf = JsonConvert.DeserializeObject<ConfiguracionesEventosViewModel.Config0001>(ficha.config);
+        config0001s.Add(conf);
+    }
+
+}
+
+    <style type="text/css">
+        .resaltable {
+        }
+
+            .resaltable:hover {
+                color: deepskyblue;
+                background-color: lightslategray;
+            }
+    </style>
+
+<script>
+    var fichaURL = "@Url.Action("ContenidoNormatividadDetails","Ficha")/";
+
+    var options = {
+        title: "@Strings.getMSG("Detalle Ficha")",
+        size: 'lg',
+        show: true,
+        loadUrl:""
+    }
+
+
+    function FichaDetails(id_cont) {
+        options.loadUrl = fichaURL + id_cont;
+        menuModal.initModal(options);
+    }
+</script>
+
+
+<h2>@Strings.getMSG("ReporteSPNMIndex003")</h2>
+
+
+<input type="button" class="btn btn-default" value="@Strings.getMSG("Atrás")" onclick="$('#contentO').show(); $('#content').hide();">
+
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            @foreach (var nivel in niveles)
+            {
+                <th>@nivel.cl_nivel_normatividad</th>
+                <th>@nivel.nb_nivel_normatividad</th>
+            }
+            <th>@Strings.getMSG("¿Tiene ficha?")</th>
+            <th>@Strings.getMSG("ManualesCreate015")</th>          
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cont in Model)
+        {
+            var cadena = Utilidades.CeldasAnterioresNorm(cont);
+            var i = niveles.IndexOf(cont.c_nivel_normatividad);
+            <tr>
+                @Html.Raw(cadena ?? "")
+                <td>@cont.cl_contenido_normatividad</td>
+                <td>@cont.ds_contenido_normatividad</td>
+                @for (int j = 0; j < nNiveles - (i + 1); j++)
+                {
+                    <td></td>
+                    <td></td>
+                }
+                @if (config0001s.Exists(c => c.id == cont.id_contenido_normatividad))
+                {
+                    <td class="resaltable" onclick="FichaDetails(@cont.id_contenido_normatividad)">@Strings.getMSG("UsuarioIndex004")</td>
+                }
+                else
+                {
+                    <td>@Strings.getMSG("UsuarioIndex005")</td>
+                }
+                <td>@Html.Raw(Utilidades.SubProcesosLigados(cont))</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+<script>
+    $(document).ready(function () {
+        loadTables();
+    });
+</script>

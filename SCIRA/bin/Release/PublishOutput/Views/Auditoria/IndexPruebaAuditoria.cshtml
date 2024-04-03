@@ -1,0 +1,51 @@
+﻿@model IEnumerable<SCIRA.Models.c_prueba_auditoria>
+@using SCIRA.Utilidades 
+@{
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+    ViewBag.Title = @Strings.getMSG("AuditoriaIndexPruebaAuditoria001");
+
+    var Pruebas = Model.OrderBy(m => m.no_orden);
+}
+
+<h2>@Strings.getMSG("AuditoriaIndexPruebaAuditoria001")</h2>
+<h3>[@ViewBag.cl_auditoria] - @ViewBag.nb_auditoria</h3>
+
+<p>
+    @Html.ActionLink(Strings.getMSG("RevisionControlCreate102"), "CreatePruebaAuditoria", "Auditoria", new { id = ViewBag.id_auditoria }, new { @class = "btn btn-default btn-sm" })
+    @Html.ActionLink(Strings.getMSG("Regresar"), "IndexUniversoAuditable", "Auditoria", new { @class = "btn btn-default btn-sm" })
+</p>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("NormatividadIndex004")</th>
+            <th>@Strings.getMSG("AuditoriaIndexPruebaAuditoria002")</th>
+            <th>@Strings.getMSG("SubProcesoCreate018")</th>
+            <th width="40"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Pruebas)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.no_orden)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nb_prueba_auditoria)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ds_prueba_auditoria)
+                </td>
+                <td>
+                    <a href="@Url.Action("EditPruebaAuditoria", new { id = item.id_prueba_auditoria })">
+                        <i class="glyphicon glyphicon-pencil" title="@Strings.getMSG("Editar")"></i>
+                    </a> |
+                    <a href="@Url.Action("DeletePruebaAuditoria", new { id = item.id_prueba_auditoria })">
+                        <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

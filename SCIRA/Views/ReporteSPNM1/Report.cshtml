@@ -1,0 +1,169 @@
+﻿@model IEnumerable<SCIRA.Models.c_contenido_normatividad>
+@using Newtonsoft.Json
+@using SCIRA.ViewModels
+@using SCIRA.Models
+@using SCIRA.Utilidades
+@{
+    var db = new SICIEntities();
+    List<c_nivel_normatividad> niveles = ViewBag.Niveles;
+    int nNiveles = niveles.Count();
+
+    List<ConfiguracionesEventosViewModel.Config0001> config0001s = new List<ConfiguracionesEventosViewModel.Config0001>();
+
+    var fichasNorm = db.r_evento.Where(r => r.tipo == "0001");
+    foreach (var ficha in fichasNorm)
+    {
+        var conf = JsonConvert.DeserializeObject<ConfiguracionesEventosViewModel.Config0001>(ficha.config);
+        config0001s.Add(conf);
+    }
+
+}
+
+<style type="text/css">
+    .resaltable {
+    }
+
+        .resaltable:hover {
+            color: deepskyblue;
+            background-color: lightslategray;
+        }
+</style>
+
+<script>
+    var fichaURL = "@Url.Action("ContenidoNormatividadDetails","Ficha")/";
+
+    var options = {
+        title: "@Strings.getMSG("Detalle Ficha")",
+        size: 'lg',
+        show: true,
+        loadUrl:""
+    }
+
+
+    function FichaDetails(id_cont) {
+        options.loadUrl = fichaURL + id_cont;
+        menuModal.initModal(options);
+    }
+</script>
+
+<h2>@Strings.getMSG("ReporteSPNMIndex003")</h2>
+
+<input type="button" class="btn btn-default" value="@Strings.getMSG("Atrás")" onclick="$('#contentO').show(); $('#content').hide();">
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            @foreach (var nivel in niveles)
+            {
+                <th>@nivel.cl_nivel_normatividad</th>
+                <th>@nivel.nb_nivel_normatividad</th>
+            }
+            <th>@Strings.getMSG("¿Tiene ficha?")</th>
+            <th>@Strings.getMSG("ManualesCreate015")</th>
+            <th>
+                @Html.DisplayNameFor(model => model.consejo_admo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tema)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.criticidad1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.monto_multa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plazo_otorgado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.requiere_ficha)
+            </th>
+            <th>@Strings.getMSG("Area")</th>
+            <th>@Strings.getMSG("Menu169")</th>
+            <th>@Strings.getMSG("Menu170")</th>
+            <th>@Strings.getMSG("Cumplimiento001")</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cont in Model)
+        {
+
+            var area = cont.c_area.ToList();
+            List<c_contenido_normatividad> conts = new List<c_contenido_normatividad>();
+            string rls = "";
+            foreach (var r in area)
+            {
+                rls += r.nb_area + "\n";
+                conts = conts.Union(r.c_contenido_normatividad).ToList();
+            }
+
+            var cump = cont.c_frecuencia.ToList();
+            string cmp = "";
+            foreach (var r in cump)
+            {
+                cmp += r.nb_frecuencia + "\n";
+                conts = conts.Union(r.c_contenido_normatividad).ToList();
+            }
+
+            var comi = cont.c_comite.ToList();
+            string comit = "";
+            foreach (var r in comi)
+            {
+                comit += r.nb_comite + "\n";
+                conts = conts.Union(r.c_contenido_normatividad).ToList();
+            }
+
+            var cumplimiento = cont.c_cumplimiento.ToList();
+            string cumpli = "";
+            foreach (var r in cumplimiento)
+            {
+                cumpli += r.nb_cumplimiento + "\n";
+                conts = conts.Union(r.c_contenido_normatividad).ToList();
+            }
+
+            var cadena = Utilidades.CeldasAnterioresNorm(cont);
+            var i = niveles.IndexOf(cont.c_nivel_normatividad);
+
+            <tr>
+                @Html.Raw(cadena ?? "")
+                <td>@cont.cl_contenido_normatividad</td>
+                <td>@cont.ds_contenido_normatividad</td>
+                @for (int j = 0; j < nNiveles - (i + 1); j++)
+                {
+                    <td></td>
+                    <td></td>
+                }
+                @if (config0001s.Exists(c => c.id == cont.id_contenido_normatividad))
+                {
+                    <td class="resaltable" onclick="FichaDetails(@cont.id_contenido_normatividad)">@Strings.getMSG("UsuarioIndex004")</td>
+                }
+                else
+                {
+                    <td>@Strings.getMSG("UsuarioIndex005")</td>
+                }
+                <td>@Html.Raw(Utilidades.SubProcesosLigados(cont))</td>
+
+                <td>@Html.DisplayFor(modelItem => cont.consejo_admo)</td>
+                <td>@Html.DisplayFor(modelItem => cont.tema)</td>
+                <td>@Html.DisplayFor(modelItem => cont.criticidad1)</td>
+                <td>@Html.DisplayFor(modelItem => cont.monto_multa)</td>
+                <td>@Html.DisplayFor(modelItem => cont.plazo_otorgado)</td>
+                <td>@Html.DisplayFor(modelItem => cont.requiere_ficha)</td>
+
+                <td>@Html.Raw(Html.Encode(rls).Replace("\n", "<br />"))</td>
+                <td>@Html.Raw(Html.Encode(cmp).Replace("\n", "<br />"))</td>
+                <td>@Html.Raw(Html.Encode(comit).Replace("\n", "<br />"))</td>
+                <td>@Html.Raw(Html.Encode(cumpli).Replace("\n", "<br />"))</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<script>
+    $(document).ready(function () {
+        loadTables();
+    });
+</script>

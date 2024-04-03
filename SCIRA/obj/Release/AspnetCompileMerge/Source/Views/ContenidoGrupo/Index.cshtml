@@ -1,0 +1,72 @@
+﻿@model IEnumerable<SCIRA.Models.c_contenido_grupo>
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Contenido Grupos";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    var db = new SCIRA.Models.SICIEntities();
+    string ruta = "";
+
+}
+
+
+
+
+<h2>@Strings.getMSG("Menu065")</h2>
+<p>
+    @if (ViewBag.id_padre != null)
+    {
+        @Html.ActionLink(Strings.getMSG("Regresar"), "Index", "ContenidoGrupo", new { id = db.c_contenido_grupo.Find(ViewBag.id_padre).id_contenido_grupo_padre }, new { @class = "btn btn-default" })
+    }
+    @Html.ActionLink(Strings.getMSG("Agregar"), "Create", "ContenidoGrupo", new { id = ViewBag.id_padre }, new { @class = "btn btn-default" })
+</p>
+<br />
+<br />
+
+
+
+@if (ViewBag.Contador != null)
+{
+    for (int i = ViewBag.Contador; i > 0; i--)
+    {
+        <span> <a href="@Url.Action("Index", new { id = ViewBag.IDs[i-1] })">@ViewBag.Claves[i - 1]</a> >> </span>
+    }
+}
+
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("Clave")</th>
+            <th class="search">@Strings.getMSG("Nombre")</th>
+            <th width="100"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="@Url.Action("Index", new { id = item.id_contenido_grupo})">
+                        @item.cl_contenido_grupo
+                    </a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Index", new { id = item.id_contenido_grupo})">
+                        @item.ds_contenido_grupo
+                    </a>
+                </td>
+                <td>
+                    <center>
+                        <a href="@Url.Action("Edit", new { id = item.id_contenido_grupo})">
+                            <i class="fa fa-pencil" title="@Strings.getMSG("Editar")"></i>
+                        </a>
+                        |
+                        <a href="@Url.Action("Delete", new { id = item.id_contenido_grupo})">
+                            <i class="fa fa-trash" title="@Strings.getMSG("Borrar")"></i>
+                        </a>
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

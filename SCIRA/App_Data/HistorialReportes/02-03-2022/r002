@@ -1,0 +1,51 @@
+{
+  "RepName": "Reporte de Benchmark",
+  "ColNames": [
+    "Entidad",
+    "Responsable Entidad",
+    "Macro Proceso",
+    "Responsable Macro Proceso",
+    "Proceso",
+    "ResponsableProceso",
+    "Sub Proceso",
+    "ResponsableSub Proceso",
+    "Macro Proceso Benchmark",
+    "Proceso Benchmark",
+    "Sub Proceso Benchmark",
+    "Evento de Riesgo"
+  ],
+  "Rows": [
+    [
+      "01 - BANCO A",
+      "Jorge Rodriguez Ferreiro",
+      "MP01.01 - Contraloría Interna",
+      "Lizette Escamilla Miranda",
+      "P01.01.001 - Manual de Cumplimiento",
+      "AB",
+      "SP0001 - Proceso de Entrevista Personal con el Cliente",
+      "AB",
+      "A01 - Contraloría Interna",
+      "P01 - Contratación y vigilancia de productos",
+      "SP0001 - Desarrollo nuevos productosaaa",
+      "0001 - Diseño inadecuado de un producto en productos estructurados a medida."
+    ],
+    [
+      "04 - BANCO D",
+      "Jorge Rodriguez Ferreiro",
+      "MG901 - Comités",
+      "Esneyder Parra",
+      "P01.1 - Consejo de Administración",
+      "Esneyder Parra",
+      "SP9002 - Aprobación del Consejo del Código de Conducta",
+      "Esneyder Parra",
+      "A02 - Comités",
+      "P03 - Préstamos con garantía personal",
+      "1 - Solicitud de la operación, apertura de expediente y alta de la propuesta.",
+      "0265 - Error u omisión en la introducción de datos en la propuesta de la operación que puedan suponer una valoración errónea de la operación o de los límites de autorización."
+    ]
+  ],
+  "NoCols": 12,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

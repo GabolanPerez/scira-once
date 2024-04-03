@@ -1,0 +1,22 @@
+{
+  "RepName": "Reporte de Benchmark",
+  "ColNames": [
+    "Entidad",
+    "Responsable Entidad",
+    "Macro Proceso",
+    "Responsable Macro Proceso",
+    "Proceso",
+    "ResponsableProceso",
+    "Sub Proceso",
+    "ResponsableSub Proceso",
+    "Macro Proceso Benchmark",
+    "Proceso Benchmark",
+    "Sub Proceso Benchmark",
+    "Evento de Riesgo"
+  ],
+  "Rows": [],
+  "NoCols": 12,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

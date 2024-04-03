@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SCIRA.Models.c_sub_proceso>
+@using SCIRA.Utilidades
+
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+        initTables("#modalB");
+    });
+</script>
+
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("Entidad")</th>
+            <th>@Strings.getMSG("MP")</th>
+            <th>@Strings.getMSG("P")</th>
+            <th>@Strings.getMSG("SP")</th>
+            <th>@Strings.getMSG("Responsable")</th>
+            <th>@Strings.getMSG("EntidadIndex001")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @(item.c_proceso.c_macro_proceso.c_entidad.cl_entidad + " - " + item.c_proceso.c_macro_proceso.c_entidad.nb_entidad)
+                </td>
+                <td>
+                    @(item.c_proceso.c_macro_proceso.cl_macro_proceso + " - " + item.c_proceso.c_macro_proceso.nb_macro_proceso)
+                </td>
+                <td>
+                    @(item.c_proceso.cl_proceso + " - " + item.c_proceso.nb_proceso)
+                </td>
+                <td>
+                    @(item.cl_sub_proceso + " - " + item.nb_sub_proceso)
+                </td>
+                <td>
+                    @(item.c_usuario.nb_usuario)
+                </td>
+                <td>
+                    @Utilidades.PuestoUsuario(item.id_responsable)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

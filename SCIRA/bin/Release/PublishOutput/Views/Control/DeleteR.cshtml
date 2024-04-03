@@ -1,0 +1,210 @@
+﻿@model SCIRA.Models.k_control
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Borrar";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("Control")</h4>
+    <hr />
+
+    @if (ViewBag.Error != null)
+    {
+        <span class="field-validation-error text-danger">@ViewBag.Error</span>
+        <hr />
+    }
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Strings.getMSG("ControlDelete003")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.actividad_control)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoCreate084")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.relacion_control)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoCreate086")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.evidencia_control)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("ControlDelete001")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.es_control_clave)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoCreate090")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nb_aplicacion)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("ControlDelete002")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tiene_accion_correctora)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoCreate079")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.accion_correctora)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("ControlDelete004")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_categoria_control.nb_categoria_control)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("ControlDelete005")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_frecuencia_control.nb_frecuencia_control)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu030")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_grado_cobertura.nb_grado_cobertura)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu032")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_naturaleza_control.nb_naturaleza_control)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("SP")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_sub_proceso.nb_sub_proceso)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu035")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_tipo_evidencia.nb_tipo_evidencia)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Menu033")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_tipologia_control.nb_tipologia_control)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoCreate087")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_usuario.nb_usuario)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("RiesgoCreate088")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_usuario1.nb_usuario)
+        </dd>
+
+    </dl>
+
+    @if (ViewBag.RR.Count > 0)
+    {
+
+        <h4>@Strings.getMSG("EntidadDelete003")</h4>
+
+        <table id="results" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Catalogo")</th>
+                    <th>@Strings.getMSG("EntidadDelete004")</th>
+                    <th>@Strings.getMSG("EntidadDelete005")</th>
+                    <th width="40"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.RR)
+                {
+                    <tr>
+                        <td style="white-space: nowrap">
+                            @(item.nb_catalogo)
+                        </td>
+                        <td>
+                            @(item.cl_registro)
+                        </td>
+                        <td>
+                            @(item.nb_registro)
+                        </td>
+                        <td style="white-space: nowrap">
+                            <center>
+                                <a href="@Url.Action(item.accion,item.controlador, new { id = item.id_registro,redirect = "Control/DeleteR/" + Model.id_control})">
+                                    <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")"></i>
+                                </a>
+                            </center>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    @if (ViewBag.RR.Count == 0)
+    {
+        using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" />
+            |
+            @Html.ActionLink(Strings.getMSG("Regresar"), "Return", "Utilidades", new { catalogo = 46, id = Model.k_riesgo.First().id_riesgo }, new { @class = "btn btn-default btn-sm" })
+        </div>
+        }
+    }
+    else
+    {
+        <div>
+            @Html.ActionLink(Strings.getMSG("Regresar"), "Return", "Utilidades", new { catalogo = 46, id = Model.k_riesgo.First().id_riesgo }, new { @class = "btn btn-default btn-sm" })
+        </div>
+    }
+</div>

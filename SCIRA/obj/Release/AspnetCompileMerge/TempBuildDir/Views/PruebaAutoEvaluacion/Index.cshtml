@@ -1,0 +1,192 @@
+﻿@model IEnumerable<SCIRA.Models.c_prueba_auto_eval>
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Pruebas de Auto Evaluación";
+}
+
+<script>
+    function send(idF, idN) {
+        var npm = $("#pmf" + idF + "n" + idN).val();
+        var npm1 = $("#pm1f" + idF + "n" + idN).val();
+        var npm2 = $("#pm2f" + idF + "n" + idN).val();
+        $("#no_partidas_minimo").val(npm);
+        $("#no_partidas_semestre1").val(npm1);
+        $("#no_partidas_semestre2").val(npm2);
+        $("#id_naturaleza_control").val(idN);
+        $("#id_frecuencia_control").val(idF);
+
+        $("#formE").submit();
+    }
+
+    $(document).ready(function () {
+        $(".s1").keyup(function () {
+            var id = this.id;
+            var f = id.indexOf("f");
+            var n = id.indexOf("n");
+            var len = id.length;
+
+            var idF = id.substr((f + 1), n - (f + 1));
+            var idN = id.substr((n + 1), len - (n + 1));
+
+            var idpm = "#pmf" + idF + "n" + idN;
+            var idpm2 = "#pm2f" + idF + "n" + idN;
+
+            var thisVal = this.value;
+            var valPM = $(idpm).val();
+
+
+            if (isNaN(thisVal)) {
+                $(this).val("0");
+                $(idpm2).val(valPM);
+            } else {
+                if (parseInt(thisVal) > parseInt(valPM)) {
+                    $(this).val("0");
+                    $(idpm2).val(valPM);
+                } else {
+                    if (thisVal == "") {
+                        $(idpm2).val(valPM);
+                    } else {
+                        var aux = parseInt(valPM) - parseInt(thisVal);
+                        $(idpm2).val(aux);
+                    }
+                }
+            }
+        });
+
+        $(".s2").keyup(function () {
+            var id = this.id;
+            var f = id.indexOf("f");
+            var n = id.indexOf("n");
+            var len = id.length;
+
+            var idF = id.substr((f + 1), n - (f + 1));
+            var idN = id.substr((n + 1), len - (n + 1));
+
+            var idpm = "#pmf" + idF + "n" + idN;
+            var idpm1 = "#pm1f" + idF + "n" + idN;
+
+            var thisVal = this.value;
+            var valPM = $(idpm).val();
+
+
+            if (isNaN(thisVal)) {
+                $(this).val("0");
+                $(idpm1).val(valPM);
+            } else {
+                if (parseInt(thisVal) > parseInt(valPM)) {
+                    $(this).val("0");
+                    $(idpm1).val(valPM);
+                } else {
+                    if (thisVal == "") {
+                        $(idpm1).val(valPM);
+                    } else {
+                        var aux = parseInt(valPM) - parseInt(thisVal);
+                        $(idpm1).val(aux);
+                    }
+                }
+            }
+        });
+
+        $(".pm").keyup(function () {
+            var id = this.id;
+            var f = id.indexOf("f");
+            var n = id.indexOf("n");
+            var len = id.length;
+
+            var idF = id.substr((f + 1), n - (f + 1));
+            var idN = id.substr((n + 1), len - (n + 1));
+
+            var idpm1 = "#pm1f" + idF + "n" + idN;
+            var idpm2 = "#pm2f" + idF + "n" + idN;
+
+            var thisVal = this.value;
+
+            if (isNaN(thisVal)) {
+                $(this).val("0");
+                $(idpm1).val("0");
+                $(idpm2).val("0");
+            } else {
+                if (thisVal == "") {
+                    $(idpm1).val("0");
+                    $(idpm2).val("0");
+                } else {
+                    $(idpm1).val(thisVal);
+                    $(idpm2).val("0");
+                }
+            }
+        });
+    });
+</script>
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+<h2>@Strings.getMSG("Menu008")</h2>
+
+
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Strings.getMSG("PruebaAutoEvaluacionIndex001")
+            </th>
+            <th>
+                @Strings.getMSG("PruebaAutoEvaluacionIndex002")
+            </th>
+            <th>
+                @Strings.getMSG("PruebaAutoEvaluacionIndex003")
+            </th>
+            <th>
+                @Strings.getMSG("Menu031")
+            </th>
+            <th>
+                @Strings.getMSG("Menu032")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <center>
+                        @Html.EditorFor(modelItem => item.no_partidas_minimo, new { htmlAttributes = new { @class = "form-control pm", @id = "pmf" + @item.id_frecuencia_control + "n" + @item.id_naturaleza_control } })
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        @Html.EditorFor(modelItem => item.no_partidas_semestre1, new { htmlAttributes = new { @class = "form-control s1", @id = "pm1f" + @item.id_frecuencia_control + "n" + @item.id_naturaleza_control } })
+                    </center>
+                </td>
+                <td>
+                    <center>
+                        @Html.EditorFor(modelItem => item.no_partidas_semestre2, new { htmlAttributes = new { @class = "form-control s2", @id = "pm2f" + @item.id_frecuencia_control + "n" + @item.id_naturaleza_control } })
+                    </center>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.c_frecuencia_control.cl_frecuencia_control) - @Html.DisplayFor(modelItem => item.c_frecuencia_control.nb_frecuencia_control)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.c_naturaleza_control.cl_naturaleza_control) - @Html.DisplayFor(modelItem => item.c_naturaleza_control.nb_naturaleza_control)
+                </td>
+                <td>
+                    <a href="#" onclick="send(@item.id_frecuencia_control,@item.id_naturaleza_control)">
+                        <i class="fa fa-floppy-o fa-lg" title="@Strings.getMSG("Guardar")"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@using (Html.BeginForm("Edit", "PruebaAutoEvaluacion", FormMethod.Post, new { @id = "formE" }))
+{
+    @Html.AntiForgeryToken()
+    <input type="hidden" id="no_partidas_minimo" name="no_partidas_minimo">
+    <input type="hidden" id="no_partidas_semestre1" name="no_partidas_semestre1">
+    <input type="hidden" id="no_partidas_semestre2" name="no_partidas_semestre2">
+    <input type="hidden" id="id_naturaleza_control" name="id_naturaleza_control">
+    <input type="hidden" id="id_frecuencia_control" name="id_frecuencia_control">
+}

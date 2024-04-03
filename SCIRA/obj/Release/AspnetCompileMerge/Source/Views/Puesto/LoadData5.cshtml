@@ -1,0 +1,12 @@
+﻿
+
+
+
+<script>
+    $(document).ready(function () {
+        var n = @Html.Raw(ViewBag.data);
+        jQuery.each(n, function (i, val) {
+            chart.updateNode(val);
+        });
+    });
+</script>

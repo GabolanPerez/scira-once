@@ -1,0 +1,37 @@
+{
+  "RepName": "Reporte de Benchmark",
+  "ColNames": [
+    "Entidad",
+    "Responsable Entidad",
+    "Macro Proceso",
+    "Responsable Macro Proceso",
+    "Proceso",
+    "ResponsableProceso",
+    "Sub Proceso",
+    "ResponsableSub Proceso",
+    "Macro Proceso Benchmark",
+    "Proceso Benchmark",
+    "Sub Proceso Benchmark",
+    "Evento de Riesgo"
+  ],
+  "Rows": [
+    [
+      "07 - Prueba 01",
+      "Pendiente",
+      "MP001 - Prueba 01",
+      "Pendiente",
+      "P11 - prueba",
+      "Delia Guzman Hernandez ",
+      "SP1 - prueba",
+      " Gerardo Hernandez Gil",
+      "A01 - Prueba 01",
+      "P01 - Contratación y vigilancia de productos",
+      "SP0001 - Desarrollo nuevos productos",
+      "0001 - Diseño inadecuado de un producto en productos estructurados a medida."
+    ]
+  ],
+  "NoCols": 12,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

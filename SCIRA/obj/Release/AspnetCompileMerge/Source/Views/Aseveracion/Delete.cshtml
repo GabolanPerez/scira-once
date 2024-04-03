@@ -1,0 +1,44 @@
+﻿@model SCIRA.Models.c_aseveracion
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = @Strings.getMSG("Borrar");
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<h2>@Strings.getMSG("Borrar")</h2>
+
+<h3>@Strings.getMSG("EntidadDelete001")</h3>
+<div>
+    <h4>@Strings.getMSG("Aseveración")</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Strings.getMSG("Clave")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cl_aseveracion)
+        </dd>
+
+        <dt>
+            @Strings.getMSG("Nombre")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nb_aseveracion)
+        </dd>
+
+    </dl>
+
+    
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" />
+        |
+        @Html.ActionLink(Strings.getMSG("Regresar"), "Index", "Aseveracion", new { @class = "btn btn-default" })
+    </div>
+    }
+</div>

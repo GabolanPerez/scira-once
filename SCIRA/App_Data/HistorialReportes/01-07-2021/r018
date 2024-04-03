@@ -1,0 +1,16 @@
+{
+  "RepName": "Reporte de Planes de Remediación Pendientes",
+  "ColNames": [
+    "ID",
+    "Nombre",
+    "Plan",
+    "Área",
+    "Fecha de Alta",
+    "Fecha estimada de Implantación"
+  ],
+  "Rows": [],
+  "NoCols": 6,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

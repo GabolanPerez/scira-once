@@ -1,0 +1,102 @@
+﻿@model IEnumerable<SCIRA.Models.h_acceso>
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Reporte Accesos";
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+}
+<link href="~/Content/base.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+<script type="text/javascript" src="~/Scripts/moment-with-locales.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.js"></script>
+
+
+
+<h2>@Strings.getMSG("ReporteAccesoIndex001")</h2>
+
+<br /><br />
+<div class="row">
+    <div class="form-group">
+        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("lyPSeguimientosIndex002")</label>
+        <div class="col-xs-6 col-md-5">
+            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                @Html.TextBox("fe_consulta", DateTime.Now.Date, new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("BDEICreate013"), data_val = "false",OnChange = "toastr.info('hola')"})
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<br /><br />
+<table class="results table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("lyPSeguimientosIndex002")</th>
+            <th class="search">@Strings.getMSG("Usuario")</th>
+            <th class="search">@Strings.getMSG("Función")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(string.Format("{0:dd/MM/yyyy}", item.fe_acceso))</td>
+                <td>@(item.c_usuario.nb_usuario)</td>
+                <td>@(item.nb_funcion)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<input type="button" class="btn btn-default" value="@Strings.getMSG("Ver más")" onclick="addCell();" />
+
+
+<script>
+    var counter = 1;
+    var columnDefs = [
+        {
+            orderable: false, targets: [0, 1, 2]
+        }
+    ];
+
+    //var order = [[1, "desc"]];
+
+    function addCell() {
+        var data = getFromURL("@Url.Action("nextRows","ReporteAcceso")/" + counter++);
+
+        if (data != "error") {
+            table
+                .rows.add(jQuery.parseJSON(data))
+                .draw();
+        } else {
+            toastr.info("No hay más registros disponibles");
+        }
+
+    }
+
+
+
+    $(document).ready(function () {
+        $(".datetimepicker").datetimepicker({
+            locale: 'es',
+            format: '@ViewBag.DateFormat',
+            minDate: "01/01/1900"
+        }).on('dp.change', function (e) { dateChanged(e) });
+
+    });
+
+
+    function dateChanged(e) {
+
+        var formatedValue = e.date.format(e.date._f);
+        var data = getFromURL("@Url.Action("Rows","ReporteAcceso")?date=" + formatedValue);
+
+        table
+            .clear()
+            .rows.add(jQuery.parseJSON(data))
+            .draw();
+    }
+</script>

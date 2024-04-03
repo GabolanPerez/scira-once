@@ -1,0 +1,11 @@
+﻿<script>
+    $(document).ready(function () {
+        data0 = @Html.Raw(ViewBag.data0)
+        gr0.data = data0;
+        gr0.update();
+
+        data1 = @Html.Raw(ViewBag.data1)
+        gr1.data = data1;
+        gr1.update();
+    });
+</script>

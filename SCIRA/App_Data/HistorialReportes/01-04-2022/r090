@@ -1,0 +1,69 @@
+{
+  "RepName": "Reporte de Certificación de Procesos",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Macro Proceso",
+    "Responsable",
+    "Puesto",
+    "Proceso",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "1  - Banco X A",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "MP11 - 1a",
+      "Sergio",
+      "Gerente de Producto",
+      "P1 - de la Central de Operaciones",
+      "Sergio",
+      "Gerente de Producto",
+      "Febrero - 2021",
+      "Me he asegurado que los Subprocesos que integran el Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Proceso no existen mas Subprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "CC",
+      "Si"
+    ],
+    [
+      "1  - Banco X A",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "MP1 - 1",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "P01 - Prueba",
+      "AB",
+      "N/A",
+      "Marzo - 2021",
+      "Me he asegurado que los Subprocesos que integran el Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Proceso no existen mas Subprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "Me he asegurado que los Subprocesos que integran el Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Proceso no existen mas Subprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "Si"
+    ],
+    [
+      "01 - BANCO A",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "MP01.01 - Contraloría Interna",
+      "Lizette Escamilla Miranda",
+      "Subdirección de Riesgos",
+      "P01.01.001 - Manual de Cumplimiento",
+      "AB",
+      "N/A",
+      "Marzo - 2021",
+      "Me he asegurado que los Subprocesos que integran el Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Proceso no existen mas Subprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      "Detalle",
+      "No"
+    ]
+  ],
+  "NoCols": 13,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

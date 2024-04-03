@@ -1,0 +1,244 @@
+﻿@model SCIRA.Models.k_objeto
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $("#ind1").removeClass("IndicatorLoader");
+        activateDate("#contenedor1");
+
+        $('#form1 .selectpicker').selectpicker({
+            style: 'btn-default',
+            liveSearch: 'true',
+            noneSelectedText: '@Strings.getMSG("IndicadorDiarioCreate008")',
+            selectAllText: '@Strings.getMSG("ManualesCreate014")',
+            actionsBox: 'true',
+            deselectAllText: '@Strings.getMSG("Deseleccionar todos")',
+            selectAllText: '@Strings.getMSG("Seleccionar todos")',
+            selectedTextFormat: 'count > 3',
+            size: 'auto',
+            countSelectedText: "{0} @Strings.getMSG("OBS")"
+        });
+
+        $("#form1 #id_entidad option[value='@Model.id_entidad.ToString()']").attr("selected", true);
+        $("#form1 #id_autoridad option[value='@Model.id_autoridad.ToString()']").attr("selected", true);
+        $("#form1 #id_responsable option[value='@Model.id_responsable.ToString()']").attr("selected", true);
+    });
+</script>
+
+<h4>@Strings.getMSG("lyPEdit002")</h4>
+
+<form id="form1">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.id_objeto)
+    @Html.HiddenFor(model => model.id_entidad)
+    @Html.HiddenFor(model => model.tipo_objeto)
+    <input type="hidden" name="lu" value="@Model.id_responsable" />
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("Entidad")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                <input class="form-control" value="@Model.c_entidad.cl_entidad - @Model.c_entidad.nb_entidad" disabled>
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPCreate012")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                <div class='input-group date datetimepicker' id='datetimepicker1'>
+                    @Html.TextBox("fe_alta", (Model.fe_alta.HasValue ? Model.fe_alta.Value.ToString("dd/MM/yyyy") : ""), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("lyPCreate024"), data_val = "false" })
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                @Html.ValidationMessageFor(model => model.fe_alta, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPCreate025")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.nb_objeto, new { htmlAttributes = new { @class = "form-control" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPCreate004")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.nb_objeto, "", new { @class = "text-danger" })
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPIndex006")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                <div class='input-group date datetimepicker' id='datetimepicker1'>
+                    @Html.TextBox("fe_vencimiento", (Model.fe_vencimiento.HasValue ? Model.fe_vencimiento.Value.ToString("dd/MM/yyyy") : ""), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("lyPCreate015"), data_val = "false" })
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                @Html.ValidationMessageFor(model => model.fe_vencimiento, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPCreate005")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                @Html.DropDownList("id_autoridad", null, Strings.getMSG("lyPCreate007"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("lyPCreate006")})
+                @Html.ValidationMessageFor(model => model.id_autoridad, "", new { @class = "text-danger" })
+            </div>
+
+            @if (Model.fe_contestacion == null)
+            {
+        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPIndex007")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class='input-group date datetimepicker' id='datetimepicker1'>
+                        <input class="form-control" value="@Model.fe_contestacion.ToString()" disabled>
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            }
+            else
+            {
+        <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPIndex007")</label>
+                <div class="col-xs-3 col-md-3 has-error">
+                    <div class='input-group date datetimepicker'>
+                        @Html.TextBox("fe_contestacion", (Model.fe_contestacion.HasValue ? Model.fe_contestacion.Value.ToString("dd/MM/yyyy") : ""), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("lyPCreate026"), data_val = "false" })
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.fe_contestacion, "", new { @class = "text-danger" })
+                </div>
+            }
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPCreate008")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                @Html.DropDownList("id_responsable", null, Strings.getMSG("lyPCreate009"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("lyPCreate010") })
+                @Html.ValidationMessageFor(model => model.id_responsable, "", new { @class = "text-danger" })
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPCreate013")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                <div class="input-group">
+                    @Html.EditorFor(model => model.no_incidencias, new { htmlAttributes = new { @class = "form-control", @type = "number" } })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPCreate016")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(model => model.no_incidencias, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPCreate011")</label>
+            <div class="col-xs-3 col-md-3">
+                <div class="input-group">
+                    @if (ViewBag.nb_a1 != null)
+                    {
+                        <input type="text" id="nb_a1" name="nb_archivo_1" class="form-control text-box single-line valid" readonly="readonly" value="@ViewBag.nb_a1">
+                    }
+                    else
+                    {
+                        <input type="text" id="nb_a1" name="nb_archivo_1" class="form-control text-box single-line valid" readonly="readonly">
+                    }
+                    <div class="input-group-btn">
+                        <label class="btn btn-default btn-file">
+                            @Strings.getMSG("Examinar") <input type="file" id="f1" name="file1" style="display: none;" onchange="FileName(1)">
+                        </label>
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("RiesgoCreate119")" onclick="ResetFileName(1)">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("Oficios Relacionados")</label>
+            <div class="col-xs-3 col-md-3 has-error">
+                <div class="input-group">
+                    @Html.ListBox("oficiosRelacionados", (MultiSelectList)ViewBag.oficios_relacionados, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPCreate017")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (Model.r_contestacion_oficio.Count() > 0)
+    {
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPEdit001")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        @if (ViewBag.nb_a2 != null)
+                        {
+                            <input type="text" id="nb_a2" name="nb_archivo_2" class="form-control text-box single-line valid" readonly="readonly" value="@ViewBag.nb_a2">
+                        }
+                        else
+                        {
+                            <input type="text" id="nb_a2" name="nb_archivo_2" class="form-control text-box single-line valid" readonly="readonly">
+                        }
+                        <div class="input-group-btn">
+                            <label class="btn btn-default btn-file">
+                                @Strings.getMSG("Examinar") <input type="file" id="f2" name="file2" style="display: none;" onchange="FileName(2)">
+                            </label>
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("RiesgoCreate119")" onclick="ResetFileName(2)">
+                                <i class="glyphicon glyphicon-remove"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPEdit001")</label>
+                <div class="col-xs-3 col-md-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" disabled>
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("lyPCreate027")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-6 col-md-offset-9 col-md-3">
+                <input type="button" value="@Strings.getMSG("Guardar")" class="btn btn-primary" onclick="editOficioPost()" />
+                <input type="button" class="btn btn-default" onclick="indexOficio()" value="@Strings.getMSG("Cancelar")" />
+            </div>
+        </div>
+
+    </div>
+</form>

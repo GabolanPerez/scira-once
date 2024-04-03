@@ -1,0 +1,176 @@
+﻿@model IEnumerable<SCIRA.Models.c_usuario>
+@using SCIRA.Seguridad
+@using SCIRA.Utilidades
+@{
+    IdentityPersonalizado user = (IdentityPersonalizado)HttpContext.Current.User.Identity;
+    ViewBag.Title = "Usuarios";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+<script src="~/Scripts/Certificacion.js"></script>
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+
+
+<h2>@Strings.getMSG("Menu069")</h2>
+
+<p>
+    @Html.ActionLink(Strings.getMSG("Agregar"), "Agregar", "Usuario", "", new { @class = "btn btn-default btn-sm" })
+</p>
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("Clave")</th>
+            <th class="search">@Strings.getMSG("Nombre")</th>
+            <th class="search">@Strings.getMSG("EntidadIndex001")</th>
+            <th class="search">@Strings.getMSG("Area")</th>
+            <th class="search">@Strings.getMSG("UsuarioIndex001")</th>
+            <th class="search">@Strings.getMSG("ReportePersonalIndex003")</th>
+            <th class="search">@Strings.getMSG("UsuarioIndex002")</th>
+            <th class="search">@Strings.getMSG("UsuarioIndex003")</th>
+            <th width="150"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            string puesto;
+            try
+            {
+                puesto = item.c_puesto.First().nb_puesto;
+            }
+            catch
+            {
+                puesto = "N/A";
+            }
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cl_usuario)
+                </td>
+                <td id="nb@(item.id_usuario)">
+                    @Html.DisplayFor(modelItem => item.nb_usuario)
+                </td>
+                <td>
+                    @puesto
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.c_area.nb_area)
+                </td>
+                <td>
+                    @(item.esta_activo ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))
+                </td>
+                <td>
+                    @(item.es_super_usuario ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))
+                </td>
+                <td>
+                    @(item.es_auditor ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))
+                </td>
+                <td>
+                    @(item.es_auditor_admin ? Strings.getMSG("UsuarioIndex004") : Strings.getMSG("UsuarioIndex005"))
+                </td>
+                <td>
+                    <center>
+                        @if (item.id_estatus_usuario == 4)
+                        {
+                            <a href="@Url.Action("unlockUser", new { id = item.id_usuario })">
+                                <i class="glyphicon glyphicon-alert" title="@Strings.getMSG("UsuarioCreate030")"></i>
+                            </a> @:|
+                        }
+
+                        <a href="#" onclick="inactive(@item.id_usuario)" @(item.esta_activo ? "" : "hidden") id="inac@(item.id_usuario)">
+                            <i class="fa fa-eye-slash" title="@Strings.getMSG("Desactivar")"></i>
+                        </a>
+                        <a href="#" onclick="active(@item.id_usuario)" @(item.esta_activo ? "hidden" : "") id="ac@(item.id_usuario)">
+                            <i class="fa fa-eye" title="@Strings.getMSG("Activar")"></i>
+                        </a>
+                        |
+
+                        <a href="@Url.Action("Edit", new { id = item.id_usuario })">
+                            <i class="glyphicon glyphicon-pencil" title="@Strings.getMSG("Editar")"></i>
+                        </a> |
+                        <a href="@Url.Action("AsignaRol", new { id = item.id_usuario })">
+                            <i class="fa fa-list-alt fa-lg" title="@Strings.getMSG("Asignar Roles")"></i>
+                        </a> |
+                        <a onclick="delegarResp(@item.id_usuario)">
+                            <i class="fa fa-exchange fa-lg" title="@Strings.getMSG("Delegar Responsabilidades")"></i>
+                        </a>
+
+                        @if (user.Id_usuario != item.id_usuario)
+                        {
+                            @:|
+                            <a href="@Url.Action("Delete", new { id = item.id_usuario })">
+                                <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")"></i>
+                            </a>
+                        }
+
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<script>
+    function delegarResp(id) {
+        $("#menuModal").modal('show');
+
+        var label = "@Strings.getMSG("UsuarioCreate031") " + $("#nb" + id).html();
+        $(".HeadLabel").html(label);
+        //cargar datos del usuario
+        $(".partialModal").load('@(Url.Action("GetUserObjects", "Usuario",null))?id=' + id);
+
+    }
+
+    function Delegar() {
+        var form = $("#formAux")[0];
+        var data = new FormData(form);
+        $("body").addClass('loading');
+
+        $.ajax({
+            dataType: "html",
+            type: "post",
+            enctype: 'multipart/form-data',
+            processData: false,  // Important!
+            contentType: false,
+            cache: false,
+            url: '@(Url.Action("GetUserObjects", "Usuario"))',
+            data: data,
+            success: function (data) {
+                $("body").removeClass('loading');
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                toastr.error("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+                $("body").removeClass('loading');
+            }
+        });
+    }
+
+    function inactive(id) {
+        var res = getFromURL("@Url.Action("inactiveUser", "Usuario")/" + id);
+
+        if (res == "ok") {
+            $("#ac" + id).removeAttr("hidden");
+            $("#inac" + id).attr("hidden", "hidden");
+
+            toastr.success("@Strings.getMSG("UsuarioCreate032")");
+        } else {
+            toastr.warning("@Strings.getMSG("UsuarioCreate033")");
+        }
+    }
+
+    function active(id) {
+        var res = getFromURL("@Url.Action("activeUser", "Usuario")/" + id);
+
+        if (res == "ok") {
+            $("#ac" + id).attr("hidden", "hidden");
+            $("#inac" + id).removeAttr("hidden");
+
+            toastr.success("@Strings.getMSG("UsuarioCreate034")");
+        } else {
+
+        }
+    }
+</script>

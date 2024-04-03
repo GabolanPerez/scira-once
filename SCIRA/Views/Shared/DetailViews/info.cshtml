@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SCIRA.Models.k_control>
+@using SCIRA.Utilidades
+<script src="~/Scripts/sharedScripts.js"></script>
+<script>
+    $(document).ready(function () {
+
+        @if(ViewBag.title != null)
+        {
+        @:menuModal.setTitle("@ViewBag.title");
+        }
+    });
+</script>
+
+<br />
+<br />
+<br />
+
+
+
+@if (ViewBag.type == "pdf")
+{
+    <center>
+        <span><embed src="@Url.Action("DisplayPDF"+ViewBag.path,"UsuarioNR")" width="100%" height="700"></span>
+    </center>
+}
+else if (ViewBag.type == "png")
+{
+    <center>
+        <span><img src="@Url.Action("DisplayIMG"+ViewBag.path,"UsuarioNR")" width="100%" /></span>
+    </center>
+}
+else if (ViewBag.type == "none")
+{
+    <center> <span style="font-size: 2rem">@Strings.getMSG("CanalRiesgoOperacionalCreate007")</span> </center>
+}
+
+<br />
+<br />
+<br />

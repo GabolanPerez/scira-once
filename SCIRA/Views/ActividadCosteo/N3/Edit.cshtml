@@ -1,0 +1,95 @@
+﻿@model SCIRA.Models.c_area_costeo_n3
+@using SCIRA.Utilidades
+@using SCIRA.Models
+@using System.Reflection;
+@{
+    c_area_costeo_n2 ac = ViewBag.ac;
+}
+
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+<script>
+    var returnURL = '@(Url.Action("LVL3", "ActividadCosteo") + "/" + ac.id_area_costeo_n2)';
+    var submitURL = '@Url.Action("EditLVL3", "ActividadCosteo")';
+
+    $(document).ready(function () {
+        menuModal.setTitle('@Strings.getMSG("ActividadCosteoEdit001")@(ac.c_area_costeo.nb_area_costeo)/@(ac.nb_area_costeo_n2)');
+        loadPopover();
+    });
+
+    function trySubmit() {
+        if ($("#form1").valid()) {
+            executePost(
+                submitURL,
+                "form1",
+                "submitSuccess()",
+                "submitError()"
+            );
+        }
+    }
+
+    function submitSuccess() {
+        menuModal.bodyLoad(returnURL);
+    }
+
+    function submitError() {
+        toastr.error("@Strings.getMSG("ActividadCosteoIndex009")");
+        menuModal.bodyLoad(returnURL);
+    }
+
+</script>
+
+
+
+<input type="button" class="btn btn-default" value="@Strings.getMSG("Regresar")" onclick="menuModal.bodyLoad(returnURL)" />
+<br /><br />
+
+<form id="form1">
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.id_area_costeo_n3)
+    @Html.HiddenFor(model => model.id_area_costeo_n2)
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.cl_area_costeo_n3, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ActividadCosteoEdit002")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.cl_area_costeo_n3, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Nombre")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.nb_area_costeo_n3, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("ActividadCosteoEdit002")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.nb_area_costeo_n3, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<br /><br />
+
+<input type="button" class="btn btn-primary pull-right" value="@Strings.getMSG("Guardar")" onclick="trySubmit();" />
+
+<br /><br />

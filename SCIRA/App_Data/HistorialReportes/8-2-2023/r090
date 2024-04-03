@@ -1,0 +1,39 @@
+{
+  "RepName": "Reporte de Certificación de Procesos",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Macro Proceso",
+    "Responsable",
+    "Puesto",
+    "Proceso",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "01 - Banco X",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "MP01.01 - Contraloría Interna a",
+      "Sergio",
+      "Dirección de Normatividad, cobranza y Recuperación",
+      "P01.01.0001 - Manual de Cumplimiento  ED",
+      "Jorge Rodriguez Ferreiro",
+      "Director General",
+      "Enero - 2022",
+      "Me he asegurado que los Subprocesos que integran el Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Proceso no existen mas Subprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      null,
+      "Si"
+    ]
+  ],
+  "NoCols": 13,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

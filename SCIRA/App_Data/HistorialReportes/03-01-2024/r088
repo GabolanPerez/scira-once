@@ -1,0 +1,27 @@
+{
+  "RepName": "Reporte de Certificación de Entidades",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "01 - Banco X",
+      "Israel Perez",
+      "Director General",
+      "Enero - 2024",
+      "Me he asegurado que los Macroprocesos que integran la Entidad “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en esta Entidad no existen mas Macroprocesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      null,
+      "No"
+    ]
+  ],
+  "NoCols": 7,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

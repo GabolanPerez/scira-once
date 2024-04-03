@@ -1,0 +1,123 @@
+﻿@using SCIRA.Models
+@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Reporte de Riesgo Residual";
+    Layout = "~/Views/Shared/_LayoutReporte.cshtml";
+
+    List<k_control> CRR = ViewBag.CRR;
+    List<k_control> SRR = ViewBag.SRR;
+
+}
+
+<h2>@Strings.getMSG("ReporteRRIndex001")</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#cnl" data-toggle="tab"><h4>@Strings.getMSG("ReporteRRIndex002")</h4></a></li>
+    <li><a href="#cnnl" data-toggle="tab"><h4>@Strings.getMSG("ReporteRRIndex003")</h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+
+
+    <div class="tab-pane fade active in" id="cnl">
+
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("ReporteEstructuraIndex001")</th>
+                    <th>@Strings.getMSG("MP")</th>
+                    <th>@Strings.getMSG("ReporteEstructuraIndex001")</th>
+                    <th>@Strings.getMSG("P")</th>
+                    <th>@Strings.getMSG("ReporteEstructuraIndex003")</th>
+                    <th>@Strings.getMSG("SP")</th>
+                    <th>@Strings.getMSG("RiesgoCreate037")</th>
+                    <th>@Strings.getMSG("Riesgo")</th>
+                    <th>@Strings.getMSG("EventoRiesgoIndex001")</th>
+                    <th>@Strings.getMSG("Control")</th>
+                    <th>@Strings.getMSG("ControlDelete003")</th>
+                    <th>@Strings.getMSG("ControlEdit003")</th>
+                    <th>@Strings.getMSG("ReporteRRIndex004")</th>
+                    <th>@Strings.getMSG("Menu112")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in CRR)
+                {
+                    var RR = item.k_riesgo_residual.First();
+                    var cc = RR.a_campo_cobertura_control.valor + RR.a_campo_cobertura_control1.valor + RR.a_campo_cobertura_control2.valor + RR.a_campo_cobertura_control3.valor + RR.a_campo_cobertura_control4.valor + RR.a_campo_cobertura_control5.valor + RR.a_campo_cobertura_control6.valor + RR.a_campo_cobertura_control7.valor + RR.a_campo_cobertura_control8.valor + RR.a_campo_cobertura_control9.valor + RR.a_campo_cobertura_control10.valor + RR.a_campo_cobertura_control11.valor + RR.a_campo_cobertura_control12.valor + RR.a_campo_cobertura_control13.valor;
+                    var ri = item.k_riesgo.First().c_magnitud_impacto.magnitud_impacto * item.k_riesgo.First().c_probabilidad_ocurrencia.pr_probabilidad_ocurrencia * (decimal).01;
+
+
+                <tr>
+                    <td>@item.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.cl_entidad - @item.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.nb_entidad</td>
+                    <td>@item.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.c_usuario.nb_usuario</td>
+                    <td>@item.c_sub_proceso.c_proceso.c_macro_proceso.cl_macro_proceso - @item.c_sub_proceso.c_proceso.c_macro_proceso.nb_macro_proceso</td>
+                    <td>@item.c_sub_proceso.c_proceso.c_macro_proceso.c_usuario.nb_usuario</td>
+                    <td>@item.c_sub_proceso.c_proceso.cl_proceso - @item.c_sub_proceso.c_proceso.nb_proceso</td>
+                    <td>@item.c_sub_proceso.c_proceso.c_usuario.nb_usuario</td>
+                    <td>@item.c_sub_proceso.cl_sub_proceso - @item.c_sub_proceso.nb_sub_proceso</td>
+                    <td>@item.c_sub_proceso.c_usuario.nb_usuario</td>
+                    <td>@(item.k_riesgo.First().nb_riesgo)</td>
+                    <td>@(item.k_riesgo.First().evento)</td>
+                    <td>@(item.relacion_control)</td>
+                    <td>@(item.actividad_control)</td>
+                    <td>@String.Format("${0}", ((double)ri).ToString().Replace(",","."))</td>
+                    <td>@String.Format("{0}%", ((double)cc).ToString().Replace(",","."))</td>
+                    <td>@String.Format("${0}", ((double)(ri * (100 - cc)) / 100).ToString().Replace(",", "."))</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <div class="tab-pane" id="cnnl">
+
+        <br><br>
+
+        <table class="results table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Strings.getMSG("Entidad")</th>
+                    <th>@Strings.getMSG("ReporteEstructuraIndex001")</th>
+                    <th>@Strings.getMSG("MP")</th>
+                    <th>@Strings.getMSG("ReporteEstructuraIndex001")</th>
+                    <th>@Strings.getMSG("P")</th>
+                    <th>@Strings.getMSG("ReporteEstructuraIndex003")</th>
+                    <th>@Strings.getMSG("SP")</th>
+                    <th>@Strings.getMSG("RiesgoCreate037")</th>
+                    <th>@Strings.getMSG("Riesgo")</th>
+                    <th>@Strings.getMSG("EventoRiesgoIndex001")</th>
+                    <th>@Strings.getMSG("Control")</th>
+                    <th>@Strings.getMSG("ControlDelete003")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in SRR)
+                {
+                <tr>
+                    <td>@item.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.cl_entidad - @item.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.nb_entidad</td>
+                    <td>@item.c_sub_proceso.c_proceso.c_macro_proceso.c_entidad.c_usuario.nb_usuario</td>
+                    <td>@item.c_sub_proceso.c_proceso.c_macro_proceso.cl_macro_proceso - @item.c_sub_proceso.c_proceso.c_macro_proceso.nb_macro_proceso</td>
+                    <td>@item.c_sub_proceso.c_proceso.c_macro_proceso.c_usuario.nb_usuario</td>
+                    <td>@item.c_sub_proceso.c_proceso.cl_proceso - @item.c_sub_proceso.c_proceso.nb_proceso</td>
+                    <td>@item.c_sub_proceso.c_proceso.c_usuario.nb_usuario</td>
+                    <td>@item.c_sub_proceso.cl_sub_proceso - @item.c_sub_proceso.nb_sub_proceso</td>
+                    <td>@item.c_sub_proceso.c_usuario.nb_usuario</td>
+                    <td>@(item.k_riesgo.First().nb_riesgo)</td>
+                    <td>@(item.k_riesgo.First().evento)</td>
+                    <td>@(item.relacion_control)</td>
+                    <td>@(item.actividad_control)</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+

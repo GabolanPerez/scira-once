@@ -1,0 +1,94 @@
+﻿@model SCIRA.Models.c_nivel_normatividad
+@using SCIRA.Utilidades
+
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script>
+    loadPopover();
+</script>
+
+<h2>@Strings.getMSG("Agregar")</h2>
+
+@using (Html.BeginForm("Create", "NivelNormatividad", FormMethod.Post, new { onsubmit = "deshabilitar()", id = "FormLVLNorm" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>@Strings.getMSG("NormatividadCreate022") @ViewBag.nb_normatividad</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_normatividad)
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Clave")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.cl_nivel_normatividad, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NormatividadCreate023")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.cl_nivel_normatividad, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group has-error">
+                <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Nombre")</label>
+                <div class="col-xs-6 col-md-5">
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.nb_nivel_normatividad, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("NormatividadCreate024")">
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                            </button>
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.nb_nivel_normatividad, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="button" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="modalSaveButton" onclick="createLVLPost()" />
+                    <input type="button" value="@Strings.getMSG("Regresar")" class="btn btn-default" onclick="showLVLs(@Model.id_normatividad)" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<!-- #region Scripts -->
+<script>
+    function createLVLPost() {
+
+        var url = "@Url.Action("CreateLVLP")";
+
+        if ($("#FormLVLNorm").valid()) {
+            executePost(url, "FormLVLNorm", "createLVLSucces()", "createLVLError()");
+        } else {
+            toastr.error("@Strings.getMSG("NormatividadCreate025")");
+        }
+
+    }
+
+    function createLVLSucces() {
+        toastr.success("@Strings.getMSG("CosteoIndex006")");
+        showLVLs(@Model.id_normatividad);
+    }
+
+    function createLVLError() {
+        toastr.error("@Strings.getMSG("AuditoriaEditSeguimientoObservaciones009")");
+    }
+
+</script>
+<!-- #endregion -->

@@ -1,0 +1,39 @@
+{
+  "RepName": "Reporte de Planes de Remediación Pendientes",
+  "ColNames": [
+    "Origen Incidencia",
+    "Nombre del objeto origen",
+    "ID",
+    "Nombre",
+    "Plan",
+    "Área",
+    "Fecha de Alta",
+    "Fecha estimada de Implantación"
+  ],
+  "Rows": [
+    [
+      "Oficios",
+      "Parcial",
+      "2117",
+      "PP",
+      "PP",
+      "24 - Planeación y Desarrollo Comercial",
+      "03/10/2023 11:04:13 a. m.",
+      "03/10/2023 12:00:00 a. m."
+    ],
+    [
+      "Oficios",
+      "1001",
+      "2115",
+      "Incumplimiento",
+      "Se realirá plan de trabajo para cumplir todo lo requerido.",
+      "14 - Sistemas",
+      "13/09/2023 04:25:30 p. m.",
+      "31/10/2023 12:00:00 a. m."
+    ]
+  ],
+  "NoCols": 8,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<SCIRA.Models.k_incidencia>
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Responder Incidencias";
+}
+
+<script>
+    $(function () {
+        chat.client.removeRow = function (typeTable, id, id_usuario) {
+
+
+            if (UserID == id_usuario && typeTable == 5) {
+                table
+                    .rows('.R' + id)
+                    .remove()
+                    .draw();
+            }
+        };
+    });
+</script>
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+<h2>@Strings.getMSG("PendientesIncidenciasIndex001")</h2>
+
+<div class="form-horizontal well">
+    <table class="results table table-bordered table-striped table-hover table-responsive">
+        <thead>
+            <tr>
+                <th>@Strings.getMSG("PlanesRemIndex001")</th>
+                <th>@Strings.getMSG("Nombre")</th>
+                <th>@Strings.getMSG("lyPIndex006")</th>
+                <th>@Strings.getMSG("PendientesVerTodoIndex008")</th>
+                <th>@Strings.getMSG("lyPIncidenciasIndex002")</th>
+                <th>@Strings.getMSG("lyPIncidenciasIndex001")</th>
+                <th width="80px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var nivel = item.lvl_5 ?? item.lvl_4 ?? item.lvl_3 ?? item.lvl_2 ?? item.lvl_1 ?? "N/A";
+                string nb_objeto = "";
+                if (item.id_objeto != null)
+                {
+                    nb_objeto = item.k_objeto.nb_objeto;
+                }
+
+
+                <tr class="R@(item.id_incidencia)">
+                    <td>@(item.k_objeto.tipo_objeto == 1 ? Strings.getMSG("PendientesVerTodoIndex009") : Strings.getMSG("Menu108"))</td>
+                    <td>@nb_objeto</td>
+                    <td>@(item.k_objeto.tipo_objeto == 1 ? item.k_objeto.fe_vencimiento.ToString() : "N/A")</td>
+                    <td>@item.id_incidencia</td>
+                    <td>@nivel</td>
+                    <td>@item.c_clasificacion_incidencia.cl_clasificacion_incidencia - @item.c_clasificacion_incidencia.nb_clasificacion_incidencia</td>
+                    <td>
+                        <center>
+                            <center>
+                                <a href="@Url.Action("ResponderIncidencia","RespuestaIncidencia", new { id = item.id_incidencia })" target="_blank">
+                                    <i class="fa fa-reply" title="@Strings.getMSG("Responder Incidencia")"></i>
+                                </a>
+                            </center>
+                        </center>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

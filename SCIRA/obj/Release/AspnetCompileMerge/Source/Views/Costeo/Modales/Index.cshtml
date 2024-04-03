@@ -1,0 +1,40 @@
+﻿@using SCIRA.Utilidades
+<script>
+    $(document).ready(function () {
+        menuModal.setTitle('@Strings.getMSG("Opciones")');
+    });
+</script>
+
+<div class="form-horizontal">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card hover" style="width: 100%;" onclick="menuModal.bodyLoad('@Url.Action("SPDetails","Costeo")/@ViewBag.id_sp')">
+                <div class="card-body">
+                    <br /><br /><br />
+                    <center>@Strings.getMSG("UsuarioCreate011")</center>
+                    <br /><br /><br />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card hover" style="width: 100%;" onclick="menuModal.bodyLoad('@Url.Action("Participantes","Costeo")/@ViewBag.id_sp')">
+                <div class="card-body">
+                    <br /><br /><br />
+                    <center>@Strings.getMSG("SubProcesoCreate012")</center>
+                    <br /><br /><br />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card hover" style="width: 100%;" onclick="menuModal.bodyLoad('@Url.Action("ActividadesCosteo","Costeo")/@ViewBag.id_sp')">
+                <div class="card-body">
+                    <br /><br /><br />
+                    <center>@Strings.getMSG("Menu011")</center>
+                    <br /><br /><br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

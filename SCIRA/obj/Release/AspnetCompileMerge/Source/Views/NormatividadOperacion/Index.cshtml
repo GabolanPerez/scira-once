@@ -1,0 +1,168 @@
+﻿@model IEnumerable<SCIRA.ViewModels.FichasViewModel>
+
+@using SCIRA.Utilidades
+@using SCIRA.Seguridad
+@using SCIRA.Models
+@{
+    ViewBag.Title = "Seguimiento de Fichas";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+
+    bool esSuperUsuario = ((IdentityPersonalizado)User.Identity).Es_super_usuario;
+}
+
+
+<link href="~/Content/bootstrap-select.min.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap-select.js"></script>
+
+
+<link href="~/Content/base.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+<script type="text/javascript" src="~/Scripts/moment-with-locales.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.js"></script>
+
+
+<script>
+    var deleteURL = '@(Url.Action("Delete","NormatividadOperacion"))';
+    var lastURL = '';
+
+    function deleteRequest(id,name) {
+        var options = {
+            title: "@Strings.getMSG("ManualesCreate016")" + name + "?",
+            action: "deleteConfirmed(" + id + ")"
+        }
+        confirmationModal.initModal(options);
+    }
+
+    function deleteConfirmed(id) {
+        executePost(
+                deleteURL + "/" +id,
+                null,
+                "deleteSuccess(" + id + ")",
+                "deleteError()"
+            );
+    }
+
+    function deleteSuccess(id) {
+        $(".RL2" + id).remove();
+    }
+
+    function deleteError() {
+        toastr.error("@Strings.getMSG("ActividadCosteoIndex009")");
+    }
+
+
+    function getFichaN(id) {
+        menuModal.initModal({
+            title: 'Ficha',
+            size: 'lg',
+            show: true,
+            loadUrl: '@Url.Action("ContenidoNormatividadI","NormatividadOperacion")/'+id
+        });
+    }
+
+    function getFichaO(id) {
+        menuModal.initModal({
+            title: 'Ficha',
+            size: 'lg',
+            show: true,
+            loadUrl: '@Url.Action("OficioSA","Ficha")/'+ id
+        });
+
+        lastURL = '@Url.Action("OficioSA","Ficha")/' + id;
+    }
+
+    function getFichaI(id) {
+        menuModal.initModal({
+            title: 'Ficha',
+            size: 'lg',
+            show: true,
+            loadUrl: '@Url.Action("IncidenciaSA","Ficha")/'+ id
+        });
+
+        lastURL = '@Url.Action("IncidenciaSA","Ficha")/'+ id;
+    }
+
+    function getFichaP(id) {
+        menuModal.initModal({
+            title: 'Ficha',
+            size: 'lg',
+            show: true,
+            loadUrl: '@Url.Action("PlanSA","Ficha")/'+ id
+        });
+
+        lastURL = '@Url.Action("PlanSA","Ficha")/'+ id;
+    }
+</script>
+
+
+<h2>@Strings.getMSG("Menu095")</h2>
+
+<table class="results table table-bordered table-striped table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>@Strings.getMSG("NormatividadOperacionIndex001")</th>
+            <th>@Strings.getMSG("Responsable")</th>
+            <th>@Strings.getMSG("NormatividadOperacionIndex002")</th>
+            <th>@Strings.getMSG("NormatividadOperacionIndex003")</th>
+            <th>@Strings.getMSG("NotificationEdit003")</th>
+            <th>@Strings.getMSG("NormatividadOperacionIndex004")</th>
+            <th>@Strings.getMSG("NormatividadOperacionIndex005")</th>
+            <th>@Strings.getMSG("NormatividadOperacionIndex006")</th>
+            <th width="80px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="RL2@(item.id_evento)">
+                <td>@item.nb_evento</td>
+                <td>@item.nb_usuario</td>
+                <td>@item.tipo</td>
+                <td>@item.registro_ligado</td>
+                <td>@item.ds_evento</td>
+                <td>@item.recordar_antes_de_vencer</td>
+                <td>@item.feLim</td>
+                <td>@item.estatus</td>
+                <td>
+                    <center>
+                        @if (item.clase == "0001")
+                        {
+                            <a>
+                                <i class="fa fa-id-card" title="@Strings.getMSG("Ficha")" onclick="getFichaN(@item.id_registro_ligado)"></i>
+                            </a>
+                        }
+                        @if (item.clase == "0002")
+                        {
+                            <a>
+                                <i class="fa fa-id-card" title="@Strings.getMSG("Ficha")" onclick="getFichaO(@item.id_registro_ligado)"></i>
+                            </a>
+                        }
+                        @if (item.clase == "0003")
+                        {
+                            <a>
+                                <i class="fa fa-id-card" title="@Strings.getMSG("Ficha")" onclick="getFichaI(@item.id_registro_ligado)"></i>
+                            </a>
+                        }
+                        @if (item.clase == "0004")
+                        {
+                            <a>
+                                <i class="fa fa-id-card" title="@Strings.getMSG("Ficha")" onclick="getFichaP(@item.id_registro_ligado)"></i>
+                            </a>
+                        }
+                        @if (esSuperUsuario)
+                        {
+                            @:|
+                            <a onclick="deleteRequest(@item.id_evento, '@item.nb_evento')">
+                                <i class="fa fa-trash" title="@Strings.getMSG("Borrar")"></i>
+                            </a>
+                        }
+
+                    </center>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

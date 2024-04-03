@@ -1,0 +1,335 @@
+﻿@using SCIRA.Utilidades
+@{
+    Layout = null;
+}
+
+<script src="~/Scripts/sharedScripts.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#formAux .selectpicker').selectpicker({
+            style: 'btn-default',
+            liveSearch: 'true',
+            noneSelectedText: '@Strings.getMSG("UsuarioCreate042")',
+            selectAllText: '@Strings.getMSG("ManualesCreate014")',
+            actionsBox: 'true',
+            deselectAllText: '@Strings.getMSG("Deseleccionar todos")',
+            selectAllText: '@Strings.getMSG("Seleccionar todos")',
+            selectedTextFormat: 'count > 1',
+            size: 'auto',
+            countSelectedText: "{0} @Strings.getMSG("OBS")"
+        });
+
+        var mpsI = ($('#mps option').length + " items");
+        var psI = ($('#ps option').length + " items");
+        var spsI = ($('#sps option').length + " items");
+        var ctrsI = ($('#ctrs option').length + " items");
+        var indsI = ($('#inds option').length + " items");
+        var ficsI = ($('#fics option').length + " items");
+        var oficiosI = ($('#oficios option').length + " items");
+        var externaI = ($('#externa option').length + " items");
+        var internaI = ($('#interna option').length + " items");
+        var otrosI = ($('#otros option').length + " items");
+        var planesI = ($('#planes option').length + " items");
+        var incidenciasI = ($('#incidencias option').length + " items");
+        var seguimientosI = ($('#seguimientos option').length + " items");
+
+        if (mpsI == "0 items") {
+            $(".mpsBOX").attr("hidden", "hidden");
+        }
+        if (psI == "0 items") {
+            $(".psBOX").attr("hidden", "hidden");
+        }
+        if (spsI == "0 items") {
+            $(".spsBOX").attr("hidden", "hidden");
+        }
+        if (ctrsI == "0 items") {
+            $(".ctrsBOX").attr("hidden", "hidden");
+        }
+        if (indsI == "0 items") {
+            $(".indsBOX").attr("hidden", "hidden");
+        }
+        if (ficsI == "0 items") {
+            $(".ficsBOX").attr("hidden", "hidden");
+        }
+        if (oficiosI == "0 items") {
+            $(".oficiosBOX").attr("hidden", "hidden");
+        }
+        if (externaI == "0 items") {
+            $(".externaBOX").attr("hidden", "hidden");
+        }
+        if (internaI == "0 items") {
+            $(".internaBOX").attr("hidden", "hidden");
+        }
+        if (otrosI == "0 items") {
+            $(".otrosBOX").attr("hidden", "hidden");
+        }
+        if (planesI == "0 items") {
+            $(".planesBOX").attr("hidden", "hidden");
+        }
+        if (incidenciasI == "0 items") {
+            $(".incidenciasBOX").attr("hidden", "hidden");
+        }
+        if (seguimientosI == "0 items") {
+            $(".seguimientosBOX").attr("hidden", "hidden");
+        }
+    });
+</script>
+
+<form id="formAux">
+    @Html.AntiForgeryToken()
+
+    <div class="row mpsBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("MPS")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("mps", (MultiSelectList)ViewBag.macro_procesos, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate043")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="psBOX" />
+
+    <div class="row psBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("PS")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("ps", (MultiSelectList)ViewBag.procesos, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate044")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="spsBOX" />
+
+    <div class="row spsBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SPS")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("sps", (MultiSelectList)ViewBag.sub_procesos, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate045")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="ctrsBOX" />
+
+    <div class="row ctrsBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Controles")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("ctrs", (MultiSelectList)ViewBag.controles, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate046")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="indsBOX" />
+
+    <div class="row indsBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu009")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("inds", (MultiSelectList)ViewBag.indicadores, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate047")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="ficsBOX" />
+
+    <div class="row ficsBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu130")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("fics", (MultiSelectList)ViewBag.fichas, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate049")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="oficiosBOX" />
+
+    <div class="row oficiosBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu127")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("oficios", (MultiSelectList)ViewBag.oficios, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate050")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="externaBOX" />
+
+    <div class="row externaBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate051")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("externa", (MultiSelectList)ViewBag.auditoria_ext, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate052")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="internaBOX" />
+
+    <div class="row internaBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("UsuarioCreate053")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("interna", (MultiSelectList)ViewBag.auditoria_int, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate054")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="otrosBOX" />
+
+    <div class="row otrosBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("lyPIndex003")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("otros", (MultiSelectList)ViewBag.otros, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate055")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="planesBOX" />
+
+    <div class="row planesBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu128")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("planes", (MultiSelectList)ViewBag.planes_remediacion, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate056")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="incidenciasBOX" />
+
+    <div class="row incidenciasBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Incidencias")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("incidencias", (MultiSelectList)ViewBag.incidencias, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate057")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br class="seguimientosBOX" />
+
+    <div class="row seguimientosBOX">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("lyPSeguimientosIndex001")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.ListBox("seguimientos", (MultiSelectList)ViewBag.seguimientos, htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate058")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Usuario")</label>
+            <div class="col-xs-6 col-md-5">
+                <div class="input-group">
+                    @Html.DropDownList("usuarioDest", (IEnumerable<SelectListItem>)ViewBag.usuarios, Strings.getMSG("UsuarioCreate059"), htmlAttributes: new { @class = "form-control selectpicker" })
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("UsuarioCreate060")">
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" col-xs-offset-1 col-md-offset-1 col-xs-2 col-md-4">
+            <input type="button" class="btn btn-primary" onclick="Delegar();$('#menuModal').modal('hide')" value="@Strings.getMSG("Guardar")" />
+        </div>
+    </div>
+</form>

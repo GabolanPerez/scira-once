@@ -1,0 +1,33 @@
+{
+  "RepName": "Reporte de Certificación de Macro Procesos",
+  "ColNames": [
+    "Entidad",
+    "Responsable",
+    "Puesto",
+    "Macro Proceso",
+    "Responsable",
+    "Puesto",
+    "Periodo de Certificación",
+    "Leyenda de Certificación",
+    "Comentarios",
+    "¿Certificación satisfactoria?"
+  ],
+  "Rows": [
+    [
+      "01 - CONSUBANCO, S.A. Institución de Banca Múltiple",
+      "Berenice Serrano Jiménez",
+      "Control Interno",
+      "MP01.01 - Contraloría Interna",
+      "Berenice Serrano Jiménez",
+      "Control Interno",
+      "Junio - Diciembre - 2021",
+      "Me he asegurado que los Procesos que integran el Macro Proceso “XXXXX”, fueron certificados por cada uno de sus Responsables y en el caso de existir incidencias fueron señaladas oportunamente, además confirmo que en este Macro Proceso no existen mas Procesos relevantes que no se hayan identificado y reflejado en la Matriz de Riesgos y Controles correspondiente.",
+      null,
+      "Si"
+    ]
+  ],
+  "NoCols": 10,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

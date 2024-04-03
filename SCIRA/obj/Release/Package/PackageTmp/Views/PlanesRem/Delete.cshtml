@@ -1,0 +1,113 @@
+﻿@model SCIRA.Models.r_seguimiento
+@using SCIRA.Utilidades
+@{
+                /**/
+
+                ViewBag.Title = "Agregar Entidad";
+                Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+<h2>@Strings.getMSG("Borrar")</h2>
+
+
+<div class="form-horizontal well">
+    <h4>@Strings.getMSG("Seguimiento")</h4>
+    <hr />
+
+    <div class="row">
+        <div class="form-group">
+            <label class="control-label col-xs-2 col-md-2">@Strings.getMSG("lyPSeguimientoCreate002")</label>
+            <div class="col-xs-3 col-md-3">
+                @Html.TextAreaFor(model => model.observaciones, new { @class = "form-control", @rows = "5", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("lyPSeguimientoCreate003"), @readonly = "readonly" })
+                @Html.ValidationMessageFor(model => model.observaciones, "", new { @class = "text-danger" })
+            </div>
+
+            <label class="control-label col-xs-offset-2 col-md-offset-2 col-xs-2 col-md-1">@Strings.getMSG("lyPSeguimientosIndex002")</label>
+            <div class="col-xs-3 col-md-3">
+                <div class='input-group date datetimepicker' id='datetimepicker1'>
+                    <input class="form-control" readonly value="@Model.fe_seguimiento">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>@Strings.getMSG("RevisionControlRevisiones006")</th>
+                <th>@Strings.getMSG("BDEIIndex003")</th>
+                <th width="80px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var file in Model.c_archivo)
+            {
+                <tr id="fr@(file.id_archivo)">
+                    <td>@file.nb_archivo</td>
+                    <td>@file.fe_alta.Value.ToString("dd/MM/yyyy hh:mm:ss")</td>
+                    <td>
+                        <center>
+                            <a href="@Url.Action("Download","Archivos", new { id = file.id_archivo})"><i class="fa fa-download" title="@Strings.getMSG("Descargar")"></i></a>|
+                            <a onclick="deleteFile(@file.id_archivo,'@file.nb_archivo')"><i class="fa fa-trash" title="@Strings.getMSG("Borrar")"></i></a>
+                        </center>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <script>
+    function deleteFile(id,nb_archivo) {
+        confirmationModal.initModal({
+            title: '@Strings.getMSG("AuditoriaEditSeguimientoObservaciones007") ' + nb_archivo + '?',
+            action: 'deleteFileConfirm('+id+')'
+        });
+    }
+
+    function deleteFileConfirm(id) {
+        //eliminar archivo con ajax
+        $.ajax({
+            dataType: "html",
+            type: "post",
+            url: '@(Url.Action("DeleteByUser","Archivos"))',
+            data: { id },
+            success: function (data) {
+                if (data == id) {
+                    toastr.success(@Strings.getMSG("AuditoriaEditSeguimientoObservaciones008"));
+                    //eliminar fila
+                    $("#fr" + id).remove();
+                }
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                toastr.error(@Strings.getMSG("AvisoError003"));
+            }
+        });
+    }
+    </script>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <input hidden name="id" value="@Model.id_seguimiento">
+
+        <div class="row">
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                    <input type="submit" value="@Strings.getMSG("Borrar")" class="btn btn-primary" id="submit" />
+                    @Html.ActionLink(Strings.getMSG("Regresar"), "Seguimientos", "PlanesRem", new { id = Model.id_plan }, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

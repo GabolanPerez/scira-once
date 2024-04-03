@@ -1,0 +1,687 @@
+{
+  "RepName": "Reporte de Fallas",
+  "ColNames": [
+    "Función",
+    "Método",
+    "Descripción del Error",
+    "Fecha"
+  ],
+  "Rows": [
+    [
+      "N/A",
+      "Envio de Correo Electrónico",
+      "System.InvalidOperationException: Se debe especificar un destinatario.\r\n   en System.Net.Mail.SmtpClient.Send(MailMessage message)\r\n   en SCIRA.Utilidades.Notification.send2(List`1 to, String subject, String body, String head, String emailTEST) en Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-15\\SCIRA\\Utilidades\\Notification.cs:línea 666",
+      "24/04/2021"
+    ],
+    [
+      "N/A",
+      "Respaldo reporte de Normatividad: Circular Única de Seguros y Fianzas",
+      "Ya se agregó un elemento con la misma clave.",
+      "01/07/2021"
+    ],
+    [
+      "N/A",
+      "Respaldo reporte de BDEI",
+      "El objeto que acepta valores Null debe tener un valor.",
+      "27/07/2021"
+    ],
+    [
+      "N/A",
+      "Respaldo reporte de BDEI",
+      "El objeto que acepta valores Null debe tener un valor.",
+      "28/07/2021"
+    ],
+    [
+      "N/A",
+      "Respaldo reporte de General MRyC",
+      "La secuencia no contiene elementos",
+      "28/07/2021"
+    ],
+    [
+      "N/A",
+      "Envio de Correo Electrónico",
+      "System.InvalidOperationException: Se debe especificar un destinatario.\r\n   en System.Net.Mail.SmtpClient.Send(MailMessage message)\r\n   en SCIRA.Utilidades.Notification.send2(List`1 to, String subject, String body, String head, String emailTEST) en Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Utilidades\\Notification.cs:línea 666",
+      "23/04/2021"
+    ],
+    [
+      "Actividades de Costeo",
+      "CreateLVL2",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\ActividadCosteo\\N2\\Create.cshtml(15): error CS0122: 'Strings' is inaccessible due to its protection level",
+      "23/04/2021"
+    ],
+    [
+      "Ajustes de Seguridad",
+      "Index",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\AjustesSeguridad\\Index.cshtml(246): error CS1061: 'AjustesSeguridadViewModel' does not contain a definition for 'CertificacionSegura' and no extension method 'CertificacionSegura' accepting a first argument of type 'AjustesSeguridadViewModel' could be found (are you missing a using directive or an assembly reference?)",
+      "21/07/2021"
+    ],
+    [
+      "Alta de Incidencias y Planes de Remediación",
+      "IndexPlanes",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\IyP\\Planes\\Index.cshtml(86): error CS0103: The name 'Utilidades' does not exist in the current context",
+      "29/07/2021"
+    ],
+    [
+      "Alta de Incidencias y Planes de Remediación",
+      "IndexPlanes",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\IyP\\Planes\\Index.cshtml(86): error CS0103: The name 'Utilidades' does not exist in the current context",
+      "29/07/2021"
+    ],
+    [
+      "BDEI",
+      "Delete",
+      "La secuencia no contiene elementos",
+      "05/07/2021"
+    ],
+    [
+      "BDEI",
+      "Create",
+      "LINQ to Entities does not recognize the method 'SCIRA.Models.k_bdei LastOrDefault[k_bdei](System.Linq.IQueryable`1[SCIRA.Models.k_bdei])' method, and this method cannot be translated into a store expression.",
+      "08/07/2021"
+    ],
+    [
+      "BDEI",
+      "Edit",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\BDEI\\Edit.cshtml(400): error CS1501: No overload for method 'ToString' takes 1 arguments",
+      "22/07/2021"
+    ],
+    [
+      "Categoría del Control",
+      "Index",
+      "The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.",
+      "13/01/2021"
+    ],
+    [
+      "Categoría del Control",
+      "Index",
+      "C:\\IIS (SICI)\\DESARROLLO\\Views\\CategoriaControl\\Index.cshtml(11): error CS0122: 'Strings' is inaccessible due to its protection level",
+      "13/01/2021"
+    ],
+    [
+      "Certificación de Procesos",
+      "Certificar",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "26/07/2021"
+    ],
+    [
+      "Clase de Evento Riesgo Operacional",
+      "Create",
+      "The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.",
+      "18/02/2021"
+    ],
+    [
+      "Cuentas Contables",
+      "CreateAccount",
+      "El elemento de modelo pasado al diccionario es de tipo 'SCIRA.Models.c_cuenta_contable', pero este diccionario requiere un elemento de modelo de tipo 'SCIRA.Models.c_grupo_cuenta_contable'.",
+      "30/06/2021"
+    ],
+    [
+      "Cuentas Contables",
+      "DeleteAccount",
+      "El valor no puede ser nulo.\r\nNombre del parámetro: entity",
+      "30/06/2021"
+    ],
+    [
+      "Cuentas Contables",
+      "DeleteAccount",
+      "El valor no puede ser nulo.\r\nNombre del parámetro: entity",
+      "30/06/2021"
+    ],
+    [
+      "Cuentas Contables",
+      "Index",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\CuentaContable\\Index.cshtml(36): error CS1061: 'c_cuenta_contable' does not contain a definition for 'c_entidad' and no extension method 'c_entidad' accepting a first argument of type 'c_cuenta_contable' could be found (are you missing a using directive or an assembly reference?)",
+      "30/06/2021"
+    ],
+    [
+      "Entidades",
+      "Index",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "21/04/2021"
+    ],
+    [
+      "Entidades",
+      "Index",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SICIv07\\SICIv01\\Views\\Shared\\_LayoutIndex.cshtml(33): error CS1002: ; expected",
+      "13/04/2021"
+    ],
+    [
+      "Etapas",
+      "Create",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "15/07/2021"
+    ],
+    [
+      "Gráficas Indicadores",
+      "Index",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "11/03/2021"
+    ],
+    [
+      "Gráficas Indicadores",
+      "Index",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "11/03/2021"
+    ],
+    [
+      "Gráficas Indicadores",
+      "Index",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "11/03/2021"
+    ],
+    [
+      "Gráficas Oficios",
+      "Details",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'tipoG1' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Details(System.String[], System.String[], System.String[], System.String, Int32)' en 'SCIRA.Controllers.GraphicsOficioController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "30/07/2021"
+    ],
+    [
+      "Historial de Reportes",
+      "ShowRep",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\HistorialReportes\\ShowRep.cshtml(52): error CS1026: ) expected",
+      "29/07/2021"
+    ],
+    [
+      "Indicadores Diarios",
+      "Edit",
+      "La secuencia no contiene elementos",
+      "29/04/2021"
+    ],
+    [
+      "Indicadores Diarios",
+      "Edit",
+      "LINQ to Entities does not recognize the method 'SCIRA.Models.k_evaluacion_diaria LastOrDefault[k_evaluacion_diaria](System.Linq.IQueryable`1[SCIRA.Models.k_evaluacion_diaria], System.Linq.Expressions.Expression`1[System.Func`2[SCIRA.Models.k_evaluacion_diaria,System.Boolean]])' method, and this method cannot be translated into a store expression.",
+      "29/04/2021"
+    ],
+    [
+      "Indicadores Diarios",
+      "Edit",
+      "La secuencia no contiene elementos",
+      "29/04/2021"
+    ],
+    [
+      "Lineas de Negocio",
+      "Create",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "15/07/2021"
+    ],
+    [
+      "Lineas de Negocio",
+      "Create",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "15/07/2021"
+    ],
+    [
+      "Macroprocesos Benchmark",
+      "Create",
+      "Falta el \")\" de cierre correspondiente para un \"(\" de apertura.\r\n",
+      "15/01/2021"
+    ],
+    [
+      "Macroprocesos Benchmark",
+      "Index",
+      "El valor no puede ser nulo ni estar vacío.\r\nNombre del parámetro: linkText",
+      "15/01/2021"
+    ],
+    [
+      "MRyC",
+      "SubProcesos",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "17/03/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "02/03/2021"
+    ],
+    [
+      "MRyC",
+      "Controles",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "02/03/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "02/03/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "02/03/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "02/03/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "02/03/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "02/03/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "02/03/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "02/03/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "12/01/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "13/01/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "12/01/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "13/01/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(SICIv01.ViewModels.AgregarControlViewModel, Int32, Int32[])' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "13/01/2021"
+    ],
+    [
+      "MRyC",
+      "EditMG",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult EditMG(SICIv01.ViewModels.AgregarControlMGViewModel, Int32)' en 'SICIv01.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "11/03/2021"
+    ],
+    [
+      "MRyC",
+      "DetailsRR",
+      "La secuencia no contiene elementos",
+      "26/04/2021"
+    ],
+    [
+      "MRyC",
+      "DetailsRR",
+      "La secuencia no contiene elementos",
+      "26/04/2021"
+    ],
+    [
+      "MRyC",
+      "DetailsRR",
+      "La secuencia no contiene elementos",
+      "29/04/2021"
+    ],
+    [
+      "MRyC",
+      "DetailsRR",
+      "La secuencia no contiene elementos",
+      "29/04/2021"
+    ],
+    [
+      "MRyC",
+      "EditRR",
+      "El operador '!' no se puede aplicar al operando del tipo '<null>'",
+      "17/06/2021"
+    ],
+    [
+      "MRyC",
+      "EditRR",
+      "El operador '!' no se puede aplicar al operando del tipo '<null>'",
+      "17/06/2021"
+    ],
+    [
+      "MRyC",
+      "EditRR",
+      "El operador '!' no se puede aplicar al operando del tipo '<null>'",
+      "17/06/2021"
+    ],
+    [
+      "MRyC",
+      "EditRR",
+      "El operador '!' no se puede aplicar al operando del tipo '<null>'",
+      "17/06/2021"
+    ],
+    [
+      "MRyC",
+      "EditRR",
+      "El operador '!' no se puede aplicar al operando del tipo '<null>'",
+      "17/06/2021"
+    ],
+    [
+      "MRyC",
+      "EditRR",
+      "El operador '!' no se puede aplicar al operando del tipo '<null>'",
+      "17/06/2021"
+    ],
+    [
+      "MRyC",
+      "Agregar",
+      "La llamada es ambigua entre los métodos o propiedades siguientes: 'Syncfusion.EJ2.Diagrams.DiagramSnapSettingsBuilder.HorizontalGridlines(Syncfusion.EJ2.Diagrams.DiagramGridlines)' y 'Syncfusion.EJ2.Diagrams.DiagramSnapSettingsBuilder.HorizontalGridlines(System.Action<Syncfusion.EJ2.Diagrams.DiagramGridlinesBuilder>)'",
+      "14/06/2021"
+    ],
+    [
+      "MRyC",
+      "Agregar",
+      "La llamada es ambigua entre los métodos o propiedades siguientes: 'Syncfusion.EJ2.Diagrams.DiagramSnapSettingsBuilder.HorizontalGridlines(Syncfusion.EJ2.Diagrams.DiagramGridlines)' y 'Syncfusion.EJ2.Diagrams.DiagramSnapSettingsBuilder.HorizontalGridlines(System.Action<Syncfusion.EJ2.Diagrams.DiagramGridlinesBuilder>)'",
+      "14/06/2021"
+    ],
+    [
+      "MRyC",
+      "EditMG",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'lu' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult EditMG(SCIRA.ViewModels.AgregarControlMGViewModel, Int32)' en 'SCIRA.Controllers.ControlController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "29/04/2021"
+    ],
+    [
+      "MRyC",
+      "Agregar",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'id' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Agregar(Int32)' en 'SCIRA.Controllers.RiesgoController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "14/06/2021"
+    ],
+    [
+      "MRyC",
+      "EditRR",
+      "El operador '!' no se puede aplicar al operando del tipo '<null>'",
+      "17/06/2021"
+    ],
+    [
+      "MRyC",
+      "Editar",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\Riesgo\\Editar.cshtml(560): error CS0122: 'Strings' is inaccessible due to its protection level",
+      "20/07/2021"
+    ],
+    [
+      "MRyC",
+      "DetailsRR",
+      "La secuencia no contiene elementos",
+      "21/07/2021"
+    ],
+    [
+      "MRyC",
+      "EditR",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\Control\\EditR.cshtml(548): error CS0103: The name 'riesgo' does not exist in the current context",
+      "23/07/2021"
+    ],
+    [
+      "MRyC",
+      "Agregar",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'id' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Agregar(Int32)' en 'SCIRA.Controllers.RiesgoController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "20/07/2021"
+    ],
+    [
+      "MRyC",
+      "GetCriticidad",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'idfr' del tipo que no acepta valores NULL 'System.Int32' del método 'System.String GetCriticidad(Int32, Int32)' en 'SCIRA.Controllers.RiesgoController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "20/07/2021"
+    ],
+    [
+      "MRyC",
+      "GetCriticidad",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'idfr' del tipo que no acepta valores NULL 'System.Int32' del método 'System.String GetCriticidad(Int32, Int32)' en 'SCIRA.Controllers.RiesgoController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "20/07/2021"
+    ],
+    [
+      "MRyC",
+      "Edit",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\Control\\Edit.cshtml(549): error CS0103: The name 'riesgo' does not exist in the current context",
+      "23/07/2021"
+    ],
+    [
+      "MRyC",
+      "Agregar",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\Control\\Agregar.cshtml(465): error CS0103: The name 'riesgo' does not exist in the current context",
+      "23/07/2021"
+    ],
+    [
+      "Procesos",
+      "Agregar",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "19/03/2021"
+    ],
+    [
+      "Procesos",
+      "Index",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "22/03/2021"
+    ],
+    [
+      "Reporte BDEI",
+      "Index",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "28/07/2021"
+    ],
+    [
+      "Reporte BDEI",
+      "Index",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "28/07/2021"
+    ],
+    [
+      "Reporte BDEI",
+      "Index",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "28/07/2021"
+    ],
+    [
+      "Reporte BDEI",
+      "Index",
+      "El objeto que acepta valores Null debe tener un valor.",
+      "28/07/2021"
+    ],
+    [
+      "Reporte de Conclusión de Planes",
+      "Index",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "22/07/2021"
+    ],
+    [
+      "Reporte de Personal",
+      "DetailsSP",
+      "No se encuentra la vista parcial 'DetailViews/DetailsSP' o no hay un motor de búsqueda que admita las ubicaciones de búsqueda. Se buscó en las siguientes ubicaciones: \r\n~/Views/ReportePersonal/DetailViews/DetailsSP.aspx\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.ascx\r\n~/Views/Shared/DetailViews/DetailsSP.aspx\r\n~/Views/Shared/DetailViews/DetailsSP.ascx\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.cshtml\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.vbhtml\r\n~/Views/Shared/DetailViews/DetailsSP.cshtml\r\n~/Views/Shared/DetailViews/DetailsSP.vbhtml",
+      "21/04/2021"
+    ],
+    [
+      "Reporte de Personal",
+      "DetailsSP",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\Shared\\DetailViews\\DetailsSP.cshtml(2): error CS0246: The type or namespace name 'SICIv01' could not be found (are you missing a using directive or an assembly reference?)",
+      "21/04/2021"
+    ],
+    [
+      "Reporte de Personal",
+      "DetailsSP",
+      "No se encuentra la vista parcial 'DetailViews/DetailsSP' o no hay un motor de búsqueda que admita las ubicaciones de búsqueda. Se buscó en las siguientes ubicaciones: \r\n~/Views/ReportePersonal/DetailViews/DetailsSP.aspx\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.ascx\r\n~/Views/Shared/DetailViews/DetailsSP.aspx\r\n~/Views/Shared/DetailViews/DetailsSP.ascx\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.cshtml\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.vbhtml\r\n~/Views/Shared/DetailViews/DetailsSP.cshtml\r\n~/Views/Shared/DetailViews/DetailsSP.vbhtml",
+      "11/03/2021"
+    ],
+    [
+      "Reporte de Personal",
+      "DetailsSP",
+      "Z:\\OneDrive\\trabajo\\SICI\\Proyectos\\SCIRA\\SCIRA 2021-04-16 traducción\\SCIRA\\Views\\Shared\\DetailViews\\DetailsSP.cshtml(2): error CS0246: The type or namespace name 'SICIv01' could not be found (are you missing a using directive or an assembly reference?)",
+      "21/04/2021"
+    ],
+    [
+      "Reporte de Personal",
+      "DetailsSP",
+      "No se encuentra la vista parcial 'DetailViews/DetailsSP' o no hay un motor de búsqueda que admita las ubicaciones de búsqueda. Se buscó en las siguientes ubicaciones: \r\n~/Views/ReportePersonal/DetailViews/DetailsSP.aspx\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.ascx\r\n~/Views/Shared/DetailViews/DetailsSP.aspx\r\n~/Views/Shared/DetailViews/DetailsSP.ascx\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.cshtml\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.vbhtml\r\n~/Views/Shared/DetailViews/DetailsSP.cshtml\r\n~/Views/Shared/DetailViews/DetailsSP.vbhtml",
+      "21/04/2021"
+    ],
+    [
+      "Reporte de Personal",
+      "DetailsSP",
+      "No se encuentra la vista parcial 'DetailViews/DetailsSP' o no hay un motor de búsqueda que admita las ubicaciones de búsqueda. Se buscó en las siguientes ubicaciones: \r\n~/Views/ReportePersonal/DetailViews/DetailsSP.aspx\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.ascx\r\n~/Views/Shared/DetailViews/DetailsSP.aspx\r\n~/Views/Shared/DetailViews/DetailsSP.ascx\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.cshtml\r\n~/Views/ReportePersonal/DetailViews/DetailsSP.vbhtml\r\n~/Views/Shared/DetailViews/DetailsSP.cshtml\r\n~/Views/Shared/DetailViews/DetailsSP.vbhtml",
+      "11/03/2021"
+    ],
+    [
+      "Roles",
+      "AsignaUsuarios",
+      "The underlying provider failed on Open.",
+      "11/03/2021"
+    ],
+    [
+      "Sub Clase de Tipología de Riesgo",
+      "Delete",
+      "El valor no puede ser nulo.\r\nNombre del parámetro: entity",
+      "13/03/2021"
+    ],
+    [
+      "Sub Procesos",
+      "Index",
+      "Referencia a objeto no establecida como instancia de un objeto.",
+      "17/03/2021"
+    ],
+    [
+      "Sub Procesos",
+      "Agregar",
+      "The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.",
+      "17/03/2021"
+    ],
+    [
+      "Tipología de Riesgo",
+      "Delete",
+      "El valor no puede ser nulo.\r\nNombre del parámetro: entity",
+      "13/03/2021"
+    ],
+    [
+      "Tipología de Sub Proceso",
+      "Index",
+      "An error occurred while executing the command definition. See the inner exception for details.",
+      "15/03/2021"
+    ],
+    [
+      "Tipología de Sub Proceso",
+      "Index",
+      "An error occurred while executing the command definition. See the inner exception for details.",
+      "15/03/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "20/04/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "20/04/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "20/04/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "20/04/2021"
+    ],
+    [
+      "Usuarios",
+      "Index",
+      "The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.",
+      "19/03/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "11/03/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "11/03/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "11/03/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'usuarioDest' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult GetUserObjects(Int32[], Int32[], Int32[], Int32[], Int32[], Int32[], Int32)' en 'SCIRA.Controllers.UsuarioController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "20/04/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "20/04/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'usuarioDest' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult GetUserObjects(Int32[], Int32[], Int32[], Int32[], Int32[], Int32[], Int32)' en 'SCIRA.Controllers.UsuarioController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "20/04/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'id' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult GetUserObjects(Int32)' en 'SCIRA.Controllers.UsuarioController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "21/04/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "11/03/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'usuarioDest' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult GetUserObjects(Int32[], Int32[], Int32[], Int32[], Int32[], Int32[], Int32)' en 'SCIRA.Controllers.UsuarioController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "20/04/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "20/04/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "El diccionario de parámetros contiene una entrada NULL para el parámetro 'usuarioDest' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult GetUserObjects(Int32[], Int32[], Int32[], Int32[], Int32[], Int32[], Int32)' en 'SCIRA.Controllers.UsuarioController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.\r\nNombre del parámetro: parameters",
+      "20/04/2021"
+    ],
+    [
+      "Usuarios",
+      "GetUserObjects",
+      "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
+      "11/03/2021"
+    ]
+  ],
+  "NoCols": 4,
+  "HeadConfig": [],
+  "NoRowsHeader": 0,
+  "enableHeadConfig": false
+}

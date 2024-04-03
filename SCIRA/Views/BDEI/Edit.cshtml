@@ -1,0 +1,1079 @@
+﻿@model SCIRA.Models.k_bdei
+@using SCIRA.Utilidades
+
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Editar";
+}
+
+<script>
+    var urlCrit = "@Url.Action("GetCriticidad", "BDEI")";
+
+    $(function () {
+
+        $("#id_tipo_riesgo_operacional").change(function () {
+            var selectedItem = $(this).val();
+            var ddlStates = $("#id_sub_tipo_riesgo_operacional");
+            var dependiente2 = $("#id_clase_evento");
+
+            $("#STRO-ind").addClass('IndicatorLoader');
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneSubTiposRiesgoOperacional"))",
+                data: { "idTRO": selectedItem },
+                success: function (data) {
+                    ddlStates.html('');
+                    dependiente2.html('');
+                    ddlStates.append($('<option></option>').val(null).html("- Seleccione el Sub Tipo de Riesgo Operacional -"));
+                    dependiente2.append($('<option></option>').val(null).html("- Seleccione la Clase de Evento -"));
+
+                    $.each(data, function (id, option) {
+                        ddlStates.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    $("#STRO-ind").removeClass('IndicatorLoader');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    toastr.error('Error al recuperar Sub Tipos de Riesgo Operacional.');
+                    $("#STRO-ind").removeClass('IndicatorLoader');
+                    dependiente2.html('');
+                    ddlStates.html('');
+
+                    ddlStates.append($('<option></option>').val(null).html("- Seleccione el Sub Tipo de Riesgo Operacional -"));
+                    dependiente2.append($('<option></option>').val(null).html("- Seleccione la Clase de Evento -"));
+                }
+            });
+        });
+
+        $("#id_sub_tipo_riesgo_operacional").change(function () {
+            var selectedItem = $(this).val();
+            var ddlStates = $("#id_clase_evento");
+            $("#CERO-ind").addClass('IndicatorLoader');
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneClasesEventoRiesgoOperacional"))",
+                data: { "idSTRO": selectedItem },
+                success: function (data) {
+                    ddlStates.html('');
+                    ddlStates.append($('<option></option>').val(null).html("- Seleccione la Clase de Evento -"));
+                    $.each(data, function (id, option) {
+                        ddlStates.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    $("#CERO-ind").removeClass('IndicatorLoader');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    toastr.error('Error al recuperar las Clases de Evento.');
+                    $("#CERO-ind").removeClass('IndicatorLoader');
+                    ddlStates.html('');
+                }
+            });
+        });
+
+
+        $("#id_ambito_riesgo_operacional").change(function () {
+            var selectedItem = $(this).val();
+            var ddlStates = $("#id_proceso_riesgo_operacional");
+            $("#PRO-ind").addClass('IndicatorLoader');
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneProcesosRiesgoOperacional"))",
+                data: { "idARO": selectedItem },
+                success: function (data) {
+                    ddlStates.html('');
+                    ddlStates.append($('<option></option>').val(null).html("- Seleccione el Proceso de Riesgo Operacional -"));
+                    $.each(data, function (id, option) {
+                        ddlStates.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    $("#PRO-ind").removeClass('IndicatorLoader');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    toastr.error('Error al recuperar los Procesos de Riesgo Operacional.');
+                    $("#PRO-ind").removeClass('IndicatorLoader');
+                    ddlStates.html('');
+                }
+            });
+        });
+
+
+        $("#id_producto_riesgo_operacional").change(function () {
+            var selectedItem = $(this).val();
+            var ddlStates = $("#id_sub_tipo_producto_riesgo_operacional");
+            $("#STPRRO-ind").addClass('IndicatorLoader');
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneSubTiposProductoRiesgoOperacional"))",
+                data: { "idPRRO": selectedItem },
+                success: function (data) {
+                    ddlStates.html('');
+                    ddlStates.append($('<option></option>').val(null).html("- Seleccione el Sub Tipo de Producto de Riesgo Operacional -"));
+                    $.each(data, function (id, option) {
+                        ddlStates.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    $("#STPRRO-ind").removeClass('IndicatorLoader');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    toastr.error('Error al recuperar los Sub Tipos de Producto de Riesgo Operacional.');
+                    $("#STPRRO-ind").removeClass('IndicatorLoader');
+                    ddlStates.html('');
+                }
+            });
+        });
+
+
+        $("#id_categoria_linea_negocio_riesgo_operacional").change(function () {
+            var selectedItem = $(this).val();
+            var ddlStates = $("#id_linea_negocio_riesgo_operacional");
+            $("#LNRO-ind").addClass('IndicatorLoader');
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneLineasNegocioRiesgoOperacional"))",
+                data: { "idCLNRO": selectedItem },
+                success: function (data) {
+                    ddlStates.html('');
+                    ddlStates.append($('<option></option>').val(null).html("- Seleccione la Línea de Negocio de Riesgo Operacional -"));
+                    $.each(data, function (id, option) {
+                        ddlStates.append($('<option></option>').val(option.id).html(option.name));
+                    });
+                    $("#LNRO-ind").removeClass('IndicatorLoader');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    toastr.error('Error al recuperar las Líneas de Negocio de Riesgo Operacional.');
+                    $("#LNRO-ind").removeClass('IndicatorLoader');
+                    ddlStates.html('');
+                }
+            });
+        });
+
+        $("#id_entidad").change(function () {
+            var selectedItem = $(this).val();
+            var ccp = $("#id_cuenta_contable_perdida");
+            var ccc = $("#id_cuenta_contable_costo");
+            var ccr = $("#id_cuenta_contable_recuperacion");
+
+            $.ajax({
+                cache: false,
+                type: "GET",
+                url: "@(Url.RouteUrl("ObtieneCuentasContables"))",
+                data: { "idEN": selectedItem },
+                success: function (data) {
+                    ccp.html('');
+                    ccc.html('');
+                    ccr.html('');
+                    ccp.append($('<option></option>').val(null).html("- Seleccione la Cuenta Contable -"));
+                    ccc.append($('<option></option>').val(null).html("- Seleccione la Cuenta Contable -"));
+                    ccr.append($('<option></option>').val(null).html("- Seleccione la Cuenta Contable -"));
+
+                    //obtener cada grupo
+                    var Groups = data.filter(element => element.Type == 'group');
+
+
+                    $.each(Groups, function (id, group) {
+                        //obtener todas las opciones del grupo
+                        var items = data.filter(element => element.Group == group.Name + group.Id);
+                        ccp.append($('<optgroup label="' + group.Name+'">'));
+                        ccc.append($('<optgroup label="' + group.Name+'">'));
+                        ccr.append($('<optgroup label="' + group.Name+'">'));
+
+                        $.each(items, function (id, item) {
+                            ccp.append($('<option></option>').val(item.Id).html(item.Name));
+                            ccc.append($('<option></option>').val(item.Id).html(item.Name));
+                            ccr.append($('<option></option>').val(item.Id).html(item.Name));
+                        });
+                        ccp.append($('</optgroup>'));
+                        ccc.append($('</optgroup>'));
+                        ccr.append($('</optgroup>'));
+                    });
+                    //$.each(data, function (id, option) {
+                    //    ccp.append($('<option></option>').val(option.id).html(option.name));
+                    //});
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    toastr.error('Error al recuperar Cuentas Contables.');
+                    ccp.html('');
+                    ccc.html('');
+                    ccr.html('');
+
+                    ccp.append($('<option></option>').val(null).html("- Seleccione la Cuenta Contable -"));
+                    ccc.append($('<option></option>').val(null).html("- Seleccione la Cuenta Contable -"));
+                    ccr.append($('<option></option>').val(null).html("- Seleccione la Cuenta Contable -"));
+                }
+            });
+        });
+
+        $("#id_frecuencia_riesgo_operacional,#id_impacto_riesgo_operacional").change(function () {
+            var idfr = $("#id_frecuencia_riesgo_operacional").val();
+            var idim = $("#id_impacto_riesgo_operacional").val();
+
+
+            if (idfr > 0 && idim > 0) {
+
+                $("#idfr").val(idfr);
+                $("#idi").val(idim);
+
+
+                var crit = getFromURL(urlCrit, "form1");
+                $("#criticidad").val(crit);
+            } else {
+                $("#criticidad").val("");
+            }
+        });
+
+    });
+
+    var today = new Date(@Model.fe_alta.Value.Year,@(Model.fe_alta.Value.Month-1),@Model.fe_alta.Value.Day).setHours(0, 0, 0, 0);
+    var thatday = new Date(@Model.fe_alta.Value.Year,@(Model.fe_alta.Value.Month-1),@Model.fe_alta.Value.Day);
+    var pickerDate;
+
+    $(document).ready(function () {
+        $(".datetimepicker").datetimepicker({
+            locale: 'es',
+            minDate: "01/01/1900",
+            format: 'DD/MM/YYYY'
+        }).on('dp.change', function (e) {
+            var target = e.currentTarget.id;
+            pickerDate = e.date.toDate().setHours(0, 0, 0, 0);
+
+            switch (target) {
+                case ("fe_oc"):
+                    if (pickerDate > today) {
+                        toastr.error("@Strings.getMSG("BDEICreate203")");
+                        $('#fe_oc').data("DateTimePicker").date(new Date())
+                    }
+                    break;
+                case ("fe_ocm"):
+                    if (pickerDate < today) {
+                        toastr.error("@Strings.getMSG("BDEICreate204")");
+                        $('#fe_ocm').data("DateTimePicker").date(new Date())
+                    }
+                    break;
+                case ("fe_sol"):
+                    if (pickerDate < today) {
+                        toastr.error("@Strings.getMSG("BDEICreate205")");
+                        $('#fe_sol').data("DateTimePicker").date(thatday)
+                    }
+                    break;
+            }
+        });
+
+        document.getElementById("mn_costo_recuperacion").value = @(Model.mn_costo_recuperacion != null ? Model.mn_costo_recuperacion.ToString(): "0");
+        document.getElementById("mn_exposicion").value = @(Model.mn_exposicion != null ? Model.mn_exposicion.ToString() : "0");
+        document.getElementById("mn_quebranto").value = @(Model.mn_quebranto != null ? Model.mn_quebranto.ToString() : "0");
+        document.getElementById("mn_recuperacion").value = @(Model.mn_recuperacion != null ? Model.mn_recuperacion.ToString() : "0");
+
+        @if(Model.id_frecuencia_riesgo_operacional != null && Model.id_impacto_riesgo_operacional != null)
+        {
+        @:$("#criticidad").val("@Utilidades.Criticidad((int)Model.id_frecuencia_riesgo_operacional,(int)Model.id_impacto_riesgo_operacional)");
+        }
+    });
+</script>
+
+
+<form id="form1">
+    <input type="hidden" id="idfr" name="idfr" value="" />
+    <input type="hidden" id="idi" name="idi" value="" />
+</form>
+
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/base.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-datetimepicker.css" rel="stylesheet" />
+
+<script type="text/javascript" src="~/Scripts/moment-with-locales.js"></script>
+<script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="~/Scripts/sharedScripts.js"></script>
+
+<script>
+    function trigg(elemento) {
+        $("#" + elemento).trigger('click');
+    }
+</script>
+
+<h3>@Strings.getMSG("Menu146") - @Strings.getMSG("Editar")</h3>
+
+@using (Html.BeginForm(new { onsubmit = "deshabilitar()" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(Model => Model.id_bdei);
+    @Html.HiddenFor(Model => Model.id_responsable_captura);
+
+    <input type="hidden" name="fe_alta" value="@Model.fe_alta.Value.ToString("dd/MM/yyyy")">
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#generales" data-toggle="tab" id="generalesTab"><h4>@Strings.getMSG("UsuarioCreate011")</h4></a></li>
+        <li><a href="#evento" data-toggle="tab" id="eventoTab"><h4>@Strings.getMSG("BDEICreate002")</h4></a></li>
+        <li><a href="#perdida" data-toggle="tab" id="perdidaTab"><h4>@Strings.getMSG("BDEICreate003")</h4></a></li>
+        <li><a href="#recuperacion" data-toggle="tab" id="recuperacionTab"><h4>@Strings.getMSG("BDEICreate004")</h4></a></li>
+    </ul>
+
+    <div id="myTabContent" class="tab-content">
+
+        <div class="tab-pane fade active in" id="generales">
+            <br />
+            <div class="form-horizontal well">
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Entidad")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_entidad, (IEnumerable<SelectListItem>)ViewBag.id_entidadL, Strings.getMSG("BDEICreate097"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate009") })
+                            @Html.ValidationMessageFor(model => model.id_entidad, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate005")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_estatus_bdei, (IEnumerable<SelectListItem>)ViewBag.id_estatus_bdeiL, Strings.getMSG("BDEICreate007"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate010") })
+                            @Html.ValidationMessageFor(model => model.id_estatus_bdei, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SP")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_sub_proceso, (IEnumerable<SelectListItem>)ViewBag.id_sub_procesoL, Strings.getMSG("BDEICreate008"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate011") })
+                            @Html.ValidationMessageFor(model => model.id_sub_proceso, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <center>
+                    <button type="button" class="btn btn-default btn-xs" disabled="">
+                        <span class="glyphicon glyphicon-arrow-left"></span>@Strings.getMSG("Anterior")
+                    </button>
+                    |
+                    <button type="button" class="btn btn-default btn-xs" onclick="trigg('eventoTab')">
+                        @Strings.getMSG("Siguiente") <span class="glyphicon glyphicon-arrow-right"></span>
+                    </button>
+                </center>
+
+                <br><br>
+                <div class="row">
+                    <div class="form-group has-error">
+                        <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                            @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="evento">
+            <br />
+            <div class="form-horizontal well">
+
+                <!--Formulario de datos del evento-->
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEIIndex002")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class='input-group date datetimepicker' id='fe_oc'>
+                                @Html.TextBox("fe_ocurrencia", (Model.fe_ocurrencia.HasValue ? Model.fe_ocurrencia.Value.ToString("dd/MM/yyyy"):null), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("BDEICreate013"), data_val = "false" })
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.fe_ocurrencia, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate012")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class='input-group date datetimepicker'>
+                                @Html.TextBox("hr_ocurrencia", Model.hr_ocurrencia, new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("BDEICreate014"), data_date_format = "HH:mm" })
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.hr_ocurrencia, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate027")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.duracion, new { htmlAttributes = new { @class = "form-control S1", data_val_number = Strings.getMSG("IndicadorCreate029"), @type = "number" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate015")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.duracion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEIIndex003")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control" readonly value="@(Model.fe_alta.Value.ToString("dd/MM/yyyy"))"/>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate124")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate102")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class='input-group date datetimepicker' id='fe_ocm'>
+                                @Html.TextBox("fe_ocurrencia_manual", (Model.fe_ocurrencia_manual.HasValue ? Model.fe_solucion.Value.ToString("dd/MM/yyyy"):null), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("BDEICreate125"), data_date_format = ViewBag.DateFormat, minDate = "01/01/1900", data_val = "false" })
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.fe_ocurrencia_manual, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate028")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class='input-group date datetimepicker' id='fe_sol'>
+                                @Html.TextBox("fe_solucion", (Model.fe_solucion.HasValue? Model.fe_solucion.Value.ToString("dd/MM/yyyy"):null), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("BDEICreate016"), data_date_format = ViewBag.DateFormat, minDate = "01/01/1900", data_val = "false" })
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.fe_solucion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate104")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.no_evento_sencillo, new { htmlAttributes = new { @class = "form-control", data_val_number = Strings.getMSG("IndicadorCreate029"), @type = "number" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate104")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.no_evento_sencillo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate105")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.no_evento_multiple, new { htmlAttributes = new { @class = "form-control", data_val_number = Strings.getMSG("IndicadorCreate029"), @type = "number" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate105")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.no_evento_multiple, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate106")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.folio_riesgo_operacional, new { htmlAttributes = new { @class = "form-control", data_val_number = Strings.getMSG("IndicadorCreate029"), @type = "number" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate126")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.folio_riesgo_operacional, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu043")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_tipo_solucion, (IEnumerable<SelectListItem>)ViewBag.id_tipo_solucionL, @Strings.getMSG("BDEICreate018"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = @Strings.getMSG("BDEICreate017") })
+                            @Html.ValidationMessageFor(model => model.id_tipo_solucion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate026")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.TextAreaFor(model => model.comentarios, new { @class = "form-control", @rows = "3", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("BDEICreate019") })
+                            @Html.ValidationMessageFor(model => model.comentarios, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("TipoRiesgoOperacionalIndex001")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_tipo_riesgo_operacional", (IEnumerable<SelectListItem>)ViewBag.id_tipo_riesgo_operacionalL, Strings.getMSG("SubTipoRiesgoOperacionalCreate002"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate020") })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("SubTipoRiesgoOperacionalIndex001")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_sub_tipo_riesgo_operacional", (IEnumerable<SelectListItem>)ViewBag.id_sub_tipo_riesgo_operacionalL ?? (IEnumerable<SelectListItem>)(new List<SelectListItem>()), Strings.getMSG("BDEICreate023"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate022") })
+                            <span id="STRO-ind"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu048")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_clase_evento, (IEnumerable<SelectListItem>)ViewBag.id_clase_eventoL ?? (IEnumerable<SelectListItem>)(new List<SelectListItem>()), Strings.getMSG("BDEICreate024"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate025") })
+                            @Html.ValidationMessageFor(model => model.id_clase_evento, "", new { @class = "text-danger" })
+                            <span id="CERO-ind"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate029")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_ambito_riesgo_operacional", (IEnumerable<SelectListItem>)ViewBag.id_ambito_riesgo_operacionalL, Strings.getMSG("BDEICreate030"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate031") })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("P")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_proceso_riesgo_operacional, (IEnumerable<SelectListItem>)ViewBag.id_proceso_riesgo_operacionalL ?? (IEnumerable<SelectListItem>)(new List<SelectListItem>()), Strings.getMSG("BDEICreate032"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate033") })
+                            @Html.ValidationMessageFor(model => model.id_proceso_riesgo_operacional, "", new { @class = "text-danger" })
+                            <span id="PRO-ind"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate107")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.no_procesos_afectados, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate108")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.no_procesos_afectados, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate109")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.no_productos_afectados, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate110")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.no_productos_afectados, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu050")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_producto_riesgo_operacional", (IEnumerable<SelectListItem>)ViewBag.id_producto_riesgo_operacionalL, Strings.getMSG("SubTipoProductoRiesgoOperacionalCreate003"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate034") })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu051")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_sub_tipo_producto_riesgo_operacional, (IEnumerable<SelectListItem>)ViewBag.id_sub_tipo_producto_riesgo_operacionalL ?? (IEnumerable<SelectListItem>)(new List<SelectListItem>()), Strings.getMSG("BDEICreate036"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate035") })
+                            @Html.ValidationMessageFor(model => model.id_sub_tipo_producto_riesgo_operacional, "", new { @class = "text-danger" })
+                            <span id="STPRRO-ind"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu046")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_canal_riesgo_operacional, (IEnumerable<SelectListItem>)ViewBag.id_canal_riesgo_operacionalL, Strings.getMSG("BDEICreate037"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate038") })
+                            @Html.ValidationMessageFor(model => model.id_canal_riesgo_operacional, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate111")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.no_lineas_negocio_afectadas, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate112")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.no_lineas_negocio_afectadas, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu052")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownList("id_categoria_linea_negocio_riesgo_operacional", (IEnumerable<SelectListItem>)ViewBag.id_categoria_linea_negocio_riesgo_operacionalL, Strings.getMSG("BDEICreate039"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate040") })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate042")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_linea_negocio_riesgo_operacional, (IEnumerable<SelectListItem>)ViewBag.id_linea_negocio_riesgo_operacionalL ?? (IEnumerable<SelectListItem>)(new List<SelectListItem>()), Strings.getMSG("BDEICreate041"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate043") })
+                            @Html.ValidationMessageFor(model => model.id_linea_negocio_riesgo_operacional, "", new { @class = "text-danger" })
+                            <span id="LNRO-ind"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu053")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_frecuencia_riesgo_operacional, (IEnumerable<SelectListItem>)ViewBag.id_frecuencia_riesgo_operacionalL, Strings.getMSG("BDEICreate044"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate045") })
+                            @Html.ValidationMessageFor(model => model.id_frecuencia_riesgo_operacional, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu054")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_impacto_riesgo_operacional, (IEnumerable<SelectListItem>)ViewBag.id_impacto_riesgo_operacionalL, Strings.getMSG("BDEICreate046"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate047") })
+                            @Html.ValidationMessageFor(model => model.id_impacto_riesgo_operacional, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu026")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <input type="text" id="criticidad" value="" class="form-control" disabled />
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+
+
+
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu154")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_riesgo_asociado_bdei, (IEnumerable<SelectListItem>)ViewBag.id_riesgo_asociado_bdeiL, Strings.getMSG("BDEICreate114"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate113") })
+                            @Html.ValidationMessageFor(model => model.id_riesgo_asociado_bdei, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                @*<div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate115")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_minimo_riesgo_operativo, (IEnumerable<SelectListItem>)ViewBag.id_minimo_riesgo_operativoL, Strings.getMSG("BDEICreate127"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate128") })
+                            @Html.ValidationMessageFor(model => model.id_minimo_riesgo_operativo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>*@
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate116")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_causa_bdei, (IEnumerable<SelectListItem>)ViewBag.id_causa_bdeiL, Strings.getMSG("BDEICreate117"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate118") })
+                            @Html.ValidationMessageFor(model => model.id_causa_bdei, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+
+
+
+                <center>
+                    <button type="button" class="btn btn-default btn-xs" onclick="trigg('generalesTab')">
+                        <span class="glyphicon glyphicon-arrow-left"></span> @Strings.getMSG("Anterior")
+                    </button>
+                    |
+                    <button type="button" class="btn btn-default btn-xs" onclick="trigg('perdidaTab')">
+                        @Strings.getMSG("Siguiente")<span class="glyphicon glyphicon-arrow-right"></span>
+                    </button>
+                </center>
+
+                <!--boton de regresar-->
+                <br><br>
+                <div class="row">
+                    <div class="form-group has-error">
+                        <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                            @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="perdida">
+            <br />
+
+            <div class="form-horizontal well">
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("Menu042")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_moneda, (IEnumerable<SelectListItem>)ViewBag.id_monedaL, Strings.getMSG("BDEICreate048"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate049") })
+                            @Html.ValidationMessageFor(model => model.id_moneda, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate052")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_cuenta_contable_perdida, (IEnumerable<SelectListItem>)ViewBag.id_cuenta_contable_perdidaL, Strings.getMSG("BDEICreate050"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate051") })
+                            @Html.ValidationMessageFor(model => model.id_cuenta_contable_perdida, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate119")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_catalogo_concepto, (IEnumerable<SelectListItem>)ViewBag.id_catalogo_conceptoL, Strings.getMSG("BDEICreate120"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate129") })
+                            @Html.ValidationMessageFor(model => model.id_catalogo_concepto, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate054")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.mn_exposicion, new { htmlAttributes = new { @class = "form-control", data_val_number = Strings.getMSG("IndicadorCreate029"), @type = "number" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate053")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.mn_exposicion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate055")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.mn_quebranto, new { htmlAttributes = new { @class = "form-control", data_val_number = Strings.getMSG("IndicadorCreate029"), @type = "number" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate056")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.mn_quebranto, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate098")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_centro_costo, (IEnumerable<SelectListItem>)ViewBag.id_centro_costoL, Strings.getMSG("BDEICreate057"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate058") })
+                            @Html.ValidationMessageFor(model => model.id_centro_costo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate059")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                                @Html.TextBox("fe_registro_perdida", (Model.fe_registro_perdida.HasValue? Model.fe_registro_perdida.Value.ToString("dd/MM/yyyy"):null), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("BDEICreate060"), data_date_format = ViewBag.DateFormat, data_val = "false" })
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.fe_registro_perdida, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group has-error">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate061")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                                @Html.TextBox("fe_quebranto", (Model.fe_quebranto.HasValue ? Model.fe_quebranto.Value.ToString("dd/MM/yyyy"):null), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("BDEICreate062"), data_date_format = ViewBag.DateFormat, data_val = "false" })
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.fe_quebranto, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <center>
+                    <button type="button" class="btn btn-default btn-xs" onclick="trigg('eventoTab')">
+                        <span class="glyphicon glyphicon-arrow-left"></span> @Strings.getMSG("Anterior")
+                    </button>
+                    |
+                    <button type="button" class="btn btn-default btn-xs" onclick="trigg('recuperacionTab')">
+                        @Strings.getMSG("Siguiente") <span class="glyphicon glyphicon-arrow-right"></span>
+                    </button>
+                </center>
+
+
+                <!--boton de regresar-->
+                <br><br>
+                <div class="row">
+                    <div class="form-group has-error">
+                        <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                            @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="recuperacion">
+            <br />
+            <div class="form-horizontal well">
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate063")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.mn_recuperacion, new { htmlAttributes = new { @class = "form-control", data_val_number = Strings.getMSG("BDEICreate063"), @type = "number" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate064")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.mn_recuperacion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate065")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_responsable_recuperacion, (IEnumerable<SelectListItem>)ViewBag.id_responsable_recuperacionL, Strings.getMSG("BDEICreate066"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate067") })
+                            @Html.ValidationMessageFor(model => model.id_responsable_recuperacion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate065")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_cuenta_contable_recuperacion, (IEnumerable<SelectListItem>)ViewBag.id_cuenta_contable_recuperacionL, Strings.getMSG("BDEICreate050"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate068") })
+                            @Html.ValidationMessageFor(model => model.id_cuenta_contable_recuperacion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate069")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                                @Html.TextBox("fe_registro_recuperacion", (Model.fe_registro_recuperacion.HasValue ? Model.fe_registro_recuperacion.Value.ToString("dd/MM/yyyy"):null), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("BDEICreate070"), data_date_format = ViewBag.DateFormat, data_val = "false" })
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.fe_registro_recuperacion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate071")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.via_recuperacion, new { htmlAttributes = new { @class = "form-control" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate072")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.via_recuperacion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate073")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class="input-group">
+                                @Html.EditorFor(model => model.mn_costo_recuperacion, new { htmlAttributes = new { @class = "form-control", data_val_number = Strings.getMSG("IndicadorCreate029"), @type = "number" } })
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-default" title="@Strings.getMSG("Atencion")" data-toggle="popover" data-trigger="hover" data-content="@Strings.getMSG("BDEICreate074")">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.mn_costo_recuperacion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate075")</label>
+                        <div class="col-xs-6 col-md-5">
+                            @Html.DropDownListFor(model => model.id_cuenta_contable_costo, (IEnumerable<SelectListItem>)ViewBag.id_cuenta_contable_costoL, Strings.getMSG("BDEICreate050"), htmlAttributes: new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_trigger = "hover", data_toggle = "popover", data_content = Strings.getMSG("BDEICreate076")  })
+                            @Html.ValidationMessageFor(model => model.id_cuenta_contable_costo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3 col-md-2">@Strings.getMSG("BDEICreate077")</label>
+                        <div class="col-xs-6 col-md-5">
+                            <div class='input-group date datetimepicker' id='datetimepicker1'>
+                                @Html.TextBox("fe_registro_costo_recuperacion", (Model.fe_registro_costo_recuperacion.HasValue ?  Model.fe_registro_costo_recuperacion.Value.ToString("dd/MM/yyyy") : null), new { @class = "form-control", @title = Strings.getMSG("Atencion"), data_toggle = "popover", data_trigger = "hover", data_content = Strings.getMSG("BDEICreate078"), data_date_format = ViewBag.DateFormat, data_val = "false" })
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.fe_registro_costo_recuperacion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <center>
+                    <button type="button" class="btn btn-default btn-xs" onclick="trigg('perdidaTab')">
+                        <span class="glyphicon glyphicon-arrow-left"></span> @Strings.getMSG("Anterior")
+                    </button>
+                    |
+                    <button type="button" class="btn btn-default btn-xs" disabled="">
+                        @Strings.getMSG("Siguiente") <span class="glyphicon glyphicon-arrow-right"></span>
+                    </button>
+                </center>
+
+                <!--boton de regresar-->
+                <br><br>
+                <div class="row">
+                    <div class="form-group has-error">
+                        <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                            <input type="submit" value="@Strings.getMSG("Guardar")" class="btn btn-primary" id="submit" />
+                            @Html.ActionLink(Strings.getMSG("Regresar"), "Index", null, new { @class = "btn btn-default" })
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

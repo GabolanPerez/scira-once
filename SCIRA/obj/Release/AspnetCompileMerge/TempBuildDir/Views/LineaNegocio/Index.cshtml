@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SCIRA.Models.c_linea_negocio>
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+@{
+    ViewBag.Title = "Líneas de Negocio";
+}
+
+<h2>@Strings.getMSG("Menu005")</h2>
+
+<p>
+    @Html.ActionLink(@Strings.getMSG("Agregar"), "Create", "LineaNegocio", new { @class = "btn btn-default btn-sm" })
+</p>
+<table id="results" class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="search">@Strings.getMSG("Clave")</th>
+            <th class="search">@Strings.getMSG("Menu005")</th>
+            <th width="40"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cl_linea_negocio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nb_linea_negocio)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.id_linea_negocio })">
+                        <i class="glyphicon glyphicon-pencil" title="@Strings.getMSG("Editar")"></i>
+                    </a> |
+                    <a href="@Url.Action("Delete", new { id = item.id_linea_negocio })">
+                        <i class="glyphicon glyphicon-trash" title="@Strings.getMSG("Borrar")"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

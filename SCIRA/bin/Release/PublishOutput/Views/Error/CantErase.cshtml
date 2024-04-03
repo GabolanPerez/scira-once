@@ -1,0 +1,23 @@
+﻿@using SCIRA.Utilidades
+@{
+    ViewBag.Title = "Error al Borrar";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+
+    <div class="form-horizontal well">
+        <center>
+            <h4>@Strings.getMSG("CertificacionInforme025")</h4><br><br>
+            <h1 style="font-size: 3cm"><span class="glyphicon glyphicon-remove"></span></h1><br><br>
+            <h4>@Strings.getMSG("Error")</h4>
+            @if (ViewBag.Info != null)
+            {
+                <h4 class="text-danger">@ViewBag.Info</h4>
+            }
+            <a href="javascript:window.history.go(-1);" class="btn btn-default">@Strings.getMSG("Regresar")</a>
+        </center>
+    </div>
+}

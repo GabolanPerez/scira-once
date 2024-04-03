@@ -1,0 +1,177 @@
+﻿@model IEnumerable<SCIRA.Models.k_objeto>
+@using SCIRA.Utilidades
+@{
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    ViewBag.Title = "Contestación de Oficioes e Informes";
+
+    var OC = Model.Where(o => o.r_contestacion_oficio.Count() == 1);
+    var ONC = Model.Where(o => o.r_contestacion_oficio.Count() == 0);
+}
+<script src="~/Scripts/Certificacion.js"></script>
+
+<script>
+    function verPDF(id) {
+        $("#modalB").html('<span id="n"><embed src="@Url.Action("DisplayPDF","ContestacionOficio",null)/'+id+'" width="100%" height="700"></span>');
+        $("#aviso").modal('show');
+    }
+
+    function verInforme(id) {
+        $("#modalB").html('<span id="n"><embed src="@Url.Action("DisplayInforme","ContestacionOficio",null)/'+id+'" width="100%" height="700"></span>');
+        $("#aviso").modal('show');
+    }
+</script>
+
+
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+
+<div class="modal fade" id="aviso" tabindex="-1" role="dialog" aria-labelledby="Aviso" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div id="modalB" class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2>@Strings.getMSG("ContestacionOficioIndex001")</h2>
+
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#pes1" data-toggle="tab"><h4>@Strings.getMSG("ContestacionOficioIndex002")</h4></a></li>
+    <li><a href="#pes2" data-toggle="tab"><h4>@Strings.getMSG("ContestacionOficioIndex003")</h4></a></li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active in" id="pes1">
+        <br />
+        <div class="form-horizontal well">
+            <table class="results table table-bordered table-striped table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>@Strings.getMSG("ContestacionOficioIndex003")Tipo de Objeto</th>
+                        <th>@Strings.getMSG("Responsable")</th>
+                        <th>@Strings.getMSG("Nombre")</th>
+                        <th>@Strings.getMSG("Entidad")</th>
+                        <th>@Strings.getMSG("lyPCreate012")</th>
+                        <th>@Strings.getMSG("lyPIndex006")</th>
+                        <th>@Strings.getMSG("ContestacionOficioIndex005")</th>
+                        <th>@Strings.getMSG("ContestacionOficioIndex004")</th>
+                        <th width="80px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ONC)
+                    {
+                        int nic = 0;
+                        foreach (var inc in item.k_incidencia)
+                        {
+                            if (inc.r_respuesta.Count > 0) { nic++; }
+                        }
+                        <tr>
+                            <td>@(item.tipo_objeto == 1 ? Strings.getMSG("PendientesVerTodoIndex009") : item.tipo_objeto == 2 ? Strings.getMSG("ReporteIyPIndex010") : Strings.getMSG("ReporteIyPIndex011"))</td>
+                            <td>@item.c_usuario.nb_usuario</td>
+                            <td>@item.nb_objeto</td>
+                            <td>@item.c_entidad.cl_entidad - @item.c_entidad.nb_entidad</td>
+                            <td>@item.fe_alta.Value.ToString("dd/MM/yyyy")</td>
+                            <td>@(item.tipo_objeto == 1 ? item.fe_vencimiento.ToString() : "N/A")</td>
+                            <td>@item.no_incidencias</td>
+                            <td>@nic</td>
+                            <td>
+                                @if (item.no_incidencias == nic)
+                                {
+                                    <center>
+                                        <a href="@Url.Action("ContestarOficio", new { id = item.id_objeto })">
+                                            <i class="fa fa-reply" title="@Strings.getMSG("Contestar Oficio")"></i>
+                                        </a>
+                                    </center>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tab-pane" id="pes2">
+        <br />
+        <div class="form-horizontal well">
+            <table class="results table table-bordered table-striped table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>@Strings.getMSG("PlanesRemIndex001")</th>
+                        <th>@Strings.getMSG("Responsable")</th>
+                        <th>@Strings.getMSG("Nombre")</th>
+                        <th>@Strings.getMSG("Entidad")</th>
+                        <th>@Strings.getMSG("Fecha del Oficio/Informe")</th>
+                        <th>@Strings.getMSG("lyPIndex006")</th>
+                        <th>@Strings.getMSG("lyPIndex007")</th>
+                        <th width="80px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in OC)
+                    {
+                        var feC = "";
+                        var us = "";
+                        try
+                        {
+                            feC = item.fe_contestacion.Value.ToString("dd/MM/yyyy");
+                        }
+                        catch (Exception)
+                        {
+                            feC = "N/A";
+                            throw;
+                        }
+                        try
+                        {
+                            us = item.c_usuario.nb_usuario;
+                        }
+                        catch (Exception)
+                        {
+                            us = "N/A";
+                            throw;
+                        }
+                        <tr>
+                            <td>@(item.tipo_objeto == 1 ? Strings.getMSG("PendientesVerTodoIndex009") : item.tipo_objeto == 2 ? Strings.getMSG("ReporteIyPIndex010") : Strings.getMSG("ReporteIyPIndex011"))</td>
+                            <td>@us</td>
+                            <td>@item.nb_objeto</td>
+                            <td>@item.c_entidad.cl_entidad - @item.c_entidad.nb_entidad</td>
+                            <td>@item.fe_alta.Value.ToString("dd/MM/yyyy")</td>
+                            <td>@(item.tipo_objeto == 1 ? item.fe_vencimiento.ToString() : "N/A")</td>
+                            <td>@feC</td>
+                            <td>
+                                <center>
+                                    <a href="#" onclick="verPDF(@item.id_objeto)">
+                                        <i class="fa fa-file-pdf-o" title="@Strings.getMSG("ContestacionOficioIndex006")"></i>
+                                    </a>
+                                    |
+                                    <a href="#" onclick="verInforme(@item.id_objeto)">
+                                        <i class="fa fa-file-text-o" title="@Strings.getMSG("ContestacionOficioIndex007")"></i>
+                                    </a>
+                                    |
+                                    <a href="@Url.Action("Edit", new { id = item.id_objeto })">
+                                        <i class="fa fa-pencil" title="@Strings.getMSG("Editar")"></i>
+                                    </a>
+                                    |
+                                    <a href="@Url.Action("Delete", new { id = item.r_contestacion_oficio.First().id_contestacion })">
+                                        <i class="fa fa-trash" title="@Strings.getMSG("Borrar")"></i>
+                                    </a>
+                                </center>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

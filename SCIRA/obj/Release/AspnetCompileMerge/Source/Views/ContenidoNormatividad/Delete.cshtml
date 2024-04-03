@@ -1,0 +1,83 @@
+﻿@model SCIRA.Models.c_contenido_normatividad
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<h2>Borrar</h2>
+
+<h3>¿Borrar el registro?</h3>
+<div>
+    <h4>Contenido de Normatividad</h4>
+    <hr />
+
+
+    @if (ViewBag.Error != null)
+    {
+        <span class="field-validation-error text-danger">@ViewBag.Error</span>
+        <hr />
+        <script>
+            $(document).ready(function () {
+                document.getElementById("submit").disabled = true;
+            });
+        </script>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-6 col-md-5">
+                <p class="info">
+                    Se eliminará este contenido así como todos los contenidos de sus niveles inferiores. Confirme para eliminar.
+                </p>
+            </div>
+        </div>
+
+        <hr />
+    }
+
+    
+
+    <dl class="dl-horizontal">
+        <dt>
+            Padre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_contenido_normatividad2.cl_contenido_normatividad) - @Html.DisplayFor(model => model.c_contenido_normatividad2.ds_contenido_normatividad)
+        </dd>
+
+        <dt>
+            Clave
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cl_contenido_normatividad)
+        </dd>
+
+        <dt>
+            Nombre
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_contenido_normatividad)
+        </dd>
+
+        <dt>
+            Nivel
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.c_nivel_normatividad.nb_nivel_normatividad)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" id="submit" class="btn btn-primary" /> |
+            @Html.ActionLink("Regresar", "Index", new { id = Model.id_contenido_normatividad_padre }, new { @class = "btn btn-default" })
+        </div>
+    }
+</div>
